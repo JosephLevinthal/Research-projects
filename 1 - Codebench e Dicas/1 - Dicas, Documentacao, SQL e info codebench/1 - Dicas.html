@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Criação de "dicas" para o Codebench</title>
+</head>
+
+<body>
+    <h3>
+        <h1>Criação de "dicas" para o Codebench</h1> <br>
+        <h3>As dicas apresentadas aqui não são definitivas e podem ser alteradas diante das respostas dos
+            "especialista" (obtidas via formulário), discussão do grupo de pesquisa e análise de nova literatura
+            científica relacionada*</h3> <br>
+
+        <em>
+            <h2>Para gerar a estrutura das dicas, estão sendo analisadas as literaturas científicas relacionadas a:
+            </h2>
+        </em><br>
+        1 - Geração de feedback relevante, seguindo guidelines baseadas no estudo de carga cognitiva e áreas
+        relacionadas da psicologia; <br>
+        2 - Outros estudos de geração de feedback, em computação (nebulosa e sem consenso); <br>
+        3 - Estudos de caso de melhoramento de mensagens de erro de compiladores (Java, C++); <br> <br>
+
+        <em>
+            <h2>Para gerar os exemplos de dicas, estão sendo analisados:
+            </h2>
+        </em> <br>
+        1 - Exemplos de submissão dos alunos, analisados via banco de dados do Codebench; <br>
+        2 - Documentação do Python relacionado aos erros; <br>
+        3 - Material do Stack Overflow relacionado aos erros. <br>
+        4 - Listagem de possíveis causas para o erro (seção "possíveis causas"). <br>
+        ------------------------------------------------------------------------------------------------------------------------------
+        <br>
+        <h2> NameError: </h2>
+
+        <em>#Codigo do aluno </em><br>
+        <code> print(8*7 + x) </code> <br> <br>
+
+        <em>#Possíveis causas (não faz parte da dica)</em> <br>
+        1 - Você pode estar tentando usar uma variável que não foi declarada EXATAMENTE com o mesmo nome, cheque se
+        o nome da variavel que voce esta tentando usar tem o mesmo nome da variavel declarada; <br>
+        2 - Você pode estar tentando imprimir uma string sem usar a função "print" do python; <br>
+        3 - Você pode estar errando o nome de uma função padrão do python. <br> <br>
+
+        <em>#Erro original do interpretador</em>
+        <code><pre>
+        $ python3 main.py
+        Traceback (most recent call last):
+          File "main.py", line 1, in <module>
+            print(8*7 + x)
+        NameError: name 'x' is not defined
+        </code> </pre>
+
+        <em>#Dica "Placebo" </em><br>
+        ERRO: O nome 'x' não está definido! <br> <br>
+
+        <em>#Versões da dica:</em> <br>
+        #v1.0
+        "NameError" geralmente indica a tentativa de uso de uma variável que não está definida<br>
+        Veja se está utilizando o nome da variável corretamente, ou se a variável que está sendo chamada foi
+        criada
+        <br> <br>
+
+        #v1.1 <br>
+        "NameError" geralmente indica a tentativa de uso de uma variável que não está definida<br>
+        Veja se o nome da variável está sendo utilizado corretamente, ou se a variável que está sendo chamada
+        foi criada <br> <br>
+
+        #v2.0 <br>
+        Parece que você tem um erro na linha 4 <br>
+        Veja se a variável que você está tentando usar foi criada e tem o mesmo nome <br> <br>
+
+        #v2.1 <br>
+        Parece que você tem um erro na linha 4 <br>
+        Veja se a variável que está sendo chamada foi criada e tem o mesmo nome <br> <br>
+
+        #v2.2 <br>
+        Parece que existe um erro na <b>linha 4</b> <br>
+        Veja se a variável que está sendo chamada foi criada e tem o <b>mesmo nome</b> <br> <br>
+
+        #v2.3 <br>
+        Parece que existe um erro na <b>linha 4</b> <br>
+        Veja se a variável ou função que está sendo chamada existe e tem o <b>mesmo nome</b> <br> <br>
+
+        #Exemplo do tipo 2 de dica:<br><br>
+        Código com erro: <br>
+        <pre>
+X = 10 <br>
+print(7 + x) <br>
+    </pre>
+        Código corrigido:
+        <pre>
+X = 10 <br>
+print(7 + <b>X</b>) 
+    </pre><br>
+        Parece que existe um erro na <b>linha 4</b> <br>
+        Veja se a variável ou função que está sendo chamada existe e tem o <b>mesmo nome</b> <br><br>
+
+        <h2>------------------------------------------------------------------------------------------------------------------------------</h2>
+        <h2>IndentationError: expected an indented block:</h2>
+
+        <em>#Codigo do aluno </em>
+        <code> <pre>
+x = input()
+if x == "1":
+    print("resultado = 1")
+if x == "2":
+print("resultado = 2")
+ </code>
+        </pre>
+
+        <em>#Possíveis causas (não faz parte da dica)</em> <br>
+        1 - O código do erro está alinhado ou mais à esquerda do bloco acima. <br> <br>
+
+        <em> #Erro original do interpretador</em>
+        <code><pre>
+        $ python3 main.py
+        File "main.py", line 5
+            print("resultado = 2")
+                ^
+        IndentationError: expected an indented block
+
+</code></pre>
+
+        <em>#Dica "Placebo" </em><br>
+        ERRO: O bloco deve estar indentado! <br> <br>
+
+        <em>#Versões da dica:</em> <br>
+
+        #v1.0 <br>
+        Parece que existe um erro na <b>linha 5</b><br>
+        Veja se o código do erro está com o mesmo espaçamento do código da linha acima <br> <br>
+
+        #v1.1 <br>
+        Parece que existe um erro na <b>linha 5</b><br>
+        Veja se a código do erro está mais à esquerda ou bem abaixo da linha acima <br> <br>
+
+        #v1.1 <br>
+        Parece que existe um erro na <b>linha 5</b><br>
+        Certifique-se que o código do erro <b>não</b> está mais à esquerda ou bem abaixo da linha acima <br> <br>
+
+        <em>#Exemplo do tipo 2 de dica: </em><br> <br>
+        Código com erro: <br>
+        <pre>
+if x == "2": <br>
+print("resultado = 2") <br> <br>
+</pre>
+        Código corrigido: <br>
+        <pre>
+if x == "2": <br>
+    print("resultado = 2")<br> <br>
+    </pre>
+        Parece que existe um erro na <b>linha 4</b> <br>
+        Certifique-se que o código do erro não está mais à esquerda ou bem abaixo da linha acima <br> <br>
+
+    </h3>
+
+    <h2>--------------------------------------------------------------------------------------------------------------------------</h2>
+    <h2> Informações sobre os erros:</h2>
+    <pre>
+Total = 129780 <b>(100%)</b>
+Threshold = > 2000 <b>(1,541%)</b>
+    
+1 - Caso 1 - SyntaxError: invalid syntax - 32342 (24,92%)
+2 - Caso 1 - NameError: name 'NOMEDAVARIAVEL' is not defined - 27334  <b>(21,06%)</b>
+3 - Caso 1 - ValueError: invalid literal for int() with base 10 - 9814 <b>(7,562%)</b>
+4 - Caso 1 - EOFError: EOF when reading a line - 7923 <b>(6,10)%</b>
+5 - Caso 1 - IndentationError: expected an indented block - 4254 <b>(3,28%)</b>
+6 - Caso 2 - IndentationError: unindent does not match any outer indentation level - 4080 <b>(3.14)%</b>
+7 - Caso 3 - IndentationError: unexpected indent - 3676 <b>(2,83)%</b>
+8 - Caso 2 - SyntaxError: unexpected EOF while parsing - 3580 <b>(2,76)%</b>
+9 - Caso 1 - out of bounds for axis - 2903 <b>(2,24)%</b>
+10 - Caso 1 - TabError: inconsistent use of tabs and spaces in indentation - 2598 <b>(2,00)%</b>
+11 - Caso 1 - ZeroDivisionError: float division by zero - 2349 <b>(1,81)%</b>
+12 - Caso 1 - TypeError: unsupported operand type(s) - 2085 <b>(1,61)%</b>
+13  - Caso 2 - ZeroDivisionError: division by zero - 244 <b>(0.19%)</b>
+
+Cobrindo 10 erros mais comuns: <b>(75,89%)</b>
+Cobrindo 12 erros mais comuns + ZeroDivisionError: division by zero : <b>(79,50%)</b>
+Há mais de <b>96</b> casos de erro.
+</pre><br>
+    <h2>--------------------------------------------------------------------------------------------------------------------------
+    </h2>
+    <p>Colaboradores do site:</p>
+    <script src="script.js"></script>
+    <table border="1">
+        <tr>
+            <td>
+                Nome
+            </td>
+            <td>
+                Email
+            </td>
+        </tr>
+        <td>Joseph Levinthal</td>
+        <td><a href="mailto:jvlo@icomp.ufam.edu.br">jvlo@icomp.ufam.edu.br</a>
+    </table>
+
+</body>
+
+</html>

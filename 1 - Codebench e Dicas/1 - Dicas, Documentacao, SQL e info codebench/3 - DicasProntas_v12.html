@@ -1,0 +1,570 @@
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            .space {
+                border: 0px solid black;
+                width: 13px;
+                height: 12px;
+                background-color: brown;
+                display: inline-block
+            }
+            .tab {
+                border: 0px solid black;
+                width: 13px;
+                height:12px;
+                background-color: green;
+                display: inline-block
+            }
+            .erro{
+                border: 1px solid red;
+            }
+            .correcao{
+                border: 1px solid green;
+            }
+            pre {
+                margin: 0 0;
+            }
+        </style>
+    </head>
+<h2> SyntaxError: invalid syntax</h2>
+
+Parece que há um erro na linha indicada ou anterior. <br>
+Um erro de sintaxe ocorre quando alguma regra da linguagem de programação não é seguida. Vamos lembrar das mais comuns?
+<br><br><br>
+
+1 - Toda string (sequência de caracteres) deve ser definida entre um par de <b>aspas</b>. Podem ser aspas simples (') ou duplas ("), mas nunca misture as duas: <br> <br>
+
+<table border=1>
+    <tr>
+        <th>Exemplo com erro</th>
+        <th>Exemplo corrigido</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+print(<span class="erro">&nbsp;</span>Bruce Wayne") 
+
+print(<span class="erro">&nbsp;</span>Barry Allen<span class="erro">&nbsp;</span>) 
+                               
+x = <span class="erro">&nbsp;</span>Viuva Negra<span class="erro">&nbsp;</span>
+              
+</pre>
+        </td>
+        <td style="vertical-align: top">
+            <pre>
+print("Bruce Wayne") 
+
+print('Barry Allen') 
+
+x = "Viuva Negra" 
+</pre>
+        </td>
+    </tr>
+
+</table>
+<br>
+
+2 - No Python 3.x, toda função deve indicar seus argumentos entre um par de <b>parênteses</b>, e os argumentos devem ser separados por vírgulas: <br> <br>
+
+<table border=1>
+    <tr>
+        <th>Exemplo com erro</th>
+        <th>Exemplo corrigido</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+print "Hermione Granger" 
+                        
+round(var, 3<span class="erro">&nbsp;</span>
+           
+</pre>
+        </td>
+        <td style="vertical-align: top">
+            <pre>
+print("Hermione Granger")
+
+round(var, 3)
+</pre>
+        </td>
+    </tr>
+
+</table>
+<br>
+
+3 - Comandos de condição (<b>if</b>, <b>else</b>, <b>elif</b>) e repetição (<b>for</b>, <b>while</b>) devem terminar
+com sinal de dois pontos: <br> <br>
+
+<table border=1>
+    <tr>
+        <th>Exemplo com erro</th>
+        <th>Exemplo corrigido</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+# SEM dois pontos
+if (x == 1)<span class="erro">&nbsp;</span>    
+    print(x)
+
+while (i < 10)<span class="erro">&nbsp;</span>
+             
+    </pre>
+        </td>
+        <td style="vertical-align: top">
+            <pre>
+# COM dois pontos
+if (x == 1)<b>:</b>
+    print(x)
+
+while (i < 10)<b>:</b>
+    </pre>
+        </td>
+    </tr>
+
+</table>
+<br>
+
+<h2> NameError: name 'NOMEDAVARIAVEL' is not defined</h2>
+<h2> </h2>
+
+Parece que há um erro na linha indicada ou anterior. <br>
+Ao usar uma variável ou função, verifique se elas foram definidas. Se sim, verifique se elas foram usadas com o <b>mesmo nome</b> com que foram definidas. Observe o uso de letras <b>maiúsculas</b> e <b>minúsculas</b>.
+
+<br><br>
+
+<table border=1>
+    <tr>
+        <th>Exemplo com erro</th>
+        <th>Exemplo corrigido</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+<b><span class="erro">Area</span> = 10</b> 
+print(7 + area) 
+</pre>
+        </td>
+        <td>
+            <pre>
+<b>area = 10</b> 
+print(7 + area)
+</pre>
+        </td>
+    </tr>
+
+</table>
+
+<br>
+
+<h2> ValueError: invalid literal for int() with base 10</h2>
+<h2> </h2>
+
+Parece que há um erro na linha indicada ou anterior. <br>
+A função <b>int()</b> devolve um valor inteiro como resultado. <br>
+
+<ul>
+    <li>Caso precise de um valor <b>float</b> (número decimal), utilize o formato <b>x = float(input())</b>:</li>
+
+<table border=1>
+    <tr>
+        <th>Exemplo com erro</th>
+        <th>Exemplo corrigido</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+ x = <b><span class="erro">int</span></b>(input("Digite o preco: ")) 
+</pre>
+        </td>
+        <td>
+            <pre>
+ x = float(input("Digite o preco: ")) 
+</pre>
+        </td>
+    </tr>
+
+</table>
+	
+<br>
+
+    <li>Caso precise de uma <b>string</b> (sequência de caracteres), utilize o formato <b>x = input()</b>:</li>
+
+<table border=1>
+    <tr>
+        <th>Exemplo com erro</th>
+        <th>Exemplo corrigido</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+ x = <b><span class="erro">int</span></b>(input("Digite o nome: ")) 
+</pre>
+        </td>
+        <td>
+            <pre>
+ x = input("Digite o nome: ")
+</pre>
+        </td>
+    </tr>
+
+</table>
+
+<br>
+
+    <li>Caso precise ler mais de um valor <b>inteiro</b>, utilize um comando <b>input()</b> para cada entrada:</li>
+
+<table border=1>
+    <tr>
+        <th>Exemplo com erro</th>
+        <th>Exemplo corrigido</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+ x = int(input("Digite as idades das pessoas: ")) 
+</pre>
+        </td>
+        <td>
+            <pre>
+ x1 = int(input("Digite a idade da pessoa 1: "))
+ x2 = int(input("Digite a idade da pessoa 2: "))
+</pre>
+        </td>
+    </tr>
+
+</table>
+
+</ul>
+
+
+<br>
+
+<h2> EOFError: EOF when reading a line</h2>
+
+Parece que há um erro na linha indicada ou anterior. <br>
+O código está solicitando mais entradas (<i>inputs</i>) do que o exigido pelo enunciado do exercício. Corrija o número
+de funções <b>input()</b> no código. <br> <br>
+
+<h2> IndentationError: expected an indented block</h2>
+Parece que há um erro na linha indicada ou anterior. <br>
+
+<ul>
+    <li>Qualquer estrutura do Python que termine com dois pontos (<b>if</b>, <b>elif</b>, <b>else</b>, <b>while</b>, <b>for</b>) deve ter seu conteúdo identado para a direita a fim de ser considerado como parte dela.</li>
+    <li>Certifique-se que a linha onde o erro foi encontrado está com a mesma indentação da linha de cima.</li>
+</ul>
+
+
+<table border=1>
+    <tr>
+        <th>Exemplo com erro</th>
+        <th>Exemplo corrigido</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+x = input()
+if (x == "1"):
+    print("resultado = 1")
+if (x == "2"):
+<span class="erro">print("resultado = 2")</span>
+</pre>
+        </td>
+        <td style="vertical-align: top">
+            <pre>
+x = input()
+if (x == "1"):
+    print("resultado = 1")
+if (x == "2"):
+    <b>print("resultado = 2") </b>
+</pre>
+        </td>
+    </tr>
+
+</table>
+<br>
+
+<h2> IndentationError: unindent does not match any outer indentation level</h2>
+<h2> </h2>
+
+Parece que há um erro na linha indicada ou anterior. <br>
+
+<ul>
+    <li>Elimine espaços digitados à frente dos comandos <b>if</b>, <b>elif</b> e <b>else</b>.</li>
+    <li>Se duas condições estão no mesmo nível lógico de comparação, então aplique a mesma indentação nos comandos <b>if</b>,
+        <b>elif</b> e <b>else</b> correspondentes.</li>
+    <li>Para indentar o código, use somente a tecla <b>TAB</b>. Não misture <b>TAB</b> e espaços.</li>
+</ul>
+
+
+<table border=1>
+    <tr>
+        <th>Exemplo com erro</th>
+        <th>Exemplo corrigido</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+a = 1
+if (a == 1):
+    print("1")
+<span class="erro">&nbsp;</span>if (a == 2):
+    print("2")
+</pre>
+        </td>
+        <td style="vertical-align: top">
+            <pre>
+a = 1
+if (a == 1):
+    print("1")
+if (a == 2):
+    print("2")
+</pre>
+        </td>
+    </tr>
+
+</table>
+
+<br>
+
+<h2> IndentationError: unexpected indent</h2>
+
+Parece que há um erro na linha indicada ou anterior. <br>
+Verifique se existem espaçamentos incorretos no início dessa linha ou das anteriores.
+
+
+
+<table border=1>
+    <tr>
+        <th>Exemplo com erro</th>
+        <th>Exemplo corrigido</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+print("ABCDEF")
+print("  BCDEF") 
+<span class="erro">&nbsp;</span>print("  CDEF") 
+</pre>
+        </td>
+        <td style="vertical-align: top">
+            <pre>
+print("ABCDEF") 
+print(" BCDEF") 
+print("  CDEF") 
+</pre>
+        </td>
+    </tr>
+
+</table>
+<br>
+
+<h2> SyntaxError: unexpected EOF while parsing </h2>
+<h2> </h2>
+
+<br>
+Parece que há um erro na última linha do código. Verifique se todos os <b>parênteses</b> abertos foram efetivamente fechados. <br> <br>
+
+<table border=1>
+    <tr>
+        <th>Exemplo com erro</th>
+        <th>Exemplo corrigido</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+# Esquecendo de fechar o parêntese do print
+print("Final do programa"<span class="erro">&nbsp;</span>
+</pre>
+        </td>
+        <td>
+            <pre>
+# Fechando corretamente o parêntese do print
+print("Final do programa")
+</pre>
+        </td>
+    </tr>
+
+</table>
+
+</table>
+<br>
+
+<h2> IndexError: index X is out of bounds for axis Y with size Z </h2>
+<h2> </h2>
+
+<br>
+Parece que há um erro na <b>linha X. </b> <br>
+
+<ul>
+    <li>O código está tentando acessar uma linha ou coluna fora dos limites do vetor ou da matriz.</li>
+	<li>Verifique se o número de interações do laço excede a quantidade de elementos do vetor ou matriz.</li>
+    <li>Lembre-se: os índices são numerados a partir de <b>0 (zero)</b>.</li>
+</ul>
+
+
+<br>
+
+<table border=1>
+    <tr>
+        <th>Exemplo com erro</th>
+        <th>Exemplo corrigido</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+from numpy import *
+
+# vetor de 4 elementos:
+vet = array([0,1,2,3])
+
+# quinto elemento:
+print(vet[<span class="erro">4</span>])
+</pre>
+        </td>
+        <td>
+            <pre>
+from numpy import *
+
+# vetor de 4 elementos:
+vet = array([0,1,2,3])
+
+# quarto elemento:
+print(vet[3])
+</pre>
+        </td>
+    </tr>
+
+</table>
+
+</table>
+<br>
+
+<h2> TabError: inconsistent use of tabs and spaces in indentation </h2>
+<h2> </h2>
+
+<br>
+Parece que há um erro na linha indicada ou anterior. <br>
+
+<ul>
+    <li>Para indentar o código, use somente a tecla <b>TAB</b>. Não misture <b>TAB</b> e espaços. </li>
+    <li>Se duas condições estão no mesmo nível lógico de comparação, então aplique a mesma indentação nos comandos <b>if</b>,
+        <b>elif</b> e <b>else</b> correspondentes.</li>
+</ul>
+
+<div class="tab"></div> = TAB <br>
+<div class="space"></div> = Espaço
+
+<table border=1>
+        <tr>
+            <th>Exemplo com erro</th>
+            <th>Exemplo corrigido</th>
+        </tr>
+        <tr>
+            <td>
+                <pre>
+if (reta == 3):
+<div class="space"></div><div class="tab"></div>mensagem = "ponto nao pertence a reta"
+<div class="tab"></div><div class="tab"></div>print(mensagem)
+    </pre>
+            </td>
+            <td>
+                <pre>
+if (reta == 3):
+<div class="tab"></div><div class="tab"></div>mensagem = "ponto nao pertence a reta"
+<div class="tab"></div><div class="tab"></div>print(mensagem)
+    </pre>
+            </td>
+        </tr>
+    
+    </table>
+
+</table>
+<br>
+
+<h2> ZeroDivisionError: float division by zero </h2>
+<h2> </h2>
+
+<br>
+Parece que há um erro na linha indicada ou anterior. <br>
+A divisão por zero gera um resultado indefinido. Verifique se alguma operação no código resulta em divisão por zero.<br> <br>
+
+<h2> TypeError: unsupported operand type(s) </h2>
+
+<br>
+Parece que há um erro na linha indicada ou anterior. <br>
+
+<ul>
+    <li>Verifique se você confundiu o uso de alguns símbolos nas operações. Por exemplo, use <b>**</b> para representar a exponenciação.</li>
+    <li>Verifique se você usou ponto <b>(.)</b> em vez da vígula <b>(,)</b> para separar a parte inteira da parte decimal de um número real.</li>
+</ul>
+
+<table border=1>
+    <tr>
+        <th>Exemplo com erro</th>
+        <th>Exemplo corrigido</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+# Sinal de expoente trocado
+a = 2 <span class="erro">^</span> 0.5
+
+# Uso equivocado de vírgula para separar casas decimais
+round(2**(0<span class="erro">,</span>5), 8)
+</pre>
+        </td>
+        <td>
+            <pre>
+# Uso correto de 2 asteriscos
+a = 2 ** 0.5
+
+# Uso correto do ponto em números reais
+round(2**(0.5), 8)
+</pre>
+        </td>
+    </tr>
+
+</table>
+
+<h2> ZeroDivisionError: division by zero </h2>
+<h2> </h2>
+
+<br>
+Parece que há um erro na linha indicada ou anterior. <br>
+A divisão por zero gera um resultado indefinido. Verifique se alguma operação no código resulta em divisão por zero.<br> <br>
+
+
+<h2> TypeError: Can't convert 'int' object to str implicitly </h2>
+
+<br>
+Parece que há um erro na linha indicada ou anterior. <br>
+
+Verifique se há tentativas de operações misturando strings e números.<br>
+
+
+
+<table border=1>
+    <tr>
+        <th>Exemplo com erro</th>
+        <th>Exemplo corrigido</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+b = <span class="erro">"1"</span>
+soma = b + 2
+</pre>
+        </td>
+        <td>
+            <pre>
+b = 1
+soma = b + 2
+</pre>
+        </td>
+    </tr>
+
+</table>
