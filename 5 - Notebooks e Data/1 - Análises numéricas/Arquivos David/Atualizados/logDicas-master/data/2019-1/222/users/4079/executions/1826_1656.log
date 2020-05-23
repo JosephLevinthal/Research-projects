@@ -1,0 +1,619 @@
+== TEST (2019-06-12 18:17:23) 
+-- CODE:
+x=array(slip('BE','ES','FR','IT','PT'))
+
+
+slip(',')
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    x=array(slip('BE','ES','FR','IT','PT'))
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:20:39) 
+-- CODE:
+Belgica=array(slipt("BE:"))
+Espanha=array(slipt("ES:"))
+Franca=array(slipt("FR:"))
+Italia=array(slipt("IT:"))
+Portugual=array(slipt("PT:"))
+
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    Belgica=array(slipt("BE:"))
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:20:53) 
+-- CODE:
+Belgica=array(.slipt("BE:"))
+Espanha=array(slipt("ES:"))
+Franca=array(slipt("FR:"))
+Italia=array(slipt("IT:"))
+Portugual=array(slipt("PT:"))
+
+
+
+
+
+-- ERROR:
+File "XXXX", line 1
+    Belgica=array(.slipt("BE:"))
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:21:36) 
+-- CODE:
+Belgica=array("BE:")
+Espanha=array("ES:")
+Franca=array("FR:")
+Italia=array("IT:")
+Portugual=array("PT:")
+
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    Belgica=array("BE:")
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:23:00) 
+-- CODE:
+Belgica=array(eval("BE:"))
+Espanha=array(eval("ES:"))
+Franca=array(eval("FR:"))
+Italia=array(eval("IT:"))
+Portugual=array(eval("PT:"))
+
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    Belgica=array(eval("BE:"))
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:23:15) 
+-- CODE:
+Belgica=array(eval("BE: "))
+Espanha=array(eval("ES: "))
+Franca=array(eval("FR: "))
+Italia=array(eval("IT: "))
+Portugual=array(eval("PT: "))
+
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    Belgica=array(eval("BE: "))
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:24:18) 
+-- CODE:
+Belgica=array(eval(int("BE: ")))
+Espanha=array(eval(int("ES: ")))
+Franca=array(eval(int("FR: ")))
+Italia=array(eval(int("IT: ")))
+Portugual=array(eval(int("PT: ")))
+
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    Belgica=array(eval(int("BE: ")))
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:28:34) 
+-- CODE:
+Belgica=array(eval(int("BE: ")))
+Espanha=array(eval(int("ES: ")))
+Franca=array(eval(int("FR: ")))
+Italia=array(eval(int("IT: ")))
+Portugual=array(eval(int("PT: ")))
+
+Entrada=.slipt("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+	
+
+
+-- ERROR:
+File "XXXX", line 7
+    Entrada=.slipt("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:29:15) 
+-- CODE:
+Belgica=array(eval(int(":")))
+Espanha=array(eval(int(":")))
+Franca=array(eval(int(":")))
+Italia=array(eval(int(":")))
+Portugual=array(eval(int(":"))
+
+Entrada=.slipt("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+	
+
+
+-- ERROR:
+File "XXXX", line 7
+    Entrada=.slipt("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:29:25) 
+-- CODE:
+Belgica=array(eval(int(":")))
+Espanha=array(eval(int(":")))
+Franca=array(eval(int(":")))
+Italia=array(eval(int(":")))
+Portugual=array(eval(int(":"))
+
+Entrada("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+	
+
+
+-- ERROR:
+File "XXXX", line 7
+    Entrada("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:32:29) 
+-- CODE:
+p1=array(eval(int("maior quantidade de pessoas:")))
+p2=array(int("quantiades de pessoas em cada pais:")))
+
+
+Entrada("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+
+-- ERROR:
+File "XXXX", line 2
+    p2=array(int("quantiades de pessoas em cada pais:")))
+                                                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:32:35) 
+-- CODE:
+p1=array(eval(int("maior quantidade de pessoas:")))
+p2=array(int("quantiades de pessoas em cada pais:"))
+
+
+Entrada("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p1=array(eval(int("maior quantidade de pessoas:")))
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:32:44) 
+-- CODE:
+p1=array(int("maior quantidade de pessoas:"))
+p2=array(int("quantiades de pessoas em cada pais:"))
+
+
+Entrada("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p1=array(int("maior quantidade de pessoas:"))
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:33:06) 
+-- CODE:
+p1=array(.split(int("maior quantidade de pessoas:"))
+p2=array(int("quantiades de pessoas em cada pais:"))
+
+
+Entrada("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+
+-- ERROR:
+File "XXXX", line 1
+    p1=array(.split(int("maior quantidade de pessoas:"))
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:33:15) 
+-- CODE:
+p1=array(split(int("maior quantidade de pessoas:"))
+p2=array(int("quantiades de pessoas em cada pais:"))
+
+
+Entrada("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+
+-- ERROR:
+File "XXXX", line 2
+    p2=array(int("quantiades de pessoas em cada pais:"))
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:33:22) 
+-- CODE:
+p1=array(for(int("maior quantidade de pessoas:"))
+p2=array(int("quantiades de pessoas em cada pais:"))
+
+
+Entrada("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+
+-- ERROR:
+File "XXXX", line 1
+    p1=array(for(int("maior quantidade de pessoas:"))
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:33:37) 
+-- CODE:
+p1=array(int(input("maior quantidade de pessoas:")))
+p2=array(int("quantiades de pessoas em cada pais:"))
+
+
+Entrada("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p1=array(int(input()))
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:33:52) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:")))
+p2=array(int("quantiades de pessoas em cada pais:"))
+
+
+Entrada("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+
+-- ERROR:
+File "XXXX", line 1
+    p1=int(input()))
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:33:58) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=array(int("quantiades de pessoas em cada pais:"))
+
+
+Entrada("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p1=int(input())
+ValueError: invalid literal for int() with base 10: 'IT,FR,BE,BE,BE,ES,PT'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:34:25) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p1=int(input())
+ValueError: invalid literal for int() with base 10: 'IT,FR,BE,BE,BE,ES,PT'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:34:52) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=array(eval("ES" , "FR" , "PT" , "ES" , "BE" , "IT"))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p1=int(input())
+ValueError: invalid literal for int() with base 10: 'IT,FR,BE,BE,BE,ES,PT'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:35:17) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=.split("ES" , "FR" , "PT" , "ES" , "BE" , "IT"))
+
+-- ERROR:
+File "XXXX", line 5
+    Entrada=.split("ES" , "FR" , "PT" , "ES" , "BE" , "IT"))
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:35:26) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=.split("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+
+-- ERROR:
+File "XXXX", line 5
+    Entrada=.split("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:35:36) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=split("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p1=int(input())
+ValueError: invalid literal for int() with base 10: 'IT,FR,BE,BE,BE,ES,PT'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:35:48) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=eval("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p1=int(input())
+ValueError: invalid literal for int() with base 10: 'IT,FR,BE,BE,BE,ES,PT'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:36:00) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=array("ES" , "FR" , "PT" , "ES" , "BE" , "IT")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p1=int(input())
+ValueError: invalid literal for int() with base 10: 'IT,FR,BE,BE,BE,ES,PT'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:37:24) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=array('ES' , 'FR' , 'PT' , 'ES' , 'BE' , 'IT')
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p1=int(input())
+ValueError: invalid literal for int() with base 10: 'IT,FR,BE,BE,BE,ES,PT'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:37:50) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=array([]('ES' , 'FR' , 'PT' , 'ES' , 'BE' , 'IT'))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p1=int(input())
+ValueError: invalid literal for int() with base 10: 'IT,FR,BE,BE,BE,ES,PT'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:38:08) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=array([','],('ES' , 'FR' , 'PT' , 'ES' , 'BE' , 'IT'))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p1=int(input())
+ValueError: invalid literal for int() with base 10: 'IT,FR,BE,BE,BE,ES,PT'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:38:14) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=array([','],('ES' , 'FR' , 'PT' , 'ES' , 'BE' , 'IT'))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p1=int(input())
+ValueError: invalid literal for int() with base 10: 'IT,FR,BE,BE,BE,ES,PT'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:38:22) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=array([','],('ES' , 'FR' , 'PT' , 'ES' , 'BE' , 'IT'))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p1=int(input())
+ValueError: invalid literal for int() with base 10: 'IT,FR,BE,BE,BE,ES,PT'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:38:34) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=array([','],('ES' , 'FR' , 'PT' , 'ES' , 'BE' , 'IT'))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p1=int(input())
+ValueError: invalid literal for int() with base 10: 'IT,FR,BE,BE,BE,ES,PT'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:38:51) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=array([','],('ES' , 'FR' , 'PT' , 'ES' , 'BE' , 'IT'))
+print(2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p1=int(input())
+ValueError: invalid literal for int() with base 10: 'IT,FR,BE,BE,BE,ES,PT'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:39:07) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=array([','],('ES' , 'FR' , 'PT' , 'ES' , 'BE' , 'IT'))
+print(Entrada)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p1=int(input())
+ValueError: invalid literal for int() with base 10: 'IT,FR,BE,BE,BE,ES,PT'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:39:22) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=array('ES' , 'FR' , 'PT' , 'ES' , 'BE' , 'IT')
+print(Entrada)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p1=int(input())
+ValueError: invalid literal for int() with base 10: 'IT,FR,BE,BE,BE,ES,PT'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:40:05) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=array('ES' , 'FR' , 'PT' , 'ES' , 'BE' , 'IT')
+for([1,2,1,1])
+print(Entrada)
+-- ERROR:
+File "XXXX", line 6
+    for([1,2,1,1])
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:40:18) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=array('ES' , 'FR' , 'PT' , 'ES' , 'BE' , 'IT')
+for([1,2,1,1]):
+print(Entrada)
+-- ERROR:
+File "XXXX", line 6
+    for([1,2,1,1]):
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:40:50) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=array('ES' , 'FR' , 'PT' , 'ES' , 'BE' , 'IT')
+for [1,2,1,1]
+print(Entrada)
+-- ERROR:
+File "XXXX", line 6
+    for [1,2,1,1]
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:40:58) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=array('ES' , 'FR' , 'PT' , 'ES' , 'BE' , 'IT')
+for (1,2,1,1)
+print(Entrada)
+-- ERROR:
+File "XXXX", line 6
+    for (1,2,1,1)
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:41:07) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=array('ES' , 'FR' , 'PT' , 'ES' , 'BE' , 'IT')
+
+for (1,2,1,1):
+	
+print(Entrada)
+-- ERROR:
+File "XXXX", line 7
+    for (1,2,1,1):
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 19:16:05) 
+-- CODE:
+p1=int(input("maior quantidade de pessoas:"))
+p2=int(input("quantiades de pessoas em cada pais:"))
+
+
+Entrada=array('ES' , 'FR' , 'PT' , 'ES' , 'BE' , 'IT')
+
+for (1,2,1,1):
+	
+print(Entrada)
+-- ERROR:
+File "XXXX", line 7
+    for (1,2,1,1):
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

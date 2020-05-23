@@ -1,0 +1,584 @@
+== TEST (2019-04-06 21:56:12) 
+-- CODE:
+preco = float(input"Digite o preco: ")
+pagamento = float(input("Digite o pagamento: "))
+p1 = preco - pagamento
+p2 = pagamento - preco
+if(preco > pagamento):
+	mensagem = "Falta" + p1
+	printi(mensagem)
+	
+-- ERROR:
+File "XXXX", line 1
+    preco = float(input"Digite o preco: ")
+                                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 21:56:36) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+p1 = preco - pagamento
+p2 = pagamento - preco
+if(preco > pagamento):
+	mensagem = "Falta" + p1
+	printi(mensagem)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    mensagem = "Falta" + p1
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 21:56:43) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+p1 = preco - pagamento
+p2 = pagamento - preco
+if(preco > pagamento):
+	mensagem = "Falta" + p1
+	print(mensagem)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    mensagem = "Falta" + p1
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 21:57:27) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+p1 = preco - pagamento
+p2 = pagamento - preco
+if(preco > pagamento):
+	mensagem = "Falta" + p1
+	print(mensagem)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    mensagem = "Falta" + p1
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 21:58:30) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+if(preco > pagamento):
+	mensagem = "Falta" + p1
+	print(mensagem)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    mensagem = "Falta" + p1
+NameError: name 'p1' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:00:17) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+if(preco > pagamento):
+	mensagem = "Falta" + (preco - pagamento)
+	print(mensagem)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    mensagem = "Falta" + (preco - pagamento)
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:00:56) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+if(preco > pagamento):
+	mensagem = ("Falta" + (preco - pagamento))
+	print(mensagem)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    mensagem = ("Falta" + (preco - pagamento))
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:01:32) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+if(preco > pagamento):
+		mensagem = ("Falta" + (preco - pagamento))
+	print(mensagem)
+	
+-- ERROR:
+File "XXXX", line 5
+    print(mensagem)
+                  ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:02:01) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+if(preco > pagamento):
+	mensagem = "Falta X"
+	print(mensagem)
+	
+-- OUTPUT:
+Falta X
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:02:11) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+if(preco > pagamento):
+	mensagem = "Falta X"
+	print(mensagem)
+	
+-- OUTPUT:
+Falta X
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:02:51) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+if(preco > pagamento):
+	p1 = ("Falta" + (preco - pagamento))
+	print(mensagem)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    p1 = ("Falta" + (preco - pagamento))
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:02:59) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+if(preco > pagamento):
+	p1 = ("Falta" + (preco - pagamento))
+	print(p1)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    p1 = ("Falta" + (preco - pagamento))
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:03:54) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+if(preco > pagamento):
+	p1 = ("Falta" , (preco - pagamento))
+	print(round())
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round())
+TypeError: Required argument 'number' (pos 1) not found
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:04:03) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+if(preco > pagamento):
+	p1 = ("Falta" , (preco - pagamento))
+	print(round(p1))
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(p1))
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:04:15) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+if(preco > pagamento):
+	p1 = ("Falta" , (preco - pagamento))
+	print(round(p1, 2))
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(p1, 2))
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:05:18) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+if(preco > pagamento):
+	p1 = ("Falta" , (preco - pagamento))
+	print(round(p1, 2))
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(p1, 2))
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:05:49) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+if(preco > pagamento):
+	p = ("Falta" , (preco - pagamento))
+	print(round(p, 2))
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(p, 2))
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:07:27) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+if(preco > pagamento):
+	p = ("Falta" , (preco - pagamento))
+	print(round(p , 2))
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(p , 2))
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:07:48) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+if(preco > pagamento):
+	p = ("Falta" , (preco - pagamento))
+	print(p)
+	
+-- OUTPUT:
+('Falta', 26.0)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:08:18) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+if(preco > pagamento):
+	p == "Falta" , (preco - pagamento)
+	print(p)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    p == "Falta" , (preco - pagamento)
+NameError: name 'p' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:09:24) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+p1 = (preco - pagamento)
+if(preco > pagamento):
+	p = "Falta"
+	print(p)
+	
+-- OUTPUT:
+Falta
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:09:37) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+p1 = (preco - pagamento)
+if(preco > pagamento):
+	p = "Falta" + p1
+	print(p)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    p = "Falta" + p1
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:10:03) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+p1 = (preco - pagamento)
+if(preco > pagamento):
+	p = "Falta" + (p1)
+	print(p)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    p = "Falta" + (p1)
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:10:22) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+p1 = (preco - pagamento)
+if(preco > pagamento):
+	p = ("Falta" + (p1))
+	print(p)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    p = ("Falta" + (p1))
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:11:40) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+p1 = (preco - pagamento)
+if(preco > pagamento):
+	p = "Falta"
+	pp = p1
+	print(p + pp)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    print(p + pp)
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:11:53) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+p1 = (preco - pagamento)
+if(preco > pagamento):
+	p = "Falta"
+	pp = p1
+	print(p , pp)
+	
+-- OUTPUT:
+Falta 26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:13:09) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+p1 = (preco - pagamento)
+if(preco > pagamento):
+	p = "Falta"
+	pp = p1
+	print(round(p , pp, 2)
+	
+-- ERROR:
+File "XXXX", line 9
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:13:37) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+p1 = (preco - pagamento)
+if(preco > pagamento):
+	p = "Falta"
+	pp = p1
+	print(round(p , pp, 2))
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    print(round(p , pp, 2))
+TypeError: round() takes at most 2 arguments (3 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:14:06) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+p1 = (preco - pagamento)
+if(preco > pagamento):
+	p = "Falta"
+	pp = p1
+	print(round(p , pp))
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    print(round(p , pp))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:15:38) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+p1 = (preco - pagamento)
+if(preco > pagamento):
+	p = "Falta"
+	pp = p1
+	print(round(p , pp , 2))
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    print(round(p , pp , 2))
+TypeError: round() takes at most 2 arguments (3 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:16:18) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+p1 = (preco - pagamento)
+if(preco > pagamento):
+	p = "Falta"
+	pp = p1
+	print(p, round(pp, 2))
+	
+-- OUTPUT:
+Falta 26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:18:00) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+p1 = (preco - pagamento)
+p2 = (pagamento - preco)
+if(preco > pagamento):
+	p = "Falta"
+	pp = p1
+	print(p, round(pp, 2))
+else:
+	p = "Falta"
+	ppp = p2
+	print(p, round(ppp, 2))
+	
+-- OUTPUT:
+Falta 26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:19:02) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+p1 = (preco - pagamento)
+p2 = (pagamento - preco)
+if(preco > pagamento):
+	p = "Falta"
+	pp = p1
+	print(p, round(pp, 2))
+else:
+	t = "Troco"
+	ppp = p2
+	print(t, round(ppp, 2))
+	
+-- OUTPUT:
+Falta 26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-06 22:19:15) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+p1 = (preco - pagamento)
+p2 = (pagamento - preco)
+if(preco > pagamento):
+	p = "Falta"
+	pp = p1
+	print(p, round(pp, 2))
+else:
+	t = "Troco"
+	ppp = p2
+	print(t, round(ppp, 2))
+	
+-- EXECUTION TIME:
+0.168724
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+Falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+Troco 28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+Troco 0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:19:33) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+p1 = (preco - pagamento)
+p2 = (pagamento - preco)
+if(preco > pagamento):
+	p = "Falta"
+	pp = p1
+	print(p, round(pp, 2))
+else:
+	t = "Troco"
+	ppp = p2
+	print(t, round(ppp, 2))
+	
+-- OUTPUT:
+Falta 26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-06 22:19:59) 
+-- CODE:
+preco = float(input("Digite o preco: "))
+pagamento = float(input("Digite o pagamento: "))
+p1 = (preco - pagamento)
+p2 = (pagamento - preco)
+if(preco > pagamento):
+	p = "Falta"
+	pp = p1
+	print(p, round(pp, 2))
+else:
+	t = "Troco de"
+	ppp = p2
+	print(t, round(ppp, 2))
+	
+-- EXECUTION TIME:
+0.188583
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+Falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+Troco de 28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+Troco de 0.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

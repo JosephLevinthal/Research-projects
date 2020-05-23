@@ -1,0 +1,108 @@
+== TEST (2019-04-15 15:57:47) 
+-- CODE:
+a=input("leia o primeiro nome:")
+b=input("leia o segundo nome:")
+if (a=b):
+	
+-- ERROR:
+File "XXXX", line 3
+    if (a=b):
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:58:02) 
+-- CODE:
+a=input("leia o primeiro nome:")
+b=input("leia o segundo nome:")
+if (a==b):
+	
+-- ERROR:
+File "XXXX", line 5
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:58:42) 
+-- CODE:
+a=input("leia o primeiro nome:")
+b=input("leia o segundo nome:")
+if (a==b):
+	mensagem=a.upper()
+	
+-- ERROR:
+File "XXXX", line 5
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:59:21) 
+-- CODE:
+a=input("leia o primeiro nome:")
+b=input("leia o segundo nome:")
+if (a==b):
+	mensagem=a.upper()
+	print(mensagem)
+	
+-- ERROR:
+File "XXXX", line 5
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 16:00:26) 
+-- CODE:
+a=input("leia o primeiro nome:")
+b=input("leia o segundo nome:")
+if (a==b):
+	mensagem=b.upper()
+	print(mensagem)
+else:
+	mensagem=a
+	print(mensagem)
+	
+-- OUTPUT:
+Ada
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 16:00:41) 
+-- CODE:
+a=input("leia o primeiro nome:")
+b=input("leia o segundo nome:")
+if (a==b):
+	mensagem=b.upper()
+	print(mensagem)
+else:
+	mensagem=a
+	print(mensagem)
+	
+-- EXECUTION TIME:
+0.110178
+-- TEST CASE 1:
+---- input:
+Ada
+Leon
+---- correct output:
+Ada
+Leon
+---- user output:
+Ada
+-- TEST CASE 2:
+---- input:
+Marcos
+Demetrius
+---- correct output:
+Demetrius
+Marcos
+---- user output:
+Marcos
+-- TEST CASE 3:
+---- input:
+WILSON
+george
+---- correct output:
+george
+WILSON
+---- user output:
+WILSON
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

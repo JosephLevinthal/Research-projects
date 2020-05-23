@@ -1,0 +1,153 @@
+== TEST (2019-06-13 18:20:00) 
+-- CODE:
+s=input("pais origem: ").split(',')
+print(s)
+
+-- OUTPUT:
+['IT', 'FR', 'BE', 'BE', 'BE', 'ES', 'PT']
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 18:20:20) 
+-- CODE:
+s=input("pais origem: ".split(','))
+print(s)
+
+-- OUTPUT:
+['pais origem: ']IT,FR,BE,BE,BE,ES,PT
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 18:21:07) 
+-- CODE:
+s=input("pais origem: ").split(',')
+print(s)
+
+-- OUTPUT:
+['IT', 'FR', 'BE', 'BE', 'BE', 'ES', 'PT']
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 18:21:44) 
+-- CODE:
+s=input("pais origem: ").split(' ', ',')
+print(s)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    s=input().split(' ', ',')
+TypeError: 'str' object cannot be interpreted as an integer
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 18:22:15) 
+-- CODE:
+s=input("pais origem: ")
+s=s.split(',')
+print(s)
+
+-- OUTPUT:
+['IT', 'FR', 'BE', 'BE', 'BE', 'ES', 'PT']
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 18:22:47) 
+-- CODE:
+s=input("pais origem: ")
+s=s.split(',')
+print(s[0])
+
+-- OUTPUT:
+IT
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 18:29:22) 
+-- CODE:
+from numpy import *
+s=input("pais origem: ")
+s=s.split(',')
+b=0
+e=0
+f=0
+it=0
+pt=0
+for i in s:
+	if(i=="BE"):
+		b=b+1
+	if(i=="ES"):
+		e=e+1
+	if(i=="FR"):
+		f=f+1
+	if(i=="IT"):
+		it=it+1
+	if(i=="PT"):
+		pt=pt+1
+vet=zeros(5, dtype=int)
+vet[0]=b
+vet[1]=e
+vet[2]=f
+vet[3]=it
+vet[4]=pt
+print(max(vet))
+print(vet)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 18:29:34) 
+-- CODE:
+from numpy import *
+s=input("pais origem: ")
+s=s.split(',')
+b=0
+e=0
+f=0
+it=0
+pt=0
+for i in s:
+	if(i=="BE"):
+		b=b+1
+	if(i=="ES"):
+		e=e+1
+	if(i=="FR"):
+		f=f+1
+	if(i=="IT"):
+		it=it+1
+	if(i=="PT"):
+		pt=pt+1
+vet=zeros(5, dtype=int)
+vet[0]=b
+vet[1]=e
+vet[2]=f
+vet[3]=it
+vet[4]=pt
+print(max(vet))
+print(vet)
+	
+
+-- EXECUTION TIME:
+0.844061
+-- TEST CASE 1:
+---- input:
+IT,FR,BE,BE,BE,ES,PT
+---- correct output:
+3
+[3 1 1 1 1]
+---- user output:
+3
+[3 1 1 1 1]
+-- TEST CASE 2:
+---- input:
+PT,FR,FR,FR,FR,FR,PT,PT,ES,PT,ES,ES,ES,PT,IT
+---- correct output:
+5
+[0 4 5 1 5]
+---- user output:
+5
+[0 4 5 1 5]
+-- TEST CASE 3:
+---- input:
+BE,IT,BE,IT,IT,BE,PT,IT,ES,PT,IT,PT,IT,IT,ES,ES,FR,FR,BE,PT,FR,ES,ES,FR,PT,BE,IT,PT,IT,PT,PT,IT
+---- correct output:
+10
+[ 5  5  4 10  8]
+---- user output:
+10
+[ 5  5  4 10  8]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

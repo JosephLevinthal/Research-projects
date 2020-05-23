@@ -1,0 +1,590 @@
+== TEST (2019-06-29 19:12:47) 
+-- CODE:
+h0 = int(input("posicao inicial: "))
+t = 0
+
+while (t < h0):
+	h = h0 - 1/2 * 9,8 * t**2
+	print(t)
+	print(h)
+	t = t + 1
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    h0 = int(input())
+ValueError: invalid literal for int() with base 10: '36.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-29 19:13:29) 
+-- CODE:
+h0 = int(input("posicao inicial: "))
+t = 0
+
+while (t < h0):
+	h = h0 - 1/2 * 9,8 * t**2
+	print(round(t, 1))
+	print(round(h, 1))
+	t = t + 1
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    h0 = int(input())
+ValueError: invalid literal for int() with base 10: '36.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-29 19:15:38) 
+-- CODE:
+h0 = float(input("posicao inicial: "))
+t = 0
+
+while (t < h0):
+	h = h0 - 1/2 * 9,8 * t**2
+	print(round(t, 1))
+	print(round(h, 1))
+	t = t + 1
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    print(round(h, 1))
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-29 19:16:46) 
+-- CODE:
+h0 = float(input("posicao inicial: "))
+t = 0
+
+
+h = h0 - 1/2 * 9,8 * t**2
+print(round(t, 1))
+print(round(h, 1))
+
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    print(round(h, 1))
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-29 19:17:03) 
+-- CODE:
+h0 = float(input("posicao inicial: "))
+t = 0
+
+
+h = h0 - 1/2 * 9,8 * t**2
+print(round(t, 1))
+print(h)
+
+	
+	
+	
+
+-- OUTPUT:
+0
+(31.5, 0)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-29 19:17:46) 
+-- CODE:
+h0 = float(input("posicao inicial: "))
+t = 0
+
+
+h = h0 - (1/2 * 9,8 * t**2)
+print(round(t, 1))
+print(h)
+
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    h = h0 - (1/2 * 9,8 * t**2)
+TypeError: unsupported operand type(s) for -: 'float' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-29 19:18:07) 
+-- CODE:
+h0 = int(input("posicao inicial: "))
+t = 0
+
+
+h = h0 - (1/2 * 9,8 * t**2)
+print(round(t, 1))
+print(h)
+
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    h0 = int(input())
+ValueError: invalid literal for int() with base 10: '36.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-29 19:18:28) 
+-- CODE:
+h0 = int(input("posicao inicial: "))
+t = 0
+
+
+h = h0 - (1/2 * 9,8 * t**2)
+print(h)
+
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    h0 = int(input())
+ValueError: invalid literal for int() with base 10: '36.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-29 19:18:43) 
+-- CODE:
+h0 = int(input("posicao inicial: "))
+t = 0
+
+
+h = h0 - (0,5 * 9,8 * t**2)
+print(h)
+
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    h0 = int(input())
+ValueError: invalid literal for int() with base 10: '36.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-29 19:19:43) 
+-- CODE:
+h0 = int(input("posicao inicial: "))
+t = 0
+
+
+h = h0 - (0.5 * 9.8 * t**2)
+print(h)
+
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    h0 = int(input())
+ValueError: invalid literal for int() with base 10: '36.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-29 19:20:27) 
+-- CODE:
+h0 = int(input("posicao inicial: "))
+t = 0
+
+
+h = h0 - (0.5 * 9.8 * t**2)
+print(round(t, 1))
+print(round(h, 1))
+
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    h0 = int(input())
+ValueError: invalid literal for int() with base 10: '36.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-29 19:21:26) 
+-- CODE:
+h0 = int(input("posicao inicial: "))
+t = 0
+
+while (t < h0):
+	h = h0 - (0.5 * 9.8 * t**2)
+	print(round(t, 1))
+	print(round(h, 1))
+	t = t + 1
+
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    h0 = int(input())
+ValueError: invalid literal for int() with base 10: '36.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-29 19:23:17) 
+-- CODE:
+h0 = int(input("posicao inicial: "))
+t = 0
+h = 1
+while (h > 0):
+	h = h0 - (0.5 * 9.8 * t**2)
+	print(round(t, 1))
+	print(round(h, 1))
+	t = t + 1
+
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    h0 = int(input())
+ValueError: invalid literal for int() with base 10: '36.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-29 19:24:22) 
+-- CODE:
+h0 = int(input("posicao inicial: "))
+t = 0
+h = 1
+while (h >= 0):
+	h = h0 - (0.5 * 9.8 * t**2)
+	print(round(t, 1))
+	print(round(h, 1))
+	t = t + 1
+
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    h0 = int(input())
+ValueError: invalid literal for int() with base 10: '36.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-29 19:25:02) 
+-- CODE:
+h0 = int(input("posicao inicial: "))
+t = 0
+h = 1
+while (h > 0):
+	h = h0 - (0.5 * 9.8 * t**2)
+	print(round(t, 1))
+	print(round(h, 1))
+	t = t + 1
+
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    h0 = int(input())
+ValueError: invalid literal for int() with base 10: '36.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-29 19:30:31) 
+-- CODE:
+h0 = int(input("posicao inicial: "))
+t = 0
+h = 1
+while (h > 0):
+	h = h0 - (0.5 * 9.8 * t**2)
+	if (h > 0):
+		print(round(t, 1))
+		print(round(h, 1))
+	
+	t = t + 1
+
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    h0 = int(input())
+ValueError: invalid literal for int() with base 10: '36.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-29 19:31:30) 
+-- CODE:
+h0 = int(input("posicao inicial: "))
+t = 0
+h = 1
+while (h > 0):
+	h = h0 - (0.5 * 9.8 * t**2)
+	if (h > 0):
+		print("t = ",round(t, 1))
+		print("h = ",round(h, 1))
+	
+	t = t + 1
+
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    h0 = int(input())
+ValueError: invalid literal for int() with base 10: '36.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-29 19:31:48) 
+-- CODE:
+h0 = int(input("posicao inicial: "))
+t = 0
+h = 1
+while (h > 0):
+	h = h0 - (0.5 * 9.8 * t**2)
+	if (h > 0):
+		print("t =",round(t, 1))
+		print("h =",round(h, 1))
+	
+	t = t + 1
+
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    h0 = int(input())
+ValueError: invalid literal for int() with base 10: '36.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-29 19:31:57) 
+-- CODE:
+h0 = int(input("posicao inicial: "))
+t = 0
+h = 1
+while (h > 0):
+	h = h0 - (0.5 * 9.8 * t**2)
+	if (h > 0):
+		print("t =",round(t, 1))
+		print("h =",round(h, 1))
+	
+	t = t + 1
+
+	
+	
+	
+
+-- EXECUTION TIME:
+0.728335
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1714/2517/main.py", line 1, in <module>
+    h0 = int(input())
+ValueError: invalid literal for int() with base 10: '36.0'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-29 19:32:41) 
+-- CODE:
+h0 = float(input("posicao inicial: "))
+t = 0
+h = 1
+while (t < h0):
+	h = h0 - (0.5 * 9.8 * t**2)
+	if (h > 0):
+		print("t =",round(t, 1))
+		print("h =",round(h, 1))
+	
+	t = t + 1
+
+	
+	
+	
+
+-- OUTPUT:
+t = 0
+h = 36.0
+t = 1
+h = 31.1
+t = 2
+h = 16.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-29 19:32:52) 
+-- CODE:
+h0 = float(input("posicao inicial: "))
+t = 0
+h = 1
+while (t < h0):
+	h = h0 - (0.5 * 9.8 * t**2)
+	if (h > 0):
+		print("t =",round(t, 1))
+		print("h =",round(h, 1))
+	
+	t = t + 1
+
+	
+	
+	
+
+-- OUTPUT:
+t = 0
+h = 36.0
+t = 1
+h = 31.1
+t = 2
+h = 16.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-29 19:33:08) 
+-- CODE:
+h0 = float(input("posicao inicial: "))
+t = 0
+h = 1
+while (t < h0):
+	h = h0 - (0.5 * 9.8 * t**2)
+	if (h > 0):
+		print("t =",round(t, 1))
+		print("h =",round(h, 1))
+	
+	t = t + 1
+
+	
+	
+	
+
+-- OUTPUT:
+t = 0
+h = 36.0
+t = 1
+h = 31.1
+t = 2
+h = 16.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-29 19:33:20) 
+-- CODE:
+h0 = float(input("posicao inicial: "))
+t = 0
+h = 1
+while (t < h0):
+	h = h0 - (0.5 * 9.8 * t**2)
+	if (h > 0):
+		print("t =",round(t, 1))
+		print("h =",round(h, 1))
+	
+	t = t + 1
+
+	
+	
+	
+
+-- EXECUTION TIME:
+0.829531
+-- TEST CASE 1:
+---- input:
+36.0
+---- correct output:
+t = 0
+h = 36.0
+t = 1
+h = 31.1
+t = 2
+h = 16.4
+---- user output:
+t = 0
+h = 36.0
+t = 1
+h = 31.1
+t = 2
+h = 16.4
+-- TEST CASE 2:
+---- input:
+11.5
+---- correct output:
+t = 0
+h = 11.5
+t = 1
+h = 6.6
+---- user output:
+t = 0
+h = 11.5
+t = 1
+h = 6.6
+-- TEST CASE 3:
+---- input:
+1234.5
+---- correct output:
+t = 0
+h = 1234.5
+t = 1
+h = 1229.6
+t = 2
+h = 1214.9
+t = 3
+h = 1190.4
+t = 4
+h = 1156.1
+t = 5
+h = 1112.0
+t = 6
+h = 1058.1
+t = 7
+h = 994.4
+t = 8
+h = 920.9
+t = 9
+h = 837.6
+t = 10
+h = 744.5
+t = 11
+h = 641.6
+t = 12
+h = 528.9
+t = 13
+h = 406.4
+t = 14
+h = 274.1
+t = 15
+h = 132.0
+---- user output:
+t = 0
+h = 1234.5
+t = 1
+h = 1229.6
+t = 2
+h = 1214.9
+t = 3
+h = 1190.4
+t = 4
+h = 1156.1
+t = 5
+h = 1112.0
+t = 6
+h = 1058.1
+t = 7
+h = 994.4
+t = 8
+h = 920.9
+t = 9
+h = 837.6
+t = 10
+h = 744.5
+t = 11
+h = 641.6
+t = 12
+h = 528.9
+t = 13
+h = 406.4
+t = 14
+h = 274.1
+t = 15
+h = 132.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

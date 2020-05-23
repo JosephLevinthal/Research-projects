@@ -1,0 +1,617 @@
+== TEST (2019-03-31 13:32:39) 
+-- CODE:
+o = input("objeto:")
+r = (abra + o * 4)
+print(r)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    r = (abra + o * 4)
+NameError: name 'abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 13:34:38) 
+-- CODE:
+o = input("objeto:")
+r = input("repticao:")
+s = (abra+o)*r
+print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    s = (abra+o)*r
+NameError: name 'abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 13:35:12) 
+-- CODE:
+o = input("objeto:")
+r = input("repticao:")
+s = (abra+o*r)
+print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    s = (abra+o*r)
+NameError: name 'abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 13:35:45) 
+-- CODE:
+o = input("objeto:")
+r = input("repticao:")
+s = abra+o*r
+print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    s = abra+o*r
+NameError: name 'abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 13:37:11) 
+-- CODE:
+o = input("objeto:")
+r = input("repticao:")
+s = "abra" + o * r
+print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    s = "abra" + o * r
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:16:03) 
+-- CODE:
+o = input("objeto:")
+r = int(input("repticao:"))
+magica= ("abra"+" "+o*r+" ")
+print(magica)
+
+-- OUTPUT:
+abra livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:17:15) 
+-- CODE:
+o = input("objeto:")
+r = int(input("repticao:"))
+magica= ("abra"+" "+o+" ")
+print(magica*r)
+
+-- OUTPUT:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:17:56) 
+-- CODE:
+o = input("objeto:")
+r = int(input("repticao:"))
+magica= ("abra"+" "+o+" ")
+print(magica*r)
+
+-- OUTPUT:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 15:18:07) 
+-- CODE:
+o = input("objeto:")
+r = int(input("repticao:"))
+magica= ("abra"+" "+o+" ")
+print(magica*r)
+
+-- EXECUTION TIME:
+0.177071
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+abra carro abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:18:22) 
+-- CODE:
+o = input("objeto:")
+r = int(input("repticao:"))
+magica= ("abra" +" "+ o +" ")
+print(magica*r)
+
+-- OUTPUT:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 15:18:31) 
+-- CODE:
+o = input("objeto:")
+r = int(input("repticao:"))
+magica= ("abra" +" "+ o +" ")
+print(magica*r)
+
+-- EXECUTION TIME:
+0.21368
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+abra carro abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 15:18:50) 
+-- CODE:
+o = input("objeto:")
+r = int(input("repticao:"))
+magica= ("abra"+" "+ o +" ")
+print(magica*r)
+
+-- EXECUTION TIME:
+0.152094
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+abra carro abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 15:18:51) 
+-- CODE:
+o = input("objeto:")
+r = int(input("repticao:"))
+magica= ("abra"+" "+ o +" ")
+print(magica*r)
+
+-- EXECUTION TIME:
+0.169364
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+abra carro abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 15:18:51) 
+-- CODE:
+o = input("objeto:")
+r = int(input("repticao:"))
+magica= ("abra"+" "+ o +" ")
+print(magica*r)
+
+-- EXECUTION TIME:
+0.114446
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+abra carro abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 15:18:51) 
+-- CODE:
+o = input("objeto:")
+r = int(input("repticao:"))
+magica= ("abra"+" "+ o +" ")
+print(magica*r)
+
+-- EXECUTION TIME:
+0.146279
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+abra carro abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 15:18:52) 
+-- CODE:
+o = input("objeto:")
+r = int(input("repticao:"))
+magica= ("abra"+" "+ o +" ")
+print(magica*r)
+
+-- EXECUTION TIME:
+0.169351
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+objeto:repticao:abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+objeto:repticao:abra carro abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+objeto:repticao:abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:19:28) 
+-- CODE:
+o = input("objeto:")
+r = int(input("repticao:"))
+magica= ("abra"+" "+o)
+print(magica*r)
+
+-- OUTPUT:
+abra livroabra livroabra livroabra livroabra livroabra livroabra livroabra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:20:06) 
+-- CODE:
+o = input("objeto:")
+r = input("repticao:")
+magica= ("abra"+" "+o+" ")
+print(magica*r)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(magica*r)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:20:48) 
+-- CODE:
+o = input("objeto:")
+r = int(input("repticao:"))
+magica= ("abra"+" "+o+" ")
+print(magica*r)
+
+-- OUTPUT:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 15:20:58) 
+-- CODE:
+o = input("objeto:")
+r = int(input("repticao:"))
+magica= ("abra"+" "+o+" ")
+print(magica*r)
+
+-- EXECUTION TIME:
+0.129773
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+abra carro abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:21:12) 
+-- CODE:
+o = input("objeto: ")
+r = int(input("repticao: "))
+magica= ("abra"+" "+o+" ")
+print(magica*r)
+
+-- OUTPUT:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 15:21:19) 
+-- CODE:
+o = input("objeto: ")
+r = int(input("repticao: "))
+magica= ("abra"+" "+o+" ")
+print(magica*r)
+
+-- EXECUTION TIME:
+0.229544
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+abra carro abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 15:26:41) 
+-- CODE:
+ob = input("objeto: ")
+r = int(input("repticao: "))
+
+w= ("abra"+" "+ob+" ")
+
+print(w*r)
+
+-- EXECUTION TIME:
+0.157534
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+abra carro abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:26:43) 
+-- CODE:
+ob = input("objeto: ")
+r = int(input("repticao: "))
+
+w= ("abra"+" "+ob+" ")
+
+print(w*r)
+
+-- OUTPUT:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:27:02) 
+-- CODE:
+ob=input("objeto: ")
+r=int(input("repticao: "))
+
+w=("abra"+" "+ob+" ")
+
+print(w*r)
+
+-- OUTPUT:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 15:27:10) 
+-- CODE:
+ob=input("objeto: ")
+r=int(input("repticao: "))
+
+w=("abra"+" "+ob+" ")
+
+print(w*r)
+
+-- EXECUTION TIME:
+0.19804
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+abra carro abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:27:29) 
+-- CODE:
+ob=input("objeto: ")
+nr=int(input("numero de repeticoes: "))
+
+w=("Abra"+" "+ob+" ")
+
+print(w*nr)
+
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 15:27:36) 
+-- CODE:
+ob=input("objeto: ")
+nr=int(input("numero de repeticoes: "))
+
+w=("Abra"+" "+ob+" ")
+
+print(w*nr)
+
+-- EXECUTION TIME:
+0.128361
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

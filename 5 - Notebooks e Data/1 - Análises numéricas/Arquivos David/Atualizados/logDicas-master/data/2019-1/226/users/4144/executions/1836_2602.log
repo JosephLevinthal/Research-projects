@@ -1,0 +1,156 @@
+== TEST (2019-06-25 11:00:49) 
+-- CODE:
+from mumpy import *
+from numpy.linalg import*
+v = array(eval(input("digite a qtd de alimento: ")))
+v = v.T
+comida = array([[2,1,4],[1,2,0],[2,3,2]])
+r = dot(inv(comida),v.T)
+print("estafilococo:", round(r[0],1))
+print("salmonela:", round(r[1],1))
+print("coli:", round(r[2],1))
+if(r[0]==min(r):
+	print("estafilococo")
+elif(r[1]==min(r):
+	  print("salmonela")
+elif(r[2]==min(r)):
+	  print("coli")
+-- ERROR:
+File "XXXX", line 10
+    if(r[0]==min(r):
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:01:15) 
+-- CODE:
+from mumpy import *
+from numpy.linalg import*
+v = array(eval(input("digite a qtd de alimento: ")))
+v = v.T
+comida = array([[2,1,4],[1,2,0],[2,3,2]])
+r = dot(inv(comida),v.T)
+print("estafilococo:", round(r[0],1))
+print("salmonela:", round(r[1],1))
+print("coli:", round(r[2],1))
+if(r[0]==min(r)):
+	print("estafilococo")
+elif(r[1]==min(r):
+	  print("salmonela")
+elif(r[2]==min(r)):
+	  print("coli")
+-- ERROR:
+File "XXXX", line 12
+    elif(r[1]==min(r):
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:01:20) 
+-- CODE:
+from mumpy import *
+from numpy.linalg import*
+v = array(eval(input("digite a qtd de alimento: ")))
+v = v.T
+comida = array([[2,1,4],[1,2,0],[2,3,2]])
+r = dot(inv(comida),v.T)
+print("estafilococo:", round(r[0],1))
+print("salmonela:", round(r[1],1))
+print("coli:", round(r[2],1))
+if(r[0]==min(r)):
+	print("estafilococo")
+elif(r[1]==min(r)):
+	  print("salmonela")
+elif(r[2]==min(r)):
+	  print("coli")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from mumpy import *
+ModuleNotFoundError: No module named 'mumpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:01:29) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+v = array(eval(input("digite a qtd de alimento: ")))
+v = v.T
+comida = array([[2,1,4],[1,2,0],[2,3,2]])
+r = dot(inv(comida),v.T)
+print("estafilococo:", round(r[0],1))
+print("salmonela:", round(r[1],1))
+print("coli:", round(r[2],1))
+if(r[0]==min(r)):
+	print("estafilococo")
+elif(r[1]==min(r)):
+	  print("salmonela")
+elif(r[2]==min(r)):
+	  print("coli")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:01:51) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+v = array(eval(input("digite a qtd de alimento: ")))
+v = v.T
+comida = array([[2,1,4],[1,2,0],[2,3,2]])
+r = dot(inv(comida),v.T)
+print("estafilococo:", round(r[0],1))
+print("salmonela:", round(r[1],1))
+print("coli:", round(r[2],1))
+if(r[0]==min(r)):
+	print("estafilococo")
+elif(r[1]==min(r)):
+	  print("salmonela")
+elif(r[2]==min(r)):
+	  print("coli")
+-- EXECUTION TIME:
+0.649382
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo: 1923.4
+salmonela: 1864.5
+coli: -439.0
+coli
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo: -31711.0
+salmonela: 16783.4
+coli: 12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo: 22647.2
+salmonela: -9717.3
+coli: -6745.3
+salmonela
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

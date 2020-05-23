@@ -1,0 +1,232 @@
+== TEST (2019-06-30 19:27:40) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+mg = array(eval(input("Matriz: ")))
+mg = mg.T
+consumo = array([2,1,4], [1,2,0], [2,3,2])
+quantidade = dot(inv(consumo), mg)
+print("Estafilococo: ", round(quantidade[0], 1))
+print("Salmonela: ", round(quantidade[1], 1))
+print("Coli: ", round(quantidade[2], 1))
+
+if quantidade[0] == max(quantidade):
+    print("Estafilococo")
+elif quantidade[1] == max(quantidade):
+    print("Salmonela")
+else:
+    print("Coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 19:36:54) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+mg = array(eval(input("Matriz: ")))
+mg = mg.T
+consumo = array([[2,1,4], [1,2,0], [2,3,2]])
+quantidade = dot(inv(consumo), mg)
+print("Estafilococo: ", round(quantidade[0], 1))
+print("Salmonela: ", round(quantidade[1], 1))
+print("Coli: ", round(quantidade[2], 1))
+
+if quantidade[0] == max(quantidade):
+    print("Estafilococo")
+elif quantidade[1] == max(quantidade):
+    print("Salmonela")
+else:
+    print("Coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 19:38:57) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+mg = array(eval(input("Matriz: ")))
+mg = mg.T
+consumo = array([[2,1,4], [1,2,0], [2,3,2]])
+quantidade = dot(inv(consumo), mg)
+print("Estafilococo: ", round(quantidade[0], 1))
+print("Salmonela: ", round(quantidade[1], 1))
+print("Coli: ", round(quantidade[2], 1))
+
+if quantidade[0] == min(quantidade):
+    print("Estafilococo")
+elif quantidade[1] == min(quantidade):
+    print("Salmonela")
+else:
+    print("Coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-30 19:39:18) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+mg = array(eval(input("Matriz: ")))
+mg = mg.T
+consumo = array([[2,1,4], [1,2,0], [2,3,2]])
+quantidade = dot(inv(consumo), mg)
+print("Estafilococo: ", round(quantidade[0], 1))
+print("Salmonela: ", round(quantidade[1], 1))
+print("Coli: ", round(quantidade[2], 1))
+
+if quantidade[0] == min(quantidade):
+    print("Estafilococo")
+elif quantidade[1] == min(quantidade):
+    print("Salmonela")
+else:
+    print("Coli")
+
+-- EXECUTION TIME:
+0.961231
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+Estafilococo:  1923.4
+Salmonela:  1864.5
+Coli:  -439.0
+Coli
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+Estafilococo:  -31711.0
+Salmonela:  16783.4
+Coli:  12183.6
+Estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+Estafilococo:  22647.2
+Salmonela:  -9717.3
+Coli:  -6745.3
+Salmonela
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-30 19:39:49) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+mg = array(eval(input("Matriz: ")))
+mg = mg.T
+consumo = array([[2,1,4], [1,2,0], [2,3,2]])
+quantidade = dot(inv(consumo), mg)
+print("estafilococo: ", round(quantidade[0], 1))
+print("salmonela: ", round(quantidade[1], 1))
+print("coli: ", round(quantidade[2], 1))
+
+if quantidade[0] == min(quantidade):
+    print("estafilococo")
+elif quantidade[1] == min(quantidade):
+    print("salmonela")
+else:
+    print("coli")
+
+-- EXECUTION TIME:
+1.28716
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+Matriz: estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+Matriz: estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 19:39:58) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+mg = array(eval(input("Matriz: ")))
+mg = mg.T
+consumo = array([[2,1,4], [1,2,0], [2,3,2]])
+quantidade = dot(inv(consumo), mg)
+print("estafilococo: ", round(quantidade[0], 1))
+print("salmonela: ", round(quantidade[1], 1))
+print("coli: ", round(quantidade[2], 1))
+
+if quantidade[0] == min(quantidade):
+    print("estafilococo")
+elif quantidade[1] == min(quantidade):
+    print("salmonela")
+else:
+    print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

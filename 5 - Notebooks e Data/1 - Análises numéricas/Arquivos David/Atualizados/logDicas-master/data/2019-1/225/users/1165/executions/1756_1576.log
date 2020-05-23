@@ -1,0 +1,94 @@
+== SUBMITION (2019-05-29 10:19:15) 
+-- CODE:
+v1 = array(eval(input("Insira a sequencia: ")))
+
+#Sequencia dejogadas de Barsanulfo
+v2 =  array(eval(input("Insira a sequencia: ")))
+
+i = 0
+ve = 0
+vb = 0
+
+while(i < size(v1)):
+	if(((v1[i]== 11) and (v2[i]==33)) or ((v1[i]==22) and (v2[i]==11)) or ((v1[i]==33) and (v2[i]==22))):
+		ve = ve + 1
+	elif(((v2[i]==11) and (v1[i]==33)) or ((v2[i]==22) and (v1[i]==11)) or ((v2[i]==33) and (v1[i]==22))):
+		 vb = vb + 1
+	i = i + 1
+print(i)			  
+if(ve > vb):
+	print("EUSAPIA")
+elif(ve < vb):
+	print("BARSANULFO")
+elif(ve == vb):
+	print("EMPATE")
+-- EXECUTION TIME:
+0.136968
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1756/1576/main.py", line 1, in <module>
+    v1 = array(eval(input()))
+NameError: name 'array' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 10:20:45) 
+-- CODE:
+from numpy import*
+#Sequencia de jogadas de Eusápia
+v1 = array(eval(input("Insira a sequencia: ")))
+
+#Sequencia dejogadas de Barsanulfo
+v2 =  array(eval(input("Insira a sequencia: ")))
+
+i = 0
+ve = 0
+vb = 0
+
+while(i < size(v1)):
+	if(((v1[i]== 11) and (v2[i]==33)) or ((v1[i]==22) and (v2[i]==11)) or ((v1[i]==33) and (v2[i]==22))):
+		ve = ve + 1
+	elif(((v2[i]==11) and (v1[i]==33)) or ((v2[i]==22) and (v1[i]==11)) or ((v2[i]==33) and (v1[i]==22))):
+		 vb = vb + 1
+	i = i + 1
+print(i)	  
+if(ve > vb):
+	print("EUSAPIA")
+elif(ve < vb):
+	print("BARSANULFO")
+elif(ve == vb):
+	print("EMPATE")
+-- EXECUTION TIME:
+0.421598
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+EUSAPIA
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+EMPATE
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+BARSANULFO
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

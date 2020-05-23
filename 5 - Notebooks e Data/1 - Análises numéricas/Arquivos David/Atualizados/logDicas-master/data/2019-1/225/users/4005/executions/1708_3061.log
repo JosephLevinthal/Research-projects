@@ -1,0 +1,178 @@
+== TEST (2019-04-29 14:10:40) 
+-- CODE:
+t=input("tipo de ataque:")
+q=int(input("quantidade:"))
+if(t==TERRESTRE):
+	print("DROGON")
+elif(t==AEREO):
+	print("RHAEGAL")
+elif(t==MARITIMO):
+	print("VISERION")
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if(t==TERRESTRE):
+NameError: name 'TERRESTRE' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 14:11:03) 
+-- CODE:
+t=input("tipo de ataque:")
+
+if(t==TERRESTRE):
+	print("DROGON")
+elif(t==AEREO):
+	print("RHAEGAL")
+elif(t==MARITIMO):
+	print("VISERION")
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if(t==TERRESTRE):
+NameError: name 'TERRESTRE' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 14:12:01) 
+-- CODE:
+t=input("tipo de ataque:")
+
+if(t=="TERRESTRE"):
+	print("DROGON")
+elif(t=="AEREO"):
+	print("RHAEGAL")
+elif(t=="MARITIMO"):
+	print("VISERION")
+	
+-- OUTPUT:
+RHAEGAL
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 14:17:31) 
+-- CODE:
+t=input("tipo de ataque:")
+q=int(input("quantidade de unidades a seren destruidas:"))
+if(t=="TERRESTRE"and x=int(q/150)):
+	print("DROGON")
+	print(x)
+
+elif(t=="AEREO"):
+	print("RHAEGAL")
+elif(t=="MARITIMO"):
+	print("VISERION")
+	
+-- ERROR:
+File "XXXX", line 3
+    if(t=="TERRESTRE"and x=int(q/150)):
+                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 14:18:59) 
+-- CODE:
+t=input("tipo de ataque:")
+q=int(input("quantidade de unidades a seren destruidas:"))
+if(t=="TERRESTRE"):
+	print("DROGON")
+	print(q/150)
+elif(t=="AEREO"):
+	print("RHAEGAL")
+elif(t=="MARITIMO"):
+	print("VISERION")
+	
+-- OUTPUT:
+RHAEGAL
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 14:20:13) 
+-- CODE:
+t=input("tipo de ataque:")
+q=int(input("quantidade de unidades a seren destruidas:"))
+if(t=="TERRESTRE"):
+	print("DROGON")
+	print(int(q/150)+(q//150))
+elif(t=="AEREO"):
+	print("RHAEGAL")
+elif(t=="MARITIMO"):
+	print("VISERION")
+	
+-- OUTPUT:
+RHAEGAL
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 14:20:31) 
+-- CODE:
+t=input("tipo de ataque:")
+q=int(input("quantidade de unidades a seren destruidas:"))
+if(t=="TERRESTRE"):
+	print("DROGON")
+	print(int(q/150)+(q//150))
+elif(t=="AEREO"):
+	print("RHAEGAL")
+elif(t=="MARITIMO"):
+	print("VISERION")
+	
+-- OUTPUT:
+RHAEGAL
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 14:21:17) 
+-- CODE:
+t=input("tipo de ataque:")
+q=int(input("quantidade de unidades a seren destruidas:"))
+if(t=="TERRESTRE"):
+	print("DROGON")
+	print(int(q/150)+(1))
+elif(t=="AEREO"):
+	print("RHAEGAL")
+elif(t=="MARITIMO"):
+	print("VISERION")
+	
+-- OUTPUT:
+RHAEGAL
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 14:23:50) 
+-- CODE:
+t=input("tipo de ataque:")
+q=int(input("quantidade de unidades a seren destruidas:"))
+if(t=="TERRESTRE"):
+	print("DROGON")
+	print(int(q/150)+(1))
+elif(t=="AEREO"):
+	print("RHAEGAL")
+	print(int(q/30)+(1))
+elif(t=="MARITIMO"):
+	print("VISERION")
+	print(int(q/40)+(1))
+else:
+	print("Entrada invalida")
+	
+-- EXECUTION TIME:
+0.163275
+-- TEST CASE 1:
+---- input:
+AEREO
+425
+---- correct output:
+RHAEGAL
+15
+---- user output:
+RHAEGAL
+15
+-- TEST CASE 2:
+---- input:
+TERRESTRE
+65
+---- correct output:
+DROGON
+1
+---- user output:
+DROGON
+1
+-- TEST CASE 3:
+---- input:
+MARITIMO
+452
+---- correct output:
+VISERION
+12
+---- user output:
+VISERION
+12
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

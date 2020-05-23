@@ -1,0 +1,759 @@
+== TEST (2019-04-14 20:28:42) 
+-- CODE:
+escala_t = input("c/f: ")
+t = float(input("informe a temperatura: "))
+
+
+
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:29:40) 
+-- CODE:
+escala_t = input("t ("c/f"): ")
+t = float(input("informe a temperatura: "))
+
+
+
+-- ERROR:
+File "XXXX", line 1
+    escala_t = input("t ("c/f"): ")
+                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:30:14) 
+-- CODE:
+escala_t = input("c/f: ")
+t = float(input("informe a temperatura: "))
+
+
+
+-- ERROR:
+File "XXXX", line 1
+    escala_t = input("t ("c/f"): ")
+                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:33:47) 
+-- CODE:
+escala_t = input("c/f: ")
+t = float(input("informe a temperatura: "))
+c = 5/9 * (f - 32)
+f = 9/5 * (c + 32)
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    c = 5/9 * (f - 32)
+NameError: name 'f' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:50:07) 
+-- CODE:
+escala_t = input("c/f: ")
+t = float(input("informe a temperatura: "))
+
+if (c = 5/9 * (f - 32)):
+	
+else:
+	f = 9/5 * (c + 32)
+
+
+
+
+
+-- ERROR:
+File "XXXX", line 4
+    if (c = 5/9 * (f - 32)):
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:52:27) 
+-- CODE:
+escala_t = input("c/f: ")
+t = float(input("informe a temperatura: "))
+
+if (escala_t = c):
+	t = 5/9 * (f - 32)
+else:
+	f = 9/5 * (c + 32)
+
+
+
+
+
+-- ERROR:
+File "XXXX", line 4
+    if (escala_t = c):
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:52:55) 
+-- CODE:
+escala_t = input("c/f: ")
+t = float(input("informe a temperatura: "))
+
+if (escala_t == c):
+	t = 5/9 * (f - 32)
+else:
+	f = 9/5 * (c + 32)
+
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (escala_t == c):
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:53:14) 
+-- CODE:
+escala_t = input("c/f: ")
+t = float(input("informe a temperatura: "))
+
+if (escala_t == c):
+	t = 5/9 * (f - 32)
+else:
+	t = 9/5 * (c + 32)
+
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (escala_t == c):
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:54:52) 
+-- CODE:
+escala_t = input("c/f: ")
+t = float(input("informe a temperatura: "))
+
+if (escala_t == c):
+	c = 5/9 * (t - 32)
+else:
+	f = 9/5 * (t + 32)
+
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (escala_t == c):
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:55:28) 
+-- CODE:
+escala_t = input("c/f: ")
+t = float(input("informe a temperatura: "))
+
+if ( c == t):
+	c = 5/9 * (t - 32)
+else:
+	f = 9/5 * (t + 32)
+
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if ( c == t):
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:55:44) 
+-- CODE:
+escala_t = input("c/f: ")
+t = float(input("informe a temperatura: "))
+
+if (c == t):
+	c = 5/9 * (t - 32)
+else:
+	f = 9/5 * (t + 32)
+
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (c == t):
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 22:34:49) 
+-- CODE:
+escala_t = input("c/f: ")
+t = float(input("informe a temperatura: "))
+
+if (opcao == "c"):
+	f = 5/9*(t - 32)
+
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (opcao == "c"):
+NameError: name 'opcao' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:05:57) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (opcao == "C"):
+	temperatura = 9/5 * (temperatura + 32)
+	
+else: 
+	temperatura = 5/9 * (temperatura - 32)
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (opcao == "C"):
+NameError: name 'opcao' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:07:10) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = 9/5 * (temperatura + 32)
+	
+else: 
+	temperatura = 5/9 * (temperatura - 32)
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:08:06) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = 5/9 * (temperatura - 32)
+	
+else: 
+	temperatura = 9/5 * (temperatura + 32)
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:09:20) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = 9//5*(temperatura + 32)
+	
+else: 
+	temperatura = 5//9(temperatura - 32)
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- OUTPUT:
+352.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:09:41) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = 9//5*(temperatura + 32)
+	
+else: 
+	temperatura = 5//9*(temperatura - 32)
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- OUTPUT:
+352.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:10:01) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = 9/5*(temperatura + 32)
+	
+else: 
+	temperatura = 5/9*(temperatura - 32)
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:11:14) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = 9/5*(temperatura + 32)
+	
+else: 
+	temperatura = 5/9*(temperatura - 32)
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:11:49) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = 9/5*(temperatura + 32)
+	
+else: 
+	temperatura = 5/9*(temperatura - 32)
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:12:29) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = 9/5 * (temperatura + 32)
+	
+else: 
+	temperatura = 5/9 * (temperatura - 32)
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:13:17) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = 9//5 * (temperatura + 32)
+	
+else: 
+	temperatura = 5/9 * (temperatura - 32)
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- OUTPUT:
+352.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 23:13:52) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = 9/5 * (temperatura + 32)
+	
+else: 
+	temperatura = 5/9 * (temperatura - 32)
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- EXECUTION TIME:
+0.207818
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+633.6
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+57.6
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:14:50) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = 9 * (temperatura + 32) /5
+	
+else: 
+	temperatura = 5/9 * (temperatura - 32)
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:15:32) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = 9/5*(temperatura + 32)
+	
+else: 
+	temperatura = 5/9 * (temperatura - 32)
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:16:11) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = 9/5*(temperatura + 32)
+	
+else: 
+	temperatura = 5/9 * (temperatura - 32)
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 23:16:40) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = 9/5*(temperatura + 32)
+	
+else: 
+	temperatura = 5/9 * (temperatura - 32)
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- EXECUTION TIME:
+0.185347
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+633.6
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+57.6
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:16:54) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = 9/5*(temperatura + 32)
+	
+else: 
+	temperatura = 5/9 * (temperatura - 32)
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:17:55) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = 9/5 * (temperatura + 32)
+	
+else: 
+	temperatura = 5/9 * (temperatura - 32)
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:18:43) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = (temperatura + 32) * 9/5
+	
+else: 
+	temperatura = 5/9 * (temperatura - 32)
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:19:22) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = (temperatura + 32) * 5/9
+	
+else: 
+	temperatura = 5/9 * (temperatura - 32)
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- OUTPUT:
+195.56
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:20:35) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = (9/5) * temperatura + 32 
+	
+else: 
+	temperatura = 5/9 * (temperatura - 32)
+	
+
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:21:09) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = 9 * temperatura + 32 / 5 
+	
+else: 
+	temperatura = 5/9 * (temperatura - 32)
+	
+
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- OUTPUT:
+2886.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:23:16) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = 9/5 * (temperatura) + 32
+	
+else: 
+	temperatura = 5/9 * (temperatura - 32)
+	
+
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 23:25:23) 
+-- CODE:
+escala = input("escala (C/F): ")
+temperatura = float(input("temperatura: "))
+
+if (escala == "C"):
+	temperatura = 9/5 * (temperatura) + 32
+	
+else: 
+	temperatura = 5/9 * (temperatura - 32)
+	
+
+	
+print(round(temperatura, 2))
+	
+   
+
+
+
+-- EXECUTION TIME:
+0.131755
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

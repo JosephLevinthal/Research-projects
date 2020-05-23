@@ -1,0 +1,754 @@
+== TEST (2019-06-12 20:44:34) 
+-- CODE:
+a = str(input()).lower()
+for i in range(a):
+	if i == a:
+		a -= i
+	print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    for i in range(a):
+TypeError: 'str' object cannot be interpreted as an integer
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 20:45:18) 
+-- CODE:
+a = (str(input()).lower()
+for i in range(a):
+	if i == a:
+		a -= i
+	print(a)
+-- ERROR:
+File "XXXX", line 2
+    for i in range(a):
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 20:46:14) 
+-- CODE:
+a = (str(input()).lower()
+b = 0
+for i in a:
+	  b += 1
+for i in range(b):
+	if i == a:
+		a -= i
+	print(a)
+-- ERROR:
+File "XXXX", line 2
+    b = 0
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 20:46:45) 
+-- CODE:
+a = (str(input())).lower()
+b = 0
+for i in a:
+	  b += 1
+for i in range(b):
+	if i == a:
+		a -= i
+	print(a)
+-- OUTPUT:
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computa
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 20:48:04) 
+-- CODE:
+a = (str(input())).lower()
+b = 0
+for i in a:
+	  b += 1
+for i in range(b):
+	if i == "a":
+		a -= i
+	print(a)
+-- OUTPUT:
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computacao-icomp-ufam
+instituto_de_computa
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 20:50:00) 
+-- CODE:
+a = (str(input())).lower()
+b = 0
+c = ''
+for i in a:
+	  b += 1
+for i in range(b):
+	if i != "a":
+		c += i
+	print(c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    c += i
+TypeError: must be str, not int
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 20:50:49) 
+-- CODE:
+a = (str(input())).lower()
+b = 0
+c = ''
+for i in a:
+	  b += 1
+for i in a:
+	if i != "a":
+		c += i
+	print(c)
+-- OUTPUT:
+i
+in
+ins
+inst
+insti
+instit
+institu
+institut
+instituto
+instituto_
+instituto_d
+instituto_de
+instituto_de_
+instituto_de_c
+instituto_de_co
+instituto_de_com
+instituto_de_comp
+instituto_de_compu
+instituto_de_comput
+instituto_de_comput
+instituto_de_computc
+instituto_de_computc
+instituto_de_computco
+instituto_de_computco-
+instituto_de_computco-i
+instituto_de_computco-ic
+instituto_de_computco-ico
+instituto_de_computco-icom
+instituto_de_computco-icomp
+instituto_de_computco-icomp-
+instituto_de_computco-icomp-u
+instituto_de_computco-icomp-uf
+instituto_de_computco-icomp-uf
+instituto_de_computco-icomp-ufm
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 20:51:10) 
+-- CODE:
+a = (str(input())).lower()
+b = 0
+c = ''
+for i in a:
+	  b += 1
+for i in a:
+	if i != "a":
+		c += i
+	print(c)
+-- EXECUTION TIME:
+0.762013
+-- TEST CASE 1:
+---- input:
+Instituto_de_Computacao-ICOMP-UFAM
+---- correct output:
+Instituto_de_Computco-ICOMP-UFM
+---- user output:
+i
+in
+ins
+inst
+insti
+instit
+institu
+institut
+instituto
+instituto_
+instituto_d
+instituto_de
+instituto_de_
+instituto_de_c
+instituto_de_co
+instituto_de_com
+instituto_de_comp
+instituto_de_compu
+instituto_de_comput
+instituto_de_comput
+instituto_de_computc
+instituto_de_computc
+instituto_de_computco
+instituto_de_computco-
+instituto_de_computco-i
+instituto_de_computco-ic
+instituto_de_computco-ico
+instituto_de_computco-icom
+instituto_de_computco-icomp
+instituto_de_computco-icomp-
+instituto_de_computco-icomp-u
+instituto_de_computco-icomp-uf
+instituto_de_computco-icomp-uf
+instituto_de_computco-icomp-ufm
+-- TEST CASE 2:
+---- input:
+a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-aa-a-a-a-a-a-a-a-a-a-a
+---- correct output:
+-----------------------------
+---- user output:
+-
+-
+--
+--
+---
+---
+----
+----
+-----
+-----
+------
+------
+-------
+-------
+--------
+--------
+---------
+---------
+----------
+----------
+-----------
+-----------
+------------
+------------
+-------------
+-------------
+--------------
+--------------
+---------------
+---------------
+----------------
+----------------
+-----------------
+-----------------
+------------------
+------------------
+-------------------
+-------------------
+-------------------
+--------------------
+--------------------
+---------------------
+---------------------
+----------------------
+----------------------
+-----------------------
+-----------------------
+------------------------
+------------------------
+-------------------------
+-------------------------
+--------------------------
+--------------------------
+---------------------------
+---------------------------
+----------------------------
+----------------------------
+-----------------------------
+-----------------------------
+-- TEST CASE 3:
+---- input:
+.aaaaaaaaaaaaaaaaaaaaa.bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb.aaaaaaaaaaaaaaaaa.
+---- correct output:
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb..
+---- user output:
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+..
+..b
+..bb
+..bbb
+..bbbb
+..bbbbb
+..bbbbbb
+..bbbbbbb
+..bbbbbbbb
+..bbbbbbbbb
+..bbbbbbbbbb
+..bbbbbbbbbbb
+..bbbbbbbbbbbb
+..bbbbbbbbbbbbb
+..bbbbbbbbbbbbbb
+..bbbbbbbbbbbbbbb
+..bbbbbbbbbbbbbbbb
+..bbbbbbbbbbbbbbbbb
+..bbbbbbbbbbbbbbbbbb
+..bbbbbbbbbbbbbbbbbbb
+..bbbbbbbbbbbbbbbbbbb.
+..bbbbbbbbbbbbbbbbbbb.c
+..bbbbbbbbbbbbbbbbbbb.cc
+..bbbbbbbbbbbbbbbbbbb.ccc
+..bbbbbbbbbbbbbbbbbbb.cccc
+..bbbbbbbbbbbbbbbbbbb.ccccc
+..bbbbbbbbbbbbbbbbbbb.cccccc
+..bbbbbbbbbbbbbbbbbbb.ccccccc
+..bbbbbbbbbbbbbbbbbbb.cccccccc
+..bbbbbbbbbbbbbbbbbbb.ccccccccc
+..bbbbbbbbbbbbbbbbbbb.cccccccccc
+..bbbbbbbbbbbbbbbbbbb.ccccccccccc
+..bbbbbbbbbbbbbbbbbbb.cccccccccccc
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccc
+..bbbbbbbbbbbbbbbbbbb.cccccccccccccc
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccc
+..bbbbbbbbbbbbbbbbbbb.cccccccccccccccc
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccc
+..bbbbbbbbbbbbbbbbbbb.cccccccccccccccccc
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccc
+..bbbbbbbbbbbbbbbbbbb.cccccccccccccccccccc
+..bbbbbbbbbbb
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 20:51:20) 
+-- CODE:
+a = (str(input())).lower()
+b = 0
+c = ''
+for i in a:
+	if i != "a":
+		c += i
+	print(c)
+-- EXECUTION TIME:
+0.750705
+-- TEST CASE 1:
+---- input:
+Instituto_de_Computacao-ICOMP-UFAM
+---- correct output:
+Instituto_de_Computco-ICOMP-UFM
+---- user output:
+i
+in
+ins
+inst
+insti
+instit
+institu
+institut
+instituto
+instituto_
+instituto_d
+instituto_de
+instituto_de_
+instituto_de_c
+instituto_de_co
+instituto_de_com
+instituto_de_comp
+instituto_de_compu
+instituto_de_comput
+instituto_de_comput
+instituto_de_computc
+instituto_de_computc
+instituto_de_computco
+instituto_de_computco-
+instituto_de_computco-i
+instituto_de_computco-ic
+instituto_de_computco-ico
+instituto_de_computco-icom
+instituto_de_computco-icomp
+instituto_de_computco-icomp-
+instituto_de_computco-icomp-u
+instituto_de_computco-icomp-uf
+instituto_de_computco-icomp-uf
+instituto_de_computco-icomp-ufm
+-- TEST CASE 2:
+---- input:
+a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-aa-a-a-a-a-a-a-a-a-a-a
+---- correct output:
+-----------------------------
+---- user output:
+-
+-
+--
+--
+---
+---
+----
+----
+-----
+-----
+------
+------
+-------
+-------
+--------
+--------
+---------
+---------
+----------
+----------
+-----------
+-----------
+------------
+------------
+-------------
+-------------
+--------------
+--------------
+---------------
+---------------
+----------------
+----------------
+-----------------
+-----------------
+------------------
+------------------
+-------------------
+-------------------
+-------------------
+--------------------
+--------------------
+---------------------
+---------------------
+----------------------
+----------------------
+-----------------------
+-----------------------
+------------------------
+------------------------
+-------------------------
+-------------------------
+--------------------------
+--------------------------
+---------------------------
+---------------------------
+----------------------------
+----------------------------
+-----------------------------
+-----------------------------
+-- TEST CASE 3:
+---- input:
+.aaaaaaaaaaaaaaaaaaaaa.bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb.aaaaaaaaaaaaaaaaa.
+---- correct output:
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb..
+---- user output:
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+..
+..b
+..bb
+..bbb
+..bbbb
+..bbbbb
+..bbbbbb
+..bbbbbbb
+..bbbbbbbb
+..bbbbbbbbb
+..bbbbbbbbbb
+..bbbbbbbbbbb
+..bbbbbbbbbbbb
+..bbbbbbbbbbbbb
+..bbbbbbbbbbbbbb
+..bbbbbbbbbbbbbbb
+..bbbbbbbbbbbbbbbb
+..bbbbbbbbbbbbbbbbb
+..bbbbbbbbbbbbbbbbbb
+..bbbbbbbbbbbbbbbbbbb
+..bbbbbbbbbbbbbbbbbbb.
+..bbbbbbbbbbbbbbbbbbb.c
+..bbbbbbbbbbbbbbbbbbb.cc
+..bbbbbbbbbbbbbbbbbbb.ccc
+..bbbbbbbbbbbbbbbbbbb.cccc
+..bbbbbbbbbbbbbbbbbbb.ccccc
+..bbbbbbbbbbbbbbbbbbb.cccccc
+..bbbbbbbbbbbbbbbbbbb.ccccccc
+..bbbbbbbbbbbbbbbbbbb.cccccccc
+..bbbbbbbbbbbbbbbbbbb.ccccccccc
+..bbbbbbbbbbbbbbbbbbb.cccccccccc
+..bbbbbbbbbbbbbbbbbbb.ccccccccccc
+..bbbbbbbbbbbbbbbbbbb.cccccccccccc
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccc
+..bbbbbbbbbbbbbbbbbbb.cccccccccccccc
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccc
+..bbbbbbbbbbbbbbbbbbb.cccccccccccccccc
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccc
+..bbbbbbbbbbbbbbbbbbb.cccccccccccccccccc
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccc
+..bbbbbbbbbbbbbbbbbbb.cccccccccccccccccccc
+..bbbbbbbbbbb
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 20:51:27) 
+-- CODE:
+a = (str(input())).lower()
+b = 0
+c = ''
+for i in a:
+	if i != "a":
+		c += i
+	print(c)
+-- OUTPUT:
+i
+in
+ins
+inst
+insti
+instit
+institu
+institut
+instituto
+instituto_
+instituto_d
+instituto_de
+instituto_de_
+instituto_de_c
+instituto_de_co
+instituto_de_com
+instituto_de_comp
+instituto_de_compu
+instituto_de_comput
+instituto_de_comput
+instituto_de_computc
+instituto_de_computc
+instituto_de_computco
+instituto_de_computco-
+instituto_de_computco-i
+instituto_de_computco-ic
+instituto_de_computco-ico
+instituto_de_computco-icom
+instituto_de_computco-icomp
+instituto_de_computco-icomp-
+instituto_de_computco-icomp-u
+instituto_de_computco-icomp-uf
+instituto_de_computco-icomp-uf
+instituto_de_computco-icomp-ufm
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 20:51:54) 
+-- CODE:
+a = (str(input())).lower()
+b = 0
+c = ''
+for i in a:
+	if i != "a":
+		c += i
+print(c)
+-- EXECUTION TIME:
+0.898151
+-- TEST CASE 1:
+---- input:
+Instituto_de_Computacao-ICOMP-UFAM
+---- correct output:
+Instituto_de_Computco-ICOMP-UFM
+---- user output:
+instituto_de_computco-icomp-ufm
+-- TEST CASE 2:
+---- input:
+a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-aa-a-a-a-a-a-a-a-a-a-a
+---- correct output:
+-----------------------------
+---- user output:
+-----------------------------
+-- TEST CASE 3:
+---- input:
+.aaaaaaaaaaaaaaaaaaaaa.bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb.aaaaaaaaaaaaaaaaa.
+---- correct output:
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb..
+---- user output:
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb..
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 20:51:55) 
+-- CODE:
+a = (str(input())).lower()
+b = 0
+c = ''
+for i in a:
+	if i != "a":
+		c += i
+print(c)
+-- OUTPUT:
+instituto_de_computco-icomp-ufm
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 20:52:16) 
+-- CODE:
+a = (str(input())).lower()
+b = 0
+c = ''
+for i in a:
+	if i != "a":
+		c += i
+print(c)
+-- EXECUTION TIME:
+0.600779
+-- TEST CASE 1:
+---- input:
+Instituto_de_Computacao-ICOMP-UFAM
+---- correct output:
+Instituto_de_Computco-ICOMP-UFM
+---- user output:
+instituto_de_computco-icomp-ufm
+-- TEST CASE 2:
+---- input:
+a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-aa-a-a-a-a-a-a-a-a-a-a
+---- correct output:
+-----------------------------
+---- user output:
+-----------------------------
+-- TEST CASE 3:
+---- input:
+.aaaaaaaaaaaaaaaaaaaaa.bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb.aaaaaaaaaaaaaaaaa.
+---- correct output:
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb..
+---- user output:
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb..
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 20:53:06) 
+-- CODE:
+a = (str(input())).lower()
+b = 0
+c = ''
+for i in a:
+	if i != "a":
+		c += i
+print(c)
+-- OUTPUT:
+instituto_de_computco-icomp-ufm
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 20:53:35) 
+-- CODE:
+a = (str(input()))
+b = 0
+c = ''
+for i in a:
+	if i.lower() != "a":
+		c += i
+print(c)
+-- OUTPUT:
+Instituto_de_Computco-ICOMP-UFM
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 20:53:50) 
+-- CODE:
+a = (str(input()))
+b = 0
+c = ''
+for i in a:
+	if i.lower() != "a":
+		c += i
+print(c)
+-- EXECUTION TIME:
+0.560854
+-- TEST CASE 1:
+---- input:
+Instituto_de_Computacao-ICOMP-UFAM
+---- correct output:
+Instituto_de_Computco-ICOMP-UFM
+---- user output:
+Instituto_de_Computco-ICOMP-UFM
+-- TEST CASE 2:
+---- input:
+a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-aa-a-a-a-a-a-a-a-a-a-a
+---- correct output:
+-----------------------------
+---- user output:
+-----------------------------
+-- TEST CASE 3:
+---- input:
+.aaaaaaaaaaaaaaaaaaaaa.bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb.aaaaaaaaaaaaaaaaa.
+---- correct output:
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb..
+---- user output:
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb..
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

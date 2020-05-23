@@ -1,0 +1,73 @@
+== TEST (2019-04-16 17:15:07) 
+-- CODE:
+bruxo= float(input("Insira o nome do bruxo").lower)
+print(bruxo)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    bruxo= float(input().lower)
+TypeError: float() argument must be a string or a number, not 'builtin_function_or_method'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 17:15:26) 
+-- CODE:
+bruxo= input("Insira o nome do bruxo").lower
+print(bruxo)
+-- OUTPUT:
+<built-in method lower of str object at 0x7f7a89bd3770>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 17:15:30) 
+-- CODE:
+bruxo= input("Insira o nome do bruxo").lower()
+print(bruxo)
+-- OUTPUT:
+hermione
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 17:18:56) 
+-- CODE:
+bruxo= input("Insira o nome do bruxo").lower()
+
+if (bruxo == hermione):
+	e= 3.7654
+	t= 2.3479
+else :
+	e= 3.674
+	t= 2.789
+
+print (e/t)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if (bruxo == hermione):
+NameError: name 'hermione' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 17:19:09) 
+-- CODE:
+bruxo= input("Insira o nome do bruxo").lower()
+
+if (bruxo == "hermione"):
+	e= 3.7654
+	t= 2.3479
+else :
+	e= 3.674
+	t= 2.789
+
+print (e/t)
+-- EXECUTION TIME:
+0.215962
+-- TEST CASE 1:
+---- input:
+hermione
+---- correct output:
+1.6037309936539035
+---- user output:
+1.6037309936539035
+-- TEST CASE 2:
+---- input:
+gina
+---- correct output:
+1.3173180351380422
+---- user output:
+1.3173180351380422
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,140 @@
+== TEST (2019-05-23 17:08:25) 
+-- CODE:
+from numpy import *
+
+e=array(eval(input("jogada da eusapia: ")))
+b=array(eval(input("jogada do barsa: ")))
+
+i=0
+ve=0
+vb=0
+while(i<size(e)):
+	if((e[i]==11)and(b[i]==33)or(e[i]==22)and(b[i]==11)or(e[i]==33)and(b[i]==22)):
+		ve=ve+1
+	elif(e[i]==s[i]):
+		ve=ve
+		vb=vb
+	else:
+		vb=vb+1
+	i=i+1	
+print(i)	
+
+if(ve>vb):
+	print('EUSAPIA')
+elif(vb>ve):
+	print('BARSANULFO')
+elif(vb==ve):
+	print('EMPATE')
+			
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 17:09:11) 
+-- CODE:
+from numpy import *
+
+e=array(eval(input("jogada da eusapia: ")))
+b=array(eval(input("jogada do barsa: ")))
+
+i=0
+ve=0
+vb=0
+while(i<size(e)):
+	if((e[i]==11)and(b[i]==33)or(e[i]==22)and(b[i]==11)or(e[i]==33)and(b[i]==22)):
+		ve=ve+1
+	elif(e[i]==b[i]):
+		ve=ve
+		vb=vb
+	else:
+		vb=vb+1
+	i=i+1	
+print(i)	
+
+if(ve>vb):
+	print('EUSAPIA')
+elif(vb>ve):
+	print('BARSANULFO')
+elif(vb==ve):
+	print('EMPATE')
+			
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-23 17:09:24) 
+-- CODE:
+from numpy import *
+
+e=array(eval(input("jogada da eusapia: ")))
+b=array(eval(input("jogada do barsa: ")))
+
+i=0
+ve=0
+vb=0
+while(i<size(e)):
+	if((e[i]==11)and(b[i]==33)or(e[i]==22)and(b[i]==11)or(e[i]==33)and(b[i]==22)):
+		ve=ve+1
+	elif(e[i]==b[i]):
+		ve=ve
+		vb=vb
+	else:
+		vb=vb+1
+	i=i+1	
+print(i)	
+
+if(ve>vb):
+	print('EUSAPIA')
+elif(vb>ve):
+	print('BARSANULFO')
+elif(vb==ve):
+	print('EMPATE')
+			
+	
+	
+
+-- EXECUTION TIME:
+0.594643
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+EUSAPIA
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+EMPATE
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+BARSANULFO
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

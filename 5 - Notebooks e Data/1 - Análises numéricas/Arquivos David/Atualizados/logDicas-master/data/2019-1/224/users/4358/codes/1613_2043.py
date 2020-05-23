@@ -1,0 +1,6 @@
+av1=float(input("Digite o valor da nota 1:"))
+av2=float(input("Digite o valor da nota 2:"))
+av3=float(input("Digite o valor da nota 3:"))
+av4=float(input("Digite o valor da nota 4:"))
+med_pond=(av1+2*av2+3*av3+4*av4)/(1+2+3+4)
+print(round(med_pond,2))

@@ -1,0 +1,837 @@
+== TEST (2019-06-25 00:04:10) 
+-- CODE:
+from numpy.linalg import*
+
+v = array([[ , ], [ , ], [ , ]])
+-- ERROR:
+File "XXXX", line 3
+    v = array([[ , ], [ , ], [ , ]])
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 10:15:12) 
+-- CODE:
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy.linalg import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 10:15:37) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 10:15:51) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 10:51:53) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([])
+
+r = dot(inv(v), q.T)
+print("estafilococo: ", round())
+print("salmonela: ", round())
+print("coli: ", round())
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 10:58:01) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([[2,1,4],[1,2,3],[2,3,2]])
+
+r = dot(inv(v), q.T)
+print("estafilococo: ", round(r[0], 1))
+print("salmonela: ", round(r[1], 1))
+print("coli: ", round(r[2], 1))
+
+if r[0] == min(r):
+	print("estafilococo")
+elif r[1] == min(r):
+	print("salmonela")
+elif r[2] == min(r):
+	print("cali")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 10:59:02) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([[2,1,4],[1,2,3],[2,3,2]])
+
+r = dot(inv(v), q.T)
+print("estafilococo: ", round(r[0], 1))
+print("salmonela: ", round(r[1], 1))
+print("coli: ", round(r[2], 1))
+
+if r[0] == min(r):
+	print("estafilococo")
+elif r[1] == min(r):
+	print("salmonela")
+elif r[2] == min(r):
+	print("cali")
+-- EXECUTION TIME:
+0.959574
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1836/2602/main.py", line 7, in <module>
+    r = dot(inv(v), q.T)
+  File "/usr/local/lib/python3.4/dist-packages/numpy/linalg/linalg.py", line 545, in inv
+    _assertRankAtLeast2(a)
+  File "/usr/local/lib/python3.4/dist-packages/numpy/linalg/linalg.py", line 207, in _assertRankAtLeast2
+    'at least two-dimensional' % a.ndim)
+numpy.linalg.LinAlgError: 1-dimensional array given. Array must be at least two-dimensional
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:00:04) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([[2,1,4],[1,2,3],[2,3,2]])
+q = q.T
+r = dot(inv(v), q.T)
+print("estafilococo: ", round(r[0], 1))
+print("salmonela: ", round(r[1], 1))
+print("coli: ", round(r[2], 1))
+
+if r[0] == min(r):
+	print("estafilococo")
+elif r[1] == min(r):
+	print("salmonela")
+elif r[2] == min(r):
+	print("cali")
+-- EXECUTION TIME:
+0.910462
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1836/2602/main.py", line 7, in <module>
+    r = dot(inv(v), q.T)
+  File "/usr/local/lib/python3.4/dist-packages/numpy/linalg/linalg.py", line 545, in inv
+    _assertRankAtLeast2(a)
+  File "/usr/local/lib/python3.4/dist-packages/numpy/linalg/linalg.py", line 207, in _assertRankAtLeast2
+    'at least two-dimensional' % a.ndim)
+numpy.linalg.LinAlgError: 1-dimensional array given. Array must be at least two-dimensional
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:01:10) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([[2,1,4],[1,2,3],[2,3,2]])
+q = q.T
+
+r = dot(inv(v), q.T)
+print("estafilococo: ", round(r[0], 1))
+print("salmonela: ", round(r[1], 1))
+print("coli: ", round(r[2], 1))
+
+if r[0] == min(r):
+	print("estafilococo")
+elif r[1] == min(r):
+	print("salmonela")
+elif r[2] == min(r):
+	print("cali")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:01:29) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([[2,1,4],[1,2,0],[2,3,2]])
+q = q.T
+
+r = dot(inv(v), q.T)
+print("estafilococo: ", round(r[0], 1))
+print("salmonela: ", round(r[1], 1))
+print("coli: ", round(r[2], 1))
+
+if r[0] == min(r):
+	print("estafilococo")
+elif r[1] == min(r):
+	print("salmonela")
+elif r[2] == min(r):
+	print("cali")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:02:15) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([[2,1,4],[1,2,0],[2,3,2]])
+q = q.T
+
+r = dot(inv(v), q.T)
+
+print("estafilococo: ", round(r[0], 1))
+print("salmonela: ", round(r[1], 1))
+print("coli: ", round(r[2], 1))
+
+if r[0] == min(r):
+	print("estafilococo")
+elif r[1] == min(r):
+	print("salmonela")
+elif r[2] == min(r):
+	print("cali")
+-- EXECUTION TIME:
+0.789958
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1836/2602/main.py", line 8, in <module>
+    r = dot(inv(v), q.T)
+  File "/usr/local/lib/python3.4/dist-packages/numpy/linalg/linalg.py", line 545, in inv
+    _assertRankAtLeast2(a)
+  File "/usr/local/lib/python3.4/dist-packages/numpy/linalg/linalg.py", line 207, in _assertRankAtLeast2
+    'at least two-dimensional' % a.ndim)
+numpy.linalg.LinAlgError: 1-dimensional array given. Array must be at least two-dimensional
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:02:44) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([[2,1,4], [1,2,0], [2,3,2]])
+q = q.T
+
+r = dot(inv(v), q.T)
+
+print("estafilococo: ", round(r[0], 1))
+print("salmonela: ", round(r[1], 1))
+print("coli: ", round(r[2], 1))
+
+if r[0] == min(r):
+	print("estafilococo")
+elif r[1] == min(r):
+	print("salmonela")
+elif r[2] == min(r):
+	print("cali")
+-- EXECUTION TIME:
+1.08951
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1836/2602/main.py", line 8, in <module>
+    r = dot(inv(v), q.T)
+  File "/usr/local/lib/python3.4/dist-packages/numpy/linalg/linalg.py", line 545, in inv
+    _assertRankAtLeast2(a)
+  File "/usr/local/lib/python3.4/dist-packages/numpy/linalg/linalg.py", line 207, in _assertRankAtLeast2
+    'at least two-dimensional' % a.ndim)
+numpy.linalg.LinAlgError: 1-dimensional array given. Array must be at least two-dimensional
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:02:51) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([[2,1,4], [1,2,0], [2,3,2]])
+q = q.T
+
+r = dot(inv(v), q.T)
+
+print("estafilococo: ", round(r[0], 1))
+print("salmonela: ", round(r[1], 1))
+print("coli: ", round(r[2], 1))
+
+if r[0] == min(r):
+	print("estafilococo")
+elif r[1] == min(r):
+	print("salmonela")
+elif r[2] == min(r):
+	print("cali")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:04:02) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([[2,1,4], [1,2,0], [2,3,2]])
+q = q.T
+
+r = dot(inv(v), q.T)
+
+print("estafilococo: ", round(r[0], 1))
+print("salmonela: ", round(r[1], 1))
+print("coli: ", round(r[2], 1))
+
+if r[0] == min(r):
+	print("estafilococo")
+elif r[1] == min(r):
+	print("salmonela")
+elif r[2] == min(r):
+	print("cali")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:05:18) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([[2,1,4], [1,2,0], [2,3,2]])
+q = q.T
+
+r = dot(inv(v),q.T)
+
+print("estafilococo: ", round(r[0], 1))
+print("salmonela: ", round(r[1], 1))
+print("coli: ", round(r[2], 1))
+
+if r[0] == min(r):
+	print("estafilococo")
+elif r[1] == min(r):
+	print("salmonela")
+elif r[2] == min(r):
+	print("cali")
+-- EXECUTION TIME:
+1.02741
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1836/2602/main.py", line 8, in <module>
+    r = dot(inv(v),q.T)
+  File "/usr/local/lib/python3.4/dist-packages/numpy/linalg/linalg.py", line 545, in inv
+    _assertRankAtLeast2(a)
+  File "/usr/local/lib/python3.4/dist-packages/numpy/linalg/linalg.py", line 207, in _assertRankAtLeast2
+    'at least two-dimensional' % a.ndim)
+numpy.linalg.LinAlgError: 1-dimensional array given. Array must be at least two-dimensional
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:06:12) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([[2,1,4], [1,2,0], [2,3,2]])
+q = q.T
+
+r = dot(inv(q),v.T)
+
+print("estafilococo: ", round(r[0], 1))
+print("salmonela: ", round(r[1], 1))
+print("coli: ", round(r[2], 1))
+
+if r[0] == min(r):
+	print("estafilococo")
+elif r[1] == min(r):
+	print("salmonela")
+elif r[2] == min(r):
+	print("cali")
+-- EXECUTION TIME:
+1.15144
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+v: estafilococo:  -2023.0
+salmonela:  -8652.9
+coli:  8327.0
+salmonela
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+v: estafilococo:  -3312.3
+salmonela:  -15824.3
+coli:  12272.2
+salmonela
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+v: estafilococo:  12653.5
+salmonela:  31251.1
+coli:  -23981.0
+cali
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:06:14) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([[2,1,4], [1,2,0], [2,3,2]])
+q = q.T
+
+r = dot(inv(q),v.T)
+
+print("estafilococo: ", round(r[0], 1))
+print("salmonela: ", round(r[1], 1))
+print("coli: ", round(r[2], 1))
+
+if r[0] == min(r):
+	print("estafilococo")
+elif r[1] == min(r):
+	print("salmonela")
+elif r[2] == min(r):
+	print("cali")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:07:59) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([[2,1,4], [1,2,0], [2,3,2]])
+q = q.T
+
+r = dot(inv(q), v.T)
+
+print("estafilococo: ", round(r[0], 1))
+print("salmonela: ", round(r[1], 1))
+print("coli: ", round(r[2], 1))
+
+if r[0] == min(r):
+	print("estafilococo")
+elif r[1] == min(r):
+	print("salmonela")
+elif r[2] == min(r):
+	print("cali")
+-- EXECUTION TIME:
+1.10299
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  -2023.0
+salmonela:  -8652.9
+coli:  8327.0
+salmonela
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -3312.3
+salmonela:  -15824.3
+coli:  12272.2
+salmonela
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  12653.5
+salmonela:  31251.1
+coli:  -23981.0
+cali
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:08:31) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([[2,1,4], [1,2,0], [2,3,2]])
+v = v.T
+
+r = dot(inv(q), v.T)
+
+print("estafilococo: ", round(r[0], 1))
+print("salmonela: ", round(r[1], 1))
+print("coli: ", round(r[2], 1))
+
+if r[0] == min(r):
+	print("estafilococo")
+elif r[1] == min(r):
+	print("salmonela")
+elif r[2] == min(r):
+	print("cali")
+-- EXECUTION TIME:
+0.930489
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+cali
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+v: estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+v: estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:08:34) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([[2,1,4], [1,2,0], [2,3,2]])
+v = v.T
+
+r = dot(inv(q), v.T)
+
+print("estafilococo: ", round(r[0], 1))
+print("salmonela: ", round(r[1], 1))
+print("coli: ", round(r[2], 1))
+
+if r[0] == min(r):
+	print("estafilococo")
+elif r[1] == min(r):
+	print("salmonela")
+elif r[2] == min(r):
+	print("cali")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:08:52) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([[2,1,4], [1,2,0], [2,3,2]])
+v = v.T
+
+r = dot(inv(q), v.T)
+
+print("estafilococo: ", round(r[0], 1))
+print("salmonela: ", round(r[1], 1))
+print("coli: ", round(r[2], 1))
+
+if r[0] == min(r):
+	print("estafilococo")
+elif r[1] == min(r):
+	print("salmonela")
+elif r[2] == min(r):
+	print("cali")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:08:57) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([[2,1,4], [1,2,0], [2,3,2]])
+v = v.T
+
+r = dot(inv(q), v.T)
+
+print("estafilococo: ", round(r[0], 1))
+print("salmonela: ", round(r[1], 1))
+print("coli: ", round(r[2], 1))
+
+if r[0] == min(r):
+	print("estafilococo")
+elif r[1] == min(r):
+	print("salmonela")
+elif r[2] == min(r):
+	print("cali")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:09:22) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([[2,1,4], [1,2,0], [2,3,2]])
+v = v.T
+
+r = dot(inv(q), v.T)
+
+print("estafilococo: ", round(r[0], 1))
+print("salmonela: ", round(r[1], 1))
+print("coli: ", round(r[2], 1))
+
+if r[0] == min(r):
+	print("estafilococo")
+elif r[1] == min(r):
+	print("salmonela")
+elif r[2] == min(r):
+	print("cali")
+-- EXECUTION TIME:
+0.976484
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+cali
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:09:46) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([[2,1,4], [1,2,0], [2,3,2]])
+v = v.T
+
+r = dot(inv(q), v.T)
+
+print("estafilococo: ", round(r[0], 1))
+print("salmonela: ", round(r[1], 1))
+print("coli: ", round(r[2], 1))
+
+if r[0] == min(r):
+	print("estafilococo")
+elif r[1] == min(r):
+	print("salmonela")
+elif r[2] == min(r):
+	print("coli")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:09:52) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+q = array([[2,1,4], [1,2,0], [2,3,2]])
+v = v.T
+
+r = dot(inv(q), v.T)
+
+print("estafilococo: ", round(r[0], 1))
+print("salmonela: ", round(r[1], 1))
+print("coli: ", round(r[2], 1))
+
+if r[0] == min(r):
+	print("estafilococo")
+elif r[1] == min(r):
+	print("salmonela")
+elif r[2] == min(r):
+	print("coli")
+-- EXECUTION TIME:
+1.00753
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

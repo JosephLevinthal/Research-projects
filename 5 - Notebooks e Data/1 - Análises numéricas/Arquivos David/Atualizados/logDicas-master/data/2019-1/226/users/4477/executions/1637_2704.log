@@ -1,0 +1,411 @@
+== TEST (2019-04-11 10:16:20) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10:"))
+
+if (nota.upper() == "S"):
+	nota = nota
+else:
+	print (nota, "N")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if (nota.upper() == "S"):
+AttributeError: 'float' object has no attribute 'upper'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:18:40) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+
+if (nota.upper() == "S"):
+	print (nota, "S")
+else:
+	print (nota, "N")
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if (nota.upper() == "S"):
+AttributeError: 'float' object has no attribute 'upper'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:23:23) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+print (nota)
+
+bonificacao = int(input("S ou N? ")
+						
+if (bonificacao.upper() == "S"):
+	print ("S")
+else:
+	print ("N")
+	
+-- ERROR:
+File "XXXX", line 6
+    if (bonificacao.upper() == "S"):
+                                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:24:48) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+print (nota)
+
+bonificacao = float(input("S ou N? ")
+					
+if (bonificacao.upper() == "S"):
+	print ("S")
+else:
+	print ("N")
+	
+-- ERROR:
+File "XXXX", line 6
+    if (bonificacao.upper() == "S"):
+                                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:25:10) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+print (nota)
+
+bonificacao = int(input("S ou N? "))
+					
+if (bonificacao.upper() == "S"):
+	print ("S")
+else:
+	print ("N")
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    bonificacao = int(input())
+ValueError: invalid literal for int() with base 10: 'S'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:26:09) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+print (nota)
+					
+if (nota.upper() == "S"):
+	print ("S")
+else:
+	print ("N")
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (nota.upper() == "S"):
+AttributeError: 'float' object has no attribute 'upper'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:32:52) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+print (nota)
+
+bonificacao = input("S ou N? ")
+
+x = nota + (10 / 100 * preco)
+					
+if (bonificacao.upper() == "S"):
+	print(x)
+else:
+	print
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    x = nota + (10 / 100 * preco)
+NameError: name 'preco' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:33:26) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+print (nota)
+
+bonificacao = input("S ou N? ")
+					
+if (bonificacao.upper() == "S"):
+	print(nota + (10 / 100 * preco)
+else:
+	print
+	
+-- ERROR:
+File "XXXX", line 8
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:34:15) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+print (nota)
+
+bonificacao = input("S ou N? ")
+					
+if (bonificacao.upper() == "S"):
+	print (nota + (nota * 0.10)
+else:
+	print (nota)
+	
+-- ERROR:
+File "XXXX", line 8
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:34:29) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+print (nota)
+
+bonificacao = input("S ou N? ")
+					
+if (bonificacao.upper() == "S"):
+	print (nota + (nota * 0.10)
+else:
+			 print (nota)
+	
+-- ERROR:
+File "XXXX", line 8
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:35:05) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+bonificacao = input("S ou N? ")
+					
+if (bonificacao.upper() == "S"):
+	print (nota + (nota * 0.10)
+else:
+	print (nota)
+	
+-- ERROR:
+File "XXXX", line 6
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:35:54) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+bonificacao = input("S ou N? ")
+					
+if (bonificacao.upper() == "S"):
+	acrescimo = int(input(nota + (nota * 0.10)))
+else:
+	acrescimo = (nota)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    acrescimo = int(input(nota + (nota * 0.10)))
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:36:11) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+bonificacao = input("S ou N? ")
+					
+if (bonificacao.upper() == "S"):
+	acrescimo = int(input(nota + (nota * 0.10)))
+else:
+	acrescimo = (nota)
+	
+-- EXECUTION TIME:
+0.170167
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1637/2704/main.py", line 5, in <module>
+    acrescimo = int(input(nota + (nota * 0.10)))
+EOFError: EOF when reading a line
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:36:28) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+bonificacao = input("S ou N? ")
+					
+if (bonificacao.upper() == "S"):
+	acrescimo = float(input(nota + (nota * 0.10)))
+else:
+	acrescimo = (nota)
+	
+-- EXECUTION TIME:
+0.222696
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1637/2704/main.py", line 5, in <module>
+    acrescimo = float(input(nota + (nota * 0.10)))
+EOFError: EOF when reading a line
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:37:05) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+bonificacao = input("S ou N? ")
+					
+if (bonificacao.upper() == "S"):
+	acrescimo = float(input(nota + (nota * 0.10)))
+else:
+	acrescimo = (nota)
+	
+print(acrescimo)
+-- EXECUTION TIME:
+0.200747
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1637/2704/main.py", line 5, in <module>
+    acrescimo = float(input(nota + (nota * 0.10)))
+EOFError: EOF when reading a line
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:37:24) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+bonificacao = input("S ou N? ")
+					
+if (bonificacao.upper() == "S"):
+	acrescimo = float(input(nota + (nota * 0.10)))
+else:
+	acrescimo = (nota)
+	
+print(acrescimo
+-- ERROR:
+File "XXXX", line 10
+    
+                   ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:37:33) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+bonificacao = input("S ou N? ")
+					
+if (bonificacao.upper() == "S"):
+	acrescimo = float(input(nota + (nota * 0.10)))
+else:
+	acrescimo = (nota)
+	
+print(acrescimo)
+-- EXECUTION TIME:
+0.24254
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1637/2704/main.py", line 5, in <module>
+    acrescimo = float(input(nota + (nota * 0.10)))
+EOFError: EOF when reading a line
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:37:34) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+bonificacao = input("S ou N? ")
+					
+if (bonificacao.upper() == "S"):
+	acrescimo = float(input(nota + (nota * 0.10)))
+else:
+	acrescimo = (nota)
+	
+print(acrescimo)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    acrescimo = float(input(nota + (nota * 0.10)))
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:40:13) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+bonificacao = input("Determine S ou N: ")
+					
+if (bonificacao.upper() == "S"):
+	acrescimo = float(input(nota + (nota * 0.10)))
+else:
+	acrescimo = (nota)
+	
+print(acrescimo)
+-- EXECUTION TIME:
+0.236119
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1637/2704/main.py", line 5, in <module>
+    acrescimo = float(input(nota + (nota * 0.10)))
+EOFError: EOF when reading a line
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:40:13) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+bonificacao = input("Determine S ou N: ")
+					
+if (bonificacao.upper() == "S"):
+	acrescimo = float(input(nota + (nota * 0.10)))
+else:
+	acrescimo = (nota)
+	
+print(acrescimo)
+-- EXECUTION TIME:
+0.196251
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1637/2704/main.py", line 5, in <module>
+    acrescimo = float(input(nota + (nota * 0.10)))
+EOFError: EOF when reading a line
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:40:57) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+bonificacao = input("Determine S ou N: ")
+					
+if (bonificacao.upper() == "S"):
+	acrescimo = (nota + (nota * 0.10))
+else:
+	acrescimo = nota
+	
+print(acrescimo)
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:41:06) 
+-- CODE:
+nota = float(input("Determine a nota do fulano entre 0 e 10: "))
+bonificacao = input("Determine S ou N: ")
+					
+if (bonificacao.upper() == "S"):
+	acrescimo = (nota + (nota * 0.10))
+else:
+	acrescimo = nota
+	
+print(acrescimo)
+-- EXECUTION TIME:
+0.193614
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

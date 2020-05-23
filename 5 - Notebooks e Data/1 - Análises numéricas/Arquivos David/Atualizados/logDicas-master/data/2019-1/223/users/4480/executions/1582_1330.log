@@ -1,0 +1,547 @@
+== TEST (2019-04-13 19:48:36) 
+-- CODE:
+amigos = 6
+conta = 250
+
+print (round(conta, amigos))
+-- OUTPUT:
+250
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 19:49:46) 
+-- CODE:
+amigos = 6
+conta = 250
+
+print (round(250, 6))
+-- OUTPUT:
+250
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 19:52:17) 
+-- CODE:
+amigos = 6
+conta = 250
+conta\amigos
+print (round(250, 6))
+-- ERROR:
+File "XXXX", line 3
+    conta\amigos
+               ^
+SyntaxError: unexpected character after line continuation character
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 19:54:33) 
+-- CODE:
+amigos = 6
+conta = 250
+final = conta\amigos
+print (round(=final))
+-- ERROR:
+File "XXXX", line 3
+    final = conta\amigos
+                       ^
+SyntaxError: unexpected character after line continuation character
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 19:57:19) 
+-- CODE:
+print (round(250.00,2)
+-- ERROR:
+File "XXXX", line 2
+    
+                          ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 20:00:13) 
+-- CODE:
+print (round(250,2)
+-- ERROR:
+File "XXXX", line 2
+    
+                       ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 20:01:35) 
+-- CODE:
+print (round(\250,2)
+-- ERROR:
+File "XXXX", line 1
+    print (round(\250,2)
+                       ^
+SyntaxError: unexpected character after line continuation character
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 20:10:51) 
+-- CODE:
+amigos =6
+conta = 250
+desembolso = 250\6
+print ('desembolso')
+-- ERROR:
+File "XXXX", line 3
+    desembolso = 250\6
+                     ^
+SyntaxError: unexpected character after line continuation character
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 20:11:36) 
+-- CODE:
+amigos =6
+conta = 250
+desembolso = 250/6
+print ('desembolso')
+-- OUTPUT:
+desembolso
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 20:56:16) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+-- OUTPUT:
+desembolso
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 20:57:59) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print ("round (250,6)")
+-- OUTPUT:
+round (250,6)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 20:58:39) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print (round (250,6)
+-- ERROR:
+File "XXXX", line 5
+    
+                        ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 20:59:12) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print (round (=total)
+-- ERROR:
+File "XXXX", line 4
+    print (round (=total)
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 22:10:04) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print (" round (=total) "
+-- ERROR:
+File "XXXX", line 5
+    
+                             ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 09:54:48) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print (total)
+-- OUTPUT:
+41.666666666666664
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 09:55:40) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print (total(round))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print (total(round))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 09:59:41) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print (round,total)
+-- OUTPUT:
+<built-in function round> 41.666666666666664
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 10:04:04) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print (round,41.66666667,2)
+-- OUTPUT:
+<built-in function round> 41.66666667 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 10:06:34) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print (round,46.6666667)
+-- OUTPUT:
+<built-in function round> 46.6666667
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 10:08:13) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print (round=total)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print (round=total)
+TypeError: 'round' is an invalid keyword argument for this function
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 10:22:38) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print (round = total)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print (round = total)
+TypeError: 'round' is an invalid keyword argument for this function
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 10:37:16) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print (round((250/6),2)
+-- ERROR:
+File "XXXX", line 5
+    
+                           ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 11:03:28) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print (round((250/6),2)
+-- ERROR:
+File "XXXX", line 5
+    
+                           ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 11:07:00) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print (round((250/6),2)
+		 
+type (42)
+-- ERROR:
+File "XXXX", line 6
+    type (42)
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 13:37:26) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round((250/6),2)
+-- ERROR:
+File "XXXX", line 5
+    
+                          ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 13:38:39) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round((250/6,2))
+-- ERROR:
+File "XXXX", line 5
+    
+                          ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 13:39:23) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round((250/6, 2))
+-- ERROR:
+File "XXXX", line 5
+    
+                           ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 13:51:06) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round((250//6, 2))
+-- ERROR:
+File "XXXX", line 5
+    
+                            ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 13:53:46) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round((41.6666667, 2))
+-- ERROR:
+File "XXXX", line 5
+    
+                                ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 13:54:20) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round((total ))
+-- ERROR:
+File "XXXX", line 5
+    
+                         ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 14:29:08) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round(41.6666667,2))
+-- OUTPUT:
+41.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 15:46:24) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round(250,2))
+-- OUTPUT:
+250
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 15:46:57) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round(46.666,2))
+-- OUTPUT:
+46.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 15:47:05) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round(46.666,2))
+-- OUTPUT:
+46.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 15:47:12) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round(46.666,2))
+-- EXECUTION TIME:
+0.170499
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+41.67
+---- user output:
+46.67
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 15:47:19) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round(46.666,2))
+-- OUTPUT:
+46.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 15:48:43) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round(46.666,7))
+-- OUTPUT:
+46.666
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 15:49:17) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round(46.6666667,2)
+-- ERROR:
+File "XXXX", line 5
+    
+                             ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 15:49:59) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round(46.6666,2)
+-- ERROR:
+File "XXXX", line 5
+    
+                          ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 15:50:20) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round(46.6666,2))
+-- OUTPUT:
+46.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 15:50:37) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round(46.6666,2))
+-- EXECUTION TIME:
+0.138688
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+41.67
+---- user output:
+46.67
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 15:51:24) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round(250//6,2))
+-- OUTPUT:
+41
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 15:51:34) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round(250//6,2))
+-- EXECUTION TIME:
+0.243952
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+41.67
+---- user output:
+41
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 15:51:39) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round(250//6,2))
+-- OUTPUT:
+41
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 15:51:39) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round(250//6,2))
+-- OUTPUT:
+41
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 15:52:40) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round(250/6,2))
+-- OUTPUT:
+41.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 15:52:48) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round(250/6,2))
+-- EXECUTION TIME:
+0.204994
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+41.67
+---- user output:
+41.67
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 15:52:54) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round(250/6,2))
+-- OUTPUT:
+41.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 15:53:16) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round(250/6,2))
+-- OUTPUT:
+41.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 15:53:33) 
+-- CODE:
+amigos = 6
+conta = 250
+total = conta/amigos
+print(round(250/6,2))
+-- OUTPUT:
+41.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,182 @@
+== TEST (2019-05-29 15:15:47) 
+-- CODE:
+from numpy import*
+v=array(eval(input()))
+i=5
+n=sum(v)/size(v)
+l=1/5
+M=((v[i]**5)/n)l
+m=round(M,2)
+print(m)
+-- ERROR:
+File "XXXX", line 6
+    M=((v[i]**5)/n)l
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 15:16:09) 
+-- CODE:
+from numpy import*
+v=array(eval(input()))
+i=5
+n=sum(v)/size(v)
+l=1/5
+M=((v[i]**5)/n)1/5
+m=round(M,2)
+print(m)
+-- ERROR:
+File "XXXX", line 6
+    M=((v[i]**5)/n)1/5
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 15:16:36) 
+-- CODE:
+from numpy import*
+v=array(eval(input()))
+i=5
+n=sum(v)/size(v)
+l=1/5
+M=((v[i]**5)/sum(v)/size(v))1/5
+m=round(M,2)
+print(m)
+-- ERROR:
+File "XXXX", line 6
+    M=((v[i]**5)/sum(v)/size(v))1/5
+                                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 15:16:49) 
+-- CODE:
+from numpy import*
+v=array(eval(input()))
+i=5
+n=sum(v)/size(v)
+l=1/5
+M=((v[i]**5)/sum(v)/size(v))/(1/5)
+m=round(M,2)
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 15:17:07) 
+-- CODE:
+from numpy import*
+v=array(eval(input()))
+i=5
+n=sum(v)/size(v)
+l=1/5
+M=((v[i]**5)/n)**(1/5)
+m=round(M,2)
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 15:17:57) 
+-- CODE:
+from numpy import*
+v=array(eval(input()))
+p=5
+n=sum(v)/size(v)
+l=1/5
+M=((v[i]**p)/n)**(1/5)
+m=round(M,2)
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 15:17:57) 
+-- CODE:
+from numpy import*
+v=array(eval(input()))
+p=5
+n=sum(v)/size(v)
+l=1/5
+M=((v[i]**p)/n)**(1/5)
+m=round(M,2)
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 15:18:23) 
+-- CODE:
+from numpy import*
+v=array(eval(input()))
+i=0
+p=5
+n=sum(v)/size(v)
+l=1/5
+M=((v[i]**p)/n)**(1/5)
+m=round(M,2)
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 15:19:36) 
+-- CODE:
+from numpy import*
+v=array(eval(input()))
+i=0
+p=5
+n=sum(v)/size(v)
+l=1/5
+while(i<size(v)):
+	
+M=((sum(v[i])**p)/n)**(1/5)
+m=round(M,2)
+print(m)
+-- ERROR:
+File "XXXX", line 9
+    M=((sum(v[i])**p)/n)**(1/5)
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 15:19:41) 
+-- CODE:
+from numpy import*
+v=array(eval(input()))
+i=0
+p=5
+n=sum(v)/size(v)
+l=1/5
+M=((sum(v[i])**p)/n)**(1/5)
+m=round(M,2)
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 15:29:18) 
+-- CODE:
+from numpy import*
+v=array(eval(input()))
+i=0
+p=5*(size(v))
+n=sum(v)/size(v)
+l=1/5
+M=((sum(v[i])**p)/n)**(1/5)
+m=round(M,2)
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,6 @@
+n1=int(input("Digite um numero"))
+n2=int(input("Digite um segundo numero"))
+n3=int(input("Digite um terceiro numero"))
+print (min(n1,n2,n3))
+print((n1+n2+n3)-(min(n1,n2,n3)+max(n1,n2,n3)))
+print(max(n1,n2,n3))

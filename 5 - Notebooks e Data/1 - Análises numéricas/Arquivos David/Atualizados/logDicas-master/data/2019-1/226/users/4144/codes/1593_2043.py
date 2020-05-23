@@ -1,0 +1,6 @@
+a = float(input("nota a: "))
+b = float(input("nota b: "))
+c = float(input("nota c: "))
+d = float(input("nota d: "))
+media = ((a * 1) + (b * 2) + (c * 3) + (d * 4)) / (1 + 2 + 3 + 4)
+print(round(media, 2))

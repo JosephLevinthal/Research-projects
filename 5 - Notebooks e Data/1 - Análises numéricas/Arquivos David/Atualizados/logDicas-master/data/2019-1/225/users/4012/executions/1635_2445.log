@@ -1,0 +1,401 @@
+== TEST (2019-04-08 15:15:21) 
+-- CODE:
+escala = input("escala c? (S/N)")
+temp = float(input("digite temp: "))
+
+if (escala == C):
+	F = 9 / 5 (C) + 32
+	C = 5 / 9 (F - 32)
+else:
+	C = 5 / 9 (F - 32)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (escala == C):
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 15:16:15) 
+-- CODE:
+escala = input("escala c? (S/N)")
+temp = float(input("digite temp: "))
+
+if (escala == C):
+	F = 9 / 5 * (C) + 32
+else:
+	C = 5 / 9 * (F - 32)
+	
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (escala == C):
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 15:16:33) 
+-- CODE:
+escala = input("escala c? (S/N)")
+temp = float(input("digite temp: "))
+
+if (escala == C):
+	tempF = 9 / 5 * (C) + 32
+else:
+	tempC = 5 / 9 * (F - 32)
+	
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (escala == C):
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 21:00:58) 
+-- CODE:
+escala = input("escala? (C/F): ")
+temp = float(input("digite temp: "))
+
+if (escala == C):
+	temp = (9 / 5 * C) + 32
+else:
+	temp = (5 / 9 * F) - 32
+	
+print(round(temp, 2))
+	
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (escala == C):
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 21:02:16) 
+-- CODE:
+escala = input("escala? (C/F): ")
+temp = float(input("digite temp: "))
+
+if (escala == C):
+	temp = (9 / 5 * C) + 32
+else:
+	temp = (5 / 9 * F) - 32
+	
+print(round(temp, 2))
+	
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (escala == C):
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 21:05:06) 
+-- CODE:
+escala = str(input("escala? (C/F): ")
+temp = float(input("digite temp: "))
+
+if (escala == C):
+	temp = (9 / 5 * C) + 32
+else:
+	temp = (5 / 9 * F) - 32
+	
+print(round(temp, 2))
+	
+
+
+-- ERROR:
+File "XXXX", line 2
+    temp = float(input())
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 21:06:39) 
+-- CODE:
+escala = str(input("escala? (C/F): ")
+temp = float(input("digite temp: "))
+
+if (escala == "C"):
+	temp = (9 / 5 * C) + 32
+else:
+	temp = (5 / 9 * F) - 32
+	
+print(round(temp, 2))
+	
+
+
+-- ERROR:
+File "XXXX", line 2
+    temp = float(input())
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 21:06:54) 
+-- CODE:
+escala = input("escala? (C/F): ")
+temp = float(input("digite temp: "))
+
+if (escala == "C"):
+	temp = (9 / 5 * C) + 32
+else:
+	temp = (5 / 9 * F) - 32
+	
+print(round(temp, 2))
+	
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    temp = (9 / 5 * C) + 32
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 21:07:57) 
+-- CODE:
+escala = input("escala? (C/F): ")
+vtemp = float(input("digite temp: "))
+
+if (escala == "C"):
+	temp = (9 / 5 * vtemp) + 32
+else:
+	temp = (5 / 9 * vtemp) - 32
+	
+print(round(temp, 2))
+	
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 21:08:07) 
+-- CODE:
+escala = input("escala? (C/F): ")
+vtemp = float(input("digite temp: "))
+
+if (escala == "C"):
+	temp = (9 / 5 * vtemp) + 32
+else:
+	temp = (5 / 9 * vtemp) - 32
+	
+print(round(temp, 2))
+	
+
+
+-- EXECUTION TIME:
+0.194734
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+145.78
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 21:08:27) 
+-- CODE:
+escala = input("escala? (C/F): ")
+vtemp = float(input("digite temp: "))
+
+if (escala == "C"):
+	temp = (9 / 5 * vtemp) + 32
+else:
+	temp = (5 / 9 * vtemp) - 32
+	
+print(round(temp, 2))
+	
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 21:09:13) 
+-- CODE:
+escala = input("escala? (C/F): ")
+vtemp = float(input("digite temp: "))
+
+if (escala == "C"):
+	temp = (5 / 9 * vtemp) + 32
+else:
+	temp = (9 / 5 * vtemp) - 32
+	
+print(round(temp, 2))
+	
+
+
+-- OUTPUT:
+209.78
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 21:10:24) 
+-- CODE:
+escala = input("escala? (C/F): ")
+vtemp = float(input("digite temp: "))
+
+if (escala == "C"):
+	temp = 9 / 5 * (vtemp + 32)
+else:
+	temp = 5 / 9 * (vtemp - 32)
+	
+print(round(temp, 2))
+	
+
+
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 21:10:37) 
+-- CODE:
+escala = input("escala? (C/F): ")
+vtemp = float(input("digite temp: "))
+
+if (escala == "C"):
+	temp = 9 / 5 * (vtemp + 32)
+else:
+	temp = 5 / 9 * (vtemp - 32)
+	
+print(round(temp, 2))
+	
+
+
+-- EXECUTION TIME:
+0.188214
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+633.6
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+57.6
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 21:11:01) 
+-- CODE:
+escala = input("escala? (C/F): ")
+vtemp = float(input("digite temp: "))
+
+if (escala == "C"):
+	temp = 9 / 5 * (vtemp + 32)
+else:
+	temp = 5 / 9 * (vtemp - 32)
+	
+print(round(temp, 2))
+	
+
+
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 21:12:52) 
+-- CODE:
+escala = input("escala? (C/F): ")
+valor = float(input("digite temp: "))
+
+if (escala == "C"):
+	temp = 9 / 5 * (valor + 32)
+else:
+	temp = 5 / 9 * (valor - 32)
+	
+print(round(temp, 2))
+	
+
+
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 21:15:25) 
+-- CODE:
+escala = input("escala? (C/F): ")
+valor = float(input("digite temp: "))
+
+if (escala == "C"):
+	temp = (9 / 5 * valor) + 32
+else:
+	temp = 5 / 9 * (valor - 32)
+	
+print(round(temp, 2))
+	
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 21:15:45) 
+-- CODE:
+escala = input("escala? (C/F): ")
+valor = float(input("digite temp: "))
+
+if (escala == "C"):
+	temp = (9 / 5 * valor) + 32
+else:
+	temp = 5 / 9 * (valor - 32)
+	
+print(round(temp, 2))
+	
+
+
+-- EXECUTION TIME:
+0.16811
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

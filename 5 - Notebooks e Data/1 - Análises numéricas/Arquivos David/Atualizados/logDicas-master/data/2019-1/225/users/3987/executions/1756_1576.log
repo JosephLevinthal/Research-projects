@@ -1,0 +1,458 @@
+== SUBMITION (2019-05-26 23:11:48) 
+-- CODE:
+from numpy import*
+a = array(eval(input("vetor: ")))
+print(size(a))
+print(a[0])
+print(a[-1])
+print(max(a))
+print(min(a))
+print(sum(a))
+l=(sum(a)/ size(a))
+print(round(l,2))
+
+-- EXECUTION TIME:
+0.542725
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+33
+33
+33
+11
+264
+22.0
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+33
+11
+33
+11
+231
+23.1
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+33
+22
+33
+11
+396
+22.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-26 23:11:56) 
+-- CODE:
+from numpy import*
+a = array(eval(input("vetor: ")))
+print(size(a))
+print(a[0])
+print(a[-1])
+print(max(a))
+print(min(a))
+print(sum(a))
+l=(sum(a)/ size(a))
+print(round(l,2))
+-- EXECUTION TIME:
+0.572882
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+33
+33
+33
+11
+264
+22.0
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+33
+11
+33
+11
+231
+23.1
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+33
+22
+33
+11
+396
+22.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-26 23:12:41) 
+-- CODE:
+from numpy import*
+a = array(eval(input("jogadas de Eusapia:" )))
+b = array(eval(input("jogadas de Barsanulfo:" )))
+
+e= 0    #variavel contadora de posicao dos vetores
+h= 0      #variavel contadora vitoria de eusapia
+i= 0       #variavel contadora vitoria de barsanulfo
+
+while(e < size(a)):
+	if(a[e]==11)and(b[e]==22):
+		i = i+1
+	elif(a[e]==22)and(b[e]==33):
+		i= i +1
+	elif(a[e]==33)and(b[e]==11):
+		i=i+1
+	elif(a[e]==11)and(b[e]==33):
+		h=h+1
+	elif(a[e]==22)and(b[e]==11):
+		h=h+1	
+	elif(a[e]==33)and(b[e]==22):
+		h=h+1
+	
+	e=e+1
+print(e)
+if(h>i):
+	print("EUSAPIA")
+elif(h<i):
+	print("BARSANULFO")
+-- EXECUTION TIME:
+0.366792
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+EUSAPIA
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+BARSANULFO
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-26 23:13:23) 
+-- CODE:
+from numpy import*
+a = array(eval(input("jogadas de Eusapia:" )))
+b = array(eval(input("jogadas de Barsanulfo:" )))
+
+e= 0    #variavel contadora de posicao dos vetores
+h= 0      #variavel contadora vitoria de eusapia
+i= 0       #variavel contadora vitoria de barsanulfo
+
+while(e < size(a)):
+	if(a[e]==11)and(b[e]==22):
+		i = i+1
+	elif(a[e]==22)and(b[e]==33):
+		i= i +1
+	elif(a[e]==33)and(b[e]==11):
+		i=i+1
+	elif(a[e]==11)and(b[e]==33):
+		h=h+1
+	elif(a[e]==22)and(b[e]==11):
+		h=h+1	
+	elif(a[e]==33)and(b[e]==22):
+		h=h+1
+	
+	e=e+1
+print(e)
+if(h>i):
+	print("EUSAPIA")
+elif(h<i):
+	print("BARSANULFO")
+-- EXECUTION TIME:
+0.403677
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+EUSAPIA
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+BARSANULFO
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-26 23:14:30) 
+-- CODE:
+from numpy import*
+a = array(eval(input("jogadas de Eusapia:" )))
+b = array(eval(input("jogadas de Barsanulfo:" )))
+
+e= 0    #variavel contadora de posicao dos vetores
+h= 0      #variavel contadora vitoria de eusapia
+i= 0       #variavel contadora vitoria de barsanulfo
+
+while(e < size(a)):
+	if(a[e]==11)and(b[e]==22):
+		i = i+1
+	elif(a[e]==22)and(b[e]==33):
+		i= i +1
+	elif(a[e]==33)and(b[e]==11):
+		i=i+1
+	elif(a[e]==11)and(b[e]==33):
+		h=h+1
+	elif(a[e]==22)and(b[e]==11):
+		h=h+1	
+	elif(a[e]==33)and(b[e]==22):
+		h=h+1
+	
+	e=e+1
+print(e)
+if(h>i):
+	print("EUSAPIA")
+elif(h<i):
+	print("BARSANULFO")
+-- EXECUTION TIME:
+0.539615
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+EUSAPIA
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+BARSANULFO
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-26 23:14:34) 
+-- CODE:
+from numpy import*
+a = array(eval(input("jogadas de Eusapia:" )))
+b = array(eval(input("jogadas de Barsanulfo:" )))
+
+e= 0    #variavel contadora de posicao dos vetores
+h= 0      #variavel contadora vitoria de eusapia
+i= 0       #variavel contadora vitoria de barsanulfo
+
+while(e < size(a)):
+	if(a[e]==11)and(b[e]==22):
+		i = i+1
+	elif(a[e]==22)and(b[e]==33):
+		i= i +1
+	elif(a[e]==33)and(b[e]==11):
+		i=i+1
+	elif(a[e]==11)and(b[e]==33):
+		h=h+1
+	elif(a[e]==22)and(b[e]==11):
+		h=h+1	
+	elif(a[e]==33)and(b[e]==22):
+		h=h+1
+	
+	e=e+1
+print(e)
+if(h>i):
+	print("EUSAPIA")
+elif(h<i):
+	print("BARSANULFO")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-26 23:15:25) 
+-- CODE:
+from numpy import*
+a = array(eval(input("jogadas de Eusapia:" )))
+b = array(eval(input("jogadas de Barsanulfo:" )))
+
+e= 0    #variavel contadora de posicao dos vetores
+h= 0      #variavel contadora vitoria de eusapia
+i= 0       #variavel contadora vitoria de barsanulfo
+
+while(e < size(a)):
+	if(a[e]==11)and(b[e]==22):
+		i = i+1
+	elif(a[e]==22)and(b[e]==33):
+		i= i +1
+	elif(a[e]==33)and(b[e]==11):
+		i=i+1
+	elif(a[e]==11)and(b[e]==33):
+		h=h+1
+	elif(a[e]==22)and(b[e]==11):
+		h=h+1	
+	elif(a[e]==33)and(b[e]==22):
+		h=h+1
+	
+	e=e+1
+print(e)
+if(h>i):
+	print("EUSAPIA")
+elif(h<i):
+	print("BARSANULFO")
+else:
+	print("EMPATE")
+-- EXECUTION TIME:
+0.573495
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+EUSAPIA
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+EMPATE
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+BARSANULFO
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-26 23:17:44) 
+-- CODE:
+from numpy import*
+a = array(eval(input("jogadas de Eusapia:" )))
+b = array(eval(input("jogadas de Barsanulfo:" )))
+
+e= 0    #variavel contadora de posicao dos vetores
+h= 0      #variavel contadora vitoria de eusapia
+i= 0       #variavel contadora vitoria de barsanulfo
+
+while(e < size(a)):
+	if(a[e]==11)and(b[e]==22):
+		i = i+1
+	elif(a[e]==22)and(b[e]==33):
+		i= i +1
+	elif(a[e]==33)and(b[e]==11):
+		i=i+1
+	elif(a[e]==11)and(b[e]==33):
+		h=h+1
+	elif(a[e]==22)and(b[e]==11):
+		h=h+1	
+	elif(a[e]==33)and(b[e]==22):
+		h=h+1
+	
+	e=e+1
+print(e)
+if(h>i):
+	print("EUSAPIA")
+elif(h<i):
+	print("BARSANULFO")
+else:
+	print("EMPATE")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

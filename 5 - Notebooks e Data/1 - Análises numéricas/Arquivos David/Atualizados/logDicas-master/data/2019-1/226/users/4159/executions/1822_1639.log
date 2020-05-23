@@ -1,0 +1,185 @@
+== TEST (2019-06-13 10:12:58) 
+-- CODE:
+from numpy import*
+v = array(eval(input("numero de alunos: ")))
+c = 0
+for i in range(size(v)):
+	if((v[i]%2)==0):
+		c = c + 1 
+g = zeros(c, dtype=int)
+for d in range(size(v)):
+	if((v[d]%2)==0):
+		for x in range(c):
+			g[x] = d
+print(c)
+print(g)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:13:02) 
+-- CODE:
+from numpy import*
+v = array(eval(input("numero de alunos: ")))
+c = 0
+for i in range(size(v)):
+	if((v[i]%2)==0):
+		c = c + 1 
+g = zeros(c, dtype=int)
+for d in range(size(v)):
+	if((v[d]%2)==0):
+		for x in range(c):
+			g[x] = d
+print(c)
+print(g)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:14:49) 
+-- CODE:
+from numpy import*
+v = array(eval(input("numero de alunos: ")))
+c = 0
+for i in range(size(v)):
+	if((v[i]%2)==0):
+		c = c + 1 
+g = zeros(c, dtype=int)
+for d in range(size(v)):
+	if((v[d]%2)==0):
+		for x in g:
+			g[x] = d
+print(c)
+print(g)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:17:33) 
+-- CODE:
+from numpy import*
+v = array(eval(input("numero de alunos: ")))
+c = 0
+x = 0
+for i in range(size(v)):
+	if((v[i]%2)==0):
+		c = c + 1 
+g = zeros(c, dtype=int)
+for d in range(size(v)):
+	if((v[d]%2)==0):
+		while(x<=c):
+			g[x] = d
+			x =x+1
+print(c)
+print(g)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:19:51) 
+-- CODE:
+from numpy import*
+v = array(eval(input("numero de alunos: ")))
+c = 0
+x = 0
+for i in range(size(v)):
+	if((v[i]%2)==0):
+		c = c + 1 
+g = zeros(c, dtype=int)
+for d in range(size(v)):
+	if((v[d]%2)==0):
+			g[x] = d
+			x = x+1
+print(c)
+print(g)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:19:59) 
+-- CODE:
+from numpy import*
+v = array(eval(input("numero de alunos: ")))
+c = 0
+x = 0
+for i in range(size(v)):
+	if((v[i]%2)==0):
+		c = c + 1 
+g = zeros(c, dtype=int)
+for d in range(size(v)):
+	if((v[d]%2)==0):
+			g[x] = d
+			x = x+1
+print(c)
+print(g)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 10:20:22) 
+-- CODE:
+from numpy import*
+v = array(eval(input("numero de alunos: ")))
+c = 0
+x = 0
+for i in range(size(v)):
+	if((v[i]%2)==0):
+		c = c + 1 
+g = zeros(c, dtype=int)
+for d in range(size(v)):
+	if((v[d]%2)==0):
+			g[x] = d
+			x = x+1
+print(c)
+print(g)
+	
+-- EXECUTION TIME:
+0.975702
+-- TEST CASE 1:
+---- input:
+[10,20,31,1,13,15,20,33,36,63,25,10,2]
+---- correct output:
+6
+[ 0 1 6 8 11 12]
+---- user output:
+6
+[ 0  1  6  8 11 12]
+-- TEST CASE 2:
+---- input:
+[10,20,31,15,36,63,25,10,2]
+---- correct output:
+5
+[0 1 4 7 8]
+---- user output:
+5
+[0 1 4 7 8]
+-- TEST CASE 3:
+---- input:
+[10,20,31,15,36,63,26,10,2]
+---- correct output:
+6
+[0 1 4 6 7 8]
+---- user output:
+6
+[0 1 4 6 7 8]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

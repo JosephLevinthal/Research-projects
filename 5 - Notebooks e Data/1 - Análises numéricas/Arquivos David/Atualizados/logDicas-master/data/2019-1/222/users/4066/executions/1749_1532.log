@@ -1,0 +1,152 @@
+== TEST (2019-05-15 18:14:31) 
+-- CODE:
+from math import *
+x = float(input("Numero real: "))
+n = int(input("Numero de termos: "))
+
+t = 0
+
+soma = 0
+
+while (t < n):
+	tg = (pow(x,(2t + 1))/factorial(2n-1)
+	soma = soma + tg
+	t = t + 1
+	
+print(round(soma,9))
+-- ERROR:
+File "XXXX", line 10
+    tg = (pow(x,(2t + 1))/factorial(2n-1)
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 18:14:42) 
+-- CODE:
+from math import *
+x = float(input("Numero real: "))
+n = int(input("Numero de termos: "))
+
+t = 0
+
+soma = 0
+
+while (t < n):
+	tg = (pow(x,(2*t + 1))/factorial(2*t-1)
+	soma = soma + tg
+	t = t + 1
+	
+print(round(soma,9))
+-- ERROR:
+File "XXXX", line 11
+    soma = soma + tg
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 18:14:55) 
+-- CODE:
+from math import *
+x = float(input("Numero real: "))
+n = int(input("Numero de termos: "))
+
+t = 0
+
+soma = 0
+
+while (t < n):
+	tg = (pow(x,(2*t + 1))/(factorial(2*t-1))
+	soma = soma + tg
+	t = t + 1
+	
+print(round(soma,9))
+-- ERROR:
+File "XXXX", line 11
+    soma = soma + tg
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 18:15:20) 
+-- CODE:
+from math import *
+x = float(input("Numero real: "))
+n = int(input("Numero de termos: "))
+
+t = 0
+
+soma = 0
+
+while (t < n):
+	tg = x**(2*t + 1)/(factorial(2*t-1))
+	soma = soma + tg
+	t = t + 1
+	
+print(round(soma,9))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 10, in <module>
+    tg = x**(2*t + 1)/(factorial(2*t-1))
+ValueError: factorial() not defined for negative values
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 18:16:08) 
+-- CODE:
+from math import *
+x = float(input("Numero real: "))
+n = int(input("Numero de termos: "))
+
+t = 1
+
+soma = x
+
+while (t < n):
+	tg = x**(2*t + 1)/(factorial(2*t+1))
+	soma = soma + tg
+	t = t + 1
+	
+print(round(soma,9))
+-- OUTPUT:
+3.62680776
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 18:16:12) 
+-- CODE:
+from math import *
+x = float(input("Numero real: "))
+n = int(input("Numero de termos: "))
+
+t = 1
+
+soma = x
+
+while (t < n):
+	tg = x**(2*t + 1)/(factorial(2*t+1))
+	soma = soma + tg
+	t = t + 1
+	
+print(round(soma,9))
+-- EXECUTION TIME:
+0.186456
+-- TEST CASE 1:
+---- input:
+2.0
+5
+---- correct output:
+3.62680776
+---- user output:
+3.62680776
+-- TEST CASE 2:
+---- input:
+10.0
+2
+---- correct output:
+176.666666667
+---- user output:
+176.666666667
+-- TEST CASE 3:
+---- input:
+12.0
+35
+---- correct output:
+81377.39570643
+---- user output:
+81377.39570643
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

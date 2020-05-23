@@ -1,0 +1,659 @@
+== TEST (2019-04-01 16:32:22) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*n1
+print(x)
+-- OUTPUT:
+livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:33:16) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*n1+abra
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    x = n2*n1+abra
+NameError: name 'abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:34:05) 
+-- CODE:
+n1 = input("nome_do_objeto: ",+abra)
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*n1
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    n1 = input("nome_do_objeto: ",+abra)
+NameError: name 'abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:34:50) 
+-- CODE:
+n1 = input("nome_do_objeto: ",)
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*n1
+print(x)
+-- OUTPUT:
+nome_do_objeto: livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:35:06) 
+-- CODE:
+n1 = input("nome_do_objeto: ",)
+n2 = int(input("numero_de_repeticoes: "))
+x = n2+*n1
+print(x)
+-- ERROR:
+File "XXXX", line 3
+    x = n2+*n1
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:37:02) 
+-- CODE:
+n1 = input("nome_do_objeto: ",)
+n2 = int(input("numero_de_repeticoes: "))
+n3 = Abra
+x = n2*n1
+print(n3, x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    n3 = Abra
+NameError: name 'Abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:38:07) 
+-- CODE:
+n1 = input("nome_do_objeto: ",)
+n2 = input("numero_de_repeticoes: "))
+n3 = Abra
+x = n2*n1
+print(n3, x)
+-- ERROR:
+File "XXXX", line 2
+    n2 = input())
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:38:15) 
+-- CODE:
+n1 = input("nome_do_objeto: ",)
+n2 = input("numero_de_repeticoes: ")
+n3 = Abra
+x = n2*n1
+print(n3, x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    n3 = Abra
+NameError: name 'Abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:38:52) 
+-- CODE:
+n1 = input("nome_do_objeto: ",)
+n2 = input("numero_de_repeticoes: ")
+n3 = Abra
+x = n2*n1+abra
+print(n3 x)
+-- ERROR:
+File "XXXX", line 5
+    print(n3 x)
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:40:50) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = input("numero_de_repeticoes: ")
+x = abra + n2* n1
+print(x)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    x = abra + n2* n1
+NameError: name 'abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:42:09) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = input("numero_de_repeticoes: ")
+x = abra + n1
+print(x)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    x = abra + n1
+NameError: name 'abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:42:59) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = input("numero_de_repeticoes: ")
+x = n1*n2 + "abra"
+print(x)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    x = n1*n2 + "abra"
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:43:35) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n1*n2 + "abra"
+print(x)
+
+-- OUTPUT:
+livrolivrolivrolivrolivrolivrolivrolivroabra
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:44:48) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = "abra" + n1*n2
+print(x)
+
+-- OUTPUT:
+abralivrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:46:11) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = "Abra"*n2 + n1*n2
+print(x)
+
+-- OUTPUT:
+AbraAbraAbraAbraAbraAbraAbraAbralivrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:47:31) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n1*n2
+print("Abra", x)
+
+-- OUTPUT:
+Abra livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:50:39) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*(n1+"Abra")
+print(x)
+
+-- OUTPUT:
+livroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbra
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:51:11) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*("Abra" + n1)
+print(x)
+
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 16:51:23) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*("Abra" + n1)
+print(x)
+
+-- EXECUTION TIME:
+0.17614
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+AbracarroAbracarro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abracaixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:53:18) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*("Abra", + n1)
+print(x)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    x = n2*("Abra", + n1)
+TypeError: bad operand type for unary +: 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:54:51) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*("Abra"+ n1)
+print(x)
+
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 16:55:33) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2 * ("Abra" + n1)
+print(x)
+
+-- EXECUTION TIME:
+0.144356
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+AbracarroAbracarro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abracaixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:57:50) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+y = "Abra"
+x = n2 * (y, n1)
+print(x)
+
+-- OUTPUT:
+('Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:58:10) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+y = "Abra"
+x = n2 * (y n1)
+print(x)
+
+-- ERROR:
+File "XXXX", line 4
+    x = n2 * (y n1)
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:58:51) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+y = "Abra"
+x = n2 * (y n1)
+print(x)
+
+-- ERROR:
+File "XXXX", line 4
+    x = n2 * (y n1)
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:59:28) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2 * (n1)
+print("Abra", x)
+
+-- OUTPUT:
+Abra livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 17:00:37) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2 * (n1)
+print("Abra", n1)
+print(x)
+
+
+-- OUTPUT:
+Abra livro
+livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 17:01:42) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2 * (n1, "Abra")
+print(x)
+
+
+-- OUTPUT:
+('livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 17:02:15) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2 * ("Abra"+n1)
+print(x)
+
+
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 17:03:04) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2 *n1, "Abra"
+print(x)
+
+
+-- OUTPUT:
+('livrolivrolivrolivrolivrolivrolivrolivro', 'Abra')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 17:03:25) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2 *n1 + "Abra"
+print(x)
+
+
+-- OUTPUT:
+livrolivrolivrolivrolivrolivrolivrolivroAbra
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 17:04:14) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*("Abra"+n1)
+print(x)
+
+
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 17:05:17) 
+-- CODE:
+n1 = input("nome_do_objeto: "+"Abra")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*(+n1)
+print(x)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    x = n2*(+n1)
+TypeError: bad operand type for unary +: 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 17:05:38) 
+-- CODE:
+n1 = input("nome_do_objeto: "+"Abra")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*(n1)
+print(x)
+
+
+-- OUTPUT:
+nome_do_objeto: Abralivrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 17:06:31) 
+-- CODE:
+n1 = input("Abra + nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*(n1)
+print(x)
+
+
+-- OUTPUT:
+livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 17:10:10) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = "Abra" + n2*n1
+print(x)
+
+
+-- OUTPUT:
+Abralivrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 17:10:51) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*n1+("Abra")
+print(x)
+
+
+-- OUTPUT:
+livrolivrolivrolivrolivrolivrolivrolivroAbra
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 17:11:08) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*(n1+("Abra"))
+print(x)
+
+
+-- OUTPUT:
+livroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbra
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 17:11:32) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*(n1+"Abra")
+print(x)
+
+
+-- OUTPUT:
+livroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbra
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 17:11:57) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*("Abra", n1)
+print(x)
+
+
+-- OUTPUT:
+('Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 17:12:17) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*"Abra", n1
+print(x)
+
+
+-- OUTPUT:
+('AbraAbraAbraAbraAbraAbraAbraAbra', 'livro')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 17:12:55) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*"Abra"+ (n1)
+print(x)
+
+
+-- OUTPUT:
+AbraAbraAbraAbraAbraAbraAbraAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-03 14:35:42) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*("Abra "+n1)
+print(x)
+
+
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-03 14:36:04) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*(" Abra "+n1)
+print(x)
+
+
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-03 14:36:38) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*(" sabuceta "+n1)
+print(x)
+
+
+-- OUTPUT:
+sabuceta livro sabuceta livro sabuceta livro sabuceta livro sabuceta livro sabuceta livro sabuceta livro sabuceta livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-03 14:36:51) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*(" fode "+n1)
+print(x)
+
+
+-- OUTPUT:
+fode livro fode livro fode livro fode livro fode livro fode livro fode livro fode livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-03 14:37:03) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*(" fode "+n1)
+print(x)
+
+
+-- OUTPUT:
+fode livro fode livro fode livro fode livro fode livro fode livro fode livro fode livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-03 14:37:24) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*(" Abra "+n1)
+print(x)
+
+
+-- EXECUTION TIME:
+0.111717
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-03 14:37:37) 
+-- CODE:
+n1 = input("nome_do_objeto: ")
+n2 = int(input("numero_de_repeticoes: "))
+x = n2*(" Abra "+n1)
+print(x)
+
+
+-- EXECUTION TIME:
+0.113813
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

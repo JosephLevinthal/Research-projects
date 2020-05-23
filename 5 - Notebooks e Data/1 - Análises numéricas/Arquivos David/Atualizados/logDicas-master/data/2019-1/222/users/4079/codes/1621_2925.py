@@ -1,0 +1,5 @@
+n=int(input("numero da geracao atual:"))
+x=float(input("horas:"))
+y=float(input("dias:"))
+bacterias=float(x**(y))
+print(n)

@@ -1,0 +1,11 @@
+n=int(input("n:"))
+sinal=1
+numerador=2
+cont=1
+pi=3
+while(cont<n):
+	pi=pi+(sinal*(4/(numerador*(numerador+1)*(numerador+2))))
+	sinal=sinal*(-1)
+	numerador=numerador+2
+	cont=cont+1
+print(round(pi,8))

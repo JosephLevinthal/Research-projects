@@ -1,0 +1,5 @@
+dividendo=int(input("digite o numero"))
+divisor=int(input("digite o numero"))
+quociente=(dividendo//divisor)
+resto=(dividendo%divisor)
+print(dividendo,divisor,quociente,resto)

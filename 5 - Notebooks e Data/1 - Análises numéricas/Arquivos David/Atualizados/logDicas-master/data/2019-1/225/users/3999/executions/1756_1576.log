@@ -1,0 +1,71 @@
+== SUBMITION (2019-05-29 13:28:24) 
+-- CODE:
+from numpy import*
+from numpy import *
+vet1 = array(eval(input("Digite um vetor para Eusapio: ")))
+vet2 = array(eval(input("Digite um vetor para Barsanulfo: ")))
+pont1 = 0
+pont2 = 0
+
+i = 0
+
+while (i < size(vet1)):
+	if (vet1[i] == 11): #pedra
+		if (vet2[i] == 22):#papel
+			pont2 += 1
+		elif (vet2[i] == 33):#tesoura
+			pont1 += 1
+	if (vet1[i] == 22):
+		if (vet2[i] == 11):
+			pont1 += 1
+		elif (vet2[i] == 33):
+			pont2 += 1
+	if (vet1[i] == 33):
+		if (vet2[i] == 11):
+			pont2 += 1
+		elif (vet2[i] == 22):
+			pont1 += 1
+	i += 1
+	
+print(size(vet1))
+if (pont1 > pont2):
+	print("EUSAPIA")
+if (pont1 < pont2):
+	print("BARSANULFO")
+if (pont1 == pont2):
+	print("EMPATE")
+-- EXECUTION TIME:
+0.413389
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+EUSAPIA
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+EMPATE
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+BARSANULFO
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

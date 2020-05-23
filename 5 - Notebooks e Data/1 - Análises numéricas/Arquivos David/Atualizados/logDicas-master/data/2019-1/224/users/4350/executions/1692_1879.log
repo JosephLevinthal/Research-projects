@@ -1,0 +1,252 @@
+== TEST (2019-05-02 16:15:39) 
+-- CODE:
+h = float(input("horas extras"))
+f = float(input("faltadas"))
+if h-f>400:
+	t = (h-(1/4)*f)*500
+else:
+	t = (h-(1/4)*f)*100
+print(t)
+-- OUTPUT:
+41500.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 16:21:01) 
+-- CODE:
+h = float(input("horas extras"))
+f = float(input("faltadas"))
+print(h, "extras e", f "de falta")
+if h-f>400:
+	t = (h-(1/4)*f)*500
+else:
+	t = (h-(1/4)*f)*100
+print("R$", round(t, 2))
+-- ERROR:
+File "XXXX", line 3
+    print(h, "extras e", f "de falta")
+                                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 16:22:14) 
+-- CODE:
+h = float(input("horas extras"))
+f = float(input("faltadas"))
+print(h, "extras e", f, "de falta")
+if h-f>400:
+	t = (h-(1/4)*f)*500
+else:
+	t = (h-(1/4)*f)*100
+print("R$", round(t, 2))
+-- OUTPUT:
+420.0 extras e 20.0 de falta
+R$ 41500.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 16:28:17) 
+-- CODE:
+h = float(input("horas extras"))
+f = float(input("faltadas"))
+print(h, "extras e", f, "de falta")
+if (h-(1/4)*f)>400:
+	t = 500
+elif (h-(1/4)*f)<=400:
+	t = (h-(1/4)*f)*100
+print("R$", round(t, 2))
+-- OUTPUT:
+420.0 extras e 20.0 de falta
+R$ 500
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 16:29:01) 
+-- CODE:
+h = float(input("horas extras"))
+f = float(input("faltadas"))
+print(h, "extras e", f, "de falta")
+if (h-(1/4)*f)>400:
+	t = 500
+elif (h-(1/4)*f)<=400:
+	t = 100
+print("R$", round(t, 2))
+-- EXECUTION TIME:
+0.210151
+-- TEST CASE 1:
+---- input:
+420
+20
+---- correct output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+---- user output:
+420.0 extras e 20.0 de falta
+R$ 500
+-- TEST CASE 2:
+---- input:
+400.5
+100
+---- correct output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+---- user output:
+400.5 extras e 100.0 de falta
+R$ 100
+-- TEST CASE 3:
+---- input:
+300
+44
+---- correct output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+---- user output:
+300.0 extras e 44.0 de falta
+R$ 100
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 16:29:57) 
+-- CODE:
+h = float(input("horas extras"))
+f = float(input("faltadas"))
+print(h, "extras e", f, "de falta")
+if (h-(1/4)*f)>400:
+	t = 500
+elif (h-(1/4)*f)<=400:
+	t = 100
+print("R$", round(t, 2))
+-- OUTPUT:
+420.0 extras e 20.0 de falta
+R$ 500
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 16:33:13) 
+-- CODE:
+h = float(input("horas extras"))
+f = float(input("faltadas"))
+print(h, "extras e", f, "de falta")
+a = (h-(1/4)*f)
+if a>400:
+	t = a*500
+elif a<=400:
+	t = a*100
+print("R$", round(t, 2))
+-- OUTPUT:
+420.0 extras e 20.0 de falta
+R$ 207500.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 16:39:44) 
+-- CODE:
+h = float(input("horas extras"))
+f = float(input("faltadas"))
+print(h, "extras e", f, "de falta")
+a = (h-(1/4)*f)
+if a>400:
+	t = a*50
+elif a<=400:
+	t = a*10
+print("R$", round(t, 2))
+-- EXECUTION TIME:
+0.149527
+-- TEST CASE 1:
+---- input:
+420
+20
+---- correct output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+---- user output:
+420.0 extras e 20.0 de falta
+R$ 20750.0
+-- TEST CASE 2:
+---- input:
+400.5
+100
+---- correct output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+---- user output:
+400.5 extras e 100.0 de falta
+R$ 3755.0
+-- TEST CASE 3:
+---- input:
+300
+44
+---- correct output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+---- user output:
+300.0 extras e 44.0 de falta
+R$ 2890.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 16:40:56) 
+-- CODE:
+h = float(input("horas extras"))
+f = float(input("faltadas"))
+print(h, "extras e", f, "de falta")
+a = (h-(1/4)*f)
+if a>400:
+	t = a+500
+elif a<=400:
+	t = a+100
+print("R$", round(t, 2))
+-- OUTPUT:
+420.0 extras e 20.0 de falta
+R$ 915.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 16:48:14) 
+-- CODE:
+h = float(input("horas extras"))
+f = float(input("faltadas"))
+print(h, "extras e", f, "de falta")
+a = (h-(1/4)*f)
+if a>400:
+	t = a*50
+elif a<=400:
+	t = a*10
+print("R$", round(t, 2))
+-- OUTPUT:
+420.0 extras e 20.0 de falta
+R$ 20750.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 16:52:33) 
+-- CODE:
+h = float(input("horas extras"))
+f = float(input("faltadas"))
+print(h, "extras e", f, "de falta")
+a = (h-(1/4)*f)
+if a>400:
+	t = 500.0
+elif a<=400:
+	t = 100.0
+print("R$", t)
+-- EXECUTION TIME:
+0.156449
+-- TEST CASE 1:
+---- input:
+420
+20
+---- correct output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+---- user output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+-- TEST CASE 2:
+---- input:
+400.5
+100
+---- correct output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+---- user output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+-- TEST CASE 3:
+---- input:
+300
+44
+---- correct output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+---- user output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

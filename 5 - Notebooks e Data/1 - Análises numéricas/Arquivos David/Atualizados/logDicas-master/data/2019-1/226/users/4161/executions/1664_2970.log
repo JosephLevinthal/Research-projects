@@ -1,0 +1,225 @@
+== TEST (2019-04-16 11:12:11) 
+-- CODE:
+ti = float(input("tempo de investimento em meses: "))
+qf = 1.042.000
+q0 = 1.500
+taxa = (qf/q0)**(t/1) - 1
+i = round(taxa, 5)
+print(i)
+if (i <= 0.01):
+	print("Real")
+else:
+	print("irreal")
+-- ERROR:
+File "XXXX", line 2
+    qf = 1.042.000
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:12:48) 
+-- CODE:
+ti = float(input("tempo de investimento em meses: "))
+qf = 1042000
+q0 = 1500
+taxa = (qf/q0)**(t/1) - 1
+i = round(taxa, 5)
+print(i)
+if (i <= 0.01):
+	print("Real")
+else:
+	print("irreal")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    taxa = (qf/q0)**(t/1) - 1
+NameError: name 't' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:13:10) 
+-- CODE:
+t = float(input("tempo de investimento em meses: "))
+qf = 1042000
+q0 = 1500
+taxa = (qf/q0)**(t/1) - 1
+i = round(taxa, 5)
+print(i)
+if (i <= 0.01):
+	print("Real")
+else:
+	print("irreal")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    taxa = (qf/q0)**(t/1) - 1
+OverflowError: (34, 'Numerical result out of range')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:14:13) 
+-- CODE:
+t = float(input("tempo de investimento em meses: "))
+qf = 1042000
+q0 = 1500
+i = (qf/q0)**(t/1) - 1
+print(round(i, 5)
+if (i <= 0.01):
+	print("Real")
+else:
+	print("irreal")
+-- ERROR:
+File "XXXX", line 6
+    if (i <= 0.01):
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:15:16) 
+-- CODE:
+t = float(input("tempo de investimento em meses: "))
+qf = 1042000
+q0 = 1500
+i = (qf/q0)**(t/1) - 1
+
+if (i <= 0.01):
+	print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    i = (qf/q0)**(t/1) - 1
+OverflowError: (34, 'Numerical result out of range')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:15:40) 
+-- CODE:
+t = float(input("tempo de investimento em meses: "))
+qf = 1042000
+q0 = 1500
+i = (qf/q0)**(t/1) - 1
+print(round(i, 5))
+if (i <= 0.01):
+	print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    i = (qf/q0)**(t/1) - 1
+OverflowError: (34, 'Numerical result out of range')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:16:27) 
+-- CODE:
+t = float(input("tempo de investimento em meses: "))
+qf = 1000000 + 42000
+q0 = 1500
+i = (qf/q0)**(t/1) - 1
+print(round(i, 5))
+if (i <= 0.01):
+	print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    i = (qf/q0)**(t/1) - 1
+OverflowError: (34, 'Numerical result out of range')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:16:56) 
+-- CODE:
+t = float(input("tempo de investimento em meses: "))
+qf = 1000000 + 42000
+q0 = 1500
+i = (qf/q0)**(1/t) - 1
+print(round(i, 5))
+if (i <= 0.01):
+	print("Real")
+else:
+	print("Irreal")
+-- OUTPUT:
+0.00999
+Real
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:17:16) 
+-- CODE:
+t = float(input("tempo de investimento em meses: "))
+qf = 1000000 + 42000
+q0 = 1500
+i = (qf/q0)**(1/t) - 1
+print(round(i, 5))
+if (i <= 0.01):
+	print("Real")
+else:
+	print("Irreal")
+-- OUTPUT:
+0.00999
+Real
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:17:23) 
+-- CODE:
+t = float(input("tempo de investimento em meses: "))
+qf = 1000000 + 42000
+q0 = 1500
+i = (qf/q0)**(1/t) - 1
+print(round(i, 5))
+if (i <= 0.01):
+	print("Real")
+else:
+	print("Irreal")
+-- OUTPUT:
+0.00999
+Real
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:17:28) 
+-- CODE:
+t = float(input("tempo de investimento em meses: "))
+qf = 1000000 + 42000
+q0 = 1500
+i = (qf/q0)**(1/t) - 1
+print(round(i, 5))
+if (i <= 0.01):
+	print("Real")
+else:
+	print("Irreal")
+-- OUTPUT:
+0.00999
+Real
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 11:17:36) 
+-- CODE:
+t = float(input("tempo de investimento em meses: "))
+qf = 1000000 + 42000
+q0 = 1500
+i = (qf/q0)**(1/t) - 1
+print(round(i, 5))
+if (i <= 0.01):
+	print("Real")
+else:
+	print("Irreal")
+-- EXECUTION TIME:
+0.124481
+-- TEST CASE 1:
+---- input:
+658
+---- correct output:
+0.00999
+Real
+---- user output:
+0.00999
+Real
+-- TEST CASE 2:
+---- input:
+565
+---- correct output:
+0.01165
+Irreal
+---- user output:
+0.01165
+Irreal
+-- TEST CASE 3:
+---- input:
+240
+---- correct output:
+0.02764
+Irreal
+---- user output:
+0.02764
+Irreal
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

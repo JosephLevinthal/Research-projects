@@ -1,0 +1,199 @@
+== TEST (2019-06-10 13:19:19) 
+-- CODE:
+from numpy import*
+
+a = array(eval(input("gols do time A:")))
+b = array(eval(inout("gols do time B:")))
+
+while(size(a) > i):
+-- ERROR:
+File "XXXX", line 7
+    
+                       ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 13:20:54) 
+-- CODE:
+from numpy import*
+
+a = array(eval(input("gols do time A:")))
+b = array(eval(input("gols do time B:")))
+
+	for i 
+-- ERROR:
+File "XXXX", line 6
+    for i 
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 13:20:54) 
+-- CODE:
+from numpy import*
+
+a = array(eval(input("gols do time A:")))
+b = array(eval(input("gols do time B:")))
+ 
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 13:34:51) 
+-- CODE:
+from numpy import*
+
+a = array(eval(input("gols do time A:")))
+b = array(eval(input("gols do time B:")))
+va = 0
+e = 0
+d = 0 
+v = zeros(3 , dtype = int)
+for i in a:
+	if(a[i] > b[i]):
+		va = va + 1
+	elif(a[i] == b[i]):
+		e = e + 1
+	elif(a[i] < b[i]):
+		d = d + 1
+v[0] = va
+v[1] = e
+v[2] = d
+
+print(v )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-10 13:35:58) 
+-- CODE:
+from numpy import*
+
+a = array(eval(input("gols do time A:")))
+b = array(eval(input("gols do time B:")))
+va = 0
+e = 0
+d = 0 
+v = zeros(3 , dtype = int)
+for i in a:
+	if(a[i] > b[i]):
+		va = va + 1
+	elif(a[i] == b[i]):
+		e = e + 1
+	elif(a[i] < b[i]):
+		d = d + 1
+v[0] = va
+v[1] = e
+v[2] = d
+
+print(v)
+-- EXECUTION TIME:
+1.04242
+-- TEST CASE 1:
+---- input:
+[2,3,2,4,3,5,3,4,2,3,1,0]
+[3,3,1,0,2,3,3,0,1,2,1,1]
+---- correct output:
+[7 3 2]
+---- user output:
+[10  1  1]
+-- TEST CASE 2:
+---- input:
+[1,2,1,2,1,2,1,2,0]
+[3,5,3,3,3,3,3,3,3]
+---- correct output:
+[0 0 9]
+---- user output:
+[0 0 9]
+-- TEST CASE 3:
+---- input:
+[1,2,2,2,2,1,1,2,2,1,1,2,2]
+[0,1,1,1,0,0,0,0,0,0,1,1,1]
+---- correct output:
+[12 1 0]
+---- user output:
+[13  0  0]
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 13:36:31) 
+-- CODE:
+from numpy import*
+
+a = array(eval(input("gols do time A:")))
+b = array(eval(input("gols do time B:")))
+va = 0
+e = 0
+d = 0 
+v = zeros(3 , dtype = int)
+for i in range(size(a)):
+	if(a[i] > b[i]):
+		va = va + 1
+	elif(a[i] == b[i]):
+		e = e + 1
+	elif(a[i] < b[i]):
+		d = d + 1
+v[0] = va
+v[1] = e
+v[2] = d
+
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-10 13:37:01) 
+-- CODE:
+from numpy import*
+
+a = array(eval(input("gols do time A:")))
+b = array(eval(input("gols do time B:")))
+va = 0
+e = 0
+d = 0 
+v = zeros(3 , dtype = int)
+for i in range(size(a)):
+	if(a[i] > b[i]):
+		va = va + 1
+	elif(a[i] == b[i]):
+		e = e + 1
+	elif(a[i] < b[i]):
+		d = d + 1
+v[0] = va
+v[1] = e
+v[2] = d
+
+print(v)
+-- EXECUTION TIME:
+1.0603
+-- TEST CASE 1:
+---- input:
+[2,3,2,4,3,5,3,4,2,3,1,0]
+[3,3,1,0,2,3,3,0,1,2,1,1]
+---- correct output:
+[7 3 2]
+---- user output:
+[7 3 2]
+-- TEST CASE 2:
+---- input:
+[1,2,1,2,1,2,1,2,0]
+[3,5,3,3,3,3,3,3,3]
+---- correct output:
+[0 0 9]
+---- user output:
+[0 0 9]
+-- TEST CASE 3:
+---- input:
+[1,2,2,2,2,1,1,2,2,1,1,2,2]
+[0,1,1,1,0,0,0,0,0,0,1,1,1]
+---- correct output:
+[12 1 0]
+---- user output:
+[12  1  0]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

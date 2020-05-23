@@ -1,0 +1,6 @@
+nota1 = float(input('Nota 1:'))
+nota2 = float(input('Nota 2:'))
+nota3 = float(input('Nota 3:'))
+nota4 = float(input('Nota 4:'))
+media = (nota1*1+nota2*2+nota3*3+nota4*4)/(1+2+3+4)
+print(round(media, 2))

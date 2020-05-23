@@ -1,0 +1,75 @@
+== TEST (2019-05-14 18:18:20) 
+-- CODE:
+inicial=int(input("digite a quantidade inicial de tambaquis:"))
+percentual=int(input("digite o percentual de crescimento anual:"))
+venda=int(input("digite  a quantidade de tambaquis retirados todos os anos para venda:"))
+acumul=0
+cont=1
+while(>0):
+	if(12>0):
+		mensagem="EXTINCAO"
+	else:
+		mensagem="LIMITE"
+	print(mensagem)
+		
+-- ERROR:
+File "XXXX", line 6
+    while(>0):
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 19:52:17) 
+-- CODE:
+inicial=int(input("digite a quantidade inicial de tambaquis:"))
+percentual=int(input("digite o percentual de crescimento anual:"))
+venda=int(input("digite  a quantidade de tambaquis retirados todos os anos para venda:"))
+percentual=percentual/100
+t=0
+while(0<=inicial<=12000):
+	inicial=(inicial+inicial*percentual)-venda
+	t=t+1
+if(inicial<=0):
+	print("EXTINCAO")
+	print(t)
+if(inicial>=12000):
+	print("LIMITE")
+	print(t)
+		
+-- EXECUTION TIME:
+0.144095
+-- TEST CASE 1:
+---- input:
+1234
+6
+135
+---- correct output:
+EXTINCAO
+14
+---- user output:
+EXTINCAO
+14
+-- TEST CASE 2:
+---- input:
+579
+37
+26
+---- correct output:
+LIMITE
+11
+---- user output:
+LIMITE
+11
+-- TEST CASE 3:
+---- input:
+6789
+45
+2345
+---- correct output:
+LIMITE
+4
+---- user output:
+LIMITE
+4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,141 @@
+== TEST (2019-06-06 11:32:28) 
+-- CODE:
+from numpy import*
+media = array(eval(input("digite a media final: ")))
+pres = array(eval(input("digite as horas de presença: ")))
+cargah = array(eval(input("digite a carga horaria: ")))
+
+vet = zeros(3, dtype=int)
+
+for i in range(0, size(media)):
+	if (media[i]>=5)and(pres>= cargah*(75/100)):
+		vet[0] = vet[0] +1 #aprovacao por nota e frequencia ok
+	elif media[i]<5:
+		vet[1] = vet[1] + 1 #reprovacao por nota
+	else:
+		vet[2] = vet[2] + 1 #reprovacoes por nota e frequencia ou so por frequencia
+print(vet)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 11:32:29) 
+-- CODE:
+from numpy import*
+media = array(eval(input("digite a media final: ")))
+pres = array(eval(input("digite as horas de presença: ")))
+cargah = array(eval(input("digite a carga horaria: ")))
+
+vet = zeros(3, dtype=int)
+
+for i in range(0, size(media)):
+	if (media[i]>=5)and(pres>= cargah*(75/100)):
+		vet[0] = vet[0] +1 #aprovacao por nota e frequencia ok
+	elif media[i]<5:
+		vet[1] = vet[1] + 1 #reprovacao por nota
+	else:
+		vet[2] = vet[2] + 1 #reprovacoes por nota e frequencia ou so por frequencia
+print(vet)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 11:32:56) 
+-- CODE:
+from numpy import*
+media = array(eval(input("digite a media final: ")))
+pres = array(eval(input("digite as horas de presenca: ")))
+cargah = array(eval(input("digite a carga horaria: ")))
+
+vet = zeros(3, dtype=int)
+
+for i in range(0, size(media)):
+	if (media[i]>=5)and(pres>= cargah*(75/100)):
+		vet[0] = vet[0] +1 #aprovacao por nota e frequencia ok
+	elif media[i]<5:
+		vet[1] = vet[1] + 1 #reprovacao por nota
+	else:
+		vet[2] = vet[2] + 1 #reprovacoes por nota e frequencia ou so por frequencia
+print(vet)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 11:35:15) 
+-- CODE:
+from numpy import*
+media = array(eval(input("digite a media final: ")))
+pres = array(eval(input("digite as horas de presenca: ")))
+cargah = array(eval(input("digite a carga horaria: ")))
+
+vet = zeros(3, dtype=int)
+
+for i in range(0, size(media)):
+	if (media[i]>=5)and(pres[i] >= cargah*(75/100)):
+		vet[0] = vet[0] +1 #aprovacao por nota e frequencia ok
+	elif media[i]<5:
+		vet[1] = vet[1] + 1 #reprovacao por nota
+	else:
+		vet[2] = vet[2] + 1 #reprovacoes por nota e frequencia ou so por frequencia
+print(vet)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 11:35:38) 
+-- CODE:
+from numpy import*
+media = array(eval(input("digite a media final: ")))
+pres = array(eval(input("digite as horas de presenca: ")))
+cargah = array(eval(input("digite a carga horaria: ")))
+
+vet = zeros(3, dtype=int)
+
+for i in range(0, size(media)):
+	if (media[i]>=5)and(pres[i] >= cargah*(75/100)):
+		vet[0] = vet[0] +1 #aprovacao por nota e frequencia ok
+	elif media[i]<5:
+		vet[1] = vet[1] + 1 #reprovacao por nota
+	else:
+		vet[2] = vet[2] + 1 #reprovacoes por nota e frequencia ou so por frequencia
+print(vet)
+-- EXECUTION TIME:
+1.15458
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+[2 0 3]
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+[5 0 2]
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+[5 1 4]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,1437 @@
+== TEST (2019-03-13 13:11:22) 
+-- CODE:
+aresta =5
+area = (3/2) * (3 ** 1/2*5**2)
+ 
+print(round)
+-- OUTPUT:
+<built-in function round>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:11:36) 
+-- CODE:
+aresta =5
+area = (3/2) * (3 ** 1/2*aresta**2)
+ 
+print(round)
+-- OUTPUT:
+<built-in function round>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:11:52) 
+-- CODE:
+aresta =5
+area = (3/2) * (3 ** 0,5 *aresta**2)
+ 
+print(round)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2) * (3 ** 0,5 *aresta**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:12:28) 
+-- CODE:
+aresta =5
+area = (3/2)*(3**0,5*aresta**2)
+ 
+print(round)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3**0,5*aresta**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:13:50) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3**0,5)*5**2
+ 
+print(round)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3**0,5)*5**2
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:18:57) 
+-- CODE:
+aresta = 5
+area =
+ 
+print(round(3/2)*(3*0,5)*5**2, 4 )
+-- ERROR:
+File "XXXX", line 2
+    area =
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:19:17) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3*0,5)*5**2
+ 
+print(round(3/2)*(3*0,5)*5**2, 4 )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3*0,5)*5**2
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:21:03) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3*0,5)*aresta**2
+ 
+print(round(3/2)*(3*0,5)*5**2, 4 )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3*0,5)*aresta**2
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:21:48) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3*0,5)*aresta**2
+ 
+print(round(3/2)*(3*0,5)*5**2, 4 ))
+-- ERROR:
+File "XXXX", line 4
+    print(round(3/2)*(3*0,5)*5**2, 4 ))
+                                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:22:06) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3*0,5)*(aresta**2)
+ 
+print(round(3/2)*(3*0,5)*5**2, 4 )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3*0,5)*(aresta**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:22:20) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3*0,5)*(aresta**2)
+ 
+print(round(3/2)*(3*0,5)*5**2, 4)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3*0,5)*(aresta**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:23:54) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3*0,5)*("aresta"**2)
+ 
+print(round(3/2)*(3*0,5)*5**2, 4)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3*0,5)*("aresta"**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:32:05) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3*0,5)*(5**2, 4)
+ 
+print(round(3/2)*(3*0,5)*5**2, 4)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3*0,5)*(5**2, 4)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:34:32) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3*1/2)*(5**2, 4)
+ 
+print(round(3/2)*(3*0,5)*5**2, 4)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3*1/2)*(5**2, 4)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:34:48) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)*1/2)*(5**2, 4)
+ 
+print(round(3/2)*(3*0,5)*5**2, 4)
+-- ERROR:
+File "XXXX", line 2
+    area = (3/2)*(3)*1/2)*(5**2, 4)
+                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:34:59) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)*1/2*(5**2, 4)
+ 
+print(round(3/2)*(3*0,5)*5**2, 4)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3)*1/2*(5**2, 4)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:35:24) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)*1/2*(5**2, 4)
+ 
+print(round(3/2)*(3)1/2*5**2, 4)
+-- ERROR:
+File "XXXX", line 4
+    print(round(3/2)*(3)1/2*5**2, 4)
+                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:35:50) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)*1/2*(5**2, 4)
+ 
+print(round(3/2)*(3)(1/2)*5**2, 4)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3)*1/2*(5**2, 4)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:35:59) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)*1/2*(5**2, 4)
+ 
+print(round(3/2)*(3)*(1/2)*5**2, 4)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3)*1/2*(5**2, 4)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:40:47) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)*1/2*(5**2, 4)
+ 
+print(round(3/2)*(3)*(1/2)*(5**2, 4)
+-- ERROR:
+File "XXXX", line 5
+    
+                                        ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:41:11) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)*1/2*(5**2, 4)
+ 
+print(round(3/2) * (3) * (1/2) * (5**2, 4)
+-- ERROR:
+File "XXXX", line 5
+    
+                                              ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:42:45) 
+-- CODE:
+aresta = 5
+area = (3/2) * (3 * 1/2) * (5**2)
+ 
+print(round(3/2) * (3) * (1/2) * (5**2, 4)
+-- ERROR:
+File "XXXX", line 5
+    
+                                              ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:43:00) 
+-- CODE:
+aresta = 5
+area = (3/2) * (3 * 1/2) * (5 ** 2)
+ 
+print(round(3/2) * (3) * (1/2) * (5**2, 4)
+-- ERROR:
+File "XXXX", line 5
+    
+                                              ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:43:43) 
+-- CODE:
+aresta = 5
+area = (3/2) * (3 * 1/2) * (5 ** 2)
+ 
+print(round(3/2) * (3) * (1/2) * (5**2, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(3/2) * (3) * (1/2) * (5**2, 4))
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:44:08) 
+-- CODE:
+aresta = 5
+area = (3/2) * (3 * 0,5) * (5 ** 2)
+ 
+print(round(3/2) * (3) * 0,5) * (5**2, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(3/2) * (3) * 0,5) * (5**2, 4))
+                                             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:44:23) 
+-- CODE:
+aresta = 5
+area = (3/2) * (3 * 0,5) * (5 ** 2)
+ 
+print(round(3/2) * (3) * (0,5) * (5**2, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2) * (3 * 0,5) * (5 ** 2)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:45:33) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3*(0,5)*(5**2)
+ 
+print(round(3/2)*(3)*(0,5)*(5**2, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(3/2)*(3)*(0,5)*(5**2, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 13:45:56) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3*(0,5)*(5**2)
+ 
+print(round(3/2)*(3*0,5)*(5**2, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(3/2)*(3*0,5)*(5**2, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 19:09:56) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3*(0,5)*(5**2)
+ 
+print(round(3/2)*(3*0,5)*(5**2, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(3/2)*(3*0,5)*(5**2, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 20:53:30) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3**0,5*aresta**2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3**0,5*aresta**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 20:54:12) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3**0,5*5**2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3**0,5*5**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 20:54:25) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3**0,5)*5**2
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3**0,5)*5**2
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 20:56:39) 
+-- CODE:
+aresta =5 
+area =(3/2,)*(3**0,5*5**2) 
+ 
+print(round(area, 4))
+-- EXECUTION TIME:
+0.1881
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1578/1332/main.py", line 2, in <module>
+    area =(3/2,)*(3**0,5*5**2) 
+TypeError: can't multiply sequence by non-int of type 'tuple'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 20:56:48) 
+-- CODE:
+aresta =5 
+area =(3/2,)*(3**0,5*5**2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area =(3/2,)*(3**0,5*5**2)
+TypeError: can't multiply sequence by non-int of type 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 20:56:56) 
+-- CODE:
+aresta =5 
+area =(3/2)*(3**0,5*5**2)
+ 
+print(round(area, 4))
+-- EXECUTION TIME:
+0.202376
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1578/1332/main.py", line 2, in <module>
+    area =(3/2)*(3**0,5*5**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 20:56:59) 
+-- CODE:
+aresta =5 
+area =(3/2)*(3**0,5*5**2)
+ 
+print(round(area, 4))
+-- EXECUTION TIME:
+0.141596
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1578/1332/main.py", line 2, in <module>
+    area =(3/2)*(3**0,5*5**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 20:57:00) 
+-- CODE:
+aresta =5 
+area =(3/2)*(3**0,5*5**2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area =(3/2)*(3**0,5*5**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 20:57:25) 
+-- CODE:
+aresta =5 
+area =(3/2)*(3**0,5*5**2)
+ 
+print(round("area", 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area =(3/2)*(3**0,5*5**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 20:57:43) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**0,5*5**2)
+ 
+print(round(area, 4))
+-- EXECUTION TIME:
+0.19704
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1578/1332/main.py", line 2, in <module>
+    area = (3/2)*(3**0,5*5**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 20:57:46) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**0,5*5**2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3**0,5*5**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 20:58:23) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**0,5*aresta**2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3**0,5*aresta**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 20:58:33) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**0,5*(aresta**2)
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 20:58:54) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**0,5*(aresta**2)
+ 
+print(round((3/2)*(3**0,5*(aresta**2), 4))
+-- EXECUTION TIME:
+0.234614
+-- ERROR:
+  File "/home/codebench/codes/1578/1332/main.py", line 4
+    print(round((3/2)*(3**0,5*(aresta**2), 4))
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 20:58:55) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**0,5*(aresta**2)
+ 
+print(round((3/2)*(3**0,5*(aresta**2), 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round((3/2)*(3**0,5*(aresta**2), 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 20:59:06) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**0,5*(aresta**2)
+ 
+print(round((3/2)*(3**0,5*(aresta**2), 4)))
+-- EXECUTION TIME:
+0.145028
+-- ERROR:
+  File "/home/codebench/codes/1578/1332/main.py", line 4
+    print(round((3/2)*(3**0,5*(aresta**2), 4)))
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 20:59:08) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**0,5*(aresta**2)
+ 
+print(round((3/2)*(3**0,5*(aresta**2), 4)))
+-- ERROR:
+File "XXXX", line 4
+    print(round((3/2)*(3**0,5*(aresta**2), 4)))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 20:59:19) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**0,5*(aresta**2)
+ 
+print(round((3/2)*(3**0,5*(5**2), 4)))
+-- EXECUTION TIME:
+0.137805
+-- ERROR:
+  File "/home/codebench/codes/1578/1332/main.py", line 4
+    print(round((3/2)*(3**0,5*(5**2), 4)))
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 20:59:21) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**0,5*(aresta**2)
+ 
+print(round((3/2)*(3**0,5*(5**2), 4)))
+-- ERROR:
+File "XXXX", line 4
+    print(round((3/2)*(3**0,5*(5**2), 4)))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 20:59:46) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**0,5*(aresta**2)
+ 
+
+-- ERROR:
+File "XXXX", line 4
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 20:59:53) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**0,5*(aresta**2)
+ 
+-- ERROR:
+File "XXXX", line 4
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 20:59:55) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**0,5*(aresta**2)
+ 
+-- EXECUTION TIME:
+0.170602
+-- ERROR:
+  File "/home/codebench/codes/1578/1332/main.py", line 4
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:00:05) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**0,5*5**2)
+ 
+-- EXECUTION TIME:
+0.159704
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1578/1332/main.py", line 2, in <module>
+    area = (3/2)*(3**0,5*5**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:00:09) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**0,5*5**2)
+ 
+-- EXECUTION TIME:
+0.128568
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1578/1332/main.py", line 2, in <module>
+    area = (3/2)*(3**0,5*5**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:00:10) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**0,5*5**2)
+ 
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3**0,5*5**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:00:27) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**0,5*25)
+ 
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3**0,5*25)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:00:38) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**1/2*25)
+ 
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3**0,5*25)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:00:41) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**1/2*25)
+ 
+-- EXECUTION TIME:
+0.15141
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:00:43) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**1/2*25)
+ 
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3**0,5*25)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:00:55) 
+-- CODE:
+aresta = 5 
+area = (3/2)*(3**1/2)*25
+ 
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3**0,5*25)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:01:12) 
+-- CODE:
+aresta = 5 
+area = (3*3**2*25
+ 
+-- ERROR:
+File "XXXX", line 4
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:01:19) 
+-- CODE:
+aresta = 5 
+area = 3*3**2*25
+ 
+-- ERROR:
+File "XXXX", line 4
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:01:25) 
+-- CODE:
+aresta = 5 
+area = 3*3**2*25
+ 
+-- ERROR:
+File "XXXX", line 4
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:01:30) 
+-- CODE:
+aresta = 5 
+area = 3*3**2*25
+ 
+-- EXECUTION TIME:
+0.171257
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:01:56) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3**0,5(5**2)
+ 
+print(round(3/2)*(3*0,5)*(5**2, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(3/2)*(3*0,5)*(5**2, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:02:26) 
+-- CODE:
+aresta = 5
+"area" = (3/2)*(3**0,5(5**2)
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:02:40) 
+-- CODE:
+aresta = 5
+"area" = (3/2)*(3**0,5(5**2)
+ 
+print(round("area", 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round("area", 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:02:43) 
+-- CODE:
+aresta = 5
+"area" = (3/2)*(3**0,5(5**2)
+ 
+print(round("area", 4))
+-- EXECUTION TIME:
+0.131814
+-- ERROR:
+  File "/home/codebench/codes/1578/1332/main.py", line 4
+    print(round("area", 4))
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:03:05) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3**0,5(5**2)
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:06:14) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3**0,5(aresta**2)
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:06:51) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3**0,5*aresta**2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3**0,5*aresta**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:07:37) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3**0,5*aresta**2)
+ 
+print(round(area, 4))
+-- EXECUTION TIME:
+0.157994
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1578/1332/main.py", line 2, in <module>
+    area = (3/2)*(3**0,5*aresta**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:08:54) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3**0,5*aresta**2)
+ 
+print(round("area, 4"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3**0,5*aresta**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:09:03) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3**0,5*"aresta"**2)
+ 
+print(round("area, 4"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3**0,5*"aresta"**2)
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:09:13) 
+-- CODE:
+"aresta" = 5
+"area" = (3/2)*(3**0,5*"aresta"**2)
+ 
+print(round("area, 4"))
+-- ERROR:
+File "XXXX", line 1
+    "aresta" = 5
+    ^
+SyntaxError: can't assign to literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:10:45) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3**0,5*aresta**2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3**0,5*aresta**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:11:02) 
+-- CODE:
+aresta = 5
+area = (3/2*3**0,5*aresta**2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(area, 4))
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:11:20) 
+-- CODE:
+aresta = 5
+area = (3/2*3**0,5)*(aresta**2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(area, 4))
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:11:36) 
+-- CODE:
+aresta = 5
+area = (3/2)*3**0,5*aresta**2
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(area, 4))
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:11:46) 
+-- CODE:
+aresta = 5
+area = (3/2)*3**0,5*aresta**2
+ 
+print(round(area,  4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(area,  4))
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:11:55) 
+-- CODE:
+aresta = 5
+area = (3/2)*3**0,5*aresta**2
+ 
+print(round(area, 4)
+-- ERROR:
+File "XXXX", line 5
+    
+                        ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:12:00) 
+-- CODE:
+aresta = 5
+area = (3/2)*3**0,5*aresta**2
+ 
+print(round(area, 4)
+-- EXECUTION TIME:
+0.149401
+-- ERROR:
+  File "/home/codebench/codes/1578/1332/main.py", line 5
+    
+                        ^
+SyntaxError: unexpected EOF while parsing
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:12:02) 
+-- CODE:
+aresta = 5
+area = (3/2)*3**0,5*aresta**2
+ 
+print(round(area, 4)
+-- ERROR:
+File "XXXX", line 5
+    
+                        ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:13:16) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)**0,5*aresta**2
+ 
+print(round(area, 4)
+-- ERROR:
+File "XXXX", line 5
+    
+                        ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:13:20) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)**0,5*aresta**2
+ 
+print(round(area, 4)
+-- EXECUTION TIME:
+0.184244
+-- ERROR:
+  File "/home/codebench/codes/1578/1332/main.py", line 5
+    
+                        ^
+SyntaxError: unexpected EOF while parsing
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:13:23) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)**0,5*aresta**2
+ 
+print(round(area, 4)
+-- ERROR:
+File "XXXX", line 5
+    
+                        ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:13:35) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)**0,5*(aresta**2)
+ 
+print(round(area, 4)
+-- ERROR:
+File "XXXX", line 5
+    
+                        ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:14:01) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)**0,5*(aresta**2)
+ 
+print(round(area, 4)
+-- EXECUTION TIME:
+0.136171
+-- ERROR:
+  File "/home/codebench/codes/1578/1332/main.py", line 5
+    
+                        ^
+SyntaxError: unexpected EOF while parsing
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:14:09) 
+-- CODE:
+aresta = 5
+area = (3/2*(3)**0,5*(aresta**2)
+ 
+print(round(area, 4)
+-- EXECUTION TIME:
+0.16786
+-- ERROR:
+  File "/home/codebench/codes/1578/1332/main.py", line 4
+    print(round(area, 4)
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:14:12) 
+-- CODE:
+aresta = 5
+area = (3/2*(3)**0,5*(aresta**2)
+ 
+print(round(area, 4)
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 4)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:15:07) 
+-- CODE:
+aresta = 5
+area = (3/2*(3)**0,5*(aresta**2)
+ 
+print(round(area, 5)
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 5)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:17:40) 
+-- CODE:
+aresta = 5
+area = (3/2*(3)**0,5*(aresta**2)
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:18:33) 
+-- CODE:
+aresta = 5
+area = (3/2*(3)**0,5*(5**2)
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:25:57) 
+-- CODE:
+aresta = 5
+area = (3/2*(3)**0,5*(5**2)
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:26:01) 
+-- CODE:
+aresta = 5
+area = (3/2*(3)**0,5*(5**2)
+ 
+print(round(area, 4))
+-- EXECUTION TIME:
+0.139156
+-- ERROR:
+  File "/home/codebench/codes/1578/1332/main.py", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:26:04) 
+-- CODE:
+aresta = 5
+area = (3/2*(3)**0,5*(5**2)
+ 
+print(round(area, 4))
+-- EXECUTION TIME:
+0.198456
+-- ERROR:
+  File "/home/codebench/codes/1578/1332/main.py", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:26:08) 
+-- CODE:
+aresta = 5
+area = (3/2*(3)**0,5*(5**2)
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:26:13) 
+-- CODE:
+aresta = 5
+area = (3/2*(3)**0,5*(5**2)
+ 
+print(round(area, 4))
+-- EXECUTION TIME:
+0.12866
+-- ERROR:
+  File "/home/codebench/codes/1578/1332/main.py", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:26:32) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)**0,5*(5**2)
+ 
+print(round(, 4))
+-- EXECUTION TIME:
+0.161466
+-- ERROR:
+  File "/home/codebench/codes/1578/1332/main.py", line 4
+    print(round(, 4))
+                ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:26:52) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)**0,5*(5**2)
+ 
+print(round(3/2)*(3)**0,5*(5**2, 4))
+-- OUTPUT:
+2 (25, 4, 25, 4, 25, 4, 25, 4, 25, 4)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:27:03) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)**0,5*(5**2)
+ 
+print(round(3/2)*(3)**0,5*(5**2, 4))
+-- EXECUTION TIME:
+0.148698
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+2 (25, 4, 25, 4, 25, 4, 25, 4, 25, 4)
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:27:18) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)**0,5*(5**2)
+ 
+print(round3/2)*(3)**0,5*(5**2, 4)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round3/2)*(3)**0,5*(5**2, 4)
+NameError: name 'round3' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:27:35) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)**0,5*(5**2)
+ 
+print(round, 4)
+-- OUTPUT:
+<built-in function round> 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:27:48) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)**0,5*(5**2)
+ 
+print(round(3/2)*(3)**0,5*(5**2, 4)
+-- ERROR:
+File "XXXX", line 5
+    
+                                       ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:28:28) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)**0,5*(5**2)
+ 
+print(round("area", 4)
+-- ERROR:
+File "XXXX", line 5
+    
+                          ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:28:32) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)**0,5*(5**2)
+ 
+print(round("area", 4)
+-- EXECUTION TIME:
+0.133082
+-- ERROR:
+  File "/home/codebench/codes/1578/1332/main.py", line 5
+    
+                          ^
+SyntaxError: unexpected EOF while parsing
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:28:44) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3)**0,5*(5**2)
+ 
+print(round(, 4)
+-- EXECUTION TIME:
+0.138004
+-- ERROR:
+  File "/home/codebench/codes/1578/1332/main.py", line 4
+    print(round(, 4)
+                ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:29:08) 
+-- CODE:
+aresta = 5
+area = aresta*2
+ 
+print(round(, 4)
+-- ERROR:
+File "XXXX", line 4
+    print(round(, 4)
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:29:22) 
+-- CODE:
+aresta = 5
+area = aresta*2
+-- ERROR:
+File "XXXX", line 4
+    print(round(, 4)
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:29:32) 
+-- CODE:
+aresta = 5
+area = 5*2
+-- ERROR:
+File "XXXX", line 4
+    print(round(, 4)
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:33:02) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3**0,5*aresta**2)
+
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3**0,5*aresta**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:35:18) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3**0,5*aresta**2)
+
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3**0,5*aresta**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:35:34) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3**0,5)*(aresta**2)
+
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*(3**0,5)*(aresta**2)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:36:20) 
+-- CODE:
+aresta = 5
+"area" = (3/2)*(3**0,5*aresta**2)
+
+print(round("area", 4))
+-- ERROR:
+File "XXXX", line 2
+    "area" = (3/2)*(3**0,5*aresta**2)
+    ^
+SyntaxError: can't assign to literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-18 19:02:17) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3**0.5*aresta**2)
+
+print(round(area, 4))
+-- OUTPUT:
+64.9519
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-18 19:02:22) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3**0.5*aresta**2)
+
+print(round(area, 4))
+-- EXECUTION TIME:
+0.178419
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+64.9519
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

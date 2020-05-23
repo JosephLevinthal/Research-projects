@@ -1,0 +1,1748 @@
+== SUBMITION (2019-04-28 10:52:00) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+tipo = input("tipo d e instalacao (R, I ou C): ")
+faixa = int(input("faixa de consumo: "))
+
+if (tipo == "R"):
+	if(faixa < 0): 
+	
+	elif(faixa <= 500):
+		preco = faixa * 0.44
+	else: 
+		preco = faixa * 0.65
+		
+elif(tipo == "I"):
+	 if(faixa < 0):
+			
+	elif(faixa <= 1000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60
+		
+elif(tipo == "C"):
+	  if(faixa < 0):
+	
+	
+  	elif(faixa <= 5000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60
+		
+print(preco)
+-- EXECUTION TIME:
+0.231537
+-- ERROR:
+  File "/home/codebench/codes/1671/1101/main.py", line 11
+    elif(faixa <= 500):
+       ^
+IndentationError: expected an indented block
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 13:31:08) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+tipo = input("tipo d e instalacao (R, I ou C): ")
+faixa = int(input("faixa de consumo: "))
+
+print("Entradas: ", faixa, " kWh e tipo ", tipo)
+preco = 0.0
+
+if faixa < 0:
+	print("Dados invalidos")
+
+if (tipo == "R"):
+	if(faixa <= 500):
+		preco = faixa * 0.44
+	else: 
+		preco = faixa * 0.65	
+elif(tipo == "I"):
+	if(faixa <= 1000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60	
+elif(tipo == "C"):
+	if(faixa <= 5000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60
+else:
+	print("Dados invalidos")
+		
+print("Valor total: R$ ", preco)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    faixa = int(input())
+ValueError: invalid literal for int() with base 10: 'I'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 13:32:12) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = int(input("faixa de consumo: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+preco = 0.0
+
+if faixa < 0:
+	print("Dados invalidos")
+
+if (tipo == "R"):
+	if(faixa <= 500):
+		preco = faixa * 0.44
+	else: 
+		preco = faixa * 0.65	
+elif(tipo == "I"):
+	if(faixa <= 1000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60	
+elif(tipo == "C"):
+	if(faixa <= 5000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60
+else:
+	print("Dados invalidos")
+		
+print("Valor total: R$", preco)
+-- OUTPUT:
+Entradas: -56 kWh e tipo I
+Dados invalidos
+Valor total: R$ -30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 13:33:03) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = int(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+preco = 0.0
+
+if faixa < 0:
+	print("Dados invalidos")
+
+if (tipo == "R"):
+	if(faixa <= 500):
+		preco = faixa * 0.44
+	else: 
+		preco = faixa * 0.65	
+elif(tipo == "I"):
+	if(faixa <= 1000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60	
+elif(tipo == "C"):
+	if(faixa <= 5000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60
+else:
+	print("Dados invalidos")
+		
+print("Valor total: R$", preco)
+-- EXECUTION TIME:
+0.264522
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56 kWh e tipo I
+Dados invalidos
+Valor total: R$ -30.800000000000004
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 13:33:38) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = int(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if faixa < 0:
+	print("Dados invalidos")
+
+if (tipo == "R"):
+	if(faixa <= 500):
+		preco = faixa * 0.44
+	else: 
+		preco = faixa * 0.65	
+elif(tipo == "I"):
+	if(faixa <= 1000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60	
+elif(tipo == "C"):
+	if(faixa <= 5000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60
+else:
+	print("Dados invalidos")
+		
+print("Valor total: R$", preco)
+-- OUTPUT:
+Entradas: -56 kWh e tipo I
+Dados invalidos
+Valor total: R$ -30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 13:34:08) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if faixa < 0:
+	print("Dados invalidos")
+
+if (tipo == "R"):
+	if(faixa <= 500):
+		preco = faixa * 0.44
+	else: 
+		preco = faixa * 0.65	
+elif(tipo == "I"):
+	if(faixa <= 1000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60	
+elif(tipo == "C"):
+	if(faixa <= 5000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60
+else:
+	print("Dados invalidos")
+		
+print("Valor total: R$", preco)
+-- EXECUTION TIME:
+0.15152
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+Valor total: R$ -30.800000000000004
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.075
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 13:34:15) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if faixa < 0:
+	print("Dados invalidos")
+
+if (tipo == "R"):
+	if(faixa <= 500):
+		preco = faixa * 0.44
+	else: 
+		preco = faixa * 0.65	
+elif(tipo == "I"):
+	if(faixa <= 1000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60	
+elif(tipo == "C"):
+	if(faixa <= 5000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60
+else:
+	print("Dados invalidos")
+		
+print("Valor total: R$", preco)
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+Valor total: R$ -30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 13:35:28) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if faixa < 0:
+	print("Dados invalidos")
+
+if (tipo == "R"):
+	if(faixa <= 500):
+		preco = faixa * 0.44
+	else: 
+		preco = faixa * 0.65	
+elif(tipo == "I"):
+	if(faixa <= 1000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60	
+elif(tipo == "C"):
+	if(faixa <= 5000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60
+else:
+	print("Dados invalidos")
+		
+print("Valor total: R$", round(preco, 2))
+-- EXECUTION TIME:
+0.150716
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+Valor total: R$ -30.8
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 13:35:33) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if faixa < 0:
+	print("Dados invalidos")
+
+if (tipo == "R"):
+	if(faixa <= 500):
+		preco = faixa * 0.44
+	else: 
+		preco = faixa * 0.65	
+elif(tipo == "I"):
+	if(faixa <= 1000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60	
+elif(tipo == "C"):
+	if(faixa <= 5000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60
+else:
+	print("Dados invalidos")
+		
+print("Valor total: R$", round(preco, 2))
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+Valor total: R$ -30.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 13:36:59) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if faixa < 0:
+	print("Dados invalidos")
+
+if (tipo == "R"):
+	if(faixa <= 500):
+		preco = faixa * 0.44
+	else: 
+		preco = faixa * 0.65	
+elif(tipo == "I"):
+	if(faixa <= 1000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60	
+elif(tipo == "C"):
+	if(faixa <= 5000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60
+else:
+	print("Dados invalidos")
+		
+print("Valor total: R$", round(preco, 2))
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+Valor total: R$ -30.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 13:39:58) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (tipo == "R"):
+	if(faixa <= 500):
+		preco = faixa * 0.44
+	else: 
+		preco = faixa * 0.65	
+elif(tipo == "I"):
+	if(faixa <= 1000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60	
+elif(tipo == "C"):
+	if(faixa <= 5000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60
+
+if faixa > 0 or tipo in ["R", "I", "C"]:
+	print("Valor total: R$", round(preco, 2))
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.185344
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.8
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 13:40:02) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (tipo == "R"):
+	if(faixa <= 500):
+		preco = faixa * 0.44
+	else: 
+		preco = faixa * 0.65	
+elif(tipo == "I"):
+	if(faixa <= 1000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60	
+elif(tipo == "C"):
+	if(faixa <= 5000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60
+
+if faixa > 0 or tipo in ["R", "I", "C"]:
+	print("Valor total: R$", round(preco, 2))
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 13:40:41) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (tipo == "R"):
+	if(faixa <= 500):
+		preco = faixa * 0.44
+	else: 
+		preco = faixa * 0.65	
+elif(tipo == "I"):
+	if(faixa <= 1000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60	
+elif(tipo == "C"):
+	if(faixa <= 5000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60
+
+if faixa > 0 or tipo in ["R", "I", "C"]:
+	print("Valor total: R$", round(preco, 2))
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.137039
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.8
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 13:40:58) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (tipo == "R"):
+	if(faixa <= 500):
+		preco = faixa * 0.44
+	else: 
+		preco = faixa * 0.65	
+elif(tipo == "I"):
+	if(faixa <= 1000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60	
+elif(tipo == "C"):
+	if(faixa <= 5000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60
+
+if faixa > 0 or tipo in ["R", "I", "C"]:
+	print("Valor total: R$", round(preco, 2))
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 15:22:57) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (tipo == "R"):
+	if(faixa <= 500):
+		preco = faixa * 0.44
+	else: 
+		preco = faixa * 0.65	
+elif(tipo == "I"):
+	if(faixa <= 1000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60	
+elif(tipo == "C"):
+	if(faixa <= 5000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60
+
+if faixa > 0 or tipo in ["R", "I", "C"]:
+	print("Valor total: R$", round(preco, 2))
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.159196
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.8
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 15:22:59) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (tipo == "R"):
+	if(faixa <= 500):
+		preco = faixa * 0.44
+	else: 
+		preco = faixa * 0.65	
+elif(tipo == "I"):
+	if(faixa <= 1000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60	
+elif(tipo == "C"):
+	if(faixa <= 5000):
+		preco = faixa * 0.55
+	else:
+		preco = faixa * 0.60
+
+if faixa > 0 or tipo in ["R", "I", "C"]:
+	print("Valor total: R$", round(preco, 2))
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 16:23:53) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (consumo < 0) :
+print("dados invalidos")
+
+elif(faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("valor total: r$",round(preco,2 ))
+elif(faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("valor total: r$",round(preco,2))
+		
+elif(faixa <= 1000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("valor total: r$",round(preco,2))
+elif(faixa > 1000) and (tipo == "I"):
+		preco = faixa * 0.60	
+		print("valor total: r$",round(preco,2))
+		
+elif(faixa <= 5000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("valor total: r$",round(preco,2))
+elif(faixa > 5000) and (tipo == "C"):
+		preco = faixa * 0.60
+		print("valor total: r$",round(preco,2))
+
+if faixa > 0 or tipo in ["R", "I", "C"]:
+	print("Valor total: R$", round(preco, 2))
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.212923
+-- ERROR:
+  File "/home/codebench/codes/1671/1101/main.py", line 12
+    print("dados invalidos")
+        ^
+IndentationError: expected an indented block
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 16:23:55) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (consumo < 0) :
+print("dados invalidos")
+
+elif(faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("valor total: r$",round(preco,2 ))
+elif(faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("valor total: r$",round(preco,2))
+		
+elif(faixa <= 1000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("valor total: r$",round(preco,2))
+elif(faixa > 1000) and (tipo == "I"):
+		preco = faixa * 0.60	
+		print("valor total: r$",round(preco,2))
+		
+elif(faixa <= 5000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("valor total: r$",round(preco,2))
+elif(faixa > 5000) and (tipo == "C"):
+		preco = faixa * 0.60
+		print("valor total: r$",round(preco,2))
+
+if faixa > 0 or tipo in ["R", "I", "C"]:
+	print("Valor total: R$", round(preco, 2))
+else:
+	print("Dados invalidos")
+-- ERROR:
+File "XXXX", line 12
+    print("dados invalidos")
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 16:24:11) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (consumo < 0) :
+
+elif(faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("valor total: r$",round(preco,2 ))
+elif(faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("valor total: r$",round(preco,2))
+		
+elif(faixa <= 1000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("valor total: r$",round(preco,2))
+elif(faixa > 1000) and (tipo == "I"):
+		preco = faixa * 0.60	
+		print("valor total: r$",round(preco,2))
+		
+elif(faixa <= 5000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("valor total: r$",round(preco,2))
+elif(faixa > 5000) and (tipo == "C"):
+		preco = faixa * 0.60
+		print("valor total: r$",round(preco,2))
+
+if faixa > 0 or tipo in ["R", "I", "C"]:
+	print("Valor total: R$", round(preco, 2))
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.147665
+-- ERROR:
+  File "/home/codebench/codes/1671/1101/main.py", line 13
+    elif(faixa <= 500) and (tipo == "R"):
+       ^
+IndentationError: expected an indented block
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 16:24:12) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (consumo < 0) :
+
+elif(faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("valor total: r$",round(preco,2 ))
+elif(faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("valor total: r$",round(preco,2))
+		
+elif(faixa <= 1000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("valor total: r$",round(preco,2))
+elif(faixa > 1000) and (tipo == "I"):
+		preco = faixa * 0.60	
+		print("valor total: r$",round(preco,2))
+		
+elif(faixa <= 5000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("valor total: r$",round(preco,2))
+elif(faixa > 5000) and (tipo == "C"):
+		preco = faixa * 0.60
+		print("valor total: r$",round(preco,2))
+
+if faixa > 0 or tipo in ["R", "I", "C"]:
+	print("Valor total: R$", round(preco, 2))
+else:
+	print("Dados invalidos")
+-- ERROR:
+File "XXXX", line 13
+    elif(faixa <= 500) and (tipo == "R"):
+       ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 16:24:44) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (consumo < 0) :
+
+elif (faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("valor total: r$",round(preco,2 ))
+elif (faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("valor total: r$",round(preco,2))
+		
+elif (faixa <= 1000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("valor total: r$",round(preco,2))
+elif (faixa > 1000) and (tipo == "I"):
+		preco = faixa * 0.60	
+		print("valor total: r$",round(preco,2))
+		
+elif (faixa <= 5000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("valor total: r$",round(preco,2))
+elif (faixa > 5000) and (tipo == "C"):
+		preco = faixa * 0.60
+		print("valor total: r$",round(preco,2))
+
+if faixa > 0 or tipo in ["R", "I", "C"]:
+	print("Valor total: R$", round(preco, 2))
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.160196
+-- ERROR:
+  File "/home/codebench/codes/1671/1101/main.py", line 13
+    elif (faixa <= 500) and (tipo == "R"):
+       ^
+IndentationError: expected an indented block
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 16:24:45) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (consumo < 0) :
+
+elif (faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("valor total: r$",round(preco,2 ))
+elif (faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("valor total: r$",round(preco,2))
+		
+elif (faixa <= 1000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("valor total: r$",round(preco,2))
+elif (faixa > 1000) and (tipo == "I"):
+		preco = faixa * 0.60	
+		print("valor total: r$",round(preco,2))
+		
+elif (faixa <= 5000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("valor total: r$",round(preco,2))
+elif (faixa > 5000) and (tipo == "C"):
+		preco = faixa * 0.60
+		print("valor total: r$",round(preco,2))
+
+if faixa > 0 or tipo in ["R", "I", "C"]:
+	print("Valor total: R$", round(preco, 2))
+else:
+	print("Dados invalidos")
+-- ERROR:
+File "XXXX", line 13
+    elif (faixa <= 500) and (tipo == "R"):
+       ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 16:25:31) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (consumo < 0) :
+print("dados invalidos")
+
+elif(faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("valor total: r$",round(preco,2 ))
+elif(faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("valor total: r$",round(preco,2))
+		
+elif(faixa <= 1000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("valor total: r$",round(preco,2))
+elif(faixa > 1000) and (tipo == "I"):
+		preco = faixa * 0.60	
+		print("valor total: r$",round(preco,2))
+		
+elif(faixa <= 5000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("valor total: r$",round(preco,2))
+elif(faixa > 5000) and (tipo == "C"):
+		preco = faixa * 0.60
+		print("valor total: r$",round(preco,2))
+-- EXECUTION TIME:
+0.142479
+-- ERROR:
+  File "/home/codebench/codes/1671/1101/main.py", line 12
+    print("dados invalidos")
+        ^
+IndentationError: expected an indented block
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 16:25:32) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (consumo < 0) :
+print("dados invalidos")
+
+elif(faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("valor total: r$",round(preco,2 ))
+elif(faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("valor total: r$",round(preco,2))
+		
+elif(faixa <= 1000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("valor total: r$",round(preco,2))
+elif(faixa > 1000) and (tipo == "I"):
+		preco = faixa * 0.60	
+		print("valor total: r$",round(preco,2))
+		
+elif(faixa <= 5000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("valor total: r$",round(preco,2))
+elif(faixa > 5000) and (tipo == "C"):
+		preco = faixa * 0.60
+		print("valor total: r$",round(preco,2))
+-- ERROR:
+File "XXXX", line 12
+    print("dados invalidos")
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 16:26:21) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (consumo < 0) :
+print("Dados invalidos")
+
+elif(faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("Valor total: r$",round(preco,2 ))
+elif(faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 1000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 1000) and (tipo == "I"):
+		preco = faixa * 0.60	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 5000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 5000) and (tipo == "C"):
+		preco = faixa * 0.60
+		print("Valor total: r$",round(preco,2))
+-- EXECUTION TIME:
+0.124053
+-- ERROR:
+  File "/home/codebench/codes/1671/1101/main.py", line 12
+    print("Dados invalidos")
+        ^
+IndentationError: expected an indented block
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 16:26:22) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (consumo < 0) :
+print("Dados invalidos")
+
+elif(faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("Valor total: r$",round(preco,2 ))
+elif(faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 1000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 1000) and (tipo == "I"):
+		preco = faixa * 0.60	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 5000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 5000) and (tipo == "C"):
+		preco = faixa * 0.60
+		print("Valor total: r$",round(preco,2))
+-- ERROR:
+File "XXXX", line 12
+    print("Dados invalidos")
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 16:26:38) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (consumo < 0) :
+   print("Dados invalidos")
+
+elif(faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("Valor total: r$",round(preco,2 ))
+elif(faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 1000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 1000) and (tipo == "I"):
+		preco = faixa * 0.60	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 5000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 5000) and (tipo == "C"):
+		preco = faixa * 0.60
+		print("Valor total: r$",round(preco,2))
+-- EXECUTION TIME:
+0.2147
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1671/1101/main.py", line 11, in <module>
+    if (consumo < 0) :
+NameError: name 'consumo' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 16:26:38) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (consumo < 0) :
+   print("Dados invalidos")
+
+elif(faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("Valor total: r$",round(preco,2 ))
+elif(faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 1000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 1000) and (tipo == "I"):
+		preco = faixa * 0.60	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 5000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 5000) and (tipo == "C"):
+		preco = faixa * 0.60
+		print("Valor total: r$",round(preco,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 11, in <module>
+    if (consumo < 0) :
+NameError: name 'consumo' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 16:27:07) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (faixa < 0) :
+   print("Dados invalidos")
+
+elif(faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("Valor total: r$",round(preco,2 ))
+elif(faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 1000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 1000) and (tipo == "I"):
+		preco = faixa * 0.60	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 5000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 5000) and (tipo == "C"):
+		preco = faixa * 0.60
+		print("Valor total: r$",round(preco,2))
+-- EXECUTION TIME:
+0.131289
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: r$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 16:27:08) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (faixa < 0) :
+   print("Dados invalidos")
+
+elif(faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("Valor total: r$",round(preco,2 ))
+elif(faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 1000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 1000) and (tipo == "I"):
+		preco = faixa * 0.60	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 5000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 5000) and (tipo == "C"):
+		preco = faixa * 0.60
+		print("Valor total: r$",round(preco,2))
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 16:27:23) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (faixa < 0) :
+   print("Dados invalidos")
+
+elif(faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("Valor total: r$",round(preco,2 ))
+elif(faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 1000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 1000) and (tipo == "I"):
+		preco = faixa * 0.60	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 5000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 5000) and (tipo == "C"):
+		preco = faixa * 0.60
+		print("Valor total: r$",round(preco,2))
+-- EXECUTION TIME:
+0.178752
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: r$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 20:14:22) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (faixa < 0) :
+   print("Dados invalidos")
+
+elif(faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("Valor total: r$",round(preco,2 ))
+elif(faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 1000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 1000) and (tipo == "I"):
+		preco = faixa * 0.60	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 5000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 5000) and (tipo == "C"):
+		preco = faixa * 0.60
+		print("Valor total: r$",round(preco,2))
+-- EXECUTION TIME:
+0.197381
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: r$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 20:14:24) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (faixa < 0) :
+   print("Dados invalidos")
+
+elif(faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("Valor total: r$",round(preco,2 ))
+elif(faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 1000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 1000) and (tipo == "I"):
+		preco = faixa * 0.60	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 5000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 5000) and (tipo == "C"):
+		preco = faixa * 0.60
+		print("Valor total: r$",round(preco,2))
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 12:26:17) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (faixa < 0) :
+   print("Dados invalidos")
+
+elif(faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("Valor total: r$",round(preco,2 ))
+elif(faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 1000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 1000) and (tipo == "I"):
+		preco = faixa * 0.60	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 5000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 5000) and (tipo == "C"):
+		preco = faixa * 0.60
+		print("Valor total: r$",round(preco,2))
+-- EXECUTION TIME:
+0.195087
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: r$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 12:49:15) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (faixa < 0) :
+   print("Dados invalidos")
+
+elif(faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("Valor total: r$",round(preco,2 ))
+elif(faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 1000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 1000) and (tipo == "C"):
+		preco = faixa * 0.60	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 5000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 5000) and (tipo == "I"):
+		preco = faixa * 0.60
+		print("Valor total: r$",round(preco,2))
+-- EXECUTION TIME:
+0.187019
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: r$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 12:49:15) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (faixa < 0) :
+   print("Dados invalidos")
+
+elif(faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("Valor total: r$",round(preco,2 ))
+elif(faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 1000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 1000) and (tipo == "C"):
+		preco = faixa * 0.60	
+		print("Valor total: r$",round(preco,2))
+		
+elif(faixa <= 5000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("Valor total: r$",round(preco,2))
+elif(faixa > 5000) and (tipo == "I"):
+		preco = faixa * 0.60
+		print("Valor total: r$",round(preco,2))
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 12:49:56) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+faixa = float(input("consumo em kWh: "))
+tipo = input("tipo de instalacao (R, I ou C): ")
+print("Entradas:", faixa, "kWh e tipo", tipo)
+
+preco = 0.0
+
+if (faixa < 0) :
+   print("Dados invalidos")
+
+elif(faixa <= 500) and (tipo == "R"):
+		preco = faixa * 0.44
+		print("Valor total: R$",round(preco,2 ))
+elif(faixa > 500) and (tipo == "R"):
+		preco = faixa * 0.65	
+		print("Valor total: R$",round(preco,2))
+		
+elif(faixa <= 1000) and (tipo == "C"):
+		preco = faixa * 0.55
+		print("Valor total: R$",round(preco,2))
+elif(faixa > 1000) and (tipo == "C"):
+		preco = faixa * 0.60	
+		print("Valor total: R$",round(preco,2))
+		
+elif(faixa <= 5000) and (tipo == "I"):
+		preco = faixa * 0.55
+		print("Valor total: R$",round(preco,2))
+elif(faixa > 5000) and (tipo == "I"):
+		preco = faixa * 0.60
+		print("Valor total: R$",round(preco,2))
+-- EXECUTION TIME:
+0.21042
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

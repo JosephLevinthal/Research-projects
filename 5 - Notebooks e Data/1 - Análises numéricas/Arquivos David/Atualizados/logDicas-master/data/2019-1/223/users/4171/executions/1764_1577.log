@@ -1,0 +1,488 @@
+== TEST (2019-05-21 02:07:45) 
+-- CODE:
+from numpy import *
+
+a = float(input("a: "))
+v0 = float(input("velocidade inicial"))
+N = int(input("a"))
+
+t = arange(N, 0:N-1)
+
+-- ERROR:
+File "XXXX", line 7
+    t = arange(N, 0:N-1)
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-21 02:07:51) 
+-- CODE:
+from numpy import *
+
+a = float(input("a: "))
+v0 = float(input("velocidade inicial"))
+N = int(input("a"))
+
+t = arange(N, 0::N-1)
+
+-- ERROR:
+File "XXXX", line 7
+    t = arange(N, 0::N-1)
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-21 02:08:21) 
+-- CODE:
+from numpy import *
+
+a = float(input("a: "))
+v0 = float(input("velocidade inicial"))
+N = int(input("a"))
+
+t = arange(N-1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-21 02:08:31) 
+-- CODE:
+from numpy import *
+
+a = float(input("a: "))
+v0 = float(input("velocidade inicial"))
+N = int(input("a"))
+
+t = arange(N-1)
+print(t)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-21 02:08:40) 
+-- CODE:
+from numpy import *
+
+a = float(input("a: "))
+v0 = float(input("velocidade inicial"))
+N = int(input("a"))
+
+t = arange(N-1)
+print(t)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-21 02:11:13) 
+-- CODE:
+from numpy import *
+
+a = float(input("a: "))
+v0 = float(input("velocidade inicial: "))
+N = int(input("N: "))
+
+t = arange(N-1)
+d = zeros(N)
+
+g = ((a * t**2)/2) + v0 * t
+
+print(g)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-21 02:11:20) 
+-- CODE:
+from numpy import *
+
+a = float(input("a: "))
+v0 = float(input("velocidade inicial: "))
+N = int(input("N: "))
+
+t = arange(N)
+d = zeros(N)
+
+g = ((a * t**2)/2) + v0 * t
+
+print(g)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-21 02:11:24) 
+-- CODE:
+from numpy import *
+
+a = float(input("a: "))
+v0 = float(input("velocidade inicial: "))
+N = int(input("N: "))
+
+t = arange(N)
+d = zeros(N)
+
+g = ((a * t**2)/2) + v0 * t
+
+print(g)
+
+-- EXECUTION TIME:
+0.528799
+-- TEST CASE 1:
+---- input:
+1.2
+3.4
+12
+---- correct output:
+[   0.     4.     9.2   15.6   23.2   32.    42.    53.2   65.6   79.2
+   94.   110. ]
+---- user output:
+[  0.    4.    9.2  15.6  23.2  32.   42.   53.2  65.6  79.2  94.  110. ]
+-- TEST CASE 2:
+---- input:
+9.8
+76.5
+43
+---- correct output:
+[     0.      81.4    172.6    273.6    384.4    505.     635.4    775.6
+    925.6   1085.4   1255.    1434.4   1623.6   1822.6   2031.4   2250.
+   2478.4   2716.6   2964.6   3222.4   3490.    3767.4   4054.6   4351.6
+   4658.4   4975.    5301.4   5637.6   5983.6   6339.4   6705.    7080.4
+   7465.6   7860.6   8265.4   8680.    9104.4   9538.6   9982.6  10436.4
+  10900.   11373.4  11856.6]
+---- user output:
+[    0.     81.4   172.6   273.6   384.4   505.    635.4   775.6   925.6
+  1085.4  1255.   1434.4  1623.6  1822.6  2031.4  2250.   2478.4  2716.6
+  2964.6  3222.4  3490.   3767.4  4054.6  4351.6  4658.4  4975.   5301.4
+  5637.6  5983.6  6339.4  6705.   7080.4  7465.6  7860.6  8265.4  8680.
+  9104.4  9538.6  9982.6 10436.4 10900.  11373.4 11856.6]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-21 21:37:08) 
+-- CODE:
+from numpy import *
+
+a = float(input("a: "))
+v0 = float(input("velocidade inicial: "))
+N = int(input("N: "))
+
+t = arange(N)
+print(t)
+d = zeros(N)
+
+g = ((a * t**2)/2) + v0 * t
+
+print(g)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-21 21:37:33) 
+-- CODE:
+from numpy import *
+
+a = float(input("a: "))
+v0 = float(input("velocidade inicial: "))
+N = int(input("N: "))
+
+t = arange(N, 1)
+print(t)
+d = zeros(N)
+
+g = ((a * t**2)/2) + v0 * t
+
+print(g)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-21 21:37:38) 
+-- CODE:
+from numpy import *
+
+a = float(input("a: "))
+v0 = float(input("velocidade inicial: "))
+N = int(input("N: "))
+
+t = arange(N, 1)
+print(t)
+d = zeros(N)
+
+g = ((a * t**2)/2) + v0 * t
+
+print(g)
+
+-- EXECUTION TIME:
+0.552163
+-- TEST CASE 1:
+---- input:
+1.2
+3.4
+12
+---- correct output:
+[   0.     4.     9.2   15.6   23.2   32.    42.    53.2   65.6   79.2
+   94.   110. ]
+---- user output:
+[]
+[]
+-- TEST CASE 2:
+---- input:
+9.8
+76.5
+43
+---- correct output:
+[     0.      81.4    172.6    273.6    384.4    505.     635.4    775.6
+    925.6   1085.4   1255.    1434.4   1623.6   1822.6   2031.4   2250.
+   2478.4   2716.6   2964.6   3222.4   3490.    3767.4   4054.6   4351.6
+   4658.4   4975.    5301.4   5637.6   5983.6   6339.4   6705.    7080.4
+   7465.6   7860.6   8265.4   8680.    9104.4   9538.6   9982.6  10436.4
+  10900.   11373.4  11856.6]
+---- user output:
+[]
+[]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-21 21:37:39) 
+-- CODE:
+from numpy import *
+
+a = float(input("a: "))
+v0 = float(input("velocidade inicial: "))
+N = int(input("N: "))
+
+t = arange(N, 1)
+print(t)
+d = zeros(N)
+
+g = ((a * t**2)/2) + v0 * t
+
+print(g)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-21 21:37:42) 
+-- CODE:
+from numpy import *
+
+a = float(input("a: "))
+v0 = float(input("velocidade inicial: "))
+N = int(input("N: "))
+
+t = arange(N, 1)
+print(t)
+d = zeros(N)
+
+g = ((a * t**2)/2) + v0 * t
+
+print(g)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-21 21:37:46) 
+-- CODE:
+from numpy import *
+
+a = float(input("a: "))
+v0 = float(input("velocidade inicial: "))
+N = int(input("N: "))
+
+t = arange(N, 1)
+print(t)
+d = zeros(N)
+
+g = ((a * t**2)/2) + v0 * t
+
+print(g)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-21 21:37:55) 
+-- CODE:
+from numpy import *
+
+a = float(input("a: "))
+v0 = float(input("velocidade inicial: "))
+N = int(input("N: "))
+
+t = arange(N, 4)
+print(t)
+d = zeros(N)
+
+g = ((a * t**2)/2) + v0 * t
+
+print(g)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-21 21:38:02) 
+-- CODE:
+from numpy import *
+
+a = float(input("a: "))
+v0 = float(input("velocidade inicial: "))
+N = int(input("N: "))
+
+t = arange(N)
+print(t)
+d = zeros(N)
+
+g = ((a * t**2)/2) + v0 * t
+
+print(g)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-21 21:38:10) 
+-- CODE:
+from numpy import *
+
+a = float(input("a: "))
+v0 = float(input("velocidade inicial: "))
+N = int(input("N: "))
+
+t = arange(N)
+d = zeros(N)
+
+g = ((a * t**2)/2) + v0 * t
+
+print(g)
+
+-- EXECUTION TIME:
+0.369919
+-- TEST CASE 1:
+---- input:
+1.2
+3.4
+12
+---- correct output:
+[   0.     4.     9.2   15.6   23.2   32.    42.    53.2   65.6   79.2
+   94.   110. ]
+---- user output:
+[  0.    4.    9.2  15.6  23.2  32.   42.   53.2  65.6  79.2  94.  110. ]
+-- TEST CASE 2:
+---- input:
+9.8
+76.5
+43
+---- correct output:
+[     0.      81.4    172.6    273.6    384.4    505.     635.4    775.6
+    925.6   1085.4   1255.    1434.4   1623.6   1822.6   2031.4   2250.
+   2478.4   2716.6   2964.6   3222.4   3490.    3767.4   4054.6   4351.6
+   4658.4   4975.    5301.4   5637.6   5983.6   6339.4   6705.    7080.4
+   7465.6   7860.6   8265.4   8680.    9104.4   9538.6   9982.6  10436.4
+  10900.   11373.4  11856.6]
+---- user output:
+[    0.     81.4   172.6   273.6   384.4   505.    635.4   775.6   925.6
+  1085.4  1255.   1434.4  1623.6  1822.6  2031.4  2250.   2478.4  2716.6
+  2964.6  3222.4  3490.   3767.4  4054.6  4351.6  4658.4  4975.   5301.4
+  5637.6  5983.6  6339.4  6705.   7080.4  7465.6  7860.6  8265.4  8680.
+  9104.4  9538.6  9982.6 10436.4 10900.  11373.4 11856.6]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-21 21:55:52) 
+-- CODE:
+from numpy import *
+
+a = float(input("a: "))
+v0 = float(input("velocidade inicial: "))
+N = int(input("N: "))
+
+t = arange(N)
+
+
+g = ((a * t**2)/2) + v0 * t
+
+print(g)
+
+-- EXECUTION TIME:
+0.487654
+-- TEST CASE 1:
+---- input:
+1.2
+3.4
+12
+---- correct output:
+[   0.     4.     9.2   15.6   23.2   32.    42.    53.2   65.6   79.2
+   94.   110. ]
+---- user output:
+[  0.    4.    9.2  15.6  23.2  32.   42.   53.2  65.6  79.2  94.  110. ]
+-- TEST CASE 2:
+---- input:
+9.8
+76.5
+43
+---- correct output:
+[     0.      81.4    172.6    273.6    384.4    505.     635.4    775.6
+    925.6   1085.4   1255.    1434.4   1623.6   1822.6   2031.4   2250.
+   2478.4   2716.6   2964.6   3222.4   3490.    3767.4   4054.6   4351.6
+   4658.4   4975.    5301.4   5637.6   5983.6   6339.4   6705.    7080.4
+   7465.6   7860.6   8265.4   8680.    9104.4   9538.6   9982.6  10436.4
+  10900.   11373.4  11856.6]
+---- user output:
+[    0.     81.4   172.6   273.6   384.4   505.    635.4   775.6   925.6
+  1085.4  1255.   1434.4  1623.6  1822.6  2031.4  2250.   2478.4  2716.6
+  2964.6  3222.4  3490.   3767.4  4054.6  4351.6  4658.4  4975.   5301.4
+  5637.6  5983.6  6339.4  6705.   7080.4  7465.6  7860.6  8265.4  8680.
+  9104.4  9538.6  9982.6 10436.4 10900.  11373.4 11856.6]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 16:15:10) 
+-- CODE:
+from numpy import *
+
+a = float(input("a: "))
+v0 = float(input("velocidade inicial: "))
+N = int(input("N: "))
+
+t = arange(N)
+
+
+g = ((a * t**2)/2) + v0 * t
+
+print(g)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

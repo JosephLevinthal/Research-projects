@@ -1,0 +1,5 @@
+a = int(input("Digite qualquer numero inteiro "))
+b = int(input("Digite qualquer numero inteiro "))
+c = int(input("Digite qualquer numero inteiro "))
+d = max(a, b, c)
+print(d)

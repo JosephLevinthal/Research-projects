@@ -1,0 +1,6 @@
+varA= int(input("quantos vale x:"))
+varB= int(input("quatos vale y:"))
+print(varA)
+print(varB)
+print(varA//varB)
+print(varA%varB)

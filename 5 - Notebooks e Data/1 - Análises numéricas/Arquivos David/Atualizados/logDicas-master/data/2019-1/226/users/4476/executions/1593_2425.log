@@ -1,0 +1,216 @@
+== TEST (2019-04-01 18:36:58) 
+-- CODE:
+d = float(input("digite a distancia: "))
+cg = float(input("digite o combustivel gasto: "))
+print(round(d / cg), 3km/l)
+-- ERROR:
+File "XXXX", line 3
+    print(round(d / cg), 3km/l)
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:37:09) 
+-- CODE:
+d = float(input("digite a distancia: "))
+cg = float(input("digite o combustivel gasto: "))
+print(round(d / cg), 3, km/l)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print(round(d / cg), 3, km/l)
+NameError: name 'km' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:51:18) 
+-- CODE:
+d = float(input("digite a distancia: "))
+cg = float(input("digite o combustivel gasto: "))
+print(round(d / cg), 3 format(km/l))
+-- ERROR:
+File "XXXX", line 3
+    print(round(d / cg), 3 format(km/l))
+                                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:51:28) 
+-- CODE:
+d = float(input("digite a distancia: "))
+cg = float(input("digite o combustivel gasto: "))
+print(round(d / cg), 3, format(km/l))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print(round(d / cg), 3, format(km/l))
+NameError: name 'km' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:52:59) 
+-- CODE:
+d = float(input("digite a distancia: "))
+cg = float(input("digite o combustivel gasto: "))
+print(round(d / cg), 3{}.format(km/l))
+-- ERROR:
+File "XXXX", line 3
+    print(round(d / cg), 3{}.format(km/l))
+                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:05:11) 
+-- CODE:
+d = float(input("digite a distancia: "))
+cg = float(input("digite o combustivel gasto: "))
+cm = (d/cg)
+print(round(cm, 3.format(km/l)))
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm, 3.format(km/l)))
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:16:02) 
+-- CODE:
+d = float(input("digite a distancia: "))
+cg = float(input("digite o combustivel gasto: "))
+cm = (d/cg)
+print(round(cm, 3 "km/l"))
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm, 3 "km/l"))
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:16:15) 
+-- CODE:
+d = float(input("digite a distancia: "))
+cg = float(input("digite o combustivel gasto: "))
+cm = (d/cg)
+print(round(cm, 3, "km/l"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(cm, 3, "km/l"))
+TypeError: round() takes at most 2 arguments (3 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:17:21) 
+-- CODE:
+d = float(input("digite a distancia: "))
+cg = float(input("digite o combustivel gasto: "))
+cm = (d/cg)
+print(round(cm, 3)("km/l"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(cm, 3)("km/l"))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:18:00) 
+-- CODE:
+d = float(input("digite a distancia: "))
+cg = float(input("digite o combustivel gasto: "))
+cm = (d/cg)
+print(round(cm, 3)("km/l"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(cm, 3)("km/l"))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:19:09) 
+-- CODE:
+d = float(input("digite a distancia: "))
+cg = float(input("digite o combustivel gasto: "))
+cm = (d/cg)
+print(round(cm, 3)"km/l")
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm, 3)"km/l")
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:20:11) 
+-- CODE:
+d = float(input("digite a distancia: "))
+cg = float(input("digite o combustivel gasto: "))
+cm = (d/cg)
+print(round(cm, 3) + "km/l")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(cm, 3) + "km/l")
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:23:21) 
+-- CODE:
+d = float(input("digite a distancia: "))
+cg = float(input("digite o combustivel gasto: "))
+cm = (d/cg)
+print(round(cm, 3) "km/l")
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm, 3) "km/l")
+                            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:24:37) 
+-- CODE:
+d = float(input("digite a distancia: "))
+cg = float(input("digite o combustivel gasto: "))
+cm = (d/cg)
+print(round(cm, 3))
+-- OUTPUT:
+14.286
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:28:58) 
+-- CODE:
+d = float(input("digite a distancia: "))
+cg = float(input("digite o combustivel gasto: "))
+cm = (d/cg)
+print(round(cm, 3){}.format(km/l))
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm, 3){}.format(km/l))
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:38:23) 
+-- CODE:
+d = float(input("digite a distancia: "))
+cg = float(input("digite o combustivel gasto: "))
+cm = (d/cg)
+print(round(cm, 3), "km/l")
+-- OUTPUT:
+14.286 km/l
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 19:38:53) 
+-- CODE:
+d = float(input("digite a distancia: "))
+cg = float(input("digite o combustivel gasto: "))
+cm = (d/cg)
+print(round(cm, 3), "km/l")
+-- EXECUTION TIME:
+0.156218
+-- TEST CASE 1:
+---- input:
+28.572
+2
+---- correct output:
+14.286 km/l
+---- user output:
+14.286 km/l
+-- TEST CASE 2:
+---- input:
+2254
+124.4
+---- correct output:
+18.119 km/l
+---- user output:
+18.119 km/l
+-- TEST CASE 3:
+---- input:
+4554
+464.6
+---- correct output:
+9.802 km/l
+---- user output:
+9.802 km/l
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

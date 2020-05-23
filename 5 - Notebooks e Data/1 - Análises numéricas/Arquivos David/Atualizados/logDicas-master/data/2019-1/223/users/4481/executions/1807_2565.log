@@ -1,0 +1,551 @@
+== TEST (2019-06-11 16:14:01) 
+-- CODE:
+from numpy import* 
+
+a=array(eval(input('medias finais de cada aluno: ')))
+b=array(eval(input('presencas dos alunos em uma diciplina: ')))
+c=int(input('carga horaria da diciplina: '))
+d=zeros(3, dtype=int)
+for i in range(size(a)):
+	if(a[i]>=5 and b[i]<0.75):
+		d[0]=d[0]+1
+	elif(a[i]>=5 and b[i]>0.75):
+		d[1]=d[1]+1
+	else:
+		d[2]=d[2]+1
+print(d)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import* 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:15:56) 
+-- CODE:
+from numpy import* 
+
+a=array(eval(input('medias finais de cada aluno: ')))
+b=array(eval(input('presencas dos alunos em uma diciplina: ')))
+c=int(input('carga horaria da diciplina: '))
+d=zeros(3, dtype=int)
+for i in range(size(a)):
+	if(a[i]>=5 and b[i]>=0.75*c):
+		d[0]=d[0]+1
+	elif(a[i]>=5 and b[i]<0.75*c):
+		d[1]=d[1]+1
+	else:
+		d[2]=d[2]+1
+print(d)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import* 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 16:18:23) 
+-- CODE:
+from numpy import* 
+
+a=array(eval(input('medias finais de cada aluno: ')))
+b=array(eval(input('presencas dos alunos em uma diciplina: ')))
+c=int(input('carga horaria da diciplina: '))
+d=zeros(3, dtype=int)
+for i in range(size(a)):
+	if(a[i]>=5 and b[i]>=0.75*c):
+		d[0]=d[0]+1
+	elif(a[i]>=5 and b[i]<=0.75*c):
+		d[1]=d[1]+1
+	else:
+		d[2]=d[2]+1
+print(d)
+-- EXECUTION TIME:
+1.20349
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+[2 3 0]
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+[5 2 0]
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+[5 4 1]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:19:17) 
+-- CODE:
+from numpy import* 
+
+a=array(eval(input('medias finais de cada aluno: ')))
+b=array(eval(input('presencas dos alunos em uma diciplina: ')))
+c=int(input('carga horaria da diciplina: '))
+d=zeros(3, dtype=int)
+for i in range(size(a)):
+	if(a[i]>=5 and b[i]>=0.75*c):
+		d[0]=d[0]+1
+	elif(a[i]<=5 and b[i]<0.75*c):
+		d[1]=d[1]+1
+	else:
+		d[2]=d[2]+1
+print(d)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import* 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 16:19:50) 
+-- CODE:
+from numpy import* 
+
+a=array(eval(input('medias finais de cada aluno: ')))
+b=array(eval(input('presencas dos alunos em uma diciplina: ')))
+c=int(input('carga horaria da diciplina: '))
+d=zeros(3, dtype=int)
+for i in range(size(a)):
+	if(a[i]>=5 and b[i]>=0.75*c):
+		d[0]=d[0]+1
+	elif(a[i]<=5 and b[i]<0.75*c):
+		d[1]=d[1]+1
+	else:
+		d[2]=d[2]+1
+print(d)
+-- EXECUTION TIME:
+1.20604
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+[2 0 3]
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+[5 0 2]
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+[5 0 5]
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:20:08) 
+-- CODE:
+from numpy import* 
+
+a=array(eval(input('medias finais de cada aluno: ')))
+b=array(eval(input('presencas dos alunos em uma diciplina: ')))
+c=int(input('carga horaria da diciplina: '))
+d=zeros(3, dtype=int)
+for i in range(size(a)):
+	if(a[i]>=5 and b[i]>=0.75*c):
+		d[0]=d[0]+1
+	elif(a[i]<5 and b[i]<0.75*c):
+		d[1]=d[1]+1
+	else:
+		d[2]=d[2]+1
+print(d)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import* 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 16:20:37) 
+-- CODE:
+from numpy import* 
+
+a=array(eval(input('medias finais de cada aluno: ')))
+b=array(eval(input('presencas dos alunos em uma diciplina: ')))
+c=int(input('carga horaria da diciplina: '))
+d=zeros(3, dtype=int)
+for i in range(size(a)):
+	if(a[i]>=5 and b[i]>=0.75*c):
+		d[0]=d[0]+1
+	elif(a[i]<5 and b[i]<0.75*c):
+		d[1]=d[1]+1
+	else:
+		d[2]=d[2]+1
+print(d)
+-- EXECUTION TIME:
+1.02462
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+[2 0 3]
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+[5 0 2]
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+[5 0 5]
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 16:21:10) 
+-- CODE:
+from numpy import* 
+
+a=array(eval(input('medias finais de cada aluno: ')))
+b=array(eval(input('presencas dos alunos em uma diciplina: ')))
+c=int(input('carga horaria da diciplina: '))
+d=zeros(3, dtype=int)
+for i in range(size(a)):
+	if(a[i]>=5 and b[i]>=0.75*c):
+		d[0]=d[0]+1
+	elif(a[i]<5 and b[i]>=0.75*c):
+		d[1]=d[1]+1
+	else:
+		d[2]=d[2]+1
+print(d)
+-- EXECUTION TIME:
+1.13954
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+[2 0 3]
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+[5 0 2]
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+[5 1 4]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 09:55:04) 
+-- CODE:
+from numpy import*
+
+a=array(eval(input('medias finais: ')))
+b=array(eval(input('presenca dos alunos na diciplina: ')))
+c=int(input('carga horaria da diciplina: '))
+d=zeros(3, dtype=int)
+for i in range(size(a)):
+	if(a[i]>=5 and b[i]*0.75):
+		d[0]=d[0]+1
+	if(a[i]< and b[i]*0.75):
+		d[1]=d[1]+1
+	else:
+		d[2]=d[2]+1
+print(d)
+	
+	
+	
+-- ERROR:
+File "XXXX", line 10
+    if(a[i]< and b[i]*0.75):
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 09:55:25) 
+-- CODE:
+from numpy import*
+
+a=array(eval(input('medias finais: ')))
+b=array(eval(input('presenca dos alunos na diciplina: ')))
+c=int(input('carga horaria da diciplina: '))
+d=zeros(3, dtype=int)
+for i in range(size(a)):
+	if(a[i]>=5 and b[i]*0.75):
+		d[0]=d[0]+1
+	if(a[i]<5 and b[i]*0.75):
+		d[1]=d[1]+1
+	else:
+		d[2]=d[2]+1
+print(d)
+	
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 09:57:45) 
+-- CODE:
+from numpy import*
+
+a=array(eval(input('medias finais: ')))
+b=array(eval(input('presenca dos alunos na diciplina: ')))
+c=int(input('carga horaria da diciplina: '))
+d=zeros(3, dtype=int)
+for i in range(size(a)):
+	if(a[i]>=5 and b[i]>=0.75*c):
+		d[0]=d[0]+1
+	if(a[i]<5 and b[i]>=0.75*c):
+		d[1]=d[1]+1
+	else:
+		d[2]=d[2]+1
+print(d)
+	
+	
+	
+-- EXECUTION TIME:
+0.950192
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+[2 0 5]
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+[5 0 7]
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+[5 1 9]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 15:54:59) 
+-- CODE:
+from numpy import*
+
+a=array(eval(input('medias finais: ')))
+b=array(eval(input('presenca dos alunos na diciplina: ')))
+c=int(input('carga horaria da diciplina: '))
+d=zeros(3, dtype=int)
+for i in range(size(a)):
+	if(a[i]>=5 and b[i]>=0.75*c):
+		d[0]=d[0]+1
+	if(a[i]<5 and b[i]>=0.75*c):
+		d[1]=d[1]+1
+	else:
+		d[2]=d[2]+1
+print(d)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 15:55:06) 
+-- CODE:
+from numpy import*
+
+a=array(eval(input('medias finais: ')))
+b=array(eval(input('presenca dos alunos na diciplina: ')))
+c=int(input('carga horaria da diciplina: '))
+d=zeros(3, dtype=int)
+for i in range(size(a)):
+	if(a[i]>=5 and b[i]>=0.75*c):
+		d[0]=d[0]+1
+	if(a[i]<5 and b[i]>=0.75*c):
+		d[1]=d[1]+1
+	else:
+		d[2]=d[2]+1
+print(d)
+	
+-- EXECUTION TIME:
+1.02217
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+[2 0 5]
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+[5 0 7]
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+[5 1 9]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 15:55:31) 
+-- CODE:
+from numpy import*
+
+a=array(eval(input('medias finais: ')))
+b=array(eval(input('presenca dos alunos na diciplina: ')))
+c=int(input('carga horaria da diciplina: '))
+d=zeros(3, dtype=int)
+for i in range(size(a)):
+	if(a[i]>=5 and b[i]>=0.75*c):
+		d[0]=d[0]+1
+	if(a[i]<5 and b[i]>=0.75*c):
+		d[1]=d[1]+1
+	else:
+		d[2]=d[2]+1
+print(d)
+	
+-- EXECUTION TIME:
+0.836493
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+[2 0 5]
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+[5 0 7]
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+[5 1 9]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 15:55:45) 
+-- CODE:
+from numpy import*
+
+a=array(eval(input('medias finais: ')))
+b=array(eval(input('presenca dos alunos na diciplina: ')))
+c=int(input('carga horaria da diciplina: '))
+d=zeros(3, dtype=int)
+for i in range(size(a)):
+	if(a[i]>=5 and b[i]>=0.75*c):
+		d[0]=d[0]+1
+	elif(a[i]<5 and b[i]>=0.75*c):
+		d[1]=d[1]+1
+	else:
+		d[2]=d[2]+1
+print(d)
+	
+-- EXECUTION TIME:
+0.965441
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+[2 0 3]
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+[5 0 2]
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+[5 1 4]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

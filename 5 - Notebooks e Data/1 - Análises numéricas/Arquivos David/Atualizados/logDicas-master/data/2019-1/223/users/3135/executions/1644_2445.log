@@ -1,0 +1,208 @@
+== TEST (2019-04-13 10:01:18) 
+-- CODE:
+E=float(input("Escala da temperatura:(F/C)"))
+T=float(input("Valor da temperatura:"))
+
+if (E ==  C)
+	t= 5/9*(T-32)	
+else:
+	t= T*(9/5)+32
+-- ERROR:
+File "XXXX", line 4
+    if (E ==  C)
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 10:01:57) 
+-- CODE:
+E=float(input("Escala da temperatura:(F/C)"))
+T=float(input("Valor da temperatura:"))
+
+if (E ==  "C"):
+	t= 5/9*(T-32)	
+else:
+	t= T*(9/5)+32
+
+print(round(t,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    E=float(input())
+ValueError: could not convert string to float: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 10:02:33) 
+-- CODE:
+E=input("Escala da temperatura:(F/C)")
+T=float(input("Valor da temperatura:"))
+
+if (E ==  "C"):
+	t= 5/9*(T-32)	
+else:
+	t= T*(9/5)+32
+
+print(round(t,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 10:14:26) 
+-- CODE:
+E=input("Escala da temperatura:(F/C)")
+T=float(input("Valor da temperatura:"))
+
+if (E ==  "C"):
+	t= 5/9*(T-32)	
+else:
+	t= T*9/5+32
+
+print(round(t,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-13 10:14:35) 
+-- CODE:
+E=input("Escala da temperatura:(F/C)")
+T=float(input("Valor da temperatura:"))
+
+if (E ==  "C"):
+	t= 5/9*(T-32)	
+else:
+	t= T*9/5+32
+
+print(round(t,2))
+-- EXECUTION TIME:
+0.238127
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+608.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 11:26:30) 
+-- CODE:
+E=input("Escala da temperatura:(F/C)")
+T=float(input("Valor da temperatura:"))
+
+if (E.upper() ==  "C"):
+	t= 5/9*(T-32)	
+else:
+	t= T*9/5+32
+
+print(round(t,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-13 11:26:53) 
+-- CODE:
+E=input("Escala da temperatura:(F/C)")
+T=float(input("Valor da temperatura:"))
+
+if (E.upper() ==  "C"):
+	t= 5/9*(T-32)	
+else:
+	t= T*9/5+32
+
+print(round(t,2))
+-- EXECUTION TIME:
+0.172635
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+608.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 11:30:28) 
+-- CODE:
+E=input("Escala da temperatura:(F/C)")
+T=float(input("Valor da temperatura:"))
+
+if (E.upper() ==  "F"):
+	t= 5/9*(T-32)	
+else:
+	t= (T*9/5)+32
+
+print(round(t,2))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-13 11:30:43) 
+-- CODE:
+E=input("Escala da temperatura:(F/C)")
+T=float(input("Valor da temperatura:"))
+
+if (E.upper() ==  "F"):
+	t= 5/9*(T-32)	
+else:
+	t= (T*9/5)+32
+
+print(round(t,2))
+-- EXECUTION TIME:
+0.183643
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,120 @@
+== TEST (2019-04-04 22:43:08) 
+-- CODE:
+H = float(input("Altura: "))
+S = input("Gen sexual (M/F)? ")
+
+homens = (72.7 * H) - 58
+mulheres = (62,1 * H) - 44,7
+
+if(S == M):
+	msg = mulheres
+else:
+	msg = homens
+print(round(msg, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    mulheres = (62,1 * H) - 44,7
+TypeError: unsupported operand type(s) for -: 'tuple' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 22:43:27) 
+-- CODE:
+H = float(input("Altura: "))
+S = input("Gen sexual (M/F)? ")
+
+homens = (72.7 * H) - 58
+mulheres = (62.1 * H) - 44.7
+
+if(S == M):
+	msg = mulheres
+else:
+	msg = homens
+print(round(msg, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    if(S == M):
+NameError: name 'M' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 22:43:49) 
+-- CODE:
+H = float(input("Altura: "))
+S = input("Gen sexual (M/F)? ")
+
+homens = (72.7 * H) - 58
+mulheres = (62.1 * H) - 44.7
+
+if(S == "M"):
+	msg = mulheres
+else:
+	msg = homens
+print(round(msg, 2))
+-- OUTPUT:
+14.7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 22:47:17) 
+-- CODE:
+H = float(input("Altura: "))
+S = input("Gen sexual (M/F)? ")
+
+homens = (72.7 * H) - 58
+mulheres = (62.1 * H) - 44.7
+
+if(S.upper() == "M"):
+	msg = mulheres
+else:
+	msg = homens
+print(round(msg, 2))
+-- OUTPUT:
+14.7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 22:48:50) 
+-- CODE:
+H = float(input("Altura: "))
+S = input("Gen sexual (M/F)? ")
+
+homens = (72.7 * H) - 58
+mulheres = (62.1 * H) - 44.7
+
+if(S.upper() == "M"):
+	msg = homens
+else:
+	msg = mulheres
+print(round(msg, 2))
+-- OUTPUT:
+17.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-04 22:49:01) 
+-- CODE:
+H = float(input("Altura: "))
+S = input("Gen sexual (M/F)? ")
+
+homens = (72.7 * H) - 58
+mulheres = (62.1 * H) - 44.7
+
+if(S.upper() == "M"):
+	msg = homens
+else:
+	msg = mulheres
+print(round(msg, 2))
+-- EXECUTION TIME:
+0.175862
+-- TEST CASE 1:
+---- input:
+1.0
+F
+---- correct output:
+17.4
+---- user output:
+17.4
+-- TEST CASE 2:
+---- input:
+1.234
+M
+---- correct output:
+31.71
+---- user output:
+31.71
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

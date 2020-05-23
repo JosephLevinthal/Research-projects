@@ -1,0 +1,53 @@
+== SUBMITION (2019-05-15 21:59:23) 
+-- CODE:
+t = int(input("tambaqui: "))
+p1 = float(input("percentual: "))/100
+t1 = int(input("quantidade retirada: "))
+anos = 0
+while(t>0)and(t<12000):
+	t = t + p1*t - t1
+	anos = anos + 1
+if(t<=0):
+	print("EXTINCAO")
+	print(anos)
+elif(t >=12000):
+	print("LIMITE")
+	print(anos)
+-- EXECUTION TIME:
+0.172381
+-- TEST CASE 1:
+---- input:
+1234
+6
+135
+---- correct output:
+EXTINCAO
+14
+---- user output:
+EXTINCAO
+14
+-- TEST CASE 2:
+---- input:
+579
+37
+26
+---- correct output:
+LIMITE
+11
+---- user output:
+LIMITE
+11
+-- TEST CASE 3:
+---- input:
+6789
+45
+2345
+---- correct output:
+LIMITE
+4
+---- user output:
+LIMITE
+4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,47 @@
+== SUBMITION (2019-06-26 12:56:17) 
+-- CODE:
+from numpy import*
+m=array(eval(input()))
+for j in range(4):
+	v=zeros(4)
+	k=0
+	for i in range(4):
+		v[k]=m[i,j]
+		k=k+1
+	v=sorted(v, reverse=True)
+	k=0
+	for i in range(4):
+		m[i,j]= v[k]
+		k=k+1
+print(m)
+-- EXECUTION TIME:
+1.09828
+-- TEST CASE 1:
+---- input:
+[[1,1,1,1],[2,2,2,2],[3,3,3,3],[4,4,4,4]]
+---- correct output:
+[[4 4 4 4]
+[3 3 3 3]
+[2 2 2 2]
+[1 1 1 1]]
+---- user output:
+[[4 4 4 4]
+ [3 3 3 3]
+ [2 2 2 2]
+ [1 1 1 1]]
+-- TEST CASE 2:
+---- input:
+[[4,1,1,3],[3,2,2,3],[2,3,3,3],[1,4,4,3]]
+---- correct output:
+[[4 4 4 3]
+[3 3 3 3]
+[2 2 2 3]
+[1 1 1 3]]
+---- user output:
+[[4 4 4 3]
+ [3 3 3 3]
+ [2 2 2 3]
+ [1 1 1 3]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

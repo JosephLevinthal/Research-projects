@@ -1,0 +1,1303 @@
+== TEST (2019-05-29 18:25:50) 
+-- CODE:
+s=input("digite m string: ")
+i=0
+while i!=len(s):
+	if s[i]!=("A","E","I","O","U"):
+		s[i]="p"
+	print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    s[i]="p"
+TypeError: 'str' object does not support item assignment
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:26:26) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	if s[i]!=("a","e","i","o","u"):
+		s[i]="p"
+	print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    s[i]="p"
+TypeError: 'str' object does not support item assignment
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:26:33) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	if s[i]!=("a","e","i","o","u"):
+		s[i]="p"
+	print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    s[i]="p"
+TypeError: 'str' object does not support item assignment
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:27:12) 
+-- CODE:
+s=input("digite m string: ").lower()
+print(s[0])
+
+-- OUTPUT:
+t
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:28:23) 
+-- CODE:
+s=input("digite m string: ").lower()
+a=""
+i=0
+while i!=len(s):
+	if s[i]!=("a","e","i","o","u"):
+		a=s.replace(s[i],"p")
+	i=i+1
+	print(s)
+-- OUTPUT:
+teste
+teste
+teste
+teste
+teste
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:28:42) 
+-- CODE:
+s=input("digite m string: ").lower()
+a=""
+i=0
+while i!=len(s):
+	if s[i]!=("a","e","i","o","u"):
+		a=s.replace(s[i],"p")+s
+	i=i+1
+	print(s)
+-- OUTPUT:
+teste
+teste
+teste
+teste
+teste
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:38:48) 
+-- CODE:
+s=input("digite m string: ").lower()
+a=""
+i=0
+while i!=len(s):
+	if s[i]!=("a","e","i","o","u"):
+		a=s.replace(s[i],"p")+s
+	i=i+1
+	print(a)
+-- OUTPUT:
+pespeteste
+tpstpteste
+tepteteste
+pespeteste
+tpstpteste
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:39:15) 
+-- CODE:
+s=input("digite m string: ").lower()
+a=""
+i=0
+while i!=len(s):
+	if s[i]!=("a","e","i","o","u"):
+		a=s.replace(s[i],"p")+a
+	i=i+1
+	print(a)
+-- OUTPUT:
+pespe
+tpstppespe
+teptetpstppespe
+pespeteptetpstppespe
+tpstppespeteptetpstppespe
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:39:26) 
+-- CODE:
+s=input("digite m string: ").lower()
+a=""
+i=0
+while i!=len(s):
+	if s[i]!=("a","e","i","o","u"):
+		a=s.replace(s[i],"p")
+	i=i+1
+	print(a)
+-- OUTPUT:
+pespe
+tpstp
+tepte
+pespe
+tpstp
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:39:47) 
+-- CODE:
+s=input("digite m string: ").lower()
+a=""
+i=0
+while i!=len(s):
+	if s[i]!=("a","e","i","o","u"):
+		a[i]=s.replace(s[i],"p")
+	i=i+1
+	print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    a[i]=s.replace(s[i],"p")
+TypeError: 'str' object does not support item assignment
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:42:20) 
+-- CODE:
+s=input("digite m string: ").lower()
+st=("a","e","i","o","u")
+i=0
+while i!=len(s):
+	if s[i]!=st:
+		s[i]=s.replace(st,"p")
+	i=i+1
+	print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    s[i]=s.replace(st,"p")
+TypeError: replace() argument 1 must be str, not tuple
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:44:23) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+st=s[i]
+while i!=len(s):
+	if s[i]!=("a" or "e" or "i" or "o" or "u"):
+		s[i]=s.replace(s[i],"p")
+	i=i+1
+	print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    s[i]=s.replace(s[i],"p")
+TypeError: 'str' object does not support item assignment
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:44:52) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+
+while i!=len(s):
+	st=s[i]
+	if s[i]!=("a" or "e" or "i" or "o" or "u"):
+		s[i]=s.replace(st,"p")
+	i=i+1
+	print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    s[i]=s.replace(st,"p")
+TypeError: 'str' object does not support item assignment
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:45:25) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+print(s[i])
+while i!=len(s):
+	st=s[i]
+	if s[i]!=("a" or "e" or "i" or "o" or "u"):
+		s[i]=s.replace(st,"p")
+	i=i+1
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    s[i]=s.replace(st,"p")
+TypeError: 'str' object does not support item assignment
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:46:07) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if s[i]!=("a" or "e" or "i" or "o" or "u"):
+		s[i]="p"
+	i=i+1
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    s[i]="p"
+TypeError: 'str' object does not support item assignment
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 18:47:17) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if s[i]!=("a" or "e" or "i" or "o" or "u"):
+		print("ok")
+	i=i+1
+-- EXECUTION TIME:
+0.2124
+-- TEST CASE 1:
+---- input:
+teste
+---- correct output:
+peppe
+---- user output:
+ok
+ok
+ok
+ok
+ok
+-- TEST CASE 2:
+---- input:
+flor
+---- correct output:
+ppop
+---- user output:
+ok
+ok
+ok
+ok
+-- TEST CASE 3:
+---- input:
+abacaxi
+---- correct output:
+apapapi
+---- user output:
+ok
+ok
+ok
+ok
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:47:19) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if s[i]!=("a" or "e" or "i" or "o" or "u"):
+		print("ok")
+	i=i+1
+-- OUTPUT:
+ok
+ok
+ok
+ok
+ok
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:47:46) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if s[i]!=("a" or "e" or "i" or "o" or "u"):
+		print("ok")
+	i=i+1
+	print(st,i)
+-- OUTPUT:
+ok
+t 1
+ok
+e 2
+ok
+s 3
+ok
+t 4
+ok
+e 5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:48:36) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if s[i]!=("a" or "e" or "i" or "o" or "u"):
+		print("ok")
+	i=i+1
+	print(st)
+-- OUTPUT:
+ok
+t
+ok
+e
+ok
+s
+ok
+t
+ok
+e
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:49:01) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!=("a" or "e" or "i" or "o" or "u"):
+		print("ok")
+	i=i+1
+	print(st)
+-- OUTPUT:
+ok
+t
+ok
+e
+ok
+s
+ok
+t
+ok
+e
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:49:25) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",st)
+	i=i+1
+-- OUTPUT:
+ok t
+ok e
+ok s
+ok t
+ok e
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:49:48) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",st)
+	i=i+1
+-- OUTPUT:
+ok t
+ok e
+ok s
+ok t
+ok e
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:53:40) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",st)
+	i=i+1
+print(st[1]!="o")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(st[1]!="o")
+IndexError: string index out of range
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:53:56) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",st)
+	i=i+1
+print("o"!="o")
+-- OUTPUT:
+ok t
+ok e
+ok s
+ok t
+ok e
+False
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:54:07) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",st)
+	i=i+1
+print("o"=="o")
+-- OUTPUT:
+ok t
+ok e
+ok s
+ok t
+ok e
+True
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:54:29) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",st)
+	i=i+1
+print(s)
+print("o"=="o")
+-- OUTPUT:
+ok t
+ok e
+ok s
+ok t
+ok e
+teste
+True
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:54:36) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",st)
+	i=i+1
+print(s[1])
+print("o"=="o")
+-- OUTPUT:
+ok t
+ok e
+ok s
+ok t
+ok e
+e
+True
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 18:54:52) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",st)
+	i=i+1
+print(s[1]=="0")
+-- EXECUTION TIME:
+0.209024
+-- TEST CASE 1:
+---- input:
+teste
+---- correct output:
+peppe
+---- user output:
+ok t
+ok e
+ok s
+ok t
+ok e
+False
+-- TEST CASE 2:
+---- input:
+flor
+---- correct output:
+ppop
+---- user output:
+ok f
+ok l
+ok o
+ok r
+False
+-- TEST CASE 3:
+---- input:
+abacaxi
+---- correct output:
+apapapi
+---- user output:
+ok b
+ok c
+ok x
+ok i
+False
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:54:52) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",st)
+	i=i+1
+print(s[1]=="0")
+-- OUTPUT:
+ok t
+ok e
+ok s
+ok t
+ok e
+False
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:55:02) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",st)
+	i=i+1
+print(s[1]=="o")
+-- OUTPUT:
+ok t
+ok e
+ok s
+ok t
+ok e
+False
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:55:33) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!=("a" and "e" and "i" and "o" and "u"):
+		print("ok",st)
+	i=i+1
+print(s[1]=="o")
+-- OUTPUT:
+ok t
+ok e
+ok s
+ok t
+ok e
+False
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:56:32) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",st)
+	i=i+1
+print(s[1]=="o")
+-- OUTPUT:
+ok t
+ok e
+ok s
+ok t
+ok e
+False
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:56:55) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",st,i)
+	i=i+1
+print(s[1]=="o")
+-- OUTPUT:
+ok t 0
+ok e 1
+ok s 2
+ok t 3
+ok e 4
+False
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:57:43) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",st,i)
+	i=i+1
+print(s[1]=="o")
+-- OUTPUT:
+ok t 0
+ok e 1
+ok s 2
+ok t 3
+ok e 4
+False
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:57:49) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",st,i)
+	i=i+1
+print(s[1]=="o")
+-- OUTPUT:
+ok t 0
+ok e 1
+ok s 2
+ok t 3
+ok e 4
+False
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:58:09) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",st,i)
+	i=i+1
+-- OUTPUT:
+ok t 0
+ok e 1
+ok s 2
+ok t 3
+ok e 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 18:59:43) 
+-- CODE:
+s=input("digite m string: ").lower()
+st=s.replace(" ","")
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",st,i)
+	i=i+1
+-- OUTPUT:
+ok t 0
+ok e 1
+ok s 2
+ok t 3
+ok e 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:00:02) 
+-- CODE:
+s=input("digite m string: ").lower()
+st=s.replace(" ","")
+i=0
+while i!=len(s):
+	sp=st[i]
+	if st!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",st,i)
+	i=i+1
+-- OUTPUT:
+ok teste 0
+ok teste 1
+ok teste 2
+ok teste 3
+ok teste 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:00:09) 
+-- CODE:
+s=input("digite m string: ").lower()
+st=s.replace(" ","")
+i=0
+while i!=len(s):
+	sp=st[i]
+	if sp!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",st,i)
+	i=i+1
+-- OUTPUT:
+ok teste 0
+ok teste 1
+ok teste 2
+ok teste 3
+ok teste 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:00:33) 
+-- CODE:
+s=input("digite m string: ").lower()
+st=s.replace(" ","")
+i=0
+while i!=len(s):
+	sp=st[i]
+	if sp!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",st,i)
+	i=i+1
+-- OUTPUT:
+ok teste 0
+ok teste 1
+ok teste 2
+ok teste 3
+ok teste 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:00:52) 
+-- CODE:
+s=input("digite m string: ").lower()
+st=s.replace(" ","")
+i=0
+while i!=len(s):
+	sp=st[i]
+	if sp!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",ss,i)
+	i=i+1
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    print("ok",ss,i)
+NameError: name 'ss' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:01:13) 
+-- CODE:
+s=input("digite m string: ").lower()
+st=s.replace(" ","")
+i=0
+while i!=len(s):
+	sp=st[i]
+	if sp!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",sp,i)
+	i=i+1
+-- OUTPUT:
+ok t 0
+ok e 1
+ok s 2
+ok t 3
+ok e 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:01:59) 
+-- CODE:
+s=input("digite m string: ").lower()
+st=s.replace(" ","")
+a=len(st)
+i=0
+while i!=a:
+	sp=st[i]
+	if sp!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",sp,i)
+	i=i+1
+-- OUTPUT:
+ok t 0
+ok e 1
+ok s 2
+ok t 3
+ok e 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:04:51) 
+-- CODE:
+s=input("digite m string: ").lower()
+st=s.replace(" ","")
+a=len(st)
+i=0
+while i!=a:
+	sp=st[i]
+	if sp==("a" or "e" or "i" or "o" or "u"):
+		print("ok",sp,i)
+	i=i+1
+-- OUTPUT:
+ok t 0
+ok e 1
+ok s 2
+ok t 3
+ok e 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:05:28) 
+-- CODE:
+s=input("digite m string: ").lower()
+st=s.replace(" ","")
+a=len(st)
+i=0
+while i!=a:
+	sp=st[i]
+	print(sp)
+	if sp!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",sp,i)
+	i=i+1
+-- OUTPUT:
+t
+ok t 0
+e
+ok e 1
+s
+ok s 2
+t
+ok t 3
+e
+ok e 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:05:36) 
+-- CODE:
+s=input("digite m string: ").lower()
+st=s.replace(" ","")
+a=len(st)
+i=0
+while i!=a:
+	sp=st[i]
+	print(sp)
+	if sp!=("a" or "e" or "i" or "o" or "u"):
+		print("ok",sp,i)
+	i=i+1
+-- OUTPUT:
+t
+ok t 0
+e
+ok e 1
+s
+ok s 2
+t
+ok t 3
+e
+ok e 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:06:24) 
+-- CODE:
+s=input("digite m string: ").lower()
+st=s.replace(" ","")
+a=len(st)
+i=0
+while i!=a:
+	sp=st[i].upper()
+	print(sp)
+	if sp!=("A" or "E" or "I" or "O" or "U"):
+		print("ok",sp,i)
+	i=i+1
+-- OUTPUT:
+T
+ok T 0
+E
+ok E 1
+S
+ok S 2
+T
+ok T 3
+E
+ok E 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:06:26) 
+-- CODE:
+s=input("digite m string: ").lower()
+st=s.replace(" ","")
+a=len(st)
+i=0
+while i!=a:
+	sp=st[i].upper()
+	print(sp)
+	if sp!=("A" or "E" or "I" or "O" or "U"):
+		print("ok",sp,i)
+	i=i+1
+-- OUTPUT:
+T
+ok T 0
+E
+ok E 1
+S
+ok S 2
+T
+ok T 3
+E
+ok E 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:06:49) 
+-- CODE:
+s=input("digite m string: ").lower()
+st=s.replace(" ","")
+a=len(st)
+i=0
+while i!=a:
+	sp=st[i].upper()
+	print(sp)
+	if sp!=("A" or "E" or "I" or "U"):
+		print("ok",sp,i)
+	i=i+1
+-- OUTPUT:
+T
+ok T 0
+E
+ok E 1
+S
+ok S 2
+T
+ok T 3
+E
+ok E 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:21:05) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!="a" or st!="e" or st!="i" or st!="o" or st!="u":
+		print("ok",st,i)
+	i=i+1
+-- OUTPUT:
+ok t 0
+ok e 1
+ok s 2
+ok t 3
+ok e 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:21:56) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!="a" and st!="e" and st!="i" and st!="o" and st!="u":
+		print("ok",st,i)
+	i=i+1
+-- OUTPUT:
+ok t 0
+ok s 2
+ok t 3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:30:06) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!="a" and st!="e" and st!="i" and st!="o" and st!="u":
+		n=s.replace(s[i],"p")
+	i=i+1
+-- OUTPUT:
+ok t 0
+ok s 2
+ok t 3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:30:43) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!="a" and st!="e" and st!="i" and st!="o" and st!="u":
+		print("ok",st,i)
+	i=i+1
+-- OUTPUT:
+ok t 0
+ok s 2
+ok t 3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:33:20) 
+-- CODE:
+s=input("digite m string: ").lower()
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!="a" and st!="e" and st!="i" and st!="o" and st!="u":
+		print(s.replace(st,"p"))
+	i=i+1
+-- OUTPUT:
+pespe
+tepte
+pespe
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:35:19) 
+-- CODE:
+s=input("digite m string: ").lower()
+a=""
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!="a" and st!="e" and st!="i" and st!="o" and st!="u":
+		a=(s.replace(st,"p"))
+	i=i+1
+-- OUTPUT:
+pespe
+tepte
+pespe
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 21:35:22) 
+-- CODE:
+s=input("digite m string: ").lower()
+a=""
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!="a" and st!="e" and st!="i" and st!="o" and st!="u":
+		a=(s.replace(st,"p"))
+	i=i+1
+-- OUTPUT:
+pespe
+tepte
+pespe
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 21:35:29) 
+-- CODE:
+s=input("digite m string: ").lower()
+a=""
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!="a" and st!="e" and st!="i" and st!="o" and st!="u":
+		a=(s.replace(st,"p"))
+	i=i+1
+print(a)
+-- OUTPUT:
+pespe
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 21:57:59) 
+-- CODE:
+s=input("digite m string: ").lower()
+a=""
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!="a" and st!="e" and st!="i" and st!="o" and st!="u":
+		a=(s.replace(st,"p"))
+		print(a)
+	i=i+1
+	print(a)
+-- OUTPUT:
+pespe
+pespe
+pespe
+tepte
+tepte
+pespe
+pespe
+pespe
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 21:58:03) 
+-- CODE:
+s=input("digite m string: ").lower()
+a=""
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!="a" and st!="e" and st!="i" and st!="o" and st!="u":
+		a=(s.replace(st,"p"))
+		print(a)
+	i=i+1
+
+-- OUTPUT:
+pespe
+tepte
+pespe
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 21:58:25) 
+-- CODE:
+s=input("digite m string: ").lower()
+a=""
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!="a" and st!="e" and st!="i" and st!="o" and st!="u":
+		a=(s.replace(st,"p"))
+		print(a,i)
+	i=i+1
+
+-- OUTPUT:
+pespe 0
+tepte 2
+pespe 3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:01:09) 
+-- CODE:
+s=input("digite m string: ").lower()
+a=""
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!="a" and st!="e" and st!="i" and st!="o" and st!="u":
+		a=(s.replace(st,"p"))
+		b=a[:2]
+		print(a,i)
+	i=i+1
+c=b+a
+print(c)
+-- OUTPUT:
+pespe 0
+tepte 2
+pespe 3
+pepespe
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:01:18) 
+-- CODE:
+s=input("digite uma string: ").lower()
+a=""
+i=0
+while i!=len(s):
+	st=s[i]
+	if st!="a" and st!="e" and st!="i" and st!="o" and st!="u":
+		a=(s.replace(st,"p"))
+		b=a[:2]
+		print(a,i)
+	i=i+1
+c=b+a
+print(c)
+-- OUTPUT:
+pespe 0
+tepte 2
+pespe 3
+pepespe
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:21:11) 
+-- CODE:
+s=input("digite uma string: ").lower()
+a=""
+c=s.raplace(" ","")
+i=0
+j=1
+while i!=len(s):
+	b=c[i:j]
+	if b!="a" and b!="e" and b!="i" and b!="o" and b!="u":
+		b="p"
+	a=a+b
+	i=i+1
+	j=j+1
+	print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    c=s.raplace(" ","")
+AttributeError: 'str' object has no attribute 'raplace'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:28:02) 
+-- CODE:
+s=input("digite uma string: ").lower()
+a=""
+c=s.replace(" ","")
+i=0
+j=1
+while i!=len(s):
+	b=c[i:j]
+	if b!="a" and b!="e" and b!="i" and b!="o" and b!="u":
+		b="p"
+	a=a+b
+	i=i+1
+	j=j+1
+	print(a)
+-- OUTPUT:
+p
+pe
+pep
+pepp
+peppe
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:30:12) 
+-- CODE:
+s=input("digite uma string: ").lower()
+a=""
+c=s.replace(" ","")
+i=0
+j=1
+while i!=len(c):
+    b=c[i:j]
+    if b!="a" and b!="e" and b!="i" and b!="o" and b!="u":
+        b="p"
+    a=a+b
+    i=i+1
+    j=j+1
+    print(a)
+-- OUTPUT:
+p
+pe
+pep
+pepp
+peppe
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:31:13) 
+-- CODE:
+s=input("digite uma string: ").lower()
+a=""
+c=s.replace(" ","")
+i=0
+j=1
+while i!=len(c):
+	b=c[i:j]
+	if b!="a" and b!="e" and b!="i" and b!="o" and b!="u":
+		b="p"
+	a=a+b
+	i=i+1
+	j=j+1
+print(a)
+-- OUTPUT:
+peppe
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:31:18) 
+-- CODE:
+s=input("digite uma string: ").lower()
+a=""
+c=s.replace(" ","")
+i=0
+j=1
+while i!=len(c):
+	b=c[i:j]
+	if b!="a" and b!="e" and b!="i" and b!="o" and b!="u":
+		b="p"
+	a=a+b
+	i=i+1
+	j=j+1
+print(a)
+-- OUTPUT:
+peppe
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:31:26) 
+-- CODE:
+s=input("digite uma string: ").lower()
+a=""
+c=s.replace(" ","")
+i=0
+j=1
+while i!=len(c):
+	b=c[i:j]
+	if b!="a" and b!="e" and b!="i" and b!="o" and b!="u":
+		b="p"
+	a=a+b
+	i=i+1
+	j=j+1
+print(a)
+-- OUTPUT:
+peppe
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 22:31:59) 
+-- CODE:
+s=input("digite uma string: ").lower()
+a=""
+c=s.replace(" ","")
+i=0
+j=1
+while i!=len(c):
+	b=c[i:j]
+	if b!="a" and b!="e" and b!="i" and b!="o" and b!="u":
+		b="p"
+	a=a+b
+	i=i+1
+	j=j+1
+
+print(a)
+-- EXECUTION TIME:
+0.156495
+-- TEST CASE 1:
+---- input:
+teste
+---- correct output:
+peppe
+---- user output:
+peppe
+-- TEST CASE 2:
+---- input:
+flor
+---- correct output:
+ppop
+---- user output:
+ppop
+-- TEST CASE 3:
+---- input:
+abacaxi
+---- correct output:
+apapapi
+---- user output:
+apapapi
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

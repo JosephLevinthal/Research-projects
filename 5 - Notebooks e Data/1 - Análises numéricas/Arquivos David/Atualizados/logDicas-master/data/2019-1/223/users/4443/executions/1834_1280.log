@@ -1,0 +1,1043 @@
+== TEST (2019-06-25 15:54:06) 
+-- CODE:
+from numpy import *
+from  numpy.linalg import *
+matdist = array([[0, 2, 11, 6, 15, 11, 1],
+					  [2, 0, 7, 12, 4, 2, 15],
+					  [11, 7, 0, 11, 8, 3, 13],
+					  [6, 12, 11, 0, 10, 2, 1],
+					  [15, 4, 8, 10, 0, 5, 13],
+					  [11, 2, 3, 2, 5, 0, 14],
+					  [1, 15, 13, 1, 13, 14, 0]])
+a = int(input("Digite o codigo para a cidade A: "))
+b = int(input("Digite o codigo para a cidade B: "))
+tempo = 0
+while(a != -1 and b!= -1):
+	i = (a//111) - 1
+	j = (b//111) - 1
+	tempo = tempo + matdist[i, j]
+	a = int(input("Digite o codigo para a cidade A: "))
+	b = int(input("Digite o codigo para a cidade B: "))
+print(tempo)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 17:21:50) 
+-- CODE:
+from numpy import *
+
+tabuleiro = array(eval(input("Tabuleiro: "))) #Leitura do tabuleiro
+mov = input("Movimentos: ") # Sequencia de movimentos do personagem
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+#Posicoes temporarias
+esquerda = 0 #A 
+direita = 0 #D
+cima = 0 #W
+baixo = 0 #S
+
+# Analise da jogada
+for x in mov: #elemento do vetor de movimentos digitados pelo usuario
+    # Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab = ytab - 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab + 1
+
+    # Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+    # Zumbi
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 17:28:06) 
+-- CODE:
+from numpy import *
+
+tabuleiro = array(eval(input("Tabuleiro: "))) #Leitura do tabuleiro
+mov = input("Movimentos: ") # Sequencia de movimentos do personagem
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+#Posicoes temporarias
+esquerda = 0 #A 
+direita = 0 #D
+cima = 0 #W
+baixo = 0 #S
+
+# Analise da jogada
+for x in mov: #elemento do vetor de movimentos digitados pelo usuario
+    # Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab = ytab - 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab + 1
+
+    # Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+    # Zumbi
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+print(tabuleiro[ytab,xtab])
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 12:02:00) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+#entrada da quantidade de alimento = matriz linha 3x1 (uma linha para cada alimento)
+alimento = array(eval(input("Digite a quantidade de alimento a, b, c: "))) 
+#matriz 3x3 as 3 linhas representam os alimentos, as 3 colunas o consumo de cada alimento pelas bacs
+bacteria = ([2, 1, 4], 
+				[1, 2, 0],
+				[2, 3, 2]) 
+#nao eh possivel multiplicar 3x1 por 3x3, assim eh necessario fazer a transposta da matriziz alimento = 1x3
+alimento = alimento.T
+vs = dot(alimento, bacteria)
+print(vs)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 12:04:19) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+#entrada da quantidade de alimento = matriz linha 3x1 (uma linha para cada alimento)
+alimento = array(eval(input("Digite a quantidade de alimento a, b, c: "))) 
+#matriz 3x3 as 3 linhas representam os alimentos, as 3 colunas o consumo de cada alimento pelas bacs
+bacteria = ([2, 1, 4], 
+				[1, 2, 0],
+				[2, 3, 2]) 
+#nao eh possivel multiplicar 3x1 por 3x3, assim eh necessario fazer a transposta da matriziz alimento = 1x3
+alimento = alimento.T
+vs = dot(alimento, bacteria)
+print(vs)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 12:04:51) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+#entrada da quantidade de alimento = matriz linha 3x1 (uma linha para cada alimento)
+alimento = array(eval(input("Digite a quantidade de alimento a, b, c: "))) 
+#matriz 3x3 as 3 linhas representam os alimentos, as 3 colunas o consumo de cada alimento pelas bacs
+bacteria = ([2, 1, 4], 
+				[1, 2, 0],
+				[2, 3, 2]) 
+#nao eh possivel multiplicar 3x1 por 3x3, assim eh necessario fazer a transposta da matriziz alimento = 1x3
+alimento = alimento.T
+vs = solve(alimento, bacteria)
+print(vs)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 12:06:44) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+#entrada da quantidade de alimento = matriz linha 3x1 (uma linha para cada alimento)
+alimento = array(eval(input("Digite a quantidade de alimento a, b, c: "))) 
+#matriz 3x3 as 3 linhas representam os alimentos, as 3 colunas o consumo de cada alimento pelas bacs
+bacteria = ([2, 1, 4], 
+				[1, 2, 0],
+				[2, 3, 2]) 
+#nao eh possivel multiplicar 3x1 por 3x3, assim eh necessario fazer a transposta da matriziz alimento = 1x3
+alimento = alimento.T
+vs = solve(bacteria, alimento)
+print(vs)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 12:06:55) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+#entrada da quantidade de alimento = matriz linha 3x1 (uma linha para cada alimento)
+alimento = array(eval(input("Digite a quantidade de alimento a, b, c: "))) 
+#matriz 3x3 as 3 linhas representam os alimentos, as 3 colunas o consumo de cada alimento pelas bacs
+bacteria = ([2, 1, 4], 
+				[1, 2, 0],
+				[2, 3, 2]) 
+#nao eh possivel multiplicar 3x1 por 3x3, assim eh necessario fazer a transposta da matriziz alimento = 1x3
+alimento = alimento.T
+vs = solve(bacteria, alimento)
+print(vs)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 12:07:07) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+#entrada da quantidade de alimento = matriz linha 3x1 (uma linha para cada alimento)
+alimento = array(eval(input("Digite a quantidade de alimento a, b, c: "))) 
+#matriz 3x3 as 3 linhas representam os alimentos, as 3 colunas o consumo de cada alimento pelas bacs
+bacteria = ([2, 1, 4], 
+				[1, 2, 0],
+				[2, 3, 2]) 
+#nao eh possivel multiplicar 3x1 por 3x3, assim eh necessario fazer a transposta da matriziz alimento = 1x3
+alimento = alimento.T
+vs = solve(bacteria, alimento)
+print(vs)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 12:08:13) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+#entrada da quantidade de alimento = matriz linha 3x1 (uma linha para cada alimento)
+alimento = array(eval(input("Digite a quantidade de alimento a, b, c: "))) 
+#matriz 3x3 as 3 linhas representam os alimentos, as 3 colunas o consumo de cada alimento pelas bacs
+bacteria = ([2, 1, 4], 
+				[1, 2, 0],
+				[2, 3, 2]) 
+#nao eh possivel multiplicar 3x1 por 3x3, assim eh necessario fazer a transposta da matriziz alimento = 1x3
+alimento = alimento.T
+vs = dot(bacteria, alimento)
+print(vs)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 12:08:23) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+#entrada da quantidade de alimento = matriz linha 3x1 (uma linha para cada alimento)
+alimento = array(eval(input("Digite a quantidade de alimento a, b, c: "))) 
+#matriz 3x3 as 3 linhas representam os alimentos, as 3 colunas o consumo de cada alimento pelas bacs
+bacteria = ([2, 1, 4], 
+				[1, 2, 0],
+				[2, 3, 2]) 
+#nao eh possivel multiplicar 3x1 por 3x3, assim eh necessario fazer a transposta da matriziz alimento = 1x3
+alimento = alimento.T
+vs = dot(bacteria, alimento)
+print(vs)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 12:13:15) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+#entrada da quantidade de alimento = matriz linha 3x1 (uma linha para cada alimento)
+alimento = array(eval(input("Digite a quantidade de alimento a, b, c: "))) 
+#matriz 3x3 as 3 linhas representam os alimentos, as 3 colunas o consumo de cada alimento pelas bacs
+bacteria = ([2, 1, 4], 
+				[1, 2, 0],
+				[2, 3, 2]) 
+#nao eh possivel multiplicar 3x1 por 3x3, assim eh necessario fazer a transposta da matriziz alimento = 1x3
+alimento = alimento.T
+vs = solve(bacteria, alimento)
+print("Estafilo: ",vs[0])
+print("Salmonela: ",vs[1])
+print("Coli: ",vs[2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 12:14:34) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+#entrada da quantidade de alimento = matriz linha 3x1 (uma linha para cada alimento)
+alimento = array(eval(input("Digite a quantidade de alimento a, b, c: "))) 
+#matriz 3x3 as 3 linhas representam os alimentos, as 3 colunas o consumo de cada alimento pelas bacs
+bacteria = ([2, 1, 4], 
+				[1, 2, 0],
+				[2, 3, 2]) 
+#nao eh possivel multiplicar 3x1 por 3x3, assim eh necessario fazer a transposta da matriziz alimento = 1x3
+alimento = alimento.T
+vs = solve(bacteria, alimento)
+print("Estafilo: ",vs[0])
+print("Salmonela: ",vs[1])
+print("Coli: ",vs[2])
+print(min(vs))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 12:17:43) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+#entrada da quantidade de alimento = matriz linha 3x1 (uma linha para cada alimento)
+alimento = array(eval(input("Digite a quantidade de alimento a, b, c: "))) 
+#matriz 3x3 as 3 linhas representam os alimentos, as 3 colunas o consumo de cada alimento pelas bacs
+bacteria = ([2, 1, 4], 
+				[1, 2, 0],
+				[2, 3, 2]) 
+#nao eh possivel multiplicar 3x1 por 3x3, assim eh necessario fazer a transposta da matriziz alimento = 1x3
+alimento = alimento.T
+vs = solve(bacteria, alimento)
+print("Estafilo: ",vs[0])
+print("Salmonela: ",vs[1])
+print("Coli: ",vs[2])
+for i in vs:
+	if(vs[0]==min(vs)):
+		print("Estafilo")
+	elif(vs[1]==min(vs)):
+		print("Salmonela")
+	elife(vs[2]==min(vs)):
+		print("coli")	
+-- ERROR:
+File "XXXX", line 20
+    elife(vs[2]==min(vs)):
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 12:17:53) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+#entrada da quantidade de alimento = matriz linha 3x1 (uma linha para cada alimento)
+alimento = array(eval(input("Digite a quantidade de alimento a, b, c: "))) 
+#matriz 3x3 as 3 linhas representam os alimentos, as 3 colunas o consumo de cada alimento pelas bacs
+bacteria = ([2, 1, 4], 
+				[1, 2, 0],
+				[2, 3, 2]) 
+#nao eh possivel multiplicar 3x1 por 3x3, assim eh necessario fazer a transposta da matriziz alimento = 1x3
+alimento = alimento.T
+vs = solve(bacteria, alimento)
+print("Estafilo: ",vs[0])
+print("Salmonela: ",vs[1])
+print("Coli: ",vs[2])
+for i in vs:
+	if(vs[0]==min(vs)):
+		print("Estafilo")
+	elif(vs[1]==min(vs)):
+		print("Salmonela")
+	elif(vs[2]==min(vs)):
+		print("coli")	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 12:18:53) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+#entrada da quantidade de alimento = matriz linha 3x1 (uma linha para cada alimento)
+alimento = array(eval(input("Digite a quantidade de alimento a, b, c: "))) 
+#matriz 3x3 as 3 linhas representam os alimentos, as 3 colunas o consumo de cada alimento pelas bacs
+bacteria = ([2, 1, 4], 
+				[1, 2, 0],
+				[2, 3, 2]) 
+#nao eh possivel multiplicar 3x1 por 3x3, assim eh necessario fazer a transposta da matriziz alimento = 1x3
+alimento = alimento.T
+vs = solve(bacteria, alimento)
+print("Estafilo: ",vs[0])
+print("Salmonela: ",vs[1])
+print("Coli: ",vs[2])
+if(vs[0]==min(vs)):
+	print("Estafilo")
+elif(vs[1]==min(vs)):
+	print("Salmonela")
+elif(vs[2]==min(vs)):
+	print("coli")	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 12:19:22) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+#entrada da quantidade de alimento = matriz linha 3x1 (uma linha para cada alimento)
+alimento = array(eval(input("Digite a quantidade de alimento a, b, c: "))) 
+#matriz 3x3 as 3 linhas representam os alimentos, as 3 colunas o consumo de cada alimento pelas bacs
+bacteria = ([2, 1, 4], 
+				[1, 2, 0],
+				[2, 3, 2]) 
+#nao eh possivel multiplicar 3x1 por 3x3, assim eh necessario fazer a transposta da matriziz alimento = 1x3
+alimento = alimento.T
+vs = solve(bacteria, alimento)
+print("Estafilo: ",vs[0])
+print("Salmonela: ",vs[1])
+print("Coli: ",vs[2])
+if(vs[0]==min(vs)):
+	print("Estafilo")
+elif(vs[1]==min(vs)):
+	print("Salmonela")
+elif(vs[2]==min(vs)):
+	print("coli")	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 13:06:28) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+#entrada da quantidade de alimento = matriz linha 3x1 (uma linha para cada alimento)
+alimento = array(eval(input("Digite a quantidade de alimento a, b, c: "))) 
+#matriz 3x3 as 3 linhas representam os alimentos, as 3 colunas o consumo de cada alimento pelas bacs
+bacteria = ([2, 1, 4], 
+				[1, 2, 0],
+				[2, 3, 2]) 
+#nao eh possivel multiplicar 3x1 por 3x3, assim eh necessario fazer a transposta da matriziz alimento = 1x3
+alimento = alimento.T
+vs = dot(inv(bacteria), alimento)
+print("Estafilo: ",vs[0])
+print("Salmonela: ",vs[1])
+print("Coli: ",vs[2])
+if(vs[0]==min(vs)):
+	print("Estafilo")
+elif(vs[1]==min(vs)):
+	print("Salmonela")
+elif(vs[2]==min(vs)):
+	print("coli")	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 15:36:30) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+frutas = array([[3, 12, 1],
+					[12, 0, 2],
+					[0, 2, 3]])
+valor = array([[23.6],
+					[52.6],
+					[27.7]])
+valor = valor.T
+pu = solve(frutas, valor)
+print(pu)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 15:40:57) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+frutas = array([[3, 12, 1],
+					[12, 0, 2],
+					[0, 2, 3]])
+valor = array([[23.6],
+					[52.6],
+					[27.7]])
+valor = valor.T
+pu = solve(frutas, valor)
+print(pu)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 15:42:58) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+frutas = array([[3, 12, 1],[12, 0, 2],[0, 2, 3]])
+valor = array([23.6],[52.6],[27.7])
+valor = valor.T
+pu = solve(frutas, valor)
+print(pu)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 15:44:27) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+frutas = array([[3, 12, 1],[12, 0, 2],[0, 2, 3]])
+valor = array([23.6,52.6,27.7])
+valor = valor.T
+pu = solve(frutas, valor)
+print(pu)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 15:49:02) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+frutas = array([[3, 12, 1],[12, 0, 2],[0, 2, 3]])
+valor = array([23.6,52.6,27.7])
+valor = valor.T
+pu = solve(frutas, valor)
+print("Abacate: ",round(pu[0],2))
+print("Banana: ",round(pu[1],2))
+print("Caqui: ",round(pu[2],2))
+if(pu[0] == min(pu)):
+	print("Abacate")
+elif(pu[1] == min(pu)):
+	print("Banana")
+elif(pu[2] == min(pu)):
+	print("Caqui")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 15:59:59) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+sistema = array([[1,-1,0,0],[0,1,-1,0],[0,0,1,0],[1,0,0,1]])
+somas = array([50, -120,350,870])
+somas = somas.T
+vs = solve(sistema, somas)
+print(vs)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 17:48:42) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+f = array(eval(input("Digite o numero de horas que cada funcionario trabalhou durante a semana:  ")))
+nf = shape(f)[0]
+vs = zeros(nf, dtype=int)
+for i in range(n):
+	vs[i] = sum(f[i,:])
+print(vs)	 
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 17:49:03) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+f = array(eval(input("Digite o numero de horas que cada funcionario trabalhou durante a semana:  ")))
+nf = shape(f)[0]
+vs = zeros(nf, dtype=int)
+for i in range(nf):
+	vs[i] = sum(f[i,:])
+print(vs)	 
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 17:52:36) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+f = array(eval(input("Digite o numero de horas que cada funcionario trabalhou durante a semana:  ")))
+nf = shape(f)[0]
+vs = zeros(7, dtype=int)
+for i in range(nf):
+	vs[i] = sum(f[:,i])
+print(vs)	 
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 17:56:33) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+f = array(eval(input("Digite o numero de horas que cada funcionario trabalhou durante a semana:  ")))
+nf = shape(f)[0]
+vs = zeros(7, dtype=int)
+for i in range(nf):
+	vs[i] = sum(f[:,i])
+dia_s = array([1,2,3,4,5,6,7])
+for i in range(len(vs)):
+	if(i == max(vs)):
+		print(dia_s[i])
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 17:57:10) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+f = array(eval(input("Digite o numero de horas que cada funcionario trabalhou durante a semana:  ")))
+nf = shape(f)[0]
+vs = zeros(7, dtype=int)
+for i in range(nf):
+	vs[i] = sum(f[:,i])
+dia_s = array([1,2,3,4,5,6,7])
+for i in range(len(vs)):
+	if(i == max(vs)):
+		print(dia_s[i])
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 18:01:07) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+f = array(eval(input("Digite o numero de horas que cada funcionario trabalhou durante a semana:  ")))
+nf = shape(f)[0]
+vs = zeros(7, dtype=int)
+for i in range(nf):
+	vs[i] = sum(f[:,i])
+dia_s = array([1,2,3,4,5,6,7])
+for vs[i] in range(7):
+	if(vs[i] == max(vs)):
+		print(dia_s[i])
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 18:01:42) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+f = array(eval(input("Digite o numero de horas que cada funcionario trabalhou durante a semana:  ")))
+nf = shape(f)[0]
+vs = zeros(7, dtype=int)
+for i in range(nf):
+	vs[i] = sum(f[:,i])
+dia_s = array([1,2,3,4,5,6,7])
+for vs[i] in range(7):
+	if(vs[i] == max(vs)):
+		print(vs[i])
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 18:02:54) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+f = array(eval(input("Digite o numero de horas que cada funcionario trabalhou durante a semana:  ")))
+nf = shape(f)[0]
+vs = zeros(7, dtype=int)
+for i in range(nf):
+	vs[i] = sum(f[:,i])dia_s
+	print(max(vs))
+	
+	
+-- ERROR:
+File "XXXX", line 7
+    vs[i] = sum(f[:,i])dia_s
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 18:03:12) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+f = array(eval(input("Digite o numero de horas que cada funcionario trabalhou durante a semana:  ")))
+nf = shape(f)[0]
+vs = zeros(7, dtype=int)
+for i in range(nf):
+	vs[i] = sum(f[:,i])
+	print(max(vs))
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 18:07:06) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+f = array(eval(input("Digite o numero de horas que cada funcionario trabalhou durante a semana:  ")))
+nf = shape(f)[0]
+vs = zeros(7, dtype=int)
+for i in range(nf):
+	vs[i] = sum(f[:,i])
+
+for i in range(7):
+	if(vs[i] == max(vs)):
+		print(i+1)
+
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 20:14:19) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+tabuleiro = array(eval(input("Tabuleiro: "))) 	# Leitura do tabuleiro
+mov = input("Movimentos: ") 							# Sequencia de movimentos do personagem
+xtab = 0														# Posicao inicial do personagem
+ytab = 0
+moeda = 0													# Contadores de atributos do personagem
+life = 100
+# Limites do tabuleiro
+limcol = shape(tabuleiro)[1]							# Limites colunas
+limlinh = shape(tabuleiro)[0]							# Limites linhas
+# Analise da jogada
+for x in mov:
+	if(x == 'A'): 
+		elif(xtab-1 != -1):
+		elif(tabuleiro[ytab,xtab-1] != 33):
+	xtab = xtab -1 										# Move personagem para ESQUERDA
+	elif(x == 'D'):     
+		if(xtab+1 != limcol):
+		if(tabuleiro[ytab,xtab+1]!=33):
+	xtab =xtab +1 											# Move personagem para DIREITA
+	elif(x == 'W'): 
+		if(ytab-1 != -1):
+		if(tabuleiro[ytab-1,xtab]!=33):
+	ytab = ytab -1											# Move personagem para CIMA
+	elif x == 'S':
+		if(ytab+1 != limlinh):
+		if(tabuleiro[ytab+1,xtab]!=33):
+		ytab = ytab + 1									# Move personagem para BAIXO
+
+# Trata evento
+	if tabuleiro[ytab,xtab] == 11:					# Moeda
+   	moeda =moeda +1 
+		tabuleiro[ytab,xtab] = 0 						# Apaga moeda do tabuleiro
+	elif tabuleiro[ytab,xtab] == 22: 
+        life = life - 5									# Zumbi
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+
+	
+	
+-- ERROR:
+File "XXXX", line 16
+    elif(xtab-1 != -1):
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 20:16:01) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+tabuleiro = array(eval(input("Tabuleiro: "))) 	# Leitura do tabuleiro
+mov = input("Movimentos: ") 							# Sequencia de movimentos do personagem
+xtab = 0														# Posicao inicial do personagem
+ytab = 0
+moeda = 0													# Contadores de atributos do personagem
+life = 100
+# Limites do tabuleiro
+limcol = shape(tabuleiro)[1]							# Limites colunas
+limlinh = shape(tabuleiro)[0]							# Limites linhas
+# Analise da jogada
+for x in mov:
+	if(x == 'A'): 
+		if(xtab-1 != -1):
+			if(tabuleiro[ytab,xtab-1] != 33):
+				xtab = xtab -1 										# Move personagem para ESQUERDA
+	elif(x == 'D'):     
+		if(xtab+1 != limcol):
+			if(tabuleiro[ytab,xtab+1]!=33):
+				xtab =xtab +1 											# Move personagem para DIREITA
+	elif(x == 'W'): 
+		if(ytab-1 != -1):
+			if(tabuleiro[ytab-1,xtab]!=33):
+				ytab = ytab -1											# Move personagem para CIMA
+	elif x == 'S':
+		if(ytab+1 != limlinh):
+			if(tabuleiro[ytab+1,xtab]!=33):
+				ytab = ytab + 1									# Move personagem para BAIXO
+
+# Trata evento
+	if tabuleiro[ytab,xtab] == 11:					# Moeda
+   	moeda =moeda +1 
+		tabuleiro[ytab,xtab] = 0 						# Apaga moeda do tabuleiro
+	elif tabuleiro[ytab,xtab] == 22: 
+        life = life - 5									# Zumbi
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+
+	
+	
+-- ERROR:
+File "XXXX", line 34
+    moeda =moeda +1 
+                   ^
+TabError: inconsistent use of tabs and spaces in indentation
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 20:16:46) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+tabuleiro = array(eval(input("Tabuleiro: "))) 	# Leitura do tabuleiro
+mov = input("Movimentos: ") 							# Sequencia de movimentos do personagem
+xtab = 0														# Posicao inicial do personagem
+ytab = 0
+moeda = 0													# Contadores de atributos do personagem
+life = 100
+# Limites do tabuleiro
+limcol = shape(tabuleiro)[1]							# Limites colunas
+limlinh = shape(tabuleiro)[0]							# Limites linhas
+# Analise da jogada
+for x in mov:
+	if(x == 'A'): 
+		if(xtab-1 != -1):
+			if(tabuleiro[ytab,xtab-1] != 33):
+				xtab = xtab -1 										# Move personagem para ESQUERDA
+	elif(x == 'D'):     
+		if(xtab+1 != limcol):
+			if(tabuleiro[ytab,xtab+1]!=33):
+				xtab =xtab +1 											# Move personagem para DIREITA
+	elif(x == 'W'): 
+		if(ytab-1 != -1):
+			if(tabuleiro[ytab-1,xtab]!=33):
+				ytab = ytab -1											# Move personagem para CIMA
+	elif x == 'S':
+		if(ytab+1 != limlinh):
+			if(tabuleiro[ytab+1,xtab]!=33):
+				ytab = ytab + 1									# Move personagem para BAIXO
+
+# Trata evento
+	if tabuleiro[ytab,xtab] == 11:					# Moeda
+		moeda =moeda +1 
+		tabuleiro[ytab,xtab] = 0 						# Apaga moeda do tabuleiro
+	elif tabuleiro[ytab,xtab] == 22: 
+		life = life - 5									# Zumbi
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 20:17:23) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+tabuleiro = array(eval(input("Tabuleiro: "))) 	# Leitura do tabuleiro
+mov = input("Movimentos: ") 							# Sequencia de movimentos do personagem
+xtab = 0														# Posicao inicial do personagem
+ytab = 0
+moeda = 0													# Contadores de atributos do personagem
+life = 100
+# Limites do tabuleiro
+limcol = shape(tabuleiro)[1]							# Limites colunas
+limlinh = shape(tabuleiro)[0]							# Limites linhas
+# Analise da jogada
+for x in mov:
+	if(x == 'A'): 
+		if(xtab-1 != -1):
+			if(tabuleiro[ytab,xtab-1] != 33):
+				xtab = xtab -1 										# Move personagem para ESQUERDA
+	elif(x == 'D'):     
+		if(xtab+1 != limcol):
+			if(tabuleiro[ytab,xtab+1]!=33):
+				xtab =xtab +1 											# Move personagem para DIREITA
+	elif(x == 'W'): 
+		if(ytab-1 != -1):
+			if(tabuleiro[ytab-1,xtab]!=33):
+				ytab = ytab -1											# Move personagem para CIMA
+	elif x == 'S':
+		if(ytab+1 != limlinh):
+			if(tabuleiro[ytab+1,xtab]!=33):
+				ytab = ytab + 1									# Move personagem para BAIXO
+
+# Trata evento
+	if tabuleiro[ytab,xtab] == 11:					# Moeda
+		moeda =moeda +1 
+		tabuleiro[ytab,xtab] = 0 						# Apaga moeda do tabuleiro
+	elif tabuleiro[ytab,xtab] == 22: 
+		life = life - 5									# Zumbi
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+
+	
+	
+-- EXECUTION TIME:
+1.01931
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

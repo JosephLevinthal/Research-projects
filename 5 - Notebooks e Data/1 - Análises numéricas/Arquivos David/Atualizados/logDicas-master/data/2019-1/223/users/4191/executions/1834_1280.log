@@ -1,0 +1,509 @@
+== TEST (2019-07-02 15:34:44) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+matriz=array(eval(input("Matriz: ")))
+jogadas=input("Jogadas: ").upper()
+
+moeda=0
+life=100
+
+linha=0
+coluna=0
+
+for i in jogadas:
+	
+	if(matriz[linha,coluna]<0)or(matriz[linha,coluna]>shape(matriz)[0])or(matriz[linha,coluna]>shape(matriz)[1])
+		matriz[linha,coluna]=matriz[linha,coluna]
+		if(jogadas[i]=='A'):		
+			coluna=coluna-1
+		elif(jogadas[i]=='D'):
+			coluna=coluna+1
+		elif(jogadas[i]=='W'):
+			linha=linha-1
+		elif(jogadas[i]=='S'):
+			linha=linha+1
+		
+		if(matriz[linha,coluna]==0):
+			matriz[linha,coluna]=matriz[linha,coluna]
+		elif(matriz[linha,coluna]==11):
+			moeda=moeda+1
+		elif(matriz[linha,coluna]==22):
+			life=life-5
+		elif(matriz[linha,coluna]==33):
+			matriz[linha,coluna]=matriz[linha-1,coluna-1]
+		
+print("posicao x: ", linha)
+print("posicao y: ", coluna)
+print("moedas: ", moeda)
+print("life: ", life)		
+-- ERROR:
+File "XXXX", line 15
+    if(matriz[linha,coluna]<0)or(matriz[linha,coluna]>shape(matriz)[0])or(matriz[linha,coluna]>shape(matriz)[1])
+                                                                                                               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 15:35:26) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+matriz=array(eval(input("Matriz: ")))
+jogadas=input("Jogadas: ").upper()
+
+moeda=0
+life=100
+
+linha=0
+coluna=0
+
+for i in jogadas:
+	
+	if(matriz[linha,coluna]<0)or(matriz[linha,coluna]>shape(matriz)[0])or(matriz[linha,coluna]>shape(matriz)[1])
+		matriz[linha,coluna]=matriz[linha,coluna]
+		if(jogadas[i]=='A'):		
+			coluna=coluna-1
+		elif(jogadas[i]=='D'):
+			coluna=coluna+1
+		elif(jogadas[i]=='W'):
+			linha=linha-1
+		elif(jogadas[i]=='S'):
+			linha=linha+1
+		
+		if(matriz[linha,coluna]==0):
+			matriz[linha,coluna]=matriz[linha,coluna]
+		elif(matriz[linha,coluna]==11):
+			moeda=moeda+1
+		elif(matriz[linha,coluna]==22):
+			life=life-5
+		elif(matriz[linha,coluna]==33):
+			matriz[linha,coluna]=matriz[linha-1,coluna-1]
+		
+print("posicao x: ", linha)
+print("posicao y: ", coluna)
+print("moedas: ", moeda)
+print("life: ", life)		
+-- ERROR:
+File "XXXX", line 15
+    if(matriz[linha,coluna]<0)or(matriz[linha,coluna]>shape(matriz)[0])or(matriz[linha,coluna]>shape(matriz)[1])
+                                                                                                               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 15:35:48) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+matriz=array(eval(input("Matriz: ")))
+jogadas=input("Jogadas: ").upper()
+
+moeda=0
+life=100
+
+linha=0
+coluna=0
+
+for i in jogadas:
+	
+	if(matriz[linha,coluna]<0)or(matriz[linha,coluna]>shape(matriz)[0])or(matriz[linha,coluna]>shape(matriz)[1]):
+		matriz[linha,coluna]=matriz[linha,coluna]
+		if(jogadas[i]=='A'):		
+			coluna=coluna-1
+		elif(jogadas[i]=='D'):
+			coluna=coluna+1
+		elif(jogadas[i]=='W'):
+			linha=linha-1
+		elif(jogadas[i]=='S'):
+			linha=linha+1
+		
+		if(matriz[linha,coluna]==0):
+			matriz[linha,coluna]=matriz[linha,coluna]
+		elif(matriz[linha,coluna]==11):
+			moeda=moeda+1
+		elif(matriz[linha,coluna]==22):
+			life=life-5
+		elif(matriz[linha,coluna]==33):
+			matriz[linha,coluna]=matriz[linha-1,coluna-1]
+		
+print("posicao x: ", linha)
+print("posicao y: ", coluna)
+print("moedas: ", moeda)
+print("life: ", life)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 15:36:24) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+matriz=array(eval(input("Matriz: ")))
+jogadas=input("Jogadas: ")
+
+moeda=0
+life=100
+
+linha=0
+coluna=0
+
+for i in jogadas:
+	
+	if(matriz[linha,coluna]<0)or(matriz[linha,coluna]>shape(matriz)[0])or(matriz[linha,coluna]>shape(matriz)[1]):
+		matriz[linha,coluna]=matriz[linha,coluna]
+		if(jogadas[i]=='A'):		
+			coluna=coluna-1
+		elif(jogadas[i]=='D'):
+			coluna=coluna+1
+		elif(jogadas[i]=='W'):
+			linha=linha-1
+		elif(jogadas[i]=='S'):
+			linha=linha+1
+		
+		if(matriz[linha,coluna]==0):
+			matriz[linha,coluna]=matriz[linha,coluna]
+		elif(matriz[linha,coluna]==11):
+			moeda=moeda+1
+		elif(matriz[linha,coluna]==22):
+			life=life-5
+		elif(matriz[linha,coluna]==33):
+			matriz[linha,coluna]=matriz[linha-1,coluna-1]
+		
+print("posicao x: ", linha)
+print("posicao y: ", coluna)
+print("moedas: ", moeda)
+print("life: ", life)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 15:36:43) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+matriz=array(eval(input("Matriz: ")))
+jogadas=input("Jogadas: ")
+
+moeda=0
+life=100
+
+linha=0
+coluna=0
+
+for i in jogadas:
+	
+	if(matriz[linha,coluna]<0)or(matriz[linha,coluna]>shape(matriz)[0])or(matriz[linha,coluna]>shape(matriz)[1]):
+		matriz[linha,coluna]=matriz[linha,coluna]
+		if(jogadas[i]=='A'):		
+			coluna=coluna-1
+		elif(jogadas[i]=='D'):
+			coluna=coluna+1
+		elif(jogadas[i]=='W'):
+			linha=linha-1
+		elif(jogadas[i]=='S'):
+			linha=linha+1
+		
+		if(matriz[linha,coluna]==0):
+			matriz[linha,coluna]=matriz[linha,coluna]
+		elif(matriz[linha,coluna]==11):
+			moeda=moeda+1
+		elif(matriz[linha,coluna]==22):
+			life=life-5
+		elif(matriz[linha,coluna]==33):
+			matriz[linha,coluna]=matriz[linha-1,coluna-1]
+		
+print("posicao x: ", linha)
+print("posicao y: ", coluna)
+print("moedas: ", moeda)
+print("life: ", life)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 15:36:52) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+matriz=array(eval(input("Matriz: ")))
+jogadas=input("Jogadas: ")
+
+moeda=0
+life=100
+
+linha=0
+coluna=0
+
+for i in jogadas:
+	
+	if(matriz[linha,coluna]<0)or(matriz[linha,coluna]>shape(matriz)[0])or(matriz[linha,coluna]>shape(matriz)[1]):
+		matriz[linha,coluna]=matriz[linha,coluna]
+		if(jogadas[i]=='A'):		
+			coluna=coluna-1
+		elif(jogadas[i]=='D'):
+			coluna=coluna+1
+		elif(jogadas[i]=='W'):
+			linha=linha-1
+		elif(jogadas[i]=='S'):
+			linha=linha+1
+		
+		if(matriz[linha,coluna]==0):
+			matriz[linha,coluna]=matriz[linha,coluna]
+		elif(matriz[linha,coluna]==11):
+			moeda=moeda+1
+		elif(matriz[linha,coluna]==22):
+			life=life-5
+		elif(matriz[linha,coluna]==33):
+			matriz[linha,coluna]=matriz[linha-1,coluna-1]
+		
+print("posicao x: ", linha)
+print("posicao y: ", coluna)
+print("moedas: ", moeda)
+print("life: ", life)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 15:41:00) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+matriz=array(eval(input("Matriz: ")))
+jogadas=input("Jogadas: ")
+
+moeda=0
+life=100
+
+linha=0
+coluna=0
+
+for i in jogadas:
+	
+	if(matriz[linha,coluna]<0)or(matriz[linha,coluna]>shape(matriz)[0])or(matriz[linha,coluna]>shape(matriz)[1]):
+		matriz[linha,coluna]=matriz[linha,coluna]
+	if(jogadas[i]=='A'):		
+		coluna=coluna-1
+	elif(jogadas[i]=='D'):
+		coluna=coluna+1
+	elif(jogadas[i]=='W'):
+		linha=linha-1
+	elif(jogadas[i]=='S'):
+		linha=linha+1
+		
+	if(matriz[linha,coluna]==0):
+		matriz[linha,coluna]=matriz[linha,coluna]
+	elif(matriz[linha,coluna]==11):
+		moeda=moeda+1
+	elif(matriz[linha,coluna]==22):
+		life=life-5
+	elif(matriz[linha,coluna]==33):
+		matriz[linha,coluna]=matriz[linha-1,coluna-1]
+		
+print("posicao x: ", linha)
+print("posicao y: ", coluna)
+print("moedas: ", moeda)
+print("life: ", life)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 15:42:00) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+matriz=array(eval(input("Matriz: ")))
+jogadas=input("Jogadas: ")
+
+moeda=0
+life=100
+
+linha=0
+coluna=0
+
+for i in jogadas:
+	
+	if(matriz[linha,coluna]<0)or(matriz[linha,coluna]>shape(matriz)[0])or(matriz[linha,coluna]>shape(matriz)[1]):
+		matriz[linha,coluna]=matriz[linha,coluna]
+	if(jogadas[i]=='A'):		
+		coluna=coluna-1
+	elif(jogadas[i]=='D'):
+		coluna=coluna+1
+	elif(jogadas[i]=='W'):
+		linha=linha-1
+	elif(jogadas[i]=='S'):
+		linha=linha+1
+		
+	if(matriz[linha,coluna]==0):
+		matriz[linha,coluna]=matriz[linha,coluna]
+	elif(matriz[linha,coluna]==11):
+		moeda=moeda+1
+	elif(matriz[linha,coluna]==22):
+		life=life-5
+	elif(matriz[linha,coluna]==33):
+		matriz[linha,coluna]=matriz[linha-1,coluna-1]
+		
+print("posicao x: ", linha)
+print("posicao y: ", coluna)
+print("moedas: ", moeda)
+print("life: ", life)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 15:44:11) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+matriz=array(eval(input("Matriz: ")))
+jogadas=input("Jogadas: ")
+
+moeda=0
+life=100
+
+linha=0
+coluna=0
+
+for i in jogadas:
+	
+	if(matriz[linha,coluna]<0)or(matriz[linha,coluna]>shape(matriz)[0])or(matriz[linha,coluna]>shape(matriz)[1]):
+		matriz[linha,coluna]=matriz[linha,coluna]
+	if(i=='A'):		
+		coluna=coluna-1
+	elif(i=='D'):
+		coluna=coluna+1
+	elif(i=='W'):
+		linha=linha-1
+	elif(i=='S'):
+		linha=linha+1
+		
+	if(matriz[linha,coluna]==0):
+		matriz[linha,coluna]=matriz[linha,coluna]
+	elif(matriz[linha,coluna]==11):
+		moeda=moeda+1
+	elif(matriz[linha,coluna]==22):
+		life=life-5
+	elif(matriz[linha,coluna]==33):
+		matriz[linha,coluna]=matriz[linha-1,coluna-1]
+		
+print("posicao x: ", linha)
+print("posicao y: ", coluna)
+print("moedas: ", moeda)
+print("life: ", life)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 15:45:47) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+matriz=array(eval(input("Matriz: ")))
+jogadas=input("Jogadas: ")
+
+moeda=0
+life=100
+
+linha=0
+coluna=0
+
+for i in jogadas:
+	
+	if(matriz[linha,coluna]<0)or(matriz[linha,coluna]>shape(matriz)[0])or(matriz[linha,coluna]>shape(matriz)[1]):
+		matriz[linha-1,coluna-1]=matriz[linha-1,coluna-1]
+	if(i=='A'):		
+		coluna=coluna-1
+	elif(i=='D'):
+		coluna=coluna+1
+	elif(i=='W'):
+		linha=linha-1
+	elif(i=='S'):
+		linha=linha+1
+		
+	if(matriz[linha,coluna]==0):
+		matriz[linha,coluna]=matriz[linha,coluna]
+	elif(matriz[linha,coluna]==11):
+		moeda=moeda+1
+	elif(matriz[linha,coluna]==22):
+		life=life-5
+	elif(matriz[linha,coluna]==33):
+		matriz[linha,coluna]=matriz[linha-1,coluna-1]
+		
+print("posicao x: ", linha)
+print("posicao y: ", coluna)
+print("moedas: ", moeda)
+print("life: ", life)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 15:46:01) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+matriz=array(eval(input("Matriz: ")))
+jogadas=input("Jogadas: ")
+
+moeda=0
+life=100
+
+linha=0
+coluna=0
+
+for i in jogadas:
+	
+	if(matriz[linha,coluna]<0)or(matriz[linha,coluna]>shape(matriz)[0])or(matriz[linha,coluna]>shape(matriz)[1]):
+		matriz[linha-1,coluna-1]=matriz[linha-1,coluna-1]
+	if(i=='A'):		
+		coluna=coluna-1
+	elif(i=='D'):
+		coluna=coluna+1
+	elif(i=='W'):
+		linha=linha-1
+	elif(i=='S'):
+		linha=linha+1
+		
+	if(matriz[linha,coluna]==0):
+		matriz[linha,coluna]=matriz[linha,coluna]
+	elif(matriz[linha,coluna]==11):
+		moeda=moeda+1
+	elif(matriz[linha,coluna]==22):
+		life=life-5
+	elif(matriz[linha,coluna]==33):
+		matriz[linha,coluna]=matriz[linha-1,coluna-1]
+		
+print("posicao x: ", linha)
+print("posicao y: ", coluna)
+print("moedas: ", moeda)
+print("life: ", life)		
+-- EXECUTION TIME:
+1.23471
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/1280/main.py", line 26, in <module>
+    if(matriz[linha,coluna]==0):
+IndexError: index 13 is out of bounds for axis 1 with size 13
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

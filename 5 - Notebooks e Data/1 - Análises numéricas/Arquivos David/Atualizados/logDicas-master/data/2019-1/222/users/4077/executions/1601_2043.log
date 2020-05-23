@@ -1,0 +1,496 @@
+== TEST (2019-03-27 18:06:30) 
+-- CODE:
+notas = float(input("notas parciais"))
+
+-- OUTPUT:
+187
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 03:09:22) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 + nota2 + nota3 + nota4)/4
+
+if (media >= 5)
+print(media)
+print("aprovacao")
+
+-- ERROR:
+File "XXXX", line 8
+    if (media >= 5)
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 03:09:35) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 + nota2 + nota3 + nota4)/4
+
+if (media >= 5):
+print(media)
+print("aprovacao")
+
+-- ERROR:
+File "XXXX", line 9
+    print(media)
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 03:09:46) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 + nota2 + nota3 + nota4)/4
+
+if (media >= 5):
+print("media")
+print("aprovacao")
+
+-- ERROR:
+File "XXXX", line 9
+    print("media")
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 03:10:10) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 + nota2 + nota3 + nota4)/4
+
+if (media >= 5):
+print("aprovacao")
+
+-- ERROR:
+File "XXXX", line 9
+    print("aprovacao")
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 03:10:22) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 + nota2 + nota3 + nota4)/4
+
+if (media >= 5):
+	print("aprovacao")
+
+-- OUTPUT:
+aprovacao
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 03:11:13) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 + nota2 + nota3 + nota4)/4
+
+if (media >= 5):
+	print("aprovacao")
+else:
+	print(nao aprovado)
+
+-- ERROR:
+File "XXXX", line 11
+    print(nao aprovado)
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 03:11:32) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 + nota2 + nota3 + nota4)/4
+
+if (media >= 5):
+	print("aprovacao")
+else:
+	print("nao aprovado")
+
+-- OUTPUT:
+aprovacao
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 03:12:05) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 + nota2 + nota3 + nota4)/4
+
+print("media")
+
+-- OUTPUT:
+media
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-10 03:12:22) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 + nota2 + nota3 + nota4)/4
+
+print("media")
+
+-- EXECUTION TIME:
+0.138849
+-- TEST CASE 1:
+---- input:
+8
+8.5
+7
+9
+---- correct output:
+8.2
+---- user output:
+media
+-- TEST CASE 2:
+---- input:
+7
+7
+7
+7
+---- correct output:
+7.0
+---- user output:
+media
+-- TEST CASE 3:
+---- input:
+5.75
+6.9
+7.95
+8.99
+---- correct output:
+7.94
+---- user output:
+media
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 03:13:26) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 + nota2 + nota3 + nota4)/4
+
+print(round("media, 2"))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(round("media, 2"))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 03:14:22) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 + nota2 + nota3 + nota4)/4
+
+print(round(media, 2))
+
+-- OUTPUT:
+8.12
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 03:15:04) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 + nota2 + nota3 + nota4)/3
+
+print(round(media, 2))
+
+-- OUTPUT:
+10.83
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 03:15:33) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 + nota2 + nota3 + nota4)/2
+
+print(round(media, 2))
+
+-- OUTPUT:
+16.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-10 03:15:48) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 + nota2 + nota3 + nota4)/2
+
+print(round(media, 2))
+
+-- EXECUTION TIME:
+0.117143
+-- TEST CASE 1:
+---- input:
+8
+8.5
+7
+9
+---- correct output:
+8.2
+---- user output:
+16.25
+-- TEST CASE 2:
+---- input:
+7
+7
+7
+7
+---- correct output:
+7.0
+---- user output:
+14.0
+-- TEST CASE 3:
+---- input:
+5.75
+6.9
+7.95
+8.99
+---- correct output:
+7.94
+---- user output:
+14.8
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-10 03:15:54) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 + nota2 + nota3 + nota4)/3
+
+print(round(media, 2))
+
+-- EXECUTION TIME:
+0.176404
+-- TEST CASE 1:
+---- input:
+8
+8.5
+7
+9
+---- correct output:
+8.2
+---- user output:
+10.83
+-- TEST CASE 2:
+---- input:
+7
+7
+7
+7
+---- correct output:
+7.0
+---- user output:
+9.33
+-- TEST CASE 3:
+---- input:
+5.75
+6.9
+7.95
+8.99
+---- correct output:
+7.94
+---- user output:
+9.86
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 03:15:58) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 + nota2 + nota3 + nota4)/3
+
+print(round(media, 2))
+
+-- OUTPUT:
+10.83
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-10 03:16:02) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 + nota2 + nota3 + nota4)/3
+
+print(round(media, 2))
+
+-- EXECUTION TIME:
+0.163529
+-- TEST CASE 1:
+---- input:
+8
+8.5
+7
+9
+---- correct output:
+8.2
+---- user output:
+10.83
+-- TEST CASE 2:
+---- input:
+7
+7
+7
+7
+---- correct output:
+7.0
+---- user output:
+9.33
+-- TEST CASE 3:
+---- input:
+5.75
+6.9
+7.95
+8.99
+---- correct output:
+7.94
+---- user output:
+9.86
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 03:17:54) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 * 1 + nota2 * 2 + nota3 *3 + nota4 *)/4
+
+print(round(media, 2))
+
+-- ERROR:
+File "XXXX", line 6
+    media = (nota1 * 1 + nota2 * 2 + nota3 *3 + nota4 *)/4
+                                                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 03:18:11) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 * 1 + nota2 * 2 + nota3 * 3 + nota4 * 4)/4
+
+print(round(media, 2))
+
+-- OUTPUT:
+20.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 03:18:38) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 * 1 + nota2 * 2 + nota3 * 3 + nota4 * 4)/10
+
+print(round(media, 2))
+
+-- OUTPUT:
+8.2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-10 03:18:54) 
+-- CODE:
+
+nota1 = float(input("primeira nota: "))
+nota2 = float(input("segunda nota: "))
+nota3 = float(input("terceira nota: "))
+nota4 = float(input("quarta nota: "))
+media = (nota1 * 1 + nota2 * 2 + nota3 * 3 + nota4 * 4)/10
+
+print(round(media, 2))
+
+-- EXECUTION TIME:
+0.117236
+-- TEST CASE 1:
+---- input:
+8
+8.5
+7
+9
+---- correct output:
+8.2
+---- user output:
+8.2
+-- TEST CASE 2:
+---- input:
+7
+7
+7
+7
+---- correct output:
+7.0
+---- user output:
+7.0
+-- TEST CASE 3:
+---- input:
+5.75
+6.9
+7.95
+8.99
+---- correct output:
+7.94
+---- user output:
+7.94
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

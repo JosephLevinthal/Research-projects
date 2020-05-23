@@ -1,0 +1,92 @@
+== TEST (2019-06-09 21:22:24) 
+-- CODE:
+from numpy import *
+
+time_casa = array(eval(input("Gols realizados: ")))
+time_adv = array(eval(input("Gols sofridos: ")))
+resultado = zeros(3, dtype=int)
+
+for x,y in zip(time_casa,time_adv):
+	if(x > y):
+		resultados[0] += 1
+	elif(x < y):
+		resultados[2] += 1
+	else:
+		resultados[1] += 1
+
+print(resultados)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 21:23:26) 
+-- CODE:
+from numpy import *
+
+time_casa = array(eval(input("Gols realizados: ")))
+time_adv = array(eval(input("Gols sofridos: ")))
+resultado = zeros(3, dtype=int)
+
+for x,y in zip(time_casa,time_adv):
+	if(x > y):
+		resultado[0] += 1
+	elif(x < y):
+		resultado[2] += 1
+	else:
+		resultado[1] += 1
+
+print(resultado)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-09 21:25:34) 
+-- CODE:
+from numpy import *
+
+time_casa = array(eval(input("Gols realizados: ")))
+time_adv = array(eval(input("Gols sofridos: ")))
+resultado = zeros(3, dtype=int)
+
+for x,y in zip(time_casa,time_adv):
+	if(x > y):
+		resultado[0] += 1
+	elif(x < y):
+		resultado[2] += 1
+	else:
+		resultado[1] += 1
+
+print(resultado)
+-- EXECUTION TIME:
+0.925589
+-- TEST CASE 1:
+---- input:
+[2,3,2,4,3,5,3,4,2,3,1,0]
+[3,3,1,0,2,3,3,0,1,2,1,1]
+---- correct output:
+[7 3 2]
+---- user output:
+[7 3 2]
+-- TEST CASE 2:
+---- input:
+[1,2,1,2,1,2,1,2,0]
+[3,5,3,3,3,3,3,3,3]
+---- correct output:
+[0 0 9]
+---- user output:
+[0 0 9]
+-- TEST CASE 3:
+---- input:
+[1,2,2,2,2,1,1,2,2,1,1,2,2]
+[0,1,1,1,0,0,0,0,0,0,1,1,1]
+---- correct output:
+[12 1 0]
+---- user output:
+[12  1  0]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

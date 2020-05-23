@@ -1,0 +1,156 @@
+== TEST (2019-05-25 17:07:32) 
+-- CODE:
+v = input("str: ")
+t = 0
+n = len(v)
+while t < n:
+	a = a + v[t] + v[t+1] + v [t+2] + "."
+	t = t + 3
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    a = a + v[t] + v[t+1] + v [t+2] + "."
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 17:08:00) 
+-- CODE:
+v = input("str: ")
+t = 0
+n = len(v)
+a = ""
+while t < n:
+	a = a + v[t] + v[t+1] + v [t+2] + "."
+	t = t + 3
+print(a)
+-- OUTPUT:
+123.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 17:09:03) 
+-- CODE:
+v = input("str: ")
+t = 0
+n = len(v)
+a = ""
+while t < n:
+	if t - n = 3:
+		a = a + v[t] + v[t+1] + v [t+2] + "."
+		t = t + 3
+	else:
+		a = a + v[t] + v[t+1] + v [t+2]
+		t = t + 3
+print(a)
+-- ERROR:
+File "XXXX", line 6
+    if t - n = 3:
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 17:09:18) 
+-- CODE:
+v = input("str: ")
+t = 0
+n = len(v)
+a = ""
+while t < n:
+	if t - n == 3:
+		a = a + v[t] + v[t+1] + v [t+2] + "."
+		t = t + 3
+	else:
+		a = a + v[t] + v[t+1] + v [t+2]
+		t = t + 3
+print(a)
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 17:09:26) 
+-- CODE:
+v = input("str: ")
+t = 0
+n = len(v)
+a = ""
+while t < n:
+	if n - t == 3:
+		a = a + v[t] + v[t+1] + v [t+2] + "."
+		t = t + 3
+	else:
+		a = a + v[t] + v[t+1] + v [t+2]
+		t = t + 3
+print(a)
+-- OUTPUT:
+123.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 17:09:44) 
+-- CODE:
+v = input("str: ")
+t = 0
+n = len(v)
+a = ""
+while t < n:
+	if n - t != 3:
+		a = a + v[t] + v[t+1] + v [t+2] + "."
+		t = t + 3
+	else:
+		a = a + v[t] + v[t+1] + v [t+2]
+		t = t + 3
+print(a)
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 17:09:54) 
+-- CODE:
+v = input("str: ")
+t = 0
+n = len(v)
+a = ""
+while t < n:
+	if n - t != 3:
+		a = a + v[t] + v[t+1] + v [t+2] + "."
+		t = t + 3
+	else:
+		a = a + v[t] + v[t+1] + v [t+2]
+		t = t + 3
+print(a)
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-25 17:10:04) 
+-- CODE:
+v = input("str: ")
+t = 0
+n = len(v)
+a = ""
+while t < n:
+	if n - t != 3:
+		a = a + v[t] + v[t+1] + v [t+2] + "."
+		t = t + 3
+	else:
+		a = a + v[t] + v[t+1] + v [t+2]
+		t = t + 3
+print(a)
+-- EXECUTION TIME:
+0.22108
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789.000.987.654.321
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

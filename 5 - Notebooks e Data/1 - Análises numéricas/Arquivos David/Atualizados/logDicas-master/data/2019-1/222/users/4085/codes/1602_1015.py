@@ -1,0 +1,8 @@
+nr1 = int(input("digite um nr"))
+nr2 = int(input("digite um nr"))
+nr3 = int(input("digite um nr"))
+a = (min(nr1,nr2,nr3))
+b = (max(nr1,nr2,nr3))
+print(min(nr1,nr2,nr3))
+print((nr1 + nr2 + nr3) - a - b)
+print(max(nr1,nr2,nr3))

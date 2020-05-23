@@ -1,0 +1,388 @@
+== TEST (2019-05-14 11:49:06) 
+-- CODE:
+qp = int(input("Qi: "))
+pc = int(input("perc: "))
+qr = int(input("Quantidade: "))
+
+mes = 0
+cap = 8000
+
+while(qi < cap) and (qi > 0):
+	qp = qp + (qp * pc/100) - qr
+	mes = mes + 1
+	if(qi <= 0):
+		print("ZERO")
+	elif(qi >= 0):
+		print("MAXIMO")
+	else:
+		qr = int(input("vai: "))
+print(mes)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    while(qi < cap) and (qi > 0):
+NameError: name 'qi' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:49:31) 
+-- CODE:
+qp = int(input("Qi: "))
+pc = int(input("perc: "))
+qr = int(input("Quantidade: "))
+
+mes = 0
+cap = 8000
+
+while(qp < cap) and (qp > 0):
+	qp = qp + (qp * pc/100) - qr
+	mes = mes + 1
+	if(qp <= 0):
+		print("ZERO")
+	elif(qp >= 0):
+		print("MAXIMO")
+	else:
+		qr = int(input("vai: "))
+print(mes)
+-- OUTPUT:
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 11:49:44) 
+-- CODE:
+qp = int(input("Qi: "))
+pc = int(input("perc: "))
+qr = int(input("Quantidade: "))
+
+mes = 0
+cap = 8000
+
+while(qp < cap) and (qp > 0):
+	qp = qp + (qp * pc/100) - qr
+	mes = mes + 1
+	if(qp <= 0):
+		print("ZERO")
+	elif(qp >= 0):
+		print("MAXIMO")
+	else:
+		qr = int(input("vai: "))
+print(mes)
+-- EXECUTION TIME:
+0.27806
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+ZERO
+6
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+ZERO
+5
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:50:47) 
+-- CODE:
+qp = int(input("Qi: "))
+pc = int(input("perc: "))
+qr = int(input("Quantidade: "))
+
+mes = 0
+cap = 8000
+
+while(qp < cap) and (qp > 0):
+	qp = qp + (qp * pc/100) - qr
+	mes = mes + 1
+	
+	if(qp >= 0):
+		print("MAXIMO")
+	elif(qp <= 0):
+		print("ZERO")
+	else:
+		qr = int(input("vai: "))
+print(mes)
+-- OUTPUT:
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:51:12) 
+-- CODE:
+qp = int(input("Qi: "))
+pc = int(input("perc: "))
+qr = int(input("Quantidade: "))
+
+mes = 0
+cap = 8000
+
+while(qp < cap) and (qp > 0):
+	qp = qp + (qp * pc/100) - qr
+	mes = mes + 1
+	
+	if(qp >= 0):
+		print("MAXIMO")
+	elif(qp <= 0):
+		print("ZERO")
+	else:
+		qr = int(input("vai: "))
+
+print(mes)
+-- OUTPUT:
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:51:26) 
+-- CODE:
+qp = int(input("Qi: "))
+pc = int(input("perc: "))
+qr = int(input("Quantidade: "))
+
+mes = 0
+cap = 8000
+
+while(qp < cap) and (qp > 0):
+	qp = qp + (qp * pc/100) - qr
+	mes = mes + 1
+	
+	if(qp >= 0):
+		print("MAXIMO")
+	elif(qp <= 0):
+		print("ZERO")
+	else:
+		qr = int(input("vai: "))
+
+print(mes)
+-- OUTPUT:
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:52:04) 
+-- CODE:
+qp = int(input("Qi: "))
+pc = int(input("perc: "))
+qr = int(input("Quantidade: "))
+
+mes = 0
+cap = 8000
+
+while(qp>0) and (qp<cap):
+	qp = qp + (qp * pc/100) - qr
+	mes = mes + 1
+	
+	if(qp >= 0):
+		print("MAXIMO")
+	elif(qp <= 0):
+		print("ZERO")
+	else:
+		qr = int(input("vai: "))
+
+print(mes)
+-- OUTPUT:
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:52:20) 
+-- CODE:
+qp = int(input("Qi: "))
+pc = int(input("perc: "))
+qr = int(input("Quantidade: "))
+
+mes = 0
+cap = 8000
+
+while(qp>0) and (qp<cap):
+	qp = qp + (qp * pc/100) - qr
+	mes = mes + 1
+	if(qp >= 0):
+		print("MAXIMO")
+	elif(qp <= 0):
+		print("ZERO")
+	else:
+		qr = int(input("vai: "))
+
+print(mes)
+-- OUTPUT:
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 11:52:49) 
+-- CODE:
+qp = int(input("Qi: "))
+pc = int(input("perc: "))
+qr = int(input("Quantidade: "))
+
+mes = 0
+cap = 8000
+
+while(qp>0) and (qp<cap):
+	qp = qp + (qp * pc/100) - qr
+	mes = mes + 1
+	if(qp >= 0):
+		print("MAXIMO")
+	elif(qp <= 0):
+		print("ZERO")
+	else:
+		qr = int(input("vai: "))
+
+print(mes)
+-- EXECUTION TIME:
+0.294116
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+ZERO
+6
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+ZERO
+5
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:54:05) 
+-- CODE:
+qp = int(input("Qi: "))
+pc = int(input("perc: "))
+qr = int(input("Quantidade: "))
+
+mes = 0
+cap = 8000
+
+while(qp>0) and (qp<cap):
+	qp = qp + (qp * pc/100) - qr
+	mes = mes + 1
+	if(qp >= 0):
+		print("MAXIMO")
+	elif(qp <= 0):
+		print("ZERO")
+	else:
+		qr = int(input("vai: "))
+
+print(mes)
+-- OUTPUT:
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

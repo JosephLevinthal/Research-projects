@@ -1,0 +1,97 @@
+== TEST (2019-06-10 21:42:47) 
+-- CODE:
+from numpy import*
+a=array(eval(input("peso: ")))
+b=array(eval(input("altura: ")))
+c=zeros(size(a))
+for i in range(size(a)):
+	c[i]=round((a[i])/((b[i])**2),2)
+print(c)	
+d=max(c)
+print("O MAIOR IMC DA TURMA EH:",d)
+if(d<17):
+	print("MUITO ABAIXO DO PESO")
+if(d>=17 and d<=18.49):
+	print("ABAIXO DO PESO")
+if(d>=18.5 and d<=24.99):
+	print("PESO NORMAL")
+if(d>=25 and d<=29.99):
+	print("ACIMA DO PESO")
+if(d>=30 and d<=34.99):
+	print("OBESIDADE")
+if(d>=35 and d<=39.99):
+	print("OBESIDADE SEVERA")
+if(d>=40):
+	print("OBESIDADE MORBITA")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-10 21:43:32) 
+-- CODE:
+from numpy import*
+a=array(eval(input("peso: ")))
+b=array(eval(input("altura: ")))
+c=zeros(size(a))
+for i in range(size(a)):
+	c[i]=round((a[i])/((b[i])**2),2)
+print(c)	
+d=max(c)
+print("O MAIOR IMC DA TURMA EH:",d)
+if(d<17):
+	print("MUITO ABAIXO DO PESO")
+if(d>=17 and d<=18.49):
+	print("ABAIXO DO PESO")
+if(d>=18.5 and d<=24.99):
+	print("PESO NORMAL")
+if(d>=25 and d<=29.99):
+	print("ACIMA DO PESO")
+if(d>=30 and d<=34.99):
+	print("OBESIDADE")
+if(d>=35 and d<=39.99):
+	print("OBESIDADE SEVERA")
+if(d>=40):
+	print("OBESIDADE MORBITA")
+-- EXECUTION TIME:
+1.18356
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[37.79 31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

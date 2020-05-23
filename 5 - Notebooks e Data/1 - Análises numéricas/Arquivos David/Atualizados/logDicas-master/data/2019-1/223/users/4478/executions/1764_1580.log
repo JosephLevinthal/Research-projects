@@ -1,0 +1,228 @@
+== TEST (2019-05-30 15:40:41) 
+-- CODE:
+from numpy import* 
+notas = array(eval(input("notas: "))
+alunos = array(eval(input("alunos: "))
+
+
+faltou = 0
+aprovados = 0
+reprovados = 0
+medpres = 0
+presentes = 0
+i = 0
+
+while(i < size(notas)):
+	if(notas[i] == -1):
+		faltou = faltou + 1
+		
+	if(notas[i] >= 6 and notas[i] <= 10 ):
+		aprovados = aprovados + 1
+		medpres = medpres + notas[i]
+		
+	if(notas[i] >= 0 and notas[i] < 6):
+		reprovados = reprovados + 1
+		medpres = medpres + notas[i]
+		
+	if(notas[i] == max(notas)):
+		maior_nota = alunos[i]
+	i = i + 1
+	
+alunosP = reprovados + aprovados
+media = medpres/alunosP
+
+print(faltou)
+print(aprovados)
+print(reprovados)
+print(round((media),2))
+print(maior_nota)
+-- ERROR:
+File "XXXX", line 3
+    alunos = array(eval(input())
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 15:41:15) 
+-- CODE:
+from numpy import* 
+notas = array(eval(input("notas: ")))
+alunos = array(input("alunos: "))
+
+
+faltou = 0
+aprovados = 0
+reprovados = 0
+medpres = 0
+presentes = 0
+i = 0
+
+while(i < size(notas)):
+	if(notas[i] == -1):
+		faltou = faltou + 1
+		
+	if(notas[i] >= 6 and notas[i] <= 10 ):
+		aprovados = aprovados + 1
+		medpres = medpres + notas[i]
+		
+	if(notas[i] >= 0 and notas[i] < 6):
+		reprovados = reprovados + 1
+		medpres = medpres + notas[i]
+		
+	if(notas[i] == max(notas)):
+		maior_nota = alunos[i]
+	i = i + 1
+	
+alunosP = reprovados + aprovados
+media = medpres/alunosP
+
+print(faltou)
+print(aprovados)
+print(reprovados)
+print(round((media),2))
+print(maior_nota)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import* 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 15:41:20) 
+-- CODE:
+from numpy import* 
+notas = array(eval(input("notas: ")))
+alunos = array(input("alunos: "))
+
+
+faltou = 0
+aprovados = 0
+reprovados = 0
+medpres = 0
+presentes = 0
+i = 0
+
+while(i < size(notas)):
+	if(notas[i] == -1):
+		faltou = faltou + 1
+		
+	if(notas[i] >= 6 and notas[i] <= 10 ):
+		aprovados = aprovados + 1
+		medpres = medpres + notas[i]
+		
+	if(notas[i] >= 0 and notas[i] < 6):
+		reprovados = reprovados + 1
+		medpres = medpres + notas[i]
+		
+	if(notas[i] == max(notas)):
+		maior_nota = alunos[i]
+	i = i + 1
+	
+alunosP = reprovados + aprovados
+media = medpres/alunosP
+
+print(faltou)
+print(aprovados)
+print(reprovados)
+print(round((media),2))
+print(maior_nota)
+-- EXECUTION TIME:
+0.433833
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1764/1580/main.py", line 26, in <module>
+    maior_nota = alunos[i]
+IndexError: too many indices for array
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 15:53:38) 
+-- CODE:
+from numpy import* 
+
+notas = array(eval(input("notas:")))
+alunos = array(eval(input("alunos:")))
+
+
+faltou = 0
+aprovados = 0
+reprovados = 0
+soma_das_anotas = 0
+i = 0
+
+while(i < size(notas)):
+	
+	if(notas[i] == -1):
+		faltou = faltou + 1
+		
+	if(notas[i] >= 6 and notas[i] <= 10 ):
+		aprovados = aprovados + 1
+		soma_das_anotas = soma_das_anotas + notas[i]
+		
+	if(notas[i] >= 0 and notas[i] < 6):
+		reprovados = reprovados + 1
+		soma_das_anotas = soma_das_anotas + notas[i]
+		
+	if(notas[i] == max(notas)):
+		maior_nota = alunos[i]
+		
+	i = i + 1
+	
+alunos_Presentes = reprovados + aprovados
+media = soma_das_anotas/alunos_Presentes
+
+print(faltou)
+print(aprovados)
+print(reprovados)
+print(round((media),2))
+print(maior_nota)
+-- EXECUTION TIME:
+0.333357
+-- TEST CASE 1:
+---- input:
+[9,8,7,6,5,4,3,2,1,-1,-1,-1]
+['A','B','C','D','E','F','G','H','I','J','K','L']
+---- correct output:
+3
+4
+5
+5.0
+A
+---- user output:
+3
+4
+5
+5.0
+A
+-- TEST CASE 2:
+---- input:
+[-1,1.2,-1,2.3,-1,3.4,-1,4.5,-1,5.6,-1]
+['ALICE','BENTO','CLARA','DAVI','ELSON','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+6
+0
+5
+3.4
+JULIA
+---- user output:
+6
+0
+5
+3.4
+JULIA
+-- TEST CASE 3:
+---- input:
+[1.23,3.45,5.67,6.78,7.89,8.9,9,10,0,9.8,7.6]
+['CLARA','DAVI','ELSON','ALICE','BENTO','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+0
+7
+4
+6.39
+HELOISA
+---- user output:
+0
+7
+4
+6.39
+HELOISA
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

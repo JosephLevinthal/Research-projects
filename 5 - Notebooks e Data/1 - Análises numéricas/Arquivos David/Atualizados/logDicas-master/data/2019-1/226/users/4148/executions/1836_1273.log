@@ -1,0 +1,44 @@
+== TEST (2019-06-25 11:27:59) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+saida = array([50,-120,350,870])
+saida = saida.T
+
+eq = array([[1,-1,0,0],[0,1,-1,0],[0,0,1,0],[1,0,0,1]])
+
+jj= dot(inv(eq), saida)
+
+print(jj)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:29:43) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+saida = array([50,-120,350,870])
+saida = saida.T
+
+eq = array([[1,-1,0,0],[0,1,-1,0],[0,0,1,0],[1,0,0,1]])
+
+jj= dot(inv(eq), saida)
+
+print(jj)
+-- EXECUTION TIME:
+1.18308
+-- TEST CASE 1:
+---- input:
+Não_há
+---- correct output:
+[280. 230. 350. 590.]
+---- user output:
+[280. 230. 350. 590.]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

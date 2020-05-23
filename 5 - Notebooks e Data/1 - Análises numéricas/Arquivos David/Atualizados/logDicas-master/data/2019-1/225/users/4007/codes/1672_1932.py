@@ -1,0 +1,6 @@
+do1 = float(input("distancia entre os olhos: "))
+dnq1 = float(input("distancia/nariz e queixo: "))
+d02 = float(input("distancia entre os olhos: ")) 
+dnq2 = float(input("distancia/nariz e queixo: "))
+d03 = float(input("distancia entre os olhos: ")) 
+dnq3 = float(input("distancia/nariz e queixo: "))

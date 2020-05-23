@@ -1,0 +1,88 @@
+== TEST (2019-04-25 10:30:27) 
+-- CODE:
+from math import*
+
+# Leitura dos lados do triangulo a, b, and c
+a = float(input ("Lado 1: "))
+b = float(input ("Lado 2: "))
+c = float(input ("Lado 3: "))
+
+print("Entradas:", a, ",", b, ",", c)
+
+# Testa se pelo menos uma das entradas eh negativa 
+if (a>0 and b>0 and c>0):
+	if (a+b > c and c+b >a and c+a > b):
+		s = (a + b + c) / 2.0
+		area = sqrt(s * (s-a) * (s-b) * (s-c))
+		area = round(area, 3)
+		print("Area:", area)
+	else:
+		print("Area: invalida")
+else:
+	print("Area: invalida")
+
+-- OUTPUT:
+Entradas: -11.0 , 22.0 , 33.0
+Area: invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 10:30:35) 
+-- CODE:
+from math import*
+
+# Leitura dos lados do triangulo a, b, and c
+a = float(input ("Lado 1: "))
+b = float(input ("Lado 2: "))
+c = float(input ("Lado 3: "))
+
+print("Entradas:", a, ",", b, ",", c)
+
+# Testa se pelo menos uma das entradas eh negativa 
+if (a>0 and b>0 and c>0):
+	if (a+b > c and c+b >a and c+a > b):
+		s = (a + b + c) / 2.0
+		area = sqrt(s * (s-a) * (s-b) * (s-c))
+		area = round(area, 3)
+		print("Area:", area)
+	else:
+		print("Area: invalida")
+else:
+	print("Area: invalida")
+
+-- EXECUTION TIME:
+0.159619
+-- TEST CASE 1:
+---- input:
+-11.0
+22.0
+33.0
+---- correct output:
+Entradas: -11.0 , 22.0 , 33.0
+Area: invalida
+---- user output:
+Entradas: -11.0 , 22.0 , 33.0
+Area: invalida
+-- TEST CASE 2:
+---- input:
+1.61
+2.40
+2.89
+---- correct output:
+Entradas: 1.61 , 2.4 , 2.89
+Area: 1.932
+---- user output:
+Entradas: 1.61 , 2.4 , 2.89
+Area: 1.932
+-- TEST CASE 3:
+---- input:
+11.0
+22.0
+33.0
+---- correct output:
+Entradas: 11.0 , 22.0 , 33.0
+Area: invalida
+---- user output:
+Entradas: 11.0 , 22.0 , 33.0
+Area: invalida
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

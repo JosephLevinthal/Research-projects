@@ -1,0 +1,245 @@
+== TEST (2019-04-17 18:35:39) 
+-- CODE:
+nome = lil 
+print ("lil" *2 )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    nome = lil 
+NameError: name 'lil' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-17 18:35:59) 
+-- CODE:
+nome = input("") 
+print ("lil" *2 )
+-- OUTPUT:
+lillil
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-17 18:36:15) 
+-- CODE:
+nome = input("") 
+print (nome *2 )
+-- OUTPUT:
+livrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-17 18:36:26) 
+-- CODE:
+nome = input("") 
+print ( nome, *2 )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print ( nome, *2 )
+TypeError: print() argument after * must be an iterable, not int
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:43:33) 
+-- CODE:
+nome = input("") 
+print ("abra +" nome, *2 )
+-- ERROR:
+File "XXXX", line 2
+    print ("abra +" nome, *2 )
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:43:42) 
+-- CODE:
+nome = input("") 
+print ("abra +", nome, *2 )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print ("abra +", nome, *2 )
+TypeError: print() argument after * must be an iterable, not int
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:43:44) 
+-- CODE:
+nome = input("") 
+print ("abra +", nome, *2 )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print ("abra +", nome, *2 )
+TypeError: print() argument after * must be an iterable, not int
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:43:48) 
+-- CODE:
+nome = input("") 
+print ( nome, *2 )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print ( nome, *2 )
+TypeError: print() argument after * must be an iterable, not int
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:43:50) 
+-- CODE:
+nome = input("") 
+print ( nome, *2 )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print ( nome, *2 )
+TypeError: print() argument after * must be an iterable, not int
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:44:56) 
+-- CODE:
+nome = input("objeto") 
+numero = int("numero de vezes: ")
+print ( nome, *2 )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    numero = int("numero de vezes: ")
+ValueError: invalid literal for int() with base 10: 'numero de vezes: '
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:45:12) 
+-- CODE:
+nome = input("objeto") 
+numero = int("numero de vezes: ")
+print ( nome, *numero )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    numero = int("numero de vezes: ")
+ValueError: invalid literal for int() with base 10: 'numero de vezes: '
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:45:23) 
+-- CODE:
+nome = input("objeto: ") 
+numero = int("numero de vezes: ")
+print ( nome, *numero )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    numero = int("numero de vezes: ")
+ValueError: invalid literal for int() with base 10: 'numero de vezes: '
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:45:55) 
+-- CODE:
+nome = input("objeto: ") 
+numero = int(input("numero de vezes: "))
+print ( nome, *numero )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print ( nome, *numero )
+TypeError: print() argument after * must be an iterable, not int
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:46:19) 
+-- CODE:
+nome = input("objeto: ") 
+numero = int(input("numero de vezes: "))
+print ( nome * numero )
+-- OUTPUT:
+livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:46:54) 
+-- CODE:
+nome = input("objeto: ") 
+numero = int(input("numero de vezes: "))
+print ("abra" nome * numero )
+-- ERROR:
+File "XXXX", line 3
+    print ("abra" nome * numero )
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:47:01) 
+-- CODE:
+nome = input("objeto: ") 
+numero = int(input("numero de vezes: "))
+print ("abra" , nome * numero )
+-- OUTPUT:
+abra livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:47:50) 
+-- CODE:
+nome = input("objeto: ") 
+numero = int(input("numero de vezes: "))
+print ("abra" * numero , nome * numero )
+-- OUTPUT:
+abraabraabraabraabraabraabraabra livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:48:45) 
+-- CODE:
+nome = input("objeto: ") 
+numero = int(input("numero de vezes: "))
+print ("abra"+ nome * numero )
+-- OUTPUT:
+abralivrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:49:14) 
+-- CODE:
+nome = input("objeto: ") 
+numero = int(input("numero de vezes: "))
+print (abra + nome * numero )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print (abra + nome * numero )
+NameError: name 'abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:49:34) 
+-- CODE:
+nome = input("objeto: ") 
+numero = int(input("numero de vezes: "))
+print ( abra , nome * numero )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print ( abra , nome * numero )
+NameError: name 'abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:50:51) 
+-- CODE:
+nome = input("objeto: ") 
+numero = int(input("numero de vezes: "))
+print ("abra" + nome,* numero )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print ("abra" + nome,* numero )
+TypeError: print() argument after * must be an iterable, not int
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:51:10) 
+-- CODE:
+nome = input("objeto: ") 
+numero = int(input("numero de vezes: "))
+print ("abra", nome * numero )
+-- OUTPUT:
+abra livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:54:11) 
+-- CODE:
+nome = input("objeto: ") 
+numero = int(input("numero de vezes: "))
+print (abra + nome * numero )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print (abra + nome * numero )
+NameError: name 'abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:54:38) 
+-- CODE:
+nome = input("objeto: ") 
+numero = int(input("numero de vezes: "))
+print (abra, "+", nome * numero )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print (abra, "+", nome * numero )
+NameError: name 'abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-20 18:55:05) 
+-- CODE:
+nome = input("objeto: ") 
+numero = int(input("numero de vezes: "))
+print ((abra + nome) * numero )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print ((abra + nome) * numero )
+NameError: name 'abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

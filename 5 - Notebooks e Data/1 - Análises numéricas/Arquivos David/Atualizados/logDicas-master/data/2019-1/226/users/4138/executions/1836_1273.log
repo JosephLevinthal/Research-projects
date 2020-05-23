@@ -1,0 +1,297 @@
+== TEST (2019-06-20 11:37:36) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+u = array([x1-x2,x2-x3,x3,x1+x4])
+
+v = array([50,-120,350,870])
+
+r = dot(inv(u),v.T)
+
+print(round(r[0]),1)
+print(round(r[1]),1)
+print(round(r[2]),1)
+print(round(r[3]),1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 11:42:25) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+
+
+u = array([x1-x2,0,0,0],
+			 [x2-x3,0,0,0],
+			 [x3,0,0,0],
+			 [x1+x4,0,0,0])
+
+v = array([50,-120,350,870])
+
+r = dot(inv(u),v.T)
+
+print(round(r[0]),1)
+print(round(r[1]),1)
+print(round(r[2]),1)
+print(round(r[3]),1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 11:44:01) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+x1 - x2 = 50
+x2-x3 = -120
+x3 = 350
+x1 + x4 =870
+
+
+u = array([x1-x2,0,0,0],
+			 [x2-x3,0,0,0],
+			 [x3,0,0,0],
+			 [x1+x4,0,0,0])
+
+v = array([50,-120,350,870])
+
+r = dot(inv(u),v.T)
+
+print(round(r[0]),1)
+print(round(r[1]),1)
+print(round(r[2]),1)
+print(round(r[3]),1)
+-- ERROR:
+File "XXXX", line 3
+    x1 - x2 = 50
+    ^
+SyntaxError: can't assign to operator
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 11:45:44) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+x1 - x2 = 50
+x2-x3 = -120
+x3 = 350
+x1 + x4 =870
+
+
+u = array([280-230,0,0,0],
+			 [220 - 350,0,0,0],
+			 [350,0,0,0],
+			 [280 + 590,0,0,0])
+
+v = array([50,-120,350,870])
+
+r = dot(inv(u),v.T)
+
+print(round(r[0]),1)
+print(round(r[1]),1)
+print(round(r[2]),1)
+print(round(r[3]),1)
+-- ERROR:
+File "XXXX", line 3
+    x1 - x2 = 50
+    ^
+SyntaxError: can't assign to operator
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 11:45:49) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+
+u = array([280-230,0,0,0],
+			 [220 - 350,0,0,0],
+			 [350,0,0,0],
+			 [280 + 590,0,0,0])
+
+v = array([50,-120,350,870])
+
+r = dot(inv(u),v.T)
+
+print(round(r[0]),1)
+print(round(r[1]),1)
+print(round(r[2]),1)
+print(round(r[3]),1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 10:19:00) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+
+
+m = array([1,-1,0,0],
+			 [1-1,0,0],
+			 [1,0,0,0],
+			 [1,1,0,0])
+
+v = array([50,-120,350,870])
+
+r = dot(inv(m),v.T)
+
+print(r)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 10:21:28) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+
+
+m = array([[1,-1,0,0],
+			 [1-1,0,0],
+			 [1,0,0,0],
+			 [1,1,0,0]])
+
+v = array([50,-120,350,870])
+
+r = dot(inv(m),v.T)
+
+print(r)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 10:22:07) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+
+
+m = array([[1,-1,0,0],
+			 [1-1,0,0],
+			 [1,0,0,0],
+			 [1,1,0,0]])
+
+v = array([[50,-120,350,870]])
+
+r = dot(inv(m),v.T)
+
+print(r)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 10:23:14) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+
+
+m = array([[1,-1,0,0],
+			 [1,-1,0,0],
+			 [1,0,0,0],
+			 [1,1,0,0]])
+
+v = array([50,-120,350,870])
+
+r = dot(inv(m),v.T)
+
+print(r)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 10:25:11) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+
+
+m = array([[1,-1,0,0],
+			 [0,1,-1,0],
+			 [0,0,1,0],
+			 [1,0,0,1]])
+
+v = array([50,-120,350,870])
+
+r = dot(inv(m),v.T)
+
+print(r)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 10:25:14) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+
+
+m = array([[1,-1,0,0],
+			 [0,1,-1,0],
+			 [0,0,1,0],
+			 [1,0,0,1]])
+
+v = array([50,-120,350,870])
+
+r = dot(inv(m),v.T)
+
+print(r)
+-- EXECUTION TIME:
+1.07975
+-- TEST CASE 1:
+---- input:
+Não_há
+---- correct output:
+[280. 230. 350. 590.]
+---- user output:
+[280. 230. 350. 590.]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 10:53:53) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+
+
+m = array([[1,-1,0,0],
+			 [0,1,-1,0],
+			 [0,0,1,0],
+			 [1,0,0,1]])
+
+v = array([50,-120,350,870])
+
+r = dot(inv(m),v.T)
+
+print(r)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

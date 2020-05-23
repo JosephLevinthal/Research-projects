@@ -1,0 +1,67 @@
+== TEST (2019-06-26 18:10:12) 
+-- CODE:
+lint = [x for x in (10)]
+print (list)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    lint = [x for x in (10)]
+TypeError: 'int' object is not iterable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:10:32) 
+-- CODE:
+lint = [x for x in range(0,10)]
+print (list)
+-- OUTPUT:
+<class 'list'>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:10:49) 
+-- CODE:
+list = [x for x in range(0,10)]
+print (list)
+-- OUTPUT:
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:21:15) 
+-- CODE:
+list = [x**2 for x in range(0,10)]
+print (list)
+-- OUTPUT:
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:21:31) 
+-- CODE:
+list = [x**2 for x in range(0,9)]
+print (list)
+-- OUTPUT:
+[0, 1, 4, 9, 16, 25, 36, 49, 64]
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:39:48) 
+-- CODE:
+from numpy import*
+
+mat=array(eval(input("entre com os valores da matriz: ")))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:45:23) 
+-- CODE:
+from numpy import*
+
+mat=array(eval(input("entre com os valores da matriz: ")))
+mat=shape(mat)[0]
+i=i+1
+j=j+1
+k=k+1
+for (i!=j):
+	
+-- ERROR:
+File "XXXX", line 8
+    for (i!=j):
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

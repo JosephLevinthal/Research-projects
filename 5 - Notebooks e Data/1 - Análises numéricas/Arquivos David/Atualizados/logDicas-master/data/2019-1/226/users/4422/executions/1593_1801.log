@@ -1,0 +1,429 @@
+== TEST (2019-04-01 22:44:17) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = float(input("Numero de repeticoes: "))
+frase = (abra + nome) * vezes
+print(frase)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    frase = (abra + nome) * vezes
+NameError: name 'abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 22:45:09) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = float(input("Numero de repeticoes: "))
+frase = (Abra + nome) * vezes
+print(frase)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    frase = (Abra + nome) * vezes
+NameError: name 'Abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 22:46:53) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = float(input("Numero de repeticoes: "))
+
+print(("Abra" + nome)* vezes )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(("Abra" + nome)* vezes )
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 22:47:00) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = float(input("Numero de repeticoes: "))
+
+print(("Abra" + nome)* vezes )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(("Abra" + nome)* vezes )
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 22:47:14) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+
+print(("Abra" + nome)* vezes )
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 22:47:24) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+
+print(("Abra" + nome)* vezes )
+-- EXECUTION TIME:
+0.185926
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+AbracarroAbracarro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abracaixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 22:47:44) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+
+print(("Abra" + nome)* vezes" " )
+-- ERROR:
+File "XXXX", line 4
+    print(("Abra" + nome)* vezes" " )
+                                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 22:48:29) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+
+print("("Abra" + nome)* vezes)"
+-- ERROR:
+File "XXXX", line 4
+    print("("Abra" + nome)* vezes)"
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 22:55:32) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+
+print(( "Abra" + nome ) * vezes)
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 22:57:47) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+
+print("(( "Abra" + nome ) * vezes)")
+-- ERROR:
+File "XXXX", line 4
+    print("(( "Abra" + nome ) * vezes)")
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 22:59:14) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+
+print(( "Abra" + nome" " ) * vezes)
+-- ERROR:
+File "XXXX", line 4
+    print(( "Abra" + nome" " ) * vezes)
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 22:59:14) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+
+print(( "Abra" + nome" " ) * vezes)
+-- ERROR:
+File "XXXX", line 4
+    print(( "Abra" + nome" " ) * vezes)
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 22:59:14) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+
+print(( "Abra" + nome" " ) * vezes)
+-- ERROR:
+File "XXXX", line 4
+    print(( "Abra" + nome" " ) * vezes)
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 22:59:15) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+
+print(( "Abra" + nome" " ) * vezes)
+-- ERROR:
+File "XXXX", line 4
+    print(( "Abra" + nome" " ) * vezes)
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 22:59:20) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+
+print(( "Abra" + nome" " ) * vezes)
+-- ERROR:
+File "XXXX", line 4
+    print(( "Abra" + nome" " ) * vezes)
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 22:59:22) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+
+print(( "Abra" + nome " " ) * vezes)
+-- ERROR:
+File "XXXX", line 4
+    print(( "Abra" + nome " " ) * vezes)
+                            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 22:59:23) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+
+print(( "Abra" + nome " " ) * vezes)
+-- ERROR:
+File "XXXX", line 4
+    print(( "Abra" + nome " " ) * vezes)
+                            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 22:59:25) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+
+print(( "Abra" + nome " " ) * vezes)
+-- EXECUTION TIME:
+0.146334
+-- ERROR:
+  File "/home/codebench/codes/1593/1801/main.py", line 4
+    print(( "Abra" + nome " " ) * vezes)
+                            ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:10:23) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+
+print(( "Abra" + nome ) * vezes)" "
+-- ERROR:
+File "XXXX", line 4
+    print(( "Abra" + nome ) * vezes)" "
+                                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:10:24) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+
+print(( "Abra" + nome ) * vezes)" "
+-- ERROR:
+File "XXXX", line 4
+    print(( "Abra" + nome ) * vezes)" "
+                                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:10:34) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+
+print(( "Abra" + nome ) * vezes " ")
+-- ERROR:
+File "XXXX", line 4
+    print(( "Abra" + nome ) * vezes " ")
+                                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:12:16) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+frase = ( "Abra" + nome ) * vezes " "
+print(frase)
+-- ERROR:
+File "XXXX", line 3
+    frase = ( "Abra" + nome ) * vezes " "
+                                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:12:39) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+frase = ( "Abra" + nome ) * vezes 
+print(frase)
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:13:11) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+frase = ( "Abra",  + nome ) * vezes 
+print( frase )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    frase = ( "Abra",  + nome ) * vezes 
+TypeError: bad operand type for unary +: 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:13:26) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+frase = ( "Abra",   nome ) * vezes 
+print( frase )
+-- OUTPUT:
+('Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:13:42) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+frase = ( "Abra" +   nome ) * vezes 
+print( frase )
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:14:23) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+frase = ( "Abra" +   nome ) * vezes 
+print( " frase " )
+-- OUTPUT:
+frase
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 11:19:08) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+frase = ( "Abra " +   nome ) * vezes 
+print( )
+-- OUTPUT:
+frase
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 11:19:26) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+frase = ( "Abra " +   nome ) * vezes 
+print( frase)
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 11:19:45) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+frase = ( "Abra " +   nome ) * vezes 
+print( frase)
+-- EXECUTION TIME:
+0.158137
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carroAbra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 11:19:59) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+frase = ( " Abra " +   nome ) * vezes 
+print( frase )
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 11:20:15) 
+-- CODE:
+nome = input("Nome do objeto: ")
+vezes = int(input("Numero de repeticoes: "))
+frase = ( " Abra " +   nome ) * vezes 
+print( frase )
+-- EXECUTION TIME:
+0.158297
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

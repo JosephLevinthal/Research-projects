@@ -1,0 +1,6 @@
+a=float(input("variavel a:"))
+b=float(input("variavel b:"))
+c=float(input("variavel c:"))
+formula=float(((a**2)+(b**2)+(c**2))/(a+b+c))
+real=round(formula, 7)
+print(real)

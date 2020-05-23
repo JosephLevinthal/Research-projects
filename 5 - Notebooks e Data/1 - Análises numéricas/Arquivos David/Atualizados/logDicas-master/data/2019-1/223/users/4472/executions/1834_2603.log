@@ -1,0 +1,98 @@
+== SUBMITION (2019-07-01 23:38:30) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+matriz = array(input("Matriz: ")
+
+for i in range(shape(matriz)[1]):
+	matriz[:,i] =  sorted(matriz[:,i],reverse=True)
+print(matriz)
+-- EXECUTION TIME:
+0.814076
+-- ERROR:
+  File "/home/codebench/codes/1834/2603/main.py", line 6
+    for i in range(shape(matriz)[1]):
+                                    ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 23:38:43) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+matriz = array(input("Matriz: "))
+
+for i in range(shape(matriz)[1]):
+	matriz[:,i] =  sorted(matriz[:,i],reverse=True)
+					
+print(matriz)
+-- EXECUTION TIME:
+1.03398
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/2603/main.py", line 6, in <module>
+    for i in range(shape(matriz)[1]):
+IndexError: tuple index out of range
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 23:38:48) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+matriz = array(input("Matriz: "))
+
+for i in range(shape(matriz)[1]):
+	matriz[:,i] =  sorted(matriz[:,i],reverse=True)
+					
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 23:52:20) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+matriz = array(eval(input("Matriz: ")))
+
+for i in range(shape(matriz)[1]):
+	matriz[:,i] =  sorted(matriz[:,i],reverse=True)
+					
+print(matriz)
+-- EXECUTION TIME:
+1.00744
+-- TEST CASE 1:
+---- input:
+[[1,1,1,1],[2,2,2,2],[3,3,3,3],[4,4,4,4]]
+---- correct output:
+[[4 4 4 4]
+[3 3 3 3]
+[2 2 2 2]
+[1 1 1 1]]
+---- user output:
+[[4 4 4 4]
+ [3 3 3 3]
+ [2 2 2 2]
+ [1 1 1 1]]
+-- TEST CASE 2:
+---- input:
+[[4,1,1,3],[3,2,2,3],[2,3,3,3],[1,4,4,3]]
+---- correct output:
+[[4 4 4 3]
+[3 3 3 3]
+[2 2 2 3]
+[1 1 1 3]]
+---- user output:
+[[4 4 4 3]
+ [3 3 3 3]
+ [2 2 2 3]
+ [1 1 1 3]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

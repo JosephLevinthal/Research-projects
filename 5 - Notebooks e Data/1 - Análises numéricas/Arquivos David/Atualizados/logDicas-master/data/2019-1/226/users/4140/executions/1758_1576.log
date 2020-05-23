@@ -1,0 +1,101 @@
+== TEST (2019-05-23 10:42:19) 
+-- CODE:
+from numpy import*
+v1= array(eval(input()))
+v2= array(eval(input()))
+i=0
+vv1=0
+vv1=0
+while(i<size(v1) and i<size(v2)):
+	if(v1[i]==11 and v2[i]==22):
+		vv2=vv2+1
+	if(v1[i]==22 and v2[i]==11):
+		vv1=vv1+1
+	if(v1[i]==22 and v2[i]==33):
+		vv2=vv2+1
+	if(v1[i]==33 and v2[i]==22):
+		vv1=vv1+1
+	if(v1[i]==11 and v2[i]==33):
+		vv1=vv1+1
+	if(v1[i]==33 and v2[i]==11):
+		vv2=vv2+1
+	i=i+1
+print(size(v1))
+if(vv1>vv2):
+	print("EUSAPIA")
+elif(vv2>vv1):
+	print("BARSANULFO")
+else:
+	print("EMPATE")
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-23 10:42:50) 
+-- CODE:
+from numpy import*
+v1= array(eval(input()))
+v2= array(eval(input()))
+i=0
+vv1=0
+vv2=0
+while(i<size(v1) and i<size(v2)):
+	if(v1[i]==11 and v2[i]==22):
+		vv2=vv2+1
+	if(v1[i]==22 and v2[i]==11):
+		vv1=vv1+1
+	if(v1[i]==22 and v2[i]==33):
+		vv2=vv2+1
+	if(v1[i]==33 and v2[i]==22):
+		vv1=vv1+1
+	if(v1[i]==11 and v2[i]==33):
+		vv1=vv1+1
+	if(v1[i]==33 and v2[i]==11):
+		vv2=vv2+1
+	i=i+1
+print(size(v1))
+if(vv1>vv2):
+	print("EUSAPIA")
+elif(vv2>vv1):
+	print("BARSANULFO")
+else:
+	print("EMPATE")
+	
+-- EXECUTION TIME:
+0.31787
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+EUSAPIA
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+EMPATE
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+BARSANULFO
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

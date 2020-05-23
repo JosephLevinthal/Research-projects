@@ -1,0 +1,4744 @@
+== TEST (2019-06-28 16:05:01) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):
+		xtab = xtab - 1
+	elif(i == "D"):
+		xtab = xtab + 1
+	elif (i == "S"):
+		ytab = ytab - 1
+	elif (i == "w"):
+		ytab = ytab + 1
+	if (tabuleiro[xtab,ytab] == 11):
+		moeda = moeda + 1
+		tabuleiro[xtab,ytab] = 0
+	elif(tabuleiro[xtab,ytab] == 0):
+		moeda = moeda
+	elif(tabuleiro[xtab,ytab] == 22):
+		life = life - 5
+	elif(tabuleiro[xtab,ytab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif(i == "w"):
+			ytab = ytab - 1
+		elif(i == "S"):
+			ytab = ytab + 1
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-28 16:07:59) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):
+		xtab = xtab - 1
+	elif(i == "D"):
+		xtab = xtab + 1
+	elif (i == "S"):
+		ytab = ytab - 1
+	elif (i == "w"):
+		ytab = ytab + 1
+	if (tabuleiro[xtab,ytab] == 11):
+		moeda = moeda + 1
+		tabuleiro[xtab,ytab] = 0
+	elif(tabuleiro[xtab,ytab] == 0):
+		moeda = moeda
+	elif(tabuleiro[xtab,ytab] == 22):
+		life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-28 21:17:18) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A" and):	
+		xtab = xtab - 1
+		if(xtab < 0 and xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 and xtab > shape(tabuleiro)[1] ):
+		xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab - 1
+		if (ytab < 0 and ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "w"):
+		ytab = ytab + 1
+		if (ytab < 0 and ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	if(ytab <= shape(tabuleiro)[0] and xtab <= shape(tabuleiro)[1]):	
+		if (tabuleiro[xtab,ytab] == 11):
+			moeda = moeda + 1
+			tabuleiro[xtab,ytab] = 0
+		elif(tabuleiro[xtab,ytab] == 0):
+			moeda = moeda
+		elif(tabuleiro[xtab,ytab] == 22):
+			life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+File "XXXX", line 9
+    if(i == "A" and):	
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-28 21:17:36) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 and xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 and xtab > shape(tabuleiro)[1] ):
+		xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab - 1
+		if (ytab < 0 and ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "w"):
+		ytab = ytab + 1
+		if (ytab < 0 and ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	if(ytab <= shape(tabuleiro)[0] and xtab <= shape(tabuleiro)[1]):	
+		if (tabuleiro[xtab,ytab] == 11):
+			moeda = moeda + 1
+			tabuleiro[xtab,ytab] = 0
+		elif(tabuleiro[xtab,ytab] == 0):
+			moeda = moeda
+		elif(tabuleiro[xtab,ytab] == 22):
+			life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+File "XXXX", line 16
+    xtab = xtab -1
+       ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-28 21:17:58) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 and xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 and xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab - 1
+		if (ytab < 0 and ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "w"):
+		ytab = ytab + 1
+		if (ytab < 0 and ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	if(ytab <= shape(tabuleiro)[0] and xtab <= shape(tabuleiro)[1]):	
+		if (tabuleiro[xtab,ytab] == 11):
+			moeda = moeda + 1
+			tabuleiro[xtab,ytab] = 0
+		elif(tabuleiro[xtab,ytab] == 0):
+			moeda = moeda
+		elif(tabuleiro[xtab,ytab] == 22):
+			life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-28 21:19:41) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "w"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	if (tabuleiro[xtab,ytab] == 11):
+		moeda = moeda + 1
+		tabuleiro[xtab,ytab] = 0
+	elif(tabuleiro[xtab,ytab] == 0):
+		moeda = moeda
+	elif(tabuleiro[xtab,ytab] == 22):
+		life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 13:13:47) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 and xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 and xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "w"):
+		ytab = ytab + 1
+		if (ytab < 0 and ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	if (tabuleiro[xtab,ytab] == 11):
+		moeda = moeda + 1
+		tabuleiro[xtab,ytab] = 0
+	elif(tabuleiro[xtab,ytab] == 0):
+		moeda = moeda
+	elif(tabuleiro[xtab,ytab] == 22):
+		life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 13:17:21) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 and xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 and xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab - 1
+		if (ytab < 0 and ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "w"):
+		ytab = ytab + 1
+		if (ytab < 0 and ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	if (tabuleiro[xtab,ytab] == 11):
+		moeda = moeda + 1
+		tabuleiro[xtab,ytab] = 0
+	elif(tabuleiro[xtab,ytab] == 0):
+		moeda = moeda
+	elif(tabuleiro[xtab,ytab] == 22):
+		life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 13:21:56) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "w"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	if (tabuleiro[xtab,ytab] == 11):
+		moeda = moeda + 1
+		tabuleiro[xtab,ytab] = 0
+	elif(tabuleiro[xtab,ytab] == 0):
+		moeda = moeda
+	elif(tabuleiro[xtab,ytab] == 22):
+		life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 13:23:57) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "w"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	print("posicao x: ", xtab)
+	print("posicao y: ", ytab)
+	if (tabuleiro[xtab,ytab] == 11):
+		moeda = moeda + 1
+		tabuleiro[xtab,ytab] = 0
+	elif(tabuleiro[xtab,ytab] == 0):
+		moeda = moeda
+	elif(tabuleiro[xtab,ytab] == 22):
+		life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 13:25:22) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "W"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+	if (tabuleiro[xtab,ytab] == 11):
+		moeda = moeda + 1
+		tabuleiro[xtab,ytab] = 0
+	elif(tabuleiro[xtab,ytab] == 0):
+		moeda = moeda
+	elif(tabuleiro[xtab,ytab] == 22):
+		life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+File "XXXX", line 27
+    if (tabuleiro[xtab,ytab] == 11):
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 13:25:36) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "W"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	print("posicao x: ", xtab)
+	print("posicao y: ", ytab)
+	if (tabuleiro[xtab,ytab] == 11):
+		moeda = moeda + 1
+		tabuleiro[xtab,ytab] = 0
+	elif(tabuleiro[xtab,ytab] == 0):
+		moeda = moeda
+	elif(tabuleiro[xtab,ytab] == 22):
+		life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 13:31:05) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "W"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	if (tabuleiro[xtab,ytab] == 11):
+		moeda = moeda + 1
+		tabuleiro[xtab,ytab] = 0
+	elif(tabuleiro[xtab,ytab] == 0):
+		moeda = moeda
+	elif(tabuleiro[xtab,ytab] == 22):
+		life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 13:43:32) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "W"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	if (tabuleiro[xtab,ytab] == 11):
+		moeda = moeda + 1
+		tabuleiro[xtab,ytab] = 0
+	elif(tabuleiro[xtab,ytab] == 0):
+		moeda = moeda
+	elif(tabuleiro[xtab,ytab] == 22):
+		life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 13:44:46) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+	elif(i == "D"):
+		xtab = xtab + 1
+	elif (i == "S"):
+		ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab + 1
+	if (tabuleiro[xtab,ytab] == 11):
+		moeda = moeda + 1
+		tabuleiro[xtab,ytab] = 0
+	elif(tabuleiro[xtab,ytab] == 0):
+		moeda = moeda
+	elif(tabuleiro[xtab,ytab] == 22):
+		life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 13:45:58) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+	elif(i == "D"):
+		xtab = xtab + 1
+	elif (i == "S"):
+		ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab + 1
+	if (tabuleiro[xtab,ytab] == 11):
+		moeda = moeda + 1
+		tabuleiro[xtab,ytab] = 0
+	elif(tabuleiro[xtab,ytab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 13:47:37) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "W"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif(tabuleiro[xtab,ytab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 13:48:33) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "W"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 13:52:17) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "W"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+	print("posicao x: ", xtab)
+	print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 13:54:58) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "W"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+	print("posicao x: ", xtab)
+	print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 13:56:26) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+	print("posicao x: ", xtab)
+	print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 13:59:23) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+	print("posicao x: ", xtab)
+	print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 14:00:41) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[xtab,ytab] = 0
+	elif(tabuleiro[xtab,ytab] == 0):
+		moeda = moeda
+	elif(tabuleiro[xtab,ytab] == 22):
+		life = life - 5
+	print("posicao x: ", xtab)
+	print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 14:02:46) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+	print("posicao x: ", xtab)
+	print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 14:04:17) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab > shape(tabuleiro)[0]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab > shape(tabuleiro)[0] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[1]):
+			ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[1]):
+			ytab = ytab + 1
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+	print("posicao x: ", xtab)
+	print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 14:07:04) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab > shape(tabuleiro)[0]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab > shape(tabuleiro)[0] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[1]):
+			ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[1]):
+			ytab = ytab + 1
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+	print("posicao x: ", xtab)
+	print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 14:12:06) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+			
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+	print("posicao x: ", xtab)
+	print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 14:13:59) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+			
+	if (tabuleiro[xtab,ytab] == 11):
+		moeda = moeda + 1
+		tabuleiro[xtab,ytab] = 0
+		
+	elif(tabuleiro[xtab,ytab] == 0):
+		moeda = moeda
+	elif(tabuleiro[xtab,ytab] == 22):
+		life = life - 5
+	print("posicao x: ", xtab)
+	print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 14:22:01) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab > shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab > shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab > shape(tabuleiro)[0]):
+			ytab = ytab + 1
+			
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+	print("posicao x: ", xtab)
+	print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 14:59:44) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+			
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+	print("posicao x: ", xtab)
+	print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 15:14:43) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+			
+	if (tabuleiro[ytab,xtab]==33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+	print("posicao x: ", xtab)
+	print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 15:15:19) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+			
+	if (tabuleiro[ytab,xtab]==33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 15:16:59) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+			
+	if (tabuleiro[ytab,xtab]==33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab]==0
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 15:18:53) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+			
+	if (tabuleiro[ytab,xtab]==33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		print(life)
+		tabuleiro[ytab,xtab]==0
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 15:20:29) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+			
+	if (tabuleiro[ytab,xtab]==33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		print(life)
+		tabuleiro[ytab,xtab] = 0
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-30 15:21:37) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+			
+	if (tabuleiro[ytab,xtab]==33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ",moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.14095
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  80
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-30 15:22:21) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+			
+	if (tabuleiro[ytab,xtab]==33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+print("posicao x:  ", xtab)
+print("posicao y:  ", ytab)
+print("moedas:  ",moeda)
+print("life:  ", life)
+-- EXECUTION TIME:
+1.1213
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+vetor: movimmento: posicao x:   11
+posicao y:   10
+moedas:   13
+life:   75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+vetor: movimmento: posicao x:   5
+posicao y:   3
+moedas:   20
+life:   75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+vetor: movimmento: posicao x:   6
+posicao y:   2
+moedas:   13
+life:   80
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 15:27:31) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+			
+	if (tabuleiro[ytab,xtab]==33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+print("posicao x:  ", xtab)
+print("posicao y:  ", ytab)
+print("moedas:  ",moeda)
+print("life:  ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-30 15:28:03) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimmento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+			
+	if (tabuleiro[ytab,xtab]==33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+print("posicao x:  ", xtab)
+print("posicao y:  ", ytab)
+print("moedas:  ",moeda)
+print("life:  ", life)
+-- EXECUTION TIME:
+0.911408
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:   11
+posicao y:   10
+moedas:   13
+life:   75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:   5
+posicao y:   3
+moedas:   20
+life:   75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:   6
+posicao y:   2
+moedas:   13
+life:   80
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 15:32:27) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	
+			
+	if (tabuleiro[ytab,xtab]==33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+print("posicao x:  ", xtab)
+print("posicao y:  ", ytab)
+print("moedas:  ",moeda)
+print("life:  ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-30 15:32:50) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	
+			
+	if (tabuleiro[ytab,xtab]==33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+print("posicao x:  ", xtab)
+print("posicao y:  ", ytab)
+print("moedas:  ",moeda)
+print("life:  ", life)
+-- EXECUTION TIME:
+1.24916
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:   11
+posicao y:   10
+moedas:   13
+life:   75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:   5
+posicao y:   3
+moedas:   20
+life:   75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:   6
+posicao y:   2
+moedas:   13
+life:   80
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 15:36:37) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+	if (tabuleiro[ytab,xtab]==33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+print("posicao x:  ", xtab)
+print("posicao y:  ", ytab)
+print("moedas:  ",moeda)
+print("life:  ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-30 15:37:04) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+	if (tabuleiro[ytab,xtab]==33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+print("posicao x:  ", xtab)
+print("posicao y:  ", ytab)
+print("moedas:  ",moeda)
+print("life:  ", life)
+-- EXECUTION TIME:
+1.03404
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:   11
+posicao y:   10
+moedas:   13
+life:   75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:   5
+posicao y:   3
+moedas:   20
+life:   75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:   6
+posicao y:   2
+moedas:   13
+life:   80
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-30 15:37:30) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+	if (tabuleiro[ytab,xtab]==33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+print("posicao x:  ", xtab)
+print("posicao y:  ", ytab)
+print("moedas:  ", moeda)
+print("life:  ", life)
+-- EXECUTION TIME:
+1.19969
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:   11
+posicao y:   10
+moedas:   13
+life:   75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:   5
+posicao y:   3
+moedas:   20
+life:   75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:   6
+posicao y:   2
+moedas:   13
+life:   80
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 15:38:34) 
+-- CODE:
+from numpy import *
+from nump.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+	if (tabuleiro[ytab,xtab]==33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+print("posicao x:  ", xtab)
+print("posicao y:  ", ytab)
+print("moedas:  ", moeda)
+print("life:  ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 15:38:51) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+	if (tabuleiro[ytab,xtab]==33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+print("posicao x:  ", xtab)
+print("posicao y:  ", ytab)
+print("moedas:  ", moeda)
+print("life:  ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-30 15:39:16) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+	if (tabuleiro[ytab,xtab]==33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+print("posicao x:  ", xtab)
+print("posicao y:  ", ytab)
+print("moedas:  ", moeda)
+print("life:  ", life)
+-- EXECUTION TIME:
+0.869321
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:   11
+posicao y:   10
+moedas:   13
+life:   75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:   5
+posicao y:   3
+moedas:   20
+life:   75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:   6
+posicao y:   2
+moedas:   13
+life:   80
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-30 15:39:44) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+	if (tabuleiro[ytab,xtab]==33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.03862
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  80
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 15:59:12) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+	if (tabuleiro[ytab,xtab]==33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-30 16:00:22) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ")
+xtab=0
+ytab=0
+moeda =0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+	if (tabuleiro[ytab,xtab]==33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.14654
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  80
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 08:27:12) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ")
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+	if (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 08:29:42) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ")
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+	elif (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 08:30:25) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ")
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+	elif (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i =="D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.29736
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  80
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 08:36:27) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+	elif (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 08:37:34) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+	
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+	elif (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.21411
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  80
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 08:41:15) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+	
+	elif (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 08:41:53) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+	
+	elif (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.26799
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  80
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 12:50:45) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+	
+	elif (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 12:51:39) 
+-- CODE:
+from numpy import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+	
+	elif (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.30733
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  80
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 13:14:34) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+	
+	elif (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 13:14:40) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+	
+	elif (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+0.960257
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  80
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 09:48:45) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+	
+	elif (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.2962
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  80
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:54:15) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+	
+	elif (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:55:18) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+	
+	elif (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 12:56:08) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+	
+	elif (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.11736
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  80
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 13:02:51) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+	
+	elif (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		
+		
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.00967
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+vetor: movimento: posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+vetor: movimento: posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 13:03:05) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+	
+	elif (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+0.998364
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  80
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 13:03:09) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+	
+	elif (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+0.860524
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  80
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 15:22:38) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+	
+	elif (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 15:23:03) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+	
+	elif (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 15:23:32) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+	
+	elif (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 15:24:13) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+	
+	elif (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 15:25:13) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+	
+	elif (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+0.886896
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  80
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 15:35:50) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if (xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif (i == "W"):
+		ytab = ytab - 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif (i == "S"):
+		ytab = ytab + 1
+		if (ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+			
+	if (tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif (i == "W"):
+			ytab = ytab + 1
+		elif ( i == "S"):
+			ytab = ytab - 1
+	
+	elif (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		tabuleiro[ytab,xtab] = 0
+		
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-08 23:29:24) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+tabuleiro=array(eval(input("vetor: ")))
+movi=input("movimento: ").upper()
+xtab = 0
+ytab = 0
+moeda = 0
+life = 100
+for i in movi :
+	if(i == "A"):	
+		xtab = xtab - 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1]):
+			xtab = xtab + 1
+	elif(i == "D"):
+		xtab = xtab + 1
+		if(xtab < 0 or xtab >= shape(tabuleiro)[1] ):
+			xtab = xtab -1
+	elif(i == "W"):
+		ytab = ytab - 1
+		if(ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab + 1
+	elif(i == "S"):
+		ytab = ytab + 1
+		if(ytab < 0 or ytab >= shape(tabuleiro)[0]):
+			ytab = ytab - 1
+			
+	if(tabuleiro[ytab,xtab] == 33):
+		if(i == "A"):
+			xtab = xtab + 1
+		elif(i == "D"):
+			xtab = xtab - 1
+		elif(i == "W"):
+			ytab = ytab + 1
+		elif( i == "S"):
+			ytab = ytab - 1
+	
+	elif(tabuleiro[ytab,xtab] == 11):
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+		
+	elif(tabuleiro[ytab,xtab] == 0):
+		moeda = moeda
+		
+	elif(tabuleiro[ytab,xtab] == 22):
+		life = life - 5
+		
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.19395
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

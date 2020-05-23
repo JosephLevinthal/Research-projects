@@ -1,0 +1,239 @@
+== TEST (2019-04-14 17:21:02) 
+-- CODE:
+x=input("Abra + nome_do_objeto")
+-- OUTPUT:
+900.0
+75.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 17:21:45) 
+-- CODE:
+x=input("Abra + nome_do_objeto")
+
+ptint(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    ptint(x)
+NameError: name 'ptint' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 17:22:00) 
+-- CODE:
+x=input("Abra + nome_do_objeto")
+
+print(x)
+-- OUTPUT:
+livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 17:22:24) 
+-- CODE:
+x=input(Abra + "nome_do_objeto")
+
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    x=input(Abra + "nome_do_objeto")
+NameError: name 'Abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 17:22:43) 
+-- CODE:
+x=input(Abra("nome_do_objeto")
+
+print(x)
+-- ERROR:
+File "XXXX", line 3
+    print(x)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 17:23:22) 
+-- CODE:
+x=input(Abra("nome_do_objeto")
+
+print("x")
+-- ERROR:
+File "XXXX", line 3
+    print("x")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 17:23:35) 
+-- CODE:
+x=input(Abra("nome_do_objeto"))
+
+print("x")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    x=input(Abra("nome_do_objeto"))
+NameError: name 'Abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 17:23:54) 
+-- CODE:
+x=input(Abra("nome_do_objeto"))
+
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    x=input(Abra("nome_do_objeto"))
+NameError: name 'Abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 17:25:53) 
+-- CODE:
+x=input("nome_do_objeto")
+y=input("n_de_repeticoes")
+
+print(x*y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(x*y)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 17:27:45) 
+-- CODE:
+x=input("nome_do_objeto")
+y=input("n_de_repeticoes")
+
+total=(x*y)
+print(total)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    total=(x*y)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 17:29:02) 
+-- CODE:
+x=input("abra+nome_do_objeto")
+y=input("n_de_repeticoes")
+
+total=(x*y)
+print(total)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    total=(x*y)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:46:52) 
+-- CODE:
+a="abra"
+x=input(a,"nome_do_objeto")
+y=input("n_de_repeticoes")
+
+
+total=(y*x)
+print(total)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    x=input(a,"nome_do_objeto")
+TypeError: input expected at most 1 arguments, got 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:46:54) 
+-- CODE:
+a="abra"
+x=input(a,"nome_do_objeto")
+y=input("n_de_repeticoes")
+
+
+total=(y*x)
+print(total)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    x=input(a,"nome_do_objeto")
+TypeError: input expected at most 1 arguments, got 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:47:42) 
+-- CODE:
+a="abra"
+x=input(a,"nome_do_objeto")
+y=int(input("n_de_repeticoes")
+
+
+total=x
+print(total)
+-- ERROR:
+File "XXXX", line 6
+    total=x
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:47:44) 
+-- CODE:
+a="abra"
+x=input(a,"nome_do_objeto")
+y=int(input("n_de_repeticoes")
+
+
+total=x
+print(total)
+-- ERROR:
+File "XXXX", line 6
+    total=x
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:48:09) 
+-- CODE:
+a="abra"
+x=input(a,"nome_do_objeto")
+y=int(input("n_de_repeticoes")
+
+
+total=(x,y)
+print(total)
+-- ERROR:
+File "XXXX", line 6
+    total=(x,y)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:48:10) 
+-- CODE:
+a="abra"
+x=input(a,"nome_do_objeto")
+y=int(input("n_de_repeticoes")
+
+
+total=(x,y)
+print(total)
+-- ERROR:
+File "XXXX", line 6
+    total=(x,y)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:49:40) 
+-- CODE:
+a="abra"
+x=input(a,"nome_do_objeto")
+y=int(input("n_de_repeticoes")
+
+
+total=(x)
+print(total)
+-- ERROR:
+File "XXXX", line 6
+    total=(x)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:50:11) 
+-- CODE:
+a="abra"
+x=input(a,"nome_do_objeto")
+y=int(input("n_de_repeticoes")
+
+
+total=(x**y)
+print(total)
+-- ERROR:
+File "XXXX", line 6
+    total=(x**y)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

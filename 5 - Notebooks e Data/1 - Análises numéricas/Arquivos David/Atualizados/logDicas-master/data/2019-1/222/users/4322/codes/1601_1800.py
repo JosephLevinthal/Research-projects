@@ -1,0 +1,5 @@
+num1 = int(input("qual o valor de a ? "))
+num2 = int(input("qual o valor de b ? "))
+num3 = int(input("qual o valor de c ? "))
+formula = (num1**2 + num2**2 + num3**2)/(num1 + num2 + num3)
+print(round(formula, 7))

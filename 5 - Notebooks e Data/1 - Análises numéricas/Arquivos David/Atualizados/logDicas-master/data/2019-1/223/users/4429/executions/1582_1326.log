@@ -1,0 +1,395 @@
+== TEST (2019-03-21 16:28:57) 
+-- CODE:
+print(75)
+
+-- OUTPUT:
+75
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 16:35:21) 
+-- CODE:
+input("v1")
+input("floatv1")
+input("v2")
+input("floatv2")
+input("v1==40")
+input("v2==35")
+input ("v1+v2")
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 16:37:03) 
+-- CODE:
+input("v1")
+input("floatv1")
+input("v2")
+input("floatv2")
+input("v1==40")
+input("v2==35")
+print("v1+v2")
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 16:38:35) 
+-- CODE:
+input("v1")
+input("floatv1")
+input("v2")
+input("floatv2")
+input("40==v1")
+input("35==v2")
+print("v1+v2")
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 16:38:54) 
+-- CODE:
+input("v1")
+input("floatv1")
+input("v2")
+input("floatv2")
+input("40=v1")
+input("35=v2")
+print("v1+v2")
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 16:39:55) 
+-- CODE:
+input("v1")
+input("float"v1""")
+input("v2")
+input("float"v2""")
+input("40=v1")
+input("35=v2")
+print("v1+v2")
+
+
+
+-- ERROR:
+File "XXXX", line 2
+    input("float"v1""")
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 16:40:48) 
+-- CODE:
+input("v1")
+input("float"v1")
+input("v2")
+input("float"v2""")
+input("40=v1")
+input("35=v2")
+print("v1+v2")
+
+
+
+-- ERROR:
+File "XXXX", line 2
+    input("float"v1")
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 16:40:59) 
+-- CODE:
+input("v1")
+input("float"v1")
+input("v2")
+input("float"v2""")
+input("40=v1")
+input("35=v2")
+print("v1+v2")
+
+
+
+-- ERROR:
+File "XXXX", line 2
+    input("float"v1")
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 16:41:06) 
+-- CODE:
+input("v1")
+input("float"v1")
+input("v2")
+input("float"v2")
+input("40=v1")
+input("35=v2")
+print("v1+v2")
+
+
+
+-- ERROR:
+File "XXXX", line 2
+    input("float"v1")
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 16:42:37) 
+-- CODE:
+print("40+35")
+
+-- OUTPUT:
+40+35
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 16:46:17) 
+-- CODE:
+input("a+b")
+float("a=40")
+float ("b=35")
+print ("a+b")
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    float("a=40")
+ValueError: could not convert string to float: 'a=40'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 16:49:34) 
+-- CODE:
+input("a+b")
+float("a=40")
+float ("b=35")
+print ("a+b")
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    float("a=40")
+ValueError: could not convert string to float: 'a=40'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 16:50:05) 
+-- CODE:
+in("a+b")
+float("a=40")
+float ("b=35")
+print ("a+b")
+
+
+
+
+-- ERROR:
+File "XXXX", line 1
+    in("a+b")
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 16:50:48) 
+-- CODE:
+input("a+b)
+float("a=40")
+float ("b=35")
+print ("a+b")
+		
+
+
+
+
+
+-- ERROR:
+File "XXXX", line 1
+    input("a+b)
+              ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 16:52:03) 
+-- CODE:
+input("a+b)
+input float  ("a=40")
+input float  ("b=35")
+print ("a+b")
+		
+
+
+
+
+
+-- ERROR:
+File "XXXX", line 1
+    input("a+b)
+              ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 16:52:13) 
+-- CODE:
+input("a+b)
+input float  ("a=40")
+input float  ("b=35")
+print ("a+b")
+		
+
+
+
+
+
+-- ERROR:
+File "XXXX", line 1
+    input("a+b)
+              ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 16:52:18) 
+-- CODE:
+input("a+b)
+input float  ("a=40")
+input float  ("b=35")
+print ("a+b")
+		
+
+
+
+
+
+-- ERROR:
+File "XXXX", line 1
+    input("a+b)
+              ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 16:52:32) 
+-- CODE:
+input("a+b)
+input float("a=40")
+input float("b=35")
+print ("a+b")
+		
+
+
+
+
+
+-- ERROR:
+File "XXXX", line 1
+    input("a+b)
+              ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 16:52:41) 
+-- CODE:
+input("a+b")
+input float("a=40")
+input float("b=35")
+print ("a+b")
+		
+
+
+
+
+
+-- ERROR:
+File "XXXX", line 2
+    input float("a=40")
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 16:52:53) 
+-- CODE:
+input("a+b")
+input float("a=40")
+input float("b=35")
+print ("a+b")
+		
+
+
+
+
+
+-- ERROR:
+File "XXXX", line 2
+    input float("a=40")
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 16:54:06) 
+-- CODE:
+print("75")
+
+
+
+
+
+
+-- OUTPUT:
+75
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 09:50:34) 
+-- CODE:
+print("75")
+
+
+
+
+
+
+-- OUTPUT:
+75
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-23 09:50:51) 
+-- CODE:
+print("75")
+
+
+
+
+
+
+-- EXECUTION TIME:
+0.169945
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+75
+---- user output:
+75
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-29 13:01:59) 
+-- CODE:
+print("75")
+
+
+
+
+
+
+-- EXECUTION TIME:
+0.141889
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+75
+---- user output:
+75
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

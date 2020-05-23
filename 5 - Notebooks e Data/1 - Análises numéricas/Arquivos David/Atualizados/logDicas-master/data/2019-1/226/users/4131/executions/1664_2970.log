@@ -1,0 +1,524 @@
+== TEST (2019-04-16 10:16:38) 
+-- CODE:
+t = float(input("meses:"))
+i = (q1/q0**(1/t)) - 1
+q1 = 1.042.000
+q0 = 1.500
+-- ERROR:
+File "XXXX", line 3
+    q1 = 1.042.000
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:18:41) 
+-- CODE:
+t = float(input("meses:"))
+i = (q1/q0**(1/t)) - 1
+q1 = 1.042.000
+q0 = 1.500
+
+if(i=<0.01):
+	print(round("Real",5))
+else:
+	print(round("Irreal", 5))
+-- ERROR:
+File "XXXX", line 3
+    q1 = 1.042.000
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:19:00) 
+-- CODE:
+t = float(input("meses:"))
+i = (q1/q0**(1/t)) - 1
+q1 = 1.042.000
+q0 = 1.500
+
+if(i<=0.01):
+	print(round("Real",5))
+else:
+	print(round("Irreal", 5))
+-- ERROR:
+File "XXXX", line 3
+    q1 = 1.042.000
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:19:24) 
+-- CODE:
+t = input(float("meses:"))
+i = (q1/q0**(1/t)) - 1
+q1 = 1.042.000
+q0 = 1.500
+
+if(i<=0.01):
+	print(round("Real",5))
+else:
+	print(round("Irreal", 5))
+-- ERROR:
+File "XXXX", line 3
+    q1 = 1.042.000
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:20:21) 
+-- CODE:
+t = float(input("meses:"))
+i = (qe/qi**(1/t)) - 1
+qe = 1.042.000
+qi = 1.500
+
+if(i<=0.01):
+	print(round("Real",5))
+else:
+	print(round("Irreal", 5))
+-- ERROR:
+File "XXXX", line 3
+    qe = 1.042.000
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:21:03) 
+-- CODE:
+t = float(input("meses:"))
+i = (1042000/1500**(1/t)) - 1
+
+
+if(i<=0.01):
+	print(round("Real",5))
+else:
+	print(round("Irreal", 5))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(round("Irreal", 5))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:21:28) 
+-- CODE:
+t = float(input("meses:"))
+i = (1042000/1500**(1/t)) - 1
+
+
+if(i<=0.01):
+	print(round(Real,5))
+else:
+	print(round(Irreal, 5))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(round(Irreal, 5))
+NameError: name 'Irreal' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:22:12) 
+-- CODE:
+t = float(input("meses:"))
+i = (1042000/1500**(1/t)) - 1
+
+
+if(i<=0.01):
+	print(round(.Real,5))
+else:
+	print(round(.Irreal, 5))
+-- ERROR:
+File "XXXX", line 6
+    print(round(.Real,5))
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:22:15) 
+-- CODE:
+t = float(input("meses:"))
+i = (1042000/1500**(1/t)) - 1
+
+
+if(i<=0.01):
+	print(round(.Real,5))
+else:
+	print(round(.Irreal, 5))
+-- ERROR:
+File "XXXX", line 6
+    print(round(.Real,5))
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:22:23) 
+-- CODE:
+t = float(input("meses:"))
+i = (1042000/1500**(1/t)) - 1
+
+
+if(i<=0.01):
+	print(round( Real,5))
+else:
+	print(round( Irreal, 5))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(round( Irreal, 5))
+NameError: name 'Irreal' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:22:51) 
+-- CODE:
+t = float(input("meses:"))
+i = (1042000/1500**(1/t)) - 1
+
+
+if(i<=0.01):
+	print(round( Real,5))
+else:
+	print(round( "Irreal" , 5))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(round( "Irreal" , 5))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:23:09) 
+-- CODE:
+t = float(input("meses:"))
+i = (1042000/1500**(1/t)) - 1
+
+
+if(i<=0.01):
+	print(round( "Real",5))
+else:
+	print(round( "Irreal" , 5))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(round( "Irreal" , 5))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:24:05) 
+-- CODE:
+t = float(input("meses:"))
+i = (1042000/1500**(1/t)) - 1
+
+
+if(i<=0.01):
+	print(real)
+else:
+	print(Irreal)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(Irreal)
+NameError: name 'Irreal' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:24:33) 
+-- CODE:
+t = float(input("meses:"))
+i = (1042000/1500**(1/t)) - 1
+
+
+if(i<=0.01):
+	print("real")
+else:
+	print("Irreal")
+-- OUTPUT:
+Irreal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:25:20) 
+-- CODE:
+t = float(input("meses:"))
+i = (1042000/1500**(1/t)) - 1
+
+
+if(i<=0.01):
+	print(round("real",5))
+else:
+	print(round("Irreal",5))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(round("Irreal",5))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:29:49) 
+-- CODE:
+t = float(input("meses:"))
+i = (1042000/1500**(1/t)) - 1
+j = Real
+k = Irreal
+if(i<=0.01):
+	print(round(j,5))
+else:
+	print(round(k,5))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    j = Real
+NameError: name 'Real' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:30:16) 
+-- CODE:
+t = float(input("meses:"))
+i = (1042000/1500**(1/t)) - 1
+j = "Real"
+k = "Irreal"
+if(i<=0.01):
+	print(round(j,5))
+else:
+	print(round(k,5))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(round(k,5))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:31:59) 
+-- CODE:
+t = float(input("meses:"))
+i = (1042000/1500**(1/t)) - 1
+
+if(i<=0.01):
+	print(round(i,5))
+else:
+	print(round(i,5))
+-- OUTPUT:
+1030482.00234
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:35:34) 
+-- CODE:
+t = float(input("meses:"))
+i = (1042000/1500**(1/t)) - 1
+
+
+print(i)
+-- OUTPUT:
+1030482.0023364745
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:35:55) 
+-- CODE:
+t = float(input("meses:"))
+i = (1042/1500**(1/t)) - 1
+
+
+print(i)
+-- OUTPUT:
+1029.4830023364746
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:36:49) 
+-- CODE:
+t = float(input("meses:"))
+i = 1042000/1500
+
+
+print(i)
+-- OUTPUT:
+694.6666666666666
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:38:11) 
+-- CODE:
+t = float(input("meses:"))
+h = 1042000/1500
+i = (h**(1/t))-1 
+
+
+print(i)
+-- OUTPUT:
+0.009994035818443603
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:39:47) 
+-- CODE:
+t = float(input("meses:"))
+h = 1042000/1500
+i = (h**(1/t))-1 
+
+if( i =< 0.01):
+	print(Real)
+else:
+	print(Irreal)
+-- ERROR:
+File "XXXX", line 5
+    if( i =< 0.01):
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:40:12) 
+-- CODE:
+t = float(input("meses:"))
+h = 1042000/1500
+i = (h**(1/t))-1 
+
+if( i <= 0.01):
+	print("Real")
+else:
+	print("Irreal")
+-- OUTPUT:
+Real
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:42:24) 
+-- CODE:
+t = float(input("meses:"))
+h = 1042000/1500
+i = (h**(1/t))-1 
+
+if( i <= 0.01):
+	print(round"Real"(i,5))
+else:
+	print(round"Irreal"(i,5))
+-- ERROR:
+File "XXXX", line 6
+    print(round"Real"(i,5))
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:43:16) 
+-- CODE:
+t = float(input("meses:"))
+h = 1042000/1500
+i = (h**(1/t))-1 
+
+if( i <= 0.01):
+	print("Real"round(i,5))
+else:
+	print("Irreal"round(i,5))
+-- ERROR:
+File "XXXX", line 6
+    print("Real"round(i,5))
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:43:40) 
+-- CODE:
+t = float(input("meses:"))
+h = 1042000/1500
+i = (h**(1/t))-1 
+
+if( i <= 0.01):
+	print( "Real"round(i,5))
+else:
+	print( "Irreal"round(i,5))
+-- ERROR:
+File "XXXX", line 6
+    print( "Real"round(i,5))
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:43:53) 
+-- CODE:
+t = float(input("meses:"))
+h = 1042000/1500
+i = (h**(1/t))-1 
+
+if( i <= 0.01):
+	print("Real",round(i,5))
+else:
+	print("Irreal",round(i,5))
+-- OUTPUT:
+Real 0.00999
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:44:02) 
+-- CODE:
+t = float(input("meses:"))
+h = 1042000/1500
+i = (h**(1/t))-1 
+
+if( i <= 0.01):
+	print("Real",round(i,5))
+else:
+	print("Irreal",round(i,5))
+-- EXECUTION TIME:
+0.192664
+-- TEST CASE 1:
+---- input:
+658
+---- correct output:
+0.00999
+Real
+---- user output:
+Real 0.00999
+-- TEST CASE 2:
+---- input:
+565
+---- correct output:
+0.01165
+Irreal
+---- user output:
+Irreal 0.01165
+-- TEST CASE 3:
+---- input:
+240
+---- correct output:
+0.02764
+Irreal
+---- user output:
+Irreal 0.02764
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:44:04) 
+-- CODE:
+t = float(input("meses:"))
+h = 1042000/1500
+i = (h**(1/t))-1 
+
+if( i <= 0.01):
+	print("Real",round(i,5))
+else:
+	print("Irreal",round(i,5))
+-- OUTPUT:
+Real 0.00999
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:45:09) 
+-- CODE:
+t = float(input("meses:"))
+h = 1042000/1500
+i = (h**(1/t))-1 
+
+if( i <= 0.01):
+	print(round(i,5))
+	print("Real")
+else:
+	print(round(i,5))
+	print("Irreal")
+-- OUTPUT:
+0.00999
+Real
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:45:15) 
+-- CODE:
+t = float(input("meses:"))
+h = 1042000/1500
+i = (h**(1/t))-1 
+
+if( i <= 0.01):
+	print(round(i,5))
+	print("Real")
+else:
+	print(round(i,5))
+	print("Irreal")
+-- EXECUTION TIME:
+0.202175
+-- TEST CASE 1:
+---- input:
+658
+---- correct output:
+0.00999
+Real
+---- user output:
+0.00999
+Real
+-- TEST CASE 2:
+---- input:
+565
+---- correct output:
+0.01165
+Irreal
+---- user output:
+0.01165
+Irreal
+-- TEST CASE 3:
+---- input:
+240
+---- correct output:
+0.02764
+Irreal
+---- user output:
+0.02764
+Irreal
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

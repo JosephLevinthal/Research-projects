@@ -1,0 +1,5 @@
+l=float(input("Media dos laboratorios: "))
+t=float(input("media dos trabalhos: "))
+p=float(input("medias das provas: "))
+s=(l*0.25 + t*0.30 + p*0.45)
+print(round(s,2))

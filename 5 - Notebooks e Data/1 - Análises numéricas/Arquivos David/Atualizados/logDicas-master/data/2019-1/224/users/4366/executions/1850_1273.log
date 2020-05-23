@@ -1,0 +1,70 @@
+== TEST (2019-07-01 16:41:53) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+trafego=array([[1,-1,50],
+					[1, -1, -120],
+					[0, 1, 350],
+					[1, 1, 870]])
+a=dot(inv(trafego), trafego.T)
+
+print("A:", round(a[0],1))
+print("B:", round(a[1],1))
+print("C:", round(a[2],1))
+print("D:", round(a[3],1))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 16:45:46) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+trafego=array([[1,-1,0,0],
+					[0, 1, -1, 0],
+					[0, 0 ,1 ,0],
+					[1, 0, 0, 1]])
+intersecao=array([50,-120,350,870])
+a=dot(inv(trafego), intersecao.T)
+print(a)
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 16:46:22) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+trafego=array([[1,-1,0,0],
+					[0, 1, -1, 0],
+					[0, 0 ,1 ,0],
+					[1, 0, 0, 1]])
+intersecao=array([50,-120,350,870])
+a=dot(inv(trafego), intersecao.T)
+print(a)
+
+
+
+-- EXECUTION TIME:
+0.972545
+-- TEST CASE 1:
+---- input:
+Não_há
+---- correct output:
+[280. 230. 350. 590.]
+---- user output:
+[280. 230. 350. 590.]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

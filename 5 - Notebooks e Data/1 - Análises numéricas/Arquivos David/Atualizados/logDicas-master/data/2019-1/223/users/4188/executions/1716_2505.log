@@ -1,0 +1,975 @@
+== TEST (2019-05-12 23:09:17) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=0
+fa=0
+while(f<n):
+	fa=fa + (n**(r))/factorial(r)
+	f=f+1
+	r=r+2
+	
+print(r)
+	
+-- OUTPUT:
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-12 23:12:23) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=0
+fa=0
+while(f<n):
+	fa=fa + (n**(r))/factorial(r)
+	f=f+1
+	r=r+2
+print(fa)
+	
+-- OUTPUT:
+0.08437438038148572
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-12 23:12:50) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=0
+fa=0
+while(f<n):
+	fa=fa + (n**(r))/factorial(r)
+	print(fa)
+	f=f+1
+	r=r+2
+print(fa)
+	
+-- OUTPUT:
+0.07969262624616703
+0.08437438038148572
+0.08437438038148572
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-12 23:13:26) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=0
+fa=0
+while(f<n):
+	fa=fa + (n**(r))/factorial(r)
+	print(fa)
+	f=f+1
+	r=r+2
+print(fa)
+	
+-- OUTPUT:
+0.07969262624616703
+0.08437438038148572
+0.08437438038148572
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-12 23:13:42) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=0
+fa=0
+while(f<n):
+	fa=fa + (n**(r))/factorial(r)
+	print(fa)
+	f=f+1
+	r=r+2
+print(fa)
+	
+-- OUTPUT:
+0.07969262624616703
+0.08437438038148572
+0.08437438038148572
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-12 23:15:37) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=0
+fa=0
+while(f<n):
+	fa=fa + (n**(r))/factorial(r)
+	print(r)
+	f=f+1
+	r=r+2
+print(fa)
+	
+-- OUTPUT:
+5
+7
+0.08437438038148572
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-12 23:17:58) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=0
+fa=0
+while(f<r):
+	fa=fa + (n**(r))/factorial(r)
+	print(r)
+	f=f+1
+	r=r+2
+print(fa)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    fa=fa + (n**(r))/factorial(r)
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-12 23:23:55) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=0
+fa=0
+l=1
+while(f<r):
+	fa=fa + (n**(l))/factorial(l)
+	print(l)
+	f=f+1
+	l=l+2
+print(round(fa,10))
+	
+-- OUTPUT:
+1
+3
+5
+7
+9
+2.3012952459
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-12 23:43:43) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + (n**(l))/factorial(l)
+	if (f%2==0):
+		fa= -n
+	f=f+1
+	l=l+2
+print(round(fa,10))
+	
+-- OUTPUT:
+-1.5706358856
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-12 23:45:08) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + (n**(l))/factorial(l)
+	if (f%2==0):
+		n = -n
+	f=f+1
+	l=l+2
+print(round(fa,10))
+	
+-- OUTPUT:
+2.1325464851
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-12 23:49:02) 
+-- CODE:
+from math import *
+n=radians(eval(input("angulos rad: ")))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + (n**(l))/factorial(l)
+	if (f%2==0):
+		n = -n
+	f=f+1
+	l=l+2
+print(round(fa,10))
+	
+-- OUTPUT:
+0.027419002
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-12 23:50:07) 
+-- CODE:
+from math import *
+n=radians(eval(input("angulos rad: ")))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + (n**(l))/factorial(l)
+	if (f%2==0):
+		n = -n
+	print(n)
+	f=f+1
+	l=l+2
+print(round(fa,10))
+	
+-- OUTPUT:
+0.027415567780803774
+-0.027415567780803774
+-0.027415567780803774
+0.027415567780803774
+0.027415567780803774
+0.027419002
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-12 23:54:19) 
+-- CODE:
+from math import *
+n=radians(eval(input("angulos rad: ")))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + (n**(l))/factorial(l)
+	print(n)
+	f=f+1
+	l=l+2
+	if (f%2==0):
+		n = -n
+print(round(fa,10))
+	
+-- OUTPUT:
+0.027415567780803774
+-0.027415567780803774
+-0.027415567780803774
+0.027415567780803774
+0.027415567780803774
+0.0274121333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-12 23:55:13) 
+-- CODE:
+from math import *
+n=radians(eval(input("angulos rad: ")))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + (n**(l))/factorial(l)
+	print(n)
+	f=f+1
+	l=l+2
+	if (f%2==0):
+		n = -n
+print(round(fa,10))
+	
+-- OUTPUT:
+0.027415567780803774
+-0.027415567780803774
+-0.027415567780803774
+0.027415567780803774
+0.027415567780803774
+0.0274121333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 00:01:10) 
+-- CODE:
+from math import *
+n=radians(eval(input("angulos rad: ")))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + (n**(l))/factorial(l)
+	print(n)
+	f=f+1
+	l=l+2
+	print(l)
+	if (f%2==0):
+		n = -n
+print(round(fa,10))
+	
+-- OUTPUT:
+0.027415567780803774
+3
+-0.027415567780803774
+5
+-0.027415567780803774
+7
+0.027415567780803774
+9
+0.027415567780803774
+11
+0.0274121333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-13 00:02:26) 
+-- CODE:
+from math import *
+n=radians(eval(input("angulos rad: ")))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + (n**(l))/factorial(l)
+	print(n)
+	print(l)
+	f=f+1
+	l=l+2
+	if (f%2==0):
+		n = -n
+print(round(fa,10))
+	
+-- EXECUTION TIME:
+0.176508
+-- TEST CASE 1:
+---- input:
+pi/2
+5
+---- correct output:
+1.0000035426
+---- user output:
+0.027415567780803774
+1
+-0.027415567780803774
+3
+-0.027415567780803774
+5
+0.027415567780803774
+7
+0.027415567780803774
+9
+0.0274121333
+-- TEST CASE 2:
+---- input:
+-pi/2
+4
+---- correct output:
+-0.9998431014
+---- user output:
+-0.027415567780803774
+1
+0.027415567780803774
+3
+0.027415567780803774
+5
+-0.027415567780803774
+7
+-0.0274121333
+-- TEST CASE 3:
+---- input:
+pi/3
+3
+---- correct output:
+0.8662952838
+---- user output:
+0.018277045187202513
+1
+-0.018277045187202513
+3
+-0.018277045187202513
+5
+0.0182760276
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 00:02:29) 
+-- CODE:
+from math import *
+n=radians(eval(input("angulos rad: ")))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + (n**(l))/factorial(l)
+	print(n)
+	print(l)
+	f=f+1
+	l=l+2
+	if (f%2==0):
+		n = -n
+print(round(fa,10))
+	
+-- OUTPUT:
+0.027415567780803774
+1
+-0.027415567780803774
+3
+-0.027415567780803774
+5
+0.027415567780803774
+7
+0.027415567780803774
+9
+0.0274121333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:44:36) 
+-- CODE:
+from math import *
+n=radians(eval(input("angulos rad: ")))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + (n**(l))/factorial(l)
+	print(n)
+	print(l)
+	f=f+1
+	l=l+2
+	if (f%2==0):
+		n = -n
+print(round(fa,10))
+	
+-- OUTPUT:
+0.027415567780803774
+1
+-0.027415567780803774
+3
+-0.027415567780803774
+5
+0.027415567780803774
+7
+0.027415567780803774
+9
+0.0274121333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:58:41) 
+-- CODE:
+from math import *
+n=radians(eval(input("angulos rad: ")))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + (-1**(l))/factorial(l)
+	f=f+1
+	l=l+2
+	
+print(round(fa,10))
+	
+-- OUTPUT:
+-1.1752011684
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:58:57) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + (-1**(l))/factorial(l)
+	f=f+1
+	l=l+2
+	
+print(round(fa,10))
+	
+-- OUTPUT:
+-1.1752011684
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:01:39) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + ((-1**(f)))(n**(l)/factorial(l))
+	f=f+1
+	l=l+2
+	
+print(round(fa,10))
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    fa=fa + ((-1**(f)))(n**(l)/factorial(l))
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:03:16) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + ((-1**(f)))*(n**(l)/factorial(l))
+	f=f+1
+	l=l+2
+	
+print(round(fa,10))
+	
+-- OUTPUT:
+-2.3012952459
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:04:20) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + ((-1**(f)))*(n**(l)/factorial(l))
+	f=f+1
+	l=l+2
+	
+print(round(fa,10))
+	
+-- OUTPUT:
+-2.3012952459
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:06:28) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + ((-1**(f)))*(-n**(l)/factorial(l))
+	f=f+1
+	l=l+2
+	
+print(round(fa,10))
+	
+-- OUTPUT:
+2.3012952459
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:07:18) 
+-- CODE:
+from math import *
+n=radians(eval(input("angulos rad: ")))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + ((-1**(f)))*(-n**(l)/factorial(l))
+	f=f+1
+	l=l+2
+	
+print(round(fa,10))
+	
+-- OUTPUT:
+0.0274190022
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:09:14) 
+-- CODE:
+from math import *
+n=sin(eval(input("angulos rad: ")))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + ((-1**(f)))*(-n**(l)/factorial(l))
+	f=f+1
+	l=l+2
+	
+print(round(fa,10))
+	
+-- OUTPUT:
+1.1752011684
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:13:39) 
+-- CODE:
+from math import *
+n=sin(eval(input("angulos rad: ")))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + ((-1**(f)))*(-n**(l)/factorial(l))
+	f=f+1
+	l=l+2
+	
+print(round(fa,10))
+	
+-- OUTPUT:
+1.1752011684
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:14:15) 
+-- CODE:
+from math import *
+n=sin(eval(input("angulos rad: ")))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + ((-1**(f)))*(-n**(l)/factorial(l))
+	f=f+1
+	l=l+2
+	
+print(round(fa,10))
+	
+-- OUTPUT:
+1.1752011684
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:14:36) 
+-- CODE:
+from math import *
+n=sin(eval(input("angulos rad: ")))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + ((-1**(f)))*(-n**(l)/factorial(l))
+	f=f+1
+	l=l+2
+	
+print(round(fa,10))
+	
+-- OUTPUT:
+1.1752011684
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:21:30) 
+-- CODE:
+from math import *
+n=cos(eval(input("angulos rad: ")))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(r>= eval(-pi) and r < eval(pi)):
+	fa=fa + ((-1**(f)))*(-n**(l)/factorial(l))
+	f=f+1
+	l=l+2
+	
+print(round(fa,10))
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    while(r>= eval(-pi) and r < eval(pi)):
+TypeError: eval() arg 1 must be a string, bytes or code object
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:22:18) 
+-- CODE:
+from math import *
+n=cos(eval(input("angulos rad: ")))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + ((-1**(f)))*(-n**(l)/factorial(l))
+	f=f+1
+	l=l+2
+	
+print(round(fa,10))
+	
+-- OUTPUT:
+0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:22:52) 
+-- CODE:
+from math import *
+n=tg(eval(input("angulos rad: ")))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + ((-1**(f)))*(-n**(l)/factorial(l))
+	f=f+1
+	l=l+2
+	
+print(round(fa,10))
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    n=tg(eval(input()))
+NameError: name 'tg' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:23:00) 
+-- CODE:
+from math import *
+n=sin(eval(input("angulos rad: ")))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + ((-1**(f)))*(-n**(l)/factorial(l))
+	f=f+1
+	l=l+2
+	
+print(round(fa,10))
+	
+-- OUTPUT:
+1.1752011684
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:25:20) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+while(f<=r):
+	fa=fa + ((-1**(f)))*(-n**(l)/factorial(l))
+	f=f+1
+	l=l+2
+	
+print(round(fa,10))
+	
+-- OUTPUT:
+2.3012952459
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:27:20) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+sinal=1
+while(f<=r):
+	fa=fa + ((-1**(f)))*(n**(l)/factorial(l))*sinal
+	f=f+1
+	l=l+2
+	sinal=sinal*-1
+	
+print(round(fa,10))
+	
+-- OUTPUT:
+-1.0000035426
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:27:50) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+sinal=1
+while(f<=r):
+	fa=fa + ((1**(f)))*(n**(l)/factorial(l))*sinal
+	f=f+1
+	l=l+2
+	sinal=sinal*-1
+	
+print(round(fa,10))
+	
+-- OUTPUT:
+1.0000035426
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:28:48) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+sinal=1
+while(f<=r):
+	fa=fa + ((1**(f)))*(n**(l)/factorial(l))*sinal
+	f=f+1
+	l=l+2
+	sinal=sinal*-1
+	
+print(round(fa,10))
+	
+-- OUTPUT:
+1.0000035426
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:28:59) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+sinal=1
+while(f<=r):
+	fa=fa + ((1**(f)))*(n**(l)/factorial(l))*sinal
+	f=f+1
+	l=l+2
+	sinal=sinal*-1
+	
+print(round(fa,10))
+	
+-- OUTPUT:
+1.0000035426
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:29:13) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+sinal=1
+while(f<=r):
+	fa=fa + ((1**(f)))*(n**(l)/factorial(l))*sinal
+	f=f+1
+	l=l+2
+	sinal=sinal*-1
+	
+print(round(fa,10))
+	
+-- OUTPUT:
+1.0000035426
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:29:25) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+sinal=1
+while(f<=r):
+	fa=fa + ((1**(f)))*(n**(l)/factorial(l))*sinal
+	f=f+1
+	l=l+2
+	sinal=sinal*-1
+	
+print(round(fa,10))
+	
+-- OUTPUT:
+1.0000035426
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 12:29:27) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+sinal=1
+while(f<=r):
+	fa=fa + ((1**(f)))*(n**(l)/factorial(l))*sinal
+	f=f+1
+	l=l+2
+	sinal=sinal*-1
+	
+print(round(fa,10))
+	
+-- EXECUTION TIME:
+0.204738
+-- TEST CASE 1:
+---- input:
+pi/2
+5
+---- correct output:
+1.0000035426
+---- user output:
+1.0000035426
+-- TEST CASE 2:
+---- input:
+-pi/2
+4
+---- correct output:
+-0.9998431014
+---- user output:
+-0.9998431014
+-- TEST CASE 3:
+---- input:
+pi/3
+3
+---- correct output:
+0.8662952838
+---- user output:
+0.8662952838
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 12:34:25) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+sinal=1
+while(f<=r):
+	fa=fa + (((-1)**(f)))*((-n)**(l)/factorial(l))
+	f=f+1
+	l=l+2
+	
+print(round(fa,10))
+	
+-- OUTPUT:
+1.0000035426
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 12:34:39) 
+-- CODE:
+from math import *
+n=eval(input("angulos rad: "))
+r=int(input("termos: "))
+f=1
+fa=0
+l=1
+sinal=1
+while(f<=r):
+	fa=fa + (((-1)**(f)))*((-n)**(l)/factorial(l))
+	f=f+1
+	l=l+2
+	
+print(round(fa,10))
+	
+-- EXECUTION TIME:
+0.155611
+-- TEST CASE 1:
+---- input:
+pi/2
+5
+---- correct output:
+1.0000035426
+---- user output:
+1.0000035426
+-- TEST CASE 2:
+---- input:
+-pi/2
+4
+---- correct output:
+-0.9998431014
+---- user output:
+-0.9998431014
+-- TEST CASE 3:
+---- input:
+pi/3
+3
+---- correct output:
+0.8662952838
+---- user output:
+0.8662952838
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

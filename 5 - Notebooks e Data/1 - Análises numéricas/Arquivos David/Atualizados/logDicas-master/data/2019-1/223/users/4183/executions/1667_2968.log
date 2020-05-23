@@ -1,0 +1,122 @@
+== TEST (2019-04-16 17:18:14) 
+-- CODE:
+w = input("Digite (L/S): ")
+quant1 = int(input("Quantidade: "))
+quant2 = int(input("Quantidade: "))
+vl = 5.00
+s = 3.50
+r = 4.00
+if (w == "L"):
+	print(round(quant1*vl,2))
+else: 
+	print((quant1*s) + (quant2*r),2)
+-- OUTPUT:
+11.5 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 17:20:39) 
+-- CODE:
+w = input("Digite (L/S): ")
+quant1 = int(input("Quantidade: "))
+quant2 = int(input("Quantidade: "))
+vl = 5.00
+s = 3.50
+r = 4.00
+if (w == "L"):
+	print(round(quant1 + quant2*r,2))
+else: 
+	print(round(quant1*s) + (quant2*r),2)
+-- OUTPUT:
+12.0 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 17:22:40) 
+-- CODE:
+w = input("Digite (L/S): ")
+quant1 = int(input("Quantidade: "))
+quant2 = int(input("Quantidade: "))
+vl = 5.00 * quant1
+s = 3.50 * quan1
+r = 4.00 *quant2
+if (w == "L"):
+	print(round(vl,2))
+else: 
+	print(round(s+r,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    s = 3.50 * quan1
+NameError: name 'quan1' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 17:22:56) 
+-- CODE:
+w = input("Digite (L/S): ")
+quant1 = int(input("Quantidade: "))
+quant2 = int(input("Quantidade: "))
+vl = 5.00 * quant1
+s = 3.50 * quant1
+r = 4.00 *quant2
+if (w == "L"):
+	print(round(vl,2))
+else: 
+	print(round(s+r,2))
+-- OUTPUT:
+11.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 17:24:19) 
+-- CODE:
+w = input("Digite (L/S): ")
+quant1 = int(input("Quantidade: "))
+quant2 = int(input("Quantidade: "))
+vl = 5.00 * quant1
+s = 3.50 * quant1
+r = 4.00 * quant2
+if (w == "L"):
+	print(round(vl+r,2))
+else: 
+	print(round(s+r,2))
+-- OUTPUT:
+11.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 17:24:27) 
+-- CODE:
+w = input("Digite (L/S): ")
+quant1 = int(input("Quantidade: "))
+quant2 = int(input("Quantidade: "))
+vl = 5.00 * quant1
+s = 3.50 * quant1
+r = 4.00 * quant2
+if (w == "L"):
+	print(round(vl+r,2))
+else: 
+	print(round(s+r,2))
+-- EXECUTION TIME:
+0.163366
+-- TEST CASE 1:
+---- input:
+S
+1
+2
+---- correct output:
+11.5
+---- user output:
+11.5
+-- TEST CASE 2:
+---- input:
+L
+6
+7
+---- correct output:
+58.0
+---- user output:
+58.0
+-- TEST CASE 3:
+---- input:
+S
+2
+2
+---- correct output:
+15.0
+---- user output:
+15.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

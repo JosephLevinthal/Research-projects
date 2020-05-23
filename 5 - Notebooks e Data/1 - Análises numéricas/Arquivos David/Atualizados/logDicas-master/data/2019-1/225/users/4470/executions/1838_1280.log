@@ -1,0 +1,225 @@
+== TEST (2019-06-26 12:42:13) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	x1=xtab
+	x2=ytab
+	
+    # Move personagem para ESQUERDA
+	if x == 'A':
+    		xtab = xtab -1
+    # Move personagem para DIREITA
+	elif x == 'D':
+        	xtab = xtab +1
+    # Move personagem para CIMA
+	elif x == 'W':
+        	ytab = ytab-1
+    # Move personagem para BAIXO
+	elif x == 'S':
+        	ytab = ytab+1
+		if(xtab)
+
+    # Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda +1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+
+-- ERROR:
+File "XXXX", line 39
+    if(xtab)
+           ^
+TabError: inconsistent use of tabs and spaces in indentation
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 12:42:29) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	x1=xtab
+	x2=ytab
+	
+    # Move personagem para ESQUERDA
+	if x == 'A':
+    		xtab = xtab -1
+    # Move personagem para DIREITA
+	elif x == 'D':
+        	xtab = xtab +1
+    # Move personagem para CIMA
+	elif x == 'W':
+        	ytab = ytab-1
+    # Move personagem para BAIXO
+	elif x == 'S':
+        	ytab = ytab+1
+		if(xtab>=shape(tabuleiro)[1] or ytab>=shape(tableiro)[0]orytab<0 or tableiro[ytab,xtab]==3)
+
+    # Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda +1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+
+-- ERROR:
+File "XXXX", line 39
+    if(xtab>=shape(tabuleiro)[1] or ytab>=shape(tableiro)[0]orytab<0 or tableiro[ytab,xtab]==3)
+                                                                                              ^
+TabError: inconsistent use of tabs and spaces in indentation
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 12:46:43) 
+-- CODE:
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	x1 = xtab
+	y1 = ytab
+	# Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+   # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1
+   # Move personagem para CIMA
+	elif x == 'W':
+		ytab = ytab - 1
+   # Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab + 1
+
+	if xtab >= shape(tabuleiro)[1] or xtab < 0 or ytab >= shape(tabuleiro)[0] or ytab < 0 or tabuleiro[ytab,xtab] == 33:
+		xtab = x1
+		ytab = y1
+	
+   # Trata evento
+   # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda += 1
+      # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+   # Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.03694
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

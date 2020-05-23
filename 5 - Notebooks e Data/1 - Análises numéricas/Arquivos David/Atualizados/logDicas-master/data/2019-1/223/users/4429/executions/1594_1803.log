@@ -1,0 +1,94 @@
+== SUBMITION (2019-04-28 12:54:57) 
+-- CODE:
+var = int(input("Digite um numero com quatro algarismos: "))
+soma = 0
+while (var > 0):
+    resto = var % 10
+    var = var // 10
+    soma = soma + resto
+
+print(soma)
+
+m = var // 1000
+r1 = var % 1000
+c = r1 // 100
+r2 = r1 % 100
+d = r2 // 10
+r3 = r2 % 10
+u = r3
+
+print(m + c + d + u)
+
+-- EXECUTION TIME:
+0.23372
+-- TEST CASE 1:
+---- input:
+2000
+---- correct output:
+10
+---- user output:
+2
+0
+-- TEST CASE 2:
+---- input:
+3550
+---- correct output:
+6
+---- user output:
+13
+0
+-- TEST CASE 3:
+---- input:
+0007
+---- correct output:
+3
+---- user output:
+7
+0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 12:56:18) 
+-- CODE:
+var = int(input("Digite um numero com quatro algarismos: "))
+
+m = var // 1000
+r1 = var % 1000
+c = r1 // 100
+r2 = r1 % 100
+d = r2 // 10
+r3 = r2 % 10
+u = r3
+
+# calculo do digito verificador
+soma = u*2 + d*3 + c*4 + m*5
+dv = soma % 11
+print(dv)
+
+
+-- EXECUTION TIME:
+0.169065
+-- TEST CASE 1:
+---- input:
+2000
+---- correct output:
+10
+---- user output:
+10
+-- TEST CASE 2:
+---- input:
+3550
+---- correct output:
+6
+---- user output:
+6
+-- TEST CASE 3:
+---- input:
+0007
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

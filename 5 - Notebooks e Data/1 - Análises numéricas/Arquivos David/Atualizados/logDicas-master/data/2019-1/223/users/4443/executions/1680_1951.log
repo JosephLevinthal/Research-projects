@@ -1,0 +1,101 @@
+== TEST (2019-04-30 21:45:32) 
+-- CODE:
+#Leitura das coordenadas dos pontos
+x0 = ("Digite o valor de x para o ponto 0: ")
+y0 = ("Digite o valor de y para o ponto 0: ")
+x1 = ("Digite o valor de x para o ponto 1: ")
+y1 = ("Digite o valor de y para o ponto 1: ")
+x2 = ("Digite o valor de x para o ponto 2: ")
+y2 = ("Digite o valor de y para o ponto 2: ")
+
+c = (x1-x0)*(y2-y0)-(x2-x0)*(y1-y0)
+if(c < 0):
+	print("A direita da reta")
+elif(c > 0):
+	print("A esquerda da reta")
+elif(c == 0):
+	print("Sobre a reta")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    c = (x1-x0)*(y2-y0)-(x2-x0)*(y1-y0)
+TypeError: unsupported operand type(s) for -: 'str' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 21:47:00) 
+-- CODE:
+#Leitura das coordenadas dos pontos
+x0 = float(input("Digite o valor de x para o ponto 0: "))
+y0 = float(input("Digite o valor de y para o ponto 0: "))
+x1 = float(input("Digite o valor de x para o ponto 1: "))
+y1 = float(input("Digite o valor de y para o ponto 1: "))
+x2 = float(input("Digite o valor de x para o ponto 2: "))
+y2 = float(input("Digite o valor de y para o ponto 2: "))
+
+c = (x1-x0)*(y2-y0)-(x2-x0)*(y1-y0)
+if(c < 0):
+	print("A direita da reta")
+elif(c > 0):
+	print("A esquerda da reta")
+elif(c == 0):
+	print("Sobre a reta")
+-- OUTPUT:
+A esquerda da reta
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 21:47:16) 
+-- CODE:
+#Leitura das coordenadas dos pontos
+x0 = float(input("Digite o valor de x para o ponto 0: "))
+y0 = float(input("Digite o valor de y para o ponto 0: "))
+x1 = float(input("Digite o valor de x para o ponto 1: "))
+y1 = float(input("Digite o valor de y para o ponto 1: "))
+x2 = float(input("Digite o valor de x para o ponto 2: "))
+y2 = float(input("Digite o valor de y para o ponto 2: "))
+
+c = (x1-x0)*(y2-y0)-(x2-x0)*(y1-y0)
+if(c < 0):
+	print("A direita da reta")
+elif(c > 0):
+	print("A esquerda da reta")
+elif(c == 0):
+	print("Sobre a reta")
+-- EXECUTION TIME:
+0.20718
+-- TEST CASE 1:
+---- input:
+1
+4
+3
+5
+9
+9
+---- correct output:
+A esquerda da reta
+---- user output:
+A esquerda da reta
+-- TEST CASE 2:
+---- input:
+9
+8
+6
+5
+2
+1
+---- correct output:
+Sobre a reta
+---- user output:
+Sobre a reta
+-- TEST CASE 3:
+---- input:
+0
+0
+0
+1
+1
+1
+---- correct output:
+A direita da reta
+---- user output:
+A direita da reta
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

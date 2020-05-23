@@ -1,0 +1,68 @@
+== TEST (2019-07-02 16:09:03) 
+-- CODE:
+from numpy import *
+ordem = array(eval(input("Digite uma matriz contendo letras L ou B: ")))
+bombas = 0
+for i in range(shape(ordem[0])):
+	for j in range(shape(ordem[1])):
+		if(ordem[i,j] == "B"):
+			bombas = bombas + 1
+print(bombas)			
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 16:09:50) 
+-- CODE:
+from numpy import *
+ordem = array(eval(input("Digite uma matriz contendo letras L ou B: ")))
+bombas = 0
+for i in range(shape(ordem)[0]):
+	for j in range(shape(ordem)[1]):
+		if(ordem[i,j] == "B"):
+			bombas = bombas + 1
+print(bombas)			
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 16:10:01) 
+-- CODE:
+from numpy import *
+ordem = array(eval(input("Digite uma matriz contendo letras L ou B: ")))
+bombas = 0
+for i in range(shape(ordem)[0]):
+	for j in range(shape(ordem)[1]):
+		if(ordem[i,j] == "B"):
+			bombas = bombas + 1
+print(bombas)			
+-- EXECUTION TIME:
+1.08483
+-- TEST CASE 1:
+---- input:
+[['B','B','L','B'],['L','L','L','L'],['B','L','B','B'],['L','B','L','L']]
+---- correct output:
+7
+---- user output:
+7
+-- TEST CASE 2:
+---- input:
+[['B','B','B'],['B','L','B'],['L','L','B']]
+---- correct output:
+6
+---- user output:
+6
+-- TEST CASE 3:
+---- input:
+[['B','B','L','L','L'],['L','L','L','B','L'],['L','B','B','L','B'],['B','L','L','L','B'],['B','B','B','B','B']]
+---- correct output:
+13
+---- user output:
+13
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

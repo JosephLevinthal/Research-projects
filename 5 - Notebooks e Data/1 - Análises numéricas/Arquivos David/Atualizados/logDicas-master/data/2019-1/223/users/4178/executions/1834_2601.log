@@ -1,0 +1,80 @@
+== TEST (2019-06-25 16:24:28) 
+-- CODE:
+"""
+Lab 07 – Exercicio 01
+@author: IComp / UFAM
+SISTEMAS DE EQUACOES LINEARES -- FRUTAS
+"""
+
+from numpy import *
+from numpy.linalg import * #tuyo
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array([[ 23.60 ,53.60 ,27.70 ], [ ,  ,  ], [ ,  ,  ]])
+
+# Vetor de constantes (informado no enunciado)
+compras = array([23.6, 52.6, 27.7])
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot( , )
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[0] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- ERROR:
+File "XXXX", line 11
+    frutas = array([[ 23.60 ,53.60 ,27.70 ], [ ,  ,  ], [ ,  ,  ]])
+                                               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 16:31:32) 
+-- CODE:
+"""
+Lab 07 – Exercicio 01
+@author: IComp / UFAM
+SISTEMAS DE EQUACOES LINEARES -- FRUTAS
+"""
+
+from numpy import *
+from numpy.linalg import * #tuyo
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array([[ abacates,23,60 , 1], [abacates , 52,60 ,1  ], [bananas , 27,70 , 1 ]])
+
+# Vetor de constantes (informado no enunciado)
+compras = array([23.6, 52.6, 27.7])
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(frutas ,1 )
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[0] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

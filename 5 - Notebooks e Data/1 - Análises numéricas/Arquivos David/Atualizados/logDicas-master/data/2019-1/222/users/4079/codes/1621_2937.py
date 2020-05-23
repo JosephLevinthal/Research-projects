@@ -1,0 +1,6 @@
+pressao=int(input("equacao de clayperon:"))
+n=float(input("numero de mols:"))
+v=float(input("volume:"))		
+t=int(input("graus celsius:"))
+p=float(n*pressao*t)
+print(p)

@@ -1,0 +1,427 @@
+== TEST (2019-04-05 00:21:03) 
+-- CODE:
+a= 2+4
+print(a "oi")
+
+-- ERROR:
+File "XXXX", line 2
+    print(a "oi")
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:21:09) 
+-- CODE:
+a= 2+4
+print(a ,"oi")
+
+-- OUTPUT:
+6 oi
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:21:27) 
+-- CODE:
+a= 2/4
+print(a ,"oi")
+
+-- OUTPUT:
+0.5 oi
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:22:04) 
+-- CODE:
+a= 19/3
+print(round(a ,4 "oi"))
+
+-- ERROR:
+File "XXXX", line 2
+    print(round(a ,4 "oi"))
+                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:22:10) 
+-- CODE:
+a= 19/3
+print(round(a ,4 ,"oi"))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print(round(a ,4 ,"oi"))
+TypeError: round() takes at most 2 arguments (3 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:22:22) 
+-- CODE:
+a= 19/3
+print(round(a ,4 /"oi/"))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print(round(a ,4 /"oi/"))
+TypeError: unsupported operand type(s) for /: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:22:28) 
+-- CODE:
+a= 19/3
+print(round(a ,4 /"oi"/))
+
+-- ERROR:
+File "XXXX", line 2
+    print(round(a ,4 /"oi"/))
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:24:41) 
+-- CODE:
+a= 19/3
+oi= ola
+print(round(a ,4 oi))
+
+-- ERROR:
+File "XXXX", line 3
+    print(round(a ,4 oi))
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:24:51) 
+-- CODE:
+a= 19/3
+oi= ola
+print(round(a ,4 /oi/))
+
+-- ERROR:
+File "XXXX", line 3
+    print(round(a ,4 /oi/))
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:25:00) 
+-- CODE:
+a= 19/3
+oi= ola
+print(round(a ,4 /"oi/"))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    oi= ola
+NameError: name 'ola' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:29:20) 
+-- CODE:
+a= 10/3 /"oi/"
+oi= ola
+print(round(a ,4))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a= 10/3 /"oi/"
+TypeError: unsupported operand type(s) for /: 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:29:38) 
+-- CODE:
+a= float(10/3 /"oi/")
+oi= ola
+print(round(a ,4))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a= float(10/3 /"oi/")
+TypeError: unsupported operand type(s) for /: 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:30:16) 
+-- CODE:
+a= float(input( /"oi/"))
+oi= ola
+print(round(a ,4))
+
+-- ERROR:
+File "XXXX", line 1
+    a= float(input( /"oi/"))
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:30:54) 
+-- CODE:
+a= float(input( \"oi\"))
+oi= ola
+print(round(a ,4))
+
+-- ERROR:
+File "XXXX", line 1
+    a= float(input( \"oi\"))
+                           ^
+SyntaxError: unexpected character after line continuation character
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:31:58) 
+-- CODE:
+oi=ola
+print(oi)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    oi=ola
+NameError: name 'ola' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:32:05) 
+-- CODE:
+oi=ola
+print(oi)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    oi=ola
+NameError: name 'ola' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:32:23) 
+-- CODE:
+oi="ola"
+print(oi)
+
+-- OUTPUT:
+ola
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 11:18:00) 
+-- CODE:
+oi="ola"
+print(oi)
+
+-- OUTPUT:
+ola
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 11:46:01) 
+-- CODE:
+oi="ola \"oi"\ " 
+print(oi)
+
+-- ERROR:
+File "XXXX", line 1
+    oi="ola \"oi"\ " 
+                    ^
+SyntaxError: unexpected character after line continuation character
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 11:46:51) 
+-- CODE:
+oi="ola \"oi\"." 
+print(oi)
+
+-- OUTPUT:
+ola "oi".
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 11:46:52) 
+-- CODE:
+oi="ola \"oi\"." 
+print(oi)
+
+-- OUTPUT:
+ola "oi".
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 11:46:55) 
+-- CODE:
+oi="ola \"oi\"." 
+print(oi)
+
+-- OUTPUT:
+ola "oi".
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 11:46:55) 
+-- CODE:
+oi="ola \"oi\"." 
+print(oi)
+
+-- OUTPUT:
+ola "oi".
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 11:46:56) 
+-- CODE:
+oi="ola \"oi\"." 
+print(oi)
+
+-- OUTPUT:
+ola "oi".
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 11:46:56) 
+-- CODE:
+oi="ola \"oi\"." 
+print(oi)
+
+-- OUTPUT:
+ola "oi".
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 11:46:57) 
+-- CODE:
+oi="ola \"oi\"." 
+print(oi)
+
+-- OUTPUT:
+ola "oi".
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 11:46:57) 
+-- CODE:
+oi="ola \"oi\"." 
+print(oi)
+
+-- OUTPUT:
+ola "oi".
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 11:46:58) 
+-- CODE:
+oi="ola \"oi\"." 
+print(oi)
+
+-- OUTPUT:
+ola "oi".
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-05 11:46:59) 
+-- CODE:
+oi="ola \"oi\"." 
+print(oi)
+
+-- EXECUTION TIME:
+0.135725
+-- TEST CASE 1:
+---- input:
+9
+100
+---- correct output:
+900.0
+75.0
+---- user output:
+ola "oi".
+-- TEST CASE 2:
+---- input:
+5
+120
+
+---- correct output:
+600.0
+50.0
+
+---- user output:
+ola "oi".
+-- TEST CASE 3:
+---- input:
+1.2
+80
+---- correct output:
+96.0
+8.0
+
+---- user output:
+ola "oi".
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 11:47:03) 
+-- CODE:
+oi="ola \"oi\"." 
+print(oi)
+
+-- OUTPUT:
+ola "oi".
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 11:47:03) 
+-- CODE:
+oi="ola \"oi\"." 
+print(oi)
+
+-- OUTPUT:
+ola "oi".
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-05 11:47:03) 
+-- CODE:
+oi="ola \"oi\"." 
+print(oi)
+
+-- EXECUTION TIME:
+0.113617
+-- TEST CASE 1:
+---- input:
+9
+100
+---- correct output:
+900.0
+75.0
+---- user output:
+ola "oi".
+-- TEST CASE 2:
+---- input:
+5
+120
+
+---- correct output:
+600.0
+50.0
+
+---- user output:
+ola "oi".
+-- TEST CASE 3:
+---- input:
+1.2
+80
+---- correct output:
+96.0
+8.0
+
+---- user output:
+ola "oi".
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 11:48:02) 
+-- CODE:
+texto = "Amo o \"Python\"."
+print(texto)
+
+-- OUTPUT:
+Amo o "Python".
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-03 11:10:19) 
+-- CODE:
+a=float(input("tempo gasto :   "))
+b=float(input("velucidade media:   "))
+c=a*b
+d=c/12
+print(c)
+print(d)
+
+-- EXECUTION TIME:
+0.198519
+-- TEST CASE 1:
+---- input:
+9
+100
+---- correct output:
+900.0
+75.0
+---- user output:
+900.0
+75.0
+-- TEST CASE 2:
+---- input:
+5
+120
+
+---- correct output:
+600.0
+50.0
+
+---- user output:
+600.0
+50.0
+-- TEST CASE 3:
+---- input:
+1.2
+80
+---- correct output:
+96.0
+8.0
+
+---- user output:
+96.0
+8.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

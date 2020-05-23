@@ -1,0 +1,329 @@
+== TEST (2019-03-22 15:59:25) 
+-- CODE:
+a = abra
+b = input("diga o nome de um objeto: ")
+c = int(input("escreva a quantidade de vezes que vai repetir: "))
+print(a + b °c)
+-- ERROR:
+File "XXXX", line 4
+    print(a + b °c)
+                 ^
+SyntaxError: invalid character in identifier
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 15:59:50) 
+-- CODE:
+a = abra
+b = input("diga o nome de um objeto: ")
+c = int(input("escreva a quantidade de vezes que vai repetir: "))
+print(a + b°c)
+-- ERROR:
+File "XXXX", line 4
+    print(a + b°c)
+                ^
+SyntaxError: invalid character in identifier
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 16:01:03) 
+-- CODE:
+b = input("diga o nome de um objeto: ")
+c = int(input("escreva a quantidade de vezes que vai repetir: "))
+print("abra" + b)°c
+
+-- ERROR:
+File "XXXX", line 3
+    print("abra" + b)°c
+                      ^
+SyntaxError: invalid character in identifier
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 16:01:21) 
+-- CODE:
+b = input("diga o nome de um objeto: ")
+c = int(input("escreva a quantidade de vezes que vai repetir: "))
+print("abra" + b)ºc
+
+-- ERROR:
+File "XXXX", line 3
+    print("abra" + b)ºc
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 16:01:36) 
+-- CODE:
+b = input("diga o nome de um objeto: ")
+c = int(input("escreva a quantidade de vezes que vai repetir: "))
+print("abra" + b)*c
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print("abra" + b)*c
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 16:02:35) 
+-- CODE:
+b = input("diga o nome de um objeto: ")
+c = int(input("escreva a quantidade de vezes que vai repetir: "))
+print("abra" + b)*c""
+
+-- ERROR:
+File "XXXX", line 3
+    print("abra" + b)*c""
+                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 16:08:18) 
+-- CODE:
+b = input("diga o nome de um objeto: ")
+c = int(input("escreva a quantidade de vezes que vai repetir: "))
+d = "abra" + b
+print(d*c)
+-- OUTPUT:
+abralivroabralivroabralivroabralivroabralivroabralivroabralivroabralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 16:08:35) 
+-- CODE:
+b = input("diga o nome de um objeto: ")
+c = int(input("escreva a quantidade de vezes que vai repetir: "))
+d = "abra " + b
+print(d*c)
+-- OUTPUT:
+abra livroabra livroabra livroabra livroabra livroabra livroabra livroabra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 16:08:51) 
+-- CODE:
+b = input("diga o nome de um objeto: ")
+c = int(input("escreva a quantidade de vezes que vai repetir: "))
+d = "abra " + b
+print(d*c)
+-- OUTPUT:
+abra livroabra livroabra livroabra livroabra livroabra livroabra livroabra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-22 16:09:16) 
+-- CODE:
+b = input("diga o nome de um objeto: ")
+c = int(input("escreva a quantidade de vezes que vai repetir: "))
+d = "abra " + b 
+print(d*c)
+-- EXECUTION TIME:
+0.148855
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+abra livroabra livroabra livroabra livroabra livroabra livroabra livroabra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+abra carroabra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 16:09:45) 
+-- CODE:
+b = input("diga o nome de um objeto: ")
+c = int(input("escreva a quantidade de vezes que vai repetir: "))
+d = "abra " + b+ " "
+print(d*c)
+-- OUTPUT:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-22 16:09:56) 
+-- CODE:
+b = input("diga o nome de um objeto: ")
+c = int(input("escreva a quantidade de vezes que vai repetir: "))
+d = "abra " + b+ " "
+print(d*c)
+-- EXECUTION TIME:
+0.224148
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+abra carro abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 16:10:26) 
+-- CODE:
+b = input("diga o nome de um objeto: ")
+c = int(input("escreva a quantidade de vezes que vai repetir: ", " "))
+d = "abra " + b+ " "
+print(d*c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    c = int(input("escreva a quantidade de vezes que vai repetir: ", " "))
+TypeError: input expected at most 1 arguments, got 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 16:10:35) 
+-- CODE:
+b = input("diga o nome de um objeto: ")
+c = int(input("escreva a quantidade de vezes que vai repetir: ", " "))
+d = "abra " + b+ " "
+print(d*c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    c = int(input("escreva a quantidade de vezes que vai repetir: ", " "))
+TypeError: input expected at most 1 arguments, got 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 16:10:56) 
+-- CODE:
+b = input("diga o nome de um objeto: ")
+c = int(input("escreva a quantidade de vezes que vai repetir: " " "))
+d = "abra " + b+ " "
+print(d*c)
+-- OUTPUT:
+escreva a quantidade de vezes que vai repetir:  abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-22 16:11:14) 
+-- CODE:
+b = input("diga o nome de um objeto: ")
+c = int(input("escreva a quantidade de vezes que vai repetir: " " "))
+d = "abra " + b
+print(d*c)
+-- EXECUTION TIME:
+0.162233
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+escreva a quantidade de vezes que vai repetir:  abra livroabra livroabra livroabra livroabra livroabra livroabra livroabra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+escreva a quantidade de vezes que vai repetir:  abra carroabra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+escreva a quantidade de vezes que vai repetir:  abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 16:11:27) 
+-- CODE:
+b = input("diga o nome de um objeto: ")
+c = int(input("escreva a quantidade de vezes que vai repetir: " " "))
+d = "Abra " + b
+print(d*c)
+-- OUTPUT:
+escreva a quantidade de vezes que vai repetir:  Abra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-22 16:11:50) 
+-- CODE:
+b = input("diga o nome de um objeto: ")
+c = int(input("escreva a quantidade de vezes que vai repetir: "))
+d = "Abra " + b +" "
+print(d*c)
+-- EXECUTION TIME:
+0.18318
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-30 15:26:18) 
+-- CODE:
+# feitiço de abertura
+
+a = input("Digite uma palavra para o fetico: ")
+b = int(input("Digite o numero de repeticao desse feitico: "))
+c = "Abra "
+palavra = c + a + " "
+feitico = b * palavra
+print(feitico)
+-- EXECUTION TIME:
+0.163059
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

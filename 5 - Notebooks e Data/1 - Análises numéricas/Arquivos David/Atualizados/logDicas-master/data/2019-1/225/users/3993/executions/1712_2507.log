@@ -1,0 +1,232 @@
+== SUBMITION (2019-05-14 19:34:51) 
+-- CODE:
+qt = int(input())
+pt = float(input())
+
+t = 0
+
+while(qt < 8000 and qt > 0):
+	qv = int(input())
+	qt = qt + ((qt * pt) / 100) - qv
+	t = t + 1
+	
+if(qt >= 8000):
+	print("MAXIMO")
+elif(qt <= 0):
+	print("ZERO")
+
+print(t)
+-- EXECUTION TIME:
+0.181302
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+ZERO
+3
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+MAXIMO
+7
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 13:11:49) 
+-- CODE:
+from math import*
+
+n = int(input())
+
+c = 0 # contador para percorrer o laco
+d = 1 # denominador
+e = 0 # soma inicializada com zero
+aux = 1 # variavel auxiliar varia entre -1 e 1
+
+while(c < n):
+	e = e + (aux * (1 / (d * (3 ** c))))
+	if(aux == 1):
+		aux = -1
+	else:
+		aux = 1
+		
+	c = c + 1
+	d = d + 2
+	
+e = e * sqrt(12)
+print(round(e, 8))
+-- EXECUTION TIME:
+0.15488
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+3.14159265
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+3.14159265
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+3.14159265
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 13:13:17) 
+-- CODE:
+from math import*
+
+n = int(input())
+
+c = 0 # contador para percorrer o laco
+d = 1 # denominador
+e = 0 # soma inicializada com zero
+aux = 1 # variavel auxiliar varia entre -1 e 1
+
+while(c < n):
+	e = e + (aux * (1 / (d * (3 ** c))))
+	if(aux == 1):
+		aux = -1
+	else:
+		aux = 1
+		
+	c = c + 1
+	d = d + 2
+	
+e = e * sqrt(12)
+print(round(e, 8))
+-- OUTPUT:
+3.14159265
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 13:15:06) 
+-- CODE:
+qt = int(input())
+pt = float(input())
+
+t = 0
+
+while(qt < 8000 and qt > 0):
+	qv = int(input())
+	qt = qt + ((qt * pt) / 100) - qv
+	t = t + 1
+	
+if(qt >= 8000):
+	print("MAXIMO")
+elif(qt <= 0):
+	print("ZERO")
+
+print(t)
+-- EXECUTION TIME:
+0.246095
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+ZERO
+3
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+MAXIMO
+7
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

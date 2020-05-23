@@ -1,0 +1,197 @@
+== TEST (2019-05-29 06:55:36) 
+-- CODE:
+v = array(eval(input("v:")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    v = array(eval(input()))
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 06:56:46) 
+-- CODE:
+from numpy import*
+
+v = array(eval(input("v:")))
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 09:48:18) 
+-- CODE:
+from numpy import*
+
+v1=int(input("valor:"))
+v2=[]
+
+c = 0
+while c!=v1:
+	k=input("vetor:")
+	v2.append(k)
+	c = c+1
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 10:50:21) 
+-- CODE:
+from numpy import*
+
+v1=int(input("valor:"))
+v2=[]
+
+c = 0
+while c!=v1:
+	k=input("vetor:")
+	v2.append(k)
+	c = c+1
+	
+e=[]
+f=[]
+while inf(f)< len(v2):
+	if int(v1[f]>0):
+		e.append(b[f])
+	f = f+1	
+print(e)	
+-- EXECUTION TIME:
+0.359194
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1756/1183/main.py", line 3, in <module>
+    v1=int(input())
+ValueError: invalid literal for int() with base 10: '[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 10:50:28) 
+-- CODE:
+from numpy import*
+
+v1=int(input("valor:"))
+v2=[]
+
+c = 0
+while c!=v1:
+	k=input("vetor:")
+	v2.append(k)
+	c = c+1
+	
+e=[]
+f=[]
+while inf(f)< len(v2):
+	if int(v1[f]>0):
+		e.append(b[f])
+	f = f+1	
+print(e)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 10:51:48) 
+-- CODE:
+from numpy import*
+
+v= int(input("valor:"))
+v2=[]
+
+c = 0
+while c!=v:
+	k=input("vetor:")
+	v2.append(k)
+	c = c+1
+	
+e=[]
+f=[]
+while inf(f)< len(v2):
+	if int(v[f]>0):
+		e.append(b[f])
+	f = f+1	
+print(e)	
+-- EXECUTION TIME:
+0.42515
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1756/1183/main.py", line 3, in <module>
+    v= int(input())
+ValueError: invalid literal for int() with base 10: '[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 10:51:51) 
+-- CODE:
+from numpy import*
+
+v= int(input("valor:"))
+v2=[]
+
+c = 0
+while c!=v:
+	k=input("vetor:")
+	v2.append(k)
+	c = c+1
+	
+e=[]
+f=[]
+while inf(f)< len(v2):
+	if int(v[f]>0):
+		e.append(b[f])
+	f = f+1	
+print(e)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 12:56:26) 
+-- CODE:
+from numpy import*
+v = array(eval(input("vetor:")))
+i = 0
+j = 0
+k = 0
+
+while(k<size(v)):
+	if(v[k]>0):
+		i = i+1
+	k = k+1
+k=0
+t= arange(i)
+while(k<size(v)):
+	if(v[k]>0):
+		t[j]=v[k]
+		j = j+1
+	k = k+1
+print(t)	
+
+-- EXECUTION TIME:
+0.502907
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+[18 32 14 25]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

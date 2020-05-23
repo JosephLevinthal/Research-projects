@@ -1,0 +1,104 @@
+== TEST (2019-06-17 22:24:21) 
+-- CODE:
+c = float(input("Qual a temperatura em celsius: "))
+v = float(input("Qual a velocidade em km/h: "))
+
+if ((c >= -50)and(c <= 10)):
+	if (v > 4.8):
+		o = (13.12 + 0.6215 * c - (11,37 * v**0.16)+(0.3965 * c * v**0.16))
+		print(round(o, 4))
+	else: 
+		print("Velocidade invalida")
+else:
+	print("Temperatura invalida")
+
+-- OUTPUT:
+Temperatura invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-17 22:26:48) 
+-- CODE:
+c = float(input("Qual a temperatura em celsius: "))
+v = float(input("Qual a velocidade em km/h: "))
+
+a = (0.3965 * c * v**0.16)
+b = (11,37 * v**0.16)
+if ((c >= (-50))and(c <= 10)):
+	if (v > 4.8):
+		o = (13.12 + 0.6215 * c - b + a)
+		print(round(o, 4))
+	else: 
+		print("Velocidade invalida")
+else:
+	print("Temperatura invalida")
+
+-- OUTPUT:
+Temperatura invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-17 22:29:32) 
+-- CODE:
+c = float(input("Qual a temperatura em celsius: "))
+v = float(input("Qual a velocidade em km/h: "))
+
+a = (0.3965 * c * v**0.16)
+b = (11.37 * v**0.16)
+m = 0.6215
+n = 13.12
+if ((c >= (-50))and(c <= 10)):
+	if (v > 4.8):
+		O = (n + m * c - b + a )
+		print(round(O, 4))
+	else: 
+		print("Velocidade invalida")
+else:
+	print("Temperatura invalida")
+
+-- OUTPUT:
+Temperatura invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-17 22:29:54) 
+-- CODE:
+c = float(input("Qual a temperatura em celsius: "))
+v = float(input("Qual a velocidade em km/h: "))
+
+a = (0.3965 * c * v**0.16)
+b = (11.37 * v**0.16)
+m = 0.6215
+n = 13.12
+if ((c >= (-50))and(c <= 10)):
+	if (v > 4.8):
+		O = (n + m * c - b + a )
+		print(round(O, 4))
+	else: 
+		print("Velocidade invalida")
+else:
+	print("Temperatura invalida")
+
+-- EXECUTION TIME:
+0.734958
+-- TEST CASE 1:
+---- input:
+20
+9
+---- correct output:
+Temperatura invalida
+---- user output:
+Temperatura invalida
+-- TEST CASE 2:
+---- input:
+-5
+4
+---- correct output:
+Velocidade invalida
+---- user output:
+Velocidade invalida
+-- TEST CASE 3:
+---- input:
+-5
+50
+---- correct output:
+-14.9563
+---- user output:
+-14.9563
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

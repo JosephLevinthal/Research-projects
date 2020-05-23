@@ -1,0 +1,7 @@
+jogo1=float(input("digite o valor do jogo1:"))
+jogo2=float(input("digite o valor do jogo2:"))
+desconto=(jogo2*(25/100))
+totaljogo2=(jogo2-desconto)
+totalcompra=(jogo1+totaljogo2)
+print(round(totaljogo2, 2))
+print(round(totalcompra, 2))

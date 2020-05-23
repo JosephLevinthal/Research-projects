@@ -1,0 +1,1152 @@
+== TEST (2019-05-08 19:34:58) 
+-- CODE:
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+ppa=int(input("crescimento cidade a: "/100))
+ppb=int(input("crescimento cidade b: "/100))
+print((a*0)ppa+)
+-- ERROR:
+File "XXXX", line 5
+    print((a*0)ppa+)
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-08 19:35:16) 
+-- CODE:
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+ppa=int(input("crescimento cidade a: "/100))
+ppb=int(input("crescimento cidade b: "/100))
+print((a*0)+ppa)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    ppa=int(input("crescimento cidade a: "/100))
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-08 19:36:17) 
+-- CODE:
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+ppa=int(input("crescimento cidade a: "/100))
+ppb=int(input("crescimento cidade b: "/100))
+apa=ppa/100
+bpb=ppn/100
+print((a*0)+apa)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    ppa=int(input("crescimento cidade a: "/100))
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-08 19:36:31) 
+-- CODE:
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+ppa=int(input("crescimento cidade a: "))
+ppb=int(input("crescimento cidade b: "))
+apa=ppa/100
+bpb=ppn/100
+print((a*0)+apa)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    ppa=int(input())
+ValueError: invalid literal for int() with base 10: '35.5'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:11:22) 
+-- CODE:
+cont=0
+haba=int(input("cidade a: "))
+habb=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))/100
+txb=float(input("crescimento cidade b: "))/100
+print(txa)
+
+-- OUTPUT:
+0.355
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:14:00) 
+-- CODE:
+cont=0
+haba=int(input("cidade a: "))
+habb=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))/100
+txb=float(input("crescimento cidade b: "))/100
+print(txa)
+while(haba-habb==0):
+	cont=cont+1
+	print("eu")
+
+-- OUTPUT:
+0.355
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:14:41) 
+-- CODE:
+cont=0
+haba=int(input("cidade a: "))
+habb=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+print(txa)
+while(haba-habb==0):
+	cont=cont+1
+	print("eu")
+
+-- OUTPUT:
+35.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:15:07) 
+-- CODE:
+cont=0
+haba=int(input("cidade a: "))
+habb=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(haba-habb==0):
+	cont=cont+1
+	print("eu")
+
+-- OUTPUT:
+35.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:20:16) 
+-- CODE:
+cont=0
+ano=0
+haba=int(input("cidade a: "))
+habb=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a=a*txa
+	b=b*txb
+	ano=ano+1
+print("A ultrapassa ou iguala a B em %d anos" %ano)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    while(a<=b):
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:20:56) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a=a*txa
+	b=b*txb
+	ano=ano+1
+print("A ultrapassa ou iguala a B em %d anos" %ano)
+
+-- OUTPUT:
+A ultrapassa ou iguala a B em 1 anos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-11 16:21:19) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a=a*txa
+	b=b*txb
+	ano=ano+1
+print("A ultrapassa ou iguala a B em %d anos" %ano)
+
+-- EXECUTION TIME:
+0.208723
+-- TEST CASE 1:
+---- input:
+250150
+580000
+35.5
+10.5
+---- correct output:
+5
+---- user output:
+A ultrapassa ou iguala a B em 1 anos
+-- TEST CASE 2:
+---- input:
+180250
+1200000
+10.25
+5.7
+---- correct output:
+45
+---- user output:
+A ultrapassa ou iguala a B em 4 anos
+-- TEST CASE 3:
+---- input:
+1000000
+1650000
+12.75
+3.2
+---- correct output:
+6
+---- user output:
+A ultrapassa ou iguala a B em 1 anos
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:21:28) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a=a*txa
+	b=b*txb
+	ano=ano+1
+print("A ultrapassa ou iguala a B em %d anos" %ano)
+
+-- OUTPUT:
+A ultrapassa ou iguala a B em 1 anos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:22:17) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a=(a*(txa/100))
+	b=(b*(txb/100))
+	ano=ano+1
+print("A ultrapassa ou iguala a B em %d anos" %ano)
+
+-- OUTPUT:
+A ultrapassa ou iguala a B em 1 anos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:22:49) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a=(a*(txa/100))
+	b=(b*(txb/100))
+print("A ultrapassa ou iguala a B em %d anos" %ano)
+
+-- OUTPUT:
+A ultrapassa ou iguala a B em 0 anos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:24:15) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print("A ultrapassa ou iguala a B em %d anos" %ano)
+
+-- OUTPUT:
+A ultrapassa ou iguala a B em 5 anos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:25:04) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print(%ano)
+
+-- ERROR:
+File "XXXX", line 11
+    print(%ano)
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:25:30) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print(%d)
+
+-- ERROR:
+File "XXXX", line 11
+    print(%d)
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:25:54) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print("%d"%ano)
+
+-- OUTPUT:
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:26:04) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print("%a"%ano)
+
+-- OUTPUT:
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:26:08) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print("%z"%ano)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 11, in <module>
+    print("%z"%ano)
+ValueError: unsupported format character 'z' (0x7a) at index 1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:26:17) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print("%"%ano)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 11, in <module>
+    print("%"%ano)
+ValueError: incomplete format
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:26:41) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print("%c"%ano)
+
+-- OUTPUT:
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:27:41) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print( B em %d anos" %ano)
+
+-- ERROR:
+File "XXXX", line 11
+    print( B em %d anos" %ano)
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:27:46) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print( "B em %d anos" %ano)
+
+-- OUTPUT:
+B em 5 anos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:28:22) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print( "%d " %ano)
+
+-- OUTPUT:
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-11 16:28:44) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print( "%d " %ano)
+
+-- EXECUTION TIME:
+0.138921
+-- TEST CASE 1:
+---- input:
+250150
+580000
+35.5
+10.5
+---- correct output:
+5
+---- user output:
+5
+-- TEST CASE 2:
+---- input:
+180250
+1200000
+10.25
+5.7
+---- correct output:
+45
+---- user output:
+45
+-- TEST CASE 3:
+---- input:
+1000000
+1650000
+12.75
+3.2
+---- correct output:
+6
+---- user output:
+6
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:29:39) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print( "% " %ano)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 11, in <module>
+    print( "% " %ano)
+ValueError: incomplete format
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:30:07) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print( "%a ")
+
+-- OUTPUT:
+%a
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:30:33) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print( %ano)
+
+-- ERROR:
+File "XXXX", line 11
+    print( %ano)
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:30:38) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print(%ano)
+
+-- ERROR:
+File "XXXX", line 11
+    print(%ano)
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:30:47) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print(ano/100)
+
+-- OUTPUT:
+0.05
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-11 16:31:12) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print(ano)
+
+-- EXECUTION TIME:
+0.173029
+-- TEST CASE 1:
+---- input:
+250150
+580000
+35.5
+10.5
+---- correct output:
+5
+---- user output:
+5
+-- TEST CASE 2:
+---- input:
+180250
+1200000
+10.25
+5.7
+---- correct output:
+45
+---- user output:
+45
+-- TEST CASE 3:
+---- input:
+1000000
+1650000
+12.75
+3.2
+---- correct output:
+6
+---- user output:
+6
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:31:13) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print(ano)
+
+-- OUTPUT:
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-11 16:31:54) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print(ano)
+
+-- EXECUTION TIME:
+0.124484
+-- TEST CASE 1:
+---- input:
+250150
+580000
+35.5
+10.5
+---- correct output:
+5
+---- user output:
+5
+-- TEST CASE 2:
+---- input:
+180250
+1200000
+10.25
+5.7
+---- correct output:
+45
+---- user output:
+45
+-- TEST CASE 3:
+---- input:
+1000000
+1650000
+12.75
+3.2
+---- correct output:
+6
+---- user output:
+6
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:32:00) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano>=1
+print(ano)
+
+-- OUTPUT:
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:32:33) 
+-- CODE:
+cont=0
+ano=0
+a=int(input("cidade a: "))
+b=int(input("cidade b: "))
+txa=float(input("crescimento cidade a: "))
+txb=float(input("crescimento cidade b: "))
+while(a<=b):
+	a+=(a*(txa/100))
+	b+=(b*(txb/100))
+	ano+=1
+print(ano)
+
+-- OUTPUT:
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:56:53) 
+-- CODE:
+ano=0
+ca=int(input("habitantes de a: "))
+cb=int(input("habitantes de b: "))
+tca=float(input("taxa de crescimento de A: "))
+tcb=float(input("taxa de crescimento de B: "))
+while(ca>=b)
+	ca+=(ca*(tca/100))
+	cb+=(cb*(tcb/100))
+	ano+=1
+	print(ano)
+
+-- ERROR:
+File "XXXX", line 6
+    while(ca>=b)
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-11 16:56:58) 
+-- CODE:
+ano=0
+ca=int(input("habitantes de a: "))
+cb=int(input("habitantes de b: "))
+tca=float(input("taxa de crescimento de A: "))
+tcb=float(input("taxa de crescimento de B: "))
+while(ca>=b):
+	ca+=(ca*(tca/100))
+	cb+=(cb*(tcb/100))
+	ano+=1
+	print(ano)
+
+-- EXECUTION TIME:
+0.268572
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1728/2498/main.py", line 6, in <module>
+    while(ca>=b):
+NameError: name 'b' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:56:59) 
+-- CODE:
+ano=0
+ca=int(input("habitantes de a: "))
+cb=int(input("habitantes de b: "))
+tca=float(input("taxa de crescimento de A: "))
+tcb=float(input("taxa de crescimento de B: "))
+while(ca>=b):
+	ca+=(ca*(tca/100))
+	cb+=(cb*(tcb/100))
+	ano+=1
+	print(ano)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    while(ca>=b):
+NameError: name 'b' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:57:24) 
+-- CODE:
+ano=0
+ca=int(input("habitantes de a: "))
+cb=int(input("habitantes de b: "))
+tca=float(input("taxa de crescimento de A: "))
+tcb=float(input("taxa de crescimento de B: "))
+while(ca>=cb):
+	ca+=(ca*(tca/100))
+	cb+=(cb*(tcb/100))
+	ano+=1
+	print(ano)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    while(ca>=b):
+NameError: name 'b' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:57:43) 
+-- CODE:
+ano=0
+ca=int(input("habitantes de a: "))
+cb=int(input("habitantes de b: "))
+tca=float(input("taxa de crescimento de A: "))
+tcb=float(input("taxa de crescimento de B: "))
+while(ca>=cb):
+	ca+=(ca*(tca/100))
+	cb+=(cb*(tcb/100))
+	ano+=1
+print(ano)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    while(ca>=b):
+NameError: name 'b' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:58:36) 
+-- CODE:
+ano=0
+ca=int(input("habitantes de a: "))
+cb=int(input("habitantes de b: "))
+tca=float(input("taxa de crescimento de A: "))
+tcb=float(input("taxa de crescimento de B: "))
+while(ca<=cb):
+	ca+=(ca*(tca/100))
+	cb+=(cb*(tcb/100))
+	ano+=1
+print(ano)
+
+-- OUTPUT:
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-11 16:58:55) 
+-- CODE:
+ano=0
+ca=int(input("habitantes de a: "))
+cb=int(input("habitantes de b: "))
+tca=float(input("taxa de crescimento de A: "))
+tcb=float(input("taxa de crescimento de B: "))
+while(ca<=cb):
+	ca+=(ca*(tca/100))
+	cb+=(cb*(tcb/100))
+	ano+=1
+print(ano)
+
+-- EXECUTION TIME:
+0.129345
+-- TEST CASE 1:
+---- input:
+250150
+580000
+35.5
+10.5
+---- correct output:
+5
+---- user output:
+5
+-- TEST CASE 2:
+---- input:
+180250
+1200000
+10.25
+5.7
+---- correct output:
+45
+---- user output:
+45
+-- TEST CASE 3:
+---- input:
+1000000
+1650000
+12.75
+3.2
+---- correct output:
+6
+---- user output:
+6
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 15:25:30) 
+-- CODE:
+ano=0
+ca=int(input("habitantes de a: "))
+cb=int(input("habitantes de b: "))
+tca=float(input("taxa de crescimento de A: "))
+tcb=float(input("taxa de crescimento de B: "))
+while(ca<=cb):
+	ca+=(ca*(tca/100))
+	cb+=(cb*(tcb/100))
+	ano+=1
+print(ano)
+
+-- OUTPUT:
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 15:25:42) 
+-- CODE:
+ano=0
+ca=int(input("habitantes de a: "))
+cb=int(input("habitantes de b: "))
+tca=float(input("taxa de crescimento de A: "))
+tcb=float(input("taxa de crescimento de B: "))
+while(ca<=cb):
+	ca+=(ca*(tca/100))
+	cb+=(cb*(tcb/100))
+	ano+=1
+print(ano)
+
+-- EXECUTION TIME:
+0.0269709
+-- ERROR:
+Error response from daemon: Container b03781e46854ccc0a4593a5c869068295e9be4f7a076efbfc7129476082fbcfa is not running
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 15:25:43) 
+-- CODE:
+ano=0
+ca=int(input("habitantes de a: "))
+cb=int(input("habitantes de b: "))
+tca=float(input("taxa de crescimento de A: "))
+tcb=float(input("taxa de crescimento de B: "))
+while(ca<=cb):
+	ca+=(ca*(tca/100))
+	cb+=(cb*(tcb/100))
+	ano+=1
+print(ano)
+
+-- EXECUTION TIME:
+0.035846
+-- ERROR:
+Error response from daemon: Container b03781e46854ccc0a4593a5c869068295e9be4f7a076efbfc7129476082fbcfa is not running
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 15:25:44) 
+-- CODE:
+ano=0
+ca=int(input("habitantes de a: "))
+cb=int(input("habitantes de b: "))
+tca=float(input("taxa de crescimento de A: "))
+tcb=float(input("taxa de crescimento de B: "))
+while(ca<=cb):
+	ca+=(ca*(tca/100))
+	cb+=(cb*(tcb/100))
+	ano+=1
+print(ano)
+
+-- EXECUTION TIME:
+0.0293591
+-- ERROR:
+Error response from daemon: Container b03781e46854ccc0a4593a5c869068295e9be4f7a076efbfc7129476082fbcfa is not running
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 15:25:44) 
+-- CODE:
+ano=0
+ca=int(input("habitantes de a: "))
+cb=int(input("habitantes de b: "))
+tca=float(input("taxa de crescimento de A: "))
+tcb=float(input("taxa de crescimento de B: "))
+while(ca<=cb):
+	ca+=(ca*(tca/100))
+	cb+=(cb*(tcb/100))
+	ano+=1
+print(ano)
+
+-- EXECUTION TIME:
+0.024941
+-- ERROR:
+Error response from daemon: Container b03781e46854ccc0a4593a5c869068295e9be4f7a076efbfc7129476082fbcfa is not running
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 15:25:45) 
+-- CODE:
+ano=0
+ca=int(input("habitantes de a: "))
+cb=int(input("habitantes de b: "))
+tca=float(input("taxa de crescimento de A: "))
+tcb=float(input("taxa de crescimento de B: "))
+while(ca<=cb):
+	ca+=(ca*(tca/100))
+	cb+=(cb*(tcb/100))
+	ano+=1
+print(ano)
+
+-- EXECUTION TIME:
+0.032795
+-- ERROR:
+Error response from daemon: Container b03781e46854ccc0a4593a5c869068295e9be4f7a076efbfc7129476082fbcfa is not running
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 15:25:45) 
+-- CODE:
+ano=0
+ca=int(input("habitantes de a: "))
+cb=int(input("habitantes de b: "))
+tca=float(input("taxa de crescimento de A: "))
+tcb=float(input("taxa de crescimento de B: "))
+while(ca<=cb):
+	ca+=(ca*(tca/100))
+	cb+=(cb*(tcb/100))
+	ano+=1
+print(ano)
+
+-- EXECUTION TIME:
+0.0241401
+-- ERROR:
+Error response from daemon: Container b03781e46854ccc0a4593a5c869068295e9be4f7a076efbfc7129476082fbcfa is not running
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 15:25:45) 
+-- CODE:
+ano=0
+ca=int(input("habitantes de a: "))
+cb=int(input("habitantes de b: "))
+tca=float(input("taxa de crescimento de A: "))
+tcb=float(input("taxa de crescimento de B: "))
+while(ca<=cb):
+	ca+=(ca*(tca/100))
+	cb+=(cb*(tcb/100))
+	ano+=1
+print(ano)
+
+-- EXECUTION TIME:
+0.0363419
+-- ERROR:
+Error response from daemon: Container b03781e46854ccc0a4593a5c869068295e9be4f7a076efbfc7129476082fbcfa is not running
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 15:25:46) 
+-- CODE:
+ano=0
+ca=int(input("habitantes de a: "))
+cb=int(input("habitantes de b: "))
+tca=float(input("taxa de crescimento de A: "))
+tcb=float(input("taxa de crescimento de B: "))
+while(ca<=cb):
+	ca+=(ca*(tca/100))
+	cb+=(cb*(tcb/100))
+	ano+=1
+print(ano)
+
+-- EXECUTION TIME:
+0.0459549
+-- ERROR:
+Error response from daemon: Container b03781e46854ccc0a4593a5c869068295e9be4f7a076efbfc7129476082fbcfa is not running
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 15:25:46) 
+-- CODE:
+ano=0
+ca=int(input("habitantes de a: "))
+cb=int(input("habitantes de b: "))
+tca=float(input("taxa de crescimento de A: "))
+tcb=float(input("taxa de crescimento de B: "))
+while(ca<=cb):
+	ca+=(ca*(tca/100))
+	cb+=(cb*(tcb/100))
+	ano+=1
+print(ano)
+
+-- OUTPUT:
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 15:25:46) 
+-- CODE:
+ano=0
+ca=int(input("habitantes de a: "))
+cb=int(input("habitantes de b: "))
+tca=float(input("taxa de crescimento de A: "))
+tcb=float(input("taxa de crescimento de B: "))
+while(ca<=cb):
+	ca+=(ca*(tca/100))
+	cb+=(cb*(tcb/100))
+	ano+=1
+print(ano)
+
+-- OUTPUT:
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 17:14:52) 
+-- CODE:
+ano=0
+ca=int(input("habitantes de a: "))
+cb=int(input("habitantes de b: "))
+tca=float(input("taxa de crescimento de A: "))
+tcb=float(input("taxa de crescimento de B: "))
+while(ca<=cb):
+	ca+=(ca*(tca/100))
+	cb+=(cb*(tcb/100))
+	ano+=1
+print(ano)
+
+-- EXECUTION TIME:
+0.161076
+-- TEST CASE 1:
+---- input:
+250150
+580000
+35.5
+10.5
+---- correct output:
+5
+---- user output:
+5
+-- TEST CASE 2:
+---- input:
+180250
+1200000
+10.25
+5.7
+---- correct output:
+45
+---- user output:
+45
+-- TEST CASE 3:
+---- input:
+1000000
+1650000
+12.75
+3.2
+---- correct output:
+6
+---- user output:
+6
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

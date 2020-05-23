@@ -1,0 +1,496 @@
+== TEST (2019-04-16 00:11:29) 
+-- CODE:
+a = input("c ou f")
+-- OUTPUT:
+9.0257
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:16:23) 
+-- CODE:
+a = input("c ou f")
+b = input("temp")
+if a is c:
+	print(round((b/45)+32), 2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if a is c:
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:16:43) 
+-- CODE:
+a = input("c ou f")
+b = input("temp")
+if a is "c":
+	print(round((b/45)+32), 2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if a is c:
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:16:48) 
+-- CODE:
+a = input("c ou f")
+b = input("temp")
+if a is "c":
+	print(round((b/45)+32), 2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if a is c:
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:17:58) 
+-- CODE:
+a = input("c ou f")
+b = input("temp")
+if a is "c":
+	x = b/45 + 32
+	print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if a is c:
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:18:01) 
+-- CODE:
+a = input("c ou f")
+b = input("temp")
+if a is "c":
+	x = b/45 + 32
+	print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if a is c:
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:18:18) 
+-- CODE:
+a = input("c ou f")
+b = int(input("temp"))
+if a is "c":
+	x = b/45 + 32
+	print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if a is c:
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:18:31) 
+-- CODE:
+a = input("c ou f")
+b = int(input("temp"))
+if a is "c":
+	x = (b/45) + 32
+	print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if a is c:
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:19:49) 
+-- CODE:
+a = input("c ou f")
+b = int(input("temp"))
+if a is "c":
+	x = (b/45) + 32
+	print(round(x, 2))
+if a is "f":
+	y = 5/9*(b-32)
+	print(round(y, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if a is c:
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:20:03) 
+-- CODE:
+a = input("c ou f")
+b = int(input("temp"))
+if a is "c":
+	x = (b/45) + 32
+	print(round(x, 2))
+if a is "f":
+	y = 5/9*(b-32)
+	print(round(y, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if a is c:
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 00:20:04) 
+-- CODE:
+a = input("c ou f")
+b = int(input("temp"))
+if a is "c":
+	x = (b/45) + 32
+	print(round(x, 2))
+if a is "f":
+	y = 5/9*(b-32)
+	print(round(y, 2))
+-- EXECUTION TIME:
+0.137657
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:20:14) 
+-- CODE:
+a = input("c ou f")
+b = int(input("temp"))
+if a is "C":
+	x = (b/45) + 32
+	print(round(x, 2))
+if a is "F":
+	y = 5/9*(b-32)
+	print(round(y, 2))
+-- OUTPUT:
+39.11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 00:20:17) 
+-- CODE:
+a = input("c ou f")
+b = int(input("temp"))
+if a is "C":
+	x = (b/45) + 32
+	print(round(x, 2))
+if a is "F":
+	y = 5/9*(b-32)
+	print(round(y, 2))
+-- EXECUTION TIME:
+0.147761
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+39.11
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 00:20:25) 
+-- CODE:
+a = input("c ou f")
+b = float(input("temp"))
+if a is "C":
+	x = (b/45) + 32
+	print(round(x, 2))
+if a is "F":
+	y = 5/9*(b-32)
+	print(round(y, 2))
+-- EXECUTION TIME:
+0.230314
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+39.11
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 00:20:28) 
+-- CODE:
+a = input("c ou f")
+b = float(input("temp"))
+if a is "C":
+	x = (b/45) + 32
+	print(round(x, 2))
+if a is "F":
+	y = 5/9*(b-32)
+	print(round(y, 2))
+-- EXECUTION TIME:
+0.213976
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+39.11
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:20:33) 
+-- CODE:
+a = input("c ou f")
+b = float(input("temp"))
+if a is "C":
+	x = (b/45) + 32
+	print(round(x, 2))
+if a is "F":
+	y = 5/9*(b-32)
+	print(round(y, 2))
+-- OUTPUT:
+39.11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:20:58) 
+-- CODE:
+a = input("c ou f")
+b = float(input("temp"))
+if a is "C":
+	x = (b/45) + 32
+	print(round(x, 2))
+if a is "F":
+	y = 5/9*(b-32)
+	print(round(y, 2))
+-- OUTPUT:
+39.11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:21:08) 
+-- CODE:
+a = input("c ou f")
+b = float(input("temp"))
+if a is "C":
+	x = (b/45) + 32
+	print(round(x, 2))
+if a is "F":
+	y = 5/9*(b-32)
+	print(round(y, 2))
+-- OUTPUT:
+39.11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:21:21) 
+-- CODE:
+a = input("c ou f")
+b = float(input("temp"))
+if a is "C":
+	x = (b/45) + 32
+	print(round(x, 2))
+if a is "F":
+	y = 5/9*(b-32)
+	print(round(y, 2))
+-- OUTPUT:
+39.11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:21:33) 
+-- CODE:
+a = input("c ou f")
+b = float(input("temp"))
+if a is "C":
+	x = (b/45) + 32
+	print(round(x, 2))
+if a is "F":
+	y = 5/9*(b-32)
+	print(round(y, 2))
+-- OUTPUT:
+39.11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:22:51) 
+-- CODE:
+a = input("c ou f")
+b = float(input("temp"))
+if a is "C":
+	b = 5/9*(x-32)
+	print(round(x, 2))
+if a is "F":
+	y = 5/9*(b-32)
+	print(round(y, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    b = 5/9*(x-32)
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:24:41) 
+-- CODE:
+a = input("c ou f")
+b = float(input("temp"))
+if a is "C":
+	x = 5/9*
+	print(round(x, 2))
+if a is "F":
+	y = 5/9*(b-32)
+	print(round(y, 2))
+-- ERROR:
+File "XXXX", line 4
+    x = 5/9*
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:24:45) 
+-- CODE:
+a = input("c ou f")
+b = float(input("temp"))
+if a is "C":
+	x = 5/9*2
+	print(round(x, 2))
+if a is "F":
+	y = 5/9*(b-32)
+	print(round(y, 2))
+-- OUTPUT:
+1.11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:24:59) 
+-- CODE:
+a = input("c ou f")
+b = float(input("temp"))
+if a is "C":
+	x = 5/9*2
+	print(round(x, 2))
+if a is "F":
+	y = 5/9*(b-32)
+	print(round(y, 2))
+-- OUTPUT:
+1.11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 00:26:02) 
+-- CODE:
+a = input("c ou f")
+b = float(input("temp"))
+if a is "C":
+	x = (b-32)*5/9
+	print(round(x, 2))
+if a is "F":
+	y = 5/9*(b-32)
+	print(round(y, 2))
+-- EXECUTION TIME:
+0.176194
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 00:26:52) 
+-- CODE:
+a = input("c ou f")
+b = float(input("temp"))
+if a is "C":
+	x = (b*9/5)+32
+	print(round(x, 2))
+if a is "F":
+	y = 5/9*(b-32)
+	print(round(y, 2))
+-- EXECUTION TIME:
+0.201377
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

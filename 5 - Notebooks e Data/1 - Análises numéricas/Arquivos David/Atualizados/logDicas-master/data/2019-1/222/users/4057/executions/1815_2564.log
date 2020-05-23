@@ -1,0 +1,913 @@
+== TEST (2019-06-12 10:24:01) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+cont = zeros(3, dtype = int)
+for elementos in vet1 > vet2:
+	cont[0] = cont[0] +  1
+for elementos in vet1 == vet2:
+	cont[1] = cont[1] +  1
+for elementos in vet1 < vet2:
+	cont[2] = cont[2] +  1
+	
+print(cont)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 10:24:22) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+cont = zeros(3, dtype = int)
+for elementos in vet1 > vet2:
+	cont[0] = cont[0] +  1
+for elementos in vet1 == vet2:
+	cont[1] = cont[1] +  1
+for elementos in vet1 < vet2:
+	cont[2] = cont[2] +  1
+	
+print(cont)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 10:29:50) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+a = 0
+cont = zeros(3, dtype = int)
+for elementos in vet1 > vet2:
+	if (vet1 > vet2):
+		cont[0] = cont[0] +  1
+	elif (vet1 == vet2):
+		cont[1] = cont[1] +  1
+	else:
+		cont[2] = cont[2] +  1
+	a = a + 1
+print(cont)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 10:31:50) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+a = 0
+cont = zeros(3, dtype = int)
+for elementos in vet1:
+	if (arange(vet1) > arange(vet2)):
+		cont[0] = cont[0] +  1
+	elif (arange(vet1) == arange(vet2)):
+		cont[1] = cont[1] +  1
+	else:
+		cont[2] = cont[2] +  1
+	a = a + 1
+print(cont)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 10:32:11) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+a = 0
+cont = zeros(3, dtype = int)
+for elementos in vet1:
+	if (arange(vet1) > arange(vet2)):
+		cont[0] = cont[0] +  1
+	elif (arange(vet1) == arange(vet2)):
+		cont[1] = cont[1] +  1
+	else:
+		cont[2] = cont[2] +  1
+	a = a + 1
+print(cont)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 10:41:47) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+a = 0
+cont = zeros(3, dtype = int)
+for i in (vet1, vet2):
+	if (vet1 > vet2):
+		cont[0] = cont[0] +  1
+	elif (vet1 == vet2):
+		cont[1] = cont[1] +  1
+	else:
+		cont[2] = cont[2] +  1
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 10:47:44) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+a = 0
+cont = zeros(3, dtype = int)
+for i in (vet1):
+	if (vet1[] > vet2[]):
+		cont[0] = cont[0] +  1
+for i in vet1 :
+	if (vet1[] == vet2[]):
+		cont[1] = cont[1] +  1
+for  i in vet1:
+	if (vet1[] < vet2[])
+		cont[2] = cont[2] +  1
+print(cont)
+-- ERROR:
+File "XXXX", line 8
+    if (vet1[] > vet2[]):
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 10:48:21) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+a = 0
+cont = zeros(3, dtype = int)
+for i in (vet1, vet2):
+	if (vet1[i] > vet2[i]):
+		cont[0] = cont[0] +  1
+for i in vet1 :
+	if (vet1[i] == vet2[i]):
+		cont[1] = cont[1] +  1
+for  i in vet1:
+	if (vet1[i] < vet2[i])
+		cont[2] = cont[2] +  1
+print(cont)
+-- ERROR:
+File "XXXX", line 14
+    if (vet1[i] < vet2[i])
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 10:48:32) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+a = 0
+cont = zeros(3, dtype = int)
+for i in (vet1, vet2):
+	if (vet1[i] > vet2[i]):
+		cont[0] = cont[0] +  1
+for i in vet1 :
+	if (vet1[i] == vet2[i]):
+		cont[1] = cont[1] +  1
+for  i in vet1:
+	if (vet1[i] < vet2[i]):
+		cont[2] = cont[2] +  1
+print(cont)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 10:52:55) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+a = 0
+cont = zeros(3, dtype = int)
+while a <= size(vet1):
+	for i in (vet1, vet2):
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+	for i in vet1 :
+		if (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+	for  i in vet1:
+		if (vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+	a = a + 1
+print(cont)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 10:55:19) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+a = 1
+cont = zeros(3, dtype = int)
+while a <= size(vet1):
+	for i in (vet1, vet2):
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+	for i in vet1 :
+		if (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+	for  i in vet1:
+		if (vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+	a = a + 1
+print(cont)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 10:55:37) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+a = 1
+cont = zeros(3, dtype = int)
+while a <= size(vet1):
+	for i in (vet1, vet2):
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+	for i in vet1 :
+		if (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+	for  i in vet1:
+		if (vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+	a = a + 1
+print(cont)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 10:56:35) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+cont = zeros(3, dtype = int)
+while a <= size(vet1):
+	a = 0
+	for i in (vet1, vet2):
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+	for i in vet1 :
+		if (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+	for  i in vet1:
+		if (vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+	a = a + 1
+print(cont)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 10:58:01) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+cont = zeros(3, dtype = int)
+while size(vet1) > 1:
+	a = 0
+	for i in (vet1, vet2):
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+	for i in vet1 :
+		if (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+	for  i in vet1:
+		if (vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+	a = a + 1
+print(cont)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 10:59:39) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+cont = zeros(3, dtype = int)
+while size(vet1) == size(vet2):
+	a = 0
+	for i in (vet1, vet2):
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+	for i in vet1 :
+		if (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+	for  i in vet1:
+		if (vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+	a = a + 1
+print(cont)
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 11:00:29) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+
+while size(vet1) == size(vet2):
+	a = 0
+	cont = zeros(3, dtype = int)
+	for i in (vet1, vet2):
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+	for i in vet1 :
+		if (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+	for  i in vet1:
+		if (vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+	a = a + 1
+	print(cont)
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 11:02:01) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+
+while size(vet1) == size(vet2):
+	a = 0
+	cont = zeros(3, dtype = int)
+	for i in (vet1, vet2):
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+	for i in vet1 :
+		if (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+	for  i in vet1:
+		if (vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+	a = a + 1
+	print(cont)
+	vet1 = array(eval(input("gols efetuados em cada partida: ")))
+	vet2 = array(eval(input("gols levados em cada partida: ")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 11:03:09) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+
+while size(vet1) == size(vet2):
+	a = 0
+	cont = zeros(3, dtype = int)
+	for i in vet1:
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+	for i in vet1 :
+		if (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+	for  i in vet1:
+		if (vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+	a = a + 1
+	print(cont)
+	vet1 = array(eval(input("gols efetuados em cada partida: ")))
+	vet2 = array(eval(input("gols levados em cada partida: ")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 11:03:47) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+
+while size(vet1) == size(vet2):
+	a = 0
+	cont = zeros(3, dtype = int)
+	for i in vet1:
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+			
+		elif (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+			
+		elif(vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+	a = a + 1
+	print(cont)
+	vet1 = array(eval(input("gols efetuados em cada partida: ")))
+	vet2 = array(eval(input("gols levados em cada partida: ")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 11:06:04) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+
+while size(vet1) == size(vet2):
+	a = 0
+	cont = zeros(3, dtype = int)
+	for i in vet1:
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+	for i in vet1 :
+		if (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+	for  i in vet1:
+		if (vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+	a = a + 1
+	print(cont)
+	vet1 = array(eval(input("gols efetuados em cada partida: ")))
+	vet2 = array(eval(input("gols levados em cada partida: ")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 11:08:52) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+
+while size(vet1) == size(vet2):
+	a = 0
+	for i in (vet1, vet2):
+		cont = zeros(3, dtype = int)
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+		ellif (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+		elif(vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+	a = a + 1
+	print(cont)
+	vet1 = array(eval(input("gols efetuados em cada partida: ")))
+	vet2 = array(eval(input("gols levados em cada partida: ")))
+-- ERROR:
+File "XXXX", line 13
+    ellif (vet1[a] == vet2[a]):
+                              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 11:09:02) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+
+while size(vet1) == size(vet2):
+	a = 0
+	for i in (vet1, vet2):
+		cont = zeros(3, dtype = int)
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+		elif (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+		elif(vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+	a = a + 1
+	print(cont)
+	vet1 = array(eval(input("gols efetuados em cada partida: ")))
+	vet2 = array(eval(input("gols levados em cada partida: ")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 11:09:50) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+
+while size(vet1) == size(vet2):
+	a = 0
+	for i in (vet1, vet2):
+		cont = zeros(3, dtype = int)
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+		elif (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+		elif(vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+	a = a + 1
+		print(cont)
+	vet1 = array(eval(input("gols efetuados em cada partida: ")))
+	vet2 = array(eval(input("gols levados em cada partida: ")))
+-- ERROR:
+File "XXXX", line 18
+    print(cont)
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 11:10:09) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+
+while size(vet1) == size(vet2):
+	a = 0
+	for i in (vet1, vet2):
+		cont = zeros(3, dtype = int)
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+		elif (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+		elif(vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+	a = a + 1
+	print(cont)
+	vet1 = array(eval(input("gols efetuados em cada partida: ")))
+	vet2 = array(eval(input("gols levados em cada partida: ")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 11:15:28) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+
+while size(vet1) == size(vet2):
+	a = 0
+	for i in (vet1, vet2):
+		cont = zeros(3, dtype = int)
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+		elif (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+		elif(vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+		a = a + 1
+	print(cont)
+	vet1 = array(eval(input("gols efetuados em cada partida: ")))
+	vet2 = array(eval(input("gols levados em cada partida: ")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 11:16:32) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+
+while size(vet1) == size(vet2):
+	a = 0
+	for i in (vet1, vet2):
+		cont = zeros(3, dtype = int)
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+		elif (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+		elif(vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+	a = a + 1
+	print(cont)
+	vet1 = array(eval(input("gols efetuados em cada partida: ")))
+	vet2 = array(eval(input("gols levados em cada partida: ")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 11:17:00) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+
+while size(vet1) == size(vet2):
+	a = 0
+	for i in (vet1, vet2):
+		cont = zeros(3, dtype = int)
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+		elif (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+		elif(vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+a = a + 1
+	print(cont)
+	vet1 = array(eval(input("gols efetuados em cada partida: ")))
+	vet2 = array(eval(input("gols levados em cada partida: ")))
+-- ERROR:
+File "XXXX", line 18
+    print(cont)
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 11:17:12) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+
+while size(vet1) == size(vet2):
+	a = 0
+	for i in (vet1, vet2):
+		cont = zeros(3, dtype = int)
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+		elif (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+		elif(vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+	a = a + 1
+	print(cont)
+	vet1 = array(eval(input("gols efetuados em cada partida: ")))
+	vet2 = array(eval(input("gols levados em cada partida: ")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 11:17:49) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+
+while size(vet1) == size(vet2):
+	a = 0
+		for i in (vet1, vet2):
+			cont = zeros(3, dtype = int)
+			if (vet1[a] > vet2[a]):
+				cont[0] = cont[0] +  1
+			elif (vet1[a] == vet2[a]):
+				cont[1] = cont[1] +  1
+			elif(vet1[a] < vet2[a]):
+				cont[2] = cont[2] +  1
+	a = a + 1
+	print(cont)
+	vet1 = array(eval(input("gols efetuados em cada partida: ")))
+	vet2 = array(eval(input("gols levados em cada partida: ")))
+-- ERROR:
+File "XXXX", line 9
+    for i in (vet1, vet2):
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 11:18:35) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+
+while size(vet1) == size(vet2):
+	a = 0
+	for i in (vet1, vet2):
+		cont = zeros(3, dtype = int)
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+		elif (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+		elif(vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+	a = a + 1
+		print(cont)
+	vet1 = array(eval(input("gols efetuados em cada partida: ")))
+	vet2 = array(eval(input("gols levados em cada partida: ")))
+-- ERROR:
+File "XXXX", line 18
+    print(cont)
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 11:19:04) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+
+while size(vet1) == size(vet2):
+	a = 0
+	cont = zeros(3, dtype = int)
+	for i in (vet1, vet2):
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+		elif (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+		elif(vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+	a = a + 1
+	print(cont)
+	vet1 = array(eval(input("gols efetuados em cada partida: ")))
+	vet2 = array(eval(input("gols levados em cada partida: ")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 11:21:15) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+
+while size(vet1) == size(vet2):
+	a = 0
+	cont = zeros(3, dtype = int)
+	for i in (vet1, vet2):
+		if (vet1[a] > vet2[a]):
+			cont[a] = cont[a] +  1
+		elif (vet1[a] == vet2[a]):
+			cont[a-1] = cont[a-1] +  1
+		elif(vet1[a] < vet2[a]):
+			cont[a-2] = cont[a-2] +  1
+	a = a + 1
+	print(cont)
+	vet1 = array(eval(input("gols efetuados em cada partida: ")))
+	vet2 = array(eval(input("gols levados em cada partida: ")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 11:21:42) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+
+while size(vet1) == size(vet2):
+	a = 0
+	cont = zeros(3, dtype = int)
+	for i in (vet1, vet2):
+		if (vet1[a] > vet2[a]):
+			cont[a] = cont[a] +  1
+		elif (vet1[a] == vet2[a]):
+			cont[a-1] = cont[a-1] +  1
+		elif(vet1[a] < vet2[a]):
+			cont[a-2] = cont[a-2] +  1
+	a = a + 1
+	print(cont)
+	vet1 = array(eval(input("gols efetuados em cada partida: ")))
+	vet2 = array(eval(input("gols levados em cada partida: ")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 11:26:50) 
+-- CODE:
+from numpy import*
+
+vet1 = array(eval(input("gols efetuados em cada partida: ")))
+vet2 = array(eval(input("gols levados em cada partida: ")))
+
+
+while size(vet1) == size(vet2):
+	a = 0
+	cont = zeros(3, dtype = int)
+	for i in (vet1, vet2):
+		if (vet1[a] > vet2[a]):
+			cont[0] = cont[0] +  1
+		elif (vet1[a] == vet2[a]):
+			cont[1] = cont[1] +  1
+		elif(vet1[a] < vet2[a]):
+			cont[2] = cont[2] +  1
+	a = a + 1
+	print(cont)
+	vet1 = array(eval(input("gols efetuados em cada partida: ")))
+	vet2 = array(eval(input("gols levados em cada partida: ")))
+-- EXECUTION TIME:
+1.02394
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1815/2564/main.py", line 19, in <module>
+    vet1 = array(eval(input("gols efetuados em cada partida: ")))
+EOFError: EOF when reading a line
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

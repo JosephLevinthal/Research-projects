@@ -1,0 +1,6 @@
+d= float(input("coeficiente a: "))
+g= float(input("coeficiente b: "))
+h= float(input("coeficiente c: "))
+s= float(input("coeficiente d: "))
+j= float(input("coeficiente e: "))
+w= float(input("coeficiente f: "))

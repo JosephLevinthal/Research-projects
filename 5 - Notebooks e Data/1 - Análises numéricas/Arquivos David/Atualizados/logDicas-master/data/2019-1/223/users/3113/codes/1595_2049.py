@@ -1,0 +1,11 @@
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+x =int(input(""))
+y =int(input(""))
+
+p=x
+t=y
+q=x//y
+w=x%y
+print(p,t,q,w)

@@ -1,0 +1,140 @@
+== TEST (2019-06-20 12:05:15) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+z = int(input("Digite um numero inteiro maior que 0: "))
+matriz = zeros([n, n])
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 12:05:30) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+z = int(input("Digite um numero inteiro maior que 0: "))
+matriz = zeros([z, z])
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 12:07:52) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+z = int(input("Digite um numero inteiro maior que 0: "))
+matriz = zeros([z, z])
+print(matriz)
+for i in matriz:
+	for j in matriz:
+		if(i == j):
+			matriz[i,j]= i+1
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 12:08:31) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+z = int(input("Digite um numero inteiro maior que 0: "))
+matriz = zeros([z, z])
+print(matriz)
+for i in matriz:
+	for j in matriz:
+		if(matriz[i] == matriz[j]):
+			matriz[i,j]= i+1
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 12:13:55) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+z = int(input("Digite um numero inteiro maior que 0: "))
+matriz = zeros((z, z), dtype=int)
+for i in range(z):
+	for j in range(z):
+		if(i == j):
+			matriz[i,j]= i+1
+		elif(i < j):
+			matriz[i,j]= i+1
+		else:	
+			matriz[i,j]= j+1
+print(matriz)			
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-20 12:14:12) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+z = int(input("Digite um numero inteiro maior que 0: "))
+matriz = zeros((z, z), dtype=int)
+for i in range(z):
+	for j in range(z):
+		if(i == j):
+			matriz[i,j]= i+1
+		elif(i < j):
+			matriz[i,j]= i+1
+		else:	
+			matriz[i,j]= j+1
+print(matriz)			
+-- EXECUTION TIME:
+1.0484
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

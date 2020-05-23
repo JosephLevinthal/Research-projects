@@ -1,0 +1,60 @@
+== SUBMITION (2019-04-19 13:25:01) 
+-- CODE:
+ar = float(input("temperatura do ar: "))
+v = float(input("velocidade do vento: "))
+t = 13.12+0.6215*tar-(11.37*v**0.16)+(0.3965*tar*v**0.16)
+if(tar>=-50 and tar<=10 and v>4.8):
+    print(round(t,4))
+elif(tar<-50 or tar>=10):
+    print("Temperatura invalida")
+else:
+    print("Velocidade invalida")
+-- EXECUTION TIME:
+0.245998
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1685/1950/main.py", line 3, in <module>
+    t = 13.12+0.6215*tar-(11.37*v**0.16)+(0.3965*tar*v**0.16)
+NameError: name 'tar' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-19 13:27:19) 
+-- CODE:
+tar = float(input("temperatura do ar: "))
+v = float(input("velocidade do vento: "))
+t = 13.12+0.6215*tar-(11.37*v**0.16)+(0.3965*tar*v**0.16)
+if(tar>=-50 and tar<=10 and v>4.8):
+    print(round(t,4))
+elif(tar<-50 or tar>=10):
+    print("Temperatura invalida")
+else:
+    print("Velocidade invalida")
+-- EXECUTION TIME:
+0.26515
+-- TEST CASE 1:
+---- input:
+20
+9
+---- correct output:
+Temperatura invalida
+---- user output:
+Temperatura invalida
+-- TEST CASE 2:
+---- input:
+-5
+4
+---- correct output:
+Velocidade invalida
+---- user output:
+Velocidade invalida
+-- TEST CASE 3:
+---- input:
+-5
+50
+---- correct output:
+-14.9563
+---- user output:
+-14.9563
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

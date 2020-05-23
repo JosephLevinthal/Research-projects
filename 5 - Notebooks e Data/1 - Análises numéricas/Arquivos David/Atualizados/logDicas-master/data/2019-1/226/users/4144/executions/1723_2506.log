@@ -1,0 +1,72 @@
+== TEST (2019-05-14 11:20:23) 
+-- CODE:
+a = int(input("qtd inicial de tambaquis: "))
+b = float(input("percentual de crescimento anual: "))
+c = int(input("qtd de tambaquis para venda: "))
+i = 0
+while(a>0 and a<12000):
+	txp = (a*b)/100
+	a= a+txp-c
+	i = i+1
+if(a<0):
+	print("EXTINCAO")
+else:
+	print("LIMITE")
+print(i)
+-- OUTPUT:
+EXTINCAO
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 11:20:40) 
+-- CODE:
+a = int(input("qtd inicial de tambaquis: "))
+b = float(input("percentual de crescimento anual: "))
+c = int(input("qtd de tambaquis para venda: "))
+i = 0
+while(a>0 and a<12000):
+	txp = (a*b)/100
+	a= a+txp-c
+	i = i+1
+if(a<0):
+	print("EXTINCAO")
+else:
+	print("LIMITE")
+print(i)
+-- EXECUTION TIME:
+0.130168
+-- TEST CASE 1:
+---- input:
+1234
+6
+135
+---- correct output:
+EXTINCAO
+14
+---- user output:
+EXTINCAO
+14
+-- TEST CASE 2:
+---- input:
+579
+37
+26
+---- correct output:
+LIMITE
+11
+---- user output:
+LIMITE
+11
+-- TEST CASE 3:
+---- input:
+6789
+45
+2345
+---- correct output:
+LIMITE
+4
+---- user output:
+LIMITE
+4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

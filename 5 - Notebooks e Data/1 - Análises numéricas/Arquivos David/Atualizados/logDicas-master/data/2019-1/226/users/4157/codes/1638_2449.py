@@ -1,0 +1,6 @@
+a = int(float("a:"))
+b = int(float("b:"))
+c = int(float("c:"))
+d = int(float("d:"))
+e = int(float("e:"))
+f = int(float("f:"))

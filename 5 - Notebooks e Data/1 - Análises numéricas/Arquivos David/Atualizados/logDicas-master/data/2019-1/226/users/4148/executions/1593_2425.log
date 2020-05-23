@@ -1,0 +1,128 @@
+== TEST (2019-04-01 16:01:05) 
+-- CODE:
+d = float(input("distancia: "))
+combustivelgasto = float(input("coombustivel gasto: "))
+x = d/combustivelgasto
+print(round(x, 3 km/l))
+-- ERROR:
+File "XXXX", line 4
+    print(round(x, 3 km/l))
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:01:14) 
+-- CODE:
+d = float(input("distancia: "))
+combustivelgasto = float(input("coombustivel gasto: "))
+x = d/combustivelgasto
+print(round(x, 3km/l))
+-- ERROR:
+File "XXXX", line 4
+    print(round(x, 3km/l))
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:02:00) 
+-- CODE:
+d = float(input("distancia: "))
+combustivelgasto = float(input("coombustivel gasto: "))
+cm = d/combustivelgasto
+print(round(cm, 3 "km/l"))
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm, 3 "km/l"))
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:02:09) 
+-- CODE:
+d = float(input("distancia: "))
+combustivelgasto = float(input("coombustivel gasto: "))
+cm = d/combustivelgasto
+print(round(cm, 3"km/l"))
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm, 3"km/l"))
+                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:02:31) 
+-- CODE:
+d = float(input("distancia: "))
+combustivelgasto = float(input("coombustivel gasto: "))
+cm = d/combustivelgasto
+print(round(cm"km/l", 3))
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm"km/l", 3))
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:03:42) 
+-- CODE:
+d = float(input("distancia: "))
+combustivelgasto = float(input("coombustivel gasto: "))
+cm = d/combustivelgasto
+print(round(cm, 3, "km/l"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(cm, 3, "km/l"))
+TypeError: round() takes at most 2 arguments (3 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:04:18) 
+-- CODE:
+d = float(input("distancia: "))
+combustivelgasto = float(input("coombustivel gasto: "))
+cm = d/combustivelgasto
+print(round(cm, 3), km/l)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(cm, 3), km/l)
+NameError: name 'km' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:04:38) 
+-- CODE:
+d = float(input("distancia: "))
+combustivelgasto = float(input("coombustivel gasto: "))
+cm = d/combustivelgasto
+print(round(cm, 3), "km/l")
+-- OUTPUT:
+14.286 km/l
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 16:04:50) 
+-- CODE:
+d = float(input("distancia: "))
+combustivelgasto = float(input("coombustivel gasto: "))
+cm = d/combustivelgasto
+print(round(cm, 3), "km/l")
+-- EXECUTION TIME:
+0.140667
+-- TEST CASE 1:
+---- input:
+28.572
+2
+---- correct output:
+14.286 km/l
+---- user output:
+14.286 km/l
+-- TEST CASE 2:
+---- input:
+2254
+124.4
+---- correct output:
+18.119 km/l
+---- user output:
+18.119 km/l
+-- TEST CASE 3:
+---- input:
+4554
+464.6
+---- correct output:
+9.802 km/l
+---- user output:
+9.802 km/l
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

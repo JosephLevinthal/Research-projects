@@ -1,0 +1,126 @@
+== TEST (2019-06-06 18:40:36) 
+-- CODE:
+from numpy import*
+gp = array(eval(input("digite os gols do time em cada partida: ")))
+ga = array(eval(input("digite os gols do time adversario: ")))
+cont = zeros(3, dtype=int)
+for i in range(size(gp)): 
+	if gp[i] > ga[i]:
+		cont[0] = cont[0] + 1
+	elif gp[i] < ga[i]:
+		cont[1] = cont[1] + 1
+	elif gp[i] == ga[i]:
+		cont[2] = cont[2] + 1
+print(cont)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 18:41:28) 
+-- CODE:
+from numpy import*
+gp = array(eval(input("digite os gols do time em cada partida: ")))
+ga = array(eval(input("digite os gols do time adversario: ")))
+cont = zeros(3, dtype=int)
+for i in range(size(gp)): 
+	if gp[i] > ga[i]:
+		cont[0] = cont[0] + 1
+	elif gp[i] == ga[i]:
+		cont[1] = cont[1] + 1
+	elif gp[i] < ga[i]:
+		cont[2] = cont[2] + 1
+print(cont)
+-- EXECUTION TIME:
+1.07589
+-- TEST CASE 1:
+---- input:
+[2,3,2,4,3,5,3,4,2,3,1,0]
+[3,3,1,0,2,3,3,0,1,2,1,1]
+---- correct output:
+[7 3 2]
+---- user output:
+[7 3 2]
+-- TEST CASE 2:
+---- input:
+[1,2,1,2,1,2,1,2,0]
+[3,5,3,3,3,3,3,3,3]
+---- correct output:
+[0 0 9]
+---- user output:
+digite os gols do time em cada partida: digite os gols do time adversario: [0 0 9]
+-- TEST CASE 3:
+---- input:
+[1,2,2,2,2,1,1,2,2,1,1,2,2]
+[0,1,1,1,0,0,0,0,0,0,1,1,1]
+---- correct output:
+[12 1 0]
+---- user output:
+digite os gols do time em cada partida: digite os gols do time adversario: [12  1  0]
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 18:42:28) 
+-- CODE:
+from numpy import*
+gp = array(eval(input("digite os gols do time em cada partida: ")))
+ga = array(eval(input("digite os gols do time adversario: ")))
+cont = zeros(3, dtype=int)
+for i in range(size(gp)): 
+	if gp[i] > ga[i]:
+		cont[0] = cont[0] + 1
+	elif gp[i] == ga[i]:
+		cont[1] = cont[1] + 1
+	elif gp[i] < ga[i]:
+		cont[2] = cont[2] + 1
+print(cont)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 18:42:53) 
+-- CODE:
+from numpy import*
+gp = array(eval(input("digite os gols do time em cada partida: ")))
+ga = array(eval(input("digite os gols do time adversario: ")))
+cont = zeros(3, dtype=int)
+for i in range(size(gp)): 
+	if gp[i] > ga[i]:
+		cont[0] = cont[0] + 1
+	elif gp[i] == ga[i]:
+		cont[1] = cont[1] + 1
+	elif gp[i] < ga[i]:
+		cont[2] = cont[2] + 1
+print(cont)
+-- EXECUTION TIME:
+1.2116
+-- TEST CASE 1:
+---- input:
+[2,3,2,4,3,5,3,4,2,3,1,0]
+[3,3,1,0,2,3,3,0,1,2,1,1]
+---- correct output:
+[7 3 2]
+---- user output:
+[7 3 2]
+-- TEST CASE 2:
+---- input:
+[1,2,1,2,1,2,1,2,0]
+[3,5,3,3,3,3,3,3,3]
+---- correct output:
+[0 0 9]
+---- user output:
+[0 0 9]
+-- TEST CASE 3:
+---- input:
+[1,2,2,2,2,1,1,2,2,1,1,2,2]
+[0,1,1,1,0,0,0,0,0,0,1,1,1]
+---- correct output:
+[12 1 0]
+---- user output:
+[12  1  0]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

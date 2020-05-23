@@ -1,0 +1,1 @@
+e cada aluno e some com as menores notas dos demais 

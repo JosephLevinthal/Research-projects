@@ -1,0 +1,270 @@
+== TEST (2019-04-16 18:32:06) 
+-- CODE:
+m=input("vc eh mulher: ")
+p=input("valor do ingresso: ")
+quant=input("quantidade de ingressos: ")
+
+if m=="S":
+	tot= p * quant - (20 / 100 * p * quant)
+	print(tot)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    tot= p * quant - (20 / 100 * p * quant)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:32:36) 
+-- CODE:
+m=input("vc eh mulher: ")
+p=input("valor do ingresso: ")
+quant=input("quantidade de ingressos: ")
+
+if m=="S":
+	tot= p * quant - (20 / 100 * p * quant)
+	print(round(tot), 2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    tot= p * quant - (20 / 100 * p * quant)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:34:43) 
+-- CODE:
+m=input("vc eh mulher: ")
+p=input("valor do ingresso: ")
+quant=input("quantidade de ingressos: ")
+tot= p * 20/100
+if m=="S":
+	print(round(p * quant - tot * quant ), 2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    tot= p * 20/100
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:38:33) 
+-- CODE:
+m=input("para mulheres: ")
+p=input("valor do ingresso: ")
+quant=input("quantidade de ingressos: ")
+tot= p * quant
+if m=="S":
+	print(round(tot - 20 / 100 * tot ), 2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    tot= p * quant
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:39:20) 
+-- CODE:
+m=input("para mulheres: ")
+p=input("valor do ingresso: ")
+quant=input("quantidade de ingressos: ")
+tot= p * quant
+if m=="S":
+	print(round(tot - tot * 20 / 100), 2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    tot= p * quant
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:39:59) 
+-- CODE:
+m=input("para mulheres: ")
+p=input("valor do ingresso: ")
+quant=input("quantidade de ingressos: ")
+
+if m=="S":
+	tot= p * quant
+	print(round(tot - tot * 20 / 100), 2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    tot= p * quant
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:41:39) 
+-- CODE:
+m=input("para mulheres: ")
+p=float(input("valor do ingresso: "))
+quant=int(input("quantidade de ingressos: "))
+
+if m=="S":
+	tot= p * quant
+	print(round(tot - tot * 20 / 100), 2)
+else:
+	tot= p * quant
+	print(tot)
+-- OUTPUT:
+180 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:43:18) 
+-- CODE:
+m=input("para mulheres: ")
+p=float(input("valor do ingresso: "))
+quant=int(input("quantidade de ingressos: "))
+d= p * 20 / 100
+if m=="S":
+	tot= p * quant
+	print(round(tot - d * quant), 2)
+else:
+	tot= p * quant
+	print(tot)
+-- OUTPUT:
+180 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:43:40) 
+-- CODE:
+m=input("para mulheres: ")
+p=float(input("valor do ingresso: "))
+quant=int(input("quantidade de ingressos: "))
+d= p * 20 / 100
+if m=="S":
+	tot= p * quant
+	print(round(tot - d * quant), 2)
+else:
+	tot= p * quant
+	print(tot)
+-- OUTPUT:
+180 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:45:10) 
+-- CODE:
+m=input("para mulheres: ")
+p=float(input("valor do ingresso: "))
+quant=int(input("quantidade de ingressos: "))
+d= p * 20 / 100
+tot= p * quant
+
+if m=="S":
+	print(round(tot - d ), 2)
+else:
+	print(tot)
+-- OUTPUT:
+218 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:48:02) 
+-- CODE:
+m=input("para mulheres: ")
+p=float(input("valor do ingresso: "))
+quant=int(input("quantidade de ingressos: "))
+d= tot  -  20 / 100
+tot= p * quant
+
+if m=="S":
+	print(round(d ), 2)
+else:
+	print(tot)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    d= tot  -  20 / 100
+NameError: name 'tot' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:48:31) 
+-- CODE:
+m=input("para mulheres: ")
+p=float(input("valor do ingresso: "))
+quant=int(input("quantidade de ingressos: "))
+d= (p * quant)  -  20 / 100
+tot= p * quant
+
+if m=="S":
+	print(round(d ), 2)
+else:
+	print(tot)
+-- OUTPUT:
+225 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:49:03) 
+-- CODE:
+m=input("para mulheres: ")
+p=float(input("valor do ingresso: "))
+quant=int(input("quantidade de ingressos: "))
+d= (p * quant) -  20 / 100
+tot= p * quant
+
+if m=="S":
+	print(round(d ), 2)
+else:
+	print(tot)
+-- OUTPUT:
+225 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:50:59) 
+-- CODE:
+m=input("para mulheres: ")
+p=float(input("valor do ingresso: "))
+quant=int(input("quantidade de ingressos: "))
+d= p -  20 / 100
+tot= p * quant
+
+if m=="S":
+	print(round( tot ), 2)
+else:
+	print(tot)
+-- OUTPUT:
+225 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:51:33) 
+-- CODE:
+m=input("para mulheres: ")
+p=float(input("valor do ingresso: "))
+quant=int(input("quantidade de ingressos: "))
+d= p -  20 / 100
+tot= p * quant
+
+if m=="S":
+	print(round( tot - 1 ), 2)
+else:
+	print(tot)
+-- OUTPUT:
+224 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:52:29) 
+-- CODE:
+m=input("para mulheres: ")
+p=float(input("valor do ingresso: "))
+quant=int(input("quantidade de ingressos: "))
+d= p -  20 / 100
+tot= p * quant
+
+if m=="S":
+	print(round( tot - 1 , 2))
+else:
+	print(tot)
+-- OUTPUT:
+224.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:52:59) 
+-- CODE:
+m=input("para mulheres: ")
+p=float(input("valor do ingresso: "))
+quant=int(input("quantidade de ingressos: "))
+d= p -  20 / 100
+tot= p * quant
+
+if m=="s":
+	print(round( tot - 1 , 2))
+else:
+	print(tot)
+-- OUTPUT:
+225.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:53:25) 
+-- CODE:
+m=input("para mulheres: ")
+p=float(input("valor do ingresso: "))
+quant=int(input("quantidade de ingressos: "))
+d= p -  20 / 100
+tot= p * quant
+
+if m.upper()=="S":
+	print(round( tot - 1 , 2))
+else:
+	print(tot)
+-- OUTPUT:
+224.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

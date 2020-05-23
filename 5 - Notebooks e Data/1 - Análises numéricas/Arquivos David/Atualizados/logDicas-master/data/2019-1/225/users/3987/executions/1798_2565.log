@@ -1,0 +1,240 @@
+== TEST (2019-06-05 14:09:55) 
+-- CODE:
+from numpy import*
+vet1 = array(eval(input("media:")))
+vet2 = array(eval(input("frequencia:")))
+ch = int(input("carga horaria:"))
+
+for elemento in vet1 and vet2:
+	if(vet1 >= 5) and (vet2 >= 75):
+-- ERROR:
+File "XXXX", line 8
+    
+                                    ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 14:10:28) 
+-- CODE:
+from numpy import*
+vet1 = array(eval(input("media:")))
+vet2 = array(eval(input("frequencia:")))
+ch = int(input("carga horaria:"))
+
+for elemento in vet1 and vet2:
+	if(elemento >= 5) and (elemento >= 75):
+-- ERROR:
+File "XXXX", line 8
+    
+                                            ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-05 14:11:16) 
+-- CODE:
+from numpy import*
+vet1 = array(eval(input("media:")))
+vet2 = array(eval(input("frequencia:")))
+ch = int(input("carga horaria:"))
+
+for elemento in vet1 and vet2:
+	if(elemento >= 5) and (elemento >= 75):
+print(elemento)
+-- EXECUTION TIME:
+0.785181
+-- ERROR:
+  File "/home/codebench/codes/1798/2565/main.py", line 8
+    print(elemento)
+    ^
+IndentationError: expected an indented block
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 14:11:17) 
+-- CODE:
+from numpy import*
+vet1 = array(eval(input("media:")))
+vet2 = array(eval(input("frequencia:")))
+ch = int(input("carga horaria:"))
+
+for elemento in vet1 and vet2:
+	if(elemento >= 5) and (elemento >= 75):
+print(elemento)
+-- ERROR:
+File "XXXX", line 8
+    print(elemento)
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 14:31:06) 
+-- CODE:
+from numpy import*
+vet1 = array(eval(input("media:")))
+vet2 = array(eval(input("frequencia:")))
+ch = int(input("carga horaria:"))
+
+ap = 0
+rn = 0
+rf = 0
+
+for elemento in range(size(vet1)):
+	if(vet1[elemento] >=5) and (vet2[elemento] >=75):
+print(elemento)
+-- ERROR:
+File "XXXX", line 12
+    print(elemento)
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 14:33:38) 
+-- CODE:
+from numpy import*
+vet1 = array(eval(input("media:")))
+vet2 = array(eval(input("frequencia:")))
+ch = int(input("carga horaria:"))
+
+ap = 0
+rn = 0
+rf = 0
+
+for elemento in range(size(vet1)):
+	x = ch * 75/100
+	if(vet1[elemento] >=5) and (vet2[elemento] >= x):
+		ap = ap + 1
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 14:35:34) 
+-- CODE:
+from numpy import*
+vet1 = array(eval(input("media:")))
+vet2 = array(eval(input("frequencia:")))
+ch = int(input("carga horaria:"))
+
+ap = 0
+rn = 0
+rf = 0
+
+for elemento in range(size(vet1)):
+	x = ch * 75/100
+	print(x)
+	if(vet1[elemento] >=5) and (vet2[elemento] >= x):
+		ap = ap + 1
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 14:43:40) 
+-- CODE:
+from numpy import*
+vet1 = array(eval(input("media:")))
+vet2 = array(eval(input("frequencia:")))
+ch = int(input("carga horaria:"))
+
+ap = 0
+rn = 0
+rf = 0
+
+for elemento in range(size(vet1)):
+	x = ch * 75/100
+	if(vet1[elemento] >=5) and (vet2[elemento] >= x):
+		ap = ap + 1
+	elif(vet1[elemento] < 5):
+		rn = rn +1
+	elif(vet2[elemento] < x):
+		rf = rf + 1
+		
+print(ap)
+print(rn)
+print(rf)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 14:48:37) 
+-- CODE:
+from numpy import*
+vet1 = array(eval(input("media:")))
+vet2 = array(eval(input("frequencia:")))
+vetn = zeros(3, dtype=int)
+ch = int(input("carga horaria:"))
+
+
+for elemento in range(size(vet1)):
+	x = ch * 75/100
+	if(vet1[elemento] >=5) and (vet2[elemento] >= x):
+		vetn[0] = vetn[0] + 1
+	elif(vet1[elemento] < 5):
+		vetn[1] = vetn[1] +1
+	elif(vet2[elemento] < x):
+		vetn[2] = vetn[2] + 1
+		
+print(vetn)
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-05 14:48:57) 
+-- CODE:
+from numpy import*
+vet1 = array(eval(input("media:")))
+vet2 = array(eval(input("frequencia:")))
+vetn = zeros(3, dtype=int)
+ch = int(input("carga horaria:"))
+
+
+for elemento in range(size(vet1)):
+	x = ch * 75/100
+	if(vet1[elemento] >=5) and (vet2[elemento] >= x):
+		vetn[0] = vetn[0] + 1
+	elif(vet1[elemento] < 5):
+		vetn[1] = vetn[1] +1
+	elif(vet2[elemento] < x):
+		vetn[2] = vetn[2] + 1
+		
+print(vetn)
+
+	
+-- EXECUTION TIME:
+1.01962
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+[2 0 3]
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+[5 0 2]
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+[5 1 4]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,375 @@
+== TEST (2019-05-28 10:34:48) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+
+data = input("Informe o Mes dd/mm/aaaa")
+
+dia = int(data[ :2])
+mes = int(data[3:5])
+ano = int(data[-4:])
+
+ini = 3*(mes - 1)
+fim = ini + 3
+
+Mabv = vet_mes[ini:fim]
+nd = str(dia) + "de" + Mabv + "de" + ano
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 10:35:01) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+
+data = input("Informe o Mes dd/mm/aaaa")
+
+dia = int(data[ :2])
+mes = int(data[3:5])
+ano = int(data[-4:])
+
+ini = 3*(mes - 1)
+fim = ini + 3
+
+Mabv = vet_mes[ini:fim]
+nd = str(dia) + "de" + Mabv + "de" + ano
+
+print(nd)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 10:36:03) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+
+data = input("Informe o Mes dd/mm/aaaa")
+
+dia = int(data[ :2])
+mes = int(data[3:5])
+ano = int(data[-4:])
+
+ini = 3*(mes - 1)
+fim = ini + 3
+
+Mabv = vet_mes[ini:fim]
+nd = str(dia) + 'de' + Mabv + 'de' + ano
+
+print(nd)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 10:36:22) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+
+data = input("Informe o Mes dd/mm/aaaa:")
+
+dia = int(data[ :2])
+mes = int(data[3:5])
+ano = int(data[-4:])
+
+ini = 3*(mes - 1)
+fim = ini + 3
+
+Mabv = vet_mes[ini:fim]
+nd = str(dia) + 'de' + Mabv + 'de' + ano
+
+print(nd)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 11:38:58) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+
+data = input("Informe o Mes dd/mm/aaaa:")
+
+dia = int(data[ :2])
+mes = int(data[2:4])
+ano = (data[4:8])
+
+mes_ext = vet_mes(int(mes) - 1)
+
+print(dia + 'de' + mes_ext + "de" + ano)
+		
+-- EXECUTION TIME:
+0.526673
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1758/762/main.py", line 11, in <module>
+    mes_ext = vet_mes(int(mes) - 1)
+TypeError: 'numpy.ndarray' object is not callable
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 11:39:04) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+
+data = input("Informe o Mes dd/mm/aaaa:")
+
+dia = int(data[ :2])
+mes = int(data[2:4])
+ano = (data[4:8])
+
+mes_ext = vet_mes(int(mes) - 1)
+
+print(dia + 'de' + mes_ext + "de" + ano)
+		
+-- EXECUTION TIME:
+0.551978
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1758/762/main.py", line 11, in <module>
+    mes_ext = vet_mes(int(mes) - 1)
+TypeError: 'numpy.ndarray' object is not callable
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 11:39:12) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+
+data = input("Informe o Mes dd/mm/aaaa:")
+
+dia = int(data[ :2])
+mes = int(data[2:4])
+ano = (data[4:8])
+
+mes_ext = vet_mes(int(mes) - 1)
+
+print(dia + 'de' + mes_ext + "de" + ano)
+		
+-- EXECUTION TIME:
+0.342077
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1758/762/main.py", line 11, in <module>
+    mes_ext = vet_mes(int(mes) - 1)
+TypeError: 'numpy.ndarray' object is not callable
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 11:39:19) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+
+data = input("Informe o Mes dd/mm/aaaa:")
+
+dia = int(data[ :2])
+mes = int(data[2:4])
+ano = (data[4:8])
+
+mes_ext = vet_mes(int(mes) - 1)
+
+print(dia + "de" + mes_ext + "de" + ano)
+		
+-- EXECUTION TIME:
+0.467524
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1758/762/main.py", line 11, in <module>
+    mes_ext = vet_mes(int(mes) - 1)
+TypeError: 'numpy.ndarray' object is not callable
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 11:46:06) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+
+data = input("Informe o Mes dd/mm/aaaa:")
+
+dia = int(data[ 0:2])
+mes = int(data[2:4])
+ano = (data[4:8])
+
+mes_ext = vet_mes(int(mes) - 1)
+
+print(dia + "de" + mes_ext + "de" + ano)
+		
+-- EXECUTION TIME:
+0.425759
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1758/762/main.py", line 11, in <module>
+    mes_ext = vet_mes(int(mes) - 1)
+TypeError: 'numpy.ndarray' object is not callable
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:46:07) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+
+data = input("Informe o Mes dd/mm/aaaa:")
+
+dia = int(data[ 0:2])
+mes = int(data[2:4])
+ano = (data[4:8])
+
+mes_ext = vet_mes(int(mes) - 1)
+
+print(dia + "de" + mes_ext + "de" + ano)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:42:28) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+
+data = input("Informe o Mes dd/mm/aaaa:")
+
+dia = int(data[ 0:2])
+mes = int(data[2:4])
+ano = (data[4:8])
+
+mes_ext = vet_mes(int(mes) - 1)
+
+print(dia + "de" + mes_ext + "de" + ano)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:43:32) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+
+data = input("Informe o Mes dd/mm/aaaa:")
+
+dia = int(data[0:2])
+mes = int(data[2:4])
+ano = (data[4:8])
+
+mes = vet_mes(int(mes) - 1)
+
+print(dia + "de" + mes + "de" + ano)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:46:15) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+
+data = input("Informe o Mes dd/mm/aaaa:")
+
+dia = (data[0:2])
+mes = (data[2:4])
+ano = (data[4:8])
+
+mes = vet_mes[int(mes) - 1]
+
+print(dia + "de" + mes + "de" + ano)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:46:30) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+
+data = input("Informe o Mes dd/mm/aaaa:")
+
+dia = (data[0:2])
+mes = (data[2:4])
+ano = (data[4:8])
+
+mes = vet_mes[int(mes) - 1]
+
+print(dia + " de " + mes + " de " + ano)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 12:46:36) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+
+data = input("Informe o Mes dd/mm/aaaa:")
+
+dia = (data[0:2])
+mes = (data[2:4])
+ano = (data[4:8])
+
+mes = vet_mes[int(mes) - 1]
+
+print(dia + " de " + mes + " de " + ano)
+		
+-- EXECUTION TIME:
+0.365195
+-- TEST CASE 1:
+---- input:
+26111982
+---- correct output:
+26 de novembro de 1982
+---- user output:
+26 de novembro de 1982
+-- TEST CASE 2:
+---- input:
+07071854
+---- correct output:
+07 de julho de 1854
+---- user output:
+07 de julho de 1854
+-- TEST CASE 3:
+---- input:
+22082000
+---- correct output:
+22 de agosto de 2000
+---- user output:
+22 de agosto de 2000
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

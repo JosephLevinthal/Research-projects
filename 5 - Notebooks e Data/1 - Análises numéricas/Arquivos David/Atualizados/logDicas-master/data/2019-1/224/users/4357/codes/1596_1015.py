@@ -1,0 +1,10 @@
+a=int(input("digite o numero"))
+b=int(input("digite o numero"))
+c=int(input("digite o numero"))
+maximo=max(a,b,c)
+minimo=min(a,b,c)
+medio=(a+b+c)-(maximo+minimo)
+print(minimo)
+print(medio)
+print(maximo)
+

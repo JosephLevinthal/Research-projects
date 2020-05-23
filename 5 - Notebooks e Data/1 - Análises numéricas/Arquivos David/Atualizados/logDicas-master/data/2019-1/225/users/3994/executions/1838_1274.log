@@ -1,0 +1,106 @@
+== TEST (2019-06-24 13:07:19) 
+-- CODE:
+from numpy import*
+N = int(input("Digite o numero n: "))
+vet = zeros((N,N), dtype=int)
+g=1
+for i in range(N):
+	for j in range(N):
+		if(i==j): #Diagonal principal
+			vet[i,j] = g
+		elif(i<j): #Direita da diagonal principal
+			vet[i,j] =  g
+	g = g+1
+g=1
+for j in range(N):
+	for i in range(N):
+		if(i>j):
+			vet[i,j] = g
+	g= g+1
+print(vet)
+			
+
+			
+			
+			
+			
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-24 13:07:40) 
+-- CODE:
+from numpy import*
+N = int(input("Digite o numero n: "))
+vet = zeros((N,N), dtype=int)
+g=1
+for i in range(N):
+	for j in range(N):
+		if(i==j): #Diagonal principal
+			vet[i,j] = g
+		elif(i<j): #Direita da diagonal principal
+			vet[i,j] =  g
+	g = g+1
+g=1
+for j in range(N):
+	for i in range(N):
+		if(i>j):
+			vet[i,j] = g
+	g= g+1
+print(vet)
+			
+
+			
+			
+			
+			
+	
+
+-- EXECUTION TIME:
+1.1394
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

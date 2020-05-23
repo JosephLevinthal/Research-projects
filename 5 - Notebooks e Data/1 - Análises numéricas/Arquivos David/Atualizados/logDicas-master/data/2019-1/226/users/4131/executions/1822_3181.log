@@ -1,0 +1,378 @@
+== TEST (2019-06-13 10:17:15) 
+-- CODE:
+from numpy import*
+vet= array(eval(input("vetor:")))
+saida= zeros(36, dtype=int)
+for x in range(vet):
+-- ERROR:
+File "XXXX", line 5
+    
+                        ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:19:45) 
+-- CODE:
+from numpy import*
+vet= array(eval(input("vetor:")))
+saida= zeros(36, dtype=int)
+for x in range(vet):
+	print(saida)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:20:11) 
+-- CODE:
+from numpy import*
+vet= array(eval(input("vetor:")))
+saida= zeros(36, dtype=int)
+for x in range(vet):
+	print(vet)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 10:20:31) 
+-- CODE:
+from numpy import*
+vet= array(eval(input("vetor:")))
+saida= zeros(36, dtype=int)
+for x in range(vet):
+	print(vet)
+-- EXECUTION TIME:
+0.852911
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1822/3181/main.py", line 4, in <module>
+    for x in range(vet):
+TypeError: only integer scalar arrays can be converted to a scalar index
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:22:20) 
+-- CODE:
+from numpy import*
+vet= array(eval(input("vetor:")))
+saida= zeros(36, dtype=int)
+for x in vet):
+	print(vet)
+-- ERROR:
+File "XXXX", line 4
+    for x in vet):
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:22:24) 
+-- CODE:
+from numpy import*
+vet= array(eval(input("vetor:")))
+saida= zeros(36, dtype=int)
+for x in vet:
+	print(vet)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 10:22:36) 
+-- CODE:
+from numpy import*
+vet= array(eval(input("vetor:")))
+saida= zeros(36, dtype=int)
+for x in vet:
+	print(vet)
+-- EXECUTION TIME:
+0.77718
+-- TEST CASE 1:
+---- input:
+[1,2,3,34,1,0]
+---- correct output:
+ [1 2 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0]
+---- user output:
+[ 1  2  3 34  1  0]
+[ 1  2  3 34  1  0]
+[ 1  2  3 34  1  0]
+[ 1  2  3 34  1  0]
+[ 1  2  3 34  1  0]
+[ 1  2  3 34  1  0]
+-- TEST CASE 2:
+---- input:
+[22,22,0,0,16]
+---- correct output:
+[2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+---- user output:
+[22 22  0  0 16]
+[22 22  0  0 16]
+[22 22  0  0 16]
+[22 22  0  0 16]
+[22 22  0  0 16]
+-- TEST CASE 3:
+---- input:
+[1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8]
+---- correct output:
+[0 2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+---- user output:
+[1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8]
+[1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8]
+[1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8]
+[1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8]
+[1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8]
+[1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8]
+[1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8]
+[1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8]
+[1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8]
+[1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8]
+[1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8]
+[1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8]
+[1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8]
+[1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8]
+[1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8]
+[1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:22:46) 
+-- CODE:
+from numpy import*
+vet= array(eval(input("vetor:")))
+saida= zeros(36, dtype=int)
+for x in vet:
+	print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:26:22) 
+-- CODE:
+from numpy import*
+vet= array(eval(input("vetor:")))
+saida= zeros(36, dtype=int)
+for x in vet:
+	print(saida)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:27:15) 
+-- CODE:
+from numpy import*
+vet= array(eval(input("vetor:")))
+
+saida= zeros(36, dtype=int)
+for x in vet:
+	x=x+1
+	print(saida)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:27:29) 
+-- CODE:
+from numpy import*
+vet= array(eval(input("vetor:")))
+
+saida= zeros(36, dtype=int)
+for x in vet:
+	x=x+1
+	print(vet)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:27:42) 
+-- CODE:
+from numpy import*
+vet= array(eval(input("vetor:")))
+
+saida= zeros(36, dtype=int)
+for x in vet:
+	
+	print(vet)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:29:04) 
+-- CODE:
+from numpy import*
+vet= array(eval(input("vetor:")))
+
+saida= zeros(36, dtype=int)
+for x in size(vet):
+	print(vet)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 10:31:02) 
+-- CODE:
+from numpy import*
+vet= array(eval(input("vetor:")))
+
+saida= zeros(36, dtype=int)
+for x in size(vet):
+	print(vet)
+-- EXECUTION TIME:
+0.907088
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1822/3181/main.py", line 5, in <module>
+    for x in size(vet):
+TypeError: 'int' object is not iterable
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:36:25) 
+-- CODE:
+from numpy import*
+vet= array(eval(input("vetor:")))
+
+saida= zeros(36, dtype=int)
+for x in size(vet):
+	if (vet=0):
+		x=x+1
+		
+-- ERROR:
+File "XXXX", line 6
+    if (vet=0):
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 10:39:03) 
+-- CODE:
+from numpy import*
+vet= array(eval(input("vetor:")))
+
+saida= zeros(36, dtype=int)
+for x in size(vet):
+	if(vet=0):
+		
+-- EXECUTION TIME:
+0.663688
+-- ERROR:
+  File "/home/codebench/codes/1822/3181/main.py", line 6
+    if(vet=0):
+          ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 10:43:05) 
+-- CODE:
+print([0 0 0 2 0 1 0 1 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+		
+-- EXECUTION TIME:
+0.731402
+-- ERROR:
+  File "/home/codebench/codes/1822/3181/main.py", line 1
+    print([0 0 0 2 0 1 0 1 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+             ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:43:23) 
+-- CODE:
+print([0 0 0 2 0 1 0 1 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 ])
+		
+-- ERROR:
+File "XXXX", line 1
+    print([0 0 0 2 0 1 0 1 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 ])
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 10:43:26) 
+-- CODE:
+print([0 0 0 2 0 1 0 1 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 ])
+		
+-- EXECUTION TIME:
+0.53293
+-- ERROR:
+  File "/home/codebench/codes/1822/3181/main.py", line 1
+    print([0 0 0 2 0 1 0 1 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 ])
+             ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 10:43:41) 
+-- CODE:
+print(0 0 0 2 0 1 0 1 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0)
+		
+-- EXECUTION TIME:
+0.552255
+-- ERROR:
+  File "/home/codebench/codes/1822/3181/main.py", line 1
+    print(0 0 0 2 0 1 0 1 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0)
+            ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:44:30) 
+-- CODE:
+from numpy import*
+vt= array(eval(input("")))
+print(vt)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:44:38) 
+-- CODE:
+from numpy import*
+vt= array(eval(input("vetro:")))
+print(vt)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 10:44:54) 
+-- CODE:
+from numpy import*
+vt= array(eval(input("vetro:")))
+print(vt)
+		
+-- EXECUTION TIME:
+1.0541
+-- TEST CASE 1:
+---- input:
+[1,2,3,34,1,0]
+---- correct output:
+ [1 2 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0]
+---- user output:
+[ 1  2  3 34  1  0]
+-- TEST CASE 2:
+---- input:
+[22,22,0,0,16]
+---- correct output:
+[2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+---- user output:
+[22 22  0  0 16]
+-- TEST CASE 3:
+---- input:
+[1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8]
+---- correct output:
+[0 2 2 2 2 2 2 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
+---- user output:
+[1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

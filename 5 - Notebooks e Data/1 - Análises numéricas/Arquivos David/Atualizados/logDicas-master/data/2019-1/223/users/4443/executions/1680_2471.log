@@ -1,0 +1,114 @@
+== TEST (2019-04-27 10:25:00) 
+-- CODE:
+#Entrada da idade e indice de massa corporea:
+y = int(input("Digite a sua idade: "))
+imc = float("Digite o seu IMC: ")
+
+if(y <= 0) or (y >= 130) or (imc <= 0):
+	print("Entradas:", y, "anos e IMC", imc)
+	print("Dados invalidos")
+elif(y < 45) and (imc < 22.0):	
+	print("Entradas:", y, "anos e IMC", imc)
+	print("Risco: Baixo")
+elif(y < 45) and (imc >= 22.0):
+	print("Entradas:", y, "anos e IMC", imc)
+	print("Risco: Medio")
+elif(y >= 45) and (imc <= 22.0):
+	print("Entradas:", y, "anos e IMC", imc)
+	print("Risco: Medio")
+elif(y >= 45) and (imc >= 22.0):
+	print("Entradas:", y, "anos e IMC", imc)
+	print("Risco: Alto")
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    imc = float("Digite o seu IMC: ")
+ValueError: could not convert string to float: 'Digite o seu IMC: '
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-27 10:25:38) 
+-- CODE:
+#Entrada da idade e indice de massa corporea:
+y = int(input("Digite a sua idade: "))
+imc = float(input("Digite o seu IMC: "))
+
+if(y <= 0) or (y >= 130) or (imc <= 0):
+	print("Entradas:", y, "anos e IMC", imc)
+	print("Dados invalidos")
+elif(y < 45) and (imc < 22.0):	
+	print("Entradas:", y, "anos e IMC", imc)
+	print("Risco: Baixo")
+elif(y < 45) and (imc >= 22.0):
+	print("Entradas:", y, "anos e IMC", imc)
+	print("Risco: Medio")
+elif(y >= 45) and (imc <= 22.0):
+	print("Entradas:", y, "anos e IMC", imc)
+	print("Risco: Medio")
+elif(y >= 45) and (imc >= 22.0):
+	print("Entradas:", y, "anos e IMC", imc)
+	print("Risco: Alto")
+	
+
+-- OUTPUT:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-27 10:26:03) 
+-- CODE:
+#Entrada da idade e indice de massa corporea:
+y = int(input("Digite a sua idade: "))
+imc = float(input("Digite o seu IMC: "))
+
+if(y <= 0) or (y >= 130) or (imc <= 0):
+	print("Entradas:", y, "anos e IMC", imc)
+	print("Dados invalidos")
+elif(y < 45) and (imc < 22.0):	
+	print("Entradas:", y, "anos e IMC", imc)
+	print("Risco: Baixo")
+elif(y < 45) and (imc >= 22.0):
+	print("Entradas:", y, "anos e IMC", imc)
+	print("Risco: Medio")
+elif(y >= 45) and (imc <= 22.0):
+	print("Entradas:", y, "anos e IMC", imc)
+	print("Risco: Medio")
+elif(y >= 45) and (imc >= 22.0):
+	print("Entradas:", y, "anos e IMC", imc)
+	print("Risco: Alto")
+	
+
+-- EXECUTION TIME:
+0.159373
+-- TEST CASE 1:
+---- input:
+0
+0
+---- correct output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+---- user output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+25
+25
+---- correct output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+---- user output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+-- TEST CASE 3:
+---- input:
+50
+25
+---- correct output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+---- user output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

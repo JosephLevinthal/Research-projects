@@ -1,0 +1,196 @@
+== TEST (2019-05-14 16:31:49) 
+-- CODE:
+from math import*
+x = eval(input("V X:"))
+k = int(input("V K:"))
+
+contador = 1
+sinal = -1
+resultado = x
+expoente = 3 
+
+while (contador < k):
+	resultado = resultado + (sinal * (x ** expoente / factorial(expoente)))
+-- ERROR:
+File "XXXX", line 17
+    sinal = sinal*(-1);
+                      ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 16:32:11) 
+-- CODE:
+from math import*
+x = eval(input("V X:"))
+k = int(input("V K:"))
+
+contador = 1
+sinal = -1
+resultado = x
+expoente = 3 
+
+while (contador < k):
+	resultado = resultado + (sinal * (x ** expoente / factorial(expoente)))
+	print ( resultado)
+-- OUTPUT:
+0.9248322292886504
+0.2788681317824042
+-0.36709596572384195
+-1.0130600632300881
+-1.6590241607363343
+-2.3049882582425805
+-2.950952355748827
+-3.596916453255073
+-4.242880550761319
+-4.888844648267565
+-5.534808745773811
+-6.180772843280057
+-6.8267369407863026
+-7.4727010382925485
+-8.118665135798794
+-8.76462923330504
+-9.410593330811286
+-10.056557428317532
+-10.702521525823778
+-11.348485623330024
+-11.99444972083627
+-12.640413818342516
+-13.286377915848762
+-13.932342013355008
+-14.578306110861254
+-15.2242702083675
+-15.870234305873746
+-16.516198403379992
+-17.16216250088624
+-17.808126598392487
+-18.454090695898735
+-19.100054793404983
+-19.74601889091123
+-20.391982988417478
+-21.037947085923726
+-21.683911183429974
+-22.32987528093622
+-22.97583937844247
+-23.621803475948717
+-24.267767573454964
+-24.913731670961212
+-25.55969576846746
+-26.205659865973708
+-26.851623963479955
+-27.497588060986203
+-28.14355215849245
+-28.7895162559987
+-29.435480353504946
+-30.081444451011194
+-30.72740854851744
+-31.37337264602369
+-32.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 16:36:59) 
+-- CODE:
+from math import*
+x = eval(input("V X:"))
+k = int(input("V K:"))
+
+contador = 1
+sinal = -1
+resultado = x
+expoente = 3 
+
+while (contador < k):
+	resultado = resultado + (sinal * (x ** expoente / factorial(expoente)))
+	sinal = sinal * (-1)
+	expoente = expoente + 2
+	contador = contador + 1
+print (round(resultado ; 10))	
+-- ERROR:
+File "XXXX", line 15
+    print (round(resultado ; 10))	
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 16:37:10) 
+-- CODE:
+from math import*
+x = eval(input("V X:"))
+k = int(input("V K:"))
+
+contador = 1
+sinal = -1
+resultado = x
+expoente = 3 
+
+while (contador < k):
+	resultado = resultado + (sinal * (x ** expoente / factorial(expoente)))
+	sinal = sinal * (-1)
+	expoente = expoente + 2
+	contador = contador + 1
+print (round(resultado , 10))	
+-- OUTPUT:
+1.0000035426
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 16:37:29) 
+-- CODE:
+from math import*
+x = eval(input("V X:"))
+k = int(input("V K:"))
+
+contador = 1
+sinal = -1
+resultado = x
+expoente = 3 
+
+while (contador < k):
+	resultado = resultado + (sinal * (x ** expoente / factorial(expoente)))
+	sinal = sinal * (-1)
+	expoente = expoente + 2
+	contador = contador + 1
+print (round(resultado , 10))	
+-- OUTPUT:
+1.0000035426
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 16:37:32) 
+-- CODE:
+from math import*
+x = eval(input("V X:"))
+k = int(input("V K:"))
+
+contador = 1
+sinal = -1
+resultado = x
+expoente = 3 
+
+while (contador < k):
+	resultado = resultado + (sinal * (x ** expoente / factorial(expoente)))
+	sinal = sinal * (-1)
+	expoente = expoente + 2
+	contador = contador + 1
+print (round(resultado , 10))	
+-- EXECUTION TIME:
+0.187039
+-- TEST CASE 1:
+---- input:
+pi/2
+5
+---- correct output:
+1.0000035426
+---- user output:
+1.0000035426
+-- TEST CASE 2:
+---- input:
+-pi/2
+4
+---- correct output:
+-0.9998431014
+---- user output:
+-0.9998431014
+-- TEST CASE 3:
+---- input:
+pi/3
+3
+---- correct output:
+0.8662952838
+---- user output:
+0.8662952838
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,332 @@
+== TEST (2019-05-24 15:05:13) 
+-- CODE:
+from numpy import *
+
+vet1 = array(eval(input("Vetor 1: ")))
+vet2 = array(eval(input("Vetor 2: ")))
+n1 = 0
+n2 = 0
+cont = 0
+
+while(cont <= len(vet1)):
+	if(vet1[cont]==11):
+		if(vet2[cont]==22):
+			n2 += 1
+		elif(vet2[cont]==33):
+			n1 += 1
+	elif(vet1[cont]==22):
+		if(vet2[cont]==11):
+			n1 += 1
+		elif(vet2[cont]==33):
+			n2 += 1
+	elif(vet1[cont]==33):
+		if(vet2[cont]==11):
+			n2 += 1
+		elif(vet2[cont]==22):
+			n1 += 1
+	cont += 1
+	
+print(cont)
+if(n1 == n2):
+	print("EMPATE")
+elif(n1 > n2):
+	print("EUSAPIA")
+else:
+	print("BARSANULFO")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 15:06:31) 
+-- CODE:
+from numpy import *
+
+vet1 = array(eval(input("Vetor 1: ")))
+vet2 = array(eval(input("Vetor 2: ")))
+n1 = 0
+n2 = 0
+cont = 0
+
+while(cont < len(vet1)):
+	if(vet1[cont]==11):
+		if(vet2[cont]==22):
+			n2 += 1
+		elif(vet2[cont]==33):
+			n1 += 1
+	elif(vet1[cont]==22):
+		if(vet2[cont]==11):
+			n1 += 1
+		elif(vet2[cont]==33):
+			n2 += 1
+	elif(vet1[cont]==33):
+		if(vet2[cont]==11):
+			n2 += 1
+		elif(vet2[cont]==22):
+			n1 += 1
+	cont += 1
+	
+print(cont)
+if(n1 == n2):
+	print("EMPATE")
+elif(n1 > n2):
+	print("EUSAPIA")
+else:
+	print("BARSANULFO")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 15:07:42) 
+-- CODE:
+from numpy import *
+
+vet1 = array(eval(input("Vetor 1: ")))
+vet2 = array(eval(input("Vetor 2: ")))
+n1 = 0
+n2 = 0
+cont = 0
+
+while(cont < len(vet1)):
+	if(vet1[cont]==11):
+		if(vet2[cont]==22):
+			n2 += 1
+		elif(vet2[cont]==33):
+			n1 += 1
+	elif(vet1[cont]==22):
+		if(vet2[cont]==11):
+			n1 += 1
+		elif(vet2[cont]==33):
+			n2 += 1
+	elif(vet1[cont]==33):
+		if(vet2[cont]==11):
+			n2 += 1
+		elif(vet2[cont]==22):
+			n1 += 1
+	cont += 1
+	
+print(cont)
+if(n1 == n2):
+	print("EMPATE")
+elif(n1 > n2):
+	print("EUSAPIA")
+else:
+	print("BARSANULFO")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-24 15:18:34) 
+-- CODE:
+from numpy import *
+
+vet1 = array(eval(input("Vetor 1: ")))
+vet2 = array(eval(input("Vetor 2: ")))
+n1 = 0
+n2 = 0
+cont = 0
+
+while(cont < len(vet1)):
+	if(vet1[cont]==11):
+		if(vet2[cont]==22):
+			n2 += 1
+		elif(vet2[cont]==33):
+			n1 += 1
+	elif(vet1[cont]==22):
+		if(vet2[cont]==11):
+			n1 += 1
+		elif(vet2[cont]==33):
+			n2 += 1
+	elif(vet1[cont]==33):
+		if(vet2[cont]==11):
+			n2 += 1
+		elif(vet2[cont]==22):
+			n1 += 1
+	cont += 1
+	
+print(cont)
+if(n1 == n2):
+	print("EMPATE")
+elif(n1 > n2):
+	print("EUSAPIA")
+else:
+	print("BARSANULFO")
+-- EXECUTION TIME:
+0.472195
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+EUSAPIA
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+EMPATE
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+BARSANULFO
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-24 15:24:56) 
+-- CODE:
+from numpy import *
+
+vet1 = array(eval(input("Vetor 1: ")))
+vet2 = array(eval(input("Vetor 2: ")))
+n1 = 0
+n2 = 0
+cont = 0
+
+while(cont < len(vet1)):
+	if(vet1[cont]==11 and vet2[cont]==22):
+		n2 += 1
+	elif(vet1[cont]==11 and vet2[cont]==33):
+		n1 += 1
+	elif(vet1[cont]==22):
+		if(vet2[cont]==11):
+			n1 += 1
+		elif(vet2[cont]==33):
+			n2 += 1
+	elif(vet1[cont]==33):
+		if(vet2[cont]==11):
+			n2 += 1
+		elif(vet2[cont]==22):
+			n1 += 1
+	cont += 1
+	
+print(cont)
+if(n1 == n2):
+	print("EMPATE")
+elif(n1 > n2):
+	print("EUSAPIA")
+else:
+	print("BARSANULFO")
+-- EXECUTION TIME:
+0.557196
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+EUSAPIA
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+EMPATE
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+BARSANULFO
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-24 15:28:26) 
+-- CODE:
+from numpy import *
+
+vet1 = array(eval(input("Vetor 1: ")))
+vet2 = array(eval(input("Vetor 2: ")))
+n1 = 0
+n2 = 0
+cont = 0
+
+while(cont < len(vet1)):
+	if(vet1[cont]==11):
+		if(vet2[cont]==22):
+			n2 += 1
+		elif(vet2[cont]==33):
+			n1 += 1
+	elif(vet1[cont]==22):
+		if(vet2[cont]==11):
+			n1 += 1
+		elif(vet2[cont]==33):
+			n2 += 1
+	elif(vet1[cont]==33):
+		if(vet2[cont]==11):
+			n2 += 1
+		elif(vet2[cont]==22):
+			n1 += 1
+	cont += 1
+	
+print(cont)
+if(n1 == n2):
+	print("EMPATE")
+elif(n1 > n2):
+	print("EUSAPIA")
+else:
+	print("BARSANULFO")
+-- EXECUTION TIME:
+0.555651
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+EUSAPIA
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+EMPATE
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+BARSANULFO
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

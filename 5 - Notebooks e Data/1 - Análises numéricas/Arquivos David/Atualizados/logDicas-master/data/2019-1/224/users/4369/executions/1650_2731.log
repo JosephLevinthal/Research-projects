@@ -1,0 +1,701 @@
+== TEST (2019-04-25 19:00:57) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+q1 > 0
+q2 > 0
+q3 < 0
+q3 < 0
+fr == ((x - a) ** 2) + ((y - b) ** 2) = r ** 2
+if(ca > 0 and cb >0):
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- ERROR:
+File "XXXX", line 8
+    fr == ((x - a) ** 2) + ((y - b) ** 2) = r ** 2
+    ^
+SyntaxError: can't assign to comparison
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 19:01:27) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+q1 > 0
+q2 > 0
+q3 < 0
+q3 < 0
+
+if(ca > 0 and cb >0):
+	fr == ((x - a) ** 2) + ((y - b) ** 2) = r ** 2
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- ERROR:
+File "XXXX", line 10
+    fr == ((x - a) ** 2) + ((y - b) ** 2) = r ** 2
+    ^
+SyntaxError: can't assign to comparison
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 19:02:14) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+q1 > 0
+q2 > 0
+q3 < 0
+q3 < 0
+
+if(ca > 0 and cb >0):
+	((x - a) ** 2) + ((y - b) ** 2) = r ** 2
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- ERROR:
+File "XXXX", line 10
+    ((x - a) ** 2) + ((y - b) ** 2) = r ** 2
+    ^
+SyntaxError: can't assign to operator
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 19:02:35) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+q1 > 0
+q2 > 0
+q3 < 0
+q3 < 0
+
+if(ca > 0 and cb >0):
+	r ** 2 = ((x - a) ** 2) + ((y - b) ** 2)
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- ERROR:
+File "XXXX", line 10
+    r ** 2 = ((x - a) ** 2) + ((y - b) ** 2)
+    ^
+SyntaxError: can't assign to operator
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 19:02:42) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+q1 > 0
+q2 > 0
+q3 < 0
+q3 < 0
+
+if(ca > 0 and cb >0):
+	r ** 2 == ((x - a) ** 2) + ((y - b) ** 2)
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    q1 > 0
+NameError: name 'q1' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 19:04:17) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+quadrante1 = q1 > 0
+quadrante2 = q2 > 0
+quadrante3 = q3 < 0
+quadrante4 = q4 < 0
+
+if(ca > 0 and cb >0):
+	r ** 2 == ((x - a) ** 2) + ((y - b) ** 2)
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    quadrante1 = q1 > 0
+NameError: name 'q1' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 19:05:53) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+quadrante1 = ca > 0
+quadrante2 = cb > 0
+quadrante3 = ca < 0
+quadrante4 = cb < 0
+
+if(ca > 0 and cb >0):
+	r ** 2 == ((x - a) ** 2) + ((y - b) ** 2)
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- OUTPUT:
+Inferiores
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 19:06:05) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+quadrante1 = ca > 0
+quadrante2 = cb > 0
+quadrante3 = ca < 0
+quadrante4 = cb < 0
+
+if(ca > 0 and cb >0):
+	r ** 2 == ((x - a) ** 2) + ((y - b) ** 2)
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- EXECUTION TIME:
+0.138317
+-- TEST CASE 1:
+---- input:
+4.5
+-2.2
+3
+---- correct output:
+Inferiores
+---- user output:
+Inferiores
+-- TEST CASE 2:
+---- input:
+0.1
+0.1
+3
+---- correct output:
+Superiores
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+-4.5
+2.2
+1
+---- correct output:
+Superiores
+---- user output:
+Inferiores
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 19:06:11) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+quadrante1 = ca > 0
+quadrante2 = cb > 0
+quadrante3 = ca < 0
+quadrante4 = cb < 0
+
+if(ca > 0 and cb >0):
+	r ** 2 == ((x - a) ** 2) + ((y - b) ** 2)
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- EXECUTION TIME:
+0.18361
+-- TEST CASE 1:
+---- input:
+4.5
+-2.2
+3
+---- correct output:
+Inferiores
+---- user output:
+Inferiores
+-- TEST CASE 2:
+---- input:
+0.1
+0.1
+3
+---- correct output:
+Superiores
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+-4.5
+2.2
+1
+---- correct output:
+Superiores
+---- user output:
+Inferiores
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 19:06:42) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+quadrante1 = ca > 0
+quadrante2 = cb > 0
+quadrante3 = ca < 0
+quadrante4 = cb < 0
+
+if(ca > 0 and cb >0):
+	r ** 2 == ((x - a) ** 2) + ((y - b) ** 2)
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- EXECUTION TIME:
+0.141962
+-- TEST CASE 1:
+---- input:
+4.5
+-2.2
+3
+---- correct output:
+Inferiores
+---- user output:
+Inferiores
+-- TEST CASE 2:
+---- input:
+0.1
+0.1
+3
+---- correct output:
+Superiores
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+-4.5
+2.2
+1
+---- correct output:
+Superiores
+---- user output:
+Inferiores
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 19:06:43) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+quadrante1 = ca > 0
+quadrante2 = cb > 0
+quadrante3 = ca < 0
+quadrante4 = cb < 0
+
+if(ca > 0 and cb >0):
+	r ** 2 == ((x - a) ** 2) + ((y - b) ** 2)
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- OUTPUT:
+Inferiores
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 19:07:22) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+quadrante1 = ca > 0
+quadrante2 = cb > 0
+quadrante3 = ca < 0
+quadrante4 = cb < 0
+x = 1
+y = 1
+
+if(ca > 0 and cb >0):
+	r ** 2 == ((x - a) ** 2) + ((y - b) ** 2)
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- OUTPUT:
+Inferiores
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 19:07:35) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+quadrante1 = ca > 0
+quadrante2 = cb > 0
+quadrante3 = ca < 0
+quadrante4 = cb < 0
+x = 1
+y = 1
+
+if(ca > 0 and cb >0):
+	r ** 2 == ((x - a) ** 2) + ((y - b) ** 2)
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- OUTPUT:
+Inferiores
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 19:07:53) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+quadrante1 = ca > 0
+quadrante2 = cb > 0
+quadrante3 = ca < 0
+quadrante4 = cb < 0
+x = 1
+y = 1
+
+if(ca > 0 and cb >0):
+	r ** 2 == ((x - ca) ** 2) + ((y - cb) ** 2)
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- OUTPUT:
+Inferiores
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 19:08:00) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+quadrante1 = ca > 0
+quadrante2 = cb > 0
+quadrante3 = ca < 0
+quadrante4 = cb < 0
+x = 1
+y = 1
+
+if(ca > 0 and cb >0):
+	r ** 2 == ((x - ca) ** 2) + ((y - cb) ** 2)
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- OUTPUT:
+Inferiores
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 19:08:06) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+quadrante1 = ca > 0
+quadrante2 = cb > 0
+quadrante3 = ca < 0
+quadrante4 = cb < 0
+x = 1
+y = 1
+
+if(ca > 0 and cb >0):
+	r ** 2 == ((x - ca) ** 2) + ((y - cb) ** 2)
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- EXECUTION TIME:
+0.141546
+-- TEST CASE 1:
+---- input:
+4.5
+-2.2
+3
+---- correct output:
+Inferiores
+---- user output:
+Inferiores
+-- TEST CASE 2:
+---- input:
+0.1
+0.1
+3
+---- correct output:
+Superiores
+---- user output:
+Superiores
+-- TEST CASE 3:
+---- input:
+-4.5
+2.2
+1
+---- correct output:
+Superiores
+---- user output:
+Inferiores
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 19:09:53) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+quadrante1 = ca > 0
+quadrante2 = cb > 0
+quadrante3 = ca < 0
+quadrante4 = cb < 0
+x = 0
+y = 0
+
+if(ca > 0 and cb >0):
+	r ** 2 == ((x - ca) ** 2) + ((y - cb) ** 2)
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- OUTPUT:
+Inferiores
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 19:10:04) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+quadrante1 = ca > 0
+quadrante2 = cb > 0
+quadrante3 = ca < 0
+quadrante4 = cb < 0
+x = 0
+y = 0
+
+if(ca > 0 and cb >0):
+	r ** 2 == ((x - ca) ** 2) + ((y - cb) ** 2)
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- OUTPUT:
+Inferiores
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 19:10:09) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+quadrante1 = ca > 0
+quadrante2 = cb > 0
+quadrante3 = ca < 0
+quadrante4 = cb < 0
+x = 0
+y = 0
+
+if(ca > 0 and cb >0):
+	r ** 2 == ((x - ca) ** 2) + ((y - cb) ** 2)
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- EXECUTION TIME:
+0.16308
+-- TEST CASE 1:
+---- input:
+4.5
+-2.2
+3
+---- correct output:
+Inferiores
+---- user output:
+Inferiores
+-- TEST CASE 2:
+---- input:
+0.1
+0.1
+3
+---- correct output:
+Superiores
+---- user output:
+Superiores
+-- TEST CASE 3:
+---- input:
+-4.5
+2.2
+1
+---- correct output:
+Superiores
+---- user output:
+Inferiores
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 19:12:54) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+quadrante1 = ca > 0
+quadrante2 = cb > 0
+quadrante3 = ca < 0
+quadrante4 = cb < 0
+x = 1
+y = 0
+
+if(ca > 0 and cb > 0):
+	r ** 2 == ((x - ca) ** 2) + ((y - cb) ** 2)
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- OUTPUT:
+Inferiores
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 19:13:01) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+quadrante1 = ca > 0
+quadrante2 = cb > 0
+quadrante3 = ca < 0
+quadrante4 = cb < 0
+x = 1
+y = 0
+
+if(ca > 0 and cb > 0):
+	r ** 2 == ((x - ca) ** 2) + ((y - cb) ** 2)
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- EXECUTION TIME:
+0.184474
+-- TEST CASE 1:
+---- input:
+4.5
+-2.2
+3
+---- correct output:
+Inferiores
+---- user output:
+Inferiores
+-- TEST CASE 2:
+---- input:
+0.1
+0.1
+3
+---- correct output:
+Superiores
+---- user output:
+Superiores
+-- TEST CASE 3:
+---- input:
+-4.5
+2.2
+1
+---- correct output:
+Superiores
+---- user output:
+Inferiores
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 19:13:02) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+quadrante1 = ca > 0
+quadrante2 = cb > 0
+quadrante3 = ca < 0
+quadrante4 = cb < 0
+x = 1
+y = 0
+
+if(ca > 0 and cb > 0):
+	r ** 2 == ((x - ca) ** 2) + ((y - cb) ** 2)
+	m = "Superiores"
+	print(m)
+else:
+	m = "Inferiores"
+	print(m)
+-- OUTPUT:
+Inferiores
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-27 23:41:36) 
+-- CODE:
+ca = float(input("Digite o coeficiente a: "))
+cb = float(input("Digite o coeficiente b: "))
+r = float(input("Digite o raio: "))
+
+if(ca > 0 and cb > 0):
+	print("Superiores")
+elif(ca < 0 and cb > 0):
+	print("Superiores")
+elif(ca > 0 and cb < 0):
+	print("Inferiores")
+else:
+	print("Inferiores")
+
+
+-- EXECUTION TIME:
+0.202072
+-- TEST CASE 1:
+---- input:
+4.5
+-2.2
+3
+---- correct output:
+Inferiores
+---- user output:
+Inferiores
+-- TEST CASE 2:
+---- input:
+0.1
+0.1
+3
+---- correct output:
+Superiores
+---- user output:
+Superiores
+-- TEST CASE 3:
+---- input:
+-4.5
+2.2
+1
+---- correct output:
+Superiores
+---- user output:
+Superiores
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

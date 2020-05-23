@@ -1,0 +1,119 @@
+== TEST (2019-06-11 11:37:49) 
+-- CODE:
+s = input().lower
+x = ""
+
+for i range(len(size(s))):
+	if s[i] != "a" 
+		x = x + s[i]
+print(x)
+-- ERROR:
+File "XXXX", line 4
+    for i range(len(size(s))):
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 11:37:55) 
+-- CODE:
+s = input().lower
+x = ""
+
+for i in range(len(size(s))):
+	if s[i] != "a" 
+		x = x + s[i]
+print(x)
+-- ERROR:
+File "XXXX", line 5
+    if s[i] != "a" 
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 11:38:03) 
+-- CODE:
+s = input().lower
+x = ""
+
+for i in range(len(size(s))):
+	if s[i] != "a" :
+		x = x + s[i]
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    for i in range(len(size(s))):
+NameError: name 'size' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 11:39:21) 
+-- CODE:
+s = input().lower
+x = ""
+
+for i in range(len(s)):
+	if s[i] != "a" :
+		x = x + s[i]
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    for i in range(len(s)):
+TypeError: object of type 'builtin_function_or_method' has no len()
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 11:40:02) 
+-- CODE:
+s = input()
+x = ""
+
+for i in range(len(s)):
+	if s[i].lower() != "a" :
+		x = x + s[i]
+print(x)
+-- OUTPUT:
+Instituto_de_Computco-ICOMP-UFM
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 11:40:10) 
+-- CODE:
+s = input()
+x = ""
+
+for i in range(len(s)):
+	if s[i].lower() != "a" :
+		x = x + s[i]
+print(x)
+-- OUTPUT:
+Instituto_de_Computco-ICOMP-UFM
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 11:40:17) 
+-- CODE:
+s = input()
+x = ""
+
+for i in range(len(s)):
+	if s[i].lower() != "a" :
+		x = x + s[i]
+print(x)
+-- EXECUTION TIME:
+0.789458
+-- TEST CASE 1:
+---- input:
+Instituto_de_Computacao-ICOMP-UFAM
+---- correct output:
+Instituto_de_Computco-ICOMP-UFM
+---- user output:
+Instituto_de_Computco-ICOMP-UFM
+-- TEST CASE 2:
+---- input:
+a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-aa-a-a-a-a-a-a-a-a-a-a
+---- correct output:
+-----------------------------
+---- user output:
+-----------------------------
+-- TEST CASE 3:
+---- input:
+.aaaaaaaaaaaaaaaaaaaaa.bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb.aaaaaaaaaaaaaaaaa.
+---- correct output:
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb..
+---- user output:
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb..
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

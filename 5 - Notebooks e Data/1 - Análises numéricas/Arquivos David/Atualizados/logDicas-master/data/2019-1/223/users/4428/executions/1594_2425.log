@@ -1,0 +1,1348 @@
+== TEST (2019-04-01 20:47:02) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3, "km/l"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3, "km/l"))
+TypeError: round() takes at most 2 arguments (3 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 20:48:09) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo "km/l", 3))
+-- ERROR:
+File "XXXX", line 5
+    print(round(consumo "km/l", 3))
+                             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 20:48:53) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round("consumo km/l", 3))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round("consumo km/l", 3))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 20:49:23) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3))
+-- OUTPUT:
+14.286
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:16:49) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3)("km/l"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3)("km/l"))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:18:34) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(float(input(round(consumo, 3)("km/l"))))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(float(input(round(consumo, 3)("km/l"))))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:19:29) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(float(input(round(consumo "km/l", 3))))
+-- ERROR:
+File "XXXX", line 5
+    print(float(input(round(consumo "km/l", 3))))
+                                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:22:30) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(("km/l")(round(consumo, 3)))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(("km/l")(round(consumo, 3)))
+TypeError: 'str' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:24:43) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3)("km/l"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3)("km/l"))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:25:23) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(float(round(consumo, 3)("km/l")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(float(round(consumo, 3)("km/l")))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:25:51) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(float(input(round(consumo, 3)("km/l"))))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(float(input(round(consumo, 3)("km/l"))))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:27:02) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3)+("km/l"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3)+("km/l"))
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:27:41) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3 +"km/l")
+-- ERROR:
+File "XXXX", line 6
+    
+                                   ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:28:10) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3 +"km/l"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3 +"km/l"))
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:29:56) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(format(round(consumo, 3 +"km/l")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(format(round(consumo, 3 +"km/l")))
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:41:36) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(format(round(consumo +"km/l", 3)))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(format(round(consumo +"km/l", 3)))
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:42:09) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(float(round(consumo +"km/l", 3)))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(float(round(consumo +"km/l", 3)))
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:44:48) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3))+("km/l")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3))+("km/l")
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:45:29) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3))+float(input("km/l"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3))+float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:46:02) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3)) + float(input("km/l"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3)) + float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:53:34) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3) + float(input("km/l"))
+-- ERROR:
+File "XXXX", line 6
+    
+                                            ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:54:02) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3) + float(input("km/l")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3) + float(input()))
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:54:44) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3 + float(input("km/l"))
+-- ERROR:
+File "XXXX", line 6
+    
+                                           ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:55:04) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3 + float(input("km/l"))))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3 + float(input())))
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:55:50) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3) + float(input("km/l")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3) + float(input()))
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:57:01) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(float(input(round(consumo, 3) + ("km/l"))))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(float(input(round(consumo, 3) + ("km/l"))))
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:57:59) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3) + ("km/l"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3) + ("km/l"))
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:58:31) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3)) + ("km/l")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3)) + ("km/l")
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:59:12) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3)) + str("km/l")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3)) + str("km/l")
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 23:59:35) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3)) + float("km/l")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3)) + float("km/l")
+ValueError: could not convert string to float: 'km/l'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:00:24) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3)) + float(input("km/l"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3)) + float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:01:01) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print((round(consumo, 3)) + float(input("km/l")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print((round(consumo, 3)) + float(input()))
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:12:42) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3)) + float(input("km/l"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3)) + float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:22:09) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3)) + float(input(" km/l"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3)) + float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:23:17) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3) + float(input("km/l")
+-- ERROR:
+File "XXXX", line 6
+    
+                                           ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 00:24:02) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3) + float(input("km/l")))
+-- EXECUTION TIME:
+0.131068
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1594/2425/main.py", line 5, in <module>
+    print(round(consumo, 3) + float(input()))
+EOFError: EOF when reading a line
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:24:06) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3) + float(input("km/l")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3) + float(input()))
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:24:59) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3 + float(input("km/l"))))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3 + float(input())))
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:25:39) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3) + float(input("km/l")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3) + float(input()))
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:27:06) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = km/l
+print(round(consumo, 3) + unidade)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = km/l
+NameError: name 'km' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:27:58) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+print(round(consumo, 3) + unidade)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:28:30) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+print(round(consumo, 3) + (unidade)
+-- ERROR:
+File "XXXX", line 6
+    
+                                       ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:28:50) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+print(round(consumo, 3) + (unidade))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:29:38) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print(round(consumo + unidade, 3))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:30:39) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print(round(consumo + unidade)
+-- ERROR:
+File "XXXX", line 7
+    
+                                  ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:30:56) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print(round(consumo + unidade))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:45:30) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print(round(consumo, 3 + "km/l"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:46:53) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print(float(round(consumo, 3 + "km/l")))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:52:55) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print(round(consumo, 3)) + " "  + "km/l"
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:53:25) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print((round(consumo, 3)) + " "  + "km/l")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:54:42) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print((round(consumo, 3))) + " "  + "km/l"
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:55:21) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print((round(consumo, 3 + " "  + "km/l")))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:56:00) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print((round("consumo, 3" + " "  + "km/l")))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 00:56:39) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print(round("consumo, 3" + " "  + "km/l"))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 06:55:07) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print(round(consumo, 3)
+
+-- ERROR:
+File "XXXX", line 7
+    
+                           ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 06:55:51) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print(round(consumo + unidade,  3)
+
+-- ERROR:
+File "XXXX", line 7
+    
+                                      ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 06:59:31) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print(round(consumo,  3), unidade)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:21:28) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print(round(consumo,  3), unidade)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:28:40) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print(round(consumo,  3) + unidade)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:30:44) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print(round(consumo,  3, unidade)
+
+-- ERROR:
+File "XXXX", line 7
+    
+                                     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:32:53) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print(round(consumo,  3 + unidade)
+
+-- ERROR:
+File "XXXX", line 7
+    
+                                      ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:33:34) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print(round(consumo,  3 + unidade))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:35:16) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print(round(consumo + unidade,  3))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:36:38) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = input("km/l"))
+
+print(round(consumo + unidade,  3))
+
+-- ERROR:
+File "XXXX", line 4
+    unidade = input())
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:38:31) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3 + "km/l" ))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3 + "km/l" ))
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:40:27) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3) + str("km/l")
+
+-- ERROR:
+File "XXXX", line 6
+    
+                                         ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:41:26) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3)) + str("km/l")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3)) + str("km/l")
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:42:13) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3)) + str("km/l")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3)) + str("km/l")
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:43:12) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3)) + float("km/l")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3)) + float("km/l")
+ValueError: could not convert string to float: 'km/l'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:44:35) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3)) + float(input("km/l"))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3)) + float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:46:10) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3)) + str(input("km/l"))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3)) + str(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:48:34) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print((round(consumo, 3)) + str(input("km/l")))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print((round(consumo, 3)) + str(input()))
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:49:33) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(round(consumo, 3)) + str(input("km/l"))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(consumo, 3)) + str(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:52:26) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+consumo1 = consumo + float(input("km/l"))
+print(round(consumo1, 3)
+
+-- ERROR:
+File "XXXX", line 6
+    
+                            ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:53:08) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+consumo1 = consumo + float(input("km/l"))
+print(round(consumo1, 3))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    consumo1 = consumo + float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:57:27) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+consumo1 = consumo + "km/l"
+print(round(consumo1, 3))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    consumo1 = consumo + "km/l"
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 13:01:55) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l")
+consumo1 = consumo + unidade
+print(round(consumo1, 3))
+
+-- ERROR:
+File "XXXX", line 5
+    consumo1 = consumo + unidade
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 13:03:14) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = "km/l"
+consumo1 = consumo + unidade
+print(round(consumo1, 3))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    consumo1 = consumo + unidade
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 13:42:49) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = "km/l"
+consumo1 = float(consumo + unidade)
+print(round(consumo1, 3))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    consumo1 = float(consumo + unidade)
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 13:44:38) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = "km/l"
+consumo1 =(consumo + unidade)
+print(float(input(round(consumo1, 3))))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    consumo1 =(consumo + unidade)
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 13:45:59) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = km/l
+consumo1 =(consumo + unidade
+print(float(input(round(consumo1, 3))))
+
+-- ERROR:
+File "XXXX", line 6
+    print(float(input(round(consumo1, 3))))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 13:57:54) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = km/l
+
+print(round(consumo1, 3)+str(unidade)
+
+-- ERROR:
+File "XXXX", line 7
+    
+                                         ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 13:58:58) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = km/l
+
+print(round(consumo1, 3)+str(unidade))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = km/l
+NameError: name 'km' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 14:00:35) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print(round(consumo1, 3)+str(unidade))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 14:06:41) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print(round(consumo, 3)+str(unidade))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 14:09:04) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+consumo1 = (round(consumo, 3))
+print(consumo, unidade)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 14:10:50) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+consumo1 = (round(consumo, 3))
+print(consumo, str(unidade))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 14:13:22) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+consumo1 = (round(consumo, 3))
+print(consumo1 + str(unidade))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 14:16:07) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print(consumo1 + str(unidade))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 14:17:16) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+unidade = float(input("km/l"))
+
+print(consumo + str(unidade))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 14:21:40) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = float(distancia/combustivel)
+unidade = float(input("km/l"))
+
+print(consumo + str(unidade))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 14:23:08) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = float(distancia/combustivel)
+unidade = float(input("km/l"))
+
+print(consumo + unidade)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    unidade = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 14:27:56) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = distancia/combustivel
+
+print(consumo , "km/l")
+
+-- OUTPUT:
+14.286 km/l
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 14:30:16) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = round(distancia/combustivel, 3)
+
+print(consumo , "km/l")
+
+-- OUTPUT:
+14.286 km/l
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 20:45:27) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = round(distancia/combustivel, 3)
+
+print(consumo , "km/l")
+
+-- OUTPUT:
+14.286 km/l
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 20:46:00) 
+-- CODE:
+distancia = float(input("Distancia Percorrida: "))
+combustivel = float(input("Combustivel Gasto: "))
+consumo = round(distancia/combustivel, 3)
+
+print(consumo , "km/l")
+
+-- EXECUTION TIME:
+0.218216
+-- TEST CASE 1:
+---- input:
+28.572
+2
+---- correct output:
+14.286 km/l
+---- user output:
+14.286 km/l
+-- TEST CASE 2:
+---- input:
+2254
+124.4
+---- correct output:
+18.119 km/l
+---- user output:
+18.119 km/l
+-- TEST CASE 3:
+---- input:
+4554
+464.6
+---- correct output:
+9.802 km/l
+---- user output:
+9.802 km/l
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,235 @@
+== TEST (2019-04-29 19:48:03) 
+-- CODE:
+a = float(input ("Lado 1: "))
+b = float(input ("Lado 2: "))
+c = float(input ("Lado 3: "))
+
+print("Entradas:", "a", "b", "c")
+
+if ((x < y + z) and (y < x + z) and (z < y + x)):
+	if ((x != y) and (y != z) and (z != x)):
+	print("escaleno")
+	else:
+		if ((x != y) or (y != z)):
+		print("isosceles")
+		else:
+		print("equilatero")
+else:
+print("invalido")
+-- ERROR:
+File "XXXX", line 9
+    print("escaleno")
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 19:48:46) 
+-- CODE:
+a = float(input ("Lado 1: "))
+b = float(input ("Lado 2: "))
+c = float(input ("Lado 3: "))
+
+print("Entradas:", "a", "b", "c")
+
+if ((x < y + z) and (y < x + z) and (z < y + x)):
+	if ((x != y) and (y != z) and (z != x)):
+	print("escaleno")
+	elif ((x != y) or (y != z)):
+		print("isosceles")
+		else:
+		print("equilatero")
+else:
+print("invalido")
+-- ERROR:
+File "XXXX", line 9
+    print("escaleno")
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 20:24:38) 
+-- CODE:
+a = float(input("Lado A: "))
+b = float(input("Lado B: "))
+c = float(input("Lado C: "))
+
+print("Entradas:" a , b , c)
+
+x = "Tipo de triangulo: "
+
+if ((a < 0) or (b < 0) or (c < 0) or (a >= b + c) or (b >= c + a) or (c >= a + b)):
+	print(x, "invalido")
+else:
+	if(a == b) and (b == c):
+		print(x, "equilatero")
+	else:
+		if(a == b) or (b == c) or (c == a):
+			print(x, "isosceles")
+		else:
+			print(x, "escaleno")
+-- ERROR:
+File "XXXX", line 5
+    print("Entradas:" a , b , c)
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 20:25:45) 
+-- CODE:
+a = float(input("Lado A: "))
+b = float(input("Lado B: "))
+c = float(input("Lado C: "))
+
+print("Entradas: ",a, ",",b, ", ",c)
+
+x = "Tipo de triangulo: "
+
+if ((a < 0) or (b < 0) or (c < 0) or (a >= b + c) or (b >= c + a) or (c >= a + b)):
+	print(x, "invalido")
+else:
+	if(a == b) and (b == c):
+		print(x, "equilatero")
+	else:
+		if(a == b) or (b == c) or (c == a):
+			print(x, "isosceles")
+		else:
+			print(x, "escaleno")
+-- OUTPUT:
+Entradas:  2.0 , 4.0 ,  4.0
+Tipo de triangulo:  isosceles
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 20:26:06) 
+-- CODE:
+a = float(input("Lado A: "))
+b = float(input("Lado B: "))
+c = float(input("Lado C: "))
+
+print("Entradas: ",a, ",",b, ", ",c)
+
+x = "Tipo de triangulo: "
+
+if ((a < 0) or (b < 0) or (c < 0) or (a >= b + c) or (b >= c + a) or (c >= a + b)):
+	print(x, "invalido")
+else:
+	if(a == b) and (b == c):
+		print(x, "equilatero")
+	else:
+		if(a == b) or (b == c) or (c == a):
+			print(x, "isosceles")
+		else:
+			print(x, "escaleno")
+-- EXECUTION TIME:
+0.19221
+-- TEST CASE 1:
+---- input:
+2
+4
+4
+---- correct output:
+Entradas: 2.0 , 4.0 , 4.0
+Tipo de triangulo: isosceles
+---- user output:
+Entradas:  2.0 , 4.0 ,  4.0
+Tipo de triangulo:  isosceles
+-- TEST CASE 2:
+---- input:
+3.3
+4.4
+5.5
+---- correct output:
+Entradas: 3.3 , 4.4 , 5.5
+Tipo de triangulo: escaleno
+---- user output:
+Entradas:  3.3 , 4.4 ,  5.5
+Tipo de triangulo:  escaleno
+-- TEST CASE 3:
+---- input:
+1
+2
+7
+---- correct output:
+Entradas: 1.0 , 2.0 , 7.0
+Tipo de triangulo: invalido
+---- user output:
+Entradas:  1.0 , 2.0 ,  7.0
+Tipo de triangulo:  invalido
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 23:50:24) 
+-- CODE:
+a = float(input("Lado A: "))
+b = float(input("Lado B: "))
+c = float(input("Lado C: "))
+
+print("Entradas: ",a, ",",b, ", ",c)
+
+x = "Tipo de triangulo: "
+
+if ((a < 0) or (b < 0) or (c < 0) or (a >= b + c) or (b >= c + a) or (c >= a + b)):
+	print(x, "invalido")
+else:
+	if(a == b) and (b == c):
+		print(x, "equilatero")
+	elif(a == b) or (b == c) or (c == a):
+			print(x, "isosceles")
+	else:
+			print(x, "escaleno")
+-- OUTPUT:
+Entradas:  2.0 , 4.0 ,  4.0
+Tipo de triangulo:  isosceles
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-01 23:50:42) 
+-- CODE:
+a = float(input("Lado A: "))
+b = float(input("Lado B: "))
+c = float(input("Lado C: "))
+
+print("Entradas: ",a, ",",b, ", ",c)
+
+x = "Tipo de triangulo: "
+
+if ((a < 0) or (b < 0) or (c < 0) or (a >= b + c) or (b >= c + a) or (c >= a + b)):
+	print(x, "invalido")
+else:
+	if(a == b) and (b == c):
+		print(x, "equilatero")
+	elif(a == b) or (b == c) or (c == a):
+			print(x, "isosceles")
+	else:
+			print(x, "escaleno")
+-- EXECUTION TIME:
+0.126671
+-- TEST CASE 1:
+---- input:
+2
+4
+4
+---- correct output:
+Entradas: 2.0 , 4.0 , 4.0
+Tipo de triangulo: isosceles
+---- user output:
+Entradas:  2.0 , 4.0 ,  4.0
+Tipo de triangulo:  isosceles
+-- TEST CASE 2:
+---- input:
+3.3
+4.4
+5.5
+---- correct output:
+Entradas: 3.3 , 4.4 , 5.5
+Tipo de triangulo: escaleno
+---- user output:
+Entradas:  3.3 , 4.4 ,  5.5
+Tipo de triangulo:  escaleno
+-- TEST CASE 3:
+---- input:
+1
+2
+7
+---- correct output:
+Entradas: 1.0 , 2.0 , 7.0
+Tipo de triangulo: invalido
+---- user output:
+Entradas:  1.0 , 2.0 ,  7.0
+Tipo de triangulo:  invalido
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

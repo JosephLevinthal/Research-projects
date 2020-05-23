@@ -1,0 +1,1667 @@
+== TEST (2019-06-22 09:49:45) 
+-- CODE:
+N = int(input("um numero natural N:"))
+matriz = ones(N,N)
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    matriz = ones(N,N)
+NameError: name 'ones' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 09:50:23) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones(N,N)
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 09:51:09) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 09:58:09) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = size(matriz)
+B = 2
+for i in range(B,A):
+	for j in range(B,A):
+		matriz[i,j] = matriz[i,j] + 1
+		B = B + 1
+		A = A - 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 09:59:41) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = size(matriz)
+i = 2
+for i in range(i,A):
+	for j in range(i,A):
+		matriz[i,j] = matriz[i,j] + 1
+		#B = B + 1
+		A = A - 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:00:42) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = size(matriz)
+i = 2
+for i in range(i,A):
+	for j in range(i,A):
+		print(matriz[i,j])
+		#B = B + 1
+		A = A - 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:02:37) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+i = 2
+for i in range(i,A):
+	for j in range(i,A):
+		print(matriz[i,j])
+		#B = B + 1
+		A = A - 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:03:28) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+i = 2
+for i in range(i,A):
+	for j in range(i,A):
+		matriz[i,j] = matriz[i,j] + 1
+		#B = B + 1
+		A = A - 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:04:18) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 2
+for i in range(B,A):
+	for j in range(B,A):
+		matriz[i,j] = matriz[i,j] + 1
+		B = B + 1
+		A = A - 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:04:42) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 2
+for i in range(B,A):
+	for j in range(B,A):
+		matriz[i,j] = matriz[i,j] + 1
+		B = B + 1
+		#A = A - 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:05:20) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+for i in range(B,A):
+	for j in range(B,A):
+		matriz[i,j] = matriz[i,j] + 1
+		B = B + 1
+		#A = A - 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:05:56) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+for i in range(B,A):
+	for j in range(B,A):
+		matriz[i,j] = matriz[i,j] + 1
+	B = B + 1
+		#A = A - 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:07:30) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+for i in range(B,A):
+	for j in range(B,A):
+		matriz[i,j] = matriz[i,j] + 1
+		B = B + 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:08:10) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+for i in range(B,A,1):
+	for j in range(B,A,1):
+		matriz[i,j] = matriz[i,j] + 1
+		B = B + 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:10:29) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+for i in range(B,A,1):
+	for j in range(B,A,1):
+		matriz[i,j] = matriz[i,j] + 1
+		B = B + 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:11:19) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+A = shape(matriz)[1]
+#B= 1
+for i in range(A):
+	for j in range(A):
+		matriz[i,j] = matriz[i,j] + 1
+		#B = B + 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:12:09) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+A = shape(matriz)[1]
+#B= 1
+for i in range(A):
+	for j in range(A):
+		matriz[i,j] = matriz[i,j] + 1
+		i = i + 1
+		j = j + 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:12:41) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+A = (shape(matriz)[1]) - 1
+#B= 1
+for i in range(A):
+	for j in range(A):
+		matriz[i,j] = matriz[i,j] + 1
+		i = i + 1
+		j = j + 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:13:02) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+A = shape(matriz)[1]
+#B= 1
+for i in range(A):
+	for j in range(A):
+		matriz[i,j] = matriz[i,j] + 1
+		i = i + 1
+		
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:13:17) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+for i in range(B,A,1):
+	for j in range(B,A,1):
+		matriz[i,j] = matriz[i,j] + 1
+		B = B + 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:14:06) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+for i in range(B,A,1):
+	for j in range(B,A,1):
+		matriz[i,j] = matriz[i,j] + 1
+		B = B + 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:15:23) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+for i in range(B,A,1):
+	for j in range(B,A,1):
+		matriz[i,j] = matriz[i,j] + 1
+		B = B + 1
+	B = B + 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:15:47) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+for i in range(B,A,1):
+	for j in range(B,A,1):
+		matriz[i,j] = matriz[i,j] + 1
+		B = B + 1
+B = B + 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:16:51) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+for i in range(B,A,1):
+	matriz[i,j] = matriz[i,j] + 1
+	B = B + 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:17:16) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+for i in range(B,A,1):
+	matriz[i] = matriz[i] + 1
+	B = B + 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:17:52) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 2
+for i in range(B,A,1):
+	matriz[i] = matriz[i] + 1
+	B = B + 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:18:16) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+for i in range(B,A,1):
+	matriz[i] = matriz[i] + 1
+	B = B + 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:19:34) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+for i in range(B,A,1):
+	for j in range(B,A,1):
+		matriz[i,j] = matriz[i,j] + 1
+		B = B + 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:21:16) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+for i in range(B,A):
+	for j in range(B,A):
+		matriz[i,j] = matriz[i,j] + 1
+		
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:22:45) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+h = 0
+for  h in range(A)
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+		
+print(matriz)
+-- ERROR:
+File "XXXX", line 9
+    for  h in range(A)
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:22:55) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+h = 0
+for  h in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+		
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:23:15) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+h = 0
+for  h in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+		
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:25:06) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+h = 0
+for  h in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+	B = B + 1
+		
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-22 10:25:34) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+h = 0
+for  h in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+	B = B + 1
+		
+print(matriz)
+-- EXECUTION TIME:
+0.870368
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 10:26:58) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+h = 0
+for  h in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+	B = B + 1
+		
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 15:10:00) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+h = 0
+#for  h in range(A):
+for i in range(B,A):
+	for j in range(B,A):
+		matriz[i,j] = matriz[i,j] + 1
+B = B + 1
+		
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 15:10:36) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+h = 0
+for  h in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+	B = B + 1
+		
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 15:56:34) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+h = 0
+for  h in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+	B = B + 1
+		
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 12:51:12) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+h = 0
+for  h in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+	#B = B + 1
+		
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 12:51:24) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+h = 0
+for  h in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+	B = B + 1
+		
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:07:05) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+h = 0
+for i in range(B,A):
+	for j in range(B,A):
+		matriz[i,j] = matriz[i,j] + 1
+		
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:07:17) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+h = 0
+for i in range(B,A):
+	for j in range(B,A):
+		matriz[i,j] = matriz[i,j] + 1
+	B = B + 1
+		
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:08:09) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+h = 0
+for i in range(B,A):
+	for j in range(B,A):
+		matriz[i,j] = matriz[i,j] + 1
+B = B + 1
+		
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:08:46) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+A = shape(matriz)[1]
+B= 1
+h = 0
+for  h in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+	B = B + 1
+		
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:09:03) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+
+A = shape(matriz)[1]
+B= 1
+
+for  h in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+	B = B + 1
+		
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:10:46) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+
+A = shape(matriz)[1]
+B= 1
+
+for  h in range(A):
+	for i in range(A):
+		for j in range(A):
+			matriz[i,j] = matriz[i,j] + 1
+		
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:11:38) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+
+A = shape(matriz)[1]
+B= 1
+
+for  h in range(A):
+	for i in range(A):
+		for j in range(A):
+			matriz[i,j] = matriz[i,j] + 1
+			print(matriz[i,j])
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:12:13) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+
+A = shape(matriz)[1]
+B= 1
+
+for  h in range(A):
+	for i in range(A):
+		for j in range(A):
+			matriz[i,j] = matriz[i,j] + 1
+			print(matriz[i,j])
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:12:22) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+
+A = shape(matriz)[1]
+B= 1
+
+for  h in range(A):
+	for i in range(A):
+		for j in range(A):
+			matriz[i,j] = matriz[i,j] + 1
+		
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:20:06) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+
+A = shape(matriz)[1]
+B= 1
+
+for  h in range(A):
+	for i in range(A):
+		for j in range(A):
+			matriz[i,j] = matriz[i,j] + 1
+		B = B + 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:20:18) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+
+A = shape(matriz)[1]
+B= 1
+
+for  h in range(A):
+	for i in range(A):
+		for j in range(A):
+			matriz[i,j] = matriz[i,j] + 1
+	B = B + 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:20:27) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+
+A = shape(matriz)[1]
+B= 1
+
+for  h in range(A):
+	for i in range(A):
+		for j in range(A):
+			matriz[i,j] = matriz[i,j] + 1
+	B = B + 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:20:37) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+
+A = shape(matriz)[1]
+B= 1
+h = 0
+for  h in range(A):
+	for i in range(A):
+		for j in range(A):
+			matriz[i,j] = matriz[i,j] + 1
+	B = B + 1
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:20:55) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+
+A = shape(matriz)[1]
+B= 1
+for  h in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+	B = B + 1
+		
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:21:54) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+
+A = shape(matriz)[1]
+B= 1
+while (B <= A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+	B = B + 1
+		
+print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:22:27) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+
+A = shape(matriz)[1]
+B= 1
+while (B <= A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+	B = B + 1
+	print(matriz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:22:50) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+
+A = shape(matriz)[1]
+B= 1
+while (B <= A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+			print(matriz)
+	B = B + 1
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:24:50) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+
+A = shape(matriz)[1]
+B= 1
+while (B <= A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+
+	B = B + 1
+print(matriz)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:26:53) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+
+A = shape(matriz)[1]
+B= 1
+
+for B in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+print(matriz)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:27:15) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = ones((N,N), dtype=int)
+
+A = shape(matriz)[1]
+B= 1
+
+while (B <= A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+	B = B + 1
+print(matriz)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:28:08) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+
+A = shape(matriz)[1]
+B= 1
+
+for B in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+print(matriz)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:29:05) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+
+A = shape(matriz)[1]
+#B= 1
+
+for B in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+print(matriz)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:31:18) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+
+A = shape(matriz)[1]
+
+for B in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+	print(matriz)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:31:34) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+
+A = shape(matriz)[1]
+
+for B in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+		print(matriz)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:31:46) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+
+A = shape(matriz)[1]
+
+for B in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+			print(matriz)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:32:16) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+
+A = shape(matriz)[1]
+
+for B in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+		print(matriz)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:32:37) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+
+A = shape(matriz)[1]
+
+for B in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+print(matriz)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-27 13:32:42) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+
+A = shape(matriz)[1]
+
+for B in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+print(matriz)	
+-- EXECUTION TIME:
+1.08254
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:34:19) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+
+A = shape(matriz)[1]
+
+for B in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+	print(matriz)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:34:27) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+
+A = shape(matriz)[1]
+
+for B in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+			print(matriz)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:34:32) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+
+A = shape(matriz)[1]
+
+for B in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+			print(matriz)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 13:36:10) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+
+A = shape(matriz)[1]
+
+for B in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+print(matriz)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 13:36:43) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+
+A = shape(matriz)[1]
+
+for B in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+print(matriz)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 13:36:48) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+
+A = shape(matriz)[1]
+
+for B in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+print(matriz)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 13:36:55) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("um numero natural N:"))
+matriz = zeros((N,N), dtype=int)
+
+A = shape(matriz)[1]
+
+for B in range(A):
+	for i in range(B,A):
+		for j in range(B,A):
+			matriz[i,j] = matriz[i,j] + 1
+print(matriz)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

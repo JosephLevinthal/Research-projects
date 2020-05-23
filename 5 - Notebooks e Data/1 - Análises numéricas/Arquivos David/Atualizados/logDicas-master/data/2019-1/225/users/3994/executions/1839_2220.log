@@ -1,0 +1,101 @@
+== TEST (2019-06-26 13:42:14) 
+-- CODE:
+b= array(eval(input()))
+m = shape(b)[0]
+vet = zeros((m), dtype=int)
+for i in range(shape(b)[0]):
+	cont=0
+	for j in range(7):
+		cont = cpnt + b[i,j]
+		vet[i]= cont
+print(vet)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    b= array(eval(input()))
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 13:42:31) 
+-- CODE:
+from numpy import*
+b= array(eval(input()))
+m = shape(b)[0]
+vet = zeros((m), dtype=int)
+for i in range(shape(b)[0]):
+	cont=0
+	for j in range(7):
+		cont = cpnt + b[i,j]
+		vet[i]= cont
+print(vet)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 13:42:54) 
+-- CODE:
+from numpy import*
+b= array(eval(input()))
+m = shape(b)[0]
+vet = zeros((m), dtype=int)
+for i in range(shape(b)[0]):
+	cont=0
+	for j in range(7):
+		cont = cont + b[i,j]
+		vet[i]= cont
+print(vet)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 13:43:03) 
+-- CODE:
+from numpy import*
+b= array(eval(input()))
+m = shape(b)[0]
+vet = zeros((m), dtype=int)
+for i in range(shape(b)[0]):
+	cont=0
+	for j in range(7):
+		cont = cont + b[i,j]
+		vet[i]= cont
+print(vet)
+-- EXECUTION TIME:
+1.03719
+-- TEST CASE 1:
+---- input:
+[[34.5,67.8,89.7,56.4,65.7,78.9,81.2],[99.9,67.8,87.6,45.4,12.3,45.5,23.7],[27.5,93.1,45.9,47.3,19.2,76.5,49.3]]
+---- correct output:
+89.7
+99.9
+93.1
+---- user output:
+[474 382 358]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-30 07:30:40) 
+-- CODE:
+from numpy import*
+m = array(eval(input("Digite o numero de funcionarios: ")))
+for i in range(shape(m)[0]):
+	print(max(m[i,:]))
+-- EXECUTION TIME:
+1.20728
+-- TEST CASE 1:
+---- input:
+[[34.5,67.8,89.7,56.4,65.7,78.9,81.2],[99.9,67.8,87.6,45.4,12.3,45.5,23.7],[27.5,93.1,45.9,47.3,19.2,76.5,49.3]]
+---- correct output:
+89.7
+99.9
+93.1
+---- user output:
+89.7
+99.9
+93.1
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

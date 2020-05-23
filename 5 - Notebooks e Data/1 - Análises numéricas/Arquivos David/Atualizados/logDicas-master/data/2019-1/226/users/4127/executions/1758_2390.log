@@ -1,0 +1,156 @@
+== TEST (2019-05-29 16:03:33) 
+-- CODE:
+v1= array(eval(input("qual a quantidade de presentes?")))
+v2= array(eval(input("qual a quantidade de faltantes?")))
+i=0
+x=v1-v2
+
+while(i<size(v1) and size(v2):)
+	x= v1-v2
+	i=i+1
+
+-- ERROR:
+File "XXXX", line 6
+    while(i<size(v1) and size(v2):)
+                                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 16:03:38) 
+-- CODE:
+v1= array(eval(input("qual a quantidade de presentes?")))
+v2= array(eval(input("qual a quantidade de faltantes?")))
+i=0
+x=v1-v2
+
+while(i<size(v1) and size(v2):
+	x= v1-v2
+	i=i+1
+
+-- ERROR:
+File "XXXX", line 6
+    while(i<size(v1) and size(v2):
+                                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 16:03:46) 
+-- CODE:
+v1= array(eval(input("qual a quantidade de presentes?")))
+v2= array(eval(input("qual a quantidade de faltantes?")))
+i=0
+x=v1-v2
+
+while (i<size(v1) and size(v2)):
+	x= v1-v2
+	i=i+1
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    v1= array(eval(input()))
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 16:03:55) 
+-- CODE:
+from numpy import*
+v1= array(eval(input("qual a quantidade de presentes?")))
+v2= array(eval(input("qual a quantidade de faltantes?")))
+i=0
+x=v1-v2
+
+while (i<size(v1) and size(v2)):
+	x= v1-v2
+	i=i+1
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 16:04:32) 
+-- CODE:
+from numpy import*
+v1= array(eval(input("qual a quantidade de presentes?")))
+v2= array(eval(input("qual a quantidade de faltantes?")))
+i=0
+x=v1-v2
+
+while (i<size(v1) and size(v2)):
+	x= v1-v2
+	i=i+1
+print(i)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 16:04:56) 
+-- CODE:
+from numpy import*
+v1= array(eval(input("qual a quantidade de presentes?")))
+v2= array(eval(input("qual a quantidade de faltantes?")))
+i=0
+x=v1-v2
+
+while (i<size(v1) and size(v2)):
+	x= v1-v2
+	i=i+1
+print(i)
+
+-- EXECUTION TIME:
+0.441279
+-- TEST CASE 1:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,110,12]
+[5,6,7,8,9,10,11,12,13,1,15,12]
+---- correct output:
+10
+---- user output:
+12
+-- TEST CASE 2:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,11,12]
+[5,6,7,8,9,10,11,12,3,14,11,12]
+---- correct output:
+9
+---- user output:
+12
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 16:06:47) 
+-- CODE:
+from numpy import*
+v1= array(eval(input("qual a quantidade de presentes?")))
+v2= array(eval(input("qual a quantidade de faltantes?")))
+i=0
+mes=1
+
+while (v1[i]!=max(v1)):
+	i=i+1
+	mes=mes+1
+print(mes)
+
+-- EXECUTION TIME:
+0.346674
+-- TEST CASE 1:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,110,12]
+[5,6,7,8,9,10,11,12,13,1,15,12]
+---- correct output:
+10
+---- user output:
+11
+-- TEST CASE 2:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,11,12]
+[5,6,7,8,9,10,11,12,3,14,11,12]
+---- correct output:
+9
+---- user output:
+10
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

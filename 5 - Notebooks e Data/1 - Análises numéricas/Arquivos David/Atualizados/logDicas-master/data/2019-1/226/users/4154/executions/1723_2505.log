@@ -1,0 +1,125 @@
+== TEST (2019-05-09 10:50:48) 
+-- CODE:
+from math import *
+
+a = eval(input('angulo em radianos: '))
+b = int(input('numero de termos da serie: '))
+i = 1
+c = 0
+while b != 0:
+	b -= 1
+	c += (-1)**i*a**(2*i+1)/factorial(2*i+1)
+	i += 1
+print(round(a + c))
+-- OUTPUT:
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 10:51:22) 
+-- CODE:
+from math import *
+
+a = eval(input('angulo em radianos: '))
+b = int(input('numero de termos da serie: '))
+i = 1
+c = 0
+while b != 0:
+	b -= 1
+	c += (-1)**i*a**(2*i+1)/factorial(2*i+1)
+	i += 1
+print(round(a + c,10))
+-- OUTPUT:
+0.9999999437
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 10:52:21) 
+-- CODE:
+from math import *
+
+a = eval(input('angulo em radianos: '))
+b = int(input('numero de termos da serie: '))
+i = 1
+c = 0
+while b != 0:
+	b -= 1
+	c += (((-1)**i)*(a**(2*i+1)))/(factorial(2*i+1))
+	i += 1
+print(round(a + c,10))
+-- OUTPUT:
+0.9999999437
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 10:55:11) 
+-- CODE:
+from math import *
+
+a = eval(input('angulo em radianos: '))
+b = int(input('numero de termos da serie: '))
+i = 0
+c = 0
+while b != 0:
+	b -= 1
+	c += (-1)**i*(a**(2*i+1)/factorial(2*i+1)
+	i += 1
+print(round(c,10))
+-- ERROR:
+File "XXXX", line 10
+    i += 1
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 10:55:53) 
+-- CODE:
+from math import *
+
+a = eval(input('angulo em radianos: '))
+b = int(input('numero de termos da serie: '))
+i = 0
+c = 0
+while b != 0:
+	b -= 1
+	c += (-1)**i*(a**(2*i+1))/factorial(2*i+1)
+	i += 1
+print(round(c,10))
+-- OUTPUT:
+1.0000035426
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-09 10:56:04) 
+-- CODE:
+from math import *
+
+a = eval(input('angulo em radianos: '))
+b = int(input('numero de termos da serie: '))
+i = 0
+c = 0
+while b != 0:
+	b -= 1
+	c += (-1)**i*(a**(2*i+1))/factorial(2*i+1)
+	i += 1
+print(round(c,10))
+-- EXECUTION TIME:
+0.16464
+-- TEST CASE 1:
+---- input:
+pi/2
+5
+---- correct output:
+1.0000035426
+---- user output:
+1.0000035426
+-- TEST CASE 2:
+---- input:
+-pi/2
+4
+---- correct output:
+-0.9998431014
+---- user output:
+-0.9998431014
+-- TEST CASE 3:
+---- input:
+pi/3
+3
+---- correct output:
+0.8662952838
+---- user output:
+0.8662952838
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

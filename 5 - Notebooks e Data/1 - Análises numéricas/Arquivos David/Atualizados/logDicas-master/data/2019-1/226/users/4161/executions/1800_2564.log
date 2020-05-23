@@ -1,0 +1,133 @@
+== TEST (2019-06-04 22:30:19) 
+-- CODE:
+from numpy import*
+v1 = array(eval(input("gols feitos/partida: ")))
+v2 = array(eval(input("gols do adversario/partida: ")))
+v3 = zeros(3, dtype=int)
+y = 0
+empate = 0
+derrota = 0
+vitoria = 0
+for x in v1:
+	if x == v2[y]:
+		empate = empate + 1
+	elif x<v2[y]:
+		derrota = derrota + 1
+	elif x > v2[y]:
+		vitoria = vitoria + 1
+	y = y + 1
+v3[0] = vitorias
+v3[1]	= empates
+v3[2] = derrotas
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 22:30:58) 
+-- CODE:
+from numpy import*
+v1 = array(eval(input("gols feitos/partida: ")))
+v2 = array(eval(input("gols do adversario/partida: ")))
+v3 = zeros(3, dtype=int)
+y = 0
+empate = 0
+derrota = 0
+vitoria = 0
+for x in v1:
+	if x == v2[y]:
+		empate = empate + 1
+	elif x<v2[y]:
+		derrota = derrota + 1
+	elif x > v2[y]:
+		vitoria = vitoria + 1
+	y = y + 1
+v3[0] = vitoria
+v3[1]	= empate
+v3[2] = derrota
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 22:31:38) 
+-- CODE:
+from numpy import*
+v1 = array(eval(input("gols feitos/partida: ")))
+v2 = array(eval(input("gols do adversario/partida: ")))
+v3 = zeros(3, dtype=int)
+y = 0
+empate = 0
+derrota = 0
+vitoria = 0
+for x in v1:
+	if x == v2[y]:
+		empate = empate + 1
+	elif x<v2[y]:
+		derrota = derrota + 1
+	elif x > v2[y]:
+		vitoria = vitoria + 1
+	y = y + 1
+v3[0] = vitoria
+v3[1]	= empate
+v3[2] = derrota
+print(v3)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-04 22:32:00) 
+-- CODE:
+from numpy import*
+v1 = array(eval(input("gols feitos/partida: ")))
+v2 = array(eval(input("gols do adversario/partida: ")))
+v3 = zeros(3, dtype=int)
+y = 0
+empate = 0
+derrota = 0
+vitoria = 0
+for x in v1:
+	if x == v2[y]:
+		empate = empate + 1
+	elif x<v2[y]:
+		derrota = derrota + 1
+	elif x > v2[y]:
+		vitoria = vitoria + 1
+	y = y + 1
+v3[0] = vitoria
+v3[1]	= empate
+v3[2] = derrota
+print(v3)
+-- EXECUTION TIME:
+1.29154
+-- TEST CASE 1:
+---- input:
+[2,3,2,4,3,5,3,4,2,3,1,0]
+[3,3,1,0,2,3,3,0,1,2,1,1]
+---- correct output:
+[7 3 2]
+---- user output:
+[7 3 2]
+-- TEST CASE 2:
+---- input:
+[1,2,1,2,1,2,1,2,0]
+[3,5,3,3,3,3,3,3,3]
+---- correct output:
+[0 0 9]
+---- user output:
+[0 0 9]
+-- TEST CASE 3:
+---- input:
+[1,2,2,2,2,1,1,2,2,1,1,2,2]
+[0,1,1,1,0,0,0,0,0,0,1,1,1]
+---- correct output:
+[12 1 0]
+---- user output:
+[12  1  0]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

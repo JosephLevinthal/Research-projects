@@ -1,0 +1,140 @@
+== TEST (2019-04-23 17:31:41) 
+-- CODE:
+var1=float(input("nome do objeto:"))
+var2=int(input("numero de repeticoes:"))
+msg= "Abra " + "var1" * "var2"
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    var1=float(input())
+ValueError: could not convert string to float: 'livro'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 17:32:04) 
+-- CODE:
+var1=float(input("nome do objeto:"))
+var2=int(input("numero de repeticoes:"))
+msg= "Abra " + "var1" * "var2"
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    var1=float(input())
+ValueError: could not convert string to float: 'livro'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 17:32:24) 
+-- CODE:
+var1=input("nome do objeto:"))
+var2=int(input("numero de repeticoes:"))
+msg= "Abra " + "var1" * "var2"
+print(msg)
+-- ERROR:
+File "XXXX", line 1
+    var1=input())
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 17:32:29) 
+-- CODE:
+var1=input("nome do objeto:")
+var2=int(input("numero de repeticoes:"))
+msg= "Abra " + "var1" * "var2"
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    msg= "Abra " + "var1" * "var2"
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 17:32:35) 
+-- CODE:
+var1=input("nome do objeto:")
+var2=int(input("numero de repeticoes:"))
+msg= "Abra " + "var1" * "var2"
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    msg= "Abra " + "var1" * "var2"
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 17:33:01) 
+-- CODE:
+var1=input("nome do objeto:")
+var2=int(input("numero de repeticoes:"))
+msg= "Abra " + "var1" 
+print(msg)
+-- OUTPUT:
+Abra var1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 17:33:17) 
+-- CODE:
+var1=input("nome do objeto:")
+var2=int(input("numero de repeticoes:"))
+msg= "Abra " + var1
+print(msg)
+-- OUTPUT:
+Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 17:33:41) 
+-- CODE:
+var1=input("nome do objeto:")
+var2=int(input("numero de repeticoes:"))
+msg= ("Abra " + var1) * var2
+print(msg)
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 17:34:17) 
+-- CODE:
+var1=input("nome do objeto:")
+var2=int(input("numero de repeticoes:"))
+msg= ("Abra " + var1)+ " " * var2
+print(msg)
+-- OUTPUT:
+Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 17:34:32) 
+-- CODE:
+var1=input("nome do objeto:")
+var2=int(input("numero de repeticoes:"))
+msg= (("Abra " + var1)+ " ") * var2
+print(msg)
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-23 17:34:38) 
+-- CODE:
+var1=input("nome do objeto:")
+var2=int(input("numero de repeticoes:"))
+msg= (("Abra " + var1)+ " ") * var2
+print(msg)
+-- EXECUTION TIME:
+0.18049
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,95 @@
+== TEST (2019-04-28 11:33:30) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+c = float(input("consumo em kWh:"))
+t = input("residencias(r)/industrias(i)/comercios(c):")
+print("Entradas:", c, "kWh e tipo", t)
+y = "Dados invalidos"
+if((t.lower()!="r") and (t.lower() != "i") and (t.lower()!="c")or(c<0)):
+	print(y)
+elif((c<=500) and (t.lower() =="r")):
+	a = c*0.44
+	print("Valor total: R$", round(a,2))
+elif((c>500) and (t.lower() == "r")):
+	a=c*0.65
+	print("Valor total: R$", round(a,2))
+elif((c<=1000) and (t.lower()=="c")):
+	a=c*0.55
+	print("Valor total: R$", round(a,2))
+elif((c<=1000) and (t.lower() == "c")):
+	a=c*0.60
+	print("Valor total: R$", round(a,2))
+elif((c<=5000) and (t.lower()=="i")):
+	a=c*0.55
+	print("Valor total: R$", round(a,2))
+elif((c>5000) and (t.lower()=="i")):
+	a=c*0.60
+	print("Valot total: R$", round(a,2))
+	
+	
+	
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 11:33:49) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+c = float(input("consumo em kWh:"))
+t = input("residencias(r)/industrias(i)/comercios(c):")
+print("Entradas:", c, "kWh e tipo", t)
+y = "Dados invalidos"
+if((t.lower()!="r") and (t.lower() != "i") and (t.lower()!="c")or(c<0)):
+	print(y)
+elif((c<=500) and (t.lower() =="r")):
+	a = c*0.44
+	print("Valor total: R$", round(a,2))
+elif((c>500) and (t.lower() == "r")):
+	a=c*0.65
+	print("Valor total: R$", round(a,2))
+elif((c<=1000) and (t.lower()=="c")):
+	a=c*0.55
+	print("Valor total: R$", round(a,2))
+elif((c<=1000) and (t.lower() == "c")):
+	a=c*0.60
+	print("Valor total: R$", round(a,2))
+elif((c<=5000) and (t.lower()=="i")):
+	a=c*0.55
+	print("Valor total: R$", round(a,2))
+elif((c>5000) and (t.lower()=="i")):
+	a=c*0.60
+	print("Valot total: R$", round(a,2))
+	
+	
+	
+-- EXECUTION TIME:
+0.149568
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

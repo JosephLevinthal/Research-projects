@@ -1,0 +1,5 @@
+r1 = float(input("Valor de r1: "))
+r2 = float(input("Valor de r2: "))
+r3 = float(input("Valor de r3: "))
+req = (r1 * r2 * r3) / ((r1 * r2) + (r2 * r3) + (r1 *r3))
+print(req)

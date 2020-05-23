@@ -1,0 +1,118 @@
+== TEST (2019-07-02 11:04:34) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+var = array(eval(input()))
+carros = [[8,2,1],[10,3,2],[16,5,3]]
+sub = dot(inv(carros),var.T)
+print("centurion:",sub[0])
+print("tribune:",sub[1])
+print("senator:",sub[2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:05:04) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+var = array(eval(input()))
+carros = [[8,10,16],[2,3,5],[1,2,3]]
+sub = dot(inv(carros),var.T)
+print("centurion:",sub[0])
+print("tribune:",sub[1])
+print("senator:",sub[2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:06:52) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+var = array(eval(input()))
+carros = [[8,10,16],[2,3,5],[1,2,3]]
+sub = dot(inv(carros),var.T)
+print("centurion:",round(sub[0],1))
+print("tribune:",round(sub[1],1))
+print("senator:",round(sub[2],2))
+if sub[0] == min(sub):
+	print("centurion")
+elif sub[1] == min(sub):
+	print("tribune")
+elif sub[2] == min(sub):
+	print("senator")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 11:07:06) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+var = array(eval(input()))
+carros = [[8,10,16],[2,3,5],[1,2,3]]
+sub = dot(inv(carros),var.T)
+print("centurion:",round(sub[0],1))
+print("tribune:",round(sub[1],1))
+print("senator:",round(sub[2],2))
+if sub[0] == min(sub):
+	print("centurion")
+elif sub[1] == min(sub):
+	print("tribune")
+elif sub[2] == min(sub):
+	print("senator")
+-- EXECUTION TIME:
+1.31264
+-- TEST CASE 1:
+---- input:
+[8956,2700,1628]
+---- correct output:
+centurion: 150.0
+tribune: 190.0
+senator: 366.0
+centurion
+---- user output:
+centurion: 150.0
+tribune: 190.0
+senator: 366.0
+centurion
+-- TEST CASE 2:
+---- input:
+[24642,7104,4218]
+---- correct output:
+centurion: 999.0
+tribune: 777.0
+senator: 555.0
+senator
+---- user output:
+centurion: 999.0
+tribune: 777.0
+senator: 555.0
+senator
+-- TEST CASE 3:
+---- input:
+[19430,5548,3147]
+---- correct output:
+centurion: 1020.0
+tribune: 111.0
+senator: 635.0
+tribune
+---- user output:
+centurion: 1020.0
+tribune: 111.0
+senator: 635.0
+tribune
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

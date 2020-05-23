@@ -1,0 +1,6 @@
+X = int(input("dividendo"))
+Y = int(input("divisor"))
+print (X)
+print (Y)
+print (X//Y)
+print (X%Y)

@@ -1,0 +1,113 @@
+== TEST (2019-03-28 10:42:55) 
+-- CODE:
+d=float(input("distania: "))
+cg=float(input("combustivel gasto: "))
+cm=d/cg
+print(round(cm, 3))
+-- OUTPUT:
+14.286
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:43:56) 
+-- CODE:
+d=float(input("distania: "))
+cg=float(input("combustivel gasto: "))
+cm=d/cg
+print(round(cm, 3)km/l)
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm, 3)km/l)
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:46:07) 
+-- CODE:
+d=float(input("distania: "))
+cg=float(input("combustivel gasto: "))
+cm=d/cg
+print(round(cm, 3)"km/l")
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm, 3)"km/l")
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:48:49) 
+-- CODE:
+d=float(input("distania: "))
+cg=float(input("combustivel gasto: "))
+cm=d/cg
+print(round(cm, 3))"km/l"
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm, 3))"km/l"
+                            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:49:43) 
+-- CODE:
+d=float(input("distania: "))
+cg=float(input("combustivel gasto: "))
+cm=d/cg
+print((round(cm, 3))"km/l")
+-- ERROR:
+File "XXXX", line 4
+    print((round(cm, 3))"km/l")
+                             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:49:58) 
+-- CODE:
+d=float(input("distania: "))
+cg=float(input("combustivel gasto: "))
+cm=d/cg
+print((round(cm, 3))+"km/l")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print((round(cm, 3))+"km/l")
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:54:41) 
+-- CODE:
+d=float(input("distania: "))
+cg=float(input("combustivel gasto: "))
+cm=d/cg
+print((round(cm, 3)),"km/l")
+-- OUTPUT:
+14.286 km/l
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-28 10:54:51) 
+-- CODE:
+d=float(input("distania: "))
+cg=float(input("combustivel gasto: "))
+cm=d/cg
+print((round(cm, 3)),"km/l")
+-- EXECUTION TIME:
+0.161991
+-- TEST CASE 1:
+---- input:
+28.572
+2
+---- correct output:
+14.286 km/l
+---- user output:
+14.286 km/l
+-- TEST CASE 2:
+---- input:
+2254
+124.4
+---- correct output:
+18.119 km/l
+---- user output:
+18.119 km/l
+-- TEST CASE 3:
+---- input:
+4554
+464.6
+---- correct output:
+9.802 km/l
+---- user output:
+9.802 km/l
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

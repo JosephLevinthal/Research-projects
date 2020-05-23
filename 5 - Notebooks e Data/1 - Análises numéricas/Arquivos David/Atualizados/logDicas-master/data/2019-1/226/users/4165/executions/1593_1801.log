@@ -1,0 +1,265 @@
+== TEST (2019-04-01 21:01:40) 
+-- CODE:
+objeto = int(input("digite o objeto"))
+quantidade = int(input("digite a quantidade"))
+feitico = ( objeto + " " * quantidade + " ")
+print(feitico)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    objeto = int(input())
+ValueError: invalid literal for int() with base 10: 'livro'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 21:08:29) 
+-- CODE:
+objeto = int(input("digite o objeto"))
+quantidade = int(input("digite a quantidade"))
+feitico = ( str( objeto ) + " " * quantidade + " " )
+print(feitico)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    objeto = int(input())
+ValueError: invalid literal for int() with base 10: 'livro'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 21:09:14) 
+-- CODE:
+objeto = str(input("digite o objeto"))
+quantidade = int(input("digite a quantidade"))
+feitico = ( objeto + " " * quantidade + " " )
+print(feitico)
+-- OUTPUT:
+livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 21:10:12) 
+-- CODE:
+objeto = str(input("digite o objeto"))
+quantidade = int(input("digite a quantidade"))
+feitico = ( objeto  * quantidade )
+print(feitico)
+-- OUTPUT:
+livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 21:11:10) 
+-- CODE:
+objeto = str(input("digite o objeto"))
+quantidade = int(input("digite a quantidade"))
+feitico = ( objeto  * quantidade )
+print(feitico)
+-- OUTPUT:
+livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 21:11:39) 
+-- CODE:
+objeto = str(input("digite o objeto"))
+quantidade = int(input("digite a quantidade"))
+feitico = ( objeto  * quantidade )
+print(feitico)
+-- OUTPUT:
+livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 21:11:59) 
+-- CODE:
+objeto = str(input("digite o objeto"))
+quantidade = int(input("digite a quantidade"))
+feitico = ( objeto  * quantidade )
+print(feitico)
+-- EXECUTION TIME:
+0.198506
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+livrolivrolivrolivrolivrolivrolivrolivro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+carrocarro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 21:13:50) 
+-- CODE:
+objeto = str(input("digite o objeto"))
+quantidade = int(input("digite a quantidade"))
+feitico = ( "abra" + objeto  * quantidade )
+print(feitico)
+-- OUTPUT:
+abralivrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 21:14:49) 
+-- CODE:
+objeto = str(input("digite o objeto"))
+quantidade = int(input("digite a quantidade"))
+feitico = ( "abra" + " " + objeto + " "  * quantidade )
+print(feitico)
+-- OUTPUT:
+abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 21:15:51) 
+-- CODE:
+objeto = str(input("digite o objeto"))
+quantidade = int(input("digite a quantidade"))
+feitico = ( " " + "abra" + " " + objeto + * quantidade )
+print(feitico)
+-- ERROR:
+File "XXXX", line 3
+    feitico = ( " " + "abra" + " " + objeto + * quantidade )
+                                              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 21:16:37) 
+-- CODE:
+objeto = str(input("digite o objeto"))
+quantidade = int(input("digite a quantidade"))
+feitico = ( "abra" + " " + objeto + * quantidade )
+print(feitico)
+-- ERROR:
+File "XXXX", line 3
+    feitico = ( "abra" + " " + objeto + * quantidade )
+                                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 21:17:45) 
+-- CODE:
+objeto = str(input("digite o objeto"))
+quantidade = int(input("digite a quantidade"))
+vazio = ( " " )
+feitico = ( "abra" + " " + objeto + * quantidade )
+print(feitico)
+-- ERROR:
+File "XXXX", line 4
+    feitico = ( "abra" + " " + objeto + * quantidade )
+                                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 21:18:11) 
+-- CODE:
+objeto = str(input("digite o objeto"))
+quantidade = int(input("digite a quantidade"))
+feitico = ( "abra" + " " + objeto * quantidade )
+print(feitico)
+-- OUTPUT:
+abra livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 21:18:56) 
+-- CODE:
+objeto = str(input("digite o objeto"))
+quantidade = int(input("digite a quantidade"))
+feitico = ( " " + "abra" + " " + objeto * quantidade )
+print(feitico)
+-- OUTPUT:
+abra livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 21:19:59) 
+-- CODE:
+objeto = str(input("digite o objeto"))
+quantidade = int(input("digite a quantidade"))
+feitico = ( "abra" + " " + objeto + " " * quantidade )
+print(feitico)
+-- OUTPUT:
+abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 21:20:48) 
+-- CODE:
+objeto = str(input("digite o objeto"))
+quantidade = int(input("digite a quantidade"))
+feitico = (( "abra" + " " + objeto + " " ) * quantidade )
+print(feitico)
+-- OUTPUT:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 21:21:01) 
+-- CODE:
+objeto = str(input("digite o objeto"))
+quantidade = int(input("digite a quantidade"))
+feitico = (( "abra" + " " + objeto + " " ) * quantidade )
+print(feitico)
+-- EXECUTION TIME:
+0.161452
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+abra carro abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 21:25:35) 
+-- CODE:
+objeto = str(input("digite o objeto"))
+quantidade = int(input("digite a quantidade"))
+feitico = (( "Abra" + " " + objeto + " " ) * quantidade )
+print(feitico)
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 21:26:04) 
+-- CODE:
+objeto = str(input("digite o objeto"))
+quantidade = int(input("digite a quantidade"))
+feitico = (( "Abra" + " " + objeto + " " ) * quantidade )
+print(feitico)
+-- EXECUTION TIME:
+0.138544
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,194 @@
+== TEST (2019-07-01 13:00:27) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+a = array(eval(input("digite: ")))
+for i in range(shape(a)[1]):
+	a = max(:,i)
+	print(a)
+-- ERROR:
+File "XXXX", line 5
+    a = max(:,i)
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 13:00:36) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+a = array(eval(input("digite: ")))
+for i in range(shape(a)[1]):
+	a = max( : ,i)
+	print(a)
+-- ERROR:
+File "XXXX", line 5
+    a = max( : ,i)
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 13:01:30) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+a = array(eval(input("digite: ")))
+for i in range(shape(a)[1]):
+	a = max(a[i , :])
+	print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 13:05:52) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+a = array(eval(input("digite: ")))
+for i in range(shape(a)[0]):
+	for j rang(shape(a)[1]):
+		if a[i:j]== max(a[i, :])
+			print(a)
+-- ERROR:
+File "XXXX", line 5
+    for j rang(shape(a)[1]):
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 13:06:06) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+a = array(eval(input("digite: ")))
+for i in range(shape(a)[0]):
+	for j range(shape(a)[1]):
+		if a[i:j]== max(a[i, :])
+			print(a)
+-- ERROR:
+File "XXXX", line 5
+    for j range(shape(a)[1]):
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 13:06:17) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+a = array(eval(input("digite: ")))
+for i in range(shape(a)[0]):
+	for j range (shape(a)[1]):
+		if a[i:j]== max(a[i, :])
+			print(a)
+-- ERROR:
+File "XXXX", line 5
+    for j range (shape(a)[1]):
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 13:06:35) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+a = array(eval(input("digite: ")))
+for i in range(shape(a)[0]):
+	for j range (shape(a)[1] -1):
+		if a[i:j]== max(a[i, :])
+			print(a)
+-- ERROR:
+File "XXXX", line 5
+    for j range (shape(a)[1] -1):
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 13:08:35) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+a = array(eval(input("digite: ")))
+for i in range(shape(a)[0]):
+	for j in range(shape(a)[1]):
+		if a[i:j]== max(a[i, :])
+			print(a)
+-- ERROR:
+File "XXXX", line 6
+    if a[i:j]== max(a[i, :])
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 13:08:50) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+a = array(eval(input("digite: ")))
+for i in range(shape(a)[0]):
+	for j in range(shape(a)[1]):
+		if a[i:j]== max(a[i, :]) :
+			print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 13:11:22) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+a = array(eval(input("digite: ")))
+for i in range(shape(a)[0]):
+	print( max(a[i ,:]) )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 13:12:09) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+a = array(eval(input("digite: ")))
+for i in range(shape(a)[0]):
+	print(max(a[i ,:]))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 13:12:21) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+a = array(eval(input("digite: ")))
+for i in range(shape(a)[0]):
+	print(max(a[i ,:]))
+-- EXECUTION TIME:
+1.14483
+-- TEST CASE 1:
+---- input:
+[[34.5,67.8,89.7,56.4,65.7,78.9,81.2],[99.9,67.8,87.6,45.4,12.3,45.5,23.7],[27.5,93.1,45.9,47.3,19.2,76.5,49.3]]
+---- correct output:
+89.7
+99.9
+93.1
+---- user output:
+89.7
+99.9
+93.1
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 13:12:42) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+a = array(eval(input("digite: ")))
+for i in range(shape(a)[0]):
+	print(max(a[i ,:]))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,5 @@
+a = int(input("Digite um numero de a:"))
+b = int(input("digite um numero de b:"))
+c = int(input("digite um numero de c:"))
+s=( a**2 + b**2 + c**2 ) / ( a + b + c ) 
+print(round(s,7))		 

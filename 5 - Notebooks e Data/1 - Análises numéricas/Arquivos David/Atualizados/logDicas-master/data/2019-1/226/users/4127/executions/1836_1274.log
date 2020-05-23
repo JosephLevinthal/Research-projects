@@ -1,0 +1,498 @@
+== TEST (2019-06-20 13:26:24) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n= array(eval(input("dimensao da matriz: ")))
+m=zeros((n,n), dtype=int)
+
+for j in range(n):
+	for i in range(n):
+		if (i>j):
+			m(i,j)=1
+		elif(j>i):
+			m(i,j)=-1
+		else:
+			m(i,j)=0
+print (m)
+		
+-- ERROR:
+File "XXXX", line 11
+    m(i,j)=-1
+    ^
+SyntaxError: can't assign to function call
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 13:26:50) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n= int(input("dimensao da matriz: "))
+m=zeros((n,n), dtype=int)
+
+for j in range(n):
+	for i in range(n):
+		if (i>j):
+			m(i,j)=1
+		elif(j>i):
+			m(i,j)=-1
+		else:
+			m(i,j)=0
+print (m)
+		
+-- ERROR:
+File "XXXX", line 11
+    m(i,j)=-1
+    ^
+SyntaxError: can't assign to function call
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 13:27:37) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n= int(input("dimensao da matriz: "))
+m=zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if (i>j):
+			m[i,j]=1
+		elif(j>i):
+			m[i,j]=-1
+		else:
+			m[i,j]=0
+print (m)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 13:28:59) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n= int(input("dimensao da matriz: "))
+m=zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if (i>j):
+			m[i,j]=1+i
+		elif(j>i):
+			m[i,j]=-1
+		else:
+			m[i,j]=0
+print (m)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 13:29:21) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n= int(input("dimensao da matriz: "))
+m=zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if (i>j):
+			m[i,j]=1
+		elif(j>i):
+			m[i,j]=-1
+		else:
+			m[i,j]=0
+print (m)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 13:30:02) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n= int(input("dimensao da matriz: "))
+m=zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if (i>j):
+			m[i,j]=1
+		elif(j>i):
+			m[i,j]=-1
+		else:
+			m[i,j]=i
+print (m)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 13:30:18) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n= int(input("dimensao da matriz: "))
+m=zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if (i>j):
+			m[i,j]=1
+		elif(j>i):
+			m[i,j]=-1
+		else:
+			m[i,j]=
+print (m)
+		
+-- ERROR:
+File "XXXX", line 13
+    m[i,j]=
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 13:30:23) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n= int(input("dimensao da matriz: "))
+m=zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if (i>j):
+			m[i,j]=1
+		elif(j>i):
+			m[i,j]=-1
+		else:
+			m[i,j]=j
+print (m)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 13:30:40) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n= int(input("dimensao da matriz: "))
+m=zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if (i>j):
+			m[i,j]=1
+		elif(j>i):
+			m[i,j]=-1
+		else:
+			m[i,j]=1+j
+print (m)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 13:31:01) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n= int(input("dimensao da matriz: "))
+m=zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if (i>j):
+			m[i,j]=1
+		elif(j>i):
+			m[i,j]=1
+		else:
+			m[i,j]=1+j
+print (m)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 13:31:26) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n= int(input("dimensao da matriz: "))
+m=zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if (i>j):
+			m[i,j]=1
+		elif(j>i):
+			m[i,j]=1-j
+		else:
+			m[i,j]=1+j
+print (m)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 13:31:42) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n= int(input("dimensao da matriz: "))
+m=zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if (i>j):
+			m[i,j]=1
+		elif(j>i):
+			m[i,j]=j-1
+		else:
+			m[i,j]=1+j
+print (m)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 13:31:58) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n= int(input("dimensao da matriz: "))
+m=zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if (i>j):
+			m[i,j]=1
+		elif(j>i):
+			m[i,j]=j
+		else:
+			m[i,j]=1+j
+print (m)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 13:32:45) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n= int(input("dimensao da matriz: "))
+m=zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if (i>j):
+			m[i,j]=1
+		elif(j>i):
+			m[i,j]=j+i
+		else:
+			m[i,j]=1+j
+print (m)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 13:34:37) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n= int(input("dimensao da matriz: "))
+m=zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if (i==0 and j ==0):
+			m[i,j]=1
+		elif(j>i):
+			m[i,j]=j+i
+		else:
+			m[i,j]=1+j
+print (m)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 13:35:14) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n= int(input("dimensao da matriz: "))
+m=zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if (i==0 and j ==0):
+			m[i,j]=1
+		elif(i==1 and j==1):
+			m[i,j]=2
+		else:
+			m[i,j]=1+j
+print (m)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 13:35:50) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n= int(input("dimensao da matriz: "))
+m=zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if (i==0 and j ==0):
+			m[i,j]=1
+		elif(i==1 and j==1):
+			m[i,j]=2
+		if(i==2 and j==2):
+			m[i,j]=3
+print (m)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 10:26:10) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n= int(input("dimensao da matriz: "))
+m=zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if (i>j):
+			m[i,j]=1
+		elif(j>i):
+			m[i,j]=-1
+		else:
+			m[i,j]=0
+print (m)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 10:32:16) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n= int(input("dimensao da matriz: "))
+m=zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if (i>j):
+			m[i,j]=j+1
+		elif(j>i):
+			m[i,j]=i+1
+		else:
+			m[i,j]=i+1
+print (m)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 10:32:28) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n= int(input("dimensao da matriz: "))
+m=zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if (i>j):
+			m[i,j]=j+1
+		elif(j>i):
+			m[i,j]=i+1
+		else:
+			m[i,j]=i+1
+print (m)
+		
+-- EXECUTION TIME:
+1.11452
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

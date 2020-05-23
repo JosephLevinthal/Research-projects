@@ -1,0 +1,897 @@
+== TEST (2019-05-24 19:32:25) 
+-- CODE:
+num = input("num")
+i = 0 
+j = 4
+m = 0
+while(m < len(num)):
+	  tri = num[i:j] + "."
+		i = i + 4
+		j = j + 3
+		m = m + 1
+print(tri)
+-- ERROR:
+File "XXXX", line 7
+    i = i + 4
+            ^
+TabError: inconsistent use of tabs and spaces in indentation
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:32:49) 
+-- CODE:
+num = input("num")
+i = 0 
+j = 4
+m = 0
+while(m < len(num)):
+	tri = num[i:j] + "."
+	i = i + 4
+	j = j + 3
+	m = m + 1
+print(tri)
+-- OUTPUT:
+.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:33:17) 
+-- CODE:
+num = input("num")
+i = 0 
+j = 4
+m = 0
+while(m < len(num)):
+	tri = num[i:j] + "."
+	i = i + 4
+	j = j + 3
+	m = m + 1
+print(tri)
+-- OUTPUT:
+.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:38:00) 
+-- CODE:
+num = input("num")
+i = 2 
+j = 4
+m = 0
+while(m < len(num)):
+	tri = num[i] + "."
+	i = i + 3
+	m = m + 1
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    tri = num[i] + "."
+IndexError: string index out of range
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:39:58) 
+-- CODE:
+num = input("num")
+i = 2 
+j = 4
+m = 0
+p = array["."]
+while(m < len(num)):
+	tri = num[i] + p
+	i = i + 3
+	m = m + 1
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    p = array["."]
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:40:34) 
+-- CODE:
+from nummpy import*
+num = input("num")
+i = 2 
+j = 4
+m = 0
+p = array["."]
+while(m < len(num)):
+	tri = num[i] + p
+	i = i + 3
+	m = m + 1
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from nummpy import*
+ModuleNotFoundError: No module named 'nummpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:40:47) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 2 
+j = 4
+m = 0
+p = array["."]
+while(m < len(num)):
+	tri = num[i] + p
+	i = i + 3
+	m = m + 1
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:41:36) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 2 
+j = 4
+m = 0
+p = array(["."])
+while(m < len(num)):
+	tri = num[i] + p
+	i = i + 3
+	m = m + 1
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:42:01) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 2 
+j = 4
+m = 0
+p = array(["."])
+while(m < len(num)):
+	tri = num + p
+	i = i + 3
+	m = m + 1
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:43:00) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 2 
+j = 4
+m = 0
+p = "."
+while(m < len(num)):
+	tri = num[i] + p
+	i = i + 3
+	m = m + 1
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:43:29) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 2 
+j = 4
+m = 0
+p = "."
+while(m < len(num)):
+	tri = num + p
+	i = i + 3
+	m = m + 1
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:45:16) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 2 
+j = 4
+m = 0
+n3 = num[0:4]
+p = "."
+while(m < len(num)):
+	tri = n3 + p
+	i = i + 3
+	m = m + 1
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:45:47) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 2 
+j = 4
+m = 0
+n3 = num[0:3]
+p = "."
+while(m < len(num)):
+	tri = n3 + p
+	i = i + 3
+	m = m + 1
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:46:48) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+m = 0
+n3 = num[i:j]
+p = "."
+while(m < len(num)):
+	tri = n3 + p
+	i = i + 3
+	m = m + 1
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:47:47) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+m = 0
+n3 = num[i:j]
+p = "."
+while(m < len(num)):
+	tri = n3 + p
+	#i = i + 3
+	m = m + 1
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:48:17) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+m = 0
+n3 = num[i:j]
+p = "."
+while(m < len(num)):
+	tri = n3 + p
+	i = i + 3
+	j = j + 3
+	m = m + 1
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:49:06) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+m = 0
+n3 = num[i:j]
+p = "."
+while(m < len(num)):
+	n3 = num[i:j]
+	tri = n3 + p
+	i = i + 3
+	j = j + 3
+	m = m + 1
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:50:07) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+m = 0
+n3 = num[i:j]
+p = "."
+while(j < len(num)):
+	tri = n3 + p
+	i = i + 3
+	j = j + 3
+	m = m + 1
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:51:03) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+m = 0
+n3 = num[i:j]
+p = "."
+while(j < len(num)):
+	tri = n3 + p
+	i = i + 4
+	j = j + 3
+	m = m + 1
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:52:07) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+m = 0
+n3 = num[i:j]
+p = "."
+tri = 0
+while(j < len(num)):
+	tri = tri + n3 + p
+	i = i + 4
+	j = j + 3
+	m = m + 1
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:52:42) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+m = 0
+n3 = num[i:j]
+p = "."
+
+while(j < len(num)):
+	tri = tri + n3 + p
+	i = i + 4
+	j = j + 3
+	m = m + 1
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:53:33) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+m = 0
+n3 = num[i:j]
+p = "."
+
+while(j < len(num)):
+	tri = tri + n3 + p
+	i = i + 4
+	j = j + 3
+	m = m + 1
+	tri = str(tri)
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 19:55:03) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+n3 = num[i:j]
+p = "."
+while(j < len(num)):
+	tri = n3 + p
+	i = i + 4
+	j = j + 3
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 17:26:12) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+n3 = num[i:j]
+p = "."
+tri = ""
+while(j < len(num)):
+	tri = tri + n3 + p
+	i = i + 4
+	j = j + 3
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 17:28:16) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+p = "."
+tri = ""
+while(j < len(num)):
+	tri = tri + num[i:j] + p
+	i = i + 4
+	j = j + 3
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 17:28:49) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+p = "."
+tri = ""
+while(j < len(num)):
+	tri = tri + num[i:j] + p
+	i = i + 3
+	j = j + 2
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 17:32:11) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+	tri = tri + num[i:j] + p
+	i = i + 3
+	j = j + 2
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 17:33:48) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+p = "."
+tri = ""
+while(j < len(num)):
+	tri = tri + num[i:j] + p
+	i = i + 3
+	j = j + 3
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 17:34:46) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+	tri = tri + num[i:j] + p
+	i = i + 3
+	j = j + 3
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-25 17:35:06) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+	tri = tri + num[i:j] + p
+	i = i + 3
+	j = j + 3
+print(tri)
+-- EXECUTION TIME:
+0.463924
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123.
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789.000.987.654.321.
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321.
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 17:36:11) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+	tri = tri + num[i:j] + p
+	i = i + 3
+	j = j + 3
+tri = tri - p
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 17:37:36) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+p = "."
+tri = ""
+while(i < (len(num) - 4)):
+	tri = tri + num[i:j] + p
+	i = i + 3
+	j = j + 3
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 17:38:52) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+	tri = tri + num[i:j] + p
+	i = i + 3
+	j = j + 3
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 17:39:07) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+	tri = tri + num[i:j] + p
+	i = i + 3
+	j = j + 3
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 17:41:59) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+	if(i < (len(num)-4))
+		tri = tri + num[i:j] + p
+	else:
+		tri = tri + num[i:j]
+	i = i + 3
+	j = j + 3
+print(tri)
+-- ERROR:
+File "XXXX", line 8
+    if(i < (len(num)-4))
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 17:42:08) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+	if(i < (len(num)-4)):
+		tri = tri + num[i:j] + p
+	else:
+		tri = tri + num[i:j]
+	i = i + 3
+	j = j + 3
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 17:42:16) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+	if(i < (len(num)-4)):
+		tri = tri + num[i:j] + p
+	else:
+		tri = tri + num[i:j]
+	i = i + 3
+	j = j + 3
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 17:42:37) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+	if(i < (len(num)-4)):
+		tri = tri + num[i:j] + p
+	else:
+		tri = tri + num[i:j]
+	i = i + 3
+	j = j + 3
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-25 17:43:04) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+	if(i < (len(num)-4)):
+		tri = tri + num[i:j] + p
+	else:
+		tri = tri + num[i:j]
+	i = i + 3
+	j = j + 3
+print(tri)
+-- EXECUTION TIME:
+0.566783
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789.000.987.654.321
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 14:56:36) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+	if(i < (len(num)-4)):
+		tri = tri + num[i:j] + p
+	else:
+		tri = tri + num[i:j]
+	i = i + 3
+	j = j + 3
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 14:57:14) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+	if(i < (len(num)):
+		tri = tri + num[i:j] + p
+	else:
+		tri = tri + num[i:j]
+	i = i + 3
+	j = j + 3
+print(tri)
+-- ERROR:
+File "XXXX", line 8
+    if(i < (len(num)):
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 14:57:20) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+	if(i < len(num)):
+		tri = tri + num[i:j] + p
+	else:
+		tri = tri + num[i:j]
+	i = i + 3
+	j = j + 3
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 14:57:54) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0 
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+	if(i < (len(num)-4)):
+		tri = tri + num[i:j] + p
+	else:
+		tri = tri + num[i:j]
+	i = i + 3
+	j = j + 3
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

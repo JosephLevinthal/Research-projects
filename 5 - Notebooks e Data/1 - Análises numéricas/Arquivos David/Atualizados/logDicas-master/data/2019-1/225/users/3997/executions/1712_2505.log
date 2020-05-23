@@ -1,0 +1,94 @@
+== TEST (2019-05-13 22:40:39) 
+-- CODE:
+from math import factorial
+x = eval(input(""))
+k = int(input(""))
+
+w = 1
+n = 1
+m = 1
+while w < k:
+    n = n + 2
+    m = m*(-1)
+    x = x + ((x**n)/(factorial(n)))*(m)
+    w = w + 1
+x = round(x , 10)
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    x = eval(input(""))
+  File "<string>", line 1, in <module>
+NameError: name 'pi' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-13 22:40:49) 
+-- CODE:
+from math import factorial
+x = eval(input(""))
+k = int(input(""))
+
+w = 1
+n = 1
+m = 1
+while w < k:
+    n = n + 2
+    m = m*(-1)
+    x = x + ((x**n)/(factorial(n)))*(m)
+    w = w + 1
+x = round(x , 10)
+print(x)
+-- EXECUTION TIME:
+0.203156
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1712/2505/main.py", line 2, in <module>
+    x = eval(input(""))
+  File "<string>", line 1, in <module>
+NameError: name 'pi' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 20:32:43) 
+-- CODE:
+from math import*
+
+x = eval(input("Angulo: "))
+k = int(input("Numero de termos: "))
+
+i = 0
+soma = 0 
+
+while (i<k):
+	conta = x**((2*i)+1) / factorial(2*i+1)
+	x = -1 * x
+	soma = soma + conta
+	i = i + 1 
+print(round(soma, 10))
+-- EXECUTION TIME:
+0.154115
+-- TEST CASE 1:
+---- input:
+pi/2
+5
+---- correct output:
+1.0000035426
+---- user output:
+1.0000035426
+-- TEST CASE 2:
+---- input:
+-pi/2
+4
+---- correct output:
+-0.9998431014
+---- user output:
+-0.9998431014
+-- TEST CASE 3:
+---- input:
+pi/3
+3
+---- correct output:
+0.8662952838
+---- user output:
+0.8662952838
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

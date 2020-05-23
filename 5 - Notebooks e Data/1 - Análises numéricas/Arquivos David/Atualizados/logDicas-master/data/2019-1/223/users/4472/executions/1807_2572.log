@@ -1,0 +1,98 @@
+== SUBMITION (2019-06-13 08:53:41) 
+-- CODE:
+from numpy import*
+N_matriculas = array(eval(input("Matriculas: "))
+
+impar = 0
+for i in range(0,size(N_matriculas)):
+	if(N_matriculas[i] % 2 == 1 ):
+		impar = impar + 1
+		
+grupo_2 = zeros(impar, dtype=int)
+iN = 0
+for i in range(0,size(N_matriculas)):
+	if(N_matriculas[i] % 2 == 1):
+		if(iN < size(grupo_2)):
+			grupo_2[iN] = N_matriculas[i]
+			iN = iN + 1
+print(grupo_2)
+
+-- EXECUTION TIME:
+0.520317
+-- ERROR:
+  File "/home/codebench/codes/1807/2572/main.py", line 4
+    impar = 0
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 08:53:47) 
+-- CODE:
+from numpy import*
+N_matriculas = array(eval(input("Matriculas: "))
+
+impar = 0
+for i in range(0,size(N_matriculas)):
+	if(N_matriculas[i] % 2 == 1 ):
+		impar = impar + 1
+		
+grupo_2 = zeros(impar, dtype=int)
+iN = 0
+for i in range(0,size(N_matriculas)):
+	if(N_matriculas[i] % 2 == 1):
+		if(iN < size(grupo_2)):
+			grupo_2[iN] = N_matriculas[i]
+			iN = iN + 1
+print(grupo_2)
+
+-- ERROR:
+File "XXXX", line 4
+    impar = 0
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 08:54:27) 
+-- CODE:
+from numpy import*
+N_matriculas = array(eval(input("Matriculas: ")))
+
+impar = 0
+for i in range(0,size(N_matriculas)):
+	if(N_matriculas[i] % 2 == 1 ):
+		impar = impar + 1
+		
+grupo_2 = zeros(impar, dtype=int)
+iN = 0
+for i in range(0,size(N_matriculas)):
+	if(N_matriculas[i] % 2 == 1):
+		if(iN < size(grupo_2)):
+			grupo_2[iN] = N_matriculas[i]
+			iN = iN + 1
+print(grupo_2)
+
+-- EXECUTION TIME:
+1.07839
+-- TEST CASE 1:
+---- input:
+[75247561,76546316,75713658,97135671,70356874]
+---- correct output:
+[75247561 97135671]
+---- user output:
+[75247561 97135671]
+-- TEST CASE 2:
+---- input:
+[13017594,57417542,85024758,12475981,75942785,91875987,29584192,85794217]
+---- correct output:
+[12475981 75942785 91875987 85794217]
+---- user output:
+[12475981 75942785 91875987 85794217]
+-- TEST CASE 3:
+---- input:
+[31874903,74902746,23742046]
+---- correct output:
+[31874903]
+---- user output:
+[31874903]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,48 @@
+== SUBMITION (2019-04-29 23:07:12) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+a = float(input("consumo de energia: "))
+b = input("tipo de instalacao: ").upper()
+print("Entradas:",a,"kWh e tipo",b)
+if (b == "R" or b == "I" or b == "C") and a>=0:
+	if b == "R" and a <= 500:
+		print("Valor total: R$",round(a*0.44,2))
+	elif b == "R" and a > 500:
+		print("Valor total: R$", round(a*0.65,2))
+	elif b == "C" and a <=1000:
+		print("Valor total: R$", round(a*0.55,2))
+	elif b == "C" and a > 1000:
+		print("Valor total: R$", round(a*0.60,2))
+	elif b == "I" and a <= 5000:
+		print("Valor total: R$", round(a*0.55,2))
+	elif b == "I" and a > 5000:
+		print("Valor total: R$", round(a*0.60,2))
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.205894
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

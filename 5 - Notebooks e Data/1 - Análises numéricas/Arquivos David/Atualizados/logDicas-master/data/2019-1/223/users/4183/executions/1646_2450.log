@@ -1,0 +1,456 @@
+== TEST (2019-04-05 21:45:41) 
+-- CODE:
+nome1 = float(input("Digite: "))
+nome2 = float(input("Digite: "))
+
+if (nome1.upper() > nome2.upper())
+-- ERROR:
+File "XXXX", line 4
+    if (nome1.upper() > nome2.upper())
+                                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 21:47:22) 
+-- CODE:
+nome1 = "Joana"
+nome2 = "Marcia"
+
+if (Joane.upper() > Marcia.upper())
+-- ERROR:
+File "XXXX", line 4
+    if (Joane.upper() > Marcia.upper())
+                                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 21:48:07) 
+-- CODE:
+nome1 = "Joana"
+nome2 = "Marcia"
+
+if ("Joane".upper() > "Marcia".upper())
+-- ERROR:
+File "XXXX", line 4
+    if ("Joane".upper() > "Marcia".upper())
+                                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 21:48:36) 
+-- CODE:
+nome1 = "Joana"
+nome2 = "Marcia"
+
+if ("Joane.upper()" > "Marcia.upper()")
+-- ERROR:
+File "XXXX", line 4
+    if ("Joane.upper()" > "Marcia.upper()")
+                                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 21:49:14) 
+-- CODE:
+a = "Joana"
+aa = "Marcia"
+
+if (a.upper() > aa.upper())
+-- ERROR:
+File "XXXX", line 4
+    if (a.upper() > aa.upper())
+                              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 21:54:23) 
+-- CODE:
+a = "Joana"
+aa = "Marcia"
+
+if (a < aa):
+	print(a.upper())
+	print(aa.upper())
+else: 
+	print(aa.upper())
+	print(a.upper())
+-- OUTPUT:
+JOANA
+MARCIA
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-05 21:54:37) 
+-- CODE:
+a = "Joana"
+aa = "Marcia"
+
+if (a < aa):
+	print(a.upper())
+	print(aa.upper())
+else: 
+	print(aa.upper())
+	print(a.upper())
+-- EXECUTION TIME:
+0.173148
+-- TEST CASE 1:
+---- input:
+Ada
+Leon
+---- correct output:
+Ada
+Leon
+---- user output:
+JOANA
+MARCIA
+-- TEST CASE 2:
+---- input:
+Marcos
+Demetrius
+---- correct output:
+Demetrius
+Marcos
+---- user output:
+JOANA
+MARCIA
+-- TEST CASE 3:
+---- input:
+WILSON
+george
+---- correct output:
+george
+WILSON
+---- user output:
+JOANA
+MARCIA
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 21:55:17) 
+-- CODE:
+a = "Joana"
+aa = "Marcia"
+
+if (a < aa):
+	print(a)
+	print(aa.upper())
+else: 
+	print(aa)
+	print(a.upper())
+-- OUTPUT:
+Joana
+MARCIA
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-05 21:55:23) 
+-- CODE:
+a = "Joana"
+aa = "Marcia"
+
+if (a < aa):
+	print(a)
+	print(aa.upper())
+else: 
+	print(aa)
+	print(a.upper())
+-- EXECUTION TIME:
+0.144287
+-- TEST CASE 1:
+---- input:
+Ada
+Leon
+---- correct output:
+Ada
+Leon
+---- user output:
+Joana
+MARCIA
+-- TEST CASE 2:
+---- input:
+Marcos
+Demetrius
+---- correct output:
+Demetrius
+Marcos
+---- user output:
+Joana
+MARCIA
+-- TEST CASE 3:
+---- input:
+WILSON
+george
+---- correct output:
+george
+WILSON
+---- user output:
+Joana
+MARCIA
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-07 23:50:53) 
+-- CODE:
+a = "Joana"
+aa = "Marcia"
+
+if (a < aa):
+	print(a)
+	print(aa.upper())
+else: 
+	print(aa)
+	print(a.upper())
+-- OUTPUT:
+Joana
+MARCIA
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-07 23:51:38) 
+-- CODE:
+a = input("Nome: ")
+aa = input("Nome: ")
+
+if (a < aa):
+	print(a)
+	print(aa.upper())
+else: 
+	print(aa)
+	print(a.upper())
+-- OUTPUT:
+Ada
+LEON
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-07 23:51:49) 
+-- CODE:
+a = input("Nome: ")
+aa = input("Nome: ")
+
+if (a < aa):
+	print(a)
+	print(aa.upper())
+else: 
+	print(aa)
+	print(a.upper())
+-- EXECUTION TIME:
+0.207913
+-- TEST CASE 1:
+---- input:
+Ada
+Leon
+---- correct output:
+Ada
+Leon
+---- user output:
+Ada
+LEON
+-- TEST CASE 2:
+---- input:
+Marcos
+Demetrius
+---- correct output:
+Demetrius
+Marcos
+---- user output:
+Demetrius
+MARCOS
+-- TEST CASE 3:
+---- input:
+WILSON
+george
+---- correct output:
+george
+WILSON
+---- user output:
+WILSON
+GEORGE
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 21:23:22) 
+-- CODE:
+nome1 = input("Nome: ")
+nome2= input("Nome: ")
+
+if (nome1 < nome2):
+	print(nome1)
+	print(nome2.upper())
+else: 
+	print(nome2)
+	print(nome1.upper())
+-- EXECUTION TIME:
+0.150912
+-- TEST CASE 1:
+---- input:
+Ada
+Leon
+---- correct output:
+Ada
+Leon
+---- user output:
+Ada
+LEON
+-- TEST CASE 2:
+---- input:
+Marcos
+Demetrius
+---- correct output:
+Demetrius
+Marcos
+---- user output:
+Demetrius
+MARCOS
+-- TEST CASE 3:
+---- input:
+WILSON
+george
+---- correct output:
+george
+WILSON
+---- user output:
+WILSON
+GEORGE
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 21:24:29) 
+-- CODE:
+nome1 = input("Nome: ")
+nome2= input("Nome: ")
+
+if (nome1 < nome2.upper()):
+	print(nome1)
+	print(nome2)
+else: 
+	print(nome2)
+	print(nome1)
+-- OUTPUT:
+Ada
+Leon
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 21:24:47) 
+-- CODE:
+nome1 = input("Nome: ")
+nome2= input("Nome: ")
+
+if (nome1 < nome2.upper()):
+	print(nome1)
+	print(nome2)
+else: 
+	print(nome2)
+	print(nome1)
+-- OUTPUT:
+Ada
+Leon
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 21:25:26) 
+-- CODE:
+nome1 = input("Nome: ")
+nome2= input("Nome: ")
+
+if (nome1 < nome2.upper()):
+	print(nome1)
+	print(nome2)
+else: 
+	print(nome2)
+	print(nome1)
+-- EXECUTION TIME:
+0.153137
+-- TEST CASE 1:
+---- input:
+Ada
+Leon
+---- correct output:
+Ada
+Leon
+---- user output:
+Ada
+Leon
+-- TEST CASE 2:
+---- input:
+Marcos
+Demetrius
+---- correct output:
+Demetrius
+Marcos
+---- user output:
+Demetrius
+Marcos
+-- TEST CASE 3:
+---- input:
+WILSON
+george
+---- correct output:
+george
+WILSON
+---- user output:
+george
+WILSON
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 21:26:03) 
+-- CODE:
+nome1 = input("Nome: ")
+nome2= input("Nome: ")
+
+if (nome1 < nome2.upper()):
+	print(nome1)
+	print(nome2)
+else: 
+	print(nome2)
+	print(nome1)
+-- OUTPUT:
+Ada
+Leon
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:14:21) 
+-- CODE:
+nome1 = input("Nome: ")
+nome2= input("Nome: ")
+
+if (nome1.upper() < nome2.upper()):
+	print(nome1)
+	print(nome2)
+else: 
+	print(nome2)
+	print(nome1)
+-- OUTPUT:
+Ada
+Leon
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:14:35) 
+-- CODE:
+nome1 = input("Nome: ")
+nome2= input("Nome: ")
+
+if (nome1.upper() < nome2.upper()):
+	print(nome1)
+	print(nome2)
+else: 
+	print(nome2)
+	print(nome1)
+-- EXECUTION TIME:
+0.15006
+-- TEST CASE 1:
+---- input:
+Ada
+Leon
+---- correct output:
+Ada
+Leon
+---- user output:
+Ada
+Leon
+-- TEST CASE 2:
+---- input:
+Marcos
+Demetrius
+---- correct output:
+Demetrius
+Marcos
+---- user output:
+Demetrius
+Marcos
+-- TEST CASE 3:
+---- input:
+WILSON
+george
+---- correct output:
+george
+WILSON
+---- user output:
+george
+WILSON
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

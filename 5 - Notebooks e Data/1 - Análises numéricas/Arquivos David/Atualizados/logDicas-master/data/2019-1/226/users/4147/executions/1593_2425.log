@@ -1,0 +1,483 @@
+== TEST (2019-03-27 08:48:14) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+-- OUTPUT:
+8.2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 08:49:10) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+print(cm,3 "km/l")
+-- ERROR:
+File "XXXX", line 4
+    print(cm,3 "km/l")
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 08:49:27) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+print(round(cm,3) "km/l")
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm,3) "km/l")
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 08:50:06) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+print(round(cm,3) ("km/l"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(cm,3) ("km/l"))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 08:50:38) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+print(round(cm,3)float("km/l"))
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm,3)float("km/l"))
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 08:52:23) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+print(float(input(round(cm,3"km/l")))
+-- ERROR:
+File "XXXX", line 4
+    print(float(input(round(cm,3"km/l")))
+                                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 08:53:22) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+print(float(input(round("cm,3km/l")))
+-- ERROR:
+File "XXXX", line 5
+    
+                                         ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 08:53:28) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+
+-- ERROR:
+File "XXXX", line 5
+    
+                                         ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 09:06:02) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+print(round(cm,3)"km/l")
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm,3)"km/l")
+                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 09:06:28) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+print(round(cm,3)input("km/l"))
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm,3)input())
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 09:07:26) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+print(round(input(cm,3"km/l"))
+-- ERROR:
+File "XXXX", line 4
+    print(round(input(cm,3"km/l"))
+                               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:10:50) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+print(round(input((cm,3),"km/l"))
+-- ERROR:
+File "XXXX", line 5
+    
+                                     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:11:10) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+print(round(input(cm,3,"km/l"))
+-- ERROR:
+File "XXXX", line 5
+    
+                                   ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:11:11) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+print(round(input(cm,3,"km/l"))
+-- ERROR:
+File "XXXX", line 5
+    
+                                   ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:11:24) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+print(round((cm,3),"km/l")
+-- ERROR:
+File "XXXX", line 5
+    
+                              ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:11:32) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+print(round(cm,3,"km/l")
+-- ERROR:
+File "XXXX", line 5
+    
+                            ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:11:40) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+print(round(cm,3 ,"km/l")
+-- ERROR:
+File "XXXX", line 5
+    
+                             ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:11:53) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+print(round((cm,3) ,"km/l")
+-- ERROR:
+File "XXXX", line 5
+    
+                               ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:12:18) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+print(round((cm,3) ,km/l)
+-- ERROR:
+File "XXXX", line 5
+    
+                             ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:13:35) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+print(round(cm,3,"km/l")
+-- ERROR:
+File "XXXX", line 5
+    
+                            ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:15:40) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d * cg ) / 10
+print(round(cm,3)
+-- ERROR:
+File "XXXX", line 5
+    
+                     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:20:44) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d + cg ) / 10
+
+-- ERROR:
+File "XXXX", line 5
+    
+                     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:22:12) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d * cg ) / 10
+print(round(cm ,3)"km/l")
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm ,3)"km/l")
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:22:19) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d * cg ) / 10
+print(round(cm, 3)"km/l")
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm, 3)"km/l")
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-28 10:22:19) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d * cg ) / 10
+print(round(cm, 3)"km/l")
+-- EXECUTION TIME:
+0.12123
+-- ERROR:
+  File "/home/codebench/codes/1593/2425/main.py", line 4
+    print(round(cm, 3)"km/l")
+                           ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:22:20) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d * cg ) / 10
+print(round(cm, 3)"km/l")
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm, 3)"km/l")
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:22:21) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d * cg ) / 10
+print(round(cm, 3)"km/l")
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm, 3)"km/l")
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:22:22) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d * cg ) / 10
+print(round(cm, 3)"km/l")
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm, 3)"km/l")
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:22:36) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d * cg ) / 10
+print(round(cm,3)"km/l")
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm,3)"km/l")
+                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:22:42) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d * cg ) / 10
+print(round(cm,3) "km/l")
+-- ERROR:
+File "XXXX", line 4
+    print(round(cm,3) "km/l")
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:22:50) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d * cg ) / 10
+print(round(cm,3), "km/l")
+-- OUTPUT:
+5.714 km/l
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-28 10:23:03) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d * cg ) / 10
+print(round(cm,3), "km/l")
+-- EXECUTION TIME:
+0.195835
+-- TEST CASE 1:
+---- input:
+28.572
+2
+---- correct output:
+14.286 km/l
+---- user output:
+5.714 km/l
+-- TEST CASE 2:
+---- input:
+2254
+124.4
+---- correct output:
+18.119 km/l
+---- user output:
+28039.76 km/l
+-- TEST CASE 3:
+---- input:
+4554
+464.6
+---- correct output:
+9.802 km/l
+---- user output:
+211578.84 km/l
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:23:09) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d * cg ) / 10
+print(round(cm,3), "km/l")
+-- OUTPUT:
+5.714 km/l
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:23:40) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d * cg ) / 2
+print(round(cm,3), "km/l")
+-- OUTPUT:
+28.572 km/l
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:23:53) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d * cg ) / 4
+print(round(cm,3), "km/l")
+-- OUTPUT:
+14.286 km/l
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:24:12) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d * cg ) 
+print(round(cm,3), "km/l")
+-- OUTPUT:
+57.144 km/l
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:24:52) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d / cg ) 
+print(round(cm,3), "km/l")
+-- OUTPUT:
+14.286 km/l
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-28 10:25:00) 
+-- CODE:
+d = float(input("Distancia total percorrida: "))
+cg = float(input("Combustivel total gasto: "))
+cm = ( d / cg ) 
+print(round(cm,3), "km/l")
+-- EXECUTION TIME:
+0.129439
+-- TEST CASE 1:
+---- input:
+28.572
+2
+---- correct output:
+14.286 km/l
+---- user output:
+14.286 km/l
+-- TEST CASE 2:
+---- input:
+2254
+124.4
+---- correct output:
+18.119 km/l
+---- user output:
+18.119 km/l
+-- TEST CASE 3:
+---- input:
+4554
+464.6
+---- correct output:
+9.802 km/l
+---- user output:
+9.802 km/l
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

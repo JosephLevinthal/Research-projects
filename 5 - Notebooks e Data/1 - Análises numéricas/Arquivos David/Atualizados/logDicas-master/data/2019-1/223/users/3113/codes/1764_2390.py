@@ -1,0 +1,29 @@
+from numpy import*
+v=array(eval(input("")))
+v2=array(eval(input("")))
+
+if(max(v)==v[0]):
+	s=1
+elif(max(v)==v[1]):
+	s=2
+elif(max(v)==v[2]):
+	s=3
+elif(max(v)==v[3]):
+	s=4
+elif(max(v)==v[4]):
+	s=5
+elif(max(v)==v[5]):
+	s=6
+elif(max(v)==v[6]):
+	s=7
+elif(max(v)==v[7]):
+	s=8
+elif(max(v)==v[8]):
+	s=9
+elif(max(v)==v[9]):
+	s=10
+elif(max(v)==v[10]):
+	s=11
+elif(max(v)==v[11]):
+	s=12
+print(s)

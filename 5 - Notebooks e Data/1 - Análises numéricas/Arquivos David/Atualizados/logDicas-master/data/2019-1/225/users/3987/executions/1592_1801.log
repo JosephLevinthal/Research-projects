@@ -1,0 +1,231 @@
+== TEST (2019-04-03 15:16:09) 
+-- CODE:
+nome = float(input("nome do objeto e:"))
+numero = int(input("numero:"))
+print(abra + nome * numero)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    nome = float(input())
+ValueError: could not convert string to float: 'livro'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-03 15:17:00) 
+-- CODE:
+nome = input("nome do objeto e:"))
+numero = int(input("numero:"))
+print(abra + nome * numero)
+-- ERROR:
+File "XXXX", line 1
+    nome = input())
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-03 15:17:18) 
+-- CODE:
+nome = input("nome do objeto e:")
+numero = int(input("numero:"))
+print(abra + nome * numero)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print(abra + nome * numero)
+NameError: name 'abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-03 15:18:02) 
+-- CODE:
+nome = input("nome do objeto e:")
+numero = int(input("numero:"))
+feitico = (abra + nome) * (numero)
+print(feitico)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    feitico = (abra + nome) * (numero)
+NameError: name 'abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-03 15:18:28) 
+-- CODE:
+nome = input("nome do objeto e:")
+numero = int(input("numero:"))
+feitico = ("abra" + nome) * (numero)
+print(feitico)
+-- OUTPUT:
+abralivroabralivroabralivroabralivroabralivroabralivroabralivroabralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-03 15:18:39) 
+-- CODE:
+nome = input("nome do objeto e:")
+numero = int(input("numero:"))
+feitico = ("abra" + nome) * (numero)
+print(feitico)
+-- EXECUTION TIME:
+0.141648
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+abralivroabralivroabralivroabralivroabralivroabralivroabralivroabralivro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+abracarroabracarro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+abracaixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-03 15:19:37) 
+-- CODE:
+nome = input("nome do objeto e:")
+numero = int(input("numero:"))
+feitico = ("abra" + nome) * (numero)
+print(feitico)
+-- OUTPUT:
+abralivroabralivroabralivroabralivroabralivroabralivroabralivroabralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-03 15:20:10) 
+-- CODE:
+nome = input("nome do objeto e:")
+numero = int(input("numero:"))
+feitico = ("abra" " " + nome) * (numero)
+print(feitico)
+-- OUTPUT:
+abra livroabra livroabra livroabra livroabra livroabra livroabra livroabra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-03 15:20:26) 
+-- CODE:
+nome = input("nome do objeto e:")
+numero = int(input("numero:"))
+feitico = ("abra" " " + nome " ") * (numero)
+print(feitico)
+-- ERROR:
+File "XXXX", line 3
+    feitico = ("abra" " " + nome " ") * (numero)
+                                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-03 15:20:40) 
+-- CODE:
+nome = input("nome do objeto e:")
+numero = int(input("numero:"))
+feitico = ("abra" " " + nome" ") * (numero)
+print(feitico)
+-- ERROR:
+File "XXXX", line 3
+    feitico = ("abra" " " + nome" ") * (numero)
+                                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-03 15:22:20) 
+-- CODE:
+nome = input("nome do objeto e:")
+numero = int(input("numero:"))
+feitico = ("abra" " " + nome + " ") * (numero)
+print(feitico)
+-- OUTPUT:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-03 15:22:29) 
+-- CODE:
+nome = input("nome do objeto e:")
+numero = int(input("numero:"))
+feitico = ("abra" " " + nome + " ") * (numero)
+print(feitico)
+-- EXECUTION TIME:
+0.214165
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+abra carro abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-03 15:22:41) 
+-- CODE:
+nome = input("nome do objeto e:")
+numero = float(input("numero:"))
+feitico = ("abra" " " + nome + " ") * (numero)
+print(feitico)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    feitico = ("abra" " " + nome + " ") * (numero)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-03 15:23:42) 
+-- CODE:
+nome = input("nome do objeto e:")
+numero = int(input("numero:"))
+feitico = ("Abra" " " + nome + " ") * (numero)
+print(feitico)
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-03 15:23:49) 
+-- CODE:
+nome = input("nome do objeto e:")
+numero = int(input("numero:"))
+feitico = ("Abra" " " + nome + " ") * (numero)
+print(feitico)
+-- EXECUTION TIME:
+0.186267
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

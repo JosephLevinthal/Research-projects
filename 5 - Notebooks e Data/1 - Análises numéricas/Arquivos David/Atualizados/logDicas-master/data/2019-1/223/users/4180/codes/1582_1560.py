@@ -1,0 +1,2 @@
+string = "AUGUSTA ADA BYRON, A CONDESSA DE LOVELACE, NASCEU EM 1815, NA INGLATERRA."
+print(string.lower())

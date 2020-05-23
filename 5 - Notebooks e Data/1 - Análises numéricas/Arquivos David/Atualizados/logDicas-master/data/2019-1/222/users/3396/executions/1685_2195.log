@@ -1,0 +1,130 @@
+== TEST (2019-04-26 22:10:04) 
+-- CODE:
+data=int(input("data:"))
+if(data,=31)
+-- ERROR:
+File "XXXX", line 2
+    if(data,=31)
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-26 22:10:21) 
+-- CODE:
+data=int(input("data:"))
+if(data,=31):
+-- ERROR:
+File "XXXX", line 2
+    if(data,=31):
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-26 22:11:21) 
+-- CODE:
+data=int(input("data:"))
+if(data<=31):
+-- ERROR:
+File "XXXX", line 3
+    
+                 ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 15:48:37) 
+-- CODE:
+data=int(input("data:"))
+if(data%1000<=31):
+	
+-- ERROR:
+File "XXXX", line 4
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 15:49:14) 
+-- CODE:
+data=int(input("data:"))
+if(data%1000<=31):
+	print("valida")
+-- ERROR:
+File "XXXX", line 4
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 16:17:48) 
+-- CODE:
+data= int(input("digite data:"))
+print(data%100)
+-- OUTPUT:
+90
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 16:18:16) 
+-- CODE:
+data= int(input("digite data:"))
+print(data%10000)
+-- OUTPUT:
+1990
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 16:18:57) 
+-- CODE:
+data= int(input("digite data:"))
+print(data%100000000)
+-- EXECUTION TIME:
+0.196052
+-- TEST CASE 1:
+---- input:
+15081990
+---- correct output:
+15 de 8 de 1990 eh uma data valida
+---- user output:
+digite data:15081990
+-- TEST CASE 2:
+---- input:
+29021999
+---- correct output:
+29 de 2 de 1999 nao eh uma data valida
+---- user output:
+digite data:29021999
+-- TEST CASE 3:
+---- input:
+10101582
+---- correct output:
+10 de 10 de 1582 nao eh uma data valida
+---- user output:
+digite data:10101582
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 16:18:59) 
+-- CODE:
+data= int(input("digite data:"))
+print(data%100000000)
+-- OUTPUT:
+15081990
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 16:19:48) 
+-- CODE:
+data= int(input("digite data:"))
+print(data//1000000%10)
+-- OUTPUT:
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 16:20:19) 
+-- CODE:
+data= int(input("digite data:"))
+print(data//1000000%0)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print(data//1000000%0)
+ZeroDivisionError: integer division or modulo by zero
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 16:20:46) 
+-- CODE:
+data= int(input("digite data:"))
+print(data//100000%10)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print(data//1000000%0)
+ZeroDivisionError: integer division or modulo by zero
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

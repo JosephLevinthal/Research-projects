@@ -1,0 +1,6 @@
+var= float(input())
+var1= float(input())
+var2= float(input())
+var3= float(input())
+x= ((var * 1) + (var1 * 2) + (var2 * 3) + (var3 * 4))/(1+2+3+4)
+print(round(x,2))

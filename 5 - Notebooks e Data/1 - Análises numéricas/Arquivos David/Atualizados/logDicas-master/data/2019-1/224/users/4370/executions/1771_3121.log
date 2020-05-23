@@ -1,0 +1,380 @@
+== TEST (2019-05-23 18:58:29) 
+-- CODE:
+p=eval(input("digite o numero: "))
+r=eval(input("digite o numero: "))
+print(p)
+print(r)
+-- OUTPUT:
+[33, 22, 33, 22, 11, 11, 33, 22, 11, 11, 22, 33]
+[22, 33, 22, 11, 11, 33, 22, 11, 11, 22, 33, 33]
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-23 19:12:10) 
+-- CODE:
+from numpy import *
+e = array(eval(input("jogadas de Eusapia: ")))
+b = array(eval(input("jogadas de Barsanulfo: ")))
+i = 0
+soma_e = 0
+soma_b = 0
+valor_e = 0
+valor_b = 0
+while(i < size(ve)):
+	if(e[i] == 33 and b[i] == 22):
+		valor_e = 1
+		valor_b = 0
+	elif(e[i] == 22 and b[i] == 11):
+		valor_e = 1
+		valor_b = 0
+	elif(e[i] == 11 and b[i] == 33):
+		valor_e = 1
+		valor_b = 0
+	elif(e[i] == 11 and b[i] == 11):
+		valor_e = 0
+		valor_b = 0
+	elif(e[i] == 22 and b[i] == 22):
+		valor_e = 0
+		valor_b = 0
+	elif(e[i] == 33 and b[i] == 33):
+		valor_e = 0
+		valor_b = 0
+	elif(e[i] == 22 and b[i] == 33):
+		valor_b = 1
+		valor_e = 0
+	elif(e[i] == 33 and b[i] == 11):
+		valor_b = 1
+		valor_e = 0
+	elif(e[i] == 11 and b[i] == 22):
+		valor_b = 1
+		valor_e = 0
+	soma_b = soma_b + valor_b
+	soma_e = soma_e + valor_e
+	i = i + 1
+print(size(e))
+if(soma_b == soma_e):
+	print("EMPATE")
+if(soma_b>soma_e):
+	print("BARSANULFO")
+if(soma_e>soma_b):
+	print("EUSAPIA")
+		
+
+-- EXECUTION TIME:
+0.43532
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1771/1576/main.py", line 9, in <module>
+    while(i < size(ve)):
+NameError: name 've' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-23 19:12:25) 
+-- CODE:
+from numpy import *
+e = array(eval(input("jogadas de Eusapia: ")))
+b = array(eval(input("jogadas de Barsanulfo: ")))
+i = 0
+soma_e = 0
+soma_b = 0
+valor_e = 0
+valor_b = 0
+while(i < size(e)):
+	if(e[i] == 33 and b[i] == 22):
+		valor_e = 1
+		valor_b = 0
+	elif(e[i] == 22 and b[i] == 11):
+		valor_e = 1
+		valor_b = 0
+	elif(e[i] == 11 and b[i] == 33):
+		valor_e = 1
+		valor_b = 0
+	elif(e[i] == 11 and b[i] == 11):
+		valor_e = 0
+		valor_b = 0
+	elif(e[i] == 22 and b[i] == 22):
+		valor_e = 0
+		valor_b = 0
+	elif(e[i] == 33 and b[i] == 33):
+		valor_e = 0
+		valor_b = 0
+	elif(e[i] == 22 and b[i] == 33):
+		valor_b = 1
+		valor_e = 0
+	elif(e[i] == 33 and b[i] == 11):
+		valor_b = 1
+		valor_e = 0
+	elif(e[i] == 11 and b[i] == 22):
+		valor_b = 1
+		valor_e = 0
+	soma_b = soma_b + valor_b
+	soma_e = soma_e + valor_e
+	i = i + 1
+print(size(e))
+if(soma_b == soma_e):
+	print("EMPATE")
+if(soma_b>soma_e):
+	print("BARSANULFO")
+if(soma_e>soma_b):
+	print("EUSAPIA")
+		
+
+-- EXECUTION TIME:
+0.378207
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+EUSAPIA
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+EMPATE
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+BARSANULFO
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 16:47:28) 
+-- CODE:
+from numpy import *
+e = input("jogadas de Eusapia: ")
+b = input("jogadas de Barsanulfo: ")
+i = 0
+soma_e = 0
+soma_b = 0
+valor_e = 0
+valor_b = 0
+while(i < size(e)):
+	if(e[i] == 33 and b[i] == 22):
+		valor_e = 1
+		valor_b = 0
+	elif(e[i] == 22 and b[i] == 11):
+		valor_e = 1
+		valor_b = 0
+	elif(e[i] == 11 and b[i] == 33):
+		valor_e = 1
+		valor_b = 0
+	elif(e[i] == 11 and b[i] == 11):
+		valor_e = 0
+		valor_b = 0
+	elif(e[i] == 22 and b[i] == 22):
+		valor_e = 0
+		valor_b = 0
+	elif(e[i] == 33 and b[i] == 33):
+		valor_e = 0
+		valor_b = 0
+	elif(e[i] == 22 and b[i] == 33):
+		valor_b = 1
+		valor_e = 0
+	elif(e[i] == 33 and b[i] == 11):
+		valor_b = 1
+		valor_e = 0
+	elif(e[i] == 11 and b[i] == 22):
+		valor_b = 1
+		valor_e = 0
+	soma_b = soma_b + valor_b
+	soma_e = soma_e + valor_e
+	i = i + 1
+print(size(e))
+if(soma_b == soma_e):
+	print("EMPATE")
+if(soma_b>soma_e):
+	print("BARSANULFO")
+if(soma_e>soma_b):
+	print("EUSAPIA")
+		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 16:47:32) 
+-- CODE:
+from numpy import *
+e = input("jogadas de Eusapia: ")
+b = input("jogadas de Barsanulfo: ")
+i = 0
+soma_e = 0
+soma_b = 0
+valor_e = 0
+valor_b = 0
+while(i < size(e)):
+	if(e[i] == 33 and b[i] == 22):
+		valor_e = 1
+		valor_b = 0
+	elif(e[i] == 22 and b[i] == 11):
+		valor_e = 1
+		valor_b = 0
+	elif(e[i] == 11 and b[i] == 33):
+		valor_e = 1
+		valor_b = 0
+	elif(e[i] == 11 and b[i] == 11):
+		valor_e = 0
+		valor_b = 0
+	elif(e[i] == 22 and b[i] == 22):
+		valor_e = 0
+		valor_b = 0
+	elif(e[i] == 33 and b[i] == 33):
+		valor_e = 0
+		valor_b = 0
+	elif(e[i] == 22 and b[i] == 33):
+		valor_b = 1
+		valor_e = 0
+	elif(e[i] == 33 and b[i] == 11):
+		valor_b = 1
+		valor_e = 0
+	elif(e[i] == 11 and b[i] == 22):
+		valor_b = 1
+		valor_e = 0
+	soma_b = soma_b + valor_b
+	soma_e = soma_e + valor_e
+	i = i + 1
+print(size(e))
+if(soma_b == soma_e):
+	print("EMPATE")
+if(soma_b>soma_e):
+	print("BARSANULFO")
+if(soma_e>soma_b):
+	print("EUSAPIA")
+		
+
+-- EXECUTION TIME:
+0.561473
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+1
+EMPATE
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+1
+EMPATE
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+1
+EMPATE
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 16:47:49) 
+-- CODE:
+from numpy import *
+e = array(eval(input("jogadas de Eusapia: ")))
+b = array(eval(input("jogadas de Barsanulfo: ")))
+i = 0
+soma_e = 0
+soma_b = 0
+valor_e = 0
+valor_b = 0
+while(i < size(e)):
+	if(e[i] == 33 and b[i] == 22):
+		valor_e = 1
+		valor_b = 0
+	elif(e[i] == 22 and b[i] == 11):
+		valor_e = 1
+		valor_b = 0
+	elif(e[i] == 11 and b[i] == 33):
+		valor_e = 1
+		valor_b = 0
+	elif(e[i] == 11 and b[i] == 11):
+		valor_e = 0
+		valor_b = 0
+	elif(e[i] == 22 and b[i] == 22):
+		valor_e = 0
+		valor_b = 0
+	elif(e[i] == 33 and b[i] == 33):
+		valor_e = 0
+		valor_b = 0
+	elif(e[i] == 22 and b[i] == 33):
+		valor_b = 1
+		valor_e = 0
+	elif(e[i] == 33 and b[i] == 11):
+		valor_b = 1
+		valor_e = 0
+	elif(e[i] == 11 and b[i] == 22):
+		valor_b = 1
+		valor_e = 0
+	soma_b = soma_b + valor_b
+	soma_e = soma_e + valor_e
+	i = i + 1
+print(size(e))
+if(soma_b == soma_e):
+	print("EMPATE")
+if(soma_b>soma_e):
+	print("BARSANULFO")
+if(soma_e>soma_b):
+	print("EUSAPIA")
+		
+
+-- EXECUTION TIME:
+0.398116
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+EUSAPIA
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+EMPATE
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+BARSANULFO
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

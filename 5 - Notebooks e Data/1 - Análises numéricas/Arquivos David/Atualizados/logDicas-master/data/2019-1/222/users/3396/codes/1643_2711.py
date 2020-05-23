@@ -1,0 +1,9 @@
+vt=float(input("vt:"))
+qtru=int(input("qtru:"))
+vtrs=float(input("vtrs:"))
+qpon=int(input("qpon:"))
+vpa=float(input("vpa:"))
+if(vt>=((qtru*vtrs)+(qpon*vpa))):
+	print("SUFICIENTE")
+else:
+	print("INSUFICIENTE")

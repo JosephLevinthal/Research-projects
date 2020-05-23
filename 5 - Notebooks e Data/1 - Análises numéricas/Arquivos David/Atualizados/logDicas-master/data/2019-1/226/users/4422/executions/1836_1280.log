@@ -1,0 +1,483 @@
+== TEST (2019-07-02 00:41:56) 
+-- CODE:
+from numpy import *
+tab = array(eval(input('t: ')))
+mov = input('m: ')
+xtab=int(0)
+ytab=int(0)
+moeda=0
+life=100
+a = shape(tab)[1]-1
+b = shape(tab)[0]-1
+for x in mov:
+	if x == 'A':
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tab[ytab,xtab]==33:
+			xtab = xtab + 1
+		elif x == 'W':
+			ytab = ytab - 1
+			if ytab<0:
+				ytab = ytab + 1
+			if(tab[ytab,xtab]==33):
+				ytab = ytab - 1
+		elif(x == "S"):
+			ytab = ytab + 1
+			if ytab>b:
+				ytab = ytab - 1
+			if tab[ytab,xtab]==33:
+				ytab = ytab - 1
+		if tab[ytab,xtab]==11:
+			moeda = moeda + 1
+			tab[ytab,xtab] = 0
+		elif tab[ytab,xtab] == 22
+			life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+File "XXXX", line 32
+    elif tab[ytab,xtab] == 22
+                            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 00:42:10) 
+-- CODE:
+from numpy import *
+tab = array(eval(input('t: ')))
+mov = input('m: ')
+xtab=int(0)
+ytab=int(0)
+moeda=0
+life=100
+a = shape(tab)[1]-1
+b = shape(tab)[0]-1
+for x in mov:
+	if x == 'A':
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tab[ytab,xtab]==33:
+			xtab = xtab + 1
+		elif x == 'W':
+			ytab = ytab - 1
+			if ytab<0:
+				ytab = ytab + 1
+			if(tab[ytab,xtab]==33):
+				ytab = ytab - 1
+		elif(x == "S"):
+			ytab = ytab + 1
+			if ytab>b:
+				ytab = ytab - 1
+			if tab[ytab,xtab]==33:
+				ytab = ytab - 1
+		if tab[ytab,xtab]==11:
+			moeda = moeda + 1
+			tab[ytab,xtab] = 0
+		elif tab[ytab,xtab] == 22:
+			life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 00:42:24) 
+-- CODE:
+from numpy import *
+tab = array(eval(input('t: ')))
+mov = input('m: ')
+xtab=int(0)
+ytab=int(0)
+moeda=0
+life=100
+a = shape(tab)[1]-1
+b = shape(tab)[0]-1
+for x in mov:
+	if x == 'A':
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tab[ytab,xtab]==33:
+			xtab = xtab + 1
+		elif x == 'W':
+			ytab = ytab - 1
+			if ytab<0:
+				ytab = ytab + 1
+			if(tab[ytab,xtab]==33):
+				ytab = ytab - 1
+		elif(x == "S"):
+			ytab = ytab + 1
+			if ytab>b:
+				ytab = ytab - 1
+			if tab[ytab,xtab]==33:
+				ytab = ytab - 1
+		if tab[ytab,xtab]==11:
+			moeda = moeda + 1
+			tab[ytab,xtab] = 0
+		elif tab[ytab,xtab] == 22:
+			life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+0.839586
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  0
+posicao y:  0
+moedas:  0
+life:  100
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  0
+posicao y:  0
+moedas:  0
+life:  100
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  0
+posicao y:  0
+moedas:  0
+life:  100
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 00:42:38) 
+-- CODE:
+from numpy import *
+tab = array(eval(input('t: ')))
+mov = input('m: ')
+xtab=int(0)
+ytab=int(0)
+moeda=0
+life=100
+a = shape(tab)[1]-1
+b = shape(tab)[0]-1
+for x in mov:
+	if x == 'A':
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tab[ytab,xtab]==33:
+			xtab = xtab + 1
+		elif x == 'W':
+			ytab = ytab - 1
+			if ytab<0:
+				ytab = ytab + 1
+			if(tab[ytab,xtab]==33):
+				ytab = ytab - 1
+		elif(x == "S"):
+			ytab = ytab + 1
+			if ytab>b:
+				ytab = ytab - 1
+			if tab[ytab,xtab]==33:
+				ytab = ytab - 1
+		if tab[ytab,xtab]==11:
+			moeda = moeda + 1
+			tab[ytab,xtab] = 0
+		elif tab[ytab,xtab] == 22:
+			life = life - 5
+	print("posicao x: ", xtab)
+	print("posicao y: ", ytab)
+	print("moedas: ", moeda)
+	print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 00:43:42) 
+-- CODE:
+from numpy import *
+tab = array(eval(input('t: ')))
+mov = input('m: ')
+xtab=int(0)
+ytab=int(0)
+moeda=0
+life=100
+a = shape(tab)[1]-1
+b = shape(tab)[0]-1
+for x in mov:
+	if x == 'A':
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tab[ytab,xtab]==33:
+			xtab = xtab + 1
+		elif x == 'W':
+			ytab = ytab - 1
+			if ytab<0:
+				ytab = ytab + 1
+			if(tab[ytab,xtab]==33):
+				ytab = ytab - 1
+		elif(x == "S"):
+			ytab = ytab + 1
+			if ytab>b:
+				ytab = ytab - 1
+			if tab[ytab,xtab]==33:
+				ytab = ytab - 1
+		if tab[ytab,xtab]==11:
+			moeda = moeda + 1
+			tab[ytab,xtab] = 0
+		elif tab[ytab,xtab] == 22:
+			life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 00:45:33) 
+-- CODE:
+from numpy import *
+tab = array(eval(input('t: ')))
+mov = input('m: ')
+xtab=int(0)
+ytab=int(0)
+moeda=0
+life=100
+a = shape(tab)[1]-1
+b = shape(tab)[0]-1
+for x in mov:
+	if x == 'A':
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tab[ytab,xtab]==33:
+			xtab = xtab + 1
+		elif x == 'W':
+			ytab = ytab - 1
+			if ytab<0:
+				ytab = ytab + 1
+			if(tab[ytab,xtab]==33):
+				ytab = ytab - 1
+		elif(x == "S"):
+			ytab = ytab + 1
+			if ytab>b:
+				ytab = ytab - 1
+			if tab[ytab,xtab]==33:
+				ytab = ytab - 1
+	if tab[ytab,xtab]==11:
+			moeda = moeda + 1
+			tab[ytab,xtab] = 0
+	elif tab[ytab,xtab] == 22:
+			life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 00:45:38) 
+-- CODE:
+from numpy import *
+tab = array(eval(input('t: ')))
+mov = input('m: ')
+xtab=int(0)
+ytab=int(0)
+moeda=0
+life=100
+a = shape(tab)[1]-1
+b = shape(tab)[0]-1
+for x in mov:
+	if x == 'A':
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tab[ytab,xtab]==33:
+			xtab = xtab + 1
+		elif x == 'W':
+			ytab = ytab - 1
+			if ytab<0:
+				ytab = ytab + 1
+			if(tab[ytab,xtab]==33):
+				ytab = ytab - 1
+		elif(x == "S"):
+			ytab = ytab + 1
+			if ytab>b:
+				ytab = ytab - 1
+			if tab[ytab,xtab]==33:
+				ytab = ytab - 1
+	if tab[ytab,xtab]==11:
+			moeda = moeda + 1
+			tab[ytab,xtab] = 0
+	elif tab[ytab,xtab] == 22:
+			life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.04758
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  0
+posicao y:  0
+moedas:  0
+life:  100
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  0
+posicao y:  0
+moedas:  0
+life:  100
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  0
+posicao y:  0
+moedas:  0
+life:  100
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 00:46:01) 
+-- CODE:
+from numpy import *
+tab = array(eval(input('t: ')))
+mov = input('m: ')
+xtab=int(0)
+ytab=int(0)
+moeda=0
+life=100
+a = shape(tab)[1]-1
+b = shape(tab)[0]-1
+for x in mov:
+	if x == 'A':
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tab[ytab,xtab]==33:
+			xtab = xtab + 1
+		elif x == 'W':
+			ytab = ytab - 1
+			if ytab<0:
+				ytab = ytab + 1
+			if(tab[ytab,xtab]==33):
+				ytab = ytab - 1
+		elif(x == "S"):
+			ytab = ytab + 1
+			if ytab>b:
+				ytab = ytab - 1
+			if tab[ytab,xtab]==33:
+				ytab = ytab - 1
+	if tab[ytab,xtab]==11:
+			moeda = moeda + 1
+			tab[ytab,xtab] = 0
+	elif tab[ytab,xtab] == 22:
+			life = life - 5
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.11526
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  0
+posicao y:  0
+moedas:  0
+life:  100
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  0
+posicao y:  0
+moedas:  0
+life:  100
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  0
+posicao y:  0
+moedas:  0
+life:  100
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,710 @@
+== TEST (2019-05-23 21:49:11) 
+-- CODE:
+s = input()
+
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0):
+		s = s[:i-1] + "." + s[i:]
+	
+	i = i + 1
+	
+print(s)
+-- OUTPUT:
+12.123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 21:51:28) 
+-- CODE:
+s = input()
+
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0):
+		s = s[:i] + "." + s[i:]
+	
+	i = i + 1
+	
+print(s)
+-- OUTPUT:
+.12.3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 21:56:51) 
+-- CODE:
+s = input()
+
+s1 = ""
+
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0):
+		s1 = s1[:i] + "." + s[i:]
+	
+	i = i + 1
+	
+print(s1)
+-- OUTPUT:
+.123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-23 22:11:55) 
+-- CODE:
+s = input()
+
+s1 = ""
+
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0):
+		s1 = s[:i] + "."
+	
+	i = i + 1
+	
+print(s1)
+-- EXECUTION TIME:
+0.147419
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+.
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123456789000987654.
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987654.
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 22:11:56) 
+-- CODE:
+s = input()
+
+s1 = ""
+
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0):
+		s1 = s[:i] + "."
+	
+	i = i + 1
+	
+print(s1)
+-- OUTPUT:
+.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 22:39:27) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+p = 0
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0):
+		p = p + 1
+	i = i + 1
+
+s1 = zeros(len(s) + p, dtype = str)
+
+i = 0
+j = 0
+while(i < len(s)):
+	if(i % 3 == 0):
+		s1[j] = s[:i]
+	i = i + 1
+
+print(s1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 22:40:43) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+p = 0
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		p = p + 1
+	i = i + 1
+
+s1 = zeros(len(s) + p, dtype = str)
+
+i = 0
+j = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		s1[j] = s[:i]
+	i = i + 1
+
+print(s1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 22:44:06) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+p = 0
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		p = p + 1
+	i = i + 1
+
+s1 = zeros(len(s) + p, dtype = str)
+
+i = 0
+j = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		s1[j] = s[:i]
+	i = i + 1
+
+print(s1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 22:44:25) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+p = 0
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		p = p + 1
+	i = i + 1
+
+s1 = zeros(len(s) + p, dtype = str)
+
+i = 0
+j = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		s1[j] = s[:i+1]
+	i = i + 1
+
+print(s1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 22:45:26) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+p = 0
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		p = p + 1
+	i = i + 1
+
+s1 = zeros(len(s) + p, dtype = str)
+
+i = 0
+j = 0
+#while(i < len(s)):
+	#if(i % 3 == 0 and i != 0):
+		#s1[j] = s[:i]
+	#i = i + 1
+
+print(s1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 22:49:45) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+p = 0
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		p = p + 1
+	i = i + 1
+
+s1 = zeros(len(s) + p, dtype = str)
+
+i = 0
+j = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		s1[j] = s[:i+2]
+	i = i + 1
+
+print(s1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 22:52:39) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+p = 0
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		p = p + 1
+	i = i + 1
+
+s1 = arange(len(s) + p, dtype = str)
+
+i = 0
+j = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		s1[j] = s[:i]
+	i = i + 1
+
+print(s1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 22:53:41) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+p = 0
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		p = p + 1
+	i = i + 1
+
+s1 = array(len(s) + p, dtype = str)
+
+i = 0
+j = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		s1[j] = s[:i]
+	i = i + 1
+
+print(s1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 22:55:04) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+p = 0
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		p = p + 1
+	i = i + 1
+
+s1 = array(len(s) + p, dtype = str)
+
+i = 0
+j = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		s1[j] = s[:i]
+	i = i + 1
+
+print(s1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 23:00:06) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+s1 = array([], dtype = str)
+
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		s1 = append(s1, [s[:i]])
+	i = i + 1
+
+print(s1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 23:19:08) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+s1 = array([], dtype = str)
+
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		s1 = append(s1, [s[i-3:i]])
+		
+	i = i + 1
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 23:19:31) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+s1 = array([], dtype = str)
+
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		s1 = append(s1, [s[i-3:i]])
+		
+	i = i + 1
+	
+print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 23:19:48) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+s1 = array([], dtype = str)
+
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		s1 = append(s1, [s[i-3:i]])
+		
+	i = i + 1
+	
+print(s1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 00:39:07) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+s1 = array([], dtype = str)
+
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		s1 = append(s1, [s[i-3:i] + "."])
+		j = i
+	i = i + 1
+
+s1 = append(s1, [s[j:]])
+
+print(s1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 00:44:04) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+s1 = array([], dtype = str)
+
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		s1 = append(s1, [s[i-3:i] + "."])
+		j = i
+	i = i + 1
+	
+s1 = append(s1, [s[j:]])
+
+s = ""
+i = 0
+while(i < size(s1)):
+	s = s + s1[i]
+	i = i + 1
+
+print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-24 00:44:15) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+s1 = array([], dtype = str)
+
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		s1 = append(s1, [s[i-3:i] + "."])
+		j = i
+	i = i + 1
+	
+s1 = append(s1, [s[j:]])
+
+s = ""
+i = 0
+while(i < size(s1)):
+	s = s + s1[i]
+	i = i + 1
+
+print(s)
+-- EXECUTION TIME:
+0.495024
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1756/1583/main.py", line 14, in <module>
+    s1 = append(s1, [s[j:]])
+NameError: name 'j' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 00:44:34) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+s1 = array([], dtype = str)
+
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		s1 = append(s1, [s[i-3:i] + "."])
+		j = i
+	i = i + 1
+	
+s1 = append(s1, [s[j:]])
+
+s = ""
+i = 0
+while(i < size(s1)):
+	s = s + s1[i]
+	i = i + 1
+
+print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 00:44:57) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+s1 = array([], dtype = str)
+
+i = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		s1 = append(s1, [s[i-3:i] + "."])
+		j = i
+	i = i + 1
+	
+s1 = append(s1, [s[j:]])
+
+s = ""
+i = 0
+while(i < size(s1)):
+	s = s + s1[i]
+	i = i + 1
+
+print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 00:46:08) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+s1 = array([], dtype = str)
+
+i = 0
+j = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		s1 = append(s1, [s[i-3:i] + "."])
+		j = i
+	i = i + 1
+	
+s1 = append(s1, [s[j:]])
+
+s = ""
+i = 0
+while(i < size(s1)):
+	s = s + s1[i]
+	i = i + 1
+
+print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 00:46:18) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+s1 = array([], dtype = str)
+
+i = 0
+j = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		s1 = append(s1, [s[i-3:i] + "."])
+		j = i
+	i = i + 1
+	
+s1 = append(s1, [s[j:]])
+
+s = ""
+i = 0
+while(i < size(s1)):
+	s = s + s1[i]
+	i = i + 1
+
+print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-24 00:46:24) 
+-- CODE:
+from numpy import*
+
+s = input()
+
+s1 = array([], dtype = str)
+
+i = 0
+j = 0
+while(i < len(s)):
+	if(i % 3 == 0 and i != 0):
+		s1 = append(s1, [s[i-3:i] + "."])
+		j = i
+	i = i + 1
+	
+s1 = append(s1, [s[j:]])
+
+s = ""
+i = 0
+while(i < size(s1)):
+	s = s + s1[i]
+	i = i + 1
+
+print(s)
+-- EXECUTION TIME:
+0.42189
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789.000.987.654.321
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

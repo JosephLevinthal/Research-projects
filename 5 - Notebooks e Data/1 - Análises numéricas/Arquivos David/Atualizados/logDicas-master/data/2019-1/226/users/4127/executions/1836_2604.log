@@ -1,0 +1,125 @@
+== SUBMITION (2019-07-01 14:30:01) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+m= array(eval(input("aa")))
+v= zeros(shape(m)[1],dtype=int)
+for i in range(4):
+	for j in range(4):
+		v[j]=m[j,i]
+		v= sorted(v, reverse=True)
+		for k in range(4):
+			m[k,i]=v[k]
+print(m)
+-- EXECUTION TIME:
+0.933753
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1836/2604/main.py", line 11, in <module>
+    m[k,i]=v[k]
+IndexError: index 3 is out of bounds for axis 0 with size 3
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 14:37:09) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v= array(eval(input("digite as horas dos funcionarios:")))
+
+vet= shape(v)[0]
+
+ve= zeros((vet),dtype=int)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 14:37:52) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v= array(eval(input("digite as horas dos funcionarios:")))
+
+vet= shape(v)[0]
+
+ve= zeros((vet),dtype=int)
+
+print(ve)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 14:40:53) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+m= array(eval(input("digite as horas dos funcionarios:")))
+v=zeros(shape(m)[0],dtype=float)
+v2=zeros(shape(m)[1],dtype=float)
+
+a=0
+b=0
+
+for i in range(size(v)):
+	for j in range(size(7)):
+		v2[j]=m[i,j]
+	v[i]=max(v2)
+for i in range(size(v)):
+	print(v[i])
+-- EXECUTION TIME:
+1.09586
+-- TEST CASE 1:
+---- input:
+[[34.5,67.8,89.7,56.4,65.7,78.9,81.2],[99.9,67.8,87.6,45.4,12.3,45.5,23.7],[27.5,93.1,45.9,47.3,19.2,76.5,49.3]]
+---- correct output:
+89.7
+99.9
+93.1
+---- user output:
+34.5
+99.9
+27.5
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 14:41:57) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+m= array(eval(input("digite as horas dos funcionarios:")))
+v=zeros(shape(m)[0],dtype=float)
+v2=zeros(shape(m)[1],dtype=float)
+
+a=0
+b=0
+
+for i in range(size(v)):
+	for j in range(7):
+		v2[j]=m[i,j]
+	v[i]=max(v2)
+for i in range(size(v)):
+	print(v[i])
+-- EXECUTION TIME:
+1.29225
+-- TEST CASE 1:
+---- input:
+[[34.5,67.8,89.7,56.4,65.7,78.9,81.2],[99.9,67.8,87.6,45.4,12.3,45.5,23.7],[27.5,93.1,45.9,47.3,19.2,76.5,49.3]]
+---- correct output:
+89.7
+99.9
+93.1
+---- user output:
+89.7
+99.9
+93.1
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

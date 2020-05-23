@@ -1,0 +1,47 @@
+== TEST (2019-05-02 10:48:51) 
+-- CODE:
+a = int(input("num apostado c dois digitos: "))
+b = int(input("num sorteado pela loteria: "))
+dig1a= a//10
+dig2a= dig1a%10
+print(dig2a)
+-- OUTPUT:
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:49:29) 
+-- CODE:
+a = int(input("num apostado c dois digitos: "))
+b = int(input("num sorteado pela loteria: "))
+dig1a= a//10
+dig2a= a%10
+print(dig2a)
+-- OUTPUT:
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 10:56:50) 
+-- CODE:
+a = int(input("num apostado c dois digitos: "))
+b = int(input("num sorteado pela loteria: "))
+dig1a= a//10
+dig2a= a%10
+dig1b= b//10
+dig2b= b%10
+if(a==b):
+	print("Ganhou R$ 100.000,00")
+elif(dig1a==dig2b and dig2a==dig1b):
+	print("Ganhou R$ 50.000,00")
+elif(dig1a==dig1b or dig2a==dig1b or dig1a==dig2b or dig2a=dig2b):
+	print("Ganhou R$ 1.000,00")
+else:
+	print("perdeu")
+	
+
+-- EXECUTION TIME:
+0.165641
+-- ERROR:
+  File "/home/codebench/codes/1675/1949/main.py", line 11
+    elif(dig1a==dig1b or dig2a==dig1b or dig1a==dig2b or dig2a=dig2b):
+                                                              ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

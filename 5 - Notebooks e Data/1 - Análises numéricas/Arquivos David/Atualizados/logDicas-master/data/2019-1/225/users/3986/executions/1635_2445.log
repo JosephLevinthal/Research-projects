@@ -1,0 +1,580 @@
+== TEST (2019-04-14 19:51:41) 
+-- CODE:
+t=float(input("escala da temperatura C/F :"))
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= 5 / 9 (F - 32)
+
+F= 9 /  5 (C + 32)
+
+if (c == 320.0) :
+ print(C)
+	
+else :
+	
+-- ERROR:
+File "XXXX", line 15
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 19:51:54) 
+-- CODE:
+t=float(input("escala da temperatura C/F :"))
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= 5 / 9 (F - 32)
+
+F= 9 /  5 (C + 32)
+
+if (c == 320.0) :
+ print(C)
+	
+else :
+	print(F)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    t=float(input())
+ValueError: could not convert string to float: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 19:52:31) 
+-- CODE:
+t=float(input("escala da temperatura C/F :"))
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= 5 / 9 (F - 32)
+
+F= 9 /  5 (C + 32)
+
+if (c == 320.0) :
+	print(C)
+	
+else :
+	print(F)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    t=float(input())
+ValueError: could not convert string to float: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 19:53:03) 
+-- CODE:
+t=input("escala da temperatura C/F :")
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= 5 / 9 (F - 32)
+
+F= 9 /  5 (C + 32)
+
+if (c == 320.0) :
+	print(C)
+	
+else :
+	print(F)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    C= 5 / 9 (F - 32)
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 19:54:31) 
+-- CODE:
+t=input("escala da temperatura C/F :")
+vt=float(input("valor da temperatura :"))
+
+from math import *
+C= 5 / 9 (vt - 32)
+
+F= 9 /  5 ( vt + 32)
+
+if (c == 320.0) :
+	print(C)
+	
+else :
+	print(F)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    C= 5 / 9 (vt - 32)
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 19:55:41) 
+-- CODE:
+t=input("escala da temperatura C/F :")
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= (5 / 9 ) * (vt - 32)
+
+F= (9 /  5) * ( vt + 32)
+
+if (c == 320.0) :
+	print(C)
+	
+else :
+	print(F)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 10, in <module>
+    if (c == 320.0) :
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 19:57:01) 
+-- CODE:
+t=input("escala da temperatura C/F :")
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= (5 / 9 ) * (vt - 32)
+
+F= (9 /  5) * ( vt + 32)
+
+if (t == C) :
+	print(F)
+	
+else :
+	print(C)
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 19:57:49) 
+-- CODE:
+t=input("escala da temperatura C/F :")
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= (5 / 9 ) * (vt - 32)
+
+F= (9 /  5) * ( vt + 32)
+
+if (t == "C") :
+	print(F)
+	
+else :
+	print(C)
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 19:58:11) 
+-- CODE:
+t=input("escala da temperatura C/F :")
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= (5 / 9 ) * (vt - 32)
+
+F= (9 /  5) * ( vt + 32)
+
+if (t == "C") :
+	print(F)
+	
+else :
+	print(C)
+-- EXECUTION TIME:
+0.173963
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+633.6
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+57.6
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 19:58:37) 
+-- CODE:
+t=input("escala da temperatura C/F :")
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= (5 / 9 ) * (vt - 32)
+
+F= (9 / 5) * ( vt + 32)
+
+if (t == "C") :
+	print(round(F, 2)
+	
+else :
+	print(round(C , 2))
+-- EXECUTION TIME:
+0.213829
+-- ERROR:
+  File "/home/codebench/codes/1635/2445/main.py", line 13
+    else :
+       ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 19:58:39) 
+-- CODE:
+t=input("escala da temperatura C/F :")
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= (5 / 9 ) * (vt - 32)
+
+F= (9 / 5) * ( vt + 32)
+
+if (t == "C") :
+	print(round(F, 2)
+	
+else :
+	print(round(C , 2))
+-- ERROR:
+File "XXXX", line 13
+    else :
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 19:58:41) 
+-- CODE:
+t=input("escala da temperatura C/F :")
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= (5 / 9 ) * (vt - 32)
+
+F= (9 / 5) * ( vt + 32)
+
+if (t == "C") :
+	print(round(F, 2)
+	
+else :
+	print(round(C , 2))
+-- ERROR:
+File "XXXX", line 13
+    else :
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 19:58:49) 
+-- CODE:
+t=input("escala da temperatura C/F :")
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= (5 / 9 ) * (vt - 32)
+
+F= (9 / 5) * ( vt + 32)
+
+if (t == "C") :
+	print(round(F, 2))
+	
+else :
+	print(round(C , 2))
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 19:58:56) 
+-- CODE:
+t=input("escala da temperatura C/F :")
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= (5 / 9 ) * (vt - 32)
+
+F= (9 / 5) * ( vt + 32)
+
+if (t == "C") :
+	print(round(F, 2))
+	
+else :
+	print(round(C , 2))
+-- EXECUTION TIME:
+0.165059
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+633.6
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+57.6
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 19:59:23) 
+-- CODE:
+t=input("escala da temperatura C/F :")
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= (5 / 9 ) * (vt - 32)
+
+F= (9 / 5) * ( vt + 32)
+
+if (t == "C") :
+	print(round(F, 2))
+	
+else :
+	print(round(C , 2))
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:00:40) 
+-- CODE:
+t=input("escala da temperatura C/F :")
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= (5 / 9 ) * (vt - 32)
+
+F= (9 / 5) * ( vt + 32)
+
+if (t op.upper() == "C") :
+	print(round(F, 2))
+	
+else :
+	print(round(C , 2))
+-- ERROR:
+File "XXXX", line 10
+    if (t op.upper() == "C") :
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:01:18) 
+-- CODE:
+t=input("escala da temperatura C/F :")
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= (5 / 9 ) * (vt - 32)
+
+F= (9 / 5) * ( vt + 32)
+
+if (t.upper() == "C") :
+	print(round(F, 2))
+	
+else :
+	print(round(C , 2))
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 20:01:27) 
+-- CODE:
+t=input("escala da temperatura C/F :")
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= (5 / 9 ) * (vt - 32)
+
+F= (9 / 5) * ( vt + 32)
+
+if (t.upper() == "C") :
+	print(round(F, 2))
+	
+else :
+	print(round(C , 2))
+-- EXECUTION TIME:
+0.200276
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+633.6
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+57.6
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:02:06) 
+-- CODE:
+t=input("escala da temperatura C/F :")
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= (5 / 9 ) * (vt - 32)
+
+F= (9 / 5) * ( vt + 32)
+
+if (t.upper() == "C") :
+	print(round(F, 2))
+	
+else :
+	print(round(C , 2))
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:29:41) 
+-- CODE:
+t=input("escala da temperatura C/F :")
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= (5 / 9 ) * (vt - 32)
+
+F= 9 / 5 * (vt + 160)
+
+if (t.upper() == "C") :
+	print(round(F, 2))
+	
+else :
+	print(round(C , 2))
+-- OUTPUT:
+864.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 20:30:01) 
+-- CODE:
+t=input("escala da temperatura C/F :")
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= (5 / 9 ) * (vt - 32)
+
+F= 9 / 5 * (vt + 160)
+
+if (t.upper() == "C") :
+	print(round(F, 2))
+	
+else :
+	print(round(C , 2))
+-- EXECUTION TIME:
+0.139198
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+864.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+288.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 20:32:14) 
+-- CODE:
+t=input("escala da temperatura C/F :")
+vt=float(input("valor da temperatura :"))
+
+from math import *
+
+C= (5 / 9 ) * (vt - 32)
+
+F= ((9 / 5) * vt) + 32
+
+if (t.upper() == "C") :
+	print(round(F, 2))
+	
+else :
+	print(round(C , 2))
+-- EXECUTION TIME:
+0.197442
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,295 @@
+== TEST (2019-05-15 11:53:51) 
+-- CODE:
+x = (int("Input")) 
+acu == 0
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    x = (int("Input")) 
+ValueError: invalid literal for int() with base 10: 'Input'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 11:54:11) 
+-- CODE:
+x = int(("Input") 
+acu == 0
+-- ERROR:
+File "XXXX", line 2
+    acu == 0
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 11:55:15) 
+-- CODE:
+x = int(Input("valor de x")) 
+acu == 0
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    x = int(Input("valor de x")) 
+NameError: name 'Input' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 11:55:45) 
+-- CODE:
+x = int(input("valor de x")) 
+acu == 0
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    acu == 0
+NameError: name 'acu' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 11:57:17) 
+-- CODE:
+x = int(input("valor de x")) 
+acu == 0
+while (x != -1):
+	acu = x + 1
+print(acu)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    acu == 0
+NameError: name 'acu' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 11:57:38) 
+-- CODE:
+x = int(input("valor de x")) 
+acu = 0
+while (x != -1):
+	acu = x + 1
+print(acu)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    acu == 0
+NameError: name 'acu' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 11:58:53) 
+-- CODE:
+x = int(input("valor de x")) 
+acu = 0
+while (x != -1):
+	acu = x + 1
+print(acu)
+x = int(input("proximo valor de x"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    acu == 0
+NameError: name 'acu' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 11:59:39) 
+-- CODE:
+x = int(input("valor de x")) 
+acu = 0
+while (x != -1):
+	acu = x + 1
+	x = int(input("proximo valor de x"))
+	print(acu)
+
+-- OUTPUT:
+-524
+1076
+334
+-8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 12:00:19) 
+-- CODE:
+x = int(input("valor de x")) 
+acu = 0
+while (x != -1):
+	acu = x + 1
+	x = int(input("proximo valor de x"))
+	print(acu)
+
+-- EXECUTION TIME:
+0.120326
+-- TEST CASE 1:
+---- input:
+-525
+1075
+333
+-9
+-1
+
+---- correct output:
+874
+---- user output:
+-524
+1076
+334
+-8
+-- TEST CASE 2:
+---- input:
+0
+0
+0
+0
+0
+0
+0
+-1
+---- correct output:
+0
+---- user output:
+1
+1
+1
+1
+1
+1
+1
+-- TEST CASE 3:
+---- input:
+10953
+32653
+-10953
+-1
+---- correct output:
+32653
+---- user output:
+10954
+32654
+-10952
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 12:00:20) 
+-- CODE:
+x = int(input("valor de x")) 
+acu = 0
+while (x != -1):
+	acu = x + 1
+	x = int(input("proximo valor de x"))
+	print(acu)
+
+-- OUTPUT:
+-524
+1076
+334
+-8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 12:00:20) 
+-- CODE:
+x = int(input("valor de x")) 
+acu = 0
+while (x != -1):
+	acu = x + 1
+	x = int(input("proximo valor de x"))
+	print(acu)
+
+-- OUTPUT:
+-524
+1076
+334
+-8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 12:00:42) 
+-- CODE:
+x = int(input("valor de x")) 
+acu = 0
+while (x != -1):
+	acu = x + 1
+	x = int(input("proximo valor de x"))
+	print(acu)
+
+-- OUTPUT:
+-524
+1076
+334
+-8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 12:01:07) 
+-- CODE:
+x = int(input("valor de x")) 
+acu = 0
+while (x != -1):
+	acu = x + 1
+	x = int(input("proximo valor de x"))
+	print(acu)
+
+-- OUTPUT:
+-524
+1076
+334
+-8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 12:02:18) 
+-- CODE:
+x = int(input("valor de x")) 
+acu = 0
+while (x != -1):
+	acu = x + 1
+	x = int(input("proximo valor de x"))
+	print(acu)
+i
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    i
+NameError: name 'i' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 12:02:51) 
+-- CODE:
+x = int(input("valor de x")) 
+acu = 0
+while (x != -1):
+	acu = x + 1
+	x = int(input("proximo valor de x"))
+	print(acu)
+if (x == -1):
+	print(INVALIDO)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(INVALIDO)
+NameError: name 'INVALIDO' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 12:03:05) 
+-- CODE:
+x = int(input("valor de x")) 
+acu = 0
+while (x != -1):
+	acu = x + 1
+	x = int(input("proximo valor de x"))
+	print(acu)
+if (x == -1):
+	print("INVALIDO":)
+-- ERROR:
+File "XXXX", line 8
+    print("INVALIDO":)
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 12:03:54) 
+-- CODE:
+x = int(input("valor de x")) 
+acu = 0
+while (x != -1):
+	acu = x + 1
+	x = int(input("proximo valor de x"))
+	print(acu)
+if (x == -1):
+	print("x",e "invalido":)
+-- ERROR:
+File "XXXX", line 8
+    print("x",e "invalido":)
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 12:05:11) 
+-- CODE:
+x = int(input("valor de x")) 
+acu = 0
+while (x != -1):
+	acu = x + 1
+	x = int(input("proximo valor de x"))
+	print(acu)
+if (x == -1):
+	print("x",e "invalido",)
+-- ERROR:
+File "XXXX", line 8
+    print("x",e "invalido",)
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

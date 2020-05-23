@@ -1,0 +1,1 @@
+VarInic = float(input('))

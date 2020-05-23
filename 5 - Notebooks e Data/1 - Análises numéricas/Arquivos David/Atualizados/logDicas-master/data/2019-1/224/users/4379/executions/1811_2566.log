@@ -1,0 +1,52 @@
+== SUBMITION (2019-06-11 19:44:28) 
+-- CODE:
+from numpy import *
+faltas = array(eval(input("digite as semanas de falta: ")))
+s,t,q,qi,sex,sab = 0,0,0,0,0,0
+for pos in faltas:
+	if(pos == 2):
+		s = s + 1
+	if(pos == 3):
+		t = t + 1
+	if(pos == 4):
+		q = q + 1
+	if(pos == 5):
+		qi = qi + 1
+	if(pos == 6):
+		sex = sex + 1
+	if(pos == 7):
+		sab = sab + 1
+z = zeros(6,dtype = float)
+z[0] = round((s/size(faltas)) * 100,1)
+z[1] = round((t/size(faltas)) * 100,1)
+z[2] = round((q/size(faltas)) * 100,1)
+z[3] = round((qi/size(faltas)) * 100,1)
+z[4] = round((sex/size(faltas)) * 100,1)
+z[5] = round((sab/size(faltas)) * 100,1)
+print(z)
+-- EXECUTION TIME:
+1.07258
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.  18.8 25.  37.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 4.  8. 16. 20. 20. 32.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[15.4  7.7 23.1  7.7 15.4 30.8]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

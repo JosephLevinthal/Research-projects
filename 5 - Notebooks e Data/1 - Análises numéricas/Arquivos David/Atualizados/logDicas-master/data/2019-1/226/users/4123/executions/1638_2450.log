@@ -1,0 +1,133 @@
+== TEST (2019-04-09 10:16:39) 
+-- CODE:
+nom1 = input()
+nom2 = input()
+
+if nom1>nom2:
+	print(.upper(nom1))
+else:
+	print(.upper(nom2))
+-- ERROR:
+File "XXXX", line 5
+    print(.upper(nom1))
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:16:54) 
+-- CODE:
+nom1 = input()
+nom2 = input()
+
+if nom1>nom2:
+	print(nom1.upper())
+else:
+	print(nom2.upper())
+-- OUTPUT:
+LEON
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:17:58) 
+-- CODE:
+nom1 = input()
+nom2 = input()
+
+if nom1>nom2:
+	print(nom1.upper())
+	print(nom2.upper())
+else:
+	print(nom2.upper())
+	print(nom1.upper())
+-- OUTPUT:
+LEON
+ADA
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:18:18) 
+-- CODE:
+nom1 = input()
+nom2 = input()
+
+if nom1>nom2:
+	print(nom2.upper())
+	print(nom1.upper())
+else:
+	print(nom1.upper())
+	print(nom2.upper())
+-- OUTPUT:
+ADA
+LEON
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:19:21) 
+-- CODE:
+nom1 = input()
+nom2 = input()
+
+if nom1.upper()>nom2.upper():
+	print(nom1)
+	print(nom2)
+else:
+	print(nom2)
+	print(nom1)
+-- OUTPUT:
+Leon
+Ada
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:19:34) 
+-- CODE:
+nom1 = input()
+nom2 = input()
+
+if nom1.upper()<nom2.upper():
+	print(nom1)
+	print(nom2)
+else:
+	print(nom2)
+	print(nom1)
+-- OUTPUT:
+Ada
+Leon
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 10:19:44) 
+-- CODE:
+nom1 = input()
+nom2 = input()
+
+if nom1.upper()<nom2.upper():
+	print(nom1)
+	print(nom2)
+else:
+	print(nom2)
+	print(nom1)
+-- EXECUTION TIME:
+0.156794
+-- TEST CASE 1:
+---- input:
+Ada
+Leon
+---- correct output:
+Ada
+Leon
+---- user output:
+Ada
+Leon
+-- TEST CASE 2:
+---- input:
+Marcos
+Demetrius
+---- correct output:
+Demetrius
+Marcos
+---- user output:
+Demetrius
+Marcos
+-- TEST CASE 3:
+---- input:
+WILSON
+george
+---- correct output:
+george
+WILSON
+---- user output:
+george
+WILSON
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

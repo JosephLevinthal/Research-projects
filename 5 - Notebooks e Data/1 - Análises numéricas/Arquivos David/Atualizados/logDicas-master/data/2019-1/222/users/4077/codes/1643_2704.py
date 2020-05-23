@@ -1,0 +1,4 @@
+nota = float(input("nota: "
+	
+	
+

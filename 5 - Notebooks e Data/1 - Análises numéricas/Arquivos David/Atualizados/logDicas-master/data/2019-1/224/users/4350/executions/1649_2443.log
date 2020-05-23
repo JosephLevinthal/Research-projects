@@ -1,0 +1,143 @@
+== TEST (2019-04-16 00:04:19) 
+-- CODE:
+math import
+r = float(input("raio"))
+x = float(input("ar"))
+o = float(input("escolha"))
+a = pi/3*(x**2)*(3 * r - x)
+print(a)
+-- ERROR:
+File "XXXX", line 1
+    math import
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:04:28) 
+-- CODE:
+import math
+r = float(input("raio"))
+x = float(input("ar"))
+o = float(input("escolha"))
+a = pi/3*(x**2)*(3 * r - x)
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    a = pi/3*(x**2)*(3 * r - x)
+NameError: name 'pi' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:04:37) 
+-- CODE:
+import math
+r = float(input("raio"))
+x = float(input("ar"))
+o = float(input("escolha"))
+a = math.pi/3*(x**2)*(3 * r - x)
+print(a)
+-- OUTPUT:
+9.025664794069575
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:06:55) 
+-- CODE:
+import math
+r = float(input("raio"))
+x = float(input("ar"))
+e = float(input("escolha"))
+a = math.pi/3*(x**2)*(3 * r - x)
+if e = 1:
+	v = a
+else:
+	v = 4/3*math.pi*(r**3) - a
+print(round(v, 2))
+-- ERROR:
+File "XXXX", line 6
+    if e = 1:
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:07:03) 
+-- CODE:
+import math
+r = float(input("raio"))
+x = float(input("ar"))
+e = float(input("escolha"))
+a = math.pi/3*(x**2)*(3 * r - x)
+if e = 1:
+	v = a
+else:
+	v = 4/3*math.pi*(r**3) - a
+print(round(v, 4))
+-- ERROR:
+File "XXXX", line 6
+    if e = 1:
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:07:12) 
+-- CODE:
+import math
+r = float(input("raio"))
+x = float(input("ar"))
+e = float(input("escolha"))
+a = math.pi/3*(x**2)*(3 * r - x)
+if (e = 1):
+	v = a
+else:
+	v = 4/3*math.pi*(r**3) - a
+print(round(v, 4))
+-- ERROR:
+File "XXXX", line 6
+    if (e = 1):
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:07:21) 
+-- CODE:
+import math
+r = float(input("raio"))
+x = float(input("ar"))
+e = float(input("escolha"))
+a = math.pi/3*(x**2)*(3 * r - x)
+if (e == 1):
+	v = a
+else:
+	v = 4/3*math.pi*(r**3) - a
+print(round(v, 4))
+-- OUTPUT:
+9.0257
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 00:07:27) 
+-- CODE:
+import math
+r = float(input("raio"))
+x = float(input("ar"))
+e = float(input("escolha"))
+a = math.pi/3*(x**2)*(3 * r - x)
+if (e == 1):
+	v = a
+else:
+	v = 4/3*math.pi*(r**3) - a
+print(round(v, 4))
+-- EXECUTION TIME:
+0.170853
+-- TEST CASE 1:
+---- input:
+3.50
+0.95
+1
+---- correct output:
+9.0257
+---- user output:
+9.0257
+-- TEST CASE 2:
+---- input:
+4.20
+1.30
+2
+---- correct output:
+290.3408
+---- user output:
+290.3408
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

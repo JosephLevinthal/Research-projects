@@ -1,0 +1,5 @@
+g = float(input("quantas gramas:"))
+b = float(input("quantas bebidas:"))
+s = float(input("quantas sobremesas:"))
+t = (((g/1000)*26.90)+(b*3.50)+(s*3))
+print(round(t,2))

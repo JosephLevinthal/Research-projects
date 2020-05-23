@@ -1,0 +1,375 @@
+== TEST (2019-03-30 15:37:33) 
+-- CODE:
+print(oi*4)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    print(oi*4)
+NameError: name 'oi' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 15:37:48) 
+-- CODE:
+print("oi"*4)
+-- OUTPUT:
+oioioioi
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 15:38:51) 
+-- CODE:
+texto = ()
+print("abra " + texto* 4)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print("abra " + texto* 4)
+TypeError: must be str, not tuple
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 15:39:31) 
+-- CODE:
+texto = ("abra ")
+print(texto* 4)
+-- OUTPUT:
+abra abra abra abra
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 15:39:52) 
+-- CODE:
+texto = ("abra " + )
+print(texto* 4)
+-- ERROR:
+File "XXXX", line 1
+    texto = ("abra " + )
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 15:40:04) 
+-- CODE:
+texto = ("abra " + input() )
+print(texto* 4)
+-- OUTPUT:
+abra livroabra livroabra livroabra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 15:40:25) 
+-- CODE:
+texto = ("abra " + input ( ) )
+print(texto* 4)
+-- OUTPUT:
+abra livroabra livroabra livroabra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 15:40:39) 
+-- CODE:
+texto = ("abra  " + input ( ) )
+print(texto* 4)
+-- OUTPUT:
+abra  livroabra  livroabra  livroabra  livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 15:41:01) 
+-- CODE:
+texto = ("abra " + input (  ) )
+print(texto * 4)
+-- OUTPUT:
+abra livroabra livroabra livroabra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 15:41:22) 
+-- CODE:
+texto = ("abra " + input ("nome do bjeto:" ) )
+print(texto * 4)
+-- OUTPUT:
+abra livroabra livroabra livroabra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:01:48) 
+-- CODE:
+texto = ("abra + " + input ("nome do bjeto:" ) )
+print(texto * 4)
+-- OUTPUT:
+abra + livroabra + livroabra + livroabra + livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:02:58) 
+-- CODE:
+texto = ("abra " + texto2(input("nome do objeto: ")) ) 
+print(texto * 4)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    texto = ("abra " + texto2(input()) ) 
+NameError: name 'texto2' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:03:14) 
+-- CODE:
+texto = ("abra " + ())
+print(texto * 4)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    texto = ("abra " + ())
+TypeError: must be str, not tuple
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:03:27) 
+-- CODE:
+texto = ("abra " + input())
+print(texto * 4)
+-- OUTPUT:
+abra livroabra livroabra livroabra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:08:51) 
+-- CODE:
+A = input("nome do objeto: ")
+print("Abra" + texto * 4)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print("Abra" + texto * 4)
+NameError: name 'texto' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:09:01) 
+-- CODE:
+A = input("nome do objeto: ")
+print("Abra" + A * 4)
+-- OUTPUT:
+Abralivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:09:29) 
+-- CODE:
+A = input("nome do objeto: ")
+print("Abra " + A * 4)
+-- OUTPUT:
+Abra livrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:09:59) 
+-- CODE:
+A = input("nome do objeto: ")
+print("Abra" + A * 4)
+-- OUTPUT:
+Abralivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:10:19) 
+-- CODE:
+A = input("nome do objeto: ")
+print("Abra" + A) * 4
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print("Abra" + A) * 4
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:17:15) 
+-- CODE:
+A = input("nome do objeto: ")
+print( A* 4 )
+-- OUTPUT:
+livrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:17:28) 
+-- CODE:
+A = input("nome do objeto: ")
+print( A * 4 )
+-- OUTPUT:
+livrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:17:42) 
+-- CODE:
+A = input("nome do objeto: ")
+print( A * 4 )
+-- OUTPUT:
+livrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:17:50) 
+-- CODE:
+A = input("nome do objeto: ")
+print( A * 4 )
+-- OUTPUT:
+livrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:18:26) 
+-- CODE:
+A = input("nome do objeto: ")
+print("Abra" A * 4 )
+-- ERROR:
+File "XXXX", line 2
+    print("Abra" A * 4 )
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:19:14) 
+-- CODE:
+A = input("nome do objeto: ")
+X = ("Abra")
+print( (X + A) * 4)
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:19:30) 
+-- CODE:
+A = input("nome do objeto: ")
+X = ("Abra ")
+print( (X + A) * 4)
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-30 16:19:50) 
+-- CODE:
+A = input("nome do objeto: ")
+X = ("Abra ")
+print( (X + A) * 4)
+-- EXECUTION TIME:
+0.15611
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livroAbra livroAbra livroAbra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carroAbra carroAbra carroAbra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixaAbra caixaAbra caixaAbra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:21:26) 
+-- CODE:
+A = input("nome do objeto: ")
+X = ("Abra ")
+print( (X + A) * 4)
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:21:49) 
+-- CODE:
+A = input("nome do objeto: ")
+X = ("Abra " * 4)
+print( (X + A)
+-- ERROR:
+File "XXXX", line 4
+    
+                  ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:21:59) 
+-- CODE:
+A = input("nome do objeto: ")
+X = ("Abra " * 4)
+print(X + A)
+-- OUTPUT:
+Abra Abra Abra Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:22:32) 
+-- CODE:
+A = input("nome do objeto: " * 4)
+X = ("Abra " * 4)http://codebench.icomp.ufam.edu.br/index.php?r=trabalho%2Fview&id=1601#profile-1801
+print(X + A)
+-- ERROR:
+File "XXXX", line 2
+    X = ("Abra " * 4)http://codebench.icomp.ufam.edu.br/index.php?r=trabalho%2Fview&id=1601#profile-1801
+                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:22:43) 
+-- CODE:
+A = input("nome do objeto: " * 4)
+X = ("Abra " * 4)
+print(X + A)
+-- OUTPUT:
+nome do objeto: nome do objeto: nome do objeto: nome do objeto: Abra Abra Abra Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:22:59) 
+-- CODE:
+A = input("nome do objeto: " (* 4)
+X = ("Abra " * 4)
+print(X + A)
+-- ERROR:
+File "XXXX", line 2
+    X = ("Abra " * 4)
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:23:21) 
+-- CODE:
+A = input("nome do objeto: ")
+X = ("Abra ")
+print( (X + A) * 4)
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:23:30) 
+-- CODE:
+A = input("nome do objeto: ")
+X = ("Abra ")
+print( (X + A) * 4)
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:31:46) 
+-- CODE:
+A = input("nome do objeto: ")
+B = int(input("quantidade de vezes :"))
+C = "Abra "
+objeto = C + A + " "
+feit = b * objeto 
+print (feit)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    feit = b * objeto 
+NameError: name 'b' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 16:32:08) 
+-- CODE:
+A = input("nome do objeto: ")
+B = int(input("quantidade de vezes :"))
+C = "Abra "
+objeto = C + A + " "
+feit = B * objeto 
+print (feit)
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-30 16:32:22) 
+-- CODE:
+A = input("nome do objeto: ")
+B = int(input("quantidade de vezes :"))
+C = "Abra "
+objeto = C + A + " "
+feit = B * objeto 
+print (feit)
+-- EXECUTION TIME:
+0.227037
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

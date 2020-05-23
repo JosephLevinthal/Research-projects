@@ -1,0 +1,6 @@
+var1 = int(input("valor de var1:"))
+var2 = int(input("valor de var2:"))
+var3 = int(input("valor de var3:"))
+print (min(var1,var2,var3))
+print ( var3 )
+print (max(var1,var2,var3))

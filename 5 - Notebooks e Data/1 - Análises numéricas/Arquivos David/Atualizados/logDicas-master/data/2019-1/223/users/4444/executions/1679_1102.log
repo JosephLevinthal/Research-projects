@@ -1,0 +1,222 @@
+== SUBMITION (2019-04-30 17:30:53) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+# Entrada de dados
+x = float(input("Lado x: "))
+y = float(input("Lado y: "))
+z = float(input("Lado z: "))
+
+if ((x < y + z)and(y < x + z)and(z < y + x)):
+		if ((x != y)and (y != z) and(z != x)):
+			print("escaleno")
+else:
+if((x != y)or(y != z)):
+print("isosceles") 
+else:
+print("equilatero")
+else:
+print("Nao é triangulo")
+
+-- EXECUTION TIME:
+0.138838
+-- ERROR:
+  File "/home/codebench/codes/1679/1102/main.py", line 16
+    if((x != y)or(y != z)):
+     ^
+IndentationError: expected an indented block
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 17:59:32) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+from math import *
+# Entrada de dados
+x = float(input("Lado x: "))
+y = float(input("Lado y: "))
+z = float(input("Lado z: "))
+
+if ((x < y + z)and(y < x + z)and(z < y + x)):
+		if ((x != y)and (y != z) and(z != x)):
+			print("escaleno")
+else:
+if((x != y)or(y != z)):
+print("isosceles") 
+else:
+print("equilatero")
+else:
+print("Nao é triangulo")
+
+-- ERROR:
+File "XXXX", line 16
+    if((x != y)or(y != z)):
+     ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 17:59:42) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+from math import *
+
+-- ERROR:
+File "XXXX", line 16
+    if((x != y)or(y != z)):
+     ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 15:11:00) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+from math import *
+H = float(input("altura do tanque: "))
+h = float(input("altura do combustivel no tanque: "))
+r = float(input("raio semiesfericos: "))
+
+Ve = ((4/3)*pi*(r**3))
+se = (2/3*pi*(r**3))
+if((H <= 0) or (h <=0) or (r <= 0) or (H <= h) or (H <= 2*r)):
+	print("Entradas:", H,",", h,",", r)
+	print("Entradas invalidas")
+elif(h >= r):
+	cil = (pi*(r**2)*(h-r)) + se 	
+	vcil = 1000*cil
+	print("Entradas:", H,",", h,",", r)
+	print("Volume:", round(vcil, 3), "litros")
+elif(h < r):
+	si = pi/3*(h**2)*(3*r-h) 	
+	vsi = 1000*si
+	print("Entradas:", H,",", h,",", r)
+	print("Volume:", round(vsi, 3), "litros")
+elif(r > H - h):
+	ss = (cil + 2*se)-si
+	vss = 1000*ss
+	print("Entradas:", H,",", h,",", r)
+	print("Volume:", round(vss, 3), "litros")
+	
+
+-- EXECUTION TIME:
+0.227939
+-- TEST CASE 1:
+---- input:
+11.3
+5.7
+2.3
+---- correct output:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 81987.191 litros
+---- user output:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 81987.191 litros
+-- TEST CASE 2:
+---- input:
+8.5
+9.5
+2.2
+---- correct output:
+Entradas: 8.5 , 9.5 , 2.2
+Entradas invalidas
+---- user output:
+Entradas: 8.5 , 9.5 , 2.2
+Entradas invalidas
+-- TEST CASE 3:
+---- input:
+8
+4
+6
+---- correct output:
+Entradas: 8.0 , 4.0 , 6.0
+Entradas invalidas
+---- user output:
+Entradas: 8.0 , 4.0 , 6.0
+Entradas invalidas
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 15:13:29) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+from math import *
+H = float(input("altura do tanque: "))
+h = float(input("altura do combustivel no tanque: "))
+raio = float(input("raio semiesfericos: "))
+
+Ve = ((4/3)*pi*(raio**3))
+se = (2/3*pi*(raio**3))
+if((H <= 0) or (h <=0) or (raio <= 0) or (H <= h) or (H <= 2*raio)):
+	print("Entradas:", H,",", h,",", raio)
+	print("Entradas invalidas")
+elif(h >= raio):
+	cil = (pi*(raio**2)*(h-raio)) + se 	
+	vcil = 1000*cil
+	print("Entradas:", H,",", h,",", raio)
+	print("Volume:", round(vcil, 3), "litros")
+elif(h < raio):
+	si = pi/3*(h**2)*(3*raio-h) 	
+	vsi = 1000*si
+	print("Entradas:", H,",", h,",", raio)
+	print("Volume:", round(vsi, 3), "litros")
+elif(raio > H - h):
+	ss = (cil + 2*se)-si
+	vss = 1000*ss
+	print("Entradas:", H,",", h,",", raio)
+	print("Volume:", round(vss, 3), "litros")
+	
+
+-- EXECUTION TIME:
+0.221211
+-- TEST CASE 1:
+---- input:
+11.3
+5.7
+2.3
+---- correct output:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 81987.191 litros
+---- user output:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 81987.191 litros
+-- TEST CASE 2:
+---- input:
+8.5
+9.5
+2.2
+---- correct output:
+Entradas: 8.5 , 9.5 , 2.2
+Entradas invalidas
+---- user output:
+Entradas: 8.5 , 9.5 , 2.2
+Entradas invalidas
+-- TEST CASE 3:
+---- input:
+8
+4
+6
+---- correct output:
+Entradas: 8.0 , 4.0 , 6.0
+Entradas invalidas
+---- user output:
+Entradas: 8.0 , 4.0 , 6.0
+Entradas invalidas
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

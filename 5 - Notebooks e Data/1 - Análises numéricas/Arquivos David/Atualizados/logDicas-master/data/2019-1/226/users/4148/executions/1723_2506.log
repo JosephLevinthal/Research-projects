@@ -1,0 +1,92 @@
+== TEST (2019-05-14 10:54:27) 
+-- CODE:
+q = int(input("quant.: "))
+pc = float(input("percentual: "))
+qvc = int(input("quant. de venda: "))
+-- OUTPUT:
+3.13423981
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:37:20) 
+-- CODE:
+q = int(input("quant.: "))
+pc = int(input("percentual: "))
+qvc = int(input("quant. de venda: "))
+
+ano  = 0
+cap = 12000
+
+while(q>0 and q<cap):
+	q = q + (q*(pc/100))-qvc
+	ano = ano +1
+
+if (q<0):
+	print("EXTINCAO")
+if(q>cap):
+	print("LIMITE")
+
+print(ano)
+
+		
+-- OUTPUT:
+EXTINCAO
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 11:37:22) 
+-- CODE:
+q = int(input("quant.: "))
+pc = int(input("percentual: "))
+qvc = int(input("quant. de venda: "))
+
+ano  = 0
+cap = 12000
+
+while(q>0 and q<cap):
+	q = q + (q*(pc/100))-qvc
+	ano = ano +1
+
+if (q<0):
+	print("EXTINCAO")
+if(q>cap):
+	print("LIMITE")
+
+print(ano)
+
+		
+-- EXECUTION TIME:
+0.142097
+-- TEST CASE 1:
+---- input:
+1234
+6
+135
+---- correct output:
+EXTINCAO
+14
+---- user output:
+EXTINCAO
+14
+-- TEST CASE 2:
+---- input:
+579
+37
+26
+---- correct output:
+LIMITE
+11
+---- user output:
+LIMITE
+11
+-- TEST CASE 3:
+---- input:
+6789
+45
+2345
+---- correct output:
+LIMITE
+4
+---- user output:
+LIMITE
+4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

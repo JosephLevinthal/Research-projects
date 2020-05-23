@@ -1,0 +1,490 @@
+== TEST (2019-04-30 19:33:16) 
+-- CODE:
+consumo=float(input("consumo de energia em kwh: "))
+tipo=(input"tipo de instalacao R para residenciais, I para industriais e C para comecios: ")
+print("Entradas: " + consumo,"kwh", " e tipo" +tipo)
+-- ERROR:
+File "XXXX", line 2
+    tipo=(input"tipo de instalacao R para residenciais, I para industriais e C para comecios: ")
+                                                                                              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 19:33:32) 
+-- CODE:
+consumo=float(input("consumo de energia em kwh: "))
+tipo=input("tipo de instalacao R para residenciais, I para industriais e C para comecios: ")
+print("Entradas: " + consumo,"kwh", " e tipo" +tipo)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print("Entradas: " + consumo,"kwh", " e tipo" +tipo)
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 19:34:08) 
+-- CODE:
+consumo=float(input("consumo de energia em kwh: "))
+tipo=input("tipo de instalacao R para residenciais, I para industriais e C para comecios: ")
+print("Entradas: ",consumo,"kwh", " e tipo",tipo)
+-- OUTPUT:
+Entradas:  -56.0 kwh  e tipo I
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 19:46:45) 
+-- CODE:
+consumo=float(input("consumo de energia em kwh: "))
+tipo=input("tipo de instalacao R para residenciais, I para industriais e C para comecios: ")
+print("Entradas: ",consumo,"kwh", " e tipo",tipo)
+if (tipo== "R" and consumo<=500):
+	total= consumo*0.44
+	print(total)
+elif (tipo== "R" and consumo>500):
+	total= consumo*0.65
+	print(total)
+elif (tipo=="C" and consumo<=1000):
+	total= consumo*0.55
+	print(total)
+elif (tipo=="C" and consumo>1000):
+	total= consumo*0.60
+	print(total)
+elif (tipo=="I" and consumo<=5000):
+	total=consumo*0.55
+	print(total)
+elif (tipo=="I" and consumo>6000):
+	total=consumo*0.60
+	print(total)
+else:
+	print("Dados invalidos")
+	
+-- OUTPUT:
+Entradas:  -56.0 kwh  e tipo I
+-30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 19:47:51) 
+-- CODE:
+consumo=float(input("consumo de energia em kwh: "))
+tipo=input("tipo de instalacao R para residenciais, I para industriais e C para comecios: ")
+print("Entradas: ",consumo,"kwh", " e tipo",tipo)
+if (tipo== "R" and consumo<=500):
+	total= consumo*0.44
+	print(total)
+elif (tipo== "R" and consumo>500):
+	total= consumo*0.65
+	print(round(total, 2))
+elif (tipo=="C" and consumo<=1000):
+	total= consumo*0.55
+	print(round(total, 2))
+elif (tipo=="C" and consumo>1000):
+	total= consumo*0.60
+	print(round(total, 2))
+elif (tipo=="I" and consumo<=5000):
+	total=consumo*0.55
+	print(round(total, 2))
+elif (tipo=="I" and consumo>6000):
+	total=consumo*0.60
+	print(round(total, 2))
+else:
+	print("Dados invalidos")
+	
+-- OUTPUT:
+Entradas:  -56.0 kwh  e tipo I
+-30.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 19:50:37) 
+-- CODE:
+consumo=float(input("consumo de energia em kwh: "))
+tipo=input("tipo de instalacao R para residenciais, I para industriais e C para comecios: ")
+print("Entradas: ",consumo,"kwh", " e tipo",tipo)
+if (tipo== "R" and consumo<=500):
+	total= consumo*0.44
+	print("Valor total: R$",round(total, 2))
+elif (tipo== "R" and consumo>500):
+	total= consumo*0.65
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="C" and consumo<=1000):
+	total= consumo*0.55
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="C" and consumo>1000):
+	total= consumo*0.60
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="I" and consumo<=5000):
+	total=consumo*0.55
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="I" and consumo>6000):
+	total=consumo*0.60
+	print("Valor total: R$",round(total, 2))
+else:
+	print("Dados invalidos")
+	
+-- OUTPUT:
+Entradas:  -56.0 kwh  e tipo I
+Valor total: R$ -30.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 19:50:49) 
+-- CODE:
+consumo=float(input("consumo de energia em kwh: "))
+tipo=input("tipo de instalacao R para residenciais, I para industriais e C para comecios: ")
+print("Entradas: ",consumo,"kwh", " e tipo",tipo)
+if (tipo== "R" and consumo<=500):
+	total= consumo*0.44
+	print("Valor total: R$",round(total, 2))
+elif (tipo== "R" and consumo>500):
+	total= consumo*0.65
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="C" and consumo<=1000):
+	total= consumo*0.55
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="C" and consumo>1000):
+	total= consumo*0.60
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="I" and consumo<=5000):
+	total=consumo*0.55
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="I" and consumo>6000):
+	total=consumo*0.60
+	print("Valor total: R$",round(total, 2))
+else:
+	print("Dados invalidos")
+	
+-- OUTPUT:
+Entradas:  -56.0 kwh  e tipo I
+Valor total: R$ -30.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 19:51:09) 
+-- CODE:
+consumo=float(input("consumo de energia em kwh: "))
+tipo=input("tipo de instalacao R para residenciais, I para industriais e C para comecios: ")
+print("Entradas: ",consumo,"kwh", " e tipo",tipo)
+if (tipo== "R" and consumo<=500):
+	total= consumo*0.44
+	print("Valor total: R$",round(total, 2))
+elif (tipo== "R" and consumo>500):
+	total= consumo*0.65
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="C" and consumo<=1000):
+	total= consumo*0.55
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="C" and consumo>1000):
+	total= consumo*0.60
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="I" and consumo<=5000):
+	total=consumo*0.55
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="I" and consumo>6000):
+	total=consumo*0.60
+	print("Valor total: R$",round(total, 2))
+else:
+	print("Dados invalidos")
+	
+-- EXECUTION TIME:
+0.185284
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas:  -56.0 kwh  e tipo I
+Valor total: R$ -30.8
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas:  955.5 kwh  e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 19:51:19) 
+-- CODE:
+consumo=float(input("consumo de energia em kwh: "))
+tipo=input("tipo de instalacao R para residenciais, I para industriais e C para comecios: ")
+print("Entradas: ",consumo,"kwh", " e tipo",tipo)
+if (tipo== "R" and consumo<=500):
+	total= consumo*0.44
+	print("Valor total: R$",round(total, 2))
+elif (tipo== "R" and consumo>500):
+	total= consumo*0.65
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="C" and consumo<=1000):
+	total= consumo*0.55
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="C" and consumo>1000):
+	total= consumo*0.60
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="I" and consumo<=5000):
+	total=consumo*0.55
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="I" and consumo>6000):
+	total=consumo*0.60
+	print("Valor total: R$",round(total, 2))
+else:
+	print("Dados invalidos")
+	
+-- EXECUTION TIME:
+0.189249
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas:  -56.0 kwh  e tipo I
+Valor total: R$ -30.8
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas:  955.5 kwh  e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 19:52:21) 
+-- CODE:
+consumo=float(input("consumo de energia em kwh: "))
+tipo=input("tipo de instalacao R ou I ou C: ")
+print("Entradas: ",consumo,"kwh", " e tipo",tipo)
+if (tipo== "R" and consumo<=500):
+	total= consumo*0.44
+	print("Valor total: R$",round(total, 2))
+elif (tipo== "R" and consumo>500):
+	total= consumo*0.65
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="C" and consumo<=1000):
+	total= consumo*0.55
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="C" and consumo>1000):
+	total= consumo*0.60
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="I" and consumo<=5000):
+	total=consumo*0.55
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="I" and consumo>6000):
+	total=consumo*0.60
+	print("Valor total: R$",round(total, 2))
+else:
+	print("Dados invalidos")
+	
+-- EXECUTION TIME:
+0.210009
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas:  -56.0 kwh  e tipo I
+Valor total: R$ -30.8
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas:  955.5 kwh  e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 19:55:38) 
+-- CODE:
+consumo=float(input("consumo de energia em kwh: "))
+tipo=input("tipo de instalacao R ou I ou C: ")
+tipo=tipo.upper()
+print("Entradas: ",consumo,"kwh", " e tipo",tipo.upper())
+if (tipo== "R") and (consumo>0) and (consumo<=500):
+	total= consumo*0.44
+	print("Valor total: R$",round(total, 2))
+elif (tipo== "R") and (consumo>0) and (consumo>500):
+	total= consumo*0.65
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="C") and (consumo>0) and (consumo<=1000):
+	total= consumo*0.55
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="C") and (consumo>0) and (consumo>1000):
+	total= consumo*0.60
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="I") and (consumo>0) and (consumo<=5000):
+	total=consumo*0.55
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="I") and (consumo>0) and (consumo>5000):
+	total=consumo*0.60
+	print("Valor total: R$",round(total, 2))
+else:
+	print("Dados invalidos")
+	
+-- EXECUTION TIME:
+0.165563
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas:  -56.0 kwh  e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas:  955.5 kwh  e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 19:55:40) 
+-- CODE:
+consumo=float(input("consumo de energia em kwh: "))
+tipo=input("tipo de instalacao R ou I ou C: ")
+tipo=tipo.upper()
+print("Entradas: ",consumo,"kwh", " e tipo",tipo.upper())
+if (tipo== "R") and (consumo>0) and (consumo<=500):
+	total= consumo*0.44
+	print("Valor total: R$",round(total, 2))
+elif (tipo== "R") and (consumo>0) and (consumo>500):
+	total= consumo*0.65
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="C") and (consumo>0) and (consumo<=1000):
+	total= consumo*0.55
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="C") and (consumo>0) and (consumo>1000):
+	total= consumo*0.60
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="I") and (consumo>0) and (consumo<=5000):
+	total=consumo*0.55
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="I") and (consumo>0) and (consumo>5000):
+	total=consumo*0.60
+	print("Valor total: R$",round(total, 2))
+else:
+	print("Dados invalidos")
+	
+-- EXECUTION TIME:
+0.14034
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas:  -56.0 kwh  e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas:  955.5 kwh  e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 19:55:41) 
+-- CODE:
+consumo=float(input("consumo de energia em kwh: "))
+tipo=input("tipo de instalacao R ou I ou C: ")
+tipo=tipo.upper()
+print("Entradas: ",consumo,"kwh", " e tipo",tipo.upper())
+if (tipo== "R") and (consumo>0) and (consumo<=500):
+	total= consumo*0.44
+	print("Valor total: R$",round(total, 2))
+elif (tipo== "R") and (consumo>0) and (consumo>500):
+	total= consumo*0.65
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="C") and (consumo>0) and (consumo<=1000):
+	total= consumo*0.55
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="C") and (consumo>0) and (consumo>1000):
+	total= consumo*0.60
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="I") and (consumo>0) and (consumo<=5000):
+	total=consumo*0.55
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="I") and (consumo>0) and (consumo>5000):
+	total=consumo*0.60
+	print("Valor total: R$",round(total, 2))
+else:
+	print("Dados invalidos")
+	
+-- OUTPUT:
+Entradas:  -56.0 kwh  e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 19:56:02) 
+-- CODE:
+consumo=float(input("consumo de energia em kwh: "))
+tipo=input("tipo de instalacao R ou I ou C: ")
+tipo=tipo.upper()
+print("Entradas: ",consumo,"kWh", " e tipo",tipo.upper())
+if (tipo== "R") and (consumo>0) and (consumo<=500):
+	total= consumo*0.44
+	print("Valor total: R$",round(total, 2))
+elif (tipo== "R") and (consumo>0) and (consumo>500):
+	total= consumo*0.65
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="C") and (consumo>0) and (consumo<=1000):
+	total= consumo*0.55
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="C") and (consumo>0) and (consumo>1000):
+	total= consumo*0.60
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="I") and (consumo>0) and (consumo<=5000):
+	total=consumo*0.55
+	print("Valor total: R$",round(total, 2))
+elif (tipo=="I") and (consumo>0) and (consumo>5000):
+	total=consumo*0.60
+	print("Valor total: R$",round(total, 2))
+else:
+	print("Dados invalidos")
+	
+-- EXECUTION TIME:
+0.213836
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas:  -56.0 kWh  e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas:  955.5 kWh  e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

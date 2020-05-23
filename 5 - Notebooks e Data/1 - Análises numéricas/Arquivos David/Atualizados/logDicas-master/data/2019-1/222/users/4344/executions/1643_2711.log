@@ -1,0 +1,78 @@
+== TEST (2019-04-14 19:29:40) 
+-- CODE:
+valor = float(input("Valor disponivel: "))
+qtd_ticketsRU = int(input("Quantos tickets deseja comprar? "))
+valor_ticketsRU = float(input("Valor do tickets: "))
+qtd_passesBus = int(input("Quantos passes deseja? "))
+valor_passesBus = float(input("Valor dos passes: "))
+
+somatorio = qtd_ticketsRU*valor_ticketsRU + qtd_passesBus*valor_passesBus
+
+if valor >= somatorio:
+	print(SUFICIENTE)
+elif valor < somatorio:
+	print(INSUFICIENTE)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 10, in <module>
+    print(SUFICIENTE)
+NameError: name 'SUFICIENTE' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 19:30:17) 
+-- CODE:
+valor = float(input("Valor disponivel: "))
+qtd_ticketsRU = int(input("Quantos tickets deseja comprar? "))
+valor_ticketsRU = float(input("Valor do tickets: "))
+qtd_passesBus = int(input("Quantos passes deseja? "))
+valor_passesBus = float(input("Valor dos passes: "))
+
+somatorio = qtd_ticketsRU*valor_ticketsRU + qtd_passesBus*valor_passesBus
+
+if valor >= somatorio:
+	print("SUFICIENTE")
+elif valor < somatorio:
+	print("INSUFICIENTE")
+-- OUTPUT:
+SUFICIENTE
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 19:30:34) 
+-- CODE:
+valor = float(input("Valor disponivel: "))
+qtd_ticketsRU = int(input("Quantos tickets deseja comprar? "))
+valor_ticketsRU = float(input("Valor do tickets: "))
+qtd_passesBus = int(input("Quantos passes deseja? "))
+valor_passesBus = float(input("Valor dos passes: "))
+
+somatorio = qtd_ticketsRU*valor_ticketsRU + qtd_passesBus*valor_passesBus
+
+if valor >= somatorio:
+	print("SUFICIENTE")
+elif valor < somatorio:
+	print("INSUFICIENTE")
+-- EXECUTION TIME:
+0.158616
+-- TEST CASE 1:
+---- input:
+400
+15
+1.20
+30
+1.50
+---- correct output:
+SUFICIENTE
+---- user output:
+SUFICIENTE
+-- TEST CASE 2:
+---- input:
+90
+22
+1.20
+44
+1.50
+---- correct output:
+INSUFICIENTE
+---- user output:
+INSUFICIENTE
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

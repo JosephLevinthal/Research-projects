@@ -1,0 +1,5 @@
+var1=float(input("altura1: "))
+var2=float(input("altura2: "))
+var3=float(input("altura3:"))
+var4=float(input("altura4:"))
+print=(var1,var2,var3,var4)>=(var1,var2,var3,var4)

@@ -1,0 +1,188 @@
+== TEST (2019-05-13 19:44:46) 
+-- CODE:
+pira = int(input("Quantidade inicial de pirarucus: "))
+perc = int(input("Percentual de crescimento: "))
+
+mes = 0
+perc = perc/100
+
+while(pira > 0):
+	venda = int(input("pirarucus vendidos :"))
+	pira = pira + (pira*perc)
+	pira = pira - venda
+	mes = mes + 1
+print(mes)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    venda = int(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 19:45:31) 
+-- CODE:
+pira = int(input("Quantidade inicial de pirarucus: "))
+perc = int(input("Percentual de crescimento: "))
+
+mes = 0
+perc = perc/100
+
+while(pira > 0 or pira < 8000):
+	venda = int(input("pirarucus vendidos :"))
+	pira = pira + (pira*perc)
+	pira = pira - venda
+	mes = mes + 1
+print(mes)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    venda = int(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 10:05:24) 
+-- CODE:
+pira = int(input("Quantidade inicial de pirarucus: "))
+perc = int(input("Percentual de crescimento: "))
+
+mes = 0
+perc = perc/100
+
+if:
+	while(pira > 0 and pira < 8000 ):
+	venda = int(input("pirarucus vendidos :"))
+	pira = pira + (pira*perc)
+	pira = pira - venda
+	mes = mes + 1
+	if(pira <= 0):
+		print("ZERO")
+	elif(pira > 0):
+		print("MAXIMO")
+	
+print(mes)
+-- ERROR:
+File "XXXX", line 7
+    if:
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 10:05:40) 
+-- CODE:
+pira = int(input("Quantidade inicial de pirarucus: "))
+perc = int(input("Percentual de crescimento: "))
+
+mes = 0
+perc = perc/100
+
+
+while(pira > 0 and pira < 8000 ):
+	venda = int(input("pirarucus vendidos :"))
+	pira = pira + (pira*perc)
+	pira = pira - venda
+	mes = mes + 1
+	if(pira <= 0):
+		print("ZERO")
+	elif(pira > 0):
+		print("MAXIMO")
+	
+print(mes)
+-- OUTPUT:
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 10:06:01) 
+-- CODE:
+pira = int(input("Quantidade inicial de pirarucus: "))
+perc = int(input("Percentual de crescimento: "))
+
+mes = 0
+perc = perc/100
+
+
+while(pira > 0 and pira < 8000 ):
+	venda = int(input("pirarucus vendidos :"))
+	pira = pira + (pira*perc)
+	pira = pira - venda
+	mes = mes + 1
+	if(pira <= 0):
+		print("ZERO")
+	elif(pira > 8000):
+		print("MAXIMO")
+	
+print(mes)
+-- OUTPUT:
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 10:06:03) 
+-- CODE:
+pira = int(input("Quantidade inicial de pirarucus: "))
+perc = int(input("Percentual de crescimento: "))
+
+mes = 0
+perc = perc/100
+
+
+while(pira > 0 and pira < 8000 ):
+	venda = int(input("pirarucus vendidos :"))
+	pira = pira + (pira*perc)
+	pira = pira - venda
+	mes = mes + 1
+	if(pira <= 0):
+		print("ZERO")
+	elif(pira > 8000):
+		print("MAXIMO")
+	
+print(mes)
+-- EXECUTION TIME:
+0.151762
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+ZERO
+3
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+MAXIMO
+7
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

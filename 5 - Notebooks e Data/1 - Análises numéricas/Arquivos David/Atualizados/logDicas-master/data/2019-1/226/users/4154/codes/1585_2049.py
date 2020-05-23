@@ -1,0 +1,14 @@
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+x = int(input('qual o valor voce deseja dividir? '))
+y = int(input('por quanto deseja dividir? (digite um numero diferente de zero) '))
+print(x)
+print(y)
+print(x//y)
+print(x%y)
+
+
+
+

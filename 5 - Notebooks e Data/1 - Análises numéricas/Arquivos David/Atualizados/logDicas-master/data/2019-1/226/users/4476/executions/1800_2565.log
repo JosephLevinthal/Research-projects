@@ -1,0 +1,225 @@
+== TEST (2019-06-06 10:54:05) 
+-- CODE:
+from numpy import *
+vmf = array(eval(input("digite: ")))
+vph = array(eval(input("digite: ")))
+vch = array(eval(input("digite: ")))
+
+v = zeros(3, dtype=int)
+
+for i in range(size(vmf)) and range(size(vph)):
+	ph = (vph*100)/vch > 75/100
+	if vmf >= 5 and ph >= 75:
+		v[0] = v[0] + 1
+	elif ph >= 75 and vmf < 5:
+		v[1] = v[1] + 1
+	elif ph < 75:
+		v[2] = v[2] + 1
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 10:55:13) 
+-- CODE:
+from numpy import *
+vmf = array(eval(input("digite: ")))
+vph = array(eval(input("digite: ")))
+vch = array(eval(input("digite: ")))
+
+v = zeros(3, dtype=int)
+
+for i in range(size(vmf)) and range(size(vph)):
+	ph = (vph*100)/vch > 75/100
+	if (vmf >= 5) and (ph >= 75):
+		v[0] = v[0] + 1
+	elif (ph >= 75) and (vmf < 5):
+		v[1] = v[1] + 1
+	elif (ph < 75):
+		v[2] = v[2] + 1
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 10:57:32) 
+-- CODE:
+from numpy import *
+vmf = array(eval(input("digite: ")))
+vph = array(eval(input("digite: ")))
+vch = int(input("digite: "))
+
+v = zeros(3, dtype=int)
+
+for i in range(size(vmf)) and range(size(vph)):
+	ph = (vph[i]*100)/vch > 75/100
+	if (vmf[i] >= 5) and (ph >= 75):
+		v[0] = v[0] + 1
+	elif (ph >= 75) and (vmf[i] < 5):
+		v[1] = v[1] + 1
+	elif (ph < 75):
+		v[2] = v[2] + 1
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 10:59:54) 
+-- CODE:
+from numpy import *
+vmf = array(eval(input("digite: ")))
+vph = array(eval(input("digite: ")))
+vch = int(input("digite: "))
+
+v = zeros(3, dtype=int)
+
+for i in range(size(vmf)) and range(size(vph)):
+	ph=0
+	ph = (vph[i]*100)/vch > 75/100
+	if (vmf[i] >= 5) and (ph >= 75):
+		v[0] = v[0] + 1
+	elif (ph >= 75) and (vmf[i] < 5):
+		v[1] = v[1] + 1
+	elif (ph < 75):
+		v[2] = v[2] + 1
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 11:03:53) 
+-- CODE:
+from numpy import *
+vmf = array(eval(input("digite: ")))
+vph = array(eval(input("digite: ")))
+vch = int(input("digite: "))
+
+v = zeros(3, dtype=int)
+
+for i in range(size(vmf)) and range(size(vph)):
+	ph=0
+	ph = (vph[i]*100)/vch > 75/100
+	if (vmf[i] >= 5) and (ph >= 75):
+		v[0] = v[0] + 1
+	elif (ph >= 75) and (vmf[i] < 5):
+		v[1] = v[1] + 1
+	elif (ph < 75):
+		v[2] = v[2] + 1
+	ph=0
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 11:04:28) 
+-- CODE:
+from numpy import *
+vmf = array(eval(input("digite: ")))
+vph = array(eval(input("digite: ")))
+vch = int(input("digite: "))
+
+v = zeros(3, dtype=int)
+
+for i in range(size(vmf)) and range(size(vph)):
+	ph=0
+	ph = (vph[i]*100)/vch
+	if (vmf[i] >= 5) and (ph >= 75):
+		v[0] = v[0] + 1
+	elif (ph >= 75) and (vmf[i] < 5):
+		v[1] = v[1] + 1
+	elif (ph < 75):
+		v[2] = v[2] + 1
+	ph=0
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 11:04:33) 
+-- CODE:
+from numpy import *
+vmf = array(eval(input("digite: ")))
+vph = array(eval(input("digite: ")))
+vch = int(input("digite: "))
+
+v = zeros(3, dtype=int)
+
+for i in range(size(vmf)) and range(size(vph)):
+	ph = (vph[i]*100)/vch
+	if (vmf[i] >= 5) and (ph >= 75):
+		v[0] = v[0] + 1
+	elif (ph >= 75) and (vmf[i] < 5):
+		v[1] = v[1] + 1
+	elif (ph < 75):
+		v[2] = v[2] + 1
+	ph=0
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 11:04:52) 
+-- CODE:
+from numpy import *
+vmf = array(eval(input("digite: ")))
+vph = array(eval(input("digite: ")))
+vch = int(input("digite: "))
+
+v = zeros(3, dtype=int)
+
+for i in range(size(vmf)) and range(size(vph)):
+	ph = (vph[i]*100)/vch
+	if (vmf[i] >= 5) and (ph >= 75):
+		v[0] = v[0] + 1
+	elif (ph >= 75) and (vmf[i] < 5):
+		v[1] = v[1] + 1
+	elif (ph < 75):
+		v[2] = v[2] + 1
+	ph=0
+print(v)
+-- EXECUTION TIME:
+1.17512
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+[2 0 3]
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+[5 0 2]
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+[5 1 4]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

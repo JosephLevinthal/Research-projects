@@ -1,0 +1,148 @@
+== TEST (2019-04-02 15:32:55) 
+-- CODE:
+var=int("raio:")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    var=int("raio:")
+ValueError: invalid literal for int() with base 10: 'raio:'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:33:06) 
+-- CODE:
+var=float(int("raio:"))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    var=float(int("raio:"))
+ValueError: invalid literal for int() with base 10: 'raio:'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:33:11) 
+-- CODE:
+var=float(input("raio:"))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    var=float(int("raio:"))
+ValueError: invalid literal for int() with base 10: 'raio:'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:36:46) 
+-- CODE:
+var=float(input("raio:"))
+A=pi*(var)**2
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    A=pi*(var)**2
+NameError: name 'pi' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:37:02) 
+-- CODE:
+var=float(input("raio:"))
+A=pi*(var)**2
+print(A)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    A=pi*(var)**2
+NameError: name 'pi' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:37:45) 
+-- CODE:
+var=float(input("raio:"))
+r=2
+A=pi*(r)**2
+print(A)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    A=pi*(r)**2
+NameError: name 'pi' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:37:49) 
+-- CODE:
+var=float(input("raio:"))
+r=2
+A=pi*(r)**2
+print(A)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    A=pi*(r)**2
+NameError: name 'pi' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:38:42) 
+-- CODE:
+var=float(input("raio:"))
+r=2
+A= (pi)*(r)**2
+print(A)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    A= (pi)*(r)**2
+NameError: name 'pi' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:40:01) 
+-- CODE:
+var=float(input("raio:"))
+A=math(pi*(2)**2)
+print(A)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    A=math(pi*(2)**2)
+NameError: name 'math' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:40:12) 
+-- CODE:
+var=float(input("raio:"))
+A=(math(pi*(2)**2))
+print(A)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    A=(math(pi*(2)**2))
+NameError: name 'math' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:43:13) 
+-- CODE:
+from math import
+A= pi*2
+-- ERROR:
+File "XXXX", line 1
+    from math import
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 15:43:18) 
+-- CODE:
+from math import
+A= pi*2
+print(A)
+-- ERROR:
+File "XXXX", line 1
+    from math import
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:53:35) 
+-- CODE:
+from math import
+A= pi*2
+print(A)
+-- ERROR:
+File "XXXX", line 1
+    from math import
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

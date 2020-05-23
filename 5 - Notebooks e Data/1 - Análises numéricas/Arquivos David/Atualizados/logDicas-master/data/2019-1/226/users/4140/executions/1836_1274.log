@@ -1,0 +1,153 @@
+== TEST (2019-06-22 17:19:05) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n=int(input())
+mat=zeros((n,n),dtype=int)
+j=0
+for i  in range(n):
+	for j in range(n):
+		if i==j:
+			mat[i,j]=i
+		if i<j:
+			mat[i,j]=i+j
+		else:
+			mat[i,j]=i
+print(mat)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 17:24:16) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n=int(input())
+mat=zeros((n,n),dtype=int)
+j=0
+for i  in range(n):
+	for j in range(n):
+		if i==j:
+			mat[i,j]=i+1
+		if i<j:
+			mat[i,j]=i
+		if i >j:
+			mat[i,j]=i+j
+print(mat)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 17:24:50) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n=int(input())
+mat=zeros((n,n),dtype=int)
+j=0
+for i  in range(n):
+	for j in range(n):
+		if i==j:
+			mat[i,j]=i+1
+		if i<j:
+			mat[i,j]=i+1
+		if i >j:
+			mat[i,j]=i+j
+print(mat)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 17:25:49) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n=int(input())
+mat=zeros((n,n),dtype=int)
+j=0
+for i  in range(n):
+	for j in range(n):
+		if i==j:
+			mat[i,j]=i+1
+		if i<j:
+			mat[i,j]=i+1
+		if i >j:
+			mat[i,j]=1+j
+print(mat)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-22 17:26:02) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n=int(input())
+mat=zeros((n,n),dtype=int)
+j=0
+for i  in range(n):
+	for j in range(n):
+		if i==j:
+			mat[i,j]=i+1
+		if i<j:
+			mat[i,j]=i+1
+		if i >j:
+			mat[i,j]=1+j
+print(mat)
+		
+-- EXECUTION TIME:
+1.09439
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

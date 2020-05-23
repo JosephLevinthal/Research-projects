@@ -1,0 +1,953 @@
+== TEST (2019-05-30 01:04:44) 
+-- CODE:
+from numpy import*
+notas = array(eval(input("Digite as notas:")))
+nomes = array(eval(input("Digite o nome:")))
+
+i = 0
+faltaram = 0
+passaram = 0
+reprovaram = 0
+soma = 0
+maior = 0
+
+while(i<size(notas)):
+	if(notas[i]==-1.0):
+		faltaram = faltaram+1	
+	elif(notas[i]>=6.0):
+		passaram = passaram+1
+	elif(notas[i]<6.0):
+		reprovaram = reprovaram+1
+	if(notas[i]!=-1.0):
+		soma = soma + notas[i]
+	if(notas[i]==max(notas)):
+		maior = i
+	i =i+1
+print(faltaram)
+print(passaram)
+print(reprovaram)
+print(round(soma/((size(notas)-faltaram))),2)
+print(alunos[maior])
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 01:05:50) 
+-- CODE:
+from numpy import*
+notas = array(eval(input("Digite as notas:")))
+nomes = array(eval(input("Digite o nome:")))
+
+i = 0
+faltaram = 0
+passaram = 0
+reprovaram = 0
+soma = 0
+maior = 0
+
+while(i<size(notas)):
+	if(notas[i]==-1.0):
+		faltaram = faltaram+1	
+	elif(notas[i]>=6.0):
+		passaram = passaram+1
+	elif(notas[i]<6.0):
+		reprovaram = reprovaram+1
+	if(notas[i]!=-1.0):
+		soma = soma + notas[i]
+	if(notas[i]==max(notas)):
+		maior = i
+	i =i+1
+print(faltaram)
+print(passaram)
+print(reprovaram)
+print(round(soma/((size(notas)-faltaram))),2)
+print(nomes[maior])
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 01:05:59) 
+-- CODE:
+from numpy import*
+notas = array(eval(input("Digite as notas:")))
+nomes = array(eval(input("Digite o nome:")))
+
+i = 0
+faltaram = 0
+passaram = 0
+reprovaram = 0
+soma = 0
+maior = 0
+
+while(i<size(notas)):
+	if(notas[i]==-1.0):
+		faltaram = faltaram+1	
+	elif(notas[i]>=6.0):
+		passaram = passaram+1
+	elif(notas[i]<6.0):
+		reprovaram = reprovaram+1
+	if(notas[i]!=-1.0):
+		soma = soma + notas[i]
+	if(notas[i]==max(notas)):
+		maior = i
+	i =i+1
+print(faltaram)
+print(passaram)
+print(reprovaram)
+print(round(soma/((size(notas)-faltaram))),2)
+print(nomes[maior])
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 01:06:53) 
+-- CODE:
+from numpy import*
+notas = array(eval(input("Digite as notas:")))
+nomes = array(eval(input("Digite o nome:")))
+
+i = 0
+faltaram = 0
+passaram = 0
+reprovaram = 0
+soma = 0
+maior = 0
+
+while(i<size(notas)):
+	if(notas[i]==-1.0):
+		faltaram = faltaram+1	
+	elif(notas[i]>=6.0):
+		passaram = passaram+1
+	elif(notas[i]<6.0):
+		reprovaram = reprovaram+1
+	if(notas[i]!=-1.0):
+		soma = soma + notas[i]
+	if(notas[i]==max(notas)):
+		maior = i
+	i =i+1
+print(faltaram)
+print(passaram)
+print(reprovaram)
+print(round(soma/((size(notas)-faltaram))),2)
+print(nomes[maior])
+
+-- EXECUTION TIME:
+0.506985
+-- TEST CASE 1:
+---- input:
+[9,8,7,6,5,4,3,2,1,-1,-1,-1]
+['A','B','C','D','E','F','G','H','I','J','K','L']
+---- correct output:
+3
+4
+5
+5.0
+A
+---- user output:
+3
+4
+5
+5.0 2
+A
+-- TEST CASE 2:
+---- input:
+[-1,1.2,-1,2.3,-1,3.4,-1,4.5,-1,5.6,-1]
+['ALICE','BENTO','CLARA','DAVI','ELSON','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+6
+0
+5
+3.4
+JULIA
+---- user output:
+6
+0
+5
+3.0 2
+JULIA
+-- TEST CASE 3:
+---- input:
+[1.23,3.45,5.67,6.78,7.89,8.9,9,10,0,9.8,7.6]
+['CLARA','DAVI','ELSON','ALICE','BENTO','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+0
+7
+4
+6.39
+HELOISA
+---- user output:
+0
+7
+4
+6.0 2
+HELOISA
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 01:08:08) 
+-- CODE:
+from numpy import*
+notas = array(eval(input("Digite as notas:")))
+nomes = array(eval(input("Digite o nome:")))
+
+i = 0
+faltaram = 0
+passaram = 0
+reprovaram = 0
+soma = 0
+maior = 0
+
+while(i<size(notas)):
+	if(notas[i]==-1.0):
+		faltaram = faltaram+1	
+	elif(notas[i]>=6.0):
+		passaram = passaram+1
+	elif(notas[i]<6.0 and notas[i]!=-1.0):
+		reprovaram = reprovaram+1
+	if(notas[i]!=-1.0):
+		soma = soma + notas[i]
+	if(notas[i]==max(notas)):
+		maior = i
+	i =i+1
+print(faltaram)
+print(passaram)
+print(reprovaram)
+print(round(soma/((size(notas)-faltaram))),2)
+print(nomes[maior])
+
+-- EXECUTION TIME:
+0.488093
+-- TEST CASE 1:
+---- input:
+[9,8,7,6,5,4,3,2,1,-1,-1,-1]
+['A','B','C','D','E','F','G','H','I','J','K','L']
+---- correct output:
+3
+4
+5
+5.0
+A
+---- user output:
+3
+4
+5
+5.0 2
+A
+-- TEST CASE 2:
+---- input:
+[-1,1.2,-1,2.3,-1,3.4,-1,4.5,-1,5.6,-1]
+['ALICE','BENTO','CLARA','DAVI','ELSON','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+6
+0
+5
+3.4
+JULIA
+---- user output:
+6
+0
+5
+3.0 2
+JULIA
+-- TEST CASE 3:
+---- input:
+[1.23,3.45,5.67,6.78,7.89,8.9,9,10,0,9.8,7.6]
+['CLARA','DAVI','ELSON','ALICE','BENTO','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+0
+7
+4
+6.39
+HELOISA
+---- user output:
+0
+7
+4
+6.0 2
+HELOISA
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 01:10:15) 
+-- CODE:
+from numpy import*
+notas = array(eval(input("Digite as notas:")))
+alunos = array(eval(input("Digite o nome:")))
+
+i = 0
+faltaram = 0
+passaram = 0
+reprovaram = 0
+soma = 0
+maior = 0
+
+while(i<size(notas)):
+	if(notas[i]==-1.0):
+		faltaram = faltaram+1	
+	elif(notas[i]>=6.0):
+		passaram = passaram+1
+	elif(notas[i]<6.0 and notas[i]!=-1):
+		reprovaram = reprovaram+1
+	if(notas[i]!=-1.0):
+		soma = soma + notas[i]
+	if(notas[i]==max(notas)):
+		maior = i
+	i =i+1
+print(faltaram)
+print(passaram)
+print(reprovaram)
+print(round(soma/(size(notas)-faltaram)),2)
+print(alunos[maior])
+
+-- EXECUTION TIME:
+0.343281
+-- TEST CASE 1:
+---- input:
+[9,8,7,6,5,4,3,2,1,-1,-1,-1]
+['A','B','C','D','E','F','G','H','I','J','K','L']
+---- correct output:
+3
+4
+5
+5.0
+A
+---- user output:
+3
+4
+5
+5.0 2
+A
+-- TEST CASE 2:
+---- input:
+[-1,1.2,-1,2.3,-1,3.4,-1,4.5,-1,5.6,-1]
+['ALICE','BENTO','CLARA','DAVI','ELSON','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+6
+0
+5
+3.4
+JULIA
+---- user output:
+6
+0
+5
+3.0 2
+JULIA
+-- TEST CASE 3:
+---- input:
+[1.23,3.45,5.67,6.78,7.89,8.9,9,10,0,9.8,7.6]
+['CLARA','DAVI','ELSON','ALICE','BENTO','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+0
+7
+4
+6.39
+HELOISA
+---- user output:
+0
+7
+4
+6.0 2
+HELOISA
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 01:10:51) 
+-- CODE:
+from numpy import*
+notas = array(eval(input("Digite as notas:")))
+alunos = array(eval(input("Digite o nome:")))
+
+i = 0
+faltaram = 0
+passaram = 0
+reprovaram = 0
+soma = 0
+maior = 0
+
+while(i<size(notas)):
+	if(notas[i]==-1.0):
+		faltaram = faltaram+1	
+	elif(notas[i]>=6.0):
+		passaram = passaram+1
+	elif(notas[i]<6.0 and notas[i]!=-1):
+		reprovaram = reprovaram+1
+	if(notas[i]!=-1.0):
+		soma = soma + notas[i]
+	if(notas[i]==max(notas)):
+		maior = i
+	i =i+1
+print(faltaram)
+print(passaram)
+print(reprovaram)
+print(round(soma/(size(notas)-faltaram)),2)
+print(alunos[maior])
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 01:13:21) 
+-- CODE:
+from numpy import*
+notas = array(eval(input("Digite as notas:")))
+alunos = array(eval(input("Digite o nome:")))
+
+i = 0
+faltaram = 0
+passaram = 0
+reprovaram = 0
+soma = 0
+maior = 0
+
+while(i<size(notas)):
+	if(notas[i]==-1.0):
+		faltaram = faltaram+1	
+	if(notas[i]>=6.0):
+		passaram = passaram+1
+	if(notas[i]<6.0 and notas[i]!=-1):
+		reprovaram = reprovaram+1
+	if(notas[i]!=-1.0):
+		soma = soma + notas[i]
+	if(notas[i]==max(notas)):
+		maior = i
+	i =i+1
+print(faltaram)
+print(passaram)
+print(reprovaram)
+print(round(soma/(size(notas)-faltaram)),2)
+print(alunos[maior])
+
+-- EXECUTION TIME:
+0.575939
+-- TEST CASE 1:
+---- input:
+[9,8,7,6,5,4,3,2,1,-1,-1,-1]
+['A','B','C','D','E','F','G','H','I','J','K','L']
+---- correct output:
+3
+4
+5
+5.0
+A
+---- user output:
+3
+4
+5
+5.0 2
+A
+-- TEST CASE 2:
+---- input:
+[-1,1.2,-1,2.3,-1,3.4,-1,4.5,-1,5.6,-1]
+['ALICE','BENTO','CLARA','DAVI','ELSON','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+6
+0
+5
+3.4
+JULIA
+---- user output:
+6
+0
+5
+3.0 2
+JULIA
+-- TEST CASE 3:
+---- input:
+[1.23,3.45,5.67,6.78,7.89,8.9,9,10,0,9.8,7.6]
+['CLARA','DAVI','ELSON','ALICE','BENTO','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+0
+7
+4
+6.39
+HELOISA
+---- user output:
+Digite as notas:Digite o nome:0
+7
+4
+6.0 2
+HELOISA
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 01:15:34) 
+-- CODE:
+from numpy import*
+notas = array(eval(input("Digite as notas:")))
+alunos = array(eval(input("Digite o nome:")))
+
+i = 0
+faltaram = 0
+passaram = 0
+reprovaram = 0
+soma = 0
+maior = 0
+
+while(i<size(notas)):
+	if(notas[i]==-1.0):
+		faltaram = faltaram+1	
+	elif(notas[i]>=6.0):
+		passaram = passaram+1
+	elif(notas[i]<6.0 and notas[i]!=-1):
+		reprovaram = reprovaram+1
+	elif(notas[i]!=-1.0):
+		soma = soma + notas[i]
+	elif(notas[i]==max(notas)):
+		maior = i
+	i =i+1
+print(faltaram)
+print(passaram)
+print(reprovaram)
+print(round(soma/(size(notas)-faltaram)),2)
+print(alunos[maior])
+
+-- EXECUTION TIME:
+0.612837
+-- TEST CASE 1:
+---- input:
+[9,8,7,6,5,4,3,2,1,-1,-1,-1]
+['A','B','C','D','E','F','G','H','I','J','K','L']
+---- correct output:
+3
+4
+5
+5.0
+A
+---- user output:
+3
+4
+5
+0 2
+A
+-- TEST CASE 2:
+---- input:
+[-1,1.2,-1,2.3,-1,3.4,-1,4.5,-1,5.6,-1]
+['ALICE','BENTO','CLARA','DAVI','ELSON','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+6
+0
+5
+3.4
+JULIA
+---- user output:
+6
+0
+5
+0 2
+ALICE
+-- TEST CASE 3:
+---- input:
+[1.23,3.45,5.67,6.78,7.89,8.9,9,10,0,9.8,7.6]
+['CLARA','DAVI','ELSON','ALICE','BENTO','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+0
+7
+4
+6.39
+HELOISA
+---- user output:
+0
+7
+4
+0 2
+CLARA
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 01:18:29) 
+-- CODE:
+from numpy import*
+notas = array(eval(input("Digite as notas:")))
+alunos = array(eval(input("Digite o nome:")))
+
+i = 0
+faltaram = 0
+passaram = 0
+reprovaram = 0
+soma = 0
+maior = 0
+
+while(i<size(notas)):
+	i =i+1
+	if(notas[i]==-1.0):
+		faltaram = faltaram + 1	
+	elif(notas[i]>=6.0):
+		passaram = passaram + 1
+	elif(notas[i]<6.0 and notas[i]!=-1):
+		reprovaram = reprovaram + 1
+	elif(notas[i]!=-1.0):
+		soma = soma + notas[i]
+	elif(notas[i]==max(notas)):
+		maior = i
+	
+print(faltaram)
+print(passaram)
+print(reprovaram)
+print(round(soma/(size(notas)-faltaram)),2)
+print(alunos[maior])
+
+-- EXECUTION TIME:
+0.505453
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1758/1580/main.py", line 14, in <module>
+    if(notas[i]==-1.0):
+IndexError: index 12 is out of bounds for axis 0 with size 12
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 01:20:53) 
+-- CODE:
+from numpy import*
+notas = array(eval(input("Digite as notas:")))
+alunos = array(eval(input("Digite o nome:")))
+
+i = 0
+faltaram = 0
+passaram = 0
+reprovaram = 0
+soma = 0
+maior = 0
+
+while(i<size(notas)):
+	if(notas[i]==-1.0):
+		faltaram = faltaram + 1	
+	elif(notas[i]>=6.0):
+		passaram = passaram + 1
+	elif(notas[i]<6.0 and notas[i]!=-1):
+		reprovaram = reprovaram + 1
+	elif(notas[i] != -1.0):
+		soma = soma + notas[i]
+	elif(notas[i]==max(notas)):
+		maior = i
+	i =i+1
+print(faltaram)
+print(passaram)
+print(reprovaram)
+print(round(soma/(size(notas)-faltaram)),2)
+print(alunos[maior])
+
+-- EXECUTION TIME:
+0.429538
+-- TEST CASE 1:
+---- input:
+[9,8,7,6,5,4,3,2,1,-1,-1,-1]
+['A','B','C','D','E','F','G','H','I','J','K','L']
+---- correct output:
+3
+4
+5
+5.0
+A
+---- user output:
+3
+4
+5
+0 2
+A
+-- TEST CASE 2:
+---- input:
+[-1,1.2,-1,2.3,-1,3.4,-1,4.5,-1,5.6,-1]
+['ALICE','BENTO','CLARA','DAVI','ELSON','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+6
+0
+5
+3.4
+JULIA
+---- user output:
+6
+0
+5
+0 2
+ALICE
+-- TEST CASE 3:
+---- input:
+[1.23,3.45,5.67,6.78,7.89,8.9,9,10,0,9.8,7.6]
+['CLARA','DAVI','ELSON','ALICE','BENTO','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+0
+7
+4
+6.39
+HELOISA
+---- user output:
+0
+7
+4
+0 2
+CLARA
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 01:59:47) 
+-- CODE:
+from numpy import*
+notas = array(eval(input("Digite as notas:")))
+alunos = array(eval(input("Digite o nome:")))
+
+i = 0
+faltaram = 0
+passaram = 0
+reprovaram = 0
+soma = 0
+maior = 0
+
+while(i<size(notas)):
+	if(notas[i]==-1.0):
+		faltaram = faltaram + 1	
+	elif(notas[i]>=6.0):
+		passaram = passaram + 1
+	elif(notas[i]<6.0 and notas[i]!=-1):
+		reprovaram = reprovaram + 1
+	elif(notas[i] != -1.0):
+		soma = soma + notas[i]
+	elif(notas[i]==max(notas)):
+		maior = i
+	i =i+1
+print(faltaram)
+print(passaram)
+print(reprovaram)
+print(round(soma/(size(notas)-faltaram)),2)
+print(alunos[maior])
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 02:06:05) 
+-- CODE:
+from numpy import*
+
+notas = array(eval(input("Digite as notas:")))
+alunos = array(eval(input("Digite o nome:")))
+
+i = 0
+faltaram = 0
+passaram = 0
+reprovaram = 0
+soma = 0
+maior = 0
+
+while(i<size(notas)):
+	if(notas[i] == -1.0):
+		faltaram = faltaram + 1	
+		print(faltaram)
+	elif(notas[i] >= 6.0):
+		passaram = passaram + 1
+		print(passaram)
+	elif(notas[i] < 6.0 and notas[i] != -1):
+		reprovaram = reprovaram + 1
+		print(reprovaram)
+	elif(notas[i] != -1.0):
+		soma = soma + notas[i]
+		print(round(soma / (size(notas) - faltaram),2))
+	elif(notas[i] == max(notas)):
+		maior = i
+	i =i+1
+	print(alunos[maior])
+	
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 02:07:09) 
+-- CODE:
+from numpy import*
+
+notas = array(eval(input("Digite as notas:")))
+alunos = array(eval(input("Digite o nome:")))
+
+i = 0
+faltaram = 0
+passaram = 0
+reprovaram = 0
+soma = 0
+maior = 0
+
+while(i<size(notas)):
+	if(notas[i] == -1.0):
+		faltaram = faltaram + 1	
+		print(faltaram)
+	elif(notas[i] >= 6.0):
+		passaram = passaram + 1
+		print(passaram)
+	elif(notas[i] < 6.0 and notas[i] != -1):
+		reprovaram = reprovaram + 1
+		print(reprovaram)
+	elif(notas[i] != -1.0):
+		soma = soma + notas[i]
+		print(round(soma / (size(notas) - faltaram),2))
+	elif(notas[i] == max(notas)):
+		maior = i
+	i =i+1
+	print(alunos[maior])
+	
+
+
+-- EXECUTION TIME:
+0.423427
+-- TEST CASE 1:
+---- input:
+[9,8,7,6,5,4,3,2,1,-1,-1,-1]
+['A','B','C','D','E','F','G','H','I','J','K','L']
+---- correct output:
+3
+4
+5
+5.0
+A
+---- user output:
+1
+A
+2
+A
+3
+A
+4
+A
+1
+A
+2
+A
+3
+A
+4
+A
+5
+A
+1
+A
+2
+A
+3
+A
+-- TEST CASE 2:
+---- input:
+[-1,1.2,-1,2.3,-1,3.4,-1,4.5,-1,5.6,-1]
+['ALICE','BENTO','CLARA','DAVI','ELSON','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+6
+0
+5
+3.4
+JULIA
+---- user output:
+1
+ALICE
+1
+ALICE
+2
+ALICE
+2
+ALICE
+3
+ALICE
+3
+ALICE
+4
+ALICE
+4
+ALICE
+5
+ALICE
+5
+ALICE
+6
+ALICE
+-- TEST CASE 3:
+---- input:
+[1.23,3.45,5.67,6.78,7.89,8.9,9,10,0,9.8,7.6]
+['CLARA','DAVI','ELSON','ALICE','BENTO','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+0
+7
+4
+6.39
+HELOISA
+---- user output:
+1
+CLARA
+2
+CLARA
+3
+CLARA
+1
+CLARA
+2
+CLARA
+3
+CLARA
+4
+CLARA
+5
+CLARA
+4
+CLARA
+6
+CLARA
+7
+CLARA
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 02:07:21) 
+-- CODE:
+from numpy import*
+
+notas = array(eval(input("Digite as notas:")))
+alunos = array(eval(input("Digite o nome:")))
+
+i = 0
+faltaram = 0
+passaram = 0
+reprovaram = 0
+soma = 0
+maior = 0
+
+while(i<size(notas)):
+	if(notas[i] == -1.0):
+		faltaram = faltaram + 1	
+		print(faltaram)
+	elif(notas[i] >= 6.0):
+		passaram = passaram + 1
+		print(passaram)
+	elif(notas[i] < 6.0 and notas[i] != -1):
+		reprovaram = reprovaram + 1
+		print(reprovaram)
+	elif(notas[i] != -1.0):
+		soma = soma + notas[i]
+		print(round(soma / (size(notas) - faltaram),2))
+	elif(notas[i] == max(notas)):
+		maior = i
+	i =i+1
+	   print(alunos[maior])
+	
+
+
+-- EXECUTION TIME:
+0.164036
+-- ERROR:
+  File "/home/codebench/codes/1758/1580/main.py", line 29
+    print(alunos[maior])
+    ^
+IndentationError: unexpected indent
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

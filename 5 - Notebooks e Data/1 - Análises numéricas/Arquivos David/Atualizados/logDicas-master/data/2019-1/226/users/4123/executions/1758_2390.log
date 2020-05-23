@@ -1,0 +1,341 @@
+== TEST (2019-05-28 11:06:01) 
+-- CODE:
+p = array(eval(input()))
+f = array(eval(input()))
+m = int(p)/int(f)
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p = array(eval(input()))
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:06:20) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input()))
+f = array(eval(input()))
+m = int(p)/int(f)
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:06:44) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input()))
+f = array(eval(input()))
+m = int(p)/int(f)
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:09:21) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input()))
+f = array(eval(input()))
+i = 0
+while i<len(p):
+	if int(p[i])/int(f[i])>=(p[i-1])/int(f[i>1]):
+		j = i
+	i+=1
+print(j+1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:10:42) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input()))
+f = array(eval(input()))
+i = 0
+while i<len(p):
+	if int(p[i])/int(f[i])>=(p[i-1])/int(f[i-1]):
+		j = i
+	i+=1
+print(j+1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 11:10:54) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input()))
+f = array(eval(input()))
+i = 0
+while i<len(p):
+	if int(p[i])/int(f[i])>=(p[i-1])/int(f[i-1]):
+		j = i
+	i+=1
+print(j+1)
+-- EXECUTION TIME:
+0.487984
+-- TEST CASE 1:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,110,12]
+[5,6,7,8,9,10,11,12,13,1,15,12]
+---- correct output:
+10
+---- user output:
+11
+-- TEST CASE 2:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,11,12]
+[5,6,7,8,9,10,11,12,3,14,11,12]
+---- correct output:
+9
+---- user output:
+12
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:11:05) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input()))
+f = array(eval(input()))
+i = 0
+while i<len(p):
+	if int(p[i])/int(f[i])>=(p[i-1])/int(f[i-1]):
+		j = i
+	i+=1
+print(j+1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:13:36) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input()))
+f = array(eval(input()))
+i = 0
+while i<len(p):
+	if int(p[i])-int(f[i])>=int(p[i-1])-int(f[i-1]):
+		j = i
+	i+=1
+print(j+1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 11:14:01) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input()))
+f = array(eval(input()))
+i = 0
+while i<len(p):
+	if int(p[i])-int(f[i])>=int(p[i-1])-int(f[i-1]):
+		j = i
+	i+=1
+print(j+1)
+-- EXECUTION TIME:
+0.596942
+-- TEST CASE 1:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,110,12]
+[5,6,7,8,9,10,11,12,13,1,15,12]
+---- correct output:
+10
+---- user output:
+11
+-- TEST CASE 2:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,11,12]
+[5,6,7,8,9,10,11,12,3,14,11,12]
+---- correct output:
+9
+---- user output:
+12
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:14:04) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input()))
+f = array(eval(input()))
+i = 0
+while i<len(p):
+	if int(p[i])-int(f[i])>=int(p[i-1])-int(f[i-1]):
+		j = i
+	i+=1
+print(j+1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:14:55) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input()))
+f = array(eval(input()))
+i = 0
+while i<len(p):
+	if int(p[i])-int(f[i])>=int(p[i-1])-int(f[i-1]):
+		j = i
+	i+=1
+print(j+1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:16:39) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input()))
+f = array(eval(input()))
+i = 0
+while i<len(p):
+	q = p-f
+	if q[i]<max(q):
+		j = i
+	i+=1
+print(j+1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 11:16:45) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input()))
+f = array(eval(input()))
+i = 0
+while i<len(p):
+	q = p-f
+	if q[i]<max(q):
+		j = i
+	i+=1
+print(j+1)
+-- EXECUTION TIME:
+0.437505
+-- TEST CASE 1:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,110,12]
+[5,6,7,8,9,10,11,12,13,1,15,12]
+---- correct output:
+10
+---- user output:
+12
+-- TEST CASE 2:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,11,12]
+[5,6,7,8,9,10,11,12,3,14,11,12]
+---- correct output:
+9
+---- user output:
+12
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:17:00) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input()))
+f = array(eval(input()))
+i = 0
+while i<len(p):
+	q = p-f
+	if q[i]<max(q):
+		j = i
+	i+=1
+print(j+1)
+print(q)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:17:27) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input()))
+f = array(eval(input()))
+i = 0
+while i<len(p):
+	q = p-f
+	if q[i]==max(q):
+		j = i
+	i+=1
+print(j+1)
+print(q)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 11:17:51) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input()))
+f = array(eval(input()))
+i = 0
+while i<len(p):
+	q = p-f
+	if q[i]==max(q):
+		j = i
+	i+=1
+print(j+1)
+-- EXECUTION TIME:
+0.463181
+-- TEST CASE 1:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,110,12]
+[5,6,7,8,9,10,11,12,13,1,15,12]
+---- correct output:
+10
+---- user output:
+11
+-- TEST CASE 2:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,11,12]
+[5,6,7,8,9,10,11,12,3,14,11,12]
+---- correct output:
+9
+---- user output:
+10
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,406 @@
+== TEST (2019-07-09 10:33:07) 
+-- CODE:
+from numpy import*
+from numpy.lin.alg import*
+vet=array(eval(input("Digite o vetor: ")))
+a=array([[10,12,15],
+		   [6,8,12],
+		   [12,12,18]])
+a=a/60
+r=dot(inv(a),a.T)
+print(r)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 10:33:16) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("Digite o vetor: ")))
+a=array([[10,12,15],
+		   [6,8,12],
+		   [12,12,18]])
+a=a/60
+r=dot(inv(a),a.T)
+print(r)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 10:34:14) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("Digite o vetor: ")))
+a=array([[10,12,15],
+		   [6,8,12],
+		   [12,12,18]])
+a=a/60
+r=dot(inv(a),vet.T)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 10:34:26) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("Digite o vetor: ")))
+a=array([[10,12,15],
+		   [6,8,12],
+		   [12,12,18]])
+a=a/60
+r=dot(inv(a),vet.T)
+print(r)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 10:39:51) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("Digite o vetor: ")))
+a=array([[10,12,15],
+		   [6,8,12],
+		   [12,12,18]])
+a=a/60
+r=dot(inv(a),vet.T)
+
+print("caderia: ", round(r[0],0))
+print("bau: ",round(r[1],0))
+print("mesa: ",round(r[2],0))
+
+if(r[0]==max(r)):
+	print("cadeira")
+if(r[1]==max(r)):
+	print("bau")
+if(r[2]==max(r)):
+	print("mesa")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 10:40:10) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("Digite o vetor: ")))
+a=array([[10,12,15],
+		   [6,8,12],
+		   [12,12,18]])
+a=a/60
+r=dot(inv(a),vet.T)
+
+print("caderia: ", round(r[0],0))
+print("bau: ",round(r[1],0))
+print("mesa: ",round(r[2],0))
+
+if(r[0]==max(r)):
+	print("cadeira")
+if(r[1]==max(r)):
+	print("bau")
+if(r[2]==max(r)):
+	print("mesa")
+
+-- EXECUTION TIME:
+1.10002
+-- TEST CASE 1:
+---- input:
+[337.95,255.26666667,392.5]
+---- correct output:
+cadeira: 192.0
+bau: 326.0
+mesa: 963.0
+mesa
+---- user output:
+caderia:  192.0
+bau:  326.0
+mesa:  963.0
+mesa
+-- TEST CASE 2:
+---- input:
+[697.25,467.33333333,706.1]
+---- correct output:
+cadeira: 102.0
+bau: 3265.0
+mesa: 109.0
+bau
+---- user output:
+caderia:  102.0
+bau:  3265.0
+mesa:  109.0
+bau
+-- TEST CASE 3:
+---- input:
+[3179.23333333,2196.4,3770.2]
+---- correct output:
+cadeira: 9512.0
+bau: 1122.0
+mesa: 5478.0
+cadeira
+---- user output:
+caderia:  9512.0
+bau:  1122.0
+mesa:  5478.0
+cadeira
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 10:40:14) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("Digite o vetor: ")))
+a=array([[10,12,15],
+		   [6,8,12],
+		   [12,12,18]])
+a=a/60
+r=dot(inv(a),vet.T)
+
+print("caderia: ", round(r[0],0))
+print("bau: ",round(r[1],0))
+print("mesa: ",round(r[2],0))
+
+if(r[0]==max(r)):
+	print("cadeira")
+if(r[1]==max(r)):
+	print("bau")
+if(r[2]==max(r)):
+	print("mesa")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 10:40:35) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("Digite o vetor: ")))
+a=array([[10,12,15],
+		   [6,8,12],
+		   [12,12,18]])
+a=a/60
+r=dot(inv(a),vet.T)
+
+print("caderia: ", round(r[0],0))
+print("bau: ",round(r[1],0))
+print("mesa: ",round(r[2],0))
+
+if(r[0]==max(r)):
+	print("cadeira")
+if(r[1]==max(r)):
+	print("bau")
+if(r[2]==max(r)):
+	print("mesa")
+
+-- EXECUTION TIME:
+1.16583
+-- TEST CASE 1:
+---- input:
+[337.95,255.26666667,392.5]
+---- correct output:
+cadeira: 192.0
+bau: 326.0
+mesa: 963.0
+mesa
+---- user output:
+caderia:  192.0
+bau:  326.0
+mesa:  963.0
+mesa
+-- TEST CASE 2:
+---- input:
+[697.25,467.33333333,706.1]
+---- correct output:
+cadeira: 102.0
+bau: 3265.0
+mesa: 109.0
+bau
+---- user output:
+caderia:  102.0
+bau:  3265.0
+mesa:  109.0
+bau
+-- TEST CASE 3:
+---- input:
+[3179.23333333,2196.4,3770.2]
+---- correct output:
+cadeira: 9512.0
+bau: 1122.0
+mesa: 5478.0
+cadeira
+---- user output:
+caderia:  9512.0
+bau:  1122.0
+mesa:  5478.0
+cadeira
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 10:40:55) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("Digite o vetor: ")))
+a=array([[10,12,15],
+		   [6,8,12],
+		   [12,12,18]])
+a=a/60
+r=dot(inv(a),vet.T)
+
+print("caderia: ", round(r[0],0))
+print("bau: ",round(r[1],0))
+print("mesa: ",round(r[2],0))
+
+if(r[0]==max(r)):
+	print("cadeira")
+if(r[1]==max(r)):
+	print("bau")
+if(r[2]==max(r)):
+	print("mesa")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 10:41:15) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("Digite o vetor: ")))
+a=array([[10,12,15],
+		   [6,8,12],
+		   [12,12,18]])
+a=a/60
+r=dot(inv(a),vet.T)
+
+print("caderia: ", round(r[0],0))
+print("bau: ",round(r[1],0))
+print("mesa: ",round(r[2],0))
+
+if(r[0]==max(r)):
+	print("cadeira")
+if(r[1]==max(r)):
+	print("bau")
+if(r[2]==max(r)):
+	print("mesa")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 10:41:29) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("Digite o vetor: ")))
+a=array([[10,12,15],
+		   [6,8,12],
+		   [12,12,18]])
+a=a/60
+r=dot(inv(a),vet.T)
+
+print("caderia: ", round(r[0],0))
+print("bau: ",round(r[1],0))
+print("mesa: ",round(r[2],0))
+
+if(r[0]==max(r)):
+	print("cadeira")
+if(r[1]==max(r)):
+	print("bau")
+if(r[2]==max(r)):
+	print("mesa")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 10:42:02) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("Digite o vetor: ")))
+a=array([[10,12,15],
+		   [6,8,12],
+		   [12,12,18]])
+a=a/60
+r=dot(inv(a),vet.T)
+
+print("cadeira: ", round(r[0],0))
+print("bau: ",round(r[1],0))
+print("mesa: ",round(r[2],0))
+
+if(r[0]==max(r)):
+	print("cadeira")
+if(r[1]==max(r)):
+	print("bau")
+if(r[2]==max(r)):
+	print("mesa")
+
+-- EXECUTION TIME:
+0.801164
+-- TEST CASE 1:
+---- input:
+[337.95,255.26666667,392.5]
+---- correct output:
+cadeira: 192.0
+bau: 326.0
+mesa: 963.0
+mesa
+---- user output:
+cadeira:  192.0
+bau:  326.0
+mesa:  963.0
+mesa
+-- TEST CASE 2:
+---- input:
+[697.25,467.33333333,706.1]
+---- correct output:
+cadeira: 102.0
+bau: 3265.0
+mesa: 109.0
+bau
+---- user output:
+cadeira:  102.0
+bau:  3265.0
+mesa:  109.0
+bau
+-- TEST CASE 3:
+---- input:
+[3179.23333333,2196.4,3770.2]
+---- correct output:
+cadeira: 9512.0
+bau: 1122.0
+mesa: 5478.0
+cadeira
+---- user output:
+cadeira:  9512.0
+bau:  1122.0
+mesa:  5478.0
+cadeira
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

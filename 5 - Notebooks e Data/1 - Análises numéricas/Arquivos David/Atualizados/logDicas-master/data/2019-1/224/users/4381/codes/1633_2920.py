@@ -1,0 +1,5 @@
+s=float(input("gramas"))
+qb=float(input("bebida"))
+qa=float(input("sobremesas"))
+t=(s*26.90/1000)+(qb*3.50)+(qa*3.00)
+print(round(t,2))

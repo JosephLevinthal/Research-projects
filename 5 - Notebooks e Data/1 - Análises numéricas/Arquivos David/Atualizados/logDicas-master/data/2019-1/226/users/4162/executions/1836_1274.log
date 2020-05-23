@@ -1,0 +1,149 @@
+== TEST (2019-06-25 11:35:00) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+e=array(eval(input("insira um numero natural: ")))
+mt=zeros((n,n),dtype=int)
+for i in range(n):
+	for j in range(n):
+		if i=j:
+			s=s+1
+			mt[i,j]=s
+		
+print(mt)
+-- ERROR:
+File "XXXX", line 7
+    if i=j:
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:35:06) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+e=array(eval(input("insira um numero natural: ")))
+mt=zeros((n,n),dtype=int)
+for i in range(n):
+	for j in range(n):
+		if i==j:
+			s=s+1
+			mt[i,j]=s
+		
+print(mt)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:35:16) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+n=array(eval(input("insira um numero natural: ")))
+mt=zeros((n,n),dtype=int)
+for i in range(n):
+	for j in range(n):
+		if i==j:
+			s=s+1
+			mt[i,j]=s
+		
+print(mt)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:35:25) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+s=0
+n=array(eval(input("insira um numero natural: ")))
+mt=zeros((n,n),dtype=int)
+for i in range(n):
+	for j in range(n):
+		if i==j:
+			s=s+1
+			mt[i,j]=s
+		
+print(mt)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:38:18) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+s=0
+n=array(eval(input("insira um numero natural: ")))
+mt=zeros((n,n),dtype=int)
+for i in range(n):
+	for j in range(n):
+		mt[i,j]=min(i,j)+1
+print(mt)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:38:26) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+s=0
+n=array(eval(input("insira um numero natural: ")))
+mt=zeros((n,n),dtype=int)
+for i in range(n):
+	for j in range(n):
+		mt[i,j]=min(i,j)+1
+print(mt)
+-- EXECUTION TIME:
+1.09059
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

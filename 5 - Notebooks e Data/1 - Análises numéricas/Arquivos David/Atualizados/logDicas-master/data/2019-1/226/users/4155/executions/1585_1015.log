@@ -1,0 +1,357 @@
+== TEST (2019-03-23 00:57:37) 
+-- CODE:
+print(max(x, y, z))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    print(max(x, y, z))
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 00:58:56) 
+-- CODE:
+x = menor que y
+y = maior que x e menor que z
+z = maior da propriedade
+print(max(x, y, z))
+-- ERROR:
+File "XXXX", line 1
+    x = menor que y
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 00:59:05) 
+-- CODE:
+x = menor que y
+y = maior que x e menor que z
+z = maior da propriedade
+print(max(x, y, z))
+-- ERROR:
+File "XXXX", line 1
+    x = menor que y
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 01:01:26) 
+-- CODE:
+print(max(1, 2, 3, 4))
+-- OUTPUT:
+4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-23 01:05:33) 
+-- CODE:
+int vetor[3]; // posicao 0 = menor valor, posicao 1 = valor médio, posicao 2 = maior valorint a, b c, i;printf( "Digite os valores de a, b e c: " );scanf( "%d", &a );scanf( "%d", &b );scanf( "%d", &c );// Ordena os 3 valores lidos dentro de um vetor.if( a >= b && a >= c ) {   vetor[0] = a;   if( b >= c ) {	  vetor[1] = b;	  vetor[2] = c;   } else {	  vetor[1] = c;	  vetor[2] = b;   }} else if ( b >= a && b >= c ) {   vetor[0] = b;   if( a >= c ) {	  vetor[1] = a;	  vetor[2] = c;   } else {	  vetor[1] = c;	  vetor[2] = a;   }} else {   vetor[0] = c;   if( a >= b ) {	  vetor[1] = a;	  vetor[2] = b;   } else {	  vetor[1] = b;	  vetor[2] = a;   }}printf( "Numeros em ordem crescente: " );for( i = 0; i < 3; i++ ) {	printf( "%d ", vetor[i]);}printf( "\nNumeros em ordem decrescente: " );for( i = 3; i >= 0; i-- ) {	printf("%d ", vetor[i]);}
+-- EXECUTION TIME:
+0.196813
+-- ERROR:
+  File "/home/codebench/codes/1585/1015/main.py", line 1
+    int vetor[3]; // posicao 0 = menor valor, posicao 1 = valor m\xe9dio, posicao 2 = maior valorint a, b c, i;printf( "Digite os valores de a, b e c: " );scanf( "%d", &a );scanf( "%d", &b );scanf( "%d", &c );// Ordena os 3 valores lidos dentro de um vetor.if( a >= b && a >= c ) {   vetor[0] = a;   if( b >= c ) {	  vetor[1] = b;	  vetor[2] = c;   } else {	  vetor[1] = c;	  vetor[2] = b;   }} else if ( b >= a && b >= c ) {   vetor[0] = b;   if( a >= c ) {	  vetor[1] = a;	  vetor[2] = c;   } else {	  vetor[1] = c;	  vetor[2] = a;   }} else {   vetor[0] = c;   if( a >= b ) {	  vetor[1] = a;	  vetor[2] = b;   } else {	  vetor[1] = b;	  vetor[2] = a;   }}printf( "Numeros em ordem crescente: " );for( i = 0; i < 3; i++ ) {	printf( "%d ", vetor[i]);}printf( "\nNumeros em ordem decrescente: " );for( i = 3; i >= 0; i-- ) {	printf("%d ", vetor[i]);}
+            ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 23:26:26) 
+-- CODE:
+int(input(max(valor: )))
+int(input(max(valor: )))
+int(input(max(valor: )))
+-- ERROR:
+File "XXXX", line 1
+    int(input(max(valor: )))
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 23:26:46) 
+-- CODE:
+a = int(input(max(valor: )))
+b = int(input(max(valor: )))
+c = int(input(max(valor: )))
+-- ERROR:
+File "XXXX", line 1
+    a = int(input(max(valor: )))
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 23:27:23) 
+-- CODE:
+a = int(input(max))
+b = int(input(max))
+c = int(input(max))
+-- OUTPUT:
+<built-in function max><built-in function max><built-in function max>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 23:30:09) 
+-- CODE:
+a = int(input(max))
+b = int(input(max))
+c = int(input(max))
+
+total = int(input(max(a,b,c)))
+ print(total)
+-- ERROR:
+File "XXXX", line 6
+    print(total)
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 23:30:17) 
+-- CODE:
+a = int(input(max))
+b = int(input(max))
+c = int(input(max))
+
+total = int(input(max(a,b,c)))
+print(total)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    total = int(input(max(a,b,c)))
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 23:30:42) 
+-- CODE:
+a = int(input(max))
+b = int(input(max))
+c = int(input(max))
+
+total = int(input(max(a, b, c)))
+print(total)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    total = int(input(max(a, b, c)))
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 23:31:07) 
+-- CODE:
+a = int(input(max))
+b = int(input(max))
+c = int(input(max))
+
+total = int(input(max(a, b, c)))
+print(total)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    total = int(input(max(a, b, c)))
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 23:32:16) 
+-- CODE:
+a = int(input(max))
+b = int(input(max))
+c = int(input(max))
+
+total = int(input(max(a,int(input(max(b,int(input(max(c)))
+print(total)
+-- ERROR:
+File "XXXX", line 6
+    print(total)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 23:32:24) 
+-- CODE:
+a = int(input(max))
+b = int(input(max))
+c = int(input(max))
+
+total = int(input(max(a,int(input(max(b,int(input(max(c)))
+print(total)
+-- ERROR:
+File "XXXX", line 6
+    print(total)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 23:33:13) 
+-- CODE:
+a = int(input(max( , , ,)))
+
+print(a)
+
+-- ERROR:
+File "XXXX", line 1
+    a = int(input(max( , , ,)))
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 23:33:24) 
+-- CODE:
+a = int(input(max()))
+
+print(a)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a = int(input(max()))
+TypeError: max expected 1 arguments, got 0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 23:34:20) 
+-- CODE:
+a = int(input(max("valores; , , ")))
+
+print(a)
+
+-- OUTPUT:
+v10
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 23:34:33) 
+-- CODE:
+a = int(input(max("valores: , , ")))
+
+print(a)
+
+-- OUTPUT:
+v10
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 23:37:20) 
+-- CODE:
+a = int(input(max( ))
+b = int(input(max( ))
+c = int(input(max( ))	  
+
+total = int(input(max(a ,b ,c)))		  
+		
+print(total)
+
+-- ERROR:
+File "XXXX", line 2
+    b = int(input(max( ))
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 23:37:41) 
+-- CODE:
+a = int(input(max( ))
+b = int(input(max( ))
+c = int(input(max( ))	  
+
+total = int(input(max(a ,b ,c)))		  
+		
+print(total)
+
+-- ERROR:
+File "XXXX", line 2
+    b = int(input(max( ))
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 23:37:53) 
+-- CODE:
+a = int(input(max( ))
+d = int(input(max( ))
+c = int(input(max( ))	  
+
+total = int(input(max(a ,d ,c)))		  
+		
+print(total)
+
+-- ERROR:
+File "XXXX", line 2
+    d = int(input(max( ))
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 23:38:32) 
+-- CODE:
+a = int(input(max( ))
+d = int(input(min( ))
+c = int(input(max( ))	  
+
+total = int(input(max(a ,d ,c)))		  
+		
+print(total)
+
+-- ERROR:
+File "XXXX", line 2
+    d = int(input(min( ))
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-24 14:34:25) 
+-- CODE:
+a = int(input(max( ))
+d = int(input(min( ))
+c = int(input(max( ))	  
+
+total = int(input(max(a ,d ,c)))		  
+		
+print(total)
+
+-- ERROR:
+File "XXXX", line 2
+    d = int(input(min( ))
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-24 14:34:41) 
+-- CODE:
+a = int(input(max( ))
+d = int(input(max( ))
+c = int(input(max( ))	  
+
+total = int(input(max(a ,d ,c)))		  
+		
+print(total)
+
+-- ERROR:
+File "XXXX", line 2
+    d = int(input(max( ))
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 10:23:47) 
+-- CODE:
+a = int(input("numero: "))
+d = int(input("numero: "))
+c = int(input("mumero: "))  
+
+menor = min(a,b,c)
+maior = max(a,b,c)
+medio = a+b+c-maior-menor
+print(menor,medio,maior)
+-- EXECUTION TIME:
+0.123899
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1585/1015/main.py", line 5, in <module>
+    menor = min(a,b,c)
+NameError: name 'b' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 10:24:04) 
+-- CODE:
+a = int(input("numero: "))
+b = int(input("numero: "))
+c = int(input("mumero: "))  
+
+menor = min(a,b,c)
+maior = max(a,b,c)
+medio = a+b+c-maior-menor
+print(menor,medio,maior)
+-- EXECUTION TIME:
+0.127924
+-- TEST CASE 1:
+---- input:
+10 -2 0
+---- correct output:
+-2 0 10
+---- user output:
+-2 0 10
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 22:00:16) 
+-- CODE:
+a = int(input("numero: "))
+b = int(input("numero: "))
+c = int(input("mumero: "))  
+
+menor = min(a,b,c)
+maior = max(a,b,c)
+medio = a+b+c-maior-menor
+print(menor,medio,maior)
+-- OUTPUT:
+-2 0 10
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

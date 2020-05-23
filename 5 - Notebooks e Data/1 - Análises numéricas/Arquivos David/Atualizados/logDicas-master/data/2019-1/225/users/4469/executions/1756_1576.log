@@ -1,0 +1,65 @@
+== SUBMITION (2019-05-21 21:30:45) 
+-- CODE:
+from numpy import*
+
+v1 = array(eval(input()))
+v2 = array(eval(input()))
+
+p = 0
+e = 0
+b = 0
+
+while(p < size(v1) and p < size(v2)):
+	if(v1[p] == v2[p]):
+		e = e + 1
+		b = b + 1
+	elif(v1[p] == 33 and v2[p] == 22) or (v1[p] == 22 and v2[p] == 11) or (v1[p] == 11 and v2[p] == 33):
+		e = e + 1
+	elif(v2[p] == 33 and v1[p] == 22) or (v2[p] == 22 and v1[p] == 11) or (v2[p] == 11 and v1[p] == 33):
+		b = b + 1
+		
+	p = p + 1
+
+print(size(v1))
+
+if(e > b):
+	print("EUSAPIA")
+elif(b > e):
+	print("BARSANULFO")
+else:
+	print("EMPATE")
+-- EXECUTION TIME:
+0.484414
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+EUSAPIA
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+EMPATE
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+BARSANULFO
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,152 @@
+== TEST (2019-04-11 10:30:28) 
+-- CODE:
+from math import *
+vel=float(input("entre com a  velocidade inicial: "))
+ang=float(input("entre com o valor do angulo: "))
+d=float(input("entre com a distancia: "))
+g=9.8
+
+if((vel**2)*sin(2*radians(ang))/2 ==d:
+	print("sim")
+	
+else:
+	print("nao")
+-- ERROR:
+File "XXXX", line 7
+    if((vel**2)*sin(2*radians(ang))/2 ==d:
+                                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:30:46) 
+-- CODE:
+from math import *
+vel=float(input("entre com a  velocidade inicial: "))
+ang=float(input("entre com o valor do angulo: "))
+d=float(input("entre com a distancia: "))
+g=9.8
+
+if(((vel**2)*sin(2*radians(ang))/2) ==d:
+	print("sim")
+	
+else:
+	print("nao")
+-- ERROR:
+File "XXXX", line 7
+    if(((vel**2)*sin(2*radians(ang))/2) ==d:
+                                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:34:15) 
+-- CODE:
+from math import *
+vel=float(input("entre com a  velocidade inicial: "))
+ang=float(input("entre com o valor do angulo: "))
+d=float(input("entre com a distancia: "))
+g=9.8
+r=((vel**2)*sin(radians(2*ang)))/g
+
+if(r==d)
+	print("sim")
+	
+else:
+	print("nao")
+-- ERROR:
+File "XXXX", line 8
+    if(r==d)
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:34:22) 
+-- CODE:
+from math import *
+vel=float(input("entre com a  velocidade inicial: "))
+ang=float(input("entre com o valor do angulo: "))
+d=float(input("entre com a distancia: "))
+g=9.8
+r=((vel**2)*sin(radians(2*ang)))/g
+
+if(r==d):
+	print("sim")
+	
+else:
+	print("nao")
+-- OUTPUT:
+nao
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:34:48) 
+-- CODE:
+from math import *
+vel=float(input("entre com a  velocidade inicial: "))
+ang=float(input("entre com o valor do angulo: "))
+d=float(input("entre com a distancia: "))
+g=9.8
+r=((vel**2)*sin(radians(2*ang)))/g
+
+if(r==d):
+	print("sim")
+	
+else:
+	print("nao")
+-- EXECUTION TIME:
+0.187034
+-- TEST CASE 1:
+---- input:
+10.5
+45.5
+11.3
+---- correct output:
+sim
+---- user output:
+nao
+-- TEST CASE 2:
+---- input:
+29.5
+17.1
+51.0
+---- correct output:
+nao
+---- user output:
+nao
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:45:57) 
+-- CODE:
+from math import *
+vel=float(input("entre com a  velocidade inicial: "))
+ang=float(input("entre com o valor do angulo: "))
+d=float(input("entre com a distancia: "))
+g=9.8
+r=((vel**2)*sin(radians(2*ang)))/g
+
+
+
+if(abs(d-r<= 0.1)):
+	
+	print("sim")
+	
+else:
+	print("nao")
+-- EXECUTION TIME:
+0.198604
+-- TEST CASE 1:
+---- input:
+10.5
+45.5
+11.3
+---- correct output:
+sim
+---- user output:
+sim
+-- TEST CASE 2:
+---- input:
+29.5
+17.1
+51.0
+---- correct output:
+nao
+---- user output:
+nao
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

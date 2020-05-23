@@ -1,0 +1,733 @@
+== TEST (2019-05-16 19:09:42) 
+-- CODE:
+#pontuaçoes
+vitoria= 3 
+empate= 1
+derrota=0
+resultado=.upper(input("resultado da partida V para vitoria, E para empate e D para derrota: "))
+print(resultado)
+-- ERROR:
+File "XXXX", line 5
+    resultado=.upper(input())
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:09:51) 
+-- CODE:
+#pontuaçoes
+vitoria= 3 
+empate= 1
+derrota=0
+resultado=.upper()input("resultado da partida V para vitoria, E para empate e D para derrota: ")
+print(resultado)
+-- ERROR:
+File "XXXX", line 5
+    resultado=.upper()input()
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:10:05) 
+-- CODE:
+#pontuaçoes
+vitoria= 3 
+empate= 1
+derrota=0
+resultado=input("resultado da partida V para vitoria, E para empate e D para derrota: ").upper()
+print(resultado)
+-- OUTPUT:
+V
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:12:11) 
+-- CODE:
+#pontuaçoes
+vitoria= 3 
+empate= 1
+derrota=0
+resultado=input("resultado da partida V para vitoria, E para empate e D para derrota: ")
+if resultado== v or resultado= e or resultado= d
+	print("JOGO IGNORADO")
+else: 
+	while resultado!=x:
+		
+-- ERROR:
+File "XXXX", line 6
+    if resultado== v or resultado= e or resultado= d
+                                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:12:23) 
+-- CODE:
+#pontuaçoes
+vitoria= 3 
+empate= 1
+derrota=0
+resultado=input("resultado da partida V para vitoria, E para empate e D para derrota: ")
+if (resultado== v or resultado= e or resultado= d):
+	print("JOGO IGNORADO")
+else: 
+	while resultado!=x:
+		
+-- ERROR:
+File "XXXX", line 6
+    if (resultado== v or resultado= e or resultado= d):
+                                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:12:51) 
+-- CODE:
+#pontuaçoes
+vitoria= 3 
+empate= 1
+derrota=0
+resultado=input("resultado da partida V para vitoria, E para empate e D para derrota: ")
+if ((resultado== v) or (resultado= e) or (resultado= d)):
+	print("JOGO IGNORADO")
+else: 
+	while resultado!=x:
+		
+-- ERROR:
+File "XXXX", line 6
+    if ((resultado== v) or (resultado= e) or (resultado= d)):
+                                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:13:04) 
+-- CODE:
+#pontuaçoes
+vitoria= 3 
+empate= 1
+derrota=0
+resultado=input("resultado da partida V para vitoria, E para empate e D para derrota: ")
+if ((resultado== v) or (resultado==e) or (resultado==d)):
+	print("JOGO IGNORADO")
+else: 
+	while resultado!=x:
+		
+-- ERROR:
+File "XXXX", line 11
+    
+      ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:14:50) 
+-- CODE:
+#pontuaçoes
+vitoria= 3 
+empate= 1
+derrota=0
+resultado=input("resultado da partida V para vitoria, E para empate e D para derrota: ")
+while resultado!=x:
+	
+-- ERROR:
+File "XXXX", line 8
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:19:42) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pmp=0
+pp=pmp/100
+resultado=input("resultado da partida V para vitoria, E para empate e D para derrota: ")
+while (resultado!=x):
+	if (resultado=="V"):
+		pmp=pmp+3
+	elif (resultado=="E"):
+		pmp=pmp+1
+	elif (resultado=="D"):
+		pmp=pmp+0
+print(round(pp, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    while (resultado!=x):
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:20:06) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pmp=0
+pp=pmp/100
+resultado=input("resultado da partida V para vitoria, E para empate e D para derrota: ")
+while (resultado!="x"):
+	if (resultado=="V"):
+		pmp=pmp+3
+	elif (resultado=="E"):
+		pmp=pmp+1
+	elif (resultado=="D"):
+		pmp=pmp+0
+print(round(pp, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    while (resultado!=x):
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:20:38) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pmp=0
+pp=pmp/100
+resultado=input("resultado da partida V para vitoria, E para empate e D para derrota: ")
+while (resultado!="X"):
+	if (resultado=="V"):
+		pmp=pmp+3
+	elif (resultado=="E"):
+		pmp=pmp+1
+	elif (resultado=="D"):
+		pmp=pmp+0
+print(round(pp, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    while (resultado!=x):
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:21:36) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pmp=0
+pp=pmp/100
+while (resultado!="X"):
+	resultado=input("resultado da partida: ")
+	if (resultado=="V"):
+		pmp=pmp+3
+	elif (resultado=="E"):
+		pmp=pmp+1
+	elif (resultado=="D"):
+		pmp=pmp+0
+print(round(pp, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    while (resultado!="X"):
+NameError: name 'resultado' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:21:59) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pmp=0
+pp=pmp/100
+resultado= resutado
+while (resultado!="X"):
+	resultado=input("resultado da partida: ")
+	if (resultado=="V"):
+		pmp=pmp+3
+	elif (resultado=="E"):
+		pmp=pmp+1
+	elif (resultado=="D"):
+		pmp=pmp+0
+print(round(pp, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    resultado= resutado
+NameError: name 'resutado' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:22:25) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pmp=0
+pp=pmp/100
+presultado= resultado
+while (presultado!="X"):
+	resultado=input("resultado da partida: ")
+	if (resultado=="V"):
+		pmp=pmp+3
+	elif (resultado=="E"):
+		pmp=pmp+1
+	elif (resultado=="D"):
+		pmp=pmp+0
+print(round(pp, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    presultado= resultado
+NameError: name 'resultado' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:23:04) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pmp=0
+pp=pmp/100
+resultado= 0
+while (resultado!="X"):
+	resultado=input("resultado da partida: ")
+	if (resultado=="V"):
+		pmp=pmp+3
+	elif (resultado=="E"):
+		pmp=pmp+1
+	elif (resultado=="D"):
+		pmp=pmp+0
+print(round(pp, 2))
+-- OUTPUT:
+0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:24:22) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pmp=0
+pp=pmp/100
+resultado= 0
+while (resultado!="X"):
+	resultado=input("resultado da partida: ")
+	if (resultado=="V"):
+		pmp=pmp+3
+	elif (resultado=="E"):
+		pmp=pmp+1
+	elif (resultado=="D"):
+		pmp=pmp+0
+print(round(pp, 2))
+-- OUTPUT:
+0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:25:00) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pmp=2
+pp=pmp/100
+resultado= 0
+while (resultado!="X"):
+	resultado=input("resultado da partida: ")
+	if (resultado=="V"):
+		pmp=pmp+3
+	elif (resultado=="E"):
+		pmp=pmp+1
+	elif (resultado=="D"):
+		pmp=pmp+0
+print(round(pp, 2))
+-- OUTPUT:
+0.02
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:26:22) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pmp=0
+pp=pmp/100
+resultado= 0
+while (resultado!="X"):
+	resultado=input("resultado da partida: ")
+	if (resultado=="V"):
+		pmp=pmp+3
+	if (resultado=="E"):
+		pmp=pmp+1
+	if (resultado=="D"):
+		pmp=pmp+0
+print(round(pp, 2))
+-- OUTPUT:
+0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:27:40) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pmp=0
+pp=pmp/100
+resultado= 0
+while (resultado!="X"):
+	resultado=input("resultado da partida: ")
+	if (resultado=="V"):
+		pmp= pmp + 3
+		print("BANANA")
+	if (resultado=="E"):
+		pmp= pmp + 1
+	if (resultado=="D"):
+		pmp= pmp + 0
+print(round(pp, 2))
+-- OUTPUT:
+BANANA
+0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:28:57) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pmp=0
+pp=pmp/100
+resultado= 0
+while (resultado!="X"):
+	resultado=input("resultado da partida: ")
+	if (resultado=="V"):
+		pf= pmp + 3
+	if (resultado=="E"):
+		pf= pmp + 1
+	if (resultado=="D"):
+		pf= pmp + 0
+print(round(pp, 2))
+-- OUTPUT:
+0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:32:36) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pmp=0
+resultado= 0
+while (resultado!="X"):
+	resultado=input("resultado da partida: ")
+	if (resultado=="V"):
+		pmp= pmp + 3
+	if (resultado=="E"):
+		pmp= pmp + 1
+		
+	if (resultado=="D"):
+		pmp= pmp+0
+		
+print(round(pmp/100, 2))
+-- OUTPUT:
+0.04
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:32:54) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pmp=0
+resultado= 0
+while (resultado!="X"):
+	resultado=input("resultado da partida: ")
+	if (resultado=="V"):
+		pmp= pmp + 3
+	if (resultado=="E"):
+		pmp= pmp + 1
+		
+	if (resultado=="D"):
+		pmp= pmp+0
+		
+print(round(pmp/100, 2))
+-- OUTPUT:
+0.04
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:40:18) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pf=0
+pm=0
+nj=1
+resultado= 0
+while (resultado!="X"):
+	resultado=input("resultado da partida: ")
+	nj=nj+1
+	if (resultado=="V"):
+		pf= pf + 3	
+	if (resultado=="E"):
+		pf= pf + 1	
+	if (resultado=="D"):
+		pf= pf+0
+pm= nj*3	
+pp= (pf*100)/pm
+print(round(pp, 2))
+-- OUTPUT:
+11.11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:41:20) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pf=0
+pm=0
+nj=1
+resultado= 0
+while (resultado!="X"):
+	resultado=input("resultado da partida: ")
+	nj=nj+1
+	if (resultado=="V"):
+		pf= pf + 3	
+	if (resultado=="E"):
+		pf= pf + 1	
+	if (resultado=="D"):
+		pf= pf+0
+pm= nj*3	
+pp= (pf*100)/pm
+print(round(100-pp, 2))
+-- OUTPUT:
+88.89
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:42:09) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pf=0
+pm=0
+nj=1
+resultado= 0
+while (resultado!="X"):
+	resultado=input("resultado da partida: ")
+	nj=nj+1
+	if (resultado=="V"):
+		pf= pf + 3	
+	if (resultado=="E"):
+		pf= pf + 1	
+	if (resultado=="D"):
+		pf= pf+0
+pm= nj*3	
+pp= (pf*100)/pm
+print(round(100-pp, 2))
+print(nj)
+-- OUTPUT:
+88.89
+12
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:42:43) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pf=0
+pm=0
+nj=0
+resultado= 0
+while (resultado!="X"):
+	resultado=input("resultado da partida: ")
+	nj=nj+1
+	if (resultado=="V"):
+		pf= pf + 3	
+	if (resultado=="E"):
+		pf= pf + 1	
+	if (resultado=="D"):
+		pf= pf+0
+pm= nj*3	
+pp= (pf*100)/pm
+print(round(100-pp, 2))
+
+-- OUTPUT:
+87.88
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:45:46) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pf=0
+pm=0
+nj=0
+resultado= 0
+while (resultado!="X"):
+	resultado=input("resultado da partida: ")
+	nj=nj+1
+	if (resultado=="V"):
+		pf= pf + 3	
+	if (resultado=="E"):
+		pf= pf + 1	
+	if (resultado=="D"):
+		pf= pf+0
+pm= nj*3	
+pr= pm-pf
+pp= (px*100)/pm
+print(round(pp, 2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 20, in <module>
+    pp= (px*100)/pm
+NameError: name 'px' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:46:22) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pf=0
+pm=0
+nj=0
+resultado= 0
+while (resultado!="X"):
+	resultado=input("resultado da partida: ")
+	nj=nj+1
+	if (resultado=="V"):
+		pf= pf + 3	
+	if (resultado=="E"):
+		pf= pf + 1	
+	if (resultado=="D"):
+		pf= pf+0
+pm= nj*3	
+pr= pm-pf
+pp= (pr*100)/pm
+print(round(pp, 2))
+
+-- OUTPUT:
+87.88
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:47:35) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pf=0
+pm=0
+nj=0
+resultado= 0
+while (resultado!="X"):
+	resultado=input("resultado da partida: ")
+	if (resultado=="V"):
+		pf= pf + 3
+		nj=nj+1
+	if (resultado=="E"):
+		pf= pf + 1
+		nj=nj+1
+	if (resultado=="D"):
+		pf= pf+0
+		nj=nj+1
+pm= nj*3	
+pr= pm-pf
+pp= (pr*100)/pm
+print(round(pp, 2))
+
+-- OUTPUT:
+66.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:53:54) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pf=0
+pm=0
+nj=0
+resultado= 0
+while (resultado!="X"):
+	resultado=input("resultado da partida: ").upper()
+	if (resultado=="V"):
+		pf= pf + 3
+		nj=nj+1
+	if (resultado=="E"):
+		pf= pf + 1
+		nj=nj+1
+	if (resultado=="D"):
+		pf= pf+0
+		nj=nj+1
+pm= nj*3	
+pr= pm-pf
+pp= (pr*100)/pm
+print(round(pp, 2))
+
+-- OUTPUT:
+61.9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-16 19:54:16) 
+-- CODE:
+#pontuaçoes
+#vitoria= 3 
+#empate= 1
+#derrota=0
+pf=0
+pm=0
+nj=0
+resultado= 0
+while (resultado!="X"):
+	resultado=input("resultado da partida: ").upper()
+	if (resultado=="V"):
+		pf= pf + 3
+		nj=nj+1
+	if (resultado=="E"):
+		pf= pf + 1
+		nj=nj+1
+	if (resultado=="D"):
+		pf= pf+0
+		nj=nj+1
+pm= nj*3	
+pr= pm-pf
+pp= (pr*100)/pm
+print(round(pp, 2))
+
+-- EXECUTION TIME:
+0.153645
+-- TEST CASE 1:
+---- input:
+v
+V
+e
+E
+D
+D
+a
+b
+c
+d
+X
+---- correct output:
+38.1
+---- user output:
+61.9
+-- TEST CASE 2:
+---- input:
+A
+B
+C
+D
+E
+V
+X
+---- correct output:
+44.44
+---- user output:
+55.56
+-- TEST CASE 3:
+---- input:
+V
+V
+V
+a
+a
+a
+a
+v
+v
+X
+---- correct output:
+100.0
+---- user output:
+0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

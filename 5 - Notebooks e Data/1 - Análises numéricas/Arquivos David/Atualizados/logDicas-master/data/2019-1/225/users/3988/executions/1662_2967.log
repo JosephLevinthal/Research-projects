@@ -1,0 +1,504 @@
+== TEST (2019-04-15 15:18:52) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+if (a1 >= 1.37 a2 >= 1.37):
+	msg = "Sim"
+	
+-- ERROR:
+File "XXXX", line 3
+    if (a1 >= 1.37 a2 >= 1.37):
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:19:00) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+if (a1 >= a2 >= 1.37):
+	msg = "Sim"
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if (a1 >= a2 >= 1.37):
+NameError: name 'a2' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:20:05) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+if (a1 >= 1.37, a2 >= 1.37):
+	msg = "Sim"
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if (a1 >= 1.37, a2 >= 1.37):
+NameError: name 'a2' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:20:17) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+if (a1 >= 1.37, a2 >= 1.37):
+	msg = "Sim"
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if (a1 >= 1.37, a2 >= 1.37):
+NameError: name 'a2' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:21:33) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+if (a1 >= a2 >= 1.37):
+	msg = "Sim"
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if (a1 >= a2 >= 1.37):
+NameError: name 'a2' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:22:01) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+if (a >= a1 >= 1.37):
+	msg = "Sim"
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if (a1 >= a2 >= 1.37):
+NameError: name 'a2' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:22:33) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+if (a >= a1 >= 1.37):
+	msg = "Sim"
+print(msg)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(msg)	
+NameError: name 'msg' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:24:39) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+if (a >= 1.37)(a1 >=1.37):
+	msg = "Sim"
+	print(msg)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if (a >= 1.37)(a1 >=1.37):
+TypeError: 'bool' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:26:26) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+if (a >= 1.37 >= a1):
+	msg = "Sim"
+	print(msg)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if (a >= 1.37)(a1 >=1.37):
+TypeError: 'bool' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:26:54) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+if (a >= 1.37 >= a1):
+	msg = "Sim"
+print(msg)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(msg)
+NameError: name 'msg' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:27:37) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+if (a >= 1.37 <= a1):
+	msg = "Sim"
+print(msg)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(msg)
+NameError: name 'msg' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:31:59) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+if (a >= 1.37 <= a1):
+	msg = "Sim"
+	f = a
+else:
+	msg = "Nao"
+	f = a
+print(msg)
+print(f)
+	
+-- OUTPUT:
+Nao
+1.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 15:32:11) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+if (a >= 1.37 <= a1):
+	msg = "Sim"
+	f = a
+else:
+	msg = "Nao"
+	f = a
+print(msg)
+print(f)
+	
+-- EXECUTION TIME:
+0.226089
+-- TEST CASE 1:
+---- input:
+1.25
+1.26
+---- correct output:
+Nao
+1.26
+---- user output:
+Nao
+1.25
+-- TEST CASE 2:
+---- input:
+1.20
+1.53
+---- correct output:
+Sim
+1.53
+---- user output:
+Nao
+1.2
+-- TEST CASE 3:
+---- input:
+1.85
+1.9
+---- correct output:
+Sim
+1.9
+---- user output:
+Sim
+1.85
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:33:02) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+if (a >= 1.37 <= a1):
+	msg = "Sim"
+	f = a
+else:
+	msg = "Nao"
+	f = a1
+print(msg)
+print(f)
+	
+-- OUTPUT:
+Nao
+1.26
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 15:33:12) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+if (a >= 1.37 <= a1):
+	msg = "Sim"
+	f = a
+else:
+	msg = "Nao"
+	f = a1
+print(msg)
+print(f)
+	
+-- EXECUTION TIME:
+0.184354
+-- TEST CASE 1:
+---- input:
+1.25
+1.26
+---- correct output:
+Nao
+1.26
+---- user output:
+Nao
+1.26
+-- TEST CASE 2:
+---- input:
+1.20
+1.53
+---- correct output:
+Sim
+1.53
+---- user output:
+Nao
+1.53
+-- TEST CASE 3:
+---- input:
+1.85
+1.9
+---- correct output:
+Sim
+1.9
+---- user output:
+Sim
+1.85
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:39:09) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+if (a >= 1.37 <= a1):
+	msg = "Sim"
+	if (a1 <= a):
+		f = a1
+	else:
+		f = a
+else:
+	msg = "Nao"
+	if (a1 <= a):
+		f = a1
+	else:
+		f = a
+	 
+print(msg)
+print(f)
+	
+-- OUTPUT:
+Nao
+1.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:40:05) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+if (a >= 1.37 <= a1):
+	msg = "Sim"
+	if (a1 >= a):
+		f = a1
+	else:
+		f = a
+else:
+	msg = "Nao"
+	if (a1 >= a):
+		f = a1
+	else:
+		f = a
+	 
+print(msg)
+print(f)
+	
+-- OUTPUT:
+Nao
+1.26
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 15:40:22) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+if (a >= 1.37 <= a1):
+	msg = "Sim"
+	if (a1 >= a):
+		f = a1
+	else:
+		f = a
+else:
+	msg = "Nao"
+	if (a1 >= a):
+		f = a1
+	else:
+		f = a
+	 
+print(msg)
+print(f)
+	
+-- EXECUTION TIME:
+0.167176
+-- TEST CASE 1:
+---- input:
+1.25
+1.26
+---- correct output:
+Nao
+1.26
+---- user output:
+Nao
+1.26
+-- TEST CASE 2:
+---- input:
+1.20
+1.53
+---- correct output:
+Sim
+1.53
+---- user output:
+Nao
+1.53
+-- TEST CASE 3:
+---- input:
+1.85
+1.9
+---- correct output:
+Sim
+1.9
+---- user output:
+Sim
+1.9
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:41:10) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+if (a >= 1.37 ):
+	(a1 >= 1.37 ):
+	msg = "Sim"
+	if (a1 >= a):
+		f = a1
+	else:
+		f = a
+else:
+	msg = "Nao"
+	if (a1 >= a):
+		f = a1
+	else:
+		f = a
+	 
+print(msg)
+print(f)
+	
+-- ERROR:
+File "XXXX", line 4
+    (a1 >= 1.37 ):
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:41:28) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+if (a >= 1.37 ):
+	msg = "Sim"
+	if (a1 >= a):
+		f = a1
+	else:
+		f = a
+else:
+	msg = "Nao"
+	if (a1 >= a):
+		f = a1
+	else:
+		f = a
+	 
+print(msg)
+print(f)
+	
+-- OUTPUT:
+Nao
+1.26
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:45:34) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+
+if (a1 >= a):
+		f = a1
+else:
+		f = a
+if (f >= 1.37):
+	msg = "Sim"
+else:
+	msg = "Nao"
+	 
+print(msg)
+print(f)
+	
+-- OUTPUT:
+Nao
+1.26
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 15:45:48) 
+-- CODE:
+a = float(input("altura1:"))
+a1 = float(input("altura2:"))
+
+if (a1 >= a):
+		f = a1
+else:
+		f = a
+if (f >= 1.37):
+	msg = "Sim"
+else:
+	msg = "Nao"
+	 
+print(msg)
+print(f)
+	
+-- EXECUTION TIME:
+0.136598
+-- TEST CASE 1:
+---- input:
+1.25
+1.26
+---- correct output:
+Nao
+1.26
+---- user output:
+Nao
+1.26
+-- TEST CASE 2:
+---- input:
+1.20
+1.53
+---- correct output:
+Sim
+1.53
+---- user output:
+Sim
+1.53
+-- TEST CASE 3:
+---- input:
+1.85
+1.9
+---- correct output:
+Sim
+1.9
+---- user output:
+Sim
+1.9
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

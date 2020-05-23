@@ -1,0 +1,347 @@
+== TEST (2019-06-06 10:59:16) 
+-- CODE:
+from numpy import*
+
+vd=array(eval(input("vetor de gols dados: ")))
+vl=array(eval(input("vetor de gols levados: ")))
+while(size(vg)>1):
+	v=0
+	e=0
+	d=0
+	for i in vg
+		if((vg[i]-vl[i])==0):
+			e=e+1
+		elif((vg[i]-vl[i])<0):	
+			d=d+1
+		elif((vg[i]-vl[i]>0)):
+			v=v+1
+	print(v)
+	print(e)
+	print(d)
+	
+-- ERROR:
+File "XXXX", line 9
+    for i in vg
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 10:59:45) 
+-- CODE:
+from numpy import*
+
+vd=array(eval(input("vetor de gols dados: ")))
+vl=array(eval(input("vetor de gols levados: ")))
+while(size(vd)>1):
+	v=0
+	e=0
+	d=0
+	for i in vd
+		if((vd[i]-vl[i])==0):
+			e=e+1
+		elif((vd[i]-vl[i])<0):	
+			d=d+1
+		elif((vd[i]-vl[i]>0)):
+			v=v+1
+	print(v)
+	print(e)
+	print(d)
+	
+-- ERROR:
+File "XXXX", line 9
+    for i in vd
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 11:00:19) 
+-- CODE:
+from numpy import*
+
+vd=array(eval(input("vetor de gols dados: ")))
+vl=array(eval(input("vetor de gols levados: ")))
+while(size(vd)>1):
+	v=0
+	e=0
+	d=0
+	for i in vd:
+		if((vd[i]-vl[i])==0):
+			e=e+1
+		elif((vd[i]-vl[i])<0):	
+			d=d+1
+		elif((vd[i]-vl[i]>0)):
+			v=v+1
+	print(v)
+	print(e)
+	print(d)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 11:03:03) 
+-- CODE:
+from numpy import*
+x=zeros(3,dtype=int)
+vd=array(eval(input("vetor de gols dados: ")))
+vl=array(eval(input("vetor de gols levados: ")))
+while(size(vd)>1):
+	v=0
+	e=0
+	d=0
+	for i in vd:
+		if((vd[i]-vl[i])==0):
+			e=e+1
+		elif((vd[i]-vl[i])<0):	
+			d=d+1
+		elif((vd[i]-vl[i]>0)):
+			v=v+1
+x[0]=v
+x[1]=e
+x[2]=d
+print(x)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 11:04:42) 
+-- CODE:
+from numpy import*
+x=zeros(3,dtype=int)
+vd=array(eval(input("vetor de gols dados: ")))
+vl=array(eval(input("vetor de gols levados: ")))
+while(size(vd)>1):
+	v=0
+	e=0
+	d=0
+	for i in vd:
+		if((vd[i]-vl[i])==0):
+			e=e+1
+		elif((vd[i]-vl[i])<0):	
+			d=d+1
+		elif((vd[i]-vl[i]>0)):
+			v=v+1
+x[0]=v
+x[1]=e
+x[2]=d
+print(x)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 11:12:14) 
+-- CODE:
+from numpy import*
+x=zeros(3,dtype=int)
+vd=array(eval(input("vetor de gols dados: ")))
+vl=array(eval(input("vetor de gols levados: ")))
+
+	v=0
+	e=0
+	d=0
+for i in range(size(gd)):
+	if(vd[i]==vl[i]):
+		x[1]=x[1]+1
+	elif(vd[i]<vl[i]):	
+		x[2]=x[2]+1
+	elif(vd[i]>vl[i]):
+		x[0]=x[0]+1
+
+print(x)
+	
+-- ERROR:
+File "XXXX", line 6
+    v=0
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 11:12:38) 
+-- CODE:
+from numpy import*
+x=zeros(3,dtype=int)
+vd=array(eval(input("vetor de gols dados: ")))
+vl=array(eval(input("vetor de gols levados: ")))
+for i in range(size(gd)):
+	if(vd[i]==vl[i]):
+		x[1]=x[1]+1
+	elif(vd[i]<vl[i]):	
+		x[2]=x[2]+1
+	elif(vd[i]>vl[i]):
+		x[0]=x[0]+1
+
+print(x)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 11:13:17) 
+-- CODE:
+from numpy import*
+x=zeros(3,dtype=int)
+vd=array(eval(input("vetor de gols dados: ")))
+vl=array(eval(input("vetor de gols levados: ")))
+for i in range(size(vd)):
+	if(vd[i]==vl[i]):
+		x[1]=x[1]+1
+	elif(vd[i]<vl[i]):	
+		x[2]=x[2]+1
+	elif(vd[i]>vl[i]):
+		x[0]=x[0]+1
+
+print(x)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 11:13:46) 
+-- CODE:
+from numpy import*
+x=zeros(3,dtype=int)
+vd=array(eval(input("vetor de gols dados: ")))
+vl=array(eval(input("vetor de gols levados: ")))
+for i in range(size(vd)):
+	if(vd[i]==vl[i]):
+		x[1]=x[1]+1
+	elif(vd[i]<vl[i]):	
+		x[2]=x[2]+1
+	elif(vd[i]>vl[i]):
+		x[0]=x[0]+1
+
+print(x)
+	
+-- EXECUTION TIME:
+2.61268
+-- TEST CASE 1:
+---- input:
+[2,3,2,4,3,5,3,4,2,3,1,0]
+[3,3,1,0,2,3,3,0,1,2,1,1]
+---- correct output:
+[7 3 2]
+---- user output:
+[7 3 2]
+-- TEST CASE 2:
+---- input:
+[1,2,1,2,1,2,1,2,0]
+[3,5,3,3,3,3,3,3,3]
+---- correct output:
+[0 0 9]
+---- user output:
+[0 0 9]
+-- TEST CASE 3:
+---- input:
+[1,2,2,2,2,1,1,2,2,1,1,2,2]
+[0,1,1,1,0,0,0,0,0,0,1,1,1]
+---- correct output:
+[12 1 0]
+---- user output:
+[12  1  0]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 11:15:03) 
+-- CODE:
+from numpy import*
+x=zeros(3,dtype=int)
+vd=array(eval(input("vetor de gols dados: ")))
+vl=array(eval(input("vetor de gols levados: ")))
+while(size(vd)>1):
+	v=0
+	e=0
+	d=0
+	for i in vd:
+		if((vd[i]-vl[i])==0):
+			e=e+1
+		elif((vd[i]-vl[i])<0):	
+			d=d+1
+		elif((vd[i]-vl[i]>0)):
+			v=v+1
+x[0]=v
+x[1]=e
+x[2]=d
+print(x)
+	
+-- EXECUTION TIME:
+657.88
+-- ERROR:
+Killed
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 15:31:41) 
+-- CODE:
+from numpy import*
+x=zeros(3,dtype=int)
+vd=array(eval(input("vetor de gols dados: ")))
+vl=array(eval(input("vetor de gols levados: ")))
+for i in range(size(vd)):
+	if(vd[i]==vl[i]):
+		x[1]=x[1]+1
+	elif(vd[i]<vl[i]):	
+		x[2]=x[2]+1
+	elif(vd[i]>vl[i]):
+		x[0]=x[0]+1
+
+print(x)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-10 15:32:14) 
+-- CODE:
+from numpy import*
+x=zeros(3,dtype=int)
+vd=array(eval(input("vetor de gols dados: ")))
+vl=array(eval(input("vetor de gols levados: ")))
+for i in range(size(vd)):
+	if(vd[i]==vl[i]):
+		x[1]=x[1]+1
+	elif(vd[i]<vl[i]):	
+		x[2]=x[2]+1
+	elif(vd[i]>vl[i]):
+		x[0]=x[0]+1
+
+print(x)
+	
+-- EXECUTION TIME:
+1.20029
+-- TEST CASE 1:
+---- input:
+[2,3,2,4,3,5,3,4,2,3,1,0]
+[3,3,1,0,2,3,3,0,1,2,1,1]
+---- correct output:
+[7 3 2]
+---- user output:
+[7 3 2]
+-- TEST CASE 2:
+---- input:
+[1,2,1,2,1,2,1,2,0]
+[3,5,3,3,3,3,3,3,3]
+---- correct output:
+[0 0 9]
+---- user output:
+[0 0 9]
+-- TEST CASE 3:
+---- input:
+[1,2,2,2,2,1,1,2,2,1,1,2,2]
+[0,1,1,1,0,0,0,0,0,0,1,1,1]
+---- correct output:
+[12 1 0]
+---- user output:
+[12  1  0]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

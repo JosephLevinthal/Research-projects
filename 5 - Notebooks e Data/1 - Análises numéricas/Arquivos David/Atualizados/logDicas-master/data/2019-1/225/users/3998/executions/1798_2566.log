@@ -1,0 +1,52 @@
+== SUBMITION (2019-06-06 22:14:11) 
+-- CODE:
+from numpy import*
+
+x = array(eval(input("vetor faltas: ")))
+s = zeros(6, dtype=float) #vetor dias da semana
+
+for i in x:
+	if i == 2:
+		s[0] = s[0] + 1
+	elif i == 3:
+		s[1] = s[1] + 1
+	elif i == 4:
+		s[2] = s[2] + 1
+	elif i == 5:
+		s[3] = s[3] + 1
+	elif i == 6:
+		s[4] = s[4] + 1
+	elif i == 7:
+		s[5] = s[5] + 1
+t = sum(s)
+j = 0
+for k in s:
+	s[j] = round((s[j] * (100/t)), 1)
+	j = j + 1
+print(s)
+-- EXECUTION TIME:
+1.14549
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.  18.8 25.  37.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 4.  8. 16. 20. 20. 32.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[15.4  7.7 23.1  7.7 15.4 30.8]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

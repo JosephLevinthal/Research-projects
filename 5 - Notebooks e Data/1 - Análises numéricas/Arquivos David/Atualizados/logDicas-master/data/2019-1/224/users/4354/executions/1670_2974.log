@@ -1,0 +1,160 @@
+== TEST (2019-04-16 18:33:53) 
+-- CODE:
+qte_acai = float(input("quantidade do acai: "))
+qte_salgados = float(input("quantidade de salgados: "))
+valor_pago = float(input("valor pago: "))
+acai = qte_acai * 24/1000
+salgado = 3 * qte_salgados
+if(valor_pago == acai + salgado) :
+	print(round(acai+salgado,2))
+	print("Nao")
+if(valor_pago > acai + salgado) ;
+	troco = valor_pago -(acai + salgado)
+	print(round(acai+salgado,2))
+	print("Sim")
+-- ERROR:
+File "XXXX", line 9
+    if(valor_pago > acai + salgado) ;
+                                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:34:01) 
+-- CODE:
+qte_acai = float(input("quantidade do acai: "))
+qte_salgados = float(input("quantidade de salgados: "))
+valor_pago = float(input("valor pago: "))
+acai = qte_acai * 24/1000
+salgado = 3 * qte_salgados
+if(valor_pago == acai + salgado) :
+	print(round(acai+salgado,2))
+	print("Nao")
+if(valor_pago > acai + salgado) :
+	troco = valor_pago -(acai + salgado)
+	print(round(acai+salgado,2))
+	print("Sim")
+-- OUTPUT:
+15.0
+Sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:35:44) 
+-- CODE:
+qte_acai = float(input("quantidade do acai: "))
+qte_salgados = float(input("quantidade de salgados: "))
+valor_pago = float(input("valor pago: "))
+acai = qte_acai * 0.0024
+salgado = 3 * qte_salgados
+if(valor_pago == acai + salgado) :
+	print(round(acai+salgado,2))
+	print("Nao")
+if(valor_pago > acai + salgado) :
+	troco = valor_pago -(acai + salgado)
+	print(round(acai+salgado,2))
+	print("Sim")
+-- OUTPUT:
+4.2
+Sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 18:36:02) 
+-- CODE:
+qte_acai = float(input("quantidade do acai: "))
+qte_salgados = float(input("quantidade de salgados: "))
+valor_pago = float(input("valor pago: "))
+acai = qte_acai * 0.0024
+salgado = 3 * qte_salgados
+if(valor_pago == acai + salgado) :
+	print(round(acai+salgado,2))
+	print("Nao")
+if(valor_pago > acai + salgado) :
+	troco = valor_pago -(acai + salgado)
+	print(round(acai+salgado,2))
+	print("Sim")
+-- EXECUTION TIME:
+0.301416
+-- TEST CASE 1:
+---- input:
+500
+1
+50
+---- correct output:
+15.0
+Sim
+---- user output:
+4.2
+Sim
+-- TEST CASE 2:
+---- input:
+0
+2
+10
+---- correct output:
+6.0
+Sim
+---- user output:
+6.0
+Sim
+-- TEST CASE 3:
+---- input:
+200
+0
+4.8
+---- correct output:
+4.8
+Nao
+---- user output:
+0.48
+Sim
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 18:36:23) 
+-- CODE:
+qte_acai = float(input("quantidade do acai: "))
+qte_salgados = float(input("quantidade de salgados: "))
+valor_pago = float(input("valor pago: "))
+acai = qte_acai * 0.024
+salgado = 3 * qte_salgados
+if(valor_pago == acai + salgado) :
+	print(round(acai+salgado,2))
+	print("Nao")
+if(valor_pago > acai + salgado) :
+	troco = valor_pago -(acai + salgado)
+	print(round(acai+salgado,2))
+	print("Sim")
+-- EXECUTION TIME:
+0.143672
+-- TEST CASE 1:
+---- input:
+500
+1
+50
+---- correct output:
+15.0
+Sim
+---- user output:
+15.0
+Sim
+-- TEST CASE 2:
+---- input:
+0
+2
+10
+---- correct output:
+6.0
+Sim
+---- user output:
+6.0
+Sim
+-- TEST CASE 3:
+---- input:
+200
+0
+4.8
+---- correct output:
+4.8
+Nao
+---- user output:
+4.8
+Nao
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

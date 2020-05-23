@@ -1,0 +1,2153 @@
+== TEST (2019-05-28 13:33:17) 
+-- CODE:
+s = input("String: ")
+print(replace(s.upper))
+if 
+-- ERROR:
+File "XXXX", line 3
+    if 
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 13:33:24) 
+-- CODE:
+s = input("String: ")
+print(replace(s.upper))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print(replace(s.upper))
+NameError: name 'replace' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 13:33:54) 
+-- CODE:
+from numpy import*
+s = input("String: ")
+print(replace(s.upper))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 13:43:11) 
+-- CODE:
+s = input("String: ")
+inv = 0
+i = -1
+while (i >= -len(s)):
+	inv = inv + s[i]
+	i = i + 1
+	if (i == -len(s)):
+		msg = 1
+	else:
+		msg = 0
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    inv = inv + s[i]
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 13:44:08) 
+-- CODE:
+s = input("String: ")
+inv = 0
+i = -1
+while (i >= -len(s)):
+	inv = inv + s[i]
+	i = i - 1
+	if (i == -len(s)):
+		msg = 1
+	else:
+		msg = 0
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    inv = inv + s[i]
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 13:46:03) 
+-- CODE:
+s = input("String: ")
+
+inv = 0
+i = -1
+while (i >= -len(s)):
+	inv = inv + s[i]
+	i = i - 1
+	if (i == -len(s)):
+		msg = 1
+	else:
+		msg = 0
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    inv = inv + s[i]
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 13:48:30) 
+-- CODE:
+s = input("String: ")
+
+inv = 0
+i = -1
+while (i >= -len(s)):
+	inv = inv + s[i]
+	i = i - 1
+	if (i == len(s)):
+		msg = 1
+	else:
+		msg = 0
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    inv = inv + s[i]
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 13:48:47) 
+-- CODE:
+s = input("String: ")
+
+inv = 0
+i = -1
+while (i >= -len(s)):
+	inv = s[i] + inv
+	i = i - 1
+	if (i == len(s)):
+		msg = 1
+	else:
+		msg = 0
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    inv = s[i] + inv
+TypeError: must be str, not int
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:12:38) 
+-- CODE:
+s = input("String: ")
+
+inv = 0
+i = -1
+
+while (i >= -len(i)):
+	inv =  + inv
+	i = i - 1
+	if (i == len(i)):
+		msg = 1
+	else:
+		msg = 0
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    while (i >= -len(i)):
+TypeError: object of type 'int' has no len()
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 18:13:00) 
+-- CODE:
+s = input("String: ")
+
+inv = 0
+i = -1
+
+while (i >= -len(i)):
+	inv =  + inv
+	i = i - 1
+	if (i == len(i)):
+		msg = 1
+	else:
+		msg = 0
+print(msg)
+-- EXECUTION TIME:
+0.031317
+-- ERROR:
+Error response from daemon: Container 9f8b8814ab2660006bea224bd5df41406637326bfe593e7b22599fdf89feb74d is not running
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:13:24) 
+-- CODE:
+s = input("String: ")
+
+inv = 0
+i = -1
+
+while (i >= -len(i)):
+	inv =  + inv
+	i = i - 1
+	if (i == len(i)):
+		msg = 1
+	else:
+		msg = 0
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    while (i >= -len(i)):
+TypeError: object of type 'int' has no len()
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:27:17) 
+-- CODE:
+s = input("String: ")
+
+inv = 0
+i = -1
+
+while (i >= -len(i)):
+	inv =  + inv
+	i = i - 1
+	if (i == len(i)):
+		msg = 1
+	else:
+		msg = 0
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    while (i >= -len(i)):
+TypeError: object of type 'int' has no len()
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:28:11) 
+-- CODE:
+s = input("String: ")
+
+inv = 0
+i = -1
+
+while (i >= len(-i)):
+	inv =  + inv
+	i = i - 1
+	if (i == len(i)):
+		msg = 1
+	else:
+		msg = 0
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    while (i >= len(-i)):
+TypeError: object of type 'int' has no len()
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:28:40) 
+-- CODE:
+s = input("String: ")
+
+inv = 0
+i = 0
+
+while (i >= len(-i)):
+	inv =  + inv
+	i = i - 1
+	if (i == len(i)):
+		msg = 1
+	else:
+		msg = 0
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    while (i >= len(-i)):
+TypeError: object of type 'int' has no len()
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:30:11) 
+-- CODE:
+s = input("String: ")
+
+inv = 0
+i = -1
+
+while (i >= len(-S)):
+	inv =  + inv
+	i = i - 1
+	if (i == len(i)):
+		msg = 1
+	else:
+		msg = 0
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    while (i >= len(-S)):
+NameError: name 'S' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:30:23) 
+-- CODE:
+s = input("String: ")
+
+inv = 0
+i = -1
+
+while (i >= len(-s)):
+	inv =  + inv
+	i = i - 1
+	if (i == len(i)):
+		msg = 1
+	else:
+		msg = 0
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    while (i >= len(-s)):
+TypeError: bad operand type for unary -: 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:30:40) 
+-- CODE:
+s = input("String: ")
+
+inv = 0
+i = -1
+
+while (i >= -len(s)):
+	inv =  + inv
+	i = i - 1
+	if (i == len(i)):
+		msg = 1
+	else:
+		msg = 0
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    if (i == len(i)):
+TypeError: object of type 'int' has no len()
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:31:15) 
+-- CODE:
+s = input("String: ")
+
+inv = 0
+i = -1
+
+while (i >= -len(s)):
+	inv =  + inv
+	i = i - 1
+	if (i == len(s)):
+		msg = 1
+	else:
+		msg = 0
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    if (i == len(i)):
+TypeError: object of type 'int' has no len()
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:31:27) 
+-- CODE:
+s = input("String: ")
+
+inv = 0
+i = -1
+
+while (i >= -len(s)):
+	inv =  + inv
+	i = i - 1
+	if (i == len(s)):
+		msg = 1
+	else:
+		msg = 0
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    if (i == len(i)):
+TypeError: object of type 'int' has no len()
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:31:55) 
+-- CODE:
+s = input("String: ")
+
+inv = 0
+i = -1
+
+while (i >= -len(s)):
+	inv =  + inv
+	i = i - 1
+	if (i == -len(s)):
+		msg = 1
+	else:
+		msg = 0
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    if (i == len(i)):
+TypeError: object of type 'int' has no len()
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:33:09) 
+-- CODE:
+s = input("String: ")
+
+inv = 0
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	i = i - 1
+	if (i == -len(s)):
+		msg = 1
+	else:
+		msg = 0
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    inv = inv + s[i]
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:38:31) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	i = i - 1
+	if (i == -len(s)):
+		msg = 1
+	else:
+		msg = 0
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    inv = inv + s[i]
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:42:08) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	i = i - 1
+	if (i < -len(s)):
+		msg = 1
+	else:
+		msg = 0
+pri
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 13, in <module>
+    pri
+NameError: name 'pri' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:42:30) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	i = i - 1
+	if (i < -len(s)):
+		msg = 1
+	else:
+		msg = 0
+print(N)
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 13, in <module>
+    print(N)
+NameError: name 'N' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:42:54) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	i = i - 1
+	if (i < -len(s)):
+		msg = 1
+	else:
+		msg = 0
+print(msg)
+print(msg)
+-- OUTPUT:
+1
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:43:41) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	i = i - 1
+	if (i < -len(s)):
+		msg = 1
+	else:
+		msg = 0
+print(s.replace(""))
+print(msg)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 13, in <module>
+    print(s.replace(""))
+TypeError: replace() takes at least 2 arguments (1 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:43:56) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	i = i - 1
+	if (i < -len(s)):
+		msg = 1
+	else:
+		msg = 0
+print(s.replace(" "))
+print(msg)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 13, in <module>
+    print(s.replace(" "))
+TypeError: replace() takes at least 2 arguments (1 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:45:45) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	i = i - 1
+	if (i < -len(s)):
+		msg = 1
+	else:
+		msg = 0
+print(s.replace(" ", ""))
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 18:46:04) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	i = i - 1
+	if (i < -len(s)):
+		msg = 1
+	else:
+		msg = 0
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.151379
+-- TEST CASE 1:
+---- input:
+ACARARAJADADAJARARACA
+---- correct output:
+ACARARAJADADAJARARACA
+1
+---- user output:
+ACARARAJADADAJARARACA
+1
+-- TEST CASE 2:
+---- input:
+CACHORRO
+---- correct output:
+CACHORRO
+0
+---- user output:
+CACHORRO
+1
+-- TEST CASE 3:
+---- input:
+amalanadanalama
+---- correct output:
+AMALANADANALAMA
+1
+---- user output:
+AMALANADANALAMA
+1
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:46:07) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	i = i - 1
+	if (i < -len(s)):
+		msg = 1
+	else:
+		msg = 0
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:46:20) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	i = i - 1
+	if (i < -len(s)):
+		msg = 1
+	else:
+		msg = 0
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:46:37) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	i = i - 1
+	if (i < -len(s)):
+		msg = 1
+	else:
+		msg = 0
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:52:36) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i > -len(s)):
+	inv = inv + s[i]
+	i = i - 1
+	if (i <= -len(s)):
+		msg = 1
+	else:
+		msg = 0
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:54:25) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i > -len(s)):
+	inv = inv + s[i]
+	if (i <= -len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 18:54:35) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i > -len(s)):
+	inv = inv + s[i]
+	if (i <= -len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.158781
+-- TEST CASE 1:
+---- input:
+ACARARAJADADAJARARACA
+---- correct output:
+ACARARAJADADAJARARACA
+1
+---- user output:
+ACARARAJADADAJARARACA
+0
+-- TEST CASE 2:
+---- input:
+CACHORRO
+---- correct output:
+CACHORRO
+0
+---- user output:
+CACHORRO
+0
+-- TEST CASE 3:
+---- input:
+amalanadanalama
+---- correct output:
+AMALANADANALAMA
+1
+---- user output:
+AMALANADANALAMA
+0
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:54:45) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i > -len(s)):
+	inv = inv + s[i]
+	if (i <= -len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:56:46) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i > -len(s)):
+	inv = inv + s[i]
+	if (i < len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 18:57:01) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i > -len(s)):
+	inv = inv + s[i]
+	if (i < len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.171228
+-- TEST CASE 1:
+---- input:
+ACARARAJADADAJARARACA
+---- correct output:
+ACARARAJADADAJARARACA
+1
+---- user output:
+ACARARAJADADAJARARACA
+1
+-- TEST CASE 2:
+---- input:
+CACHORRO
+---- correct output:
+CACHORRO
+0
+---- user output:
+CACHORRO
+1
+-- TEST CASE 3:
+---- input:
+amalanadanalama
+---- correct output:
+AMALANADANALAMA
+1
+---- user output:
+AMALANADANALAMA
+1
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 18:57:19) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i < len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.145564
+-- TEST CASE 1:
+---- input:
+ACARARAJADADAJARARACA
+---- correct output:
+ACARARAJADADAJARARACA
+1
+---- user output:
+ACARARAJADADAJARARACA
+1
+-- TEST CASE 2:
+---- input:
+CACHORRO
+---- correct output:
+CACHORRO
+0
+---- user output:
+CACHORRO
+1
+-- TEST CASE 3:
+---- input:
+amalanadanalama
+---- correct output:
+AMALANADANALAMA
+1
+---- user output:
+String: AMALANADANALAMA
+1
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 18:57:25) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i > -len(s)):
+	inv = inv + s[i]
+	if (i < len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.167244
+-- TEST CASE 1:
+---- input:
+ACARARAJADADAJARARACA
+---- correct output:
+ACARARAJADADAJARARACA
+1
+---- user output:
+ACARARAJADADAJARARACA
+1
+-- TEST CASE 2:
+---- input:
+CACHORRO
+---- correct output:
+CACHORRO
+0
+---- user output:
+CACHORRO
+1
+-- TEST CASE 3:
+---- input:
+amalanadanalama
+---- correct output:
+AMALANADANALAMA
+1
+---- user output:
+AMALANADANALAMA
+1
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 18:57:37) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i <= len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.211954
+-- TEST CASE 1:
+---- input:
+ACARARAJADADAJARARACA
+---- correct output:
+ACARARAJADADAJARARACA
+1
+---- user output:
+ACARARAJADADAJARARACA
+1
+-- TEST CASE 2:
+---- input:
+CACHORRO
+---- correct output:
+CACHORRO
+0
+---- user output:
+CACHORRO
+1
+-- TEST CASE 3:
+---- input:
+amalanadanalama
+---- correct output:
+AMALANADANALAMA
+1
+---- user output:
+AMALANADANALAMA
+1
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 18:57:38) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i <= len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.148404
+-- TEST CASE 1:
+---- input:
+ACARARAJADADAJARARACA
+---- correct output:
+ACARARAJADADAJARARACA
+1
+---- user output:
+ACARARAJADADAJARARACA
+1
+-- TEST CASE 2:
+---- input:
+CACHORRO
+---- correct output:
+CACHORRO
+0
+---- user output:
+CACHORRO
+1
+-- TEST CASE 3:
+---- input:
+amalanadanalama
+---- correct output:
+AMALANADANALAMA
+1
+---- user output:
+AMALANADANALAMA
+1
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 18:57:39) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i <= len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.149798
+-- TEST CASE 1:
+---- input:
+ACARARAJADADAJARARACA
+---- correct output:
+ACARARAJADADAJARARACA
+1
+---- user output:
+ACARARAJADADAJARARACA
+1
+-- TEST CASE 2:
+---- input:
+CACHORRO
+---- correct output:
+CACHORRO
+0
+---- user output:
+String: CACHORRO
+1
+-- TEST CASE 3:
+---- input:
+amalanadanalama
+---- correct output:
+AMALANADANALAMA
+1
+---- user output:
+String: AMALANADANALAMA
+1
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 18:57:43) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i <= len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.232063
+-- TEST CASE 1:
+---- input:
+ACARARAJADADAJARARACA
+---- correct output:
+ACARARAJADADAJARARACA
+1
+---- user output:
+ACARARAJADADAJARARACA
+1
+-- TEST CASE 2:
+---- input:
+CACHORRO
+---- correct output:
+CACHORRO
+0
+---- user output:
+CACHORRO
+1
+-- TEST CASE 3:
+---- input:
+amalanadanalama
+---- correct output:
+AMALANADANALAMA
+1
+---- user output:
+AMALANADANALAMA
+1
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 18:57:46) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i <= len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.16468
+-- TEST CASE 1:
+---- input:
+ACARARAJADADAJARARACA
+---- correct output:
+ACARARAJADADAJARARACA
+1
+---- user output:
+ACARARAJADADAJARARACA
+1
+-- TEST CASE 2:
+---- input:
+CACHORRO
+---- correct output:
+CACHORRO
+0
+---- user output:
+CACHORRO
+1
+-- TEST CASE 3:
+---- input:
+amalanadanalama
+---- correct output:
+AMALANADANALAMA
+1
+---- user output:
+AMALANADANALAMA
+1
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 18:57:51) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i <= len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.141362
+-- TEST CASE 1:
+---- input:
+ACARARAJADADAJARARACA
+---- correct output:
+ACARARAJADADAJARARACA
+1
+---- user output:
+ACARARAJADADAJARARACA
+1
+-- TEST CASE 2:
+---- input:
+CACHORRO
+---- correct output:
+CACHORRO
+0
+---- user output:
+CACHORRO
+1
+-- TEST CASE 3:
+---- input:
+amalanadanalama
+---- correct output:
+AMALANADANALAMA
+1
+---- user output:
+AMALANADANALAMA
+1
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:58:59) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i <= len(s)):
+	inv = inv + s[i]
+	if (i >= - len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    inv = inv + s[i]
+IndexError: string index out of range
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 18:59:00) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i <= len(s)):
+	inv = inv + s[i]
+	if (i >= - len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.185745
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1756/1189/main.py", line 7, in <module>
+    inv = inv + s[i]
+IndexError: string index out of range
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 18:59:01) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i <= len(s)):
+	inv = inv + s[i]
+	if (i >= - len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.138341
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1756/1189/main.py", line 7, in <module>
+    inv = inv + s[i]
+IndexError: string index out of range
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 18:59:06) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i <= len(s)):
+	inv = inv + s[i]
+	if (i >= - len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.156217
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1756/1189/main.py", line 7, in <module>
+    inv = inv + s[i]
+IndexError: string index out of range
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:59:08) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i <= len(s)):
+	inv = inv + s[i]
+	if (i >= - len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    inv = inv + s[i]
+IndexError: string index out of range
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 18:59:40) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i <= len(s)):
+	inv = inv + s[i]
+	if (i >= - len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    inv = inv + s[i]
+IndexError: string index out of range
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 19:01:30) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i <= len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 19:01:45) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i <= len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.15735
+-- TEST CASE 1:
+---- input:
+ACARARAJADADAJARARACA
+---- correct output:
+ACARARAJADADAJARARACA
+1
+---- user output:
+ACARARAJADADAJARARACA
+1
+-- TEST CASE 2:
+---- input:
+CACHORRO
+---- correct output:
+CACHORRO
+0
+---- user output:
+CACHORRO
+1
+-- TEST CASE 3:
+---- input:
+amalanadanalama
+---- correct output:
+AMALANADANALAMA
+1
+---- user output:
+AMALANADANALAMA
+1
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 19:01:53) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i <= len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 19:02:20) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i == len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 19:02:35) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i == len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.15371
+-- TEST CASE 1:
+---- input:
+ACARARAJADADAJARARACA
+---- correct output:
+ACARARAJADADAJARARACA
+1
+---- user output:
+ACARARAJADADAJARARACA
+0
+-- TEST CASE 2:
+---- input:
+CACHORRO
+---- correct output:
+CACHORRO
+0
+---- user output:
+CACHORRO
+0
+-- TEST CASE 3:
+---- input:
+amalanadanalama
+---- correct output:
+AMALANADANALAMA
+1
+---- user output:
+AMALANADANALAMA
+0
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 19:02:38) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i == len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 19:02:58) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i >= len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 19:03:21) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i <= len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 19:03:30) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i <= len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 19:11:15) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i == len(s) or i > len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 19:11:25) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i == len(s) or i > len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 19:11:55) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i == len(s) or i > -len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 19:12:00) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i == len(s) or i > -len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 19:12:15) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i == len(s) or i < -len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 19:12:50) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i == -len(s) or i < -len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 19:12:58) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i == -len(s) or i < -len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.174368
+-- TEST CASE 1:
+---- input:
+ACARARAJADADAJARARACA
+---- correct output:
+ACARARAJADADAJARARACA
+1
+---- user output:
+ACARARAJADADAJARARACA
+1
+-- TEST CASE 2:
+---- input:
+CACHORRO
+---- correct output:
+CACHORRO
+0
+---- user output:
+CACHORRO
+1
+-- TEST CASE 3:
+---- input:
+amalanadanalama
+---- correct output:
+AMALANADANALAMA
+1
+---- user output:
+AMALANADANALAMA
+1
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 19:13:01) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i == -len(s) or i < -len(s)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 19:13:47) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i == -len(inv) or i < -len(inv)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 19:14:02) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i == -len(inv) or i < -len(inv)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 19:14:05) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i == -len(inv) or i < -len(inv)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.15879
+-- TEST CASE 1:
+---- input:
+ACARARAJADADAJARARACA
+---- correct output:
+ACARARAJADADAJARARACA
+1
+---- user output:
+ACARARAJADADAJARARACA
+1
+-- TEST CASE 2:
+---- input:
+CACHORRO
+---- correct output:
+CACHORRO
+0
+---- user output:
+CACHORRO
+1
+-- TEST CASE 3:
+---- input:
+amalanadanalama
+---- correct output:
+AMALANADANALAMA
+1
+---- user output:
+AMALANADANALAMA
+1
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 19:14:12) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i == -len(inv) or i < -len(inv)):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 19:41:22) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	if (i >= -len(inv) ):
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.2167
+-- TEST CASE 1:
+---- input:
+ACARARAJADADAJARARACA
+---- correct output:
+ACARARAJADADAJARARACA
+1
+---- user output:
+ACARARAJADADAJARARACA
+1
+-- TEST CASE 2:
+---- input:
+CACHORRO
+---- correct output:
+CACHORRO
+0
+---- user output:
+CACHORRO
+1
+-- TEST CASE 3:
+---- input:
+amalanadanalama
+---- correct output:
+AMALANADANALAMA
+1
+---- user output:
+AMALANADANALAMA
+1
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 19:42:24) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	if (i >= -len(inv) ):
+		inv = inv + s[i]
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 19:42:26) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	if (i >= -len(inv) ):
+		inv = inv + s[i]
+		msg = 1
+	else:
+		msg = 0
+	i = i - 1
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.196934
+-- TEST CASE 1:
+---- input:
+ACARARAJADADAJARARACA
+---- correct output:
+ACARARAJADADAJARARACA
+1
+---- user output:
+ACARARAJADADAJARARACA
+0
+-- TEST CASE 2:
+---- input:
+CACHORRO
+---- correct output:
+CACHORRO
+0
+---- user output:
+CACHORRO
+0
+-- TEST CASE 3:
+---- input:
+amalanadanalama
+---- correct output:
+AMALANADANALAMA
+1
+---- user output:
+AMALANADANALAMA
+0
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 19:47:59) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	i = i - 1
+if (s == inv):
+	msg = 1
+else:
+	msg = 0
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 19:48:09) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	i = i - 1
+if (s == inv):
+	msg = 1
+else:
+	msg = 0
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- OUTPUT:
+ACARARAJADADAJARARACA
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 19:48:15) 
+-- CODE:
+s = input("String: ")
+
+inv = ""
+i = -1
+
+while (i >= -len(s)):
+	inv = inv + s[i]
+	i = i - 1
+if (s == inv):
+	msg = 1
+else:
+	msg = 0
+print(s.replace(" ", "").upper())
+print(msg)
+
+-- EXECUTION TIME:
+0.202316
+-- TEST CASE 1:
+---- input:
+ACARARAJADADAJARARACA
+---- correct output:
+ACARARAJADADAJARARACA
+1
+---- user output:
+ACARARAJADADAJARARACA
+1
+-- TEST CASE 2:
+---- input:
+CACHORRO
+---- correct output:
+CACHORRO
+0
+---- user output:
+CACHORRO
+0
+-- TEST CASE 3:
+---- input:
+amalanadanalama
+---- correct output:
+AMALANADANALAMA
+1
+---- user output:
+AMALANADANALAMA
+1
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

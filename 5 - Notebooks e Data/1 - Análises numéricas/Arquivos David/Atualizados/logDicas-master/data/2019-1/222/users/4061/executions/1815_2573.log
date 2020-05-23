@@ -1,0 +1,199 @@
+== TEST (2019-06-12 16:15:40) 
+-- CODE:
+p = array(eval(input("Pesos: ")), dtype=float)
+a = array(eval(input("Alturas: ")), dtype=float)
+s = size(p)
+z = zeros(s, dtype=float)
+
+for i in range(s):
+	imc = (p[i])/(a[i]**2)
+	z[i] = round(imc, 2)
+	
+j = max(z)
+
+if (j < 17):
+	sit = "MUITO ABAIXO DO PESO"
+elif (j >= 17 and j <= 18.49):
+	sit = "ABAIXO DO PESO"
+elif (j >= 18.50 and j <= 24.99):
+	sit = "PESO NORMAL"
+elif (j >= 25 and j <= 29.99):
+	sit = "ACIMA DO PESO"
+elif (j >= 30 and j <= 34.99):
+	sit = "OBESIDADE"
+elif (j >= 35 and j <= 39.99):
+	sit = "OBESIDADE SEVERA"
+elif (j >= 40):
+	sit = "OBESIDADE MORBIDA"
+
+	
+f = "O MAIOR IMC DA TURMA EH:"
+
+print(z)
+print(f, j)
+print(sit)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p = array(eval(input()), dtype=float)
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 16:34:48) 
+-- CODE:
+p = array(eval(input("Pesos: ")), dtype=float)
+a = array(eval(input("Alturas: ")), dtype=float)
+s = size(p)
+z = zeros(s, dtype=float)
+
+for i in range(s):
+	imc = (p[i])/(a[i]**2)
+	z[i] = round(imc, 2)
+	
+j = max(z)
+
+if (j < 17):
+	sit = "MUITO ABAIXO DO PESO"
+elif (j >= 17 and j <= 18.49):
+	sit = "ABAIXO DO PESO"
+elif (j >= 18.50 and j <= 24.99):
+	sit = "PESO NORMAL"
+elif (j >= 25 and j <= 29.99):
+	sit = "ACIMA DO PESO"
+elif (j >= 30 and j <= 34.99):
+	sit = "OBESIDADE"
+elif (j >= 35 and j <= 39.99):
+	sit = "OBESIDADE SEVERA"
+elif (j >= 40):
+	sit = "OBESIDADE MORBIDA"
+
+	
+f = "O MAIOR IMC DA TURMA EH:"
+
+print(z)
+print(f, j)
+print(sit)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    p = array(eval(input()), dtype=float)
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 16:35:37) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("Pesos: ")), dtype=float)
+a = array(eval(input("Alturas: ")), dtype=float)
+s = size(p)
+z = zeros(s, dtype=float)
+
+for i in range(s):
+	imc = (p[i])/(a[i]**2)
+	z[i] = round(imc, 2)
+	
+j = max(z)
+
+if (j < 17):
+	sit = "MUITO ABAIXO DO PESO"
+elif (j >= 17 and j <= 18.49):
+	sit = "ABAIXO DO PESO"
+elif (j >= 18.50 and j <= 24.99):
+	sit = "PESO NORMAL"
+elif (j >= 25 and j <= 29.99):
+	sit = "ACIMA DO PESO"
+elif (j >= 30 and j <= 34.99):
+	sit = "OBESIDADE"
+elif (j >= 35 and j <= 39.99):
+	sit = "OBESIDADE SEVERA"
+elif (j >= 40):
+	sit = "OBESIDADE MORBIDA"
+
+	
+f = "O MAIOR IMC DA TURMA EH:"
+
+print(z)
+print(f, j)
+print(sit)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 16:36:13) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("Pesos: ")), dtype=float)
+a = array(eval(input("Alturas: ")), dtype=float)
+s = size(p)
+z = zeros(s, dtype=float)
+
+for i in range(s):
+	imc = (p[i])/(a[i]**2)
+	z[i] = round(imc, 2)
+	
+j = max(z)
+
+if (j < 17):
+	sit = "MUITO ABAIXO DO PESO"
+elif (j >= 17 and j <= 18.49):
+	sit = "ABAIXO DO PESO"
+elif (j >= 18.50 and j <= 24.99):
+	sit = "PESO NORMAL"
+elif (j >= 25 and j <= 29.99):
+	sit = "ACIMA DO PESO"
+elif (j >= 30 and j <= 34.99):
+	sit = "OBESIDADE"
+elif (j >= 35 and j <= 39.99):
+	sit = "OBESIDADE SEVERA"
+elif (j >= 40):
+	sit = "OBESIDADE MORBIDA"
+
+	
+f = "O MAIOR IMC DA TURMA EH:"
+
+print(z)
+print(f, j)
+print(sit)
+-- EXECUTION TIME:
+1.1834
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[37.79 31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

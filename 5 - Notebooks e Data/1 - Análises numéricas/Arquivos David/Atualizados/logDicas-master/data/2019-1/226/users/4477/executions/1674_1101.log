@@ -1,0 +1,1413 @@
+== TEST (2019-05-01 10:32:15) 
+-- CODE:
+# ce = consumo de energia em kwh
+ce = float(input("Determine o ce"))
+tipo = input("Determine o tipo")
+
+print("Entradas:", ce, "kwe w tipo", tipo
+-- ERROR:
+File "XXXX", line 6
+    
+                                             ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 10:33:24) 
+-- CODE:
+# ce = consumo de energia em kwh
+ce = float(input("Determine o ce"))
+tipo = input("Determine o tipo")
+
+print("Entradas:", ce, "KWh e tipo", tipo)
+-- OUTPUT:
+Entradas: -56.0 KWh e tipo I
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 10:33:33) 
+-- CODE:
+# ce = consumo de energia em kwh
+ce = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ")
+
+print("Entradas:", ce, "KWh e tipo", tipo)
+-- OUTPUT:
+Entradas: -56.0 KWh e tipo I
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 10:34:05) 
+-- CODE:
+# ce = consumo de energia em kwh
+ce = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", ce, "KWh e tipo", tipo)
+-- OUTPUT:
+Entradas: -56.0 KWh e tipo I
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 10:52:28) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if (tipo=="R") and (consumo<=500):
+	print("Valor toal: R$", residencial)
+elif (tipo=="R") and (consumo>500):
+	print("Valor total: R$", residencial1)
+elif (tipo=="C") and (consumo<=1000):
+	print("Valor total: R$", comercial)
+elif (tipo=="C") and (consumo>1000):
+	print("Valor total: R$", comercial1)
+-- OUTPUT:
+Entradas: -56.0 KWh e tipo I
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 10:52:46) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if (tipo=="R") and (consumo<=500):
+	print("Valor toal: R$", residencial)
+elif (tipo=="R") and (consumo>500):
+	print("Valor total: R$", residencial1)
+elif (tipo=="C") and (consumo<=1000):
+	print("Valor total: R$", comercial)
+elif (tipo=="C") and (consumo>1000):
+	print("Valor total: R$", comercial1)
+-- OUTPUT:
+Entradas: -56.0 KWh e tipo I
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 10:52:54) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if (tipo=="R") and (consumo<=500):
+	print("Valor toal: R$", residencial)
+elif (tipo=="R") and (consumo>500):
+	print("Valor total: R$", residencial1)
+elif (tipo=="C") and (consumo<=1000):
+	print("Valor total: R$", comercial)
+elif (tipo=="C") and (consumo>1000):
+	print("Valor total: R$", comercial1)
+-- OUTPUT:
+Entradas: -56.0 KWh e tipo I
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 10:53:11) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if (tipo=="R") and (consumo<=500):
+	print("Valor toal: R$", residencial)
+elif (tipo=="R") and (consumo>500):
+	print("Valor total: R$", residencial1)
+elif (tipo=="C") and (consumo<=1000):
+	print("Valor total: R$", comercial)
+elif (tipo=="C") and (consumo>1000):
+	print("Valor total: R$", comercial1)
+-- OUTPUT:
+Entradas: -56.0 KWh e tipo I
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 10:54:47) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if (tipo=="R") and (consumo<=500):
+	print("Valor total: R$", residencial)
+elif (tipo=="R") and (consumo>500):
+	print("Valor total: R$", residencial1)
+elif (tipo=="C") and (consumo<=1000):
+	print("Valor total: R$", comercial)
+elif (tipo=="C") and (consumo>1000):
+	print("Valor total: R$", comercial1)
+-- OUTPUT:
+Entradas: -56.0 KWh e tipo I
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 11:06:21) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if (tipo=="R") and (consumo<=500):
+	print("Valor total: R$", residencial)
+elif (tipo=="R") and (consumo>500):
+	print("Valor total: R$", residencial1)
+elif (tipo=="C") and (consumo<=1000):
+	print("Valor total: R$", comercial)
+elif (tipo=="C") and (consumo>1000):
+	print("Valor total: R$", comercial1)
+elif (tipo=="I") and (consumo<=5000):
+	print("valor total: R$", industrial)
+elif (tipo=="I") and (consumo>5000):
+	print("Valor total: R$", industrial1)
+else:
+	print("valor total: R$", consumo)
+-- OUTPUT:
+Entradas: -56.0 KWh e tipo I
+valor total: R$ -30.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-01 11:07:47) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if (tipo=="R") and (consumo<=500):
+	print("Valor total: R$", residencial)
+elif (tipo=="R") and (consumo>500):
+	print("Valor total: R$", residencial1)
+elif (tipo=="C") and (consumo<=1000):
+	print("Valor total: R$", comercial)
+elif (tipo=="C") and (consumo>1000):
+	print("Valor total: R$", comercial1)
+elif (tipo=="I") and (consumo<=5000):
+	print("valor total: R$", industrial)
+elif (tipo=="I") and (consumo>5000):
+	print("Valor total: R$", industrial1)
+else:
+	print("valor total: R$", consumo)
+-- EXECUTION TIME:
+0.154096
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 KWh e tipo I
+valor total: R$ -30.8
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 KWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-01 11:10:10) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if(consumo>0)
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+
+-- EXECUTION TIME:
+0.172565
+-- ERROR:
+  File "/home/codebench/codes/1674/1101/main.py", line 21
+    if(consumo>0)
+                ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-01 11:10:11) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if(consumo>0)
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+
+-- EXECUTION TIME:
+0.149255
+-- ERROR:
+  File "/home/codebench/codes/1674/1101/main.py", line 21
+    if(consumo>0)
+                ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 11:10:12) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if(consumo>0)
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+
+-- ERROR:
+File "XXXX", line 21
+    if(consumo>0)
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 11:10:17) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if(consumo>0)
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+
+-- ERROR:
+File "XXXX", line 21
+    if(consumo>0)
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 11:10:17) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if(consumo>0)
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+
+-- ERROR:
+File "XXXX", line 21
+    if(consumo>0)
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-01 11:10:43) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if(consumo>0):
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+
+-- EXECUTION TIME:
+0.131927
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 KWh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 KWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 11:10:43) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if(consumo>0):
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+
+-- OUTPUT:
+Entradas: -56.0 KWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-01 11:11:24) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if(consumo>0):
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+
+-- EXECUTION TIME:
+0.137391
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 KWh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 KWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 11:11:34) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if(consumo>0):
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+
+-- OUTPUT:
+Entradas: -56.0 KWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 11:11:46) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if(consumo>0):
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+
+-- OUTPUT:
+Entradas: -56.0 KWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 11:12:42) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if(consumo>0):
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+
+-- OUTPUT:
+Entradas: -56.0 KWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 11:13:20) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if(consumo>0):
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+
+-- OUTPUT:
+Entradas: -56.0 KWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 11:13:48) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o ce: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if(consumo>0):
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+
+-- OUTPUT:
+Entradas: -56.0 KWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 11:14:16) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o consumo: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if(consumo>0):
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+
+-- OUTPUT:
+Entradas: -56.0 KWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 11:15:10) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o consumo: "))
+tipo = input("Determine o tipo: ").upper()
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if(consumo>0):
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+-- OUTPUT:
+Entradas: -56.0 KWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 11:16:04) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o consumo: "))
+tipo = input("Determine o tipo: ").upper()
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+#condições
+if(consumo>0):
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+-- OUTPUT:
+Entradas: -56.0 KWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 11:17:13) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o consumo: "))
+tipo = input("Determine o tipo: ").upper()
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#condições
+if(consumo>0):
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+-- OUTPUT:
+Entradas: -56.0 KWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-01 11:18:21) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o consumo: "))
+tipo = input("Determine o tipo: ").upper()
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#condições
+if(consumo>0):
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)79
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+-- EXECUTION TIME:
+0.120128
+-- ERROR:
+  File "/home/codebench/codes/1674/1101/main.py", line 22
+    print("Valor total: R$", residencial)79
+                                          ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 11:19:22) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o consumo: "))
+tipo = input("Determine o tipo: ").upper()
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if(consumo>0):
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)79
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+	
+print("Entradas:", consumo, "KWh e tipo", tipo)
+-- ERROR:
+File "XXXX", line 21
+    print("Valor total: R$", residencial)79
+                                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 11:19:37) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o consumo: "))
+tipo = input("Determine o tipo: ").upper()
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+#condições
+if(consumo>0):
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+	
+print("Entradas:", consumo, "KWh e tipo", tipo)
+-- OUTPUT:
+Dados invalidos
+Entradas: -56.0 KWh e tipo I
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 11:20:12) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o consumo: "))
+tipo = input("Determine o tipo: ").upper()
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#condições
+if(consumo>0):
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+-- OUTPUT:
+Entradas: -56.0 KWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-01 11:20:23) 
+-- CODE:
+# ce = consumo de energia em kwh
+consumo = float(input("Determine o consumo: "))
+tipo = input("Determine o tipo: ").upper()
+
+#Residencial até 500
+residencial = round(consumo*(0.44),2)
+#Residencial acima de 500
+residencial1 = round(consumo*(0.65),2)
+#Comercial até 1000
+comercial = round(consumo*(0.55),2)
+#Comercial acima de 1000
+comercial1 = round(consumo*(0.60),2)
+#Industrial até 5000
+industrial = round(consumo*(0.55),2)
+#industrial acima de 5000
+industrial1 = round(consumo*(0.60),2)
+
+print("Entradas:", consumo, "KWh e tipo", tipo)
+
+#condições
+if(consumo>0):
+	if (tipo=="R") and (consumo<=500):
+		print("Valor total: R$", residencial)
+	elif (tipo=="R") and (consumo>500):
+		print("Valor total: R$", residencial1)
+	elif (tipo=="C") and (consumo<=1000):
+		print("Valor total: R$", comercial)
+	elif (tipo=="C") and (consumo>1000):
+		print("Valor total: R$", comercial1)
+	elif (tipo=="I") and (consumo<=5000):
+		print("valor total: R$", industrial)
+	elif (tipo=="I") and (consumo>5000):
+		print("Valor total: R$", industrial1)
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")	
+-- EXECUTION TIME:
+0.207742
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 KWh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 KWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-01 20:01:35) 
+-- CODE:
+consumo = float(input("digite o consumo: "))
+tipo = input("tipo de instalacao: (R/I/C) ")
+
+print("Entradas:", consumo, "kWh e tipo", tipo.upper())
+
+if (consumo < 0):
+	print("Dados invalidos")
+elif (tipo.upper() == "R"):
+	if (consumo <= 500):
+			x = consumo*0.44
+			y = round(x, 2)
+			print("Valor total: R$", y)
+	else:
+		x = consumo*0.65
+		y = round(x, 2)
+		print("Valor total: R$", y)
+elif (tipo.upper() == "C"):
+	if (consumo <= 1000):
+		x = consumo*0.55
+		y = round(x, 2)
+		print("Valor total: R$", y)
+	else:
+		x = consumo*0.60
+		y = round(x, 2)
+		print("Valor total: R$", y)
+elif (tipo.upper() == "I"):
+	if (consumo <= 5000):
+		x = consumo*0.55
+		y = round(x, 2)
+		print("Valor total: R$", y)
+	else:
+		x = consumo*0.60
+		y = round(x, 2)
+		print("Valor total: R$", y)
+-- EXECUTION TIME:
+0.229533
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

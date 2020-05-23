@@ -1,0 +1,16 @@
+from numpy import*
+a= array(eval(input("digite um vetor: ")))
+b=(size(a))
+c=(a[0])
+d=(a[-1])
+e=(max(a))
+f=(min(a))
+g=(sum(a))
+s=g/b
+print(b)
+print(c)
+print(d)
+print(e)
+print(f)
+print(g)
+print(round(s,2))

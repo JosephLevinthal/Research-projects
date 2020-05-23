@@ -1,0 +1,1364 @@
+== TEST (2019-05-02 03:39:13) 
+-- CODE:
+x = float(input("consumo de energia: "))
+y = input("tipo de instalação:(R/I/C): ".upper.())
+
+
+-- ERROR:
+File "XXXX", line 2
+    y = input("tipo de instalação:(R/I/C): ".upper.())
+                                                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 03:41:39) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalação:(R/I/C): ")
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 03:42:30) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 03:42:42) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 03:49:25) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 03:56:07) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+Valor total: R$: -30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 03:56:19) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.155557
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kwh tipo I
+Valor total: R$: -30.800000000000004
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kwh tipo R
+Valor total: R$ 621.075
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 03:58:11) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+Valor total: R$: -30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 03:59:32) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+Valor total: R$: -30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 04:03:49) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x>=0)and(x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+Valor total: R$: -30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 04:04:07) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x>=0)and(x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+Valor total: R$: -30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 04:04:23) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x>=0)and(x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+Valor total: R$: -30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 04:06:00) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x>=0)and(x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x>=0)and(x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x>=0)and(x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 04:06:18) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x>=0)and(x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x>=0)and(x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x>=0)and(x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 04:06:30) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x>=0)and(x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x>=0)and(x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x>=0)and(x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.148288
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kwh tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kwh tipo R
+Valor total: R$ 621.075
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 04:07:11) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x>=0)and(x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x>=0)and(x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x>=0)and(x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 04:07:56) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x>=0)and(x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x>=0)and(x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x>=0)and(x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.137359
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kwh tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kwh tipo R
+Valor total: R$ 621.075
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 08:26:53) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x>=0)and(x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x>=0)and(x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x>=0)and(x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.151323
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kwh tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kwh tipo R
+Valor total: R$ 621.075
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 08:28:10) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x>=0)or(x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x>=0)or(x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x>=0)or(x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+Valor total: R$: -30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 08:28:24) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x>=0)or(x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x>=0)or(x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x>=0)or(x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.182304
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kwh tipo I
+Valor total: R$: -30.800000000000004
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kwh tipo R
+Valor total: R$ 420.42
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 08:37:43) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x>=0.1)and(x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x>=0.1)and(x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x>=0.1)and(x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 08:37:43) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x>=0.1)and(x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x>=0.1)and(x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x>=0.1)and(x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 08:37:43) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x>=0.1)and(x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x>=0.1)and(x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x>=0.1)and(x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 08:37:47) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x>=0.1)and(x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x>=0.1)and(x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x>=0.1)and(x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.20429
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kwh tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kwh tipo R
+Valor total: R$ 621.075
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 08:38:37) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C): ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x>=0)and(x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x>=0)and(x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x>=0)and(x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 08:43:06) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C) ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x>=0)and(x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x>=0)and(x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x>=0)and(x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 08:43:46) 
+-- CODE:
+x = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C) ")  #R para residências, I para indústrias, e C para comércios.
+y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((x>=0)and(x<=500)and(y=="R")):
+	print("Valor total: R$", x*0.44)
+elif((x>500)and(y=="R")):
+	print("Valor total: R$", x*0.65)
+elif((x>=0)and(x<=1000)and(y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((x>1000)and(y=="C")):
+	print("Valor total: R$", x*0.60)
+elif((x>=0)and(x<=5000)and(y=="I")):
+	print("Valor total: R$:", x*0.55)
+elif((x>5000)and(y=="I")):
+	print("Valor total: R$", x*0.60)
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.190145
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kwh tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kwh tipo R
+Valor total: R$ 621.075
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 09:36:08) 
+-- CODE:
+X = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C) ")  #R para residências, I para indústrias, e C para comércios.
+Y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((X>=0)and(X<=500)and(Y=="R")):
+	print("Valor total: R$", X*0.44)
+elif((X>500)and(Y=="R")):
+	print("Valor total: R$", X*0.65)
+elif((X>=0)and(X<=1000)and(Y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((X>1000)and(Y=="C")):
+	print("Valor total: R$", X*0.60)
+elif((X>=0)and(X<=5000)and(Y=="I")):
+	print("Valor total: R$:", X*0.55)
+elif((X>5000)and(Y=="I")):
+	print("Valor total: R$", X*0.60)
+else:
+	print("Dados invalidos")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print("Entradas:", x, "kwh", "tipo", y)
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 09:36:13) 
+-- CODE:
+X = float(input("consumo de energia: "))
+tipo = input("tipo de instalacao:(R/I/C) ")  #R para residências, I para indústrias, e C para comércios.
+Y = (tipo.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((X>=0)and(X<=500)and(Y=="R")):
+	print("Valor total: R$", X*0.44)
+elif((X>500)and(Y=="R")):
+	print("Valor total: R$", X*0.65)
+elif((X>=0)and(X<=1000)and(Y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((X>1000)and(Y=="C")):
+	print("Valor total: R$", X*0.60)
+elif((X>=0)and(X<=5000)and(Y=="I")):
+	print("Valor total: R$:", X*0.55)
+elif((X>5000)and(Y=="I")):
+	print("Valor total: R$", X*0.60)
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.190597
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1679/1101/main.py", line 4, in <module>
+    print("Entradas:", x, "kwh", "tipo", y)
+NameError: name 'x' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 10:29:46) 
+-- CODE:
+X = float(input("consumo de energia: "))
+Y = input("tipo de instalacao:(R/I/C) ")  #R para residências, I para indústrias, e C para comércios.
+
+print("Entradas:", x, "kwh", "tipo", y)
+if((X>=0)and(X<=500)and(Y=="R")):
+	print("Valor total: R$", X*0.44)
+elif((X>500)and(Y=="R")):
+	print("Valor total: R$", X*0.65)
+elif((X>=0)and(X<=1000)and(Y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((X>1000)and(Y=="C")):
+	print("Valor total: R$", X*0.60)
+elif((X>=0)and(X<=5000)and(Y=="I")):
+	print("Valor total: R$:", X*0.55)
+elif((X>5000)and(Y=="I")):
+	print("Valor total: R$", X*0.60)
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.280534
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1679/1101/main.py", line 4, in <module>
+    print("Entradas:", x, "kwh", "tipo", y)
+NameError: name 'x' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 10:30:08) 
+-- CODE:
+X = float(input("consumo de energia: "))
+Y = input("tipo de instalacao:(R/I/C) ")  #R para residências, I para indústrias, e C para comércios.
+
+print("Entradas:", X, "kwh", "tipo", Y)
+if((X>=0)and(X<=500)and(Y=="R")):
+	print("Valor total: R$", X*0.44)
+elif((X>500)and(Y=="R")):
+	print("Valor total: R$", X*0.65)
+elif((X>=0)and(X<=1000)and(Y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((X>1000)and(Y=="C")):
+	print("Valor total: R$", X*0.60)
+elif((X>=0)and(X<=5000)and(Y=="I")):
+	print("Valor total: R$:", X*0.55)
+elif((X>5000)and(Y=="I")):
+	print("Valor total: R$", X*0.60)
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.208187
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kwh tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kwh tipo R
+Valor total: R$ 621.075
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:30:11) 
+-- CODE:
+X = float(input("consumo de energia: "))
+Y = input("tipo de instalacao:(R/I/C) ")  #R para residências, I para indústrias, e C para comércios.
+
+print("Entradas:", X, "kwh", "tipo", Y)
+if((X>=0)and(X<=500)and(Y=="R")):
+	print("Valor total: R$", X*0.44)
+elif((X>500)and(Y=="R")):
+	print("Valor total: R$", X*0.65)
+elif((X>=0)and(X<=1000)and(Y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((X>1000)and(Y=="C")):
+	print("Valor total: R$", X*0.60)
+elif((X>=0)and(X<=5000)and(Y=="I")):
+	print("Valor total: R$:", X*0.55)
+elif((X>5000)and(Y=="I")):
+	print("Valor total: R$", X*0.60)
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:31:09) 
+-- CODE:
+X = float(input("consumo de energia: "))
+y = input("tipo de instalacao:(R/I/C) ")  #R para residências, I para indústrias, e C para comércios.
+Y=(y,upper.())
+print("Entradas:", X, "kwh", "tipo", Y)
+if((X>=0)and(X<=500)and(Y=="R")):
+	print("Valor total: R$", X*0.44)
+elif((X>500)and(Y=="R")):
+	print("Valor total: R$", X*0.65)
+elif((X>=0)and(X<=1000)and(Y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((X>1000)and(Y=="C")):
+	print("Valor total: R$", X*0.60)
+elif((X>=0)and(X<=5000)and(Y=="I")):
+	print("Valor total: R$:", X*0.55)
+elif((X>5000)and(Y=="I")):
+	print("Valor total: R$", X*0.60)
+else:
+	print("Dados invalidos")
+-- ERROR:
+File "XXXX", line 3
+    Y=(y,upper.())
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:31:27) 
+-- CODE:
+X = float(input("consumo de energia: "))
+y = input("tipo de instalacao:(R/I/C) ")  #R para residências, I para indústrias, e C para comércios.
+Y= (y, upper.())
+print("Entradas:", X, "kwh", "tipo", Y)
+if((X>=0)and(X<=500)and(Y=="R")):
+	print("Valor total: R$", X*0.44)
+elif((X>500)and(Y=="R")):
+	print("Valor total: R$", X*0.65)
+elif((X>=0)and(X<=1000)and(Y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((X>1000)and(Y=="C")):
+	print("Valor total: R$", X*0.60)
+elif((X>=0)and(X<=5000)and(Y=="I")):
+	print("Valor total: R$:", X*0.55)
+elif((X>5000)and(Y=="I")):
+	print("Valor total: R$", X*0.60)
+else:
+	print("Dados invalidos")
+-- ERROR:
+File "XXXX", line 3
+    Y= (y, upper.())
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:31:58) 
+-- CODE:
+X = float(input("consumo de energia: "))
+y = input("tipo de instalacao:(R/I/C) ")  #R para residências, I para indústrias, e C para comércios.
+Y = (y.upper())
+print("Entradas:", x, "kwh", "tipo", y)
+if((X>=0)and(X<=500)and(Y=="R")):
+	print("Valor total: R$", X*0.44)
+elif((X>500)and(Y=="R")):
+	print("Valor total: R$", X*0.65)
+elif((X>=0)and(X<=1000)and(Y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((X>1000)and(Y=="C")):
+	print("Valor total: R$", X*0.60)
+elif((X>=0)and(X<=5000)and(Y=="I")):
+	print("Valor total: R$:", X*0.55)
+elif((X>5000)and(Y=="I")):
+	print("Valor total: R$", X*0.60)
+else:
+	print("Dados invalidos")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print("Entradas:", x, "kwh", "tipo", y)
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:32:15) 
+-- CODE:
+X = float(input("consumo de energia: "))
+y = input("tipo de instalacao:(R/I/C) ")  #R para residências, I para indústrias, e C para comércios.
+Y = (y.upper())
+print("Entradas:", X, "kwh", "tipo", Y)
+if((X>=0)and(X<=500)and(Y=="R")):
+	print("Valor total: R$", X*0.44)
+elif((X>500)and(Y=="R")):
+	print("Valor total: R$", X*0.65)
+elif((X>=0)and(X<=1000)and(Y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((X>1000)and(Y=="C")):
+	print("Valor total: R$", X*0.60)
+elif((X>=0)and(X<=5000)and(Y=="I")):
+	print("Valor total: R$:", X*0.55)
+elif((X>5000)and(Y=="I")):
+	print("Valor total: R$", X*0.60)
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:32:43) 
+-- CODE:
+X = float(input("consumo de energia: "))
+y = input("tipo de instalacao:(R/I/C) ")  #R para residências, I para indústrias, e C para comércios.
+Y = (y.upper())
+print("Entradas:", X, "kwh", "tipo", Y)
+if((X>=0)and(X<=500)and(Y=="R")):
+	print("Valor total: R$", X*0.44)
+elif((X>500)and(Y=="R")):
+	print("Valor total: R$", X*0.65)
+elif((X>=0)and(X<=1000)and(Y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((X>1000)and(Y=="C")):
+	print("Valor total: R$", X*0.60)
+elif((X>=0)and(X<=5000)and(Y=="I")):
+	print("Valor total: R$:", X*0.55)
+elif((X>5000)and(Y=="I")):
+	print("Valor total: R$", X*0.60)
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 10:32:58) 
+-- CODE:
+X = float(input("consumo de energia: "))
+y = input("tipo de instalacao:(R/I/C) ")  #R para residências, I para indústrias, e C para comércios.
+Y = (y.upper())
+print("Entradas:", X, "kwh", "tipo", Y)
+if((X>=0)and(X<=500)and(Y=="R")):
+	print("Valor total: R$", X*0.44)
+elif((X>500)and(Y=="R")):
+	print("Valor total: R$", X*0.65)
+elif((X>=0)and(X<=1000)and(Y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((X>1000)and(Y=="C")):
+	print("Valor total: R$", X*0.60)
+elif((X>=0)and(X<=5000)and(Y=="I")):
+	print("Valor total: R$:", X*0.55)
+elif((X>5000)and(Y=="I")):
+	print("Valor total: R$", X*0.60)
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.299347
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kwh tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kwh tipo R
+Valor total: R$ 621.075
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:35:53) 
+-- CODE:
+X = float(input("consumo de energia: "))
+Y = input("tipo de instalacao:(R/I/C) ").upper()  #R para residências, I para indústrias, e C para comércios.
+
+print("Entradas:", X, "kwh", "tipo", Y)
+if((X>=0)and(X<=500)and(Y=="R")):
+	print("Valor total: R$", X*0.44)
+elif((X>500)and(Y=="R")):
+	print("Valor total: R$", X*0.65)
+elif((X>=0)and(X<=1000)and(Y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((X>1000)and(Y=="C")):
+	print("Valor total: R$", X*0.60)
+elif((X>=0)and(X<=5000)and(Y=="I")):
+	print("Valor total: R$:", X*0.55)
+elif((X>5000)and(Y=="I")):
+	print("Valor total: R$", X*0.60)
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 10:36:04) 
+-- CODE:
+X = float(input("consumo de energia: "))
+Y = input("tipo de instalacao:(R/I/C) ").upper()  #R para residências, I para indústrias, e C para comércios.
+
+print("Entradas:", X, "kwh", "tipo", Y)
+if((X>=0)and(X<=500)and(Y=="R")):
+	print("Valor total: R$", X*0.44)
+elif((X>500)and(Y=="R")):
+	print("Valor total: R$", X*0.65)
+elif((X>=0)and(X<=1000)and(Y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((X>1000)and(Y=="C")):
+	print("Valor total: R$", X*0.60)
+elif((X>=0)and(X<=5000)and(Y=="I")):
+	print("Valor total: R$:", X*0.55)
+elif((X>5000)and(Y=="I")):
+	print("Valor total: R$", X*0.60)
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.147505
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kwh tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kwh tipo R
+Valor total: R$ 621.075
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:36:56) 
+-- CODE:
+X = float(input("consumo de energia: "))
+Y = input("tipo de instalacao:(R/I/C) ").upper()  #R para residências, I para indústrias, e C para comércios.
+
+print("Entradas:", X, "kwh e tipo", Y)
+if((X>=0)and(X<=500)and(Y=="R")):
+	print("Valor total: R$", X*0.44)
+elif((X>500)and(Y=="R")):
+	print("Valor total: R$", X*0.65)
+elif((X>=0)and(X<=1000)and(Y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((X>1000)and(Y=="C")):
+	print("Valor total: R$", X*0.60)
+elif((X>=0)and(X<=5000)and(Y=="I")):
+	print("Valor total: R$:", X*0.55)
+elif((X>5000)and(Y=="I")):
+	print("Valor total: R$", X*0.60)
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 10:37:09) 
+-- CODE:
+X = float(input("consumo de energia: "))
+Y = input("tipo de instalacao:(R/I/C) ").upper()  #R para residências, I para indústrias, e C para comércios.
+
+print("Entradas:", X, "kwh e tipo", Y)
+if((X>=0)and(X<=500)and(Y=="R")):
+	print("Valor total: R$", X*0.44)
+elif((X>500)and(Y=="R")):
+	print("Valor total: R$", X*0.65)
+elif((X>=0)and(X<=1000)and(Y=="C")):
+	print("Valor total: R$", x*0.55)
+elif((X>1000)and(Y=="C")):
+	print("Valor total: R$", X*0.60)
+elif((X>=0)and(X<=5000)and(Y=="I")):
+	print("Valor total: R$:", X*0.55)
+elif((X>5000)and(Y=="I")):
+	print("Valor total: R$", X*0.60)
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.151229
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kwh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kwh e tipo R
+Valor total: R$ 621.075
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:24:23) 
+-- CODE:
+X = float(input("consumo de energia: "))
+Y = input("tipo de instalacao:(R/I/C) ").upper()  #R para residências, I para indústrias, e C para comércios.
+
+if((X>=0)and(X<=500)and(Y=="R")):
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Valor total: R$", X*0.44)
+elif((X>500)and(Y=="R")):
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Valor total: R$", X*0.65)
+elif((X>=0)and(X<=1000)and(Y=="C")):
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Valor total: R$", x*0.55)
+elif((X>1000)and(Y=="C")):
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Valor total: R$", X*0.60)
+elif((X>=0)and(X<=5000)and(Y=="I")):
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Valor total: R$:", X*0.55)
+elif((X>5000)and(Y=="I")):
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Valor total: R$", X*0.60)
+else:
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 11:24:35) 
+-- CODE:
+X = float(input("consumo de energia: "))
+Y = input("tipo de instalacao:(R/I/C) ").upper()  #R para residências, I para indústrias, e C para comércios.
+
+if((X>=0)and(X<=500)and(Y=="R")):
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Valor total: R$", X*0.44)
+elif((X>500)and(Y=="R")):
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Valor total: R$", X*0.65)
+elif((X>=0)and(X<=1000)and(Y=="C")):
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Valor total: R$", x*0.55)
+elif((X>1000)and(Y=="C")):
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Valor total: R$", X*0.60)
+elif((X>=0)and(X<=5000)and(Y=="I")):
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Valor total: R$:", X*0.55)
+elif((X>5000)and(Y=="I")):
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Valor total: R$", X*0.60)
+else:
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.234309
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kwh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kwh e tipo R
+Valor total: R$ 621.075
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 22:08:02) 
+-- CODE:
+X = float(input("consumo de energia: "))
+Y = input("tipo de instalacao:(R/I/C) ").upper()  #R para residências, I para indústrias, e C para comércios.
+
+if((X>=0)and(X<=500)and(Y=="R")):
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Valor total: R$", X*0.44)
+elif((X>500)and(Y=="R")):
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Valor total: R$", X*0.65)
+elif((X>=0)and(X<=1000)and(Y=="C")):
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Valor total: R$", x*0.55)
+elif((X>1000)and(Y=="C")):
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Valor total: R$", X*0.60)
+elif((X>=0)and(X<=5000)and(Y=="I")):
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Valor total: R$:", X*0.55)
+elif((X>5000)and(Y=="I")):
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Valor total: R$", X*0.60)
+else:
+	print("Entradas:", X, "kwh e tipo", Y)
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas: -56.0 kwh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 11:15:33) 
+-- CODE:
+con=float(input("consumo de energia:"))
+tipo=input("tipo de instalacao: ( R/I/C)")
+
+if ( con < 0 ):
+	print("Entradas:",con,"kWh e tipo",tipo)
+	print("Dados invalidos")
+elif ( tipo == "R" and con <= 500):
+	preco = 0.44
+	total = con * preco
+	print("Entradas:",con,"kWh e tipo",tipo)
+	print("Valor total: R$",round(total,2))
+elif ( tipo == "R" and con > 500):
+	preco = 0.65
+	total = con * preco
+	print("Entradas:",con,"kWh e tipo",tipo)
+	print("Valor total: R$",round(total,2))
+elif ( tipo == "I" and con <= 5000):
+	preco = 0.55
+	total = con * preco
+	print("Entradas:",con,"kWh e tipo",tipo)
+	print("Valor total: R$",round(total,2))
+elif ( tipo == "I" and con > 5000):
+	preco = 0.60
+	total = con * preco
+	print("Entradas:",con,"kWh e tipo",tipo)
+	print("Valor total: R$",round(total,2))
+elif ( tipo == "C" and con <= 1000):
+	preco = 0.55
+	total = con * preco
+	print("Entradas:",con,"kWh e tipo",tipo)
+	print("Valor total: R$",round(total,2))
+elif ( tipo == "C" and con > 1000):
+	preco = 0.60
+	total = con * preco
+	print("Entradas:",con,"kWh e tipo",tipo)
+	print("Valor total: R$",round(total,2))
+else:
+	print("Entradas:",con,"kWh e tipo",tipo)
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.776173
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

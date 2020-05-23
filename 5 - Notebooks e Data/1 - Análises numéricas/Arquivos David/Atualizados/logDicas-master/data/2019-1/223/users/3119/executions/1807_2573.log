@@ -1,0 +1,524 @@
+== TEST (2019-06-06 17:35:54) 
+-- CODE:
+from numpy import*
+
+peso = array(eval(input("Digite os pesos: ")))
+altura = array(eval(input("Digite as alturas: ")))
+
+for i in range(size(peso)):
+	imc = peso[i]/ (altura[i] * altura[i])
+
+print(imc)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 17:36:37) 
+-- CODE:
+from numpy import*
+
+peso = array(eval(input("Digite os pesos: ")))
+altura = array(eval(input("Digite as alturas: ")))
+
+for i in range(size(peso)):
+	peso[i] = peso[i]/ (altura[i] * altura[i])
+
+print(peso)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 17:44:52) 
+-- CODE:
+from numpy import*
+
+peso = array(eval(input("Digite os pesos: ")))
+altura = array(eval(input("Digite as alturas: ")))
+
+for i in range(size(peso)):
+	peso[i] = peso[i]/ (altura[i] * altura[i])
+
+if(max(peso[i]) < 17):
+	x = "MUITO ABAIXO DO PESO"
+elif(max(peso[i]) >= 17 and max(peso[i]) =< 18.49):
+	x = "ABAIXO DO PESO"
+elif(max(peso[i]) >= 18.5 and max(peso[i]) =< 24.99):
+	x = "PESO NORMAL"
+elif(max(peso[i]) >= 25 and max(peso[i]) =< 29.99):
+	x = "ACIMA DO PESO"
+elif(max(peso[i]) >= 30 and max(peso[i]) =< 34.99):
+	x = "OBESIDADE"
+elif(max(peso[i]) >= 35 and max(peso[i]) =< 39.99)):
+	x = "OBESIDADE SEVERA"
+elif(max(peso[i]) > 40):
+	x = "OBESIDADE MORBIDA"
+
+	
+print(round(peso, 2))
+print("O MAIOR IMC DA TURMA EH:", max(peso[i]))
+-- ERROR:
+File "XXXX", line 11
+    elif(max(peso[i]) >= 17 and max(peso[i]) =< 18.49):
+                                             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 17:45:16) 
+-- CODE:
+from numpy import*
+
+peso = array(eval(input("Digite os pesos: ")))
+altura = array(eval(input("Digite as alturas: ")))
+
+for i in range(size(peso)):
+	peso[i] = peso[i]/ (altura[i] * altura[i])
+
+if(max(peso[i]) < 17):
+	x = "MUITO ABAIXO DO PESO"
+elif(max(peso[i]) >= 17 and max(peso[i]) <= 18.49):
+	x = "ABAIXO DO PESO"
+elif(max(peso[i]) >= 18.5 and max(peso[i]) <= 24.99):
+	x = "PESO NORMAL"
+elif(max(peso[i]) >= 25 and max(peso[i]) <= 29.99):
+	x = "ACIMA DO PESO"
+elif(max(peso[i]) >= 30 and max(peso[i]) <= 34.99):
+	x = "OBESIDADE"
+elif(max(peso[i]) >= 35 and max(peso[i]) <= 39.99):
+	x = "OBESIDADE SEVERA"
+elif(max(peso[i]) > 40):
+	x = "OBESIDADE MORBIDA"
+
+	
+print(round(peso, 2))
+print("O MAIOR IMC DA TURMA EH:", max(peso[i]))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 17:46:03) 
+-- CODE:
+from numpy import*
+
+peso = array(eval(input("Digite os pesos: ")))
+altura = array(eval(input("Digite as alturas: ")))
+
+for i in range(size(peso)):
+	peso[i] = peso[i]/ (altura[i] * altura[i])
+
+if(max(peso[i]) < 17):
+	x = "MUITO ABAIXO DO PESO"
+elif(max(peso) >= 17 and max(peso) <= 18.49):
+	x = "ABAIXO DO PESO"
+elif(max(peso) >= 18.5 and max(peso) <= 24.99):
+	x = "PESO NORMAL"
+elif(max(peso) >= 25 and max(peso) <= 29.99):
+	x = "ACIMA DO PESO"
+elif(max(peso) >= 30 and max(peso) <= 34.99):
+	x = "OBESIDADE"
+elif(max(peso) >= 35 and max(peso) <= 39.99):
+	x = "OBESIDADE SEVERA"
+elif(max(peso) > 40):
+	x = "OBESIDADE MORBIDA"
+
+	
+print(round(peso, 2))
+print("O MAIOR IMC DA TURMA EH:", max(peso[i]))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 17:46:24) 
+-- CODE:
+from numpy import*
+
+peso = array(eval(input("Digite os pesos: ")))
+altura = array(eval(input("Digite as alturas: ")))
+
+for i in range(size(peso)):
+	peso[i] = peso[i]/ (altura[i] * altura[i])
+
+if(max(peso) < 17):
+	x = "MUITO ABAIXO DO PESO"
+elif(max(peso) >= 17 and max(peso) <= 18.49):
+	x = "ABAIXO DO PESO"
+elif(max(peso) >= 18.5 and max(peso) <= 24.99):
+	x = "PESO NORMAL"
+elif(max(peso) >= 25 and max(peso) <= 29.99):
+	x = "ACIMA DO PESO"
+elif(max(peso) >= 30 and max(peso) <= 34.99):
+	x = "OBESIDADE"
+elif(max(peso) >= 35 and max(peso) <= 39.99):
+	x = "OBESIDADE SEVERA"
+elif(max(peso) > 40):
+	x = "OBESIDADE MORBIDA"
+
+	
+print(round(peso, 2))
+print("O MAIOR IMC DA TURMA EH:", max(peso[i]))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 17:47:03) 
+-- CODE:
+from numpy import*
+
+peso = array(eval(input("Digite os pesos: ")))
+altura = array(eval(input("Digite as alturas: ")))
+
+for i in range(size(peso)):
+	peso[i] = peso[i]/ (altura[i] * altura[i])
+
+if(max(peso) < 17):
+	x = "MUITO ABAIXO DO PESO"
+elif(max(peso) >= 17 and max(peso) <= 18.49):
+	x = "ABAIXO DO PESO"
+elif(max(peso) >= 18.5 and max(peso) <= 24.99):
+	x = "PESO NORMAL"
+elif(max(peso) >= 25 and max(peso) <= 29.99):
+	x = "ACIMA DO PESO"
+elif(max(peso) >= 30 and max(peso) <= 34.99):
+	x = "OBESIDADE"
+elif(max(peso) >= 35 and max(peso) <= 39.99):
+	x = "OBESIDADE SEVERA"
+elif(max(peso) > 40):
+	x = "OBESIDADE MORBIDA"
+
+	
+print(round(peso[i],2))
+print("O MAIOR IMC DA TURMA EH:", max(peso[i]))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 17:47:29) 
+-- CODE:
+from numpy import*
+
+peso = array(eval(input("Digite os pesos: ")))
+altura = array(eval(input("Digite as alturas: ")))
+
+for i in range(size(peso)):
+	peso[i] = peso[i]/ (altura[i] * altura[i])
+
+if(max(peso) < 17):
+	x = "MUITO ABAIXO DO PESO"
+elif(max(peso) >= 17 and max(peso) <= 18.49):
+	x = "ABAIXO DO PESO"
+elif(max(peso) >= 18.5 and max(peso) <= 24.99):
+	x = "PESO NORMAL"
+elif(max(peso) >= 25 and max(peso) <= 29.99):
+	x = "ACIMA DO PESO"
+elif(max(peso) >= 30 and max(peso) <= 34.99):
+	x = "OBESIDADE"
+elif(max(peso) >= 35 and max(peso) <= 39.99):
+	x = "OBESIDADE SEVERA"
+elif(max(peso) > 40):
+	x = "OBESIDADE MORBIDA"
+
+	
+print(round(peso[i],2))
+print("O MAIOR IMC DA TURMA EH:", max(peso))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 18:56:19) 
+-- CODE:
+from numpy import*
+
+peso = array(eval(input("Digite os pesos: ")))
+altura = array(eval(input("Digite as alturas: ")))
+
+for i in range(size(peso)):
+	peso[i] = peso[i]/ (altura[i] * altura[i])
+
+if(max(peso) < 17):
+	x = "MUITO ABAIXO DO PESO"
+elif(max(peso) >= 17 and max(peso) <= 18.49):
+	x = "ABAIXO DO PESO"
+elif(max(peso) >= 18.5 and max(peso) <= 24.99):
+	x = "PESO NORMAL"
+elif(max(peso) >= 25 and max(peso) <= 29.99):
+	x = "ACIMA DO PESO"
+elif(max(peso) >= 30 and max(peso) <= 34.99):
+	x = "OBESIDADE"
+elif(max(peso) >= 35 and max(peso) <= 39.99):
+	x = "OBESIDADE SEVERA"
+elif(max(peso) > 40):
+	x = "OBESIDADE MORBIDA"
+
+peso[i] = round(peso[i],2)
+	
+print(peso)
+print("O MAIOR IMC DA TURMA EH:", max(peso))
+print(max(peso))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 18:57:45) 
+-- CODE:
+from numpy import*
+
+peso = array(eval(input("Digite os pesos: ")))
+altura = array(eval(input("Digite as alturas: ")))
+
+for i in range(size(peso)):
+	peso[i] = peso[i]/ (altura[i] * altura[i])
+	peso[i] = round(peso[i],2)
+
+print(peso)
+if(max(peso) < 17):
+	x = "MUITO ABAIXO DO PESO"
+elif(max(peso) >= 17 and max(peso) <= 18.49):
+	x = "ABAIXO DO PESO"
+elif(max(peso) >= 18.5 and max(peso) <= 24.99):
+	x = "PESO NORMAL"
+elif(max(peso) >= 25 and max(peso) <= 29.99):
+	x = "ACIMA DO PESO"
+elif(max(peso) >= 30 and max(peso) <= 34.99):
+	x = "OBESIDADE"
+elif(max(peso) >= 35 and max(peso) <= 39.99):
+	x = "OBESIDADE SEVERA"
+elif(max(peso) > 40):
+	x = "OBESIDADE MORBIDA"
+
+	
+print("O MAIOR IMC DA TURMA EH:", max(peso))
+print(max(peso))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 18:58:15) 
+-- CODE:
+from numpy import*
+
+peso = array(eval(input("Digite os pesos: ")))
+altura = array(eval(input("Digite as alturas: ")))
+
+for i in range(size(peso)):
+	peso[i] = peso[i]/ (altura[i] * altura[i])
+	peso[i] = round(peso[i],2)
+
+print(peso)
+if(max(peso) < 17):
+	x = "MUITO ABAIXO DO PESO"
+elif(max(peso) >= 17 and max(peso) <= 18.49):
+	x = "ABAIXO DO PESO"
+elif(max(peso) >= 18.5 and max(peso) <= 24.99):
+	x = "PESO NORMAL"
+elif(max(peso) >= 25 and max(peso) <= 29.99):
+	x = "ACIMA DO PESO"
+elif(max(peso) >= 30 and max(peso) <= 34.99):
+	x = "OBESIDADE"
+elif(max(peso) >= 35 and max(peso) <= 39.99):
+	x = "OBESIDADE SEVERA"
+elif(max(peso) > 40):
+	x = "OBESIDADE MORBIDA"
+
+	
+print("O MAIOR IMC DA TURMA EH:", max(peso))
+print(max(peso))
+-- EXECUTION TIME:
+1.07676
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+24.61
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+17.44
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[37.79 31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+37.79
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 18:58:34) 
+-- CODE:
+from numpy import*
+
+peso = array(eval(input("Digite os pesos: ")))
+altura = array(eval(input("Digite as alturas: ")))
+
+for i in range(size(peso)):
+	peso[i] = peso[i]/ (altura[i] * altura[i])
+	peso[i] = round(peso[i],2)
+
+print(peso)
+if(max(peso) < 17):
+	x = "MUITO ABAIXO DO PESO"
+elif(max(peso) >= 17 and max(peso) <= 18.49):
+	x = "ABAIXO DO PESO"
+elif(max(peso) >= 18.5 and max(peso) <= 24.99):
+	x = "PESO NORMAL"
+elif(max(peso) >= 25 and max(peso) <= 29.99):
+	x = "ACIMA DO PESO"
+elif(max(peso) >= 30 and max(peso) <= 34.99):
+	x = "OBESIDADE"
+elif(max(peso) >= 35 and max(peso) <= 39.99):
+	x = "OBESIDADE SEVERA"
+elif(max(peso) > 40):
+	x = "OBESIDADE MORBIDA"
+
+	
+print("O MAIOR IMC DA TURMA EH:", max(peso))
+print(max(peso))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 18:59:11) 
+-- CODE:
+from numpy import*
+
+peso = array(eval(input("Digite os pesos: ")))
+altura = array(eval(input("Digite as alturas: ")))
+
+for i in range(size(peso)):
+	peso[i] = peso[i]/ (altura[i] * altura[i])
+	peso[i] = round(peso[i],2)
+
+print(peso)
+if(max(peso) < 17):
+	x = "MUITO ABAIXO DO PESO"
+elif(max(peso) >= 17 and max(peso) <= 18.49):
+	x = "ABAIXO DO PESO"
+elif(max(peso) >= 18.5 and max(peso) <= 24.99):
+	x = "PESO NORMAL"
+elif(max(peso) >= 25 and max(peso) <= 29.99):
+	x = "ACIMA DO PESO"
+elif(max(peso) >= 30 and max(peso) <= 34.99):
+	x = "OBESIDADE"
+elif(max(peso) >= 35 and max(peso) <= 39.99):
+	x = "OBESIDADE SEVERA"
+elif(max(peso) > 40):
+	x = "OBESIDADE MORBIDA"
+
+	
+print("O MAIOR IMC DA TURMA EH:", max(peso))
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 18:59:34) 
+-- CODE:
+from numpy import*
+
+peso = array(eval(input("Digite os pesos: ")))
+altura = array(eval(input("Digite as alturas: ")))
+
+for i in range(size(peso)):
+	peso[i] = peso[i]/ (altura[i] * altura[i])
+	peso[i] = round(peso[i],2)
+
+print(peso)
+if(max(peso) < 17):
+	x = "MUITO ABAIXO DO PESO"
+elif(max(peso) >= 17 and max(peso) <= 18.49):
+	x = "ABAIXO DO PESO"
+elif(max(peso) >= 18.5 and max(peso) <= 24.99):
+	x = "PESO NORMAL"
+elif(max(peso) >= 25 and max(peso) <= 29.99):
+	x = "ACIMA DO PESO"
+elif(max(peso) >= 30 and max(peso) <= 34.99):
+	x = "OBESIDADE"
+elif(max(peso) >= 35 and max(peso) <= 39.99):
+	x = "OBESIDADE SEVERA"
+elif(max(peso) > 40):
+	x = "OBESIDADE MORBIDA"
+
+	
+print("O MAIOR IMC DA TURMA EH:", max(peso))
+print(x)
+-- EXECUTION TIME:
+1.01571
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[37.79 31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,214 @@
+== TEST (2019-05-29 19:07:07) 
+-- CODE:
+codigo = float(input("codigo: "))
+a = codigo //1000
+b = codigo //100
+c = codigo // 10
+d = codigo //1
+print(a)
+-- OUTPUT:
+2.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:07:47) 
+-- CODE:
+codigo = float(input("codigo: "))
+a = codigo //1000
+b = codigo //100
+c = codigo // 10
+d = codigo //1
+print(d)
+-- OUTPUT:
+2000.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:08:12) 
+-- CODE:
+codigo = float(input("codigo: "))
+a = codigo //1000
+b = codigo //100
+c = codigo // 10
+d = codigo //1
+print(c)
+-- OUTPUT:
+200.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:08:59) 
+-- CODE:
+codigo = float(input("codigo: "))
+a = codigo //1000
+b = codigo //100 //100
+c = codigo // 100
+d = codigo //1
+print(c)
+-- OUTPUT:
+20.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:09:23) 
+-- CODE:
+codigo = float(input("codigo: "))
+a = codigo //1000
+b = codigo //100 //100
+c = codigo // 0.001
+d = codigo //1
+print(c)
+-- OUTPUT:
+1999999.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:13:47) 
+-- CODE:
+codigo = float(input("codigo: "))
+a = codigo[0] * 5
+b = codigo[1] * 4
+c = codigo[2] * 3
+d = codigo[3] * 2
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    a = codigo[0] * 5
+TypeError: 'float' object is not subscriptable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:15:11) 
+-- CODE:
+codigo = float(input("codigo: "))
+a = codigo[0] * 5
+b = codigo[1] * 4
+c = codigo[2] * 3
+d = codigo[3] * 2
+e = (a + b + c + d) % 11
+print(e)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    a = codigo[0] * 5
+TypeError: 'float' object is not subscriptable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:17:13) 
+-- CODE:
+from numpy import*
+codigo = float(input("codigo: "))
+f = []
+g = f.append(codigo)
+a = g[0] * 5
+b = g[1] * 4
+c = g[2] * 3
+d = g[3] * 2
+e = (a + b + c + d) % 11
+print(e)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:17:56) 
+-- CODE:
+from numpy import*
+codigo = float(input("codigo: "))
+f = []
+g = f.append(codigo)
+a = g[:0] * 5
+b = g[1] * 4
+c = g[2] * 3
+d = g[3] * 2
+e = (a + b + c + d) % 11
+print(e)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:18:47) 
+-- CODE:
+from numpy import*
+codigo = array(eval(input("codigo: "))
+f = []
+g = f.append(codigo)
+a = g[:0] * 5
+b = g[1] * 4
+c = g[2] * 3
+d = g[3] * 2
+e = (a + b + c + d) % 11
+print(e)
+
+-- ERROR:
+File "XXXX", line 3
+    f = []
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:19:01) 
+-- CODE:
+from numpy import*
+codigo = array(eval(input("codigo: ")))
+f = []
+g = f.append(codigo)
+a = g[:0] * 5
+b = g[1] * 4
+c = g[2] * 3
+d = g[3] * 2
+e = (a + b + c + d) % 11
+print(e)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:19:10) 
+-- CODE:
+from numpy import*
+codigo = array(eval(input("codigo: ")))
+f = []
+g = f.append(codigo)
+a = g[0] * 5
+b = g[1] * 4
+c = g[2] * 3
+d = g[3] * 2
+e = (a + b + c + d) % 11
+print(e)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:20:21) 
+-- CODE:
+from numpy import*
+codigo = input("codigo: ")
+a = g[0] * 5
+b = g[:1] * 4
+c = g[2] * 3
+d = g[3] * 2
+e = (a + b + c + d) % 11
+print(e)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:20:38) 
+-- CODE:
+from numpy import*
+codigo = input("codigo: ")
+a = g[0:] * 5
+b = g[:1] * 4
+c = g[2] * 3
+d = g[3] * 2
+e = (a + b + c + d) % 11
+print(e)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

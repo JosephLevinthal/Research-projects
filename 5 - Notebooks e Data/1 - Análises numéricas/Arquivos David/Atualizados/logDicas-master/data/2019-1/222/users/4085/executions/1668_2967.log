@@ -1,0 +1,406 @@
+== TEST (2019-04-15 18:36:48) 
+-- CODE:
+a = float(input("escreva a sua altura: "))
+b = float(input("escreva a altura do seu amigo: "))
+opcao = input("dirigi sozinho? (S/N): ")
+if (a >= 1.37), (b >= 1.37):
+	mensagem = "Sim"
+else:
+	mensagem = "Nao"
+-- ERROR:
+File "XXXX", line 4
+    if (a >= 1.37), (b >= 1.37):
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:36:56) 
+-- CODE:
+a = float(input("escreva a sua altura: "))
+b = float(input("escreva a altura do seu amigo: "))
+opcao = input("dirigi sozinho? (S/N): ")
+if (a >= 1.37)(b >= 1.37):
+	mensagem = "Sim"
+else:
+	mensagem = "Nao"
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    opcao = input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:37:11) 
+-- CODE:
+a = float(input("escreva a sua altura: "))
+b = float(input("escreva a altura do seu amigo: "))
+opcao = input("dirigi sozinho? (S/N): ")
+if (a >= 1.37)(b >= 1.37):
+	mensagem = "Sim"
+else:
+	mensagem = "Nao"
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    opcao = input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:37:43) 
+-- CODE:
+a = float(input("escreva a sua altura: "))
+b = float(input("escreva a altura do seu amigo: "))
+if (a >= 1.37)(b >= 1.37):
+	mensagem = "Sim"
+else:
+	mensagem = "Nao"
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if (a >= 1.37)(b >= 1.37):
+TypeError: 'bool' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:38:51) 
+-- CODE:
+a = float(input("escreva a sua altura: "))
+b = float(input("escreva a altura do seu amigo: "))
+if (a >= 1.37) ou (b >= 1.37):
+	mensagem = "Sim"
+else:
+	mensagem = "Nao"
+-- ERROR:
+File "XXXX", line 3
+    if (a >= 1.37) ou (b >= 1.37):
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:43:23) 
+-- CODE:
+a = float(input("escreva a sua altura: "))
+b = float(input("escreva a altura do seu amigo: "))
+
+if (a >= 1.37):
+	mensagem = "Sim"
+	
+else (b <= 1.37):
+	mensagem = "Nao"
+print(mensagem)
+-- ERROR:
+File "XXXX", line 7
+    else (b <= 1.37):
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:43:35) 
+-- CODE:
+a = float(input("escreva a sua altura: "))
+b = float(input("escreva a altura do seu amigo: "))
+
+if (a >= 1.37):
+	mensagem = "Sim"
+	
+else:
+	mensagem = "Nao"
+print(mensagem)
+-- OUTPUT:
+Nao
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:44:59) 
+-- CODE:
+a = float(input("escreva a sua altura: "))
+b = float(input("escreva a altura do seu amigo: "))
+
+if (a + b >= 2.74):
+	mensagem = "Sim"
+	
+else:
+	mensagem = "Nao"
+print(mensagem)
+-- OUTPUT:
+Nao
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:47:40) 
+-- CODE:
+a = float(input("escreva a sua altura: "))
+b = float(input("escreva a altura do seu amigo: "))
+
+if (a + b >= 2.74):
+	mensagem = "Sim"
+	am = a > 50/100 * 2.74
+	
+else:
+	mensagem = "Nao"
+	am = b > 50/100 * 2.74
+print(mensagem)
+print(am)
+-- OUTPUT:
+Nao
+False
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:49:55) 
+-- CODE:
+a = float(input("escreva a sua altura: "))
+b = float(input("escreva a altura do seu amigo: "))
+
+if (a + b >= 2.74):
+	mensagem = "Sim"
+	am = a > 50/100 * 2.74
+	mensagem1 = a
+	
+else:
+	mensagem = "Nao"
+	am = b > 50/100 * 2.74
+	mensagem1 = b
+print(mensagem)
+print(mensagem1)
+-- OUTPUT:
+Nao
+1.26
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 18:50:06) 
+-- CODE:
+a = float(input("escreva a sua altura: "))
+b = float(input("escreva a altura do seu amigo: "))
+
+if (a + b >= 2.74):
+	mensagem = "Sim"
+	am = a > 50/100 * 2.74
+	mensagem1 = a
+	
+else:
+	mensagem = "Nao"
+	am = b > 50/100 * 2.74
+	mensagem1 = b
+print(mensagem)
+print(mensagem1)
+-- EXECUTION TIME:
+0.200135
+-- TEST CASE 1:
+---- input:
+1.25
+1.26
+---- correct output:
+Nao
+1.26
+---- user output:
+Nao
+1.26
+-- TEST CASE 2:
+---- input:
+1.20
+1.53
+---- correct output:
+Sim
+1.53
+---- user output:
+Nao
+1.53
+-- TEST CASE 3:
+---- input:
+1.85
+1.9
+---- correct output:
+Sim
+1.9
+---- user output:
+Sim
+1.85
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:50:12) 
+-- CODE:
+a = float(input("escreva a sua altura: "))
+b = float(input("escreva a altura do seu amigo: "))
+
+if (a + b >= 2.74):
+	mensagem = "Sim"
+	am = a > 50/100 * 2.74
+	mensagem1 = a
+	
+else:
+	mensagem = "Nao"
+	am = b > 50/100 * 2.74
+	mensagem1 = b
+print(mensagem)
+print(mensagem1)
+-- OUTPUT:
+Nao
+1.26
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:50:39) 
+-- CODE:
+a = float(input("escreva a sua altura: "))
+b = float(input("escreva a altura do seu amigo: "))
+
+if (a + b >= 2.74):
+	mensagem = "Sim"
+	am = a > 50/100 * 2.74
+	mensagem1 = a
+	
+else:
+	mensagem = "Nao"
+	am = b > 50/100 * 2.74
+	mensagem1 = b
+print(mensagem)
+print(round(mensagem1, 2))
+-- OUTPUT:
+Nao
+1.26
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:50:50) 
+-- CODE:
+a = float(input("escreva a sua altura: "))
+b = float(input("escreva a altura do seu amigo: "))
+
+if (a + b >= 2.74):
+	mensagem = "Sim"
+	am = a > 50/100 * 2.74
+	mensagem1 = a
+	
+else:
+	mensagem = "Nao"
+	am = b > 50/100 * 2.74
+	mensagem1 = b
+print(mensagem)
+print(round(mensagem1, 2))
+-- OUTPUT:
+Nao
+1.26
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 18:50:54) 
+-- CODE:
+a = float(input("escreva a sua altura: "))
+b = float(input("escreva a altura do seu amigo: "))
+
+if (a + b >= 2.74):
+	mensagem = "Sim"
+	am = a > 50/100 * 2.74
+	mensagem1 = a
+	
+else:
+	mensagem = "Nao"
+	am = b > 50/100 * 2.74
+	mensagem1 = b
+print(mensagem)
+print(round(mensagem1, 2))
+-- EXECUTION TIME:
+0.173491
+-- TEST CASE 1:
+---- input:
+1.25
+1.26
+---- correct output:
+Nao
+1.26
+---- user output:
+Nao
+1.26
+-- TEST CASE 2:
+---- input:
+1.20
+1.53
+---- correct output:
+Sim
+1.53
+---- user output:
+Nao
+1.53
+-- TEST CASE 3:
+---- input:
+1.85
+1.9
+---- correct output:
+Sim
+1.9
+---- user output:
+Sim
+1.85
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:51:59) 
+-- CODE:
+a = float(input("escreva a sua altura: "))
+b = float(input("escreva a altura do seu amigo: "))
+
+if (a + b >= 2.74):
+	mensagem = "Sim"
+if (a > 50/100 * 2.74):
+	mensagem1 = a
+	
+else:
+	mensagem = "Nao"
+else:
+	mensagem1 = b
+print(mensagem)
+print(round(mensagem1)
+-- ERROR:
+File "XXXX", line 11
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:52:23) 
+-- CODE:
+a = float(input("escreva a sua altura: "))
+b = float(input("escreva a altura do seu amigo: "))
+
+if (a + b >= 2.74):
+	mensagem = "Sim"
+if (a > 50/100 * 2.74):
+	mensagem1 = a
+	
+else:
+	mensagem = "Nao"
+else:
+	mensagem1 = b
+print(mensagem)
+print(mensagem1)
+-- ERROR:
+File "XXXX", line 11
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:53:04) 
+-- CODE:
+a = float(input("escreva a sua altura: "))
+b = float(input("escreva a altura do seu amigo: "))
+
+if (a + b >= 2.74):
+	mensagem = "Sim"
+   if (a > 50/100 * 2.74):
+		mensagem1 = a
+	
+else:
+	mensagem = "Nao"
+   else:
+		mensagem1 = b
+print(mensagem)
+print(mensagem1)
+-- ERROR:
+File "XXXX", line 6
+    if (a > 50/100 * 2.74):
+                          ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:54:01) 
+-- CODE:
+a = float(input("escreva a sua altura: "))
+b = float(input("escreva a altura do seu amigo: "))
+
+if (a + b >= 2.74):
+	mensagem = "Sim"
+   if (a > b):
+		mensagem1 = a
+	
+else:
+	mensagem = "Nao"
+   else:
+		mensagem1 = b
+print(mensagem)
+print(mensagem1)
+-- ERROR:
+File "XXXX", line 6
+    if (a > b):
+              ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

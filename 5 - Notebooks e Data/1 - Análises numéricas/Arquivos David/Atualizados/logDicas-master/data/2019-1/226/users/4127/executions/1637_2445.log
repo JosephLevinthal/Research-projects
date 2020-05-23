@@ -1,0 +1,393 @@
+== TEST (2019-04-09 10:35:15) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+C= 5/9*(F-32)
+print(C)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    C= 5/9*(F-32)
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:36:32) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+C= C==5/9*(F-32)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    C= C==5/9*(F-32)
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:36:43) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= C==5/9*(F-32)
+print(C)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    c= C==5/9*(F-32)
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:37:43) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= 5/9*(valtemp-32)
+print(c)
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:38:14) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+print(c)
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:38:50) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+print(c)
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:40:49) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+f= (valtemp*(9/5))+32
+
+print(f)
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:41:48) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+f= (valtemp*(9/5))+32
+
+if (temp.upper()=="C"):
+	msg= c
+else:
+	msg=f
+print(msg)
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:41:59) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+f= (valtemp*(9/5))+32
+
+if (temp.upper()=="C"):
+	msg= c
+else:
+	msg=f
+print(msg)
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:42:33) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+f= (valtemp*(9/5))+32
+
+if (temp.upper()=="C"):
+	msg= c
+if (temp.upper()=="F")
+	msg=f
+print(msg)
+-- ERROR:
+File "XXXX", line 9
+    if (temp.upper()=="F")
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:42:38) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+f= (valtemp*(9/5))+32
+
+if (temp.upper()=="C"):
+	msg= c
+if (temp.upper()=="F"):
+	msg=f
+print(msg)
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:43:01) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+f= (valtemp*(9/5))+32
+
+print(f)
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:43:29) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+f= (valtemp*(5/9))+32
+
+print(f)
+-- OUTPUT:
+209.77777777777777
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:44:54) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+f= c*9/5+32
+
+print(f)
+
+
+-- OUTPUT:
+320.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:45:08) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+f= (c*9/5)+32
+
+print(f)
+
+
+-- OUTPUT:
+320.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:45:18) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+f= (valtemp*9/5)+32
+
+print(f)
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:45:37) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+f= (valtemp*9/5)+32
+
+print(f)
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:46:53) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+f= valtemp/(5/9)+32
+
+print(f)
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:47:27) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+f= (valtemp/(5/9))+32
+
+print(f)
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:48:07) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+print(c)
+
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:48:18) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+print(c)
+
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:49:03) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+f= (valtemp*(9/5))+32
+
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:49:15) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+f= (valtemp*(9/5))+32
+print(f)
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:50:16) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+f= (valtemp*(9/5))+32
+
+if (temp.upper()=="F"):
+	msg= c
+if (temp.upper()=="C"):
+	msg=f
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:50:27) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+f= (valtemp*(9/5))+32
+
+if (temp.upper()=="F"):
+	msg= c
+if (temp.upper()=="C"):
+	msg=f
+print(msg)
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:50:31) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+f= (valtemp*(9/5))+32
+
+if (temp.upper()=="F"):
+	msg= c
+if (temp.upper()=="C"):
+	msg=f
+print(msg)
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 10:50:38) 
+-- CODE:
+temp= input("qual a escala de temperatura? (C ou F)")
+valtemp= float(input("qual a temperatura?"))
+
+c= (5/9)*(valtemp-32)
+f= (valtemp*(9/5))+32
+
+if (temp.upper()=="F"):
+	msg= c
+if (temp.upper()=="C"):
+	msg=f
+print(msg)
+-- EXECUTION TIME:
+0.218277
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

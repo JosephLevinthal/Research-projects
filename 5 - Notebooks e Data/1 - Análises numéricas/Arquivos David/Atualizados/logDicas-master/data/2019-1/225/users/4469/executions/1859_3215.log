@@ -1,0 +1,238 @@
+== TEST (2019-06-26 14:33:28) 
+-- CODE:
+from numpy import *
+
+a = array(eval(input()), dtype = int)
+t = size(a)
+i = 0
+m = zeros((t,2), dtype = int)
+for c in range(t):
+	p = int(input())
+	m[c, 0] = a[c]
+	m[c, 1] = p
+	
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 14:39:39) 
+-- CODE:
+from numpy import *
+
+a = array(eval(input()), dtype = int)
+t = size(a)
+i = 0
+m = zeros((t,2), dtype = int)
+for c in range(t):
+	p = int(input())
+	m[c, 0] = a[c]
+	m[c, 1] = p
+	
+print(m)
+b = max(m[:,1])
+for i in range(t):
+	if(b == m[i,1]):
+		print("O aluno que possui o maior numero de faltas e o", m[i,1])
+		break
+-- EXECUTION TIME:
+1.04136
+-- TEST CASE 1:
+---- input:
+1,2,3,4,5
+10
+6
+30
+8
+6
+---- correct output:
+[[ 1 10]
+ [ 2  6]
+ [ 3 30]
+ [ 4  8]
+ [ 5  6]]
+O aluno que possui o maior numero de faltas e o 3
+---- user output:
+[[ 1 10]
+ [ 2  6]
+ [ 3 30]
+ [ 4  8]
+ [ 5  6]]
+O aluno que possui o maior numero de faltas e o 30
+-- TEST CASE 2:
+---- input:
+111,222,333,444
+75
+0
+26
+36
+---- correct output:
+[[111  75]
+ [222   0]
+ [333  26]
+ [444  36]]
+O aluno que possui o maior numero de faltas e o 111
+---- user output:
+[[111  75]
+ [222   0]
+ [333  26]
+ [444  36]]
+O aluno que possui o maior numero de faltas e o 75
+-- TEST CASE 3:
+---- input:
+301,303,305,307
+11
+12
+13
+45
+---- correct output:
+[[301  11]
+ [303  12]
+ [305  13]
+ [307  45]]
+O aluno que possui o maior numero de faltas e o 307
+---- user output:
+[[301  11]
+ [303  12]
+ [305  13]
+ [307  45]]
+O aluno que possui o maior numero de faltas e o 45
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:39:44) 
+-- CODE:
+from numpy import *
+
+a = array(eval(input()), dtype = int)
+t = size(a)
+i = 0
+m = zeros((t,2), dtype = int)
+for c in range(t):
+	p = int(input())
+	m[c, 0] = a[c]
+	m[c, 1] = p
+	
+print(m)
+b = max(m[:,1])
+for i in range(t):
+	if(b == m[i,1]):
+		print("O aluno que possui o maior numero de faltas e o", m[i,1])
+		break
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:40:36) 
+-- CODE:
+from numpy import *
+
+a = array(eval(input()), dtype = int)
+t = size(a)
+i = 0
+m = zeros((t,2), dtype = int)
+for c in range(t):
+	p = int(input())
+	m[c, 0] = a[c]
+	m[c, 1] = p
+	
+print(m)
+b = max(m[:,1])
+for i in range(t):
+	if(b == m[i,1]):
+		print("O aluno que possui o maior numero de faltas e o", m[i,0])
+		break
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 14:41:00) 
+-- CODE:
+from numpy import *
+
+a = array(eval(input()), dtype = int)
+t = size(a)
+i = 0
+m = zeros((t,2), dtype = int)
+for c in range(t):
+	p = int(input())
+	m[c, 0] = a[c]
+	m[c, 1] = p
+	
+print(m)
+b = max(m[:,1])
+for i in range(t):
+	if(b == m[i,1]):
+		print("O aluno que possui o maior numero de faltas e o", m[i,0])
+		break
+-- EXECUTION TIME:
+1.12806
+-- TEST CASE 1:
+---- input:
+1,2,3,4,5
+10
+6
+30
+8
+6
+---- correct output:
+[[ 1 10]
+ [ 2  6]
+ [ 3 30]
+ [ 4  8]
+ [ 5  6]]
+O aluno que possui o maior numero de faltas e o 3
+---- user output:
+[[ 1 10]
+ [ 2  6]
+ [ 3 30]
+ [ 4  8]
+ [ 5  6]]
+O aluno que possui o maior numero de faltas e o 3
+-- TEST CASE 2:
+---- input:
+111,222,333,444
+75
+0
+26
+36
+---- correct output:
+[[111  75]
+ [222   0]
+ [333  26]
+ [444  36]]
+O aluno que possui o maior numero de faltas e o 111
+---- user output:
+[[111  75]
+ [222   0]
+ [333  26]
+ [444  36]]
+O aluno que possui o maior numero de faltas e o 111
+-- TEST CASE 3:
+---- input:
+301,303,305,307
+11
+12
+13
+45
+---- correct output:
+[[301  11]
+ [303  12]
+ [305  13]
+ [307  45]]
+O aluno que possui o maior numero de faltas e o 307
+---- user output:
+[[301  11]
+ [303  12]
+ [305  13]
+ [307  45]]
+O aluno que possui o maior numero de faltas e o 307
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

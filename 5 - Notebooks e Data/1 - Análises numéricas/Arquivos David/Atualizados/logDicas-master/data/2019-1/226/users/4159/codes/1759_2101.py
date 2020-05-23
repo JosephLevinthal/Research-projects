@@ -1,0 +1,1 @@
+/home/icomp/Área de Trabalho/__pycache__/menor.cpython-36.pyc

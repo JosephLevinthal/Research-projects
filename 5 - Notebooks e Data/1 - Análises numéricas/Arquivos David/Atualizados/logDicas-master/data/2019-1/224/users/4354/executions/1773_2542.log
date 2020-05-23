@@ -1,0 +1,63 @@
+== TEST (2019-05-27 21:34:19) 
+-- CODE:
+from numpy import * 
+entrada = array(eval(input("digite os passageiros que entram: ")))
+saida = array(eval(input("digite os passageiros que saem: ")))
+i = 0
+s = 0
+while(i<size(entrada)):
+	s = s + (entrada[i] - saida[i])
+	i = i + 1
+print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-27 21:34:43) 
+-- CODE:
+from numpy import * 
+entrada = array(eval(input("digite os passageiros que entram: ")))
+saida = array(eval(input("digite os passageiros que saem: ")))
+i = 0
+s = 0
+while(i<size(entrada)):
+	s = s + (entrada[i] - saida[i])
+	i = i + 1
+print(s)
+-- EXECUTION TIME:
+0.482602
+-- TEST CASE 1:
+---- input:
+[10,20,15,0]
+[0,5,12,0]
+
+---- correct output:
+28
+
+---- user output:
+28
+-- TEST CASE 2:
+---- input:
+[10,50,15,0]
+[0,10,12,4]
+
+---- correct output:
+49
+
+---- user output:
+49
+-- TEST CASE 3:
+---- input:
+[10,24,2,10]
+[5,20,10,4]
+
+---- correct output:
+7
+
+---- user output:
+7
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

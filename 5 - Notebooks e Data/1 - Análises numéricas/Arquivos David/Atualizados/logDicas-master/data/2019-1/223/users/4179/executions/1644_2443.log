@@ -1,0 +1,97 @@
+== TEST (2019-04-16 10:39:19) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+r=float(input("raio: "))
+x=float(input("Altura da coluna de ar: "))
+op=input("Qual a opcao desejada: 1/2 ")
+if (op == "1"):
+	v=4*math.pi*r**3/3
+	print(round(v,4))
+else:
+	V=math.pi*x**2*(3*r-x)/3
+	print(round(V,4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    v=4*math.pi*r**3/3
+NameError: name 'math' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:40:19) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+from math import *
+r=float(input("raio: "))
+x=float(input("Altura da coluna de ar: "))
+op=input("Qual a opcao desejada: 1/2 ")
+if (op == "1"):
+	v=4*math.pi*r**3/3
+	print(round(v,4))
+else:
+	V = math.pi*x**2*(3*r-x)/3
+	print(round(V,4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    v=4*math.pi*r**3/3
+NameError: name 'math' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:45:42) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+from math import *
+r=float(input("raio: "))
+x=float(input("Altura da coluna de ar: "))
+op=input("Qual a opcao desejada: 1/2 ")
+V=pi*x**2*(3*r-x)/3
+v=4*pi*r**3/3
+if (op == "1"):
+	print(round(V,4))
+else:
+	print(round(v-V,4))
+-- OUTPUT:
+9.0257
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:46:02) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+from math import *
+r=float(input("raio: "))
+x=float(input("Altura da coluna de ar: "))
+op=input("Qual a opcao desejada: 1/2 ")
+V=pi*x**2*(3*r-x)/3
+v=4*pi*r**3/3
+if (op == "1"):
+	print(round(V,4))
+else:
+	print(round(v-V,4))
+-- EXECUTION TIME:
+0.189776
+-- TEST CASE 1:
+---- input:
+3.50
+0.95
+1
+---- correct output:
+9.0257
+---- user output:
+9.0257
+-- TEST CASE 2:
+---- input:
+4.20
+1.30
+2
+---- correct output:
+290.3408
+---- user output:
+290.3408
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

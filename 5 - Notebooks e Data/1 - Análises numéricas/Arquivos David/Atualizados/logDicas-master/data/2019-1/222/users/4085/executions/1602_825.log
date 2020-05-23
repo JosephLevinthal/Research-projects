@@ -1,0 +1,162 @@
+== TEST (2019-03-27 18:57:21) 
+-- CODE:
+r = float(input("escreva o valor do raio"))
+-- OUTPUT:
+210.15
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 19:00:33) 
+-- CODE:
+r = float(input("escreva o valor do raio"))
+
+A = pi*r**2
+V = 4/3*pi*r***3
+
+print(round(A, 3))
+print(round(V, 3))
+-- ERROR:
+File "XXXX", line 4
+    V = 4/3*pi*r***3
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 19:02:51) 
+-- CODE:
+r = float(input("escreva o valor do raio"))
+
+A = pi*r**2
+V = (4/3)*pi*r***3
+
+print(round(A, 3))
+print(round(V, 3))
+-- ERROR:
+File "XXXX", line 4
+    V = (4/3)*pi*r***3
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 19:03:54) 
+-- CODE:
+r = float(input("escreva o valor do raio"))
+
+A = pi*r**2
+V = (4/3)*pi*r**3
+
+print(round(A, 3))
+print(round(V, 3))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    A = pi*r**2
+NameError: name 'pi' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 19:12:10) 
+-- CODE:
+r = float(input("escreva o valor do raio"))
+
+A = pi*r**2
+V = (4/3)*pi*r**3
+
+print(round(A, 3))
+print(round(V, 3))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    A = pi*r**2
+NameError: name 'pi' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 19:17:23) 
+-- CODE:
+r = float(input("escreva o valor do raio"))
+from <math> import*
+
+A = pi*r**2
+V = (4/3)*pi*r**3
+
+print(round(A, 3))
+print(round(V, 3))
+-- ERROR:
+File "XXXX", line 2
+    from <math> import*
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 19:18:22) 
+-- CODE:
+r = float(input("escreva o valor do raio"))
+from <math> import *
+
+A = pi*r**2
+V = (4/3)*pi*r**3
+
+print(round(A, 3))
+print(round(V, 3))
+-- ERROR:
+File "XXXX", line 2
+    from <math> import *
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 19:18:36) 
+-- CODE:
+r = float(input("escreva o valor do raio"))
+from < math > import *
+
+A = pi*r**2
+V = (4/3)*pi*r**3
+
+print(round(A, 3))
+print(round(V, 3))
+-- ERROR:
+File "XXXX", line 2
+    from < math > import *
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 19:23:33) 
+-- CODE:
+r = float(input("escreva o valor do raio"))
+from math import *
+
+A = pi*r**2
+V = (4/3)*pi*r**3
+
+print(round(A, 3))
+print(round(V, 3))
+-- OUTPUT:
+63.617
+381.704
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-27 19:24:06) 
+-- CODE:
+r = float(input("escreva o valor do raio"))
+from math import *
+
+A = pi*r**2
+V = (4/3)*pi*r**3
+
+print(round(A, 3))
+print(round(V, 3))
+-- EXECUTION TIME:
+0.138607
+-- TEST CASE 1:
+---- input:
+4.5
+
+---- correct output:
+63.617
+381.704
+---- user output:
+63.617
+381.704
+-- TEST CASE 2:
+---- input:
+12.34
+---- correct output:
+478.388
+7871.076
+---- user output:
+478.388
+7871.076
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

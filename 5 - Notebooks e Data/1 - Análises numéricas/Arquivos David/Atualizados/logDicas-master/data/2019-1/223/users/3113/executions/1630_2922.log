@@ -1,0 +1,1304 @@
+== TEST (2019-04-02 16:11:48) 
+-- CODE:
+m=int(input(""))
+
+qf=1.042.000
+qi=1.500
+i=(sqrt(m**qf/qi))-1
+print(i)
+-- ERROR:
+File "XXXX", line 3
+    qf=1.042.000
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:12:01) 
+-- CODE:
+m=int(input(""))
+
+qf=1042000
+qi=1500
+i=(sqrt(m**qf/qi))-1
+print(i)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    i=(sqrt(m**qf/qi))-1
+NameError: name 'sqrt' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:12:17) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042000
+qi=1500
+i=(sqrt(m**qf/qi))-1
+print(i)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    i=(sqrt(m**qf/qi))-1
+OverflowError: integer division result too large for a float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:12:28) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042000
+qi=1500
+i=(sqrt(m**qf//qi))-1
+print(i)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    i=(sqrt(m**qf//qi))-1
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:12:56) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042000
+qi=1500
+i=int(sqrt(m**qf//qi)-1)
+print(i)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    i=int(sqrt(m**qf//qi)-1)
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:13:13) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042000
+qi=1500
+i=float(sqrt(m**qf//qi)-1)
+print(i)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    i=float(sqrt(m**qf//qi)-1)
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:14:53) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042000
+qi=1500
+i=float(m**sqrt(qf//qi)-1)
+print(round(i,5))
+-- OUTPUT:
+3.036194998566834e+51
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:15:19) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042
+qi=15
+i=float(m**sqrt(qf//qi)-1)
+print(round(i,5))
+-- OUTPUT:
+1.71063543046058e+16
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:15:33) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042
+qi=15
+i=m**sqrt(qf//qi)-1
+print(round(i,5))
+-- OUTPUT:
+1.71063543046058e+16
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:17:13) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042
+qi=15
+i=(m**sqrt(qf//qi))-1
+print(round(i,5))
+-- OUTPUT:
+1.71063543046058e+16
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:17:30) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042
+qi=150
+i=(m**sqrt(qf//qi))-1
+print(round(i,5))
+-- OUTPUT:
+61219.51544
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:18:34) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1.042.00
+qi=1.500
+i=(m**sqrt(qf//qi))-1
+print(round(i,5))
+-- ERROR:
+File "XXXX", line 4
+    qf=1.042.00
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:18:42) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1.042
+qi=1.50
+i=(m**sqrt(qf//qi))-1
+print(round(i,5))
+-- OUTPUT:
+0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:18:57) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=104200
+qi=1500
+i=(m**sqrt(qf//qi))-1
+print(round(i,5))
+-- OUTPUT:
+1.71063543046058e+16
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:19:03) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042000
+qi=1500
+i=(m**sqrt(qf//qi))-1
+print(round(i,5))
+-- OUTPUT:
+3.036194998566834e+51
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:19:17) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042000
+qi=15000
+i=(m**sqrt(qf//qi))-1
+print(round(i,5))
+-- OUTPUT:
+1.71063543046058e+16
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:19:20) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=104200
+qi=15000
+i=(m**sqrt(qf//qi))-1
+print(round(i,5))
+-- OUTPUT:
+61219.51544
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:19:24) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=10420
+qi=15000
+i=(m**sqrt(qf//qi))-1
+print(round(i,5))
+-- OUTPUT:
+0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:19:27) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=10420
+qi=1500
+i=(m**sqrt(qf//qi))-1
+print(round(i,5))
+-- OUTPUT:
+61219.51544
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:19:35) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042
+qi=1500
+i=(m**sqrt(qf//qi))-1
+print(round(i,5))
+-- OUTPUT:
+0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:19:38) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042
+qi=150
+i=(m**sqrt(qf//qi))-1
+print(round(i,5))
+-- OUTPUT:
+61219.51544
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:21:54) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042
+qi=150
+i=((qf//qi)**1/m)-1
+print(round(i,5))
+-- OUTPUT:
+-0.93333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:22:01) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042
+qi=1500
+i=((qf//qi)**1/m)-1
+print(round(i,5))
+-- OUTPUT:
+-1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:22:05) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=104200
+qi=1500
+i=((qf//qi)**1/m)-1
+print(round(i,5))
+-- OUTPUT:
+-0.23333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:22:08) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=104200
+qi=150
+i=((qf//qi)**1/m)-1
+print(round(i,5))
+-- OUTPUT:
+6.71111
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:22:15) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042
+qi=15
+i=((qf//qi)**1/m)-1
+print(round(i,5))
+-- OUTPUT:
+-0.23333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:22:24) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1.042
+qi=1.5
+i=((qf//qi)**1/m)-1
+print(round(i,5))
+-- OUTPUT:
+-1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:22:37) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=10420000
+qi=150000
+i=((qf//qi)**1/m)-1
+print(round(i,5))
+-- OUTPUT:
+-0.23333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 16:22:41) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=10420000
+qi=150000
+i=((qf//qi)**1/m)-1
+print(round(i,5))
+-- EXECUTION TIME:
+0.182862
+-- TEST CASE 1:
+---- input:
+90
+---- correct output:
+0.07541
+---- user output:
+-0.23333
+-- TEST CASE 2:
+---- input:
+99
+---- correct output:
+0.06833
+---- user output:
+-0.30303
+-- TEST CASE 3:
+---- input:
+121
+---- correct output:
+0.05557
+---- user output:
+-0.42975
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:22:43) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=104200000
+qi=150000
+i=((qf//qi)**1/m)-1
+print(round(i,5))
+-- OUTPUT:
+6.71111
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:22:50) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=10420000
+qi=1500000
+i=((qf//qi)**1/m)-1
+print(round(i,5))
+-- OUTPUT:
+-0.93333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:23:02) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=10420000
+qi=1500000
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+0.02011
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:23:08) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=10420000
+qi=150000
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+0.04817
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:23:14) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=10420000
+qi=15000
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+0.0754
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 16:23:19) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=10420000
+qi=15000
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- EXECUTION TIME:
+0.160686
+-- TEST CASE 1:
+---- input:
+90
+---- correct output:
+0.07541
+---- user output:
+0.0754
+-- TEST CASE 2:
+---- input:
+99
+---- correct output:
+0.06833
+---- user output:
+0.06832
+-- TEST CASE 3:
+---- input:
+121
+---- correct output:
+0.05557
+---- user output:
+0.05556
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 16:23:20) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=10420000
+qi=15000
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- EXECUTION TIME:
+0.202371
+-- TEST CASE 1:
+---- input:
+90
+---- correct output:
+0.07541
+---- user output:
+0.0754
+-- TEST CASE 2:
+---- input:
+99
+---- correct output:
+0.06833
+---- user output:
+0.06832
+-- TEST CASE 3:
+---- input:
+121
+---- correct output:
+0.05557
+---- user output:
+0.05556
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:23:20) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=10420000
+qi=15000
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+0.0754
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:23:27) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042000
+
+qi=15000
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+0.04817
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:23:30) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=104200
+
+qi=15000
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+0.02011
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:23:32) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=104200
+
+qi=15000
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+0.02011
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:23:35) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=10420
+
+qi=15000
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+-1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:23:39) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=10420
+
+qi=15
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+0.0754
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:23:40) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=10420
+
+qi=15
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+0.0754
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:23:42) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042
+
+qi=15
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+0.04817
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:23:50) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042
+
+qi=150
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+0.02011
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:24:18) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042000
+qi=150000
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+0.02011
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:25:02) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042.000
+qi=1.50000
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+0.0754
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:25:12) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042.000
+qi=1.500
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+0.0754
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:25:20) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1.042.000
+qi=1.500
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- ERROR:
+File "XXXX", line 4
+    qf=1.042.000
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:25:31) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1.04200
+qi=1.500
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+-1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:25:34) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1.042000
+qi=1.500
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+-1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:25:37) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1.0420000
+qi=1.500
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+-1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:25:38) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1.0420000
+qi=1.500
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+-1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:25:42) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1.0420000
+qi=1.50000
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+-1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:25:45) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1.042000
+qi=1.50000
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+-1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:26:27) 
+-- CODE:
+from math import*
+m=int(input("meses:"))
+
+qf=1042
+qi=15
+i=((qf//qi)**(1/m))-1
+print(round(i,5))
+-- OUTPUT:
+0.04817
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:26:39) 
+-- CODE:
+from math import*
+m=int(input("meses:"))
+
+qf=1042
+qi=15
+i=((qf//qi)**(1/m))
+p=i-1
+print(round(p,5))
+-- OUTPUT:
+0.04817
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 16:26:43) 
+-- CODE:
+from math import*
+m=int(input("meses:"))
+
+qf=1042
+qi=15
+i=((qf//qi)**(1/m))
+p=i-1
+print(round(p,5))
+-- EXECUTION TIME:
+0.206514
+-- TEST CASE 1:
+---- input:
+90
+---- correct output:
+0.07541
+---- user output:
+0.04817
+-- TEST CASE 2:
+---- input:
+99
+---- correct output:
+0.06833
+---- user output:
+0.0437
+-- TEST CASE 3:
+---- input:
+121
+---- correct output:
+0.05557
+---- user output:
+0.03561
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:29:47) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042000
+qi=15
+print(qf//100)
+i=((qf//qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+10420
+0.13187
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:30:04) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042
+qi=15
+print(qf//100)
+i=((qf//qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+10
+0.04817
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:30:11) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042
+qi=15
+i=((qf//qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+0.04817
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:30:21) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1.042
+qi=1.5
+i=((qf//qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+-1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:30:39) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1.042
+qi=1.5
+i=float(((qf//qi)**(1/m))-1)
+
+print(round(i,5))
+-- OUTPUT:
+-1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 16:30:50) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1.042
+qi=1.5
+i=float(((qf//qi)**(1/m))-1)
+
+print(round(i,5))
+-- EXECUTION TIME:
+0.118492
+-- TEST CASE 1:
+---- input:
+90
+---- correct output:
+0.07541
+---- user output:
+-1.0
+-- TEST CASE 2:
+---- input:
+99
+---- correct output:
+0.06833
+---- user output:
+-1.0
+-- TEST CASE 3:
+---- input:
+121
+---- correct output:
+0.05557
+---- user output:
+-1.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:30:53) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1.042
+qi=1.5
+i=float(((qf//qi)**(1/m))-1)
+
+print(round(i,5))
+-- OUTPUT:
+-1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:31:11) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1.042*1000
+qi=1.5*1000
+i=float(((qf//qi)**(1/m))-1)
+
+print(round(i,5))
+-- OUTPUT:
+-1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:31:20) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1.042*1000
+qi=1.5*1000
+print(qf)
+i=float(((qf//qi)**(1/m))-1)
+
+print(round(i,5))
+-- OUTPUT:
+1042.0
+-1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:31:41) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042
+qi=15
+
+i=float(((qf//qi)**(1/m))-1)
+
+print(round(i,5))
+-- OUTPUT:
+0.04817
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:31:54) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=10420
+qi=15
+
+i=((qf//qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+0.0754
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:32:03) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1.0420
+qi=1.5
+
+i=((qf//qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+-1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:32:07) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=10420
+qi=15
+
+i=((qf//qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+0.0754
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:32:12) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=10420
+qi=15
+
+i=((qf//qi)**(1/m))-1
+
+print(round(i,4))
+-- OUTPUT:
+0.0754
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:32:20) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=10420
+qi=15
+
+i=((qf//qi)**(1/m))-1
+
+print(round(i,6))
+-- OUTPUT:
+0.075402
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:32:27) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=10420
+qi=15
+
+i=((qf//qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+0.0754
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:32:47) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=10.420
+qi=1.5
+
+i=((qf//qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+0.02011
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:32:53) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=104.20
+qi=1.5
+
+i=((qf//qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+0.04817
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:32:57) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042.0
+qi=1.5
+
+i=((qf//qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+0.0754
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:33:30) 
+-- CODE:
+from math import*
+m=int(input(""))
+
+qf=1042
+qi=1.5
+
+i=((qf//qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+0.0754
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:34:07) 
+-- CODE:
+
+m=int(input("meses:"))
+
+qf=1042
+qi=1.5
+
+i=((qf//qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+0.0754
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:34:30) 
+-- CODE:
+
+m=int(input("meses:"))
+
+qf=1042
+qi=1.5
+
+i=((qf//qi)**(1/m))
+
+print(round(i,5))
+-- OUTPUT:
+1.0754
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:34:37) 
+-- CODE:
+
+m=int(input("meses:"))
+
+qf=1042
+qi=1.5
+
+i=((qf/qi)**(1/m))
+
+print(round(i,5))
+-- OUTPUT:
+1.07541
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:34:43) 
+-- CODE:
+
+m=int(input("meses:"))
+
+qf=1042
+qi=1.5
+
+i=((qf/qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+0.07541
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 16:34:45) 
+-- CODE:
+
+m=int(input("meses:"))
+
+qf=1042
+qi=1.5
+
+i=((qf/qi)**(1/m))-1
+
+print(round(i,5))
+-- EXECUTION TIME:
+0.19457
+-- TEST CASE 1:
+---- input:
+90
+---- correct output:
+0.07541
+---- user output:
+0.07541
+-- TEST CASE 2:
+---- input:
+99
+---- correct output:
+0.06833
+---- user output:
+0.06833
+-- TEST CASE 3:
+---- input:
+121
+---- correct output:
+0.05557
+---- user output:
+0.05557
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:50:58) 
+-- CODE:
+m=int(input("meses:"))
+
+qf=1042
+qi=1.5
+
+i=((qf/qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+0.07541
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:51:07) 
+-- CODE:
+m=int(input("meses:"))
+
+qf=1042
+qi=1.5
+
+i=((qf/qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+0.07541
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:51:14) 
+-- CODE:
+m=int(input("meses:"))
+
+qf=1042
+qi=1.5
+
+i=((qf/qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+0.07541
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:51:17) 
+-- CODE:
+m=int(input("meses:"))
+
+qf=1042
+qi=1.5
+
+i=((qf/qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+0.07541
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:51:22) 
+-- CODE:
+m=int(input("meses:"))
+
+qf=1042
+qi=1.5
+
+i=((qf/qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+0.07541
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:51:27) 
+-- CODE:
+m=int(input("meses:"))
+
+qf=1042
+qi=1.5
+
+i=((qf/qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+0.07541
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:51:33) 
+-- CODE:
+m=int(input("meses:"))
+
+qf=1042
+qi=1.5
+
+i=((qf/qi)**(1/m))-1
+
+print(round(i,5))
+-- OUTPUT:
+0.07541
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

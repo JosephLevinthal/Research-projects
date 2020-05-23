@@ -1,0 +1,449 @@
+== TEST (2019-06-10 17:21:12) 
+-- CODE:
+s=5*(*)
+print(s)
+-- ERROR:
+File "XXXX", line 1
+    s=5*(*)
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:21:38) 
+-- CODE:
+s=5*f
+print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    s=5*f
+NameError: name 'f' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:21:39) 
+-- CODE:
+s=5*f
+print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    s=5*f
+NameError: name 'f' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:21:52) 
+-- CODE:
+s=5*"f"
+print(s)
+-- OUTPUT:
+fffff
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:22:05) 
+-- CODE:
+s=5*"*"
+print(s)
+-- OUTPUT:
+*****
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:32:16) 
+-- CODE:
+from numpy import*
+nda=int(input("digite um valor: "))
+for elemento in nda:
+	v=arange(5)
+	print(v)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:32:33) 
+-- CODE:
+from numpy import*
+nda=int(input("digite um valor: "))
+	v=arange(5)
+	print(v)
+
+-- ERROR:
+File "XXXX", line 3
+    v=arange(5)
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:32:47) 
+-- CODE:
+from numpy import*
+nda=int(input("digite um valor: "))
+v=arange(5)
+print(v)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:33:03) 
+-- CODE:
+from numpy import*
+nda=int(input("digite um valor: "))
+v=arange(nda+1)
+print(v)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:33:14) 
+-- CODE:
+from numpy import*
+nda=int(input("digite um valor: "))
+v=arange(nda)
+print(v)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:33:26) 
+-- CODE:
+from numpy import*
+nda=int(input("digite um valor: "))
+v=arange(nda+0
+print(v)
+
+-- ERROR:
+File "XXXX", line 4
+    print(v)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:33:34) 
+-- CODE:
+from numpy import*
+nda=int(input("digite um valor: "))
+v=arange(nda+0)
+print(v)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:33:45) 
+-- CODE:
+from numpy import*
+nda=int(input("digite um valor: "))
+v=arange(nda+1
+print(v)
+
+-- ERROR:
+File "XXXX", line 4
+    print(v)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:33:51) 
+-- CODE:
+from numpy import*
+nda=int(input("digite um valor: "))
+v=arange(nda+1)
+print(v)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:34:27) 
+-- CODE:
+from numpy import*
+nda=int(input("digite um valor: "))
+v=arange(nda+1)
+s=v*"*"
+print(s)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:37:35) 
+-- CODE:
+from numpy import*
+nda=int(input("digite um valor: "))
+for i in nda:
+v=arange(nda+1)
+print(v)
+
+
+
+-- ERROR:
+File "XXXX", line 4
+    v=arange(nda+1)
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:38:09) 
+-- CODE:
+from numpy import*
+nda=int(input("digite um valor: "))
+for i in nda:
+	v=arange(nda+1)
+	print(v
+
+
+
+
+-- ERROR:
+File "XXXX", line 9
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:39:17) 
+-- CODE:
+from numpy import*
+nda=int(input("digite um valor: "))
+for i in nda:
+	v=arange(nda+1)
+	print(v)
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:40:19) 
+-- CODE:
+from numpy import*
+nda=int(input("digite um valor: "))
+for i in nda:
+	v=arange(nda+1)
+	print(i
+
+
+
+
+-- ERROR:
+File "XXXX", line 9
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:40:20) 
+-- CODE:
+from numpy import*
+nda=int(input("digite um valor: "))
+for i in nda:
+	v=arange(nda+1)
+	print(i
+
+
+
+
+-- ERROR:
+File "XXXX", line 9
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:40:21) 
+-- CODE:
+from numpy import*
+nda=int(input("digite um valor: "))
+for i in nda:
+	v=arange(nda+1)
+	print(i
+
+
+
+
+-- ERROR:
+File "XXXX", line 9
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:40:31) 
+-- CODE:
+from numpy import*
+nda=int(input("digite um valor: "))
+for i in nda:
+	print(i)
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:41:31) 
+-- CODE:
+from numpy import*
+nda=int(input("digite um valor: "))
+for i in nda:
+	print(i)
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:44:03) 
+-- CODE:
+
+for i in arange(5):
+	print(i)
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    for i in arange(5):
+NameError: name 'arange' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:44:49) 
+-- CODE:
+for i in range(5):
+print(i)
+-- ERROR:
+File "XXXX", line 2
+    print(i)
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:44:50) 
+-- CODE:
+for i in range(5):
+print(i)
+-- ERROR:
+File "XXXX", line 2
+    print(i)
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:44:54) 
+-- CODE:
+for i in range(5):
+print(i)
+-- ERROR:
+File "XXXX", line 2
+    print(i)
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:45:06) 
+-- CODE:
+for i in range(5):
+	print(i)
+
+-- OUTPUT:
+0
+1
+2
+3
+4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:45:17) 
+-- CODE:
+for i in range(5+1)
+	print(i)
+
+-- ERROR:
+File "XXXX", line 1
+    for i in range(5+1)
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:45:26) 
+-- CODE:
+for i in range(6
+	print(i)
+
+-- ERROR:
+File "XXXX", line 2
+    print(i)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:45:29) 
+-- CODE:
+for i in range(6
+	print(i)
+
+-- ERROR:
+File "XXXX", line 2
+    print(i)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-10 17:45:31) 
+-- CODE:
+for i in range(6
+	print(i)
+
+-- EXECUTION TIME:
+0.797432
+-- ERROR:
+  File "/home/codebench/codes/1811/2567/main.py", line 2
+    print(i)
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:45:34) 
+-- CODE:
+for i in range(6):
+	print(i)
+
+-- OUTPUT:
+0
+1
+2
+3
+4
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:49:20) 
+-- CODE:
+n=int(input("digite um valor:" ))
+for i in n:
+	print(i)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    for i in n:
+TypeError: 'int' object is not iterable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:49:59) 
+-- CODE:
+n=int(input("digite um valor:" ))
+for i in n:
+	s=n+1
+	print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    for i in n:
+TypeError: 'int' object is not iterable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,294 @@
+== TEST (2019-04-15 17:15:54) 
+-- CODE:
+val=float(input('quanto em dinheiro voce tem?'))
+qnt=input('quantos tickets voce deseja comprar?')
+valor=float(input('quanto custa um ticket?'))
+bus=input('quantos passes deseja comprar?')
+valorbus=input('valor da passagem?')
+gasto=(qnt*valor)+(bus*valorbus)
+ if(val>gasto):
+	print(suficiente)
+else:
+	print(insuficiente)
+-- ERROR:
+File "XXXX", line 7
+    if(val>gasto):
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 17:16:20) 
+-- CODE:
+val=float(input('quanto em dinheiro voce tem?'))
+qnt=input('quantos tickets voce deseja comprar?')
+valor=float(input('quanto custa um ticket?'))
+bus=input('quantos passes deseja comprar?')
+valorbus=input('valor da passagem?')
+gasto=(qnt*valor)+(bus*valorbus)
+if(val>gasto):
+	print(suficiente)
+else:
+	print(insuficiente)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    gasto=(qnt*valor)+(bus*valorbus)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 17:16:49) 
+-- CODE:
+val=float(input('quanto em dinheiro voce tem?'))
+qnt=input('quantos tickets voce deseja comprar?')
+valor=float(input('quanto custa um ticket?'))
+bus=input('quantos passes deseja comprar?')
+valorbus=input('valor da passagem?')
+gasto=(qnt*valor)+(bus*valorbus)
+if(val>gasto):
+	print(suficiente)
+else:
+	print(insuficiente)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    gasto=(qnt*valor)+(bus*valorbus)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 17:17:58) 
+-- CODE:
+val=float(input('quanto em dinheiro voce tem?'))
+qnt=int(input('quantos tickets voce deseja comprar?'))
+valor=float(input('quanto custa um ticket?'))
+bus=int(input('quantos passes deseja comprar?'))
+valorbus=input('valor da passagem?')
+gasto=float((qnt*valor)+(bus*valorbus))
+if(val>gasto):
+	print(suficiente)
+else:
+	print(insuficiente)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    gasto=float((qnt*valor)+(bus*valorbus))
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 17:18:35) 
+-- CODE:
+val=float(input('quanto em dinheiro voce tem?'))
+qnt=int(input('quantos tickets voce deseja comprar?'))
+valor=float(input('quanto custa um ticket?'))
+bus=int(input('quantos passes deseja comprar?'))
+valorbus=input('valor da passagem?')
+gasto=(qnt*valor)+(bus*valorbus)
+if(val>gasto):
+	print(suficiente)
+else:
+	print(insuficiente)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    gasto=(qnt*valor)+(bus*valorbus)
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 17:20:00) 
+-- CODE:
+val=float(input('quanto em dinheiro voce tem?'))
+qnt=int(input('quantos tickets voce deseja comprar?'))
+valor=float(input('quanto custa um ticket?'))
+bus=int(input('quantos passes deseja comprar?'))
+valorbus=input('valor da passagem?')
+gasto=('qnt*valor')+('bus*valorbus')
+if(val>gasto):
+	print(suficiente)
+else:
+	print(insuficiente)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    if(val>gasto):
+TypeError: '>' not supported between instances of 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 19:10:13) 
+-- CODE:
+valor = float(input("dinheiro inicial: "))
+tickets = int(input("quantidade: "))
+valortick = float(input("valor: "))
+passes = int(input("quantidade: "))
+valorpass = float(input("valor: "))
+if valor == (tickets*valortick) + (passes*valorpass):
+	mensagem = "suficiente"
+else:
+	mensagem = "insuficiente"
+print(mensagem.lower())
+-- EXECUTION TIME:
+0.180063
+-- TEST CASE 1:
+---- input:
+400
+15
+1.20
+30
+1.50
+---- correct output:
+SUFICIENTE
+---- user output:
+insuficiente
+-- TEST CASE 2:
+---- input:
+90
+22
+1.20
+44
+1.50
+---- correct output:
+INSUFICIENTE
+---- user output:
+insuficiente
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:10:15) 
+-- CODE:
+valor = float(input("dinheiro inicial: "))
+tickets = int(input("quantidade: "))
+valortick = float(input("valor: "))
+passes = int(input("quantidade: "))
+valorpass = float(input("valor: "))
+if valor == (tickets*valortick) + (passes*valorpass):
+	mensagem = "suficiente"
+else:
+	mensagem = "insuficiente"
+print(mensagem.lower())
+-- OUTPUT:
+insuficiente
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 19:11:01) 
+-- CODE:
+valor = float(input("dinheiro inicial: "))
+tickets = int(input("quantidade: "))
+valortick = float(input("valor: "))
+passes = int(input("quantidade: "))
+valorpass = float(input("valor: "))
+if valor == (tickets*valortick) + (passes*valorpass):
+	mensagem = "suficiente"
+else:
+	mensagem = "insuficiente"
+print(mensagem.upper())
+-- EXECUTION TIME:
+0.205521
+-- TEST CASE 1:
+---- input:
+400
+15
+1.20
+30
+1.50
+---- correct output:
+SUFICIENTE
+---- user output:
+INSUFICIENTE
+-- TEST CASE 2:
+---- input:
+90
+22
+1.20
+44
+1.50
+---- correct output:
+INSUFICIENTE
+---- user output:
+INSUFICIENTE
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:11:03) 
+-- CODE:
+valor = float(input("dinheiro inicial: "))
+tickets = int(input("quantidade: "))
+valortick = float(input("valor: "))
+passes = int(input("quantidade: "))
+valorpass = float(input("valor: "))
+if valor == (tickets*valortick) + (passes*valorpass):
+	mensagem = "suficiente"
+else:
+	mensagem = "insuficiente"
+print(mensagem.upper())
+-- OUTPUT:
+INSUFICIENTE
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 19:11:03) 
+-- CODE:
+valor = float(input("dinheiro inicial: "))
+tickets = int(input("quantidade: "))
+valortick = float(input("valor: "))
+passes = int(input("quantidade: "))
+valorpass = float(input("valor: "))
+if valor == (tickets*valortick) + (passes*valorpass):
+	mensagem = "suficiente"
+else:
+	mensagem = "insuficiente"
+print(mensagem.upper())
+-- EXECUTION TIME:
+0.213362
+-- TEST CASE 1:
+---- input:
+400
+15
+1.20
+30
+1.50
+---- correct output:
+SUFICIENTE
+---- user output:
+INSUFICIENTE
+-- TEST CASE 2:
+---- input:
+90
+22
+1.20
+44
+1.50
+---- correct output:
+INSUFICIENTE
+---- user output:
+dinheiro inicial: quantidade: valor: quantidade: valor: INSUFICIENTE
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 19:12:29) 
+-- CODE:
+valor = float(input("dinheiro inicial: "))
+tickets = int(input("quantidade: "))
+valortick = float(input("valor: "))
+passes = int(input("quantidade: "))
+valorpass = float(input("valor: "))
+if valor >= (tickets*valortick) + (passes*valorpass):
+	mensagem = "suficiente"
+else:
+	mensagem = "insuficiente"
+print(mensagem.upper())
+-- EXECUTION TIME:
+0.135574
+-- TEST CASE 1:
+---- input:
+400
+15
+1.20
+30
+1.50
+---- correct output:
+SUFICIENTE
+---- user output:
+SUFICIENTE
+-- TEST CASE 2:
+---- input:
+90
+22
+1.20
+44
+1.50
+---- correct output:
+INSUFICIENTE
+---- user output:
+INSUFICIENTE
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

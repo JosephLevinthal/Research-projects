@@ -1,0 +1,7 @@
+q = int(input( "Quantidade donuts")) 
+o = float(q/6)
+l = float(q*12.5)
+f = float(q*10)
+print(o)
+print(l)
+print(f)

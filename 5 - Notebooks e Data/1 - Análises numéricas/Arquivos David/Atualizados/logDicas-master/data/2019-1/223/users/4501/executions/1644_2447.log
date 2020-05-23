@@ -1,0 +1,522 @@
+== TEST (2019-04-12 23:12:17) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p > pa):
+	programa="Falta"
+	print(round(programa, 2))
+else:
+	programa="Troco de"
+	print(round(programa, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(programa, 2))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-12 23:14:17) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p > pa):
+	print(round("Falta", 2))
+else:
+	print(round("Troco de", 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round("Falta", 2))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 11:24:47) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p > pa):
+	print(round("Falta", 2))
+else:
+	print(round("Troco de", 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round("Falta", 2))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 15:39:50) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p >= pa):
+	print(round("Falta", 2))
+else:
+	print(round("Troco de", 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round("Falta", 2))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 15:44:57) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p >= pa):
+valor=0	
+	print(round(valor, 2))
+-- ERROR:
+File "XXXX", line 4
+    valor=0	
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 15:45:11) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p >= pa):
+   valor=0	
+	print(round(valor, 2))
+-- ERROR:
+File "XXXX", line 5
+    print(round(valor, 2))
+                         ^
+TabError: inconsistent use of tabs and spaces in indentation
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 15:45:38) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p >= pa):
+   valor=0	
+	print(round(valor, 2))
+-- ERROR:
+File "XXXX", line 5
+    print(round(valor, 2))
+                         ^
+TabError: inconsistent use of tabs and spaces in indentation
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 15:47:44) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p >= pa):
+   v=0	
+	print(round(v, 2))
+else:
+	print(round(v, 2))
+-- ERROR:
+File "XXXX", line 5
+    print(round(v, 2))
+                     ^
+TabError: inconsistent use of tabs and spaces in indentation
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 15:49:16) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p >= pa):
+   v=("Falta"/"Troco de")	
+	print(round(v, 2))
+else:
+	print(round(v, 2))
+-- ERROR:
+File "XXXX", line 5
+    print(round(v, 2))
+                     ^
+TabError: inconsistent use of tabs and spaces in indentation
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 15:54:33) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p >= pa):
+   print(round("Falta ", 2))
+else:
+	print(round("Troco de", 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round("Falta ", 2))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 15:55:51) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p.upper() >= pa):
+   print("Falta ")
+else:
+	print("Troco de")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if(p.upper() >= pa):
+AttributeError: 'float' object has no attribute 'upper'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 15:56:18) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p >= pa):
+   print("Falta ")
+else:
+	print("Troco de")
+-- OUTPUT:
+Falta
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 15:57:06) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p >= pa):
+   print("Falta ", 2)
+else:
+	print("Troco de", 2)
+-- OUTPUT:
+Falta  2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 15:58:27) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p >= pa):
+   print(round("Falta ", 2))
+else:
+	print(round("Troco de", 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round("Falta ", 2))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 16:00:02) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p >= pa):
+	v=("Falta","Troco de")
+   print(round(v, 2))
+else:
+	print(round(v, 2))
+-- ERROR:
+File "XXXX", line 5
+    print(round(v, 2))
+                     ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 11:41:09) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p >= pa):
+a=p - pa
+   print(round("Falta" , a , 2))
+else:
+	print(round("Troco de" , a , 2))
+-- ERROR:
+File "XXXX", line 4
+    a=p - pa
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 11:41:31) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p >= pa):
+a= (p - pa)
+   print(round("Falta" , a , 2))
+else:
+	print(round("Troco de" , a , 2))
+-- ERROR:
+File "XXXX", line 4
+    a= (p - pa)
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 11:41:57) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p >= pa):
+a= (p - pa)
+   print(round(a, 2))
+else:
+	print(round(a, 2))
+-- ERROR:
+File "XXXX", line 4
+    a= (p - pa)
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 11:42:20) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p == pa):
+a= (p - pa)
+   print(round(a, 2))
+else:
+	print(round(a, 2))
+-- ERROR:
+File "XXXX", line 4
+    a= (p - pa)
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 11:43:41) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p >= pa):
+a= (p - pa)
+   print(round("Falta",a, 2))
+else:
+	print(round("Troco de",a, 2))
+-- ERROR:
+File "XXXX", line 4
+    a= (p - pa)
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 11:44:44) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p - pa):
+   print(round("Falta", 2))
+else:
+	print(round("Troco de", 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round("Falta", 2))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 11:45:02) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p - pa):
+   print(round("Falta", 2))
+else:
+	print(round("Troco de", 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round("Falta", 2))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:11:05) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+a=p-pa
+if(p < pa):
+   print(round("Falta",a, 2))
+else:
+	print(round("Troco de",a, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    print(round("Troco de",a, 2))
+TypeError: round() takes at most 2 arguments (3 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:11:52) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+a=p-pa
+if(p < pa):
+   print(round("Falta", 2))
+else:
+	print(round("Troco de", 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    print(round("Troco de", 2))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:12:25) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+a=p-pa
+if(p < pa):
+   print(round(a, 2))
+else:
+	print(round(a, 2))
+-- OUTPUT:
+26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:13:16) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+a=pa-p
+if(p < pa):
+   print(round(a, 2))
+else:
+	print(round(a, 2))
+-- OUTPUT:
+-26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:15:39) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+a=pa-p
+if(p < pa):
+   print("Falta"(round(a, 2))
+else:
+	print("Troco de"(round(a, 2))
+-- ERROR:
+File "XXXX", line 6
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:16:25) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+a=pa-p
+if(p < pa):
+   print("Falta",(round(a, 2))
+else:
+	print("Troco de",(round(a, 2))
+-- ERROR:
+File "XXXX", line 6
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:17:05) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+a=pa-p
+if(p < pa):
+   print("Troco de"(round(a, 2))
+else:
+	print("Falta",(round(a, 2))
+-- ERROR:
+File "XXXX", line 6
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:17:24) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+a=pa-p
+if(p < pa):
+   print("Troco de"(round(a, 2))
+else:
+	print("Falta"(round(a, 2))
+-- ERROR:
+File "XXXX", line 6
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 17:26:55) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+a=pa-p
+print(round(a, 2))
+-- OUTPUT:
+-26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 17:29:13) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+a=pa-p
+print(round("Troco de",a, 2))
+print(round("Falta",a, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round("Troco de",a, 2))
+TypeError: round() takes at most 2 arguments (3 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 17:31:15) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+a=pa-p
+print("Falta"(round(a, 2)))
+print("Troco de"(round(a, 2)))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print("Falta"(round(a, 2)))
+TypeError: 'str' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:57:29) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p>pa):
+	a = p-pa
+	print("Falta " ,round(a, 2))
+else:
+	print("Troco de " , round(a, 2))
+-- OUTPUT:
+Falta  26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:01:42) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p>pa):
+	a = p-pa
+	print("Falta " ,round(a, 2))
+else:
+	b=pa-p
+	print("Troco de " , round(b, 2))
+-- OUTPUT:
+Falta  26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 19:02:10) 
+-- CODE:
+p=float(input("preco: "))
+pa=float(input("pagamento: "))
+if(p>pa):
+	a = p-pa
+	print("Falta " ,round(a, 2))
+else:
+	b=pa-p
+	print("Troco de " , round(b, 2))
+-- EXECUTION TIME:
+0.1206
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+Falta  26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+Troco de  28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+Troco de  0.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

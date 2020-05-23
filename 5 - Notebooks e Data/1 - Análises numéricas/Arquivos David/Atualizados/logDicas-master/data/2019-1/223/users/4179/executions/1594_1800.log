@@ -1,0 +1,654 @@
+== TEST (2019-03-19 17:11:36) 
+-- CODE:
+print(a**2+b**2+c**2/a+b+c)
+print(round(a**2+b**2+c**2/a+b+c,6))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    print(a**2+b**2+c**2/a+b+c)
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:11:45) 
+-- CODE:
+print(a**2+b**2+c**2)/(a+b+c)
+print(round(a**2+b**2+c**2/a+b+c,6))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    print(a**2+b**2+c**2)/(a+b+c)
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:12:14) 
+-- CODE:
+a=1
+b=2
+c=3
+print(a**2+b**2+c**2)/(a+b+c)
+print(round(a**2+b**2+c**2/a+b+c,6))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(a**2+b**2+c**2)/(a+b+c)
+TypeError: unsupported operand type(s) for /: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:12:32) 
+-- CODE:
+a=1
+b=2
+c=3
+print((a**2+b**2+c**2)/(a+b+c))
+print(round(a**2+b**2+c**2/a+b+c,6))
+-- OUTPUT:
+2.3333333333333335
+19.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:12:59) 
+-- CODE:
+a=1
+b=2
+c=3
+print((a**2+b**2+c**2)/(a+b+c))
+print(round9a**2+b**2+c**2)/(a+b+c),6))
+-- ERROR:
+File "XXXX", line 5
+    print(round9a**2+b**2+c**2)/(a+b+c),6))
+                                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:13:14) 
+-- CODE:
+a=1
+b=2
+c=3
+print((a**2+b**2+c**2)/(a+b+c))
+print(round(a**2+b**2+c**2)/(a+b+c),6)
+-- OUTPUT:
+2.3333333333333335
+2.3333333333333335 6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:13:27) 
+-- CODE:
+a=1
+b=2
+c=3
+print((a**2+b**2+c**2)/(a+b+c))
+print(round(a**2+b**2+c**2)//(a+b+c),6)
+-- OUTPUT:
+2.3333333333333335
+2 6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-19 17:13:31) 
+-- CODE:
+a=1
+b=2
+c=3
+print((a**2+b**2+c**2)/(a+b+c))
+print(round(a**2+b**2+c**2)//(a+b+c),6)
+-- EXECUTION TIME:
+0.176765
+-- TEST CASE 1:
+---- input:
+20
+25
+30
+---- correct output:
+25.6666667
+---- user output:
+2.3333333333333335
+2 6
+-- TEST CASE 2:
+---- input:
+235
+400
+350
+---- correct output:
+342.8680203
+---- user output:
+2.3333333333333335
+2 6
+-- TEST CASE 3:
+---- input:
+90
+120
+2
+---- correct output:
+106.1509434
+---- user output:
+2.3333333333333335
+2 6
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:13:32) 
+-- CODE:
+a=1
+b=2
+c=3
+print((a**2+b**2+c**2)/(a+b+c))
+print(round(a**2+b**2+c**2)//(a+b+c),6)
+-- OUTPUT:
+2.3333333333333335
+2 6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:14:17) 
+-- CODE:
+a=1
+b=2
+c=3
+print((a**2+b**2+c**2)/(a+b+c))
+print(round((a**2+b**2+c**2)/(a+b+c)),6)
+-- OUTPUT:
+2.3333333333333335
+2 6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:14:58) 
+-- CODE:
+a=1
+b=2
+c=3
+print((a**2+b**2+c**2)/(a+b+c))
+print(round((a**2+b**2+c**2)//(a+b+c))%6)
+-- OUTPUT:
+2.3333333333333335
+2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:15:07) 
+-- CODE:
+a=1
+b=2
+c=3
+print((a**2+b**2+c**2)/(a+b+c))
+print(round((a**2+b**2+c**2)//(a+b+c))%6)
+-- OUTPUT:
+2.3333333333333335
+2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:16:07) 
+-- CODE:
+a=1
+b=2
+c=3
+print((a**2+b**2+c**2)/(a+b+c))
+print(round((a**2+b**2+c**2)/(a+b+c)),6)
+-- OUTPUT:
+2.3333333333333335
+2 6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-19 17:16:09) 
+-- CODE:
+a=1
+b=2
+c=3
+print((a**2+b**2+c**2)/(a+b+c))
+print(round((a**2+b**2+c**2)/(a+b+c)),6)
+-- EXECUTION TIME:
+0.150564
+-- TEST CASE 1:
+---- input:
+20
+25
+30
+---- correct output:
+25.6666667
+---- user output:
+2.3333333333333335
+2 6
+-- TEST CASE 2:
+---- input:
+235
+400
+350
+---- correct output:
+342.8680203
+---- user output:
+2.3333333333333335
+2 6
+-- TEST CASE 3:
+---- input:
+90
+120
+2
+---- correct output:
+106.1509434
+---- user output:
+2.3333333333333335
+2 6
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:16:09) 
+-- CODE:
+a=1
+b=2
+c=3
+print((a**2+b**2+c**2)/(a+b+c))
+print(round((a**2+b**2+c**2)/(a+b+c)),6)
+-- OUTPUT:
+2.3333333333333335
+2 6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:17:17) 
+-- CODE:
+a=1
+b=2
+c=3
+print((a**2+b**2+c**2)/(a+b+c))
+print(round((a**2+b**2+c**2)/(a+b+c)),6))
+-- ERROR:
+File "XXXX", line 5
+    print(round((a**2+b**2+c**2)/(a+b+c)),6))
+                                            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:17:35) 
+-- CODE:
+a=1
+b=2
+c=3
+print((a**2+b**2+c**2)/(a+b+c))
+print(round((a**2+b**2+c**2)/(a+b+c),6))
+-- OUTPUT:
+2.3333333333333335
+2.333333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-19 17:17:38) 
+-- CODE:
+a=1
+b=2
+c=3
+print((a**2+b**2+c**2)/(a+b+c))
+print(round((a**2+b**2+c**2)/(a+b+c),6))
+-- EXECUTION TIME:
+0.171286
+-- TEST CASE 1:
+---- input:
+20
+25
+30
+---- correct output:
+25.6666667
+---- user output:
+2.3333333333333335
+2.333333
+-- TEST CASE 2:
+---- input:
+235
+400
+350
+---- correct output:
+342.8680203
+---- user output:
+2.3333333333333335
+2.333333
+-- TEST CASE 3:
+---- input:
+90
+120
+2
+---- correct output:
+106.1509434
+---- user output:
+2.3333333333333335
+2.333333
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:17:39) 
+-- CODE:
+a=1
+b=2
+c=3
+print((a**2+b**2+c**2)/(a+b+c))
+print(round((a**2+b**2+c**2)/(a+b+c),6))
+-- OUTPUT:
+2.3333333333333335
+2.333333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:17:54) 
+-- CODE:
+a=1
+b=2
+c=3
+print(round((a**2+b**2+c**2)/(a+b+c),6))
+-- OUTPUT:
+2.333333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-19 17:17:55) 
+-- CODE:
+a=1
+b=2
+c=3
+print(round((a**2+b**2+c**2)/(a+b+c),6))
+-- EXECUTION TIME:
+0.257641
+-- TEST CASE 1:
+---- input:
+20
+25
+30
+---- correct output:
+25.6666667
+---- user output:
+2.333333
+-- TEST CASE 2:
+---- input:
+235
+400
+350
+---- correct output:
+342.8680203
+---- user output:
+2.333333
+-- TEST CASE 3:
+---- input:
+90
+120
+2
+---- correct output:
+106.1509434
+---- user output:
+2.333333
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:19:12) 
+-- CODE:
+a=1
+b=2
+c=3
+print(round((a**2+b**2+c**2)/(a+b+c),6))
+-- OUTPUT:
+2.333333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:19:23) 
+-- CODE:
+print(round((a**2+b**2+c**2)/(a+b+c),6))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    print(round((a**2+b**2+c**2)/(a+b+c),6))
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:19:39) 
+-- CODE:
+a=1
+b=2
+c=3
+print(round((a**2+b**2+c**2)/(a+b+c),6))
+-- OUTPUT:
+2.333333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:24:58) 
+-- CODE:
+a=1
+b=2
+c=3
+print(round((a**2+b**2+c**2)/(a+b+c),7))
+-- OUTPUT:
+2.3333333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-19 17:24:59) 
+-- CODE:
+a=1
+b=2
+c=3
+print(round((a**2+b**2+c**2)/(a+b+c),7))
+-- EXECUTION TIME:
+0.185048
+-- TEST CASE 1:
+---- input:
+20
+25
+30
+---- correct output:
+25.6666667
+---- user output:
+2.3333333
+-- TEST CASE 2:
+---- input:
+235
+400
+350
+---- correct output:
+342.8680203
+---- user output:
+2.3333333
+-- TEST CASE 3:
+---- input:
+90
+120
+2
+---- correct output:
+106.1509434
+---- user output:
+2.3333333
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:25:00) 
+-- CODE:
+a=1
+b=2
+c=3
+print(round((a**2+b**2+c**2)/(a+b+c),7))
+-- OUTPUT:
+2.3333333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:44:08) 
+-- CODE:
+a=1
+b=2
+c=3
+print(round((a**2+b**2+c**2)/(a+b+c),6))
+input("Digite um numero:")
+digite um numero= 123
+print(var)
+-- ERROR:
+File "XXXX", line 6
+    digite um numero= 123
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:44:14) 
+-- CODE:
+a=1
+b=2
+c=3
+print(round((a**2+b**2+c**2)/(a+b+c),6))
+input("Digite um numero:")
+digite um numero = 123
+print(var)
+-- ERROR:
+File "XXXX", line 6
+    digite um numero = 123
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:44:27) 
+-- CODE:
+a=1
+b=2
+c=3
+print(round((a**2+b**2+c**2)/(a+b+c),6))
+input("Digite um numero:")
+print digite um numero = 123
+print(var)
+-- ERROR:
+File "XXXX", line 6
+    print digite um numero = 123
+               ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(digite um numero = 123)?
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:44:54) 
+-- CODE:
+a=1
+b=2
+c=3
+print(round((a**2+b**2+c**2)/(a+b+c),6))
+input("Digite um numero:")
+print(digite um numero = 123)
+print(var)
+-- ERROR:
+File "XXXX", line 6
+    print(digite um numero = 123)
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:45:31) 
+-- CODE:
+a=1
+b=2
+c=3
+print(round((a**2+b**2+c**2)/(a+b+c),6))
+input("Digite um numero:")
+print(digite um numero=123)
+print(var)
+-- ERROR:
+File "XXXX", line 6
+    print(digite um numero=123)
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 17:46:01) 
+-- CODE:
+a=1
+b=2
+c=3
+print(round((a**2+b**2+c**2)/(a+b+c),6))
+-- OUTPUT:
+2.333333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 16:25:20) 
+-- CODE:
+a=int(input("Valor de a: "))
+b=int(input("Valor de b: "))
+c=int(input("Valor de c: "))
+x=(a**2+b**2+c**2)/(a+b+c)
+print(round(x,7)
+-- ERROR:
+File "XXXX", line 6
+    
+                    ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 16:09:01) 
+-- CODE:
+a=float(input("Qual o valor de a: ?"))
+b=float(input("Qual o valor de b: ?"))
+c=float(input("Qual o valor de c: ?"))
+
+total=(a**2+b**2+c**2)/(a+b+c)
+
+print(total)
+-- OUTPUT:
+25.666666666666668
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 16:09:30) 
+-- CODE:
+a=float(input("Qual o valor de a: ?"))
+b=float(input("Qual o valor de b: ?"))
+c=float(input("Qual o valor de c: ?"))
+
+total=(a**2+b**2+c**2)/(a+b+c)
+
+print(round(total,7)
+-- ERROR:
+File "XXXX", line 8
+    
+                        ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 16:09:49) 
+-- CODE:
+a=float(input("Qual o valor de a: ?"))
+b=float(input("Qual o valor de b: ?"))
+c=float(input("Qual o valor de c: ?"))
+
+total=(a**2+b**2+c**2)/(a+b+c)
+
+print(round(total,7))
+-- OUTPUT:
+25.6666667
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-04 16:09:55) 
+-- CODE:
+a=float(input("Qual o valor de a: ?"))
+b=float(input("Qual o valor de b: ?"))
+c=float(input("Qual o valor de c: ?"))
+
+total=(a**2+b**2+c**2)/(a+b+c)
+
+print(round(total,7))
+-- EXECUTION TIME:
+0.201228
+-- TEST CASE 1:
+---- input:
+20
+25
+30
+---- correct output:
+25.6666667
+---- user output:
+25.6666667
+-- TEST CASE 2:
+---- input:
+235
+400
+350
+---- correct output:
+342.8680203
+---- user output:
+342.8680203
+-- TEST CASE 3:
+---- input:
+90
+120
+2
+---- correct output:
+106.1509434
+---- user output:
+106.1509434
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-04 16:10:14) 
+-- CODE:
+a=float(input("Qual o valor de a: ?"))
+b=float(input("Qual o valor de b: ?"))
+c=float(input("Qual o valor de c: ?"))
+
+total=(a**2+b**2+c**2)/(a+b+c)
+
+print(round(total,7))
+-- EXECUTION TIME:
+0.193097
+-- TEST CASE 1:
+---- input:
+20
+25
+30
+---- correct output:
+25.6666667
+---- user output:
+25.6666667
+-- TEST CASE 2:
+---- input:
+235
+400
+350
+---- correct output:
+342.8680203
+---- user output:
+342.8680203
+-- TEST CASE 3:
+---- input:
+90
+120
+2
+---- correct output:
+106.1509434
+---- user output:
+106.1509434
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

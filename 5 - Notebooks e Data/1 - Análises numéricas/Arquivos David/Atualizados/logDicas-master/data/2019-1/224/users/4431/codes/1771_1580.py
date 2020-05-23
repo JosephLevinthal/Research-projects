@@ -1,0 +1,50 @@
+from numpy import*
+x=array(eval(input("Digite as notas: ")))
+h=array(eval(input("Digite o nome dos alunos: ")))
+j=0
+f=0
+while(size(x)>j):
+	if(x[j]==-1):
+		f=f+1
+		j=j+1
+	else:
+		j=j+1
+j=0
+i=0
+while(size(x)>j):
+	if(x[j]>=6):
+		i=i+1
+		j=j+1
+	else:
+		j=j+1
+j=0
+u=0
+while(size(x)>j):
+	if(x[j]>-1)and(x[j]<6):
+		u=u+1
+		j=j+1
+	else:
+		j=j+1
+j=0
+w=0
+while(size(x)>j):
+	if(x[j]>-1):
+		w=w+x[j]
+		j=j+1
+	else:
+		j=j+1
+d=size(x)-f
+d=w/d
+print(f)
+print(i)
+print(u)
+print(round(d,2))
+r=0
+j=0
+while(size(x)>j):
+	if(x[j]==max(x)):
+		r=j
+		j=j+1
+	else:
+		j=j+1
+print(h[r])		

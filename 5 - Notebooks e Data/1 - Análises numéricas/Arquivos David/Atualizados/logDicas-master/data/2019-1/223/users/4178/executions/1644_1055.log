@@ -1,0 +1,51 @@
+== TEST (2019-04-11 16:00:48) 
+-- CODE:
+from math import *
+
+v = float(input("Velocidade inicial: "))
+a = float(input("Angulo do vetor: "))
+g = float(input("Aceleracao da gravidade: "))
+
+r = (v)**2 * sen(2*a)/g
+
+print(r)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    r = (v)**2 * sen(2*a)/g
+NameError: name 'sen' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 16:03:53) 
+-- CODE:
+from math import *
+
+v = float(input("Velocidade inicial: "))
+a = float(input("Angulo do vetor: "))
+g = float(input("Aceleracao da gravidade: "))
+xx= radians(a)
+r = (v)**2 * sin(2*a)/g
+
+print(r)
+
+
+-- OUTPUT:
+1.0340816965101807
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-02 19:33:40) 
+-- CODE:
+from math import *
+
+v = float(input("Velocidade inicial: "))
+a = float(input("Angulo do vetor: "))
+g = float(input("Aceleracao da gravidade: "))
+xx= radians(a)
+r = (v)**2 * (sin(2*a))/g
+
+print(r)
+
+
+-- OUTPUT:
+1.0340816965101807
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

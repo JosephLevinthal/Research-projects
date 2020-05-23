@@ -1,0 +1,58 @@
+== TEST (2019-07-02 18:08:22) 
+-- CODE:
+from numpy import*
+t=array(eval(input("Digite a tabela: ")))
+y=int(input("Digite o numero de linha: "))
+z=int(input("Digite o numero de coluna: "))
+if(t[y,z]=="N"):
+	print("FOGO")
+elif(t[y,z]=="L"):
+	print("AGUA")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 18:08:35) 
+-- CODE:
+from numpy import*
+t=array(eval(input("Digite a tabela: ")))
+y=int(input("Digite o numero de linha: "))
+z=int(input("Digite o numero de coluna: "))
+if(t[y,z]=="N"):
+	print("FOGO")
+elif(t[y,z]=="L"):
+	print("AGUA")
+-- EXECUTION TIME:
+1.05723
+-- TEST CASE 1:
+---- input:
+[['L','N','L','L'],['N','N','L','L'],['N','N','L','N'],['N','L','L','L']]
+3
+2
+---- correct output:
+AGUA
+---- user output:
+AGUA
+-- TEST CASE 2:
+---- input:
+[['N','L','L','N','N'],['N','N','N','N','N'],['L','L','N','L','N'],['N','L','N','N','N'],['N','L','N','L','N']]
+3
+4
+---- correct output:
+FOGO
+---- user output:
+FOGO
+-- TEST CASE 3:
+---- input:
+[['L','L','N'],['N','L','L'],['L','N','L']]
+2
+2
+---- correct output:
+AGUA
+---- user output:
+AGUA
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

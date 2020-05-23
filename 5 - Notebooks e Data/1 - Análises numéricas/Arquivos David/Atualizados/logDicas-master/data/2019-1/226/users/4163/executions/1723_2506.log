@@ -1,0 +1,602 @@
+== TEST (2019-05-13 17:14:20) 
+-- CODE:
+quan1=int(input("quantidade inicial: "))
+pc = int(int("percentual de crescimento: "))
+quanv= int(input("quantidade para vendas anuais: "))
+
+a = pc/100
+ano = 0 
+
+while (quan1>=0)and(quan1<12):
+	quan1 += (quan1*a)
+	quan1 = quan1 - quanv
+	ano = ano+1
+print(ano)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    pc = int(int("percentual de crescimento: "))
+ValueError: invalid literal for int() with base 10: 'percentual de crescimento: '
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 17:14:45) 
+-- CODE:
+quan1=int(input("quantidade inicial: "))
+pc = int(int("percentual de crescimento: "))
+quanv= int(input("quantidade para vendas anuais: "))
+
+a = pc/100
+ano = 0 
+
+while (quan1>=0)and(quan1<12000):
+	quan1 += (quan1*a)
+	quan1 = quan1 - quanv
+	ano = ano+1
+print(ano)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    pc = int(int("percentual de crescimento: "))
+ValueError: invalid literal for int() with base 10: 'percentual de crescimento: '
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 17:15:24) 
+-- CODE:
+quan1=int(input("quantidade inicial: "))
+pc = int(input("percentual de crescimento: "))
+quanv= int(input("quantidade para vendas anuais: "))
+
+a = pc/100
+ano = 0 
+
+while (quan1>=0)and(quan1<12000):
+	quan1 += (quan1*a)
+	quan1 = quan1 - quanv
+	ano = ano+1
+print(ano)
+-- OUTPUT:
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 17:17:58) 
+-- CODE:
+quan1=int(input("quantidade inicial: "))
+pc = int(input("percentual de crescimento: "))
+quanv= int(input("quantidade para vendas anuais: "))
+
+a = pc/100
+ano = 0 
+
+while (quan1>0)and(quan1<12000):
+	quan1 += (quan1*a)
+	quan1 = quan1 - quanv
+	ano = ano+1
+	if(quan1<12000):
+		print("LIMITE")
+	else:
+		print("EXTINCAO")
+	
+print(ano)
+-- OUTPUT:
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 17:18:35) 
+-- CODE:
+quan1=int(input("quantidade inicial: "))
+pc = int(input("percentual de crescimento: "))
+quanv= int(input("quantidade para vendas anuais: "))
+
+a = pc/100
+ano = 0 
+
+while (quan1>0)and(quan1<12000):
+	quan1 += (quan1*a)
+	quan1 = quan1 - quanv
+	ano = ano+1
+		
+		if(quan1<12000):
+		print("LIMITE")
+		else:
+		print("EXTINCAO")
+	
+print(ano)
+-- ERROR:
+File "XXXX", line 13
+    if(quan1<12000):
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 17:18:45) 
+-- CODE:
+quan1=int(input("quantidade inicial: "))
+pc = int(input("percentual de crescimento: "))
+quanv= int(input("quantidade para vendas anuais: "))
+
+a = pc/100
+ano = 0 
+
+while (quan1>0)and(quan1<12000):
+	quan1 += (quan1*a)
+	quan1 = quan1 - quanv
+	ano = ano+1
+		
+	if(quan1<12000):
+		print("LIMITE")
+	else:
+		print("EXTINCAO")
+	
+print(ano)
+-- OUTPUT:
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 17:19:05) 
+-- CODE:
+quan1=int(input("quantidade inicial: "))
+pc = int(input("percentual de crescimento: "))
+quanv= int(input("quantidade para vendas anuais: "))
+
+a = pc/100
+ano = 0 
+
+while (quan1>0)and(quan1<12000):
+	quan1 += (quan1*a)
+	quan1 = quan1 - quanv
+	ano = ano+1
+		
+	if(quan1<12000):
+		print("LIMITE")
+	else:
+		print("EXTINCAO")
+print(ano)
+-- OUTPUT:
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 17:20:01) 
+-- CODE:
+quan1=int(input("quantidade inicial: "))
+pc = int(input("percentual de crescimento: "))
+quanv= int(input("quantidade para vendas anuais: "))
+
+a = pc/100
+ano = 0 
+
+while (quan1>0)and(quan1<12000):
+	quan1 += (quan1*a)
+	quan1 = quan1 - quanv
+	ano = ano+1
+		
+	if(quan1<12000):
+		msg("LIMITE")
+	else:
+		msg("EXTINCAO")
+	print(msg)
+print(ano)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 14, in <module>
+    msg("LIMITE")
+NameError: name 'msg' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 17:20:50) 
+-- CODE:
+quan1=int(input("quantidade inicial: "))
+pc = int(input("percentual de crescimento: "))
+quanv= int(input("quantidade para vendas anuais: "))
+
+a = pc/100
+ano = 0 
+
+while (quan1>0)and(quan1<12000):
+	quan1 += (quan1*a)
+	quan1 = quan1 - quanv
+	ano = ano+1
+		
+	if(quan1<12000):
+		msg=("LIMITE")
+	else:
+		msg=("EXTINCAO")
+	print(msg)
+print(ano)
+-- OUTPUT:
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 17:21:32) 
+-- CODE:
+quan1=int(input("quantidade inicial: "))
+pc = int(input("percentual de crescimento: "))
+quanv= int(input("quantidade para vendas anuais: "))
+
+a = pc/100
+ano = 0 
+
+while (quan1>0)and(quan1<12000):
+	quan1 += (quan1*a)
+	quan1 = quan1 - quanv
+	ano = ano+1
+		
+	if(quan1<12000):
+		msg=("LIMITE")
+	else:
+		msg=("EXTINCAO")
+	
+	print(msg)
+print(ano)
+-- OUTPUT:
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:28:00) 
+-- CODE:
+quan1=int(input("quantidade inicial: "))
+pc = int(input("percentual de crescimento: "))
+quanv= int(input("quantidade para vendas anuais: "))
+
+a = pc/100
+ano = 0 
+
+while (quan1>0)and(quan1<12000):
+	quan1 += (quan1*a)
+	quan1 = quan1 - quanv
+	ano = ano+1
+		
+	if(quan1<12000):
+		msg=("LIMITE")
+	else:
+		msg=("EXTINCAO")
+	
+	print(msg)
+print(ano)
+-- OUTPUT:
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:29:45) 
+-- CODE:
+quan1=int(input("quantidade inicial: "))
+pc = int(input("percentual de crescimento: "))
+quanv= int(input("quantidade para vendas anuais: "))
+
+a = pc/100
+ano = 0 
+
+while (quan1>0)and(quan1<=12000):
+	quan1 += (quan1*a)
+	quan1 = quan1 - quanv
+	ano = ano+1
+		
+	if(quan1<12000):
+		msg=("LIMITE")
+	else:
+		msg=("EXTINCAO")
+	
+	print(msg)
+print(ano)
+-- OUTPUT:
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+LIMITE
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:32:47) 
+-- CODE:
+quan1=int(input("quantidade inicial: "))
+pc = int(input("percentual de crescimento: "))
+quanv= int(input("quantidade para vendas anuais: "))
+
+a = pc/100
+ano = 0 
+
+while (quan1>0)and(quan1<12000):
+	quan1 += (quan1*a)
+	quan1 = quan1 - quanv
+	ano = ano+1
+		
+if(quan1<12000):
+	msg=("LIMITE")
+else:
+	msg=("EXTINCAO")
+	
+	print(msg)
+print(ano)
+-- OUTPUT:
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:35:45) 
+-- CODE:
+quan1=int(input("quantidade inicial: "))
+pc = int(input("percentual de crescimento: "))
+quanv= int(input("quantidade para vendas anuais: "))
+
+a = pc/100
+ano = 0 
+
+while (quan1>0)and(quan1<12000):
+	quan1 += (quan1*a)
+	quan1 = quan1 - quanv
+	ano = ano+1
+		
+if(quan1<12000):
+	msg=("LIMITE")
+elif(quan1<0):
+	msg=("EXTINCAO")
+	
+	print(msg)
+print(ano)
+-- OUTPUT:
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:36:34) 
+-- CODE:
+quan1=int(input("quantidade inicial: "))
+pc = int(input("percentual de crescimento: "))
+quanv= int(input("quantidade para vendas anuais: "))
+
+a = pc/100
+ano = 0 
+
+while (quan1>0)and(quan1<12000):
+	quan1 += (quan1*a)
+	quan1 = quan1 - quanv
+	ano = ano+1
+		
+if(quan1<12000):
+	print("LIMITE")
+elif(quan1<0):
+	print("EXTINCAO")
+	
+	
+print(ano)
+-- OUTPUT:
+LIMITE
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:37:21) 
+-- CODE:
+quan1=int(input("quantidade inicial: "))
+pc = int(input("percentual de crescimento: "))
+quanv= int(input("quantidade para vendas anuais: "))
+
+a = pc/100
+ano = 0 
+
+while (quan1>0)and(quan1<12000):
+	quan1 += (quan1*a)
+	quan1 = quan1 - quanv
+	ano = ano+1
+		
+if(quan1<12000):
+	print("LIMITE")
+if(quan1<0):
+	print("EXTINCAO")
+	
+	
+print(ano)
+-- OUTPUT:
+LIMITE
+EXTINCAO
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:37:54) 
+-- CODE:
+quan1=int(input("quantidade inicial: "))
+pc = int(input("percentual de crescimento: "))
+quanv= int(input("quantidade para vendas anuais: "))
+
+a = pc/100
+ano = 0 
+
+while (quan1>0)and(quan1<12000):
+	quan1 += (quan1*a)
+	quan1 = quan1 - quanv
+	ano = ano+1
+if(quan1<12000):
+	print("LIMITE")
+if(quan1<0):
+	print("EXTINCAO")
+	
+	
+print(ano)
+-- OUTPUT:
+LIMITE
+EXTINCAO
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:39:08) 
+-- CODE:
+quan1=int(input("quantidade inicial: "))
+pc = int(input("percentual de crescimento: "))
+quanv= int(input("quantidade para vendas anuais: "))
+
+a = pc/100
+ano = 0 
+
+while (quan1>0)and(quan1<12000):
+	quan1 += (quan1*a)
+	quan1 = quan1 - quanv
+	ano = ano+1
+
+if(quan1>12000):	
+	print("LIMITE")
+if(quan1<0):
+	print("EXTINCAO")
+	
+	
+print(ano)
+-- OUTPUT:
+EXTINCAO
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:39:16) 
+-- CODE:
+quan1=int(input("quantidade inicial: "))
+pc = int(input("percentual de crescimento: "))
+quanv= int(input("quantidade para vendas anuais: "))
+
+a = pc/100
+ano = 0 
+
+while (quan1>0)and(quan1<12000):
+	quan1 += (quan1*a)
+	quan1 = quan1 - quanv
+	ano = ano+1
+
+if(quan1>12000):	
+	print("LIMITE")
+if(quan1<0):
+	print("EXTINCAO")
+	
+	
+print(ano)
+-- OUTPUT:
+EXTINCAO
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 11:39:34) 
+-- CODE:
+quan1=int(input("quantidade inicial: "))
+pc = int(input("percentual de crescimento: "))
+quanv= int(input("quantidade para vendas anuais: "))
+
+a = pc/100
+ano = 0 
+
+while (quan1>0)and(quan1<12000):
+	quan1 += (quan1*a)
+	quan1 = quan1 - quanv
+	ano = ano+1
+
+if(quan1>12000):	
+	print("LIMITE")
+if(quan1<0):
+	print("EXTINCAO")
+	
+	
+print(ano)
+-- EXECUTION TIME:
+0.14081
+-- TEST CASE 1:
+---- input:
+1234
+6
+135
+---- correct output:
+EXTINCAO
+14
+---- user output:
+EXTINCAO
+14
+-- TEST CASE 2:
+---- input:
+579
+37
+26
+---- correct output:
+LIMITE
+11
+---- user output:
+LIMITE
+11
+-- TEST CASE 3:
+---- input:
+6789
+45
+2345
+---- correct output:
+LIMITE
+4
+---- user output:
+LIMITE
+4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

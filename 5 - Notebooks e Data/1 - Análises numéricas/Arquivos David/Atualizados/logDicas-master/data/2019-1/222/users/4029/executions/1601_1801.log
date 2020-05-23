@@ -1,0 +1,321 @@
+== TEST (2019-03-31 18:51:14) 
+-- CODE:
+nomeObj= int(input("Digite o nome do objeto: "))
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+print("Abra",nomeObj*nvz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    nomeObj= int(input())
+ValueError: invalid literal for int() with base 10: 'livro'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 18:52:02) 
+-- CODE:
+nomeObj= input("Digite o nome do objeto: "))
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+print("Abra",nomeObj*nvz)
+-- ERROR:
+File "XXXX", line 1
+    nomeObj= input())
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 18:52:45) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+print("Abra",nombj*nvz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print("Abra",nombj*nvz)
+NameError: name 'nombj' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 18:53:07) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+print("Abra"+nombj*nvz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print("Abra"+nombj*nvz)
+NameError: name 'nombj' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 18:54:20) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+pat= nomobj*nvz
+print("Abra"+pat)
+-- OUTPUT:
+Abralivrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 18:55:09) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+pat= nomobj*nvz""
+print("Abra"+pat+"")
+-- ERROR:
+File "XXXX", line 3
+    pat= nomobj*nvz""
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 18:55:31) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+pat= nomobj*nvz
+print("Abra"+pat+"")
+-- OUTPUT:
+Abralivrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 18:56:37) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "" ""))
+pat= nomobj*nvz
+print("Abra"+pat+"")
+-- ERROR:
+File "XXXX", line 2
+    nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "" ""))
+                                                                                    ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 18:57:03) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra:"" "))
+pat= nomobj*nvz
+print("Abra"+pat+"")
+-- OUTPUT:
+Digite o nuemro de vezes que deseja repetir essa palavra: Abralivrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 18:58:00) 
+-- CODE:
+nomobj= input("Digite o nome do objeto:"" ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+pat= nomobj*nvz
+print("Abra"+pat+"")
+-- OUTPUT:
+Digite o nome do objeto: Abralivrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 18:59:46) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+pat= nomobj*nvz
+print("Abra"+""+pat)
+-- OUTPUT:
+Abralivrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:00:34) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+pat= nomobj*""*nvz
+print("Abra"+pat)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    pat= nomobj*""*nvz
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:01:03) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+pat= nomobj""*nvz
+print("Abra"+pat)
+-- ERROR:
+File "XXXX", line 3
+    pat= nomobj""*nvz
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:01:16) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+pat= nomobj""*nvz
+print("Abra"+pat)
+-- ERROR:
+File "XXXX", line 3
+    pat= nomobj""*nvz
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:01:48) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+pat= nomobj+""*nvz
+print("Abra"+pat)
+-- OUTPUT:
+Abralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:02:22) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra:" " "))
+pat= nomobj*nvz
+print("Abra"+pat)
+-- OUTPUT:
+Digite o nuemro de vezes que deseja repetir essa palavra: Abralivrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:03:07) 
+-- CODE:
+nomobj= input("Digite o nome do objeto:" " ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+pat= nomobj*nvz
+print("Abra"+pat)
+-- OUTPUT:
+Digite o nome do objeto: Abralivrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:04:11) 
+-- CODE:
+nomobj= input(("Digite o nome do objeto: ")+" ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+pat= nomobj*nvz
+print("Abra"+pat)
+-- OUTPUT:
+Digite o nome do objeto:  Abralivrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:04:56) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+pat= nomobj*nvz
+print("Abra"+""pat)
+-- ERROR:
+File "XXXX", line 4
+    print("Abra"+""pat)
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:05:05) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+pat= nomobj*nvz
+print("Abra"+""+pat)
+-- OUTPUT:
+Abralivrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:06:24) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+pat= nomobj*nvz
+feit= Abra+""+part
+print(feit)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    feit= Abra+""+part
+NameError: name 'Abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:07:23) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+pat= nomobj*nvz
+feit= input("Abra")+""+part
+print(feit)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    feit= input()+""+part
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:07:48) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+pat= nomobj*nvz
+feit= "Abra"+""+part
+print(feit)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    feit= "Abra"+""+part
+NameError: name 'part' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:09:05) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+pat= abra*""+nomobj*nvz
+print(pat)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    pat= abra*""+nomobj*nvz
+NameError: name 'abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:13:09) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+print(("Abra ""+ nomobj)*nvz)
+-- ERROR:
+File "XXXX", line 3
+    print(("Abra ""+ nomobj)*nvz)
+                                ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:17:13) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+fr= (str("Abra")+ " " + nomobj)*nvz
+print(fr)
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:18:18) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+fr= (str("Abra")+ " " + nomobj+ " ")*nvz
+print(fr)
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-31 19:18:39) 
+-- CODE:
+nomobj= input("Digite o nome do objeto: ")
+nvz= int(input("Digite o nuemro de vezes que deseja repetir essa palavra: "))
+fr= (str("Abra")+ " " + nomobj+ " ")*nvz
+print(fr)
+-- EXECUTION TIME:
+0.1499
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

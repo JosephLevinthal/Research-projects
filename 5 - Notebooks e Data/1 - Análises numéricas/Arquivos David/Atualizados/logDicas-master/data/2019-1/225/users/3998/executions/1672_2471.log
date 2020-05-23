@@ -1,0 +1,696 @@
+== TEST (2019-04-29 12:47:00) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i <= 0)or (i>=130) or (m<= 0):
+	print("Dados invalidos")
+	elif(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Baixo")
+else:
+	print("Dados invalidos")
+-- ERROR:
+File "XXXX", line 8
+    elif(i < 45)and (m < 22.0):
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 12:54:30) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i > 0)or (i=<130) or (m>= 0):
+	elif(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Baixo")
+else:
+	print("Dados invalidos")
+-- ERROR:
+File "XXXX", line 6
+    if(i > 0)or (i=<130) or (m>= 0):
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 12:55:36) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i > 0)or (i <= 130) or (m >= 0):
+	if(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Baixo")
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas:  0 anos e IMC 0.0
+Risco: Baixo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 12:55:53) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i > 0)or (i <= 130) or (m >= 0):
+	if(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Baixo")
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.147993
+-- TEST CASE 1:
+---- input:
+0
+0
+---- correct output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+---- user output:
+Entradas:  0 anos e IMC 0.0
+Risco: Baixo
+-- TEST CASE 2:
+---- input:
+25
+25
+---- correct output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+---- user output:
+Entradas:  25 anos e IMC 25.0
+Risco: Medio
+-- TEST CASE 3:
+---- input:
+50
+25
+---- correct output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+---- user output:
+Entradas:  50 anos e IMC 25.0
+Risco: Baixo
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 13:03:13) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i > 0)or (i <= 130) or (m >= 0):
+	if(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Baixo")
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas:  0 anos e IMC 0.0
+Risco: Baixo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 13:04:57) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i > 0)or (i <= 130) or (m >= 0):
+	if(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Baixo")
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas:  0 anos e IMC 0.0
+Risco: Baixo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 13:05:06) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i > 0)or (i <= 130) or (m >= 0):
+	if(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Baixo")
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.186433
+-- TEST CASE 1:
+---- input:
+0
+0
+---- correct output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+---- user output:
+Entradas:  0 anos e IMC 0.0
+Risco: Baixo
+-- TEST CASE 2:
+---- input:
+25
+25
+---- correct output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+---- user output:
+Entradas:  25 anos e IMC 25.0
+Risco: Medio
+-- TEST CASE 3:
+---- input:
+50
+25
+---- correct output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+---- user output:
+Entradas:  50 anos e IMC 25.0
+Risco: Baixo
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 13:14:39) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i > 0)or (i <= 130) or (m >= 0):
+	if(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Baixo")
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas:  0 anos e IMC 0.0
+Risco: Baixo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 13:15:51) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i >= 0)and (i <= 130) or (m >= 0):
+	if(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Baixo")
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas:  0 anos e IMC 0.0
+Risco: Baixo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 13:18:26) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i < 0)and (i <= 130) or (m >= 0):
+	if(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Baixo")
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.18978
+-- TEST CASE 1:
+---- input:
+0
+0
+---- correct output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+---- user output:
+Entradas:  0 anos e IMC 0.0
+Risco: Baixo
+-- TEST CASE 2:
+---- input:
+25
+25
+---- correct output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+---- user output:
+Entradas:  25 anos e IMC 25.0
+Risco: Medio
+-- TEST CASE 3:
+---- input:
+50
+25
+---- correct output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+---- user output:
+Entradas:  50 anos e IMC 25.0
+Risco: Baixo
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 13:18:28) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i < 0)and (i <= 130) or (m >= 0):
+	if(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Baixo")
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas:  0 anos e IMC 0.0
+Risco: Baixo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 13:19:12) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i > 0)and (i < 130) or (m >= 0):
+	if(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Baixo")
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas:  0 anos e IMC 0.0
+Risco: Baixo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 13:20:36) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i > 0)and (i < 130) or (m > 0):
+	if(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Baixo")
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas:  0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 13:21:06) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i > 0)and (i < 130) or (m > 0):
+	if(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Alto")
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas:  0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 13:21:59) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i >= 0)and (i =< 130) or (m > 0):
+	if(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Alto")
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")
+-- ERROR:
+File "XXXX", line 6
+    if(i >= 0)and (i =< 130) or (m > 0):
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 13:22:15) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i >= 0)and (i < 130) or (m > 0):
+	if(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Alto")
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas:  0 anos e IMC 0.0
+Risco: Baixo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 13:22:29) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i >= 0)and (i < 130) or (m > 0):
+	if(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Alto")
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas:  0 anos e IMC 0.0
+Risco: Baixo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 13:22:46) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i >= 0)and (i < 130) or (m > 0):
+	if(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Alto")
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas:  0 anos e IMC 0.0
+Risco: Baixo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 13:23:25) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i >= 0)and (i < 130) or (m > 0):
+	if(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Alto")
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas:  0 anos e IMC 0.0
+Risco: Baixo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 13:24:05) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i >= 0)and (i < 130) or (m > 0):
+	if(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Alto")
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas:  0 anos e IMC 0.0
+Risco: Baixo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 13:24:25) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i >= 0)and (i < 130) or (m > 0):
+	if(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Alto")
+	else:
+		print("Dados invalidos")
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas:  0 anos e IMC 0.0
+Risco: Baixo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 13:27:04) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i <= 0)or (i > 130) or (m <= 0):
+	print("Dados invalidos")
+	elif(i < 45)and (m < 22.0):
+		print("Risco: Baixo")
+	elif(i >= 45)and (m < 22.0):
+		print("Risco: Medio")
+	elif(i < 45)and (m >= 22.0):
+		print("Risco: Medio")
+	elif(i >= 45)and (m >= 22.0):
+		print("Risco: Alto")
+else:
+	print("Dados invalidos")
+-- ERROR:
+File "XXXX", line 8
+    elif(i < 45)and (m < 22.0):
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 13:27:32) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i <= 0)or (i > 130) or (m <= 0):
+	print("Dados invalidos")
+elif(i < 45)and (m < 22.0):
+	print("Risco: Baixo")
+elif(i >= 45)and (m < 22.0):
+	print("Risco: Medio")
+elif(i < 45)and (m >= 22.0):
+	print("Risco: Medio")
+elif(i >= 45)and (m >= 22.0):
+	print("Risco: Alto")
+else:
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas:  0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 13:27:47) 
+-- CODE:
+i = int(input("idade: "))
+m = float(input("indice de massa corporal: "))
+
+print("Entradas: ",i, "anos e IMC",m,)
+
+if(i <= 0)or (i > 130) or (m <= 0):
+	print("Dados invalidos")
+elif(i < 45)and (m < 22.0):
+	print("Risco: Baixo")
+elif(i >= 45)and (m < 22.0):
+	print("Risco: Medio")
+elif(i < 45)and (m >= 22.0):
+	print("Risco: Medio")
+elif(i >= 45)and (m >= 22.0):
+	print("Risco: Alto")
+else:
+	print("Dados invalidos")
+-- EXECUTION TIME:
+0.202032
+-- TEST CASE 1:
+---- input:
+0
+0
+---- correct output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+---- user output:
+Entradas:  0 anos e IMC 0.0
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+25
+25
+---- correct output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+---- user output:
+Entradas:  25 anos e IMC 25.0
+Risco: Medio
+-- TEST CASE 3:
+---- input:
+50
+25
+---- correct output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+---- user output:
+Entradas:  50 anos e IMC 25.0
+Risco: Alto
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

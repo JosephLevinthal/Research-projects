@@ -1,0 +1,427 @@
+== TEST (2019-05-23 14:34:19) 
+-- CODE:
+from numpy import*
+notas=array(eval(input("notas: ")))
+nome=array(eval(input("nomes: "))
+i=0
+a=0
+b=0
+c=0
+d=0
+while(nome(i)!=max (notas)):	
+	i=i+1
+			  
+			  
+-- ERROR:
+File "XXXX", line 4
+    i=0
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 14:35:08) 
+-- CODE:
+from numpy import*
+notas=array(eval(input("notas: ")))
+nome=array(eval(input("nomes: "))
+i=0
+while(nome(i)!=max (notas)):	
+	i=i+1
+print(notas)	
+print(nome)			  
+			  
+			  
+-- ERROR:
+File "XXXX", line 4
+    i=0
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:25:32) 
+-- CODE:
+from numpy import*
+notas=array(eval(input("notas: ")))
+nome=array(eval(input("nomes: ")))		  
+			  
+faltas = 0
+aprovados = 0
+reprovados = 0
+soma = 0
+nome = "a"
+i = 0
+while(i < size(notas)):
+	if(notas[i] == -1):
+		faltas = faltas +1
+	if(6 <= notas[i] <= 10):
+		aprovados = aprovados +1
+		soma = soma + notas[i]
+	if(0 <= notas[i] < 6):
+		reprovados = reprovados +1
+		soma = soma + notas[i]
+	if(notas[i] == max(notas)):
+		nome = estudantes[i]
+	i = i+1
+total = aprovados + reprovados
+media = soma/total
+print(faltas)
+print(aprovados)
+print(reprovados)
+print(round(media, 2))		  
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:27:12) 
+-- CODE:
+from numpy import*
+notas=array(eval(input("notas: ")))
+nome=array(eval(input("nomes: ")))		  
+			  
+faltas = 0
+aprovados = 0
+reprovados = 0
+soma = 0
+nome = "a"
+i = 0
+while(i < size(notas)):
+	if(notas[i] == -1):
+		faltas = faltas +1
+	if(6 <= notas[i] <= 10):
+		aprovados = aprovados +1
+		soma = soma + notas[i]
+	if(0 <= notas[i] < 6):
+		reprovados = reprovados +1
+		soma = soma + notas[i]
+	if(notas[i] == max(notas)):
+		nome = nome[i]
+	i = i+1
+total = aprovados + reprovados
+media = soma/total
+print(faltas)
+print(aprovados)
+print(reprovados)
+print(round(media, 2))		  
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 19:29:16) 
+-- CODE:
+from numpy import*
+notas=array(eval(input("notas: ")))
+alunos=array(eval(input("nomes: ")))		  
+			  
+faltas = 0
+aprovados = 0
+reprovados = 0
+soma = 0
+nome = "a"
+i = 0
+while(i < size(notas)):
+	if(notas[i] == -1):
+		faltas = faltas +1
+	if(6 <= notas[i] <= 10):
+		aprovados = aprovados +1
+		soma = soma + notas[i]
+	if(0 <= notas[i] < 6):
+		reprovados = reprovados +1
+		soma = soma + notas[i]
+	if(notas[i] == max(notas)):
+		nome = alunos[i]
+	i = i+1
+total = aprovados + reprovados
+media = soma/total
+print(faltas)
+print(aprovados)
+print(reprovados)
+print(round(media, 2))		  
+-- EXECUTION TIME:
+0.390949
+-- TEST CASE 1:
+---- input:
+[9,8,7,6,5,4,3,2,1,-1,-1,-1]
+['A','B','C','D','E','F','G','H','I','J','K','L']
+---- correct output:
+3
+4
+5
+5.0
+A
+---- user output:
+3
+4
+5
+5.0
+-- TEST CASE 2:
+---- input:
+[-1,1.2,-1,2.3,-1,3.4,-1,4.5,-1,5.6,-1]
+['ALICE','BENTO','CLARA','DAVI','ELSON','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+6
+0
+5
+3.4
+JULIA
+---- user output:
+6
+0
+5
+3.4
+-- TEST CASE 3:
+---- input:
+[1.23,3.45,5.67,6.78,7.89,8.9,9,10,0,9.8,7.6]
+['CLARA','DAVI','ELSON','ALICE','BENTO','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+0
+7
+4
+6.39
+HELOISA
+---- user output:
+0
+7
+4
+6.39
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 19:31:19) 
+-- CODE:
+from numpy import*
+notas=array(eval(input("notas: ")))
+estudantes=array(eval(input("nomes: ")))		  
+			  
+faltas = 0
+aprovados = 0
+reprovados = 0
+soma = 0
+nome = "a"
+i = 0
+while(i < size(notas)):
+	if(notas[i] == -1):
+		faltas = faltas +1
+	if(6 <= notas[i] <= 10):
+		aprovados = aprovados +1
+		soma = soma + notas[i]
+	if(0 <= notas[i] < 6):
+		reprovados = reprovados +1
+		soma = soma + notas[i]
+	if(notas[i] == max(notas)):
+		nome = estudantes[i]
+	i = i+1
+total = aprovados + reprovados
+media = soma/total
+print(faltas)
+print(aprovados)
+print(reprovados)
+print(round(media, 2))		  
+-- EXECUTION TIME:
+0.606139
+-- TEST CASE 1:
+---- input:
+[9,8,7,6,5,4,3,2,1,-1,-1,-1]
+['A','B','C','D','E','F','G','H','I','J','K','L']
+---- correct output:
+3
+4
+5
+5.0
+A
+---- user output:
+3
+4
+5
+5.0
+-- TEST CASE 2:
+---- input:
+[-1,1.2,-1,2.3,-1,3.4,-1,4.5,-1,5.6,-1]
+['ALICE','BENTO','CLARA','DAVI','ELSON','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+6
+0
+5
+3.4
+JULIA
+---- user output:
+6
+0
+5
+3.4
+-- TEST CASE 3:
+---- input:
+[1.23,3.45,5.67,6.78,7.89,8.9,9,10,0,9.8,7.6]
+['CLARA','DAVI','ELSON','ALICE','BENTO','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+0
+7
+4
+6.39
+HELOISA
+---- user output:
+0
+7
+4
+6.39
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:31:26) 
+-- CODE:
+from numpy import*
+notas=array(eval(input("notas: ")))
+estudantes=array(eval(input("nomes: ")))		  
+			  
+faltas = 0
+aprovados = 0
+reprovados = 0
+soma = 0
+nome = "a"
+i = 0
+while(i < size(notas)):
+	if(notas[i] == -1):
+		faltas = faltas +1
+	if(6 <= notas[i] <= 10):
+		aprovados = aprovados +1
+		soma = soma + notas[i]
+	if(0 <= notas[i] < 6):
+		reprovados = reprovados +1
+		soma = soma + notas[i]
+	if(notas[i] == max(notas)):
+		nome = estudantes[i]
+	i = i+1
+total = aprovados + reprovados
+media = soma/total
+print(faltas)
+print(aprovados)
+print(reprovados)
+print(round(media, 2))		  
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 19:32:24) 
+-- CODE:
+from numpy import*
+notas=array(eval(input("notas: ")))
+estudantes=array(eval(input("nomes: ")))		  
+			  
+faltas = 0
+aprovados = 0
+reprovados = 0
+soma = 0
+nome = "a"
+i = 0
+while(i < size(notas)):
+	if(notas[i] == -1):
+		faltas = faltas +1
+	if(6 <= notas[i] <= 10):
+		aprovados = aprovados +1
+		soma = soma + notas[i]
+	if(0 <= notas[i] < 6):
+		reprovados = reprovados +1
+		soma = soma + notas[i]
+	if(notas[i] == max(notas)):
+		nome = estudantes[i]
+	i = i+1
+total = aprovados + reprovados
+media = soma/total
+print(faltas)
+print(aprovados)
+print(reprovados)
+print(round(media, 2))
+print(nome)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 19:32:51) 
+-- CODE:
+from numpy import*
+notas=array(eval(input("notas: ")))
+estudantes=array(eval(input("nomes: ")))		  
+			  
+faltas = 0
+aprovados = 0
+reprovados = 0
+soma = 0
+nome = "a"
+i = 0
+while(i < size(notas)):
+	if(notas[i] == -1):
+		faltas = faltas +1
+	if(6 <= notas[i] <= 10):
+		aprovados = aprovados +1
+		soma = soma + notas[i]
+	if(0 <= notas[i] < 6):
+		reprovados = reprovados +1
+		soma = soma + notas[i]
+	if(notas[i] == max(notas)):
+		nome = estudantes[i]
+	i = i+1
+total = aprovados + reprovados
+media = soma/total
+print(faltas)
+print(aprovados)
+print(reprovados)
+print(round(media, 2))
+print(nome)
+-- EXECUTION TIME:
+0.622801
+-- TEST CASE 1:
+---- input:
+[9,8,7,6,5,4,3,2,1,-1,-1,-1]
+['A','B','C','D','E','F','G','H','I','J','K','L']
+---- correct output:
+3
+4
+5
+5.0
+A
+---- user output:
+3
+4
+5
+5.0
+A
+-- TEST CASE 2:
+---- input:
+[-1,1.2,-1,2.3,-1,3.4,-1,4.5,-1,5.6,-1]
+['ALICE','BENTO','CLARA','DAVI','ELSON','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+6
+0
+5
+3.4
+JULIA
+---- user output:
+6
+0
+5
+3.4
+JULIA
+-- TEST CASE 3:
+---- input:
+[1.23,3.45,5.67,6.78,7.89,8.9,9,10,0,9.8,7.6]
+['CLARA','DAVI','ELSON','ALICE','BENTO','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+0
+7
+4
+6.39
+HELOISA
+---- user output:
+0
+7
+4
+6.39
+HELOISA
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

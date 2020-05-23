@@ -1,0 +1,9 @@
+x=input("").lower()
+h=0
+while(len(x)>h):
+	if(x[h]=="a")or(x[h]=="e")or(x[h]=="i")or(x[h]=="o")or(x[h]=="u"):
+		h=h+1
+	else:
+		x=x.replace(x[h],"p")
+		h=h+1
+print(x)		

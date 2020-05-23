@@ -1,0 +1,302 @@
+== TEST (2019-05-29 14:09:16) 
+-- CODE:
+from numpy import *
+preco = array(eval(input("custo: ")))
+i = 0
+total = 0
+while(i < size(preco)):
+	if(preco[i]>80.0)
+		preco[i]*(15/100)
+		i = i + 1
+		total = total + 1
+print(round(sum(total)))
+		
+-- ERROR:
+File "XXXX", line 6
+    if(preco[i]>80.0)
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 14:11:02) 
+-- CODE:
+from numpy import *
+preco = array(eval(input("custo: ")))
+i = 0
+preco = []
+while(i < size(preco)):
+	if(preco[i]>80.0)
+		preco = preco[i]*(15/100)
+		i = i + 1
+		preco = preco + 1
+print(round(sum(preco)))
+		
+-- ERROR:
+File "XXXX", line 6
+    if(preco[i]>80.0)
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 14:11:11) 
+-- CODE:
+from numpy import *
+preco = array(eval(input("custo: ")))
+i = 0
+preco = []
+while(i < size(preco)):
+	if(preco[i]>80.0):
+		preco = preco[i]*(15/100)
+		i = i + 1
+		preco = preco + 1
+print(round(sum(preco)))
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 14:12:51) 
+-- CODE:
+from numpy import *
+preco = array(eval(input("custo: ")))
+i = 0
+total = []
+while(i < size(preco)):
+	if(preco[i]>80.0):
+		preco = preco[i]*(15/100)
+		i = i + 1
+print(round(sum(preco[i])))
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 14:13:18) 
+-- CODE:
+from numpy import *
+preco = array(eval(input("custo: ")))
+i = 0
+total = []
+while(i < size(preco)):
+	if(preco[i]>80.0):
+		preco = preco[i]*(15/100)
+		i = i + 1
+print(round(sum(total[i])))
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 14:15:52) 
+-- CODE:
+from numpy import *
+preco = array(eval(input("custo: ")))
+i = 0
+preco = 0
+while(i < size(preco)):
+	if(preco[i]>80.0):
+		preco = preco[i]*(15/100) + preco
+		i = i + 1
+	elif(preco<80.0):
+		preco = preco + preco[i]
+		i = i + 1
+print(round(sum(total[i])))
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 14:16:15) 
+-- CODE:
+from numpy import *
+preco = array(eval(input("custo: ")))
+i = 0
+preco = 0
+while(i < size(preco)):
+	if(preco[i]>80.0):
+		preco = preco[i]*(15/100) + preco
+		i = i + 1
+	elif(preco<80.0):
+		preco = preco + preco[i]
+		i = i + 1
+print(round(sum(preco[])))
+		
+-- ERROR:
+File "XXXX", line 12
+    print(round(sum(preco[])))
+                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 14:16:32) 
+-- CODE:
+from numpy import *
+preco = array(eval(input("custo: ")))
+i = 0
+preco = 0
+while(i < size(preco)):
+	if(preco[i]>80.0):
+		preco = preco[i]*(15/100) + preco
+		i = i + 1
+	elif(preco<80.0):
+		preco = preco + preco[i]
+		i = i + 1
+print(round(sum(preco[i], 2)))
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 14:23:23) 
+-- CODE:
+from numpy import *
+preco = array(eval(input("custo: ")))
+i = 0
+p = 0
+while(i < size(preco)):
+	if(preco[i] > 80.0):
+		p = p + preco[i]*(15/100) 
+		i = i + 0
+	else:
+		p = p + preco[i]
+		i = i + 1
+print(round(sum(p), 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 14:24:39) 
+-- CODE:
+from numpy import *
+preco = array(eval(input("custo: ")))
+i = 0
+p = 0
+while(i < size(preco)):
+	if(preco[i] > 80.0):
+		p = p + preco[i]*(15/100) 
+		i = i + 0
+	else:
+		p = p + preco[i]
+		i = i + 1
+print(round(sum(p[i]), 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 14:24:57) 
+-- CODE:
+from numpy import *
+preco = array(eval(input("custo: ")))
+i = 0
+p = 0
+while(i < size(preco)):
+	if(preco[i] > 80.0):
+		p = p + preco[i]*(15/100) 
+		i = i + 0
+	else:
+		p = p + preco[i]
+		i = i + 1
+print(round(sum(p[i]), 2))
+-- EXECUTION TIME:
+0.548859
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1791/1599/main.py", line 12, in <module>
+    print(round(sum(p[i]), 2))
+IndexError: invalid index to scalar variable.
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 14:26:10) 
+-- CODE:
+from numpy import *
+preco = array(eval(input("custo: ")))
+i = 0
+p = []
+while(i < size(preco)):
+	if(preco[i] > 80.0):
+		p = p + preco[i]*(15/100) 
+		i = i + 0
+	else:
+		p = p + preco[i]
+		i = i + 1
+print(round(sum(p[i]), 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 14:26:28) 
+-- CODE:
+from numpy import *
+preco = array(eval(input("custo: ")))
+i = 0
+p = []
+while(i < size(preco)):
+	if(preco[i] > 80.0):
+		p = p + preco[i]*(15/100) 
+		i = i + 0
+	else:
+		p = p + preco[i]
+		i = i + 1
+print(round(sum(p[i]), 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 14:26:48) 
+-- CODE:
+from numpy import *
+preco = array(eval(input("custo: ")))
+i = 0
+p = []
+while(i < size(preco)):
+	if(preco[i] > 80.0):
+		p = p + preco[i]*(15/100) 
+		i = i + 0
+	else:
+		p = p + preco[i]
+		i = i + 1
+print(round(sum(p[i]), 2))
+-- EXECUTION TIME:
+0.586959
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1791/1599/main.py", line 12, in <module>
+    print(round(sum(p[i]), 2))
+IndexError: index 4 is out of bounds for axis 0 with size 0
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 14:28:58) 
+-- CODE:
+from numpy import *
+preco = array(eval(input("custo: ")))
+i = 0
+p = 0
+while(i < size(preco)):
+	if(preco[i] > 80.0):
+		p = p + preco[i]*(15/100) 
+		i = i + 0
+	else:
+		p = p + preco[i]
+		i = i + 1
+print(round(sum(p), 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

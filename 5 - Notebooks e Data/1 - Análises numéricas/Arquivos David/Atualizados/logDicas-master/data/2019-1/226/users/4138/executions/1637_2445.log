@@ -1,0 +1,750 @@
+== TEST (2019-04-06 21:32:37) 
+-- CODE:
+C = float(input("insira a temperatura em celsius:"))
+F = float(input("insira a temperatura em fahrenheit:"))
+opcao = input("escolha a conversao: (C/F)")
+
+CC = (5 * (F - 32))/9
+
+CF = ((9 * C) + 160)/5
+
+if: (opcao == C):
+		mensagem = CC
+		print(round(CC,1))
+else:
+	mensagem = CF
+	print(round(CF,1))
+-- ERROR:
+File "XXXX", line 9
+    if: (opcao == C):
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 21:32:49) 
+-- CODE:
+C = float(input("insira a temperatura em celsius:"))
+F = float(input("insira a temperatura em fahrenheit:"))
+opcao = input("escolha a conversao: (C/F)")
+
+CC = (5 * (F - 32))/9
+
+CF = ((9 * C) + 160)/5
+
+if (opcao == C):
+		mensagem = CC
+		print(round(CC,1))
+else:
+	mensagem = CF
+	print(round(CF,1))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    C = float(input())
+ValueError: could not convert string to float: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 21:34:17) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("insira a temperatura :"))
+
+
+CC = (5 * (F - 32))/9
+
+CF = ((9 * C) + 160)/5
+
+if (opcao == C):
+		mensagem = CC
+		print(round(CC,1))
+else:
+	mensagem = CF
+	print(round(CF,1))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    CC = (5 * (F - 32))/9
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 21:34:39) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("insira a temperatura :"))
+
+
+CC = (5 * (F - 32))/9
+
+CF = ((9 * C) + 160)/5
+
+if (opcao.upper() == C):
+		mensagem = CC
+		print(round(CC,1))
+else:
+	mensagem = CF
+	print(round(CF,1))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    CC = (5 * (F - 32))/9
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 21:36:31) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("insira a temperatura :"))
+
+
+T = (5 * (F - 32))/9
+
+T = ((9 * C) + 160)/5
+
+if (opcao.upper() == C):
+		mensagem = CC
+		print(round(CC,1))
+else:
+	mensagem = CF
+	print(round(CF,1))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    T = (5 * (F - 32))/9
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 21:38:39) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("insira a temperatura : "))
+ 
+T = C
+T = F
+
+C = (5 * (F - 32))/9
+
+F = ((9 * C) + 160)/5
+
+if (opcao.upper() == C):
+		mensagem = CC
+		print(round(CC,2))
+else:
+	mensagem = CF
+	print(round(CF,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    T = C
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 21:57:44) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C = (5 * (T - 32))/9
+
+F = ((9 * T) + 160)/5
+
+if (opcao.upper() == C):
+		mensagem = C
+		print(round(C,2))
+else:
+	mensagem = F
+	print(round(F,2))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:04:54) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C = (5 * (T - 32))/9
+
+F = ((9 * T) + 160)/5
+
+if (opcao.upper() == C):
+		mensagem = F
+		print(round(C,2))
+else:
+	mensagem = C
+	print(round(F,2))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:12:40) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C = (5 * (T - 32))/9
+
+F = ((9 * T) + 160)/5
+
+if (opcao.upper() == C):
+		mensagem = C
+		print(round(C,2))
+else:
+	mensagem = F
+	print(round(F,2))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:13:37) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C = ((5 * T) - 160)/9
+
+F = ((9 * T) + 160)/5
+
+if (opcao.upper() == C):
+		mensagem = C
+		print(round(C,2))
+else:
+	mensagem = F
+	print(round(F,2))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:36:34) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C = ((5 * T) - 160)/9
+
+F = ((9 * T) + 160)/5
+
+if (opcao.upper() == C):
+		mensagem = F
+		print(round(F,2))
+else:
+	mensagem = C
+	print(round(C,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-06 22:36:44) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C = ((5 * T) - 160)/9
+
+F = ((9 * T) + 160)/5
+
+if (opcao.upper() == C):
+		mensagem = F
+		print(round(F,2))
+else:
+	mensagem = C
+	print(round(C,2))
+-- EXECUTION TIME:
+0.125178
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-06 22:36:48) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C = ((5 * T) - 160)/9
+
+F = ((9 * T) + 160)/5
+
+if (opcao.upper() == C):
+		mensagem = F
+		print(round(F,2))
+else:
+	mensagem = C
+	print(round(C,2))
+-- EXECUTION TIME:
+0.250339
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:37:09) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C = ((5 * T) - 160)/9
+
+F = ((9 * T) + 160)/5
+
+if (opcao.upper() == C):
+		mensagem = F
+		print(round(F,2))
+else:
+	mensagem = C
+	print(round(C,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:37:54) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C = ((5 * T) - 160)/9
+
+F = ((9 * T) + 160)/5
+
+if (opcao.upper() == C):
+		mensagem = F
+		print(round(F,2))
+else:
+	mensagem = C
+	print(round(C,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-06 22:38:07) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C = ((5 * T) - 160)/9
+
+F = ((9 * T) + 160)/5
+
+if (opcao.upper() == C):
+		mensagem = F
+		print(round(F,2))
+else:
+	mensagem = C
+	print(round(C,2))
+-- EXECUTION TIME:
+0.198646
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-06 22:38:10) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C = ((5 * T) - 160)/9
+
+F = ((9 * T) + 160)/5
+
+if (opcao.upper() == C):
+		mensagem = F
+		print(round(F,2))
+else:
+	mensagem = C
+	print(round(C,2))
+-- EXECUTION TIME:
+0.146298
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:38:40) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C = ((5 * T) - 160)/9
+
+F = ((9 * T) + 160)/5
+
+if (opcao.upper() == F):
+		mensagem = F
+		print(round(F,2))
+else:
+	mensagem = C
+	print(round(C,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:38:54) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C = ((5 * T) - 160)/9
+
+F = ((9 * T) + 160)/5
+
+if (opcao.upper() == F):
+		mensagem = F
+		print(round(F,2))
+else:
+	mensagem = C
+	print(round(C,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-06 22:39:08) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C = ((5 * T) - 160)/9
+
+F = ((9 * T) + 160)/5
+
+if (opcao.upper() == F):
+		mensagem = F
+		print(round(F,2))
+else:
+	mensagem = C
+	print(round(C,2))
+-- EXECUTION TIME:
+0.161591
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-06 22:39:10) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C = ((5 * T) - 160)/9
+
+F = ((9 * T) + 160)/5
+
+if (opcao.upper() == F):
+		mensagem = F
+		print(round(F,2))
+else:
+	mensagem = C
+	print(round(C,2))
+-- EXECUTION TIME:
+0.121372
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-06 22:39:12) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C = ((5 * T) - 160)/9
+
+F = ((9 * T) + 160)/5
+
+if (opcao.upper() == F):
+		mensagem = F
+		print(round(F,2))
+else:
+	mensagem = C
+	print(round(C,2))
+-- EXECUTION TIME:
+0.126187
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:40:18) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C = ((5 * T) - 160)/9
+
+F = ((9 * T) + 160)/5
+
+if (opcao.upper() == F):
+		mensagem = C
+		print(round(C,2))
+else:
+	mensagem = F
+	print(round(F,2))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-06 22:41:43) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C1 = ((5 * T) - 160)/9
+
+F1 = ((9 * T) + 160)/5
+
+if (opcao.upper() == F):
+		mensagem = C1
+		print(round(C1,2))
+else:
+	mensagem = F1
+	print(round(F1,2))
+-- EXECUTION TIME:
+0.127663
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1637/2445/main.py", line 9, in <module>
+    if (opcao.upper() == F):
+NameError: name 'F' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:41:45) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C1 = ((5 * T) - 160)/9
+
+F1 = ((9 * T) + 160)/5
+
+if (opcao.upper() == F):
+		mensagem = C1
+		print(round(C1,2))
+else:
+	mensagem = F1
+	print(round(F1,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    if (opcao.upper() == F):
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:42:11) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C1 = ((5 * T) - 160)/9
+
+F1 = ((9 * T) + 160)/5
+
+if (opcao.upper() == "F"):
+		mensagem = C1
+		print(round(C1,2))
+else:
+	mensagem = F1
+	print(round(F1,2))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-06 22:42:22) 
+-- CODE:
+opcao = input("escolha a conversao: (C/F)")
+T = float(input("valor da temperatura : "))
+
+
+C1 = ((5 * T) - 160)/9
+
+F1 = ((9 * T) + 160)/5
+
+if (opcao.upper() == "F"):
+		mensagem = C1
+		print(round(C1,2))
+else:
+	mensagem = F1
+	print(round(F1,2))
+-- EXECUTION TIME:
+0.153273
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

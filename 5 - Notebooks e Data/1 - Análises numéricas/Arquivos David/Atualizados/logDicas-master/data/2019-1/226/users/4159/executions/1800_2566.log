@@ -1,0 +1,176 @@
+== TEST (2019-06-13 01:15:53) 
+-- CODE:
+from numpy import *
+v = array(eval(input("dias: ")))
+r = zeros(6, dtype=int)
+for i in range(size(v)):
+	if(v[i]==2):
+		r[0]=r[0]+1
+	elif(v[i]==3):
+		r[1]=r[1]+1
+	elif(v[i]==4):
+		r[2]=r[2]+1
+	elif(v[i]==5):
+		r[3]=r[3]+1
+	elif(v[i]==6):
+		r[4]=r[4]+1
+	elif(v[i]==7):
+		r[5]=r[5]+1
+d = sum(r)
+for f in r:
+	f =round((f/d)*100, 1)
+print(r)
+
+
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 01:17:36) 
+-- CODE:
+from numpy import *
+v = array(eval(input("dias: ")))
+r = zeros(6, dtype=int)
+for i in range(size(v)):
+	if(v[i]==2):
+		r[0]=r[0]+1
+	elif(v[i]==3):
+		r[1]=r[1]+1
+	elif(v[i]==4):
+		r[2]=r[2]+1
+	elif(v[i]==5):
+		r[3]=r[3]+1
+	elif(v[i]==6):
+		r[4]=r[4]+1
+	elif(v[i]==7):
+		r[5]=r[5]+1
+d = sum(r)
+for f in range(size(r)):
+	 r[f]=round((r[f]/d)*100, 1)
+print(r)
+
+
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 01:18:02) 
+-- CODE:
+from numpy import *
+v = array(eval(input("dias: ")))
+r = zeros(6, dtype=int)
+for i in range(size(v)):
+	if(v[i]==2):
+		r[0]=r[0]+1
+	elif(v[i]==3):
+		r[1]=r[1]+1
+	elif(v[i]==4):
+		r[2]=r[2]+1
+	elif(v[i]==5):
+		r[3]=r[3]+1
+	elif(v[i]==6):
+		r[4]=r[4]+1
+	elif(v[i]==7):
+		r[5]=r[5]+1
+d = sum(r)
+for f in range(size(r)):
+	 r[f]=round((r[f]/d)*100, 1)
+print(r)
+
+
+
+
+
+
+-- EXECUTION TIME:
+1.2954
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18  0  0 18 25 37]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 4  8 16 20 20 32]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[15  7 23  7 15 30]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 01:18:20) 
+-- CODE:
+from numpy import *
+v = array(eval(input("dias: ")))
+r = zeros(6, dtype=float)
+for i in range(size(v)):
+	if(v[i]==2):
+		r[0]=r[0]+1
+	elif(v[i]==3):
+		r[1]=r[1]+1
+	elif(v[i]==4):
+		r[2]=r[2]+1
+	elif(v[i]==5):
+		r[3]=r[3]+1
+	elif(v[i]==6):
+		r[4]=r[4]+1
+	elif(v[i]==7):
+		r[5]=r[5]+1
+d = sum(r)
+for f in range(size(r)):
+	 r[f]=round((r[f]/d)*100, 1)
+print(r)
+
+
+
+
+
+
+-- EXECUTION TIME:
+1.28189
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.  18.8 25.  37.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 4.  8. 16. 20. 20. 32.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[15.4  7.7 23.1  7.7 15.4 30.8]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

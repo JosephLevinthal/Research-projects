@@ -1,0 +1,299 @@
+== TEST (2019-04-14 22:26:08) 
+-- CODE:
+from math import *
+
+raio = float(input("Raio: "))
+alturaX = float(input("Altura da Coluna de Ar: "))
+
+volumeAr = ((pi * (alturaX ** 2)) * ((3 * pi) - alturaX)) / 3
+
+print (volumeAr)
+
+-- OUTPUT:
+8.009476971525963
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 22:26:48) 
+-- CODE:
+from math import *
+
+raio = float(input("Raio: "))
+alturaX = float(input("Altura da Coluna de Ar: "))
+
+volumeAr = ((pi * (alturaX ** 2)) * ((3 * pi) - alturaX)) / 3
+
+print (round(volumeAr,4))
+
+-- OUTPUT:
+8.0095
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 22:30:04) 
+-- CODE:
+from math import *
+
+raio = float(input("Raio: "))
+alturaX = float(input("Altura da Coluna de Ar: "))
+
+volumeAr = ((pi * (alturaX ** 2)) * ((3 * pi) - alturaX)) / 3
+volumeEsfera = (4 * pi * (raio ** 3)) / 3
+volumeCombustivel = volumeEsfera - volumeAr
+
+print (round(volumeAr,4))
+print (round(volumeCombustivel,4))
+-- OUTPUT:
+8.0095
+171.5849
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 22:33:58) 
+-- CODE:
+from math import *
+
+raio = float(input("Raio: "))
+alturaX = float(input("Altura da Coluna de Ar: "))
+opcao = str("Opcao desejada (1- Volume de Ar | 2- Volume do Combustivel) ")
+
+volumeAr = ((pi * (alturaX ** 2)) * ((3 * pi) - alturaX)) / 3
+volumeEsfera = (4 * pi * (raio ** 3)) / 3
+volumeCombustivel = volumeEsfera - volumeAr
+
+if opcao == 1:
+	print (round(volumeAr,4))
+else:
+	print (round(volumeCombustivel,4))
+-- OUTPUT:
+171.5849
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 22:34:30) 
+-- CODE:
+from math import *
+
+raio = float(input("Raio: "))
+alturaX = float(input("Altura da Coluna de Ar: "))
+opcao = str("Opcao desejada (1- Volume de Ar | 2- Volume do Combustivel) ")
+
+volumeAr = ((pi * (alturaX ** 2)) * ((3 * pi) - alturaX)) / 3
+volumeEsfera = (4 * pi * (raio ** 3)) / 3
+volumeCombustivel = volumeEsfera - volumeAr
+
+if opcao == 1:
+	print (round(volumeAr,4))
+else:
+	print (round(volumeCombustivel,4))
+-- EXECUTION TIME:
+0.145639
+-- TEST CASE 1:
+---- input:
+3.50
+0.95
+1
+---- correct output:
+9.0257
+---- user output:
+171.5849
+-- TEST CASE 2:
+---- input:
+4.20
+1.30
+2
+---- correct output:
+290.3408
+---- user output:
+295.9602
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 22:35:16) 
+-- CODE:
+from math import *
+
+raio = float(input("Raio: "))
+alturaX = float(input("Altura da Coluna de Ar: "))
+opcao = int("Opcao desejada (1- Volume de Ar | 2- Volume do Combustivel) ")
+
+volumeAr = ((pi * (alturaX ** 2)) * ((3 * pi) - alturaX)) / 3
+volumeEsfera = (4 * pi * (raio ** 3)) / 3
+volumeCombustivel = volumeEsfera - volumeAr
+
+if opcao == 1:
+	print (round(volumeAr,4))
+else:
+	print (round(volumeCombustivel,4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    opcao = int("Opcao desejada (1- Volume de Ar | 2- Volume do Combustivel) ")
+ValueError: invalid literal for int() with base 10: 'Opcao desejada (1- Volume de Ar | 2- Volume do Combustivel) '
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 22:35:44) 
+-- CODE:
+from math import *
+
+raio = float(input("Raio: "))
+alturaX = float(input("Altura da Coluna de Ar: "))
+opcao = int(input("Opcao desejada (1- Volume de Ar | 2- Volume do Combustivel) "))
+
+volumeAr = ((pi * (alturaX ** 2)) * ((3 * pi) - alturaX)) / 3
+volumeEsfera = (4 * pi * (raio ** 3)) / 3
+volumeCombustivel = volumeEsfera - volumeAr
+
+if opcao == 1:
+	print (round(volumeAr,4))
+else:
+	print (round(volumeCombustivel,4))
+-- EXECUTION TIME:
+0.125585
+-- TEST CASE 1:
+---- input:
+3.50
+0.95
+1
+---- correct output:
+9.0257
+---- user output:
+8.0095
+-- TEST CASE 2:
+---- input:
+4.20
+1.30
+2
+---- correct output:
+290.3408
+---- user output:
+295.9602
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 22:35:53) 
+-- CODE:
+from math import *
+
+raio = float(input("Raio: "))
+alturaX = float(input("Altura da Coluna de Ar: "))
+opcao = int(input("Opcao desejada (1- Volume de Ar | 2- Volume do Combustivel) "))
+
+volumeAr = ((pi * (alturaX ** 2)) * ((3 * pi) - alturaX)) / 3
+volumeEsfera = (4 * pi * (raio ** 3)) / 3
+volumeCombustivel = volumeEsfera - volumeAr
+
+if opcao == 1:
+	print (round(volumeAr,4))
+else:
+	print (round(volumeCombustivel,4))
+-- OUTPUT:
+8.0095
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 22:36:17) 
+-- CODE:
+from math import *
+
+raio = float(input("Raio: "))
+alturaX = float(input("Altura da Coluna de Ar: "))
+opcao = int(input("Opcao desejada (1- Volume de Ar | 2- Volume do Combustivel) "))
+
+volumeAr = ((pi * (alturaX ** 2)) * ((3 * pi) - alturaX)) / 3
+volumeEsfera = (4 * pi * (raio ** 3)) / 3
+volumeCombustivel = volumeEsfera - volumeAr
+
+if opcao == 1:
+	print (round(volumeAr,4))
+else:
+	print (round(volumeCombustivel,4))
+-- EXECUTION TIME:
+0.180871
+-- TEST CASE 1:
+---- input:
+3.50
+0.95
+1
+---- correct output:
+9.0257
+---- user output:
+8.0095
+-- TEST CASE 2:
+---- input:
+4.20
+1.30
+2
+---- correct output:
+290.3408
+---- user output:
+295.9602
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 22:37:14) 
+-- CODE:
+from math import *
+
+raio = float(input("Raio: "))
+alturaX = float(input("Altura da Coluna de Ar: "))
+opcao = int(input("Opcao desejada (1- Volume de Ar | 2- Volume do Combustivel) "))
+
+volumeAr = ((pi * (alturaX ** 2)) * ((3 * pi) - alturaX)) / 3
+volumeEsfera = (4 * pi * (raio ** 3)) / 3
+volumeCombustivel = volumeEsfera - volumeAr
+
+if opcao == 1:
+	print (round(volumeAr,4))
+else:
+	print (round(volumeCombustivel,4))
+-- OUTPUT:
+8.0095
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 22:39:19) 
+-- CODE:
+from math import *
+
+raio = float(input("Raio: "))
+alturaX = float(input("Altura da Coluna de Ar: "))
+opcao = int(input("Opcao desejada (1- Volume de Ar | 2- Volume do Combustivel) "))
+
+volumeAr = ((pi * (alturaX ** 2)) * ((3 * raio) - alturaX)) / 3
+volumeEsfera = (4 * pi * (raio ** 3)) / 3
+volumeCombustivel = volumeEsfera - volumeAr
+
+if opcao == 1:
+	print (round(volumeAr,4))
+else:
+	print (round(volumeCombustivel,4))
+-- OUTPUT:
+9.0257
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 22:39:41) 
+-- CODE:
+from math import *
+
+raio = float(input("Raio: "))
+alturaX = float(input("Altura da Coluna de Ar: "))
+opcao = int(input("Opcao desejada (1- Volume de Ar | 2- Volume do Combustivel) "))
+
+volumeAr = ((pi * (alturaX ** 2)) * ((3 * raio) - alturaX)) / 3
+volumeEsfera = (4 * pi * (raio ** 3)) / 3
+volumeCombustivel = volumeEsfera - volumeAr
+
+if opcao == 1:
+	print (round(volumeAr,4))
+else:
+	print (round(volumeCombustivel,4))
+-- EXECUTION TIME:
+0.17683
+-- TEST CASE 1:
+---- input:
+3.50
+0.95
+1
+---- correct output:
+9.0257
+---- user output:
+9.0257
+-- TEST CASE 2:
+---- input:
+4.20
+1.30
+2
+---- correct output:
+290.3408
+---- user output:
+290.3408
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

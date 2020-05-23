@@ -1,0 +1,137 @@
+== TEST (2019-04-17 14:51:41) 
+-- CODE:
+# Teste seu código aos poucos. Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Ao testar sua solução, não se limite ao caso de exemplo. Teste as diversas possibilidades de saída
+a = float(input ("Lado 1: "))
+b = float(input ("Lado 2: "))
+c = float(input ("Lado 3: "))
+
+if(a and b and c > 0):
+	if(a == b and b == a):
+		print("Tipo de triangulo: equilatero")
+	if(a == b or b == c or c == a):
+		print("Tipo de triangulo: isosceles")
+	if(a != b or b!= c or c!= a):
+		print("Tipo de triangulo: escaleno")
+else:
+	print("Tipo de triangulo: invalido")
+		
+-- OUTPUT:
+Tipo de triangulo: isosceles
+Tipo de triangulo: escaleno
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-17 14:54:26) 
+-- CODE:
+# Teste seu código aos poucos. Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Ao testar sua solução, não se limite ao caso de exemplo. Teste as diversas possibilidades de saída
+a = float(input ("Lado 1: "))
+b = float(input ("Lado 2: "))
+c = float(input ("Lado 3: "))
+
+print("Entradas:", a, ",", b, ",", c)
+
+if(a and b and c > 0):
+	if(a == b and b == a):
+		print("Tipo de triangulo: equilatero")
+	if(a == b or b == c or c == a):
+		print("Tipo de triangulo: isosceles")
+	if(a != b or b!= c or c!= a):
+		print("Tipo de triangulo: escaleno")
+else:
+	print("Tipo de triangulo: invalido")
+		
+-- OUTPUT:
+Entradas: 2.0 , 4.0 , 4.0
+Tipo de triangulo: isosceles
+Tipo de triangulo: escaleno
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-19 21:48:57) 
+-- CODE:
+# Teste seu código aos poucos. Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Ao testar sua solução, não se limite ao caso de exemplo. Teste as diversas possibilidades de saída
+a = float(input ("Lado 1: "))
+b = float(input ("Lado 2: "))
+c = float(input ("Lado 3: "))
+
+print("Entradas:", a, ",", b, ",", c)
+
+if(a > 0 and b > 0 and c > 0):
+	if(a + b > c and a + c > b and c + b > a):
+		
+		if(a == b and b == c):
+			print("Tipo de triangulo: equilatero")
+		elif(a == b or b == c or c == a):
+			print("Tipo de triangulo: isosceles")
+		else:
+			print("Tipo de triangulo: escaleno")
+	else:
+		print("Tipo de triangulo: invalido")
+else:
+	print("Tipo de triangulo: invalido")
+		
+-- OUTPUT:
+Entradas: 2.0 , 4.0 , 4.0
+Tipo de triangulo: isosceles
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-19 21:49:08) 
+-- CODE:
+# Teste seu código aos poucos. Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Ao testar sua solução, não se limite ao caso de exemplo. Teste as diversas possibilidades de saída
+a = float(input ("Lado 1: "))
+b = float(input ("Lado 2: "))
+c = float(input ("Lado 3: "))
+
+print("Entradas:", a, ",", b, ",", c)
+
+if(a > 0 and b > 0 and c > 0):
+	if(a + b > c and a + c > b and c + b > a):
+		
+		if(a == b and b == c):
+			print("Tipo de triangulo: equilatero")
+		elif(a == b or b == c or c == a):
+			print("Tipo de triangulo: isosceles")
+		else:
+			print("Tipo de triangulo: escaleno")
+	else:
+		print("Tipo de triangulo: invalido")
+else:
+	print("Tipo de triangulo: invalido")
+		
+-- EXECUTION TIME:
+0.140967
+-- TEST CASE 1:
+---- input:
+2
+4
+4
+---- correct output:
+Entradas: 2.0 , 4.0 , 4.0
+Tipo de triangulo: isosceles
+---- user output:
+Entradas: 2.0 , 4.0 , 4.0
+Tipo de triangulo: isosceles
+-- TEST CASE 2:
+---- input:
+3.3
+4.4
+5.5
+---- correct output:
+Entradas: 3.3 , 4.4 , 5.5
+Tipo de triangulo: escaleno
+---- user output:
+Entradas: 3.3 , 4.4 , 5.5
+Tipo de triangulo: escaleno
+-- TEST CASE 3:
+---- input:
+1
+2
+7
+---- correct output:
+Entradas: 1.0 , 2.0 , 7.0
+Tipo de triangulo: invalido
+---- user output:
+Entradas: 1.0 , 2.0 , 7.0
+Tipo de triangulo: invalido
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

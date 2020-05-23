@@ -1,0 +1,8 @@
+xa=float(input(""))
+ya=float(input(""))
+xb=float(input(""))
+yb=float(input(""))
+r1=((xa+xb)/2)
+r2=((ya+yb)/2)
+print(round(r1,1))
+print(round(r2,1))

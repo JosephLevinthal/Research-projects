@@ -1,0 +1,80 @@
+== TEST (2019-04-15 15:15:14) 
+-- CODE:
+opcao = ("S/N? ")
+ing = float(input("Valor do ingresso: "))
+n = int(input("Qtd de ingressos? "))
+# Desconto
+n2 = (ing - (ing * 20/100)) * n
+n3 = ing * n
+if(opcao == "S"):
+	msg = n2
+else:
+	msg =  n3
+print(round(msg, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    ing = float(input())
+ValueError: could not convert string to float: 'S'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:15:29) 
+-- CODE:
+opcao = input("S/N? ")
+ing = float(input("Valor do ingresso: "))
+n = int(input("Qtd de ingressos? "))
+# Desconto
+n2 = (ing - (ing * 20/100)) * n
+n3 = ing * n
+if(opcao == "S"):
+	msg = n2
+else:
+	msg =  n3
+print(round(msg, 2))
+-- OUTPUT:
+180.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 15:15:42) 
+-- CODE:
+opcao = input("S/N? ")
+ing = float(input("Valor do ingresso: "))
+n = int(input("Qtd de ingressos? "))
+# Desconto
+n2 = (ing - (ing * 20/100)) * n
+n3 = ing * n
+if(opcao == "S"):
+	msg = n2
+else:
+	msg =  n3
+print(round(msg, 2))
+-- EXECUTION TIME:
+0.245372
+-- TEST CASE 1:
+---- input:
+S
+37.50
+6
+---- correct output:
+180
+---- user output:
+180.0
+-- TEST CASE 2:
+---- input:
+S
+26.95
+8
+---- correct output:
+172.48
+---- user output:
+172.48
+-- TEST CASE 3:
+---- input:
+N
+42.45
+3
+---- correct output:
+127.35
+---- user output:
+127.35
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

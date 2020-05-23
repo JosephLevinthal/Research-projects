@@ -1,0 +1,735 @@
+== TEST (2019-07-02 18:31:40) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(input("matriz: "))
+media=sum.notas[i]/shape[0]
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 18:32:28) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(input("matriz: "))
+media=sum(notas[i])/shape[0]
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 18:32:51) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(input("matriz: "))
+media=sum(notas[0])/shape[0]
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 18:36:01) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(input("matriz: "))
+for i in range (notas):
+	for j in range (notas):
+		media=sum(notas[i])/shape[0]
+		if media>=5:
+			ap=ap+1
+		elif media>=5:
+			ap=ap+0
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 18:37:51) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(input("matriz: "))
+ap=0
+for i in range (notas):
+	for j in range (notas):
+		media=sum(notas[i,j])/shape[1]
+		if media>=5:
+			ap=ap+1
+		elif media>=5:
+			ap=ap+0
+print(ap)
+-- EXECUTION TIME:
+1.08863
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1875/1719/main.py", line 5, in <module>
+    for i in range (notas):
+TypeError: only integer scalar arrays can be converted to a scalar index
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 18:41:33) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(input("matriz: "))
+ap=0
+for i in range (notas.shape[0]):
+	for j in range (notas.shape[0]):
+		media=sum(notas[i,j])/shape[1]
+		if media>=5:
+			ap=ap+1
+		elif media>=5:
+			ap=ap+0
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 18:42:52) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(float(input("matriz: ")))
+ap=0
+for i in range (notas.shape[0]):
+	for j in range (notas.shape[0]):
+		media=sum(notas[i,j])/shape[1]
+		if media>=5:
+			ap=ap+1
+		elif media>=5:
+			ap=ap+0
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 18:43:24) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(input("matriz: "))
+ap=0
+for i in range (notas.shape[0]):
+	for j in range (notas.shape[0]):
+		media=sum(notas[i,j])/shape[1]
+		if media>=5:
+			ap=ap+1
+		elif media>=5:
+			ap=ap+0
+print(ap)
+-- EXECUTION TIME:
+1.19844
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1875/1719/main.py", line 5, in <module>
+    for i in range (notas.shape[0]):
+IndexError: tuple index out of range
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 18:49:46) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(input("matriz: "))
+ap=0
+for i in range (shape(notas)[0]):
+	for j in range (shape(notas)[0]):
+		media=sum(notas[i,j])/shape[1]
+		if media>=5:
+			ap=ap+1
+		elif media>=5:
+			ap=ap+0
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:03:46) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(input("matriz: "))
+ap=0
+media=sum(notas[i,j])/shape[1]
+if media>=5:
+	ap=ap+1
+elif media>=5:
+	ap=ap+0
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:04:51) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(input("matriz: "))
+ap=0
+media=sum(notas[0])/shape[1]
+if media>=5:
+	ap=ap+1
+elif media>=5:
+	ap=ap+0
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:05:37) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+media=sum(notas[0])/shape[1]
+if media>=5:
+	ap=ap+1
+elif media>=5:
+	ap=ap+0
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:07:57) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+media=sum(shape(notas)[0])/shape[1]
+if media>=5:
+	ap=ap+1
+elif media>=5:
+	ap=ap+0
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:09:02) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+media=sum(shape(notas)[0])/shape[0]
+if media>=5:
+	ap=ap+1
+elif media>=5:
+	ap=ap+0
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:09:15) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+media=sum(shape(notas)[0])/shape(notas)[0]
+if media>=5:
+	ap=ap+1
+elif media>=5:
+	ap=ap+0
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:10:15) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+media=sum(notas[1,:])/shape(notas)[0]
+if media>=5:
+	ap=ap+1
+elif media>=5:
+	ap=ap+0
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:10:45) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+i=0
+media=sum(notas[i,:])/shape(notas)[0]
+if media>=5:
+	ap=ap+1
+elif media>=5:
+	ap=ap+0
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 19:11:00) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+i=0
+media=sum(notas[i,:])/shape(notas)[0]
+if media>=5:
+	ap=ap+1
+elif media>=5:
+	ap=ap+0
+print(ap)
+-- EXECUTION TIME:
+1.14319
+-- TEST CASE 1:
+---- input:
+[[8.7,8.6,2.2],[5.3,8.0,4.9],[0.3,4.4,9.9]]
+---- correct output:
+2
+---- user output:
+1
+-- TEST CASE 2:
+---- input:
+[[9.5,0.5,8.1],[1.4,5.3,4.0],[9.4,2.6,2.7]]
+---- correct output:
+1
+---- user output:
+1
+-- TEST CASE 3:
+---- input:
+[[9.4,3.0,2.6,8.5],[3.9,6.2,6.5,2.1],[8.8,5.2,8.3,9.6],[2.1,2.0,2.1,3.3]]
+---- correct output:
+2
+---- user output:
+1
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:11:46) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+i=0
+media=sum(notas[i,:])/shape(notas)[0]
+if media>=5:
+	ap=ap+1
+	i=i+1
+elif media>=5:
+	ap=ap+0
+	i=i+1
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:12:15) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+i=0
+media=sum(notas[i,:])/shape(notas)[0]
+if media>=5:
+	ap=ap+1
+i=i+1
+elif media>=5:
+	ap=ap+0
+i=i+1
+print(ap)
+-- ERROR:
+File "XXXX", line 10
+    elif media>=5:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:12:55) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+i=0
+media=sum(notas[i,:])/shape(notas)[0]
+if media>=5:
+	ap=ap+1
+	i=i+1
+elif media>=5:
+	ap=ap+0
+	i=i+1
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:13:34) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+i=0
+media=sum(notas[i,:])/shape(notas)[0]
+if media>=5:
+	ap=ap+1
+	i=i+1
+elif media<=5:
+	ap=ap+0
+	i=i+1
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:13:47) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+i=0
+media=sum(notas[i,:])/shape(notas)[0]
+if media>=5:
+	ap=ap+1
+	i=i+1
+elif media<5:
+	ap=ap+0
+	i=i+1
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:15:20) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+i=0
+for i in range (shape(notas)[0]):
+media=sum(notas[i,:])/shape(notas)[0]
+if media>=5:
+	ap=ap+1
+	i=i+1
+elif media<5:
+	ap=ap+0
+	i=i+1
+print(ap)
+-- ERROR:
+File "XXXX", line 7
+    media=sum(notas[i,:])/shape(notas)[0]
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:17:03) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+i=0
+media=sum(notas[i,:])/shape(notas)[0]
+for i in range (shape(notas)[0]):
+if media>=5:
+	ap=ap+1
+	i=i+1
+elif media<5:
+	ap=ap+0
+	i=i+1
+print(ap)
+-- ERROR:
+File "XXXX", line 8
+    if media>=5:
+     ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:17:56) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+i=0
+media=sum(notas[i,:])/shape(notas)[0]
+for i in range (shape(notas)[0]):
+if (media>=5):
+	ap=ap+1
+	i=i+1
+elif (media<5):
+	ap=ap+0
+	i=i+1
+print(ap)
+-- ERROR:
+File "XXXX", line 8
+    if (media>=5):
+     ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 19:18:13) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+i=0
+media=sum(notas[i,:])/shape(notas)[0]
+for i in range (shape(notas)[0]):
+if (media>=5):
+	ap=ap+1
+	i=i+1
+elif (media<5):
+	ap=ap+0
+	i=i+1
+print(ap)
+-- EXECUTION TIME:
+0.751073
+-- ERROR:
+  File "/home/codebench/codes/1875/1719/main.py", line 8
+    if (media>=5):
+     ^
+IndentationError: expected an indented block
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:18:39) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+i=0
+media=sum(notas[i,:])/shape(notas)[0]
+for i in range (shape(notas)[0]):
+if (media>=5):
+	ap=ap+1
+	i=i+1
+elif (media<5):
+	ap=ap+0
+	i=i+1
+print(ap)
+-- ERROR:
+File "XXXX", line 8
+    if (media>=5):
+     ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:19:21) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+i=0
+media=sum(notas[i,:])/shape(notas)[0]
+for i in range (shape(notas)[0]):
+	if (media>=5):
+		ap=ap+1
+		i=i+1
+	elif (media<5):
+		ap=ap+0
+		i=i+1
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 19:19:36) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+i=0
+media=sum(notas[i,:])/shape(notas)[0]
+for i in range (shape(notas)[0]):
+	if (media>=5):
+		ap=ap+1
+		i=i+1
+	elif (media<5):
+		ap=ap+0
+		i=i+1
+print(ap)
+-- EXECUTION TIME:
+1.1564
+-- TEST CASE 1:
+---- input:
+[[8.7,8.6,2.2],[5.3,8.0,4.9],[0.3,4.4,9.9]]
+---- correct output:
+2
+---- user output:
+3
+-- TEST CASE 2:
+---- input:
+[[9.5,0.5,8.1],[1.4,5.3,4.0],[9.4,2.6,2.7]]
+---- correct output:
+1
+---- user output:
+3
+-- TEST CASE 3:
+---- input:
+[[9.4,3.0,2.6,8.5],[3.9,6.2,6.5,2.1],[8.8,5.2,8.3,9.6],[2.1,2.0,2.1,3.3]]
+---- correct output:
+2
+---- user output:
+4
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:20:04) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+i=0
+media=sum(notas[i,:])/shape(notas)[0]
+for i in range (shape(notas)[0]):
+	if (media>=5):
+		ap=ap+1
+		i=i+1
+	elif (media<5):
+		ap=ap+0
+		i=i+1
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:22:10) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+i=0
+for i in range (shape(notas)[0]):
+media=(sum(notas[i,:]))/shape(notas)[0]
+	if (media>=5):
+		ap=ap+1
+		i=i+1
+	elif (media<5):
+		ap=ap+0
+		i=i+1
+print(ap)
+-- ERROR:
+File "XXXX", line 7
+    media=(sum(notas[i,:]))/shape(notas)[0]
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 19:22:21) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+i=0
+for i in range (shape(notas)[0]):
+	media=(sum(notas[i,:]))/shape(notas)[0]
+	if (media>=5):
+		ap=ap+1
+		i=i+1
+	elif (media<5):
+		ap=ap+0
+		i=i+1
+print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 19:22:35) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+notas=array(eval(input("matriz: ")))
+ap=0
+i=0
+for i in range (shape(notas)[0]):
+	media=(sum(notas[i,:]))/shape(notas)[0]
+	if (media>=5):
+		ap=ap+1
+		i=i+1
+	elif (media<5):
+		ap=ap+0
+		i=i+1
+print(ap)
+-- EXECUTION TIME:
+1.20753
+-- TEST CASE 1:
+---- input:
+[[8.7,8.6,2.2],[5.3,8.0,4.9],[0.3,4.4,9.9]]
+---- correct output:
+2
+---- user output:
+2
+-- TEST CASE 2:
+---- input:
+[[9.5,0.5,8.1],[1.4,5.3,4.0],[9.4,2.6,2.7]]
+---- correct output:
+1
+---- user output:
+1
+-- TEST CASE 3:
+---- input:
+[[9.4,3.0,2.6,8.5],[3.9,6.2,6.5,2.1],[8.8,5.2,8.3,9.6],[2.1,2.0,2.1,3.3]]
+---- correct output:
+2
+---- user output:
+2
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

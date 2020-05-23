@@ -1,0 +1,84 @@
+== TEST (2019-03-28 10:52:56) 
+-- CODE:
+a = int(input("Numero: "))
+uni = a//1530
+print(uni)
+-- OUTPUT:
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:53:13) 
+-- CODE:
+a = int(input("Numero: "))
+uni = a%1530
+print(uni)
+-- OUTPUT:
+470
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:57:33) 
+-- CODE:
+a = int(input("Numero: "))
+mil = a//1000
+cem = a//100 - (uni*10)
+dez = a//10 - (a//100)*10
+uni = a%10
+
+verificacao = (5*mil + 4*cem + 3*dez + 2*uni)%11
+print(verificacao)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    cem = a//100 - (uni*10)
+NameError: name 'uni' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:57:48) 
+-- CODE:
+a = int(input("Numero: "))
+mil = a//1000
+cem = a//100 - (mil*10)
+dez = a//10 - (a//100)*10
+uni = a%10
+
+verificacao = (5*mil + 4*cem + 3*dez + 2*uni)%11
+print(verificacao)
+
+-- OUTPUT:
+10
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-28 10:57:53) 
+-- CODE:
+a = int(input("Numero: "))
+mil = a//1000
+cem = a//100 - (mil*10)
+dez = a//10 - (a//100)*10
+uni = a%10
+
+verificacao = (5*mil + 4*cem + 3*dez + 2*uni)%11
+print(verificacao)
+
+-- EXECUTION TIME:
+0.122995
+-- TEST CASE 1:
+---- input:
+2000
+---- correct output:
+10
+---- user output:
+10
+-- TEST CASE 2:
+---- input:
+3550
+---- correct output:
+6
+---- user output:
+6
+-- TEST CASE 3:
+---- input:
+0007
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

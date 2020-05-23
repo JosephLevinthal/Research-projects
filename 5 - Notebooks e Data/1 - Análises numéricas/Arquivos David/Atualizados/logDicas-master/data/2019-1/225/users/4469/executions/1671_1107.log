@@ -1,0 +1,711 @@
+== SUBMITION (2019-04-29 22:48:48) 
+-- CODE:
+x = int(input("Entre com o numero do dia de hoje: "))
+
+if(0 > x) or (x > 6):
+	print("A entrada ", x, " eh invalida")
+	
+y = int(input("Entre com o numero de dias apos hoje: "))
+
+if(y >= 7):
+	if(y % 7 != 0):
+		dia_futuro = x + ((y % 7) - 2)
+		if(dia_futuro > 6):
+			dia_futuro = (dia_futuro - 6) - 1
+	else:
+		dia_futuro = x
+else:
+	dia_futuro = x + y
+	if(dia_futuro > 6):
+		dia_futuro = (dia_futuro - 6) - 1
+		
+if(x == 0):
+	strx = "domingo"
+elif(x == 1):
+	strx = "segunda"
+elif(x == 2):
+	strx = "terca"
+elif(x == 3):
+	strx = "quarta"
+elif(x == 4):
+	strx = "quinta"
+elif(x == 5):
+	strx = "sexta"
+else:
+	strx = "sabado"
+	
+if(y == 0):
+	stry = "domingo"
+elif(y == 1):
+	stry = "segunda"
+elif(y == 2):
+	stry = "terca"
+elif(y == 3):
+	stry = "quarta"
+elif(y == 4):
+	stry = "quinta"
+elif(y == 5):
+	stry = "sexta"
+else:
+	stry = "sabado"
+	
+print("Hoje eh ", strx, " e o dia futuro eh ", stry)
+-- EXECUTION TIME:
+0.168657
+-- TEST CASE 1:
+---- input:
+9
+9
+
+---- correct output:
+A entrada 9 eh invalida
+---- user output:
+A entrada  9  eh invalida
+Hoje eh  sabado  e o dia futuro eh  sabado
+-- TEST CASE 2:
+---- input:
+6
+1024
+---- correct output:
+Hoje eh sabado e o dia futuro eh segunda
+---- user output:
+Hoje eh  sabado  e o dia futuro eh  sabado
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 22:48:58) 
+-- CODE:
+x = int(input("Entre com o numero do dia de hoje: "))
+
+if(0 > x) or (x > 6):
+	print("A entrada ", x, " eh invalida")
+	
+y = int(input("Entre com o numero de dias apos hoje: "))
+
+if(y >= 7):
+	if(y % 7 != 0):
+		dia_futuro = x + ((y % 7) - 2)
+		if(dia_futuro > 6):
+			dia_futuro = (dia_futuro - 6) - 1
+	else:
+		dia_futuro = x
+else:
+	dia_futuro = x + y
+	if(dia_futuro > 6):
+		dia_futuro = (dia_futuro - 6) - 1
+		
+if(x == 0):
+	strx = "domingo"
+elif(x == 1):
+	strx = "segunda"
+elif(x == 2):
+	strx = "terca"
+elif(x == 3):
+	strx = "quarta"
+elif(x == 4):
+	strx = "quinta"
+elif(x == 5):
+	strx = "sexta"
+else:
+	strx = "sabado"
+	
+if(y == 0):
+	stry = "domingo"
+elif(y == 1):
+	stry = "segunda"
+elif(y == 2):
+	stry = "terca"
+elif(y == 3):
+	stry = "quarta"
+elif(y == 4):
+	stry = "quinta"
+elif(y == 5):
+	stry = "sexta"
+else:
+	stry = "sabado"
+	
+print("Hoje eh ", strx, " e o dia futuro eh ", stry)
+-- OUTPUT:
+A entrada  9  eh invalida
+Hoje eh  sabado  e o dia futuro eh  sabado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 22:54:43) 
+-- CODE:
+x = int(input("Entre com o numero do dia de hoje: "))
+
+if(0 > x) or (x > 6):
+	print("A entrada ", x, " eh invalida")
+	
+y = int(input("Entre com o numero de dias apos hoje: "))
+
+if(y >= 7):
+	if(y % 7 != 0):
+		dia_futuro = x + ((y % 7) - 2)
+		if(dia_futuro > 6):
+			dia_futuro = (dia_futuro - 6) - 1
+	else:
+		dia_futuro = x
+else:
+	dia_futuro = x + y
+	if(dia_futuro > 6):
+		dia_futuro = (dia_futuro - 6) - 1
+		
+if(x == 0):
+	strx = "domingo"
+elif(x == 1):
+	strx = "segunda"
+elif(x == 2):
+	strx = "terca"
+elif(x == 3):
+	strx = "quarta"
+elif(x == 4):
+	strx = "quinta"
+elif(x == 5):
+	strx = "sexta"
+else:
+	strx = "sabado"
+	
+if(dia_futuro == 0):
+	stry = "segunda"
+elif(dia_futuro == 1):
+	stry = "terca"
+elif(dia_futuro == 2):
+	stry = "quarta"
+elif(dia_futuro == 3):
+	stry = "quinta"
+elif(dia_futuro == 4):
+	stry = "sexta"
+elif(dia_futuro == 5):
+	stry = "sabado"
+else:
+	stry = "domingo"
+	
+print("Hoje eh ", strx, " e o dia futuro eh ", stry)
+-- EXECUTION TIME:
+0.22115
+-- TEST CASE 1:
+---- input:
+9
+9
+
+---- correct output:
+A entrada 9 eh invalida
+---- user output:
+A entrada  9  eh invalida
+Hoje eh  sabado  e o dia futuro eh  quarta
+-- TEST CASE 2:
+---- input:
+6
+1024
+---- correct output:
+Hoje eh sabado e o dia futuro eh segunda
+---- user output:
+Hoje eh  sabado  e o dia futuro eh  domingo
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 22:54:47) 
+-- CODE:
+x = int(input("Entre com o numero do dia de hoje: "))
+
+if(0 > x) or (x > 6):
+	print("A entrada ", x, " eh invalida")
+	
+y = int(input("Entre com o numero de dias apos hoje: "))
+
+if(y >= 7):
+	if(y % 7 != 0):
+		dia_futuro = x + ((y % 7) - 2)
+		if(dia_futuro > 6):
+			dia_futuro = (dia_futuro - 6) - 1
+	else:
+		dia_futuro = x
+else:
+	dia_futuro = x + y
+	if(dia_futuro > 6):
+		dia_futuro = (dia_futuro - 6) - 1
+		
+if(x == 0):
+	strx = "domingo"
+elif(x == 1):
+	strx = "segunda"
+elif(x == 2):
+	strx = "terca"
+elif(x == 3):
+	strx = "quarta"
+elif(x == 4):
+	strx = "quinta"
+elif(x == 5):
+	strx = "sexta"
+else:
+	strx = "sabado"
+	
+if(dia_futuro == 0):
+	stry = "segunda"
+elif(dia_futuro == 1):
+	stry = "terca"
+elif(dia_futuro == 2):
+	stry = "quarta"
+elif(dia_futuro == 3):
+	stry = "quinta"
+elif(dia_futuro == 4):
+	stry = "sexta"
+elif(dia_futuro == 5):
+	stry = "sabado"
+else:
+	stry = "domingo"
+	
+print("Hoje eh ", strx, " e o dia futuro eh ", stry)
+-- EXECUTION TIME:
+0.228576
+-- TEST CASE 1:
+---- input:
+9
+9
+
+---- correct output:
+A entrada 9 eh invalida
+---- user output:
+A entrada  9  eh invalida
+Hoje eh  sabado  e o dia futuro eh  quarta
+-- TEST CASE 2:
+---- input:
+6
+1024
+---- correct output:
+Hoje eh sabado e o dia futuro eh segunda
+---- user output:
+Hoje eh  sabado  e o dia futuro eh  domingo
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 22:54:47) 
+-- CODE:
+x = int(input("Entre com o numero do dia de hoje: "))
+
+if(0 > x) or (x > 6):
+	print("A entrada ", x, " eh invalida")
+	
+y = int(input("Entre com o numero de dias apos hoje: "))
+
+if(y >= 7):
+	if(y % 7 != 0):
+		dia_futuro = x + ((y % 7) - 2)
+		if(dia_futuro > 6):
+			dia_futuro = (dia_futuro - 6) - 1
+	else:
+		dia_futuro = x
+else:
+	dia_futuro = x + y
+	if(dia_futuro > 6):
+		dia_futuro = (dia_futuro - 6) - 1
+		
+if(x == 0):
+	strx = "domingo"
+elif(x == 1):
+	strx = "segunda"
+elif(x == 2):
+	strx = "terca"
+elif(x == 3):
+	strx = "quarta"
+elif(x == 4):
+	strx = "quinta"
+elif(x == 5):
+	strx = "sexta"
+else:
+	strx = "sabado"
+	
+if(dia_futuro == 0):
+	stry = "segunda"
+elif(dia_futuro == 1):
+	stry = "terca"
+elif(dia_futuro == 2):
+	stry = "quarta"
+elif(dia_futuro == 3):
+	stry = "quinta"
+elif(dia_futuro == 4):
+	stry = "sexta"
+elif(dia_futuro == 5):
+	stry = "sabado"
+else:
+	stry = "domingo"
+	
+print("Hoje eh ", strx, " e o dia futuro eh ", stry)
+-- OUTPUT:
+A entrada  9  eh invalida
+Hoje eh  sabado  e o dia futuro eh  quarta
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 22:55:33) 
+-- CODE:
+x = int(input("Entre com o numero do dia de hoje: "))
+
+if(0 > x) or (x > 6):
+	print("A entrada ", x, " eh invalida")
+	
+y = int(input("Entre com o numero de dias apos hoje: "))
+
+if(y >= 7):
+	if(y % 7 != 0):
+		dia_futuro = x + ((y % 7) - 2)
+		if(dia_futuro > 6):
+			dia_futuro = (dia_futuro - 6) - 1
+	else:
+		dia_futuro = x
+else:
+	dia_futuro = x + y
+	if(dia_futuro > 6):
+		dia_futuro = (dia_futuro - 6) - 1
+		
+if(x == 0):
+	strx = "domingo"
+elif(x == 1):
+	strx = "segunda"
+elif(x == 2):
+	strx = "terca"
+elif(x == 3):
+	strx = "quarta"
+elif(x == 4):
+	strx = "quinta"
+elif(x == 5):
+	strx = "sexta"
+else:
+	strx = "sabado"
+	
+if(dia_futuro == 0):
+	stry = "domingo"
+elif(dia_futuro == 1):
+	stry = "segunda"
+elif(dia_futuro == 2):
+	stry = "terca"
+elif(dia_futuro == 3):
+	stry = "quarta"
+elif(dia_futuro == 4):
+	stry = "quinta"
+elif(dia_futuro == 5):
+	stry = "sexta"
+else:
+	stry = "sabado"
+	
+print("Hoje eh ", strx, " e o dia futuro eh ", stry)
+-- EXECUTION TIME:
+0.221691
+-- TEST CASE 1:
+---- input:
+9
+9
+
+---- correct output:
+A entrada 9 eh invalida
+---- user output:
+A entrada  9  eh invalida
+Hoje eh  sabado  e o dia futuro eh  terca
+-- TEST CASE 2:
+---- input:
+6
+1024
+---- correct output:
+Hoje eh sabado e o dia futuro eh segunda
+---- user output:
+Hoje eh  sabado  e o dia futuro eh  sabado
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 22:55:36) 
+-- CODE:
+x = int(input("Entre com o numero do dia de hoje: "))
+
+if(0 > x) or (x > 6):
+	print("A entrada ", x, " eh invalida")
+	
+y = int(input("Entre com o numero de dias apos hoje: "))
+
+if(y >= 7):
+	if(y % 7 != 0):
+		dia_futuro = x + ((y % 7) - 2)
+		if(dia_futuro > 6):
+			dia_futuro = (dia_futuro - 6) - 1
+	else:
+		dia_futuro = x
+else:
+	dia_futuro = x + y
+	if(dia_futuro > 6):
+		dia_futuro = (dia_futuro - 6) - 1
+		
+if(x == 0):
+	strx = "domingo"
+elif(x == 1):
+	strx = "segunda"
+elif(x == 2):
+	strx = "terca"
+elif(x == 3):
+	strx = "quarta"
+elif(x == 4):
+	strx = "quinta"
+elif(x == 5):
+	strx = "sexta"
+else:
+	strx = "sabado"
+	
+if(dia_futuro == 0):
+	stry = "domingo"
+elif(dia_futuro == 1):
+	stry = "segunda"
+elif(dia_futuro == 2):
+	stry = "terca"
+elif(dia_futuro == 3):
+	stry = "quarta"
+elif(dia_futuro == 4):
+	stry = "quinta"
+elif(dia_futuro == 5):
+	stry = "sexta"
+else:
+	stry = "sabado"
+	
+print("Hoje eh ", strx, " e o dia futuro eh ", stry)
+-- OUTPUT:
+A entrada  9  eh invalida
+Hoje eh  sabado  e o dia futuro eh  terca
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 22:55:39) 
+-- CODE:
+x = int(input("Entre com o numero do dia de hoje: "))
+
+if(0 > x) or (x > 6):
+	print("A entrada ", x, " eh invalida")
+	
+y = int(input("Entre com o numero de dias apos hoje: "))
+
+if(y >= 7):
+	if(y % 7 != 0):
+		dia_futuro = x + ((y % 7) - 2)
+		if(dia_futuro > 6):
+			dia_futuro = (dia_futuro - 6) - 1
+	else:
+		dia_futuro = x
+else:
+	dia_futuro = x + y
+	if(dia_futuro > 6):
+		dia_futuro = (dia_futuro - 6) - 1
+		
+if(x == 0):
+	strx = "domingo"
+elif(x == 1):
+	strx = "segunda"
+elif(x == 2):
+	strx = "terca"
+elif(x == 3):
+	strx = "quarta"
+elif(x == 4):
+	strx = "quinta"
+elif(x == 5):
+	strx = "sexta"
+else:
+	strx = "sabado"
+	
+if(dia_futuro == 0):
+	stry = "domingo"
+elif(dia_futuro == 1):
+	stry = "segunda"
+elif(dia_futuro == 2):
+	stry = "terca"
+elif(dia_futuro == 3):
+	stry = "quarta"
+elif(dia_futuro == 4):
+	stry = "quinta"
+elif(dia_futuro == 5):
+	stry = "sexta"
+else:
+	stry = "sabado"
+	
+print("Hoje eh ", strx, " e o dia futuro eh ", stry)
+-- OUTPUT:
+A entrada  9  eh invalida
+Hoje eh  sabado  e o dia futuro eh  terca
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 22:55:48) 
+-- CODE:
+x = int(input("Entre com o numero do dia de hoje: "))
+
+if(0 > x) or (x > 6):
+	print("A entrada ", x, " eh invalida")
+	
+y = int(input("Entre com o numero de dias apos hoje: "))
+
+if(y >= 7):
+	if(y % 7 != 0):
+		dia_futuro = x + ((y % 7) - 2)
+		if(dia_futuro > 6):
+			dia_futuro = (dia_futuro - 6) - 1
+	else:
+		dia_futuro = x
+else:
+	dia_futuro = x + y
+	if(dia_futuro > 6):
+		dia_futuro = (dia_futuro - 6) - 1
+		
+if(x == 0):
+	strx = "domingo"
+elif(x == 1):
+	strx = "segunda"
+elif(x == 2):
+	strx = "terca"
+elif(x == 3):
+	strx = "quarta"
+elif(x == 4):
+	strx = "quinta"
+elif(x == 5):
+	strx = "sexta"
+else:
+	strx = "sabado"
+	
+if(dia_futuro == 0):
+	stry = "domingo"
+elif(dia_futuro == 1):
+	stry = "segunda"
+elif(dia_futuro == 2):
+	stry = "terca"
+elif(dia_futuro == 3):
+	stry = "quarta"
+elif(dia_futuro == 4):
+	stry = "quinta"
+elif(dia_futuro == 5):
+	stry = "sexta"
+else:
+	stry = "sabado"
+	
+print("Hoje eh ", strx, " e o dia futuro eh ", stry)
+-- OUTPUT:
+A entrada  9  eh invalida
+Hoje eh  sabado  e o dia futuro eh  terca
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 23:00:17) 
+-- CODE:
+x = int(input("Entre com o numero do dia de hoje: "))
+
+if(0 > x) or (x > 6):
+	print("A entrada ", x, " eh invalida")
+	
+y = int(input("Entre com o numero de dias apos hoje: "))
+
+if(y >= 7):
+	if(y % 7 != 0):
+		dia_futuro = (x + (y % 7)) + 1
+		if(dia_futuro > 6):
+			dia_futuro = (dia_futuro - 6) - 1
+	else:
+		dia_futuro = x
+else:
+	dia_futuro = x + y
+	if(dia_futuro > 6):
+		dia_futuro = (dia_futuro - 6) - 1
+		
+if(x == 0):
+	strx = "domingo"
+elif(x == 1):
+	strx = "segunda"
+elif(x == 2):
+	strx = "terca"
+elif(x == 3):
+	strx = "quarta"
+elif(x == 4):
+	strx = "quinta"
+elif(x == 5):
+	strx = "sexta"
+else:
+	strx = "sabado"
+	
+if(dia_futuro == 0):
+	stry = "domingo"
+elif(dia_futuro == 1):
+	stry = "segunda"
+elif(dia_futuro == 2):
+	stry = "terca"
+elif(dia_futuro == 3):
+	stry = "quarta"
+elif(dia_futuro == 4):
+	stry = "quinta"
+elif(dia_futuro == 5):
+	stry = "sexta"
+else:
+	stry = "sabado"
+	
+print("Hoje eh ", strx, " e o dia futuro eh ", stry)
+-- EXECUTION TIME:
+0.167017
+-- TEST CASE 1:
+---- input:
+9
+9
+
+---- correct output:
+A entrada 9 eh invalida
+---- user output:
+A entrada  9  eh invalida
+Hoje eh  sabado  e o dia futuro eh  sexta
+-- TEST CASE 2:
+---- input:
+6
+1024
+---- correct output:
+Hoje eh sabado e o dia futuro eh segunda
+---- user output:
+Hoje eh  sabado  e o dia futuro eh  terca
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 23:00:20) 
+-- CODE:
+x = int(input("Entre com o numero do dia de hoje: "))
+
+if(0 > x) or (x > 6):
+	print("A entrada ", x, " eh invalida")
+	
+y = int(input("Entre com o numero de dias apos hoje: "))
+
+if(y >= 7):
+	if(y % 7 != 0):
+		dia_futuro = (x + (y % 7)) + 1
+		if(dia_futuro > 6):
+			dia_futuro = (dia_futuro - 6) - 1
+	else:
+		dia_futuro = x
+else:
+	dia_futuro = x + y
+	if(dia_futuro > 6):
+		dia_futuro = (dia_futuro - 6) - 1
+		
+if(x == 0):
+	strx = "domingo"
+elif(x == 1):
+	strx = "segunda"
+elif(x == 2):
+	strx = "terca"
+elif(x == 3):
+	strx = "quarta"
+elif(x == 4):
+	strx = "quinta"
+elif(x == 5):
+	strx = "sexta"
+else:
+	strx = "sabado"
+	
+if(dia_futuro == 0):
+	stry = "domingo"
+elif(dia_futuro == 1):
+	stry = "segunda"
+elif(dia_futuro == 2):
+	stry = "terca"
+elif(dia_futuro == 3):
+	stry = "quarta"
+elif(dia_futuro == 4):
+	stry = "quinta"
+elif(dia_futuro == 5):
+	stry = "sexta"
+else:
+	stry = "sabado"
+	
+print("Hoje eh ", strx, " e o dia futuro eh ", stry)
+-- OUTPUT:
+A entrada  9  eh invalida
+Hoje eh  sabado  e o dia futuro eh  sexta
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

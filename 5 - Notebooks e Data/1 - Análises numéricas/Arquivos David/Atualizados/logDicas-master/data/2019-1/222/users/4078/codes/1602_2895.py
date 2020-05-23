@@ -1,0 +1,5 @@
+x =float(input("a quantidade de jogos a serem encomendados: "))
+y =float(input("o valor unitario de cada jogo: "))
+z =float(input("o valor do frete: "))
+total =float(x*y+z)
+print(total)

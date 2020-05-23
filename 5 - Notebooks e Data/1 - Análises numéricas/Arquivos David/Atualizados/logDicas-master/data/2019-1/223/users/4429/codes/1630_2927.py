@@ -1,0 +1,5 @@
+var1=float(input("valor da bebida: "))
+var2=float(input("qtd de esfirras: "))
+vesfirra=(1.5*var2)
+r=(var1+vesfirra)
+print(round(r,2))

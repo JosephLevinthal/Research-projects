@@ -1,0 +1,956 @@
+== TEST (2019-04-05 21:05:44) 
+-- CODE:
+nota = float(input("Digite a nota de 0 a 10: "))
+bonificacao = input("Digite S ou N": )
+print(nota, bonificacao)
+-- ERROR:
+File "XXXX", line 2
+    bonificacao = input("Digite S ou N": )
+                                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 21:06:03) 
+-- CODE:
+nota = float(input("Digite a nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+print(nota, bonificacao)
+-- OUTPUT:
+5.0 S
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 21:09:03) 
+-- CODE:
+nota = float(input("Digite a nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+bonificacao = bonificacao.upper()
+print(nota, bonificacao)
+	
+-- OUTPUT:
+5.0 S
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 21:09:27) 
+-- CODE:
+nota = float(input("Digite a nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: " .upper())
+print(nota, bonificacao)
+	
+-- OUTPUT:
+DIGITE S OU N: 5.0 S
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 21:09:43) 
+-- CODE:
+nota = float(input("Digite a nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ".upper())
+print(nota, bonificacao)
+	
+-- OUTPUT:
+DIGITE S OU N: 5.0 S
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 21:10:52) 
+-- CODE:
+nota = float(input("Digite a nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ".upper())
+if(nota >= 1):
+	acrescimo = (nota + (nota*10)/100)
+	print(acrescimo)
+	
+	
+-- OUTPUT:
+DIGITE S OU N: 5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 21:11:39) 
+-- CODE:
+nota = float(input("Digite a nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ".upper())
+if(nota >= 1):
+	acrescimo = (nota + (nota*10)/100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- OUTPUT:
+DIGITE S OU N: 5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-05 21:11:48) 
+-- CODE:
+nota = float(input("Digite a nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ".upper())
+if(nota >= 1):
+	acrescimo = (nota + (nota*10)/100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- EXECUTION TIME:
+0.144113
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+DIGITE S OU N: 5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+DIGITE S OU N: 9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+DIGITE S OU N: 4.840000000000001
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 21:17:37) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+bonificacao.upper()
+if(nota >= 1):
+	acrescimo = (nota + (nota*10)/100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-05 21:18:22) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+bonificacao.upper()
+if(nota >= 1):
+	acrescimo = (nota + (nota*10)/100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- EXECUTION TIME:
+0.124609
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.840000000000001
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 21:18:31) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+bonificacao.upper()
+if(nota >= 1):
+	acrescimo = (nota + (nota*10)/100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 21:18:47) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao.upper() = input("Digite S ou N: ")
+bonificacao.upper()
+if(nota >= 1):
+	acrescimo = (nota + (nota*10)/100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- ERROR:
+File "XXXX", line 2
+    bonificacao.upper() = input()
+    ^
+SyntaxError: can't assign to function call
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 21:19:12) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+bonificacao == bonificacao.upper()
+if(nota >= 1):
+	acrescimo = (nota + (nota*10)/100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-05 21:19:27) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+bonificacao == bonificacao.upper()
+if(nota >= 1):
+	acrescimo = (nota + (nota*10)/100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- EXECUTION TIME:
+0.174232
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.840000000000001
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 21:20:37) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite" + "S ".upper() + "ou " + "N".upper())
+bonificacao == bonificacao.upper()
+if(nota >= 1):
+	acrescimo = (nota + (nota*10)/100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- OUTPUT:
+DigiteS ou N5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 20:31:16) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+bonificacao == bonificacao.upper()
+if(nota >= 1):
+	acrescimo = (nota + (nota*10)/100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-06 20:31:46) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+bonificacao == bonificacao.upper()
+if(nota >= 1):
+	acrescimo = (nota + (nota*10)/100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- EXECUTION TIME:
+0.143373
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.840000000000001
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 20:33:03) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+bonificacao == bonificacao.upper()
+if(nota >= 1):
+	acrescimo = (nota + (nota*10)/100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 20:34:11) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+bonificacao == bonificacao.upper()
+if(nota >= 1):
+	acrescimo = (nota + (nota*10)/100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 20:35:07) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+bonificacao == bonificacao.upper()
+if(nota >= 1 , bonificacao == "S"):
+	acrescimo = (nota + (nota*10)/100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-06 20:35:24) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+bonificacao == bonificacao.upper()
+if(nota >= 1 , bonificacao == "S"):
+	acrescimo = (nota + (nota*10)/100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- EXECUTION TIME:
+0.181341
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.840000000000001
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 23:06:10) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+bonificacao == bonificacao.upper()
+if(nota >= 1 ):
+	acrescimo = (nota + (nota*10)/100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 23:13:02) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+if(nota >= 1 ):
+	acrescimo = (nota + (nota * (10/100))
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- ERROR:
+File "XXXX", line 5
+    print(acrescimo)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 23:13:25) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+if(nota >= 1 ):
+	acrescimo = (nota + (nota * (10/100)))
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-06 23:13:37) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+if(nota >= 1 ):
+	acrescimo = (nota + (nota * (10/100)))
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- EXECUTION TIME:
+0.166539
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.840000000000001
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 23:16:42) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+if(nota >= 1 ):
+	acrescimo = nota + ((nota * 10) /100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 23:18:32) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+if(nota >= 1 ):
+	acrescimo = nota + ((nota * 10) /100)
+	mensagem = "S"
+	print(acrescimo)
+	print(mensagem)
+else:
+	mensagem = "N"
+	print(nota)
+	
+	
+-- OUTPUT:
+5.5
+S
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 23:19:08) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+if(nota >= 1 ):
+	acrescimo = nota + ((nota * 10) /100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-07 00:39:34) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+S/N.upper()
+if(nota >= 1 ):
+	acrescimo = nota + ((nota * 10) /100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    S/N.upper()
+NameError: name 'S' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-07 00:40:28) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+bonificacao = "S".upper() , "N".upper()
+if(nota >= 1 ):
+	acrescimo = nota + ((nota * 10) /100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-07 00:40:39) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S ou N: ")
+bonificacao = "S".upper() , "N".upper()
+if(nota >= 1 ):
+	acrescimo = nota + ((nota * 10) /100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- EXECUTION TIME:
+0.126133
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.840000000000001
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-07 00:41:03) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S/N: ")
+bonificacao = "S/N".upper()
+if(nota >= 1 ):
+	acrescimo = nota + ((nota * 10) /100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-07 00:41:13) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S/N: ")
+bonificacao = "S/N".upper()
+if(nota >= 1 ):
+	acrescimo = nota + ((nota * 10) /100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- EXECUTION TIME:
+0.180005
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.840000000000001
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 23:39:30) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S/N: ")
+bonificacao = "S/N".upper()
+if(nota >= 1 ):
+	acrescimo = nota + ((nota * 10) /100))
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- ERROR:
+File "XXXX", line 5
+    acrescimo = nota + ((nota * 10) /100))
+                                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 23:40:01) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S/N: ")
+bonificacao = "S/N".upper()
+if(nota >= 1 ):
+	acrescimo = nota + ((nota * 10) /100))
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- ERROR:
+File "XXXX", line 5
+    acrescimo = nota + ((nota * 10) /100))
+                                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-08 23:40:17) 
+-- CODE:
+nota = float(input("Digite uma nota de 0 a 10: "))
+bonificacao = input("Digite S/N: ")
+bonificacao = "S/N".upper()
+if(nota >= 1 ):
+	acrescimo = nota + ((nota * 10) /100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- EXECUTION TIME:
+0.156904
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.840000000000001
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-08 23:42:27) 
+-- CODE:
+nota =float(input("Digite uma nota de 0 a 10: "))
+bonificacao =input("Digite S/N: ")
+bonificacao = "S/N".upper()
+if(nota >= 1 ):
+	acrescimo = nota + ((nota * 10) /100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- EXECUTION TIME:
+0.176475
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.840000000000001
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:05:47) 
+-- CODE:
+nota =float(input("Digite uma nota de 0 a 10: "))
+bonificacao =input("Digite S/N: ")
+if(nota == "S" ):
+	acrescimo = nota + ((nota * 10) /100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 18:05:54) 
+-- CODE:
+nota =float(input("Digite uma nota de 0 a 10: "))
+bonificacao =input("Digite S/N: ")
+if(nota == "S" ):
+	acrescimo = nota + ((nota * 10) /100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- EXECUTION TIME:
+0.132616
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.0
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.0
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.4
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 18:06:55) 
+-- CODE:
+nota =float(input("Digite uma nota de 0 a 10: "))
+bonificacao =input("Digite S ou N: ")
+if(nota > 0):
+	acrescimo = nota + ((nota * 10) /100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- EXECUTION TIME:
+0.129489
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.840000000000001
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:07:30) 
+-- CODE:
+nota =float(input("Digite uma nota de 0 a 10: "))
+bonificacao =input("Digite S ou N: ")
+if(nota > 0):
+	acrescimo = nota + ((nota * 10) /100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:08:10) 
+-- CODE:
+nota =float(input("Digite uma nota de 0 a 10: "))
+bonificacao =input("Digite S ou N: ")
+if(bonificacao == "S"):
+	acrescimo = nota + ((nota * 10) /100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 18:08:20) 
+-- CODE:
+nota =float(input("Digite uma nota de 0 a 10: "))
+bonificacao =input("Digite S ou N: ")
+if(bonificacao == "S"):
+	acrescimo = nota + ((nota * 10) /100)
+	print(acrescimo)
+else:
+	print(nota)
+	
+	
+-- EXECUTION TIME:
+0.171382
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

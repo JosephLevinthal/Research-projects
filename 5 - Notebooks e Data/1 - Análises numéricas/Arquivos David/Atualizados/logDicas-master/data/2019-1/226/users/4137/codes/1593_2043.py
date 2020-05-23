@@ -1,0 +1,7 @@
+av1 = float(input("Digite sua primeira nota:"))
+av2 = float(input("Digite sua segunda nota:"))
+av3 = float(input("Digite sua terceira nota:"))
+av4 = float(input("Digite sua quarta nota:"))
+n = (av1*1+av2*2+av3*3+av4*4)
+n1 = (1+2+3+4)
+print(round(n/n1, 2))

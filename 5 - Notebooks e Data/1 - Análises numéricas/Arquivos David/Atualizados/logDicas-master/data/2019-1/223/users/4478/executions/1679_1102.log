@@ -1,0 +1,145 @@
+== SUBMITION (2019-07-09 11:13:41) 
+-- CODE:
+H = float(input("altura total do tanque: "))
+h = float(input("nivel de combustivel no tanque: "))
+r = float(input("raio dos bojos: "))
+
+
+print("Entradas:",H,",",c,",",r)
+from math import *
+if(H>0 and c>0 and r>0)and(H>c and H>(2*r)):
+	V=(4/3)*pi*(r**3)
+	if(c<=r):
+		if(c==r):
+			v=(V/2)*1000
+			print("Volume:",round(v,3),"litros")
+		elif(c<r):
+			v=((pi/3)*(c**2)*(3*r-c))*1000
+			print("Volume:",round(v,3),"litros")
+	elif(c>r and c<=H-r):
+		v=V/2
+		C=pi*(r**2)*(c-r)
+		V1=(v+C)*1000
+		print("Volume:",round(V1,3),"litros")
+	elif(c>H-r):
+		C=pi*(r**2)*(c-r)
+		vc=(pi/3)*((H-c)**2)*(3*r-(H-c))
+		V1=((V/2)+C-vc)*1000
+		print("Volume:",round(V1,3),"litros")
+elif(H<0 or c<0 or r<0) or (H<c or c<2*r):
+	print("Entradas invalidas")
+-- EXECUTION TIME:
+0.504005
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1679/1102/main.py", line 6, in <module>
+    print("Entradas:",H,",",c,",",r)
+NameError: name 'c' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 11:13:59) 
+-- CODE:
+#H = float(input("altura total do tanque: "))
+#h = float(input("nivel de combustivel no tanque: "))
+#r = float(input("raio dos bojos: "))
+
+H=float(input("altura do tanque: "))
+c=float(input("nivel do combustivel: "))
+r=float(input("raio semiesferico: "))
+print("Entradas:",H,",",c,",",r)
+from math import *
+if(H>0 and c>0 and r>0)and(H>c and H>(2*r)):
+	V=(4/3)*pi*(r**3)
+	if(c<=r):
+		if(c==r):
+			v=(V/2)*1000
+			print("Volume:",round(v,3),"litros")
+		elif(c<r):
+			v=((pi/3)*(c**2)*(3*r-c))*1000
+			print("Volume:",round(v,3),"litros")
+	elif(c>r and c<=H-r):
+		v=V/2
+		C=pi*(r**2)*(c-r)
+		V1=(v+C)*1000
+		print("Volume:",round(V1,3),"litros")
+	elif(c>H-r):
+		C=pi*(r**2)*(c-r)
+		vc=(pi/3)*((H-c)**2)*(3*r-(H-c))
+		V1=((V/2)+C-vc)*1000
+		print("Volume:",round(V1,3),"litros")
+elif(H<0 or c<0 or r<0) or (H<c or c<2*r):
+	print("Entradas invalidas")
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 81987.191 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 11:14:07) 
+-- CODE:
+#H = float(input("altura total do tanque: "))
+#h = float(input("nivel de combustivel no tanque: "))
+#r = float(input("raio dos bojos: "))
+
+H=float(input("altura do tanque: "))
+c=float(input("nivel do combustivel: "))
+r=float(input("raio semiesferico: "))
+print("Entradas:",H,",",c,",",r)
+from math import *
+if(H>0 and c>0 and r>0)and(H>c and H>(2*r)):
+	V=(4/3)*pi*(r**3)
+	if(c<=r):
+		if(c==r):
+			v=(V/2)*1000
+			print("Volume:",round(v,3),"litros")
+		elif(c<r):
+			v=((pi/3)*(c**2)*(3*r-c))*1000
+			print("Volume:",round(v,3),"litros")
+	elif(c>r and c<=H-r):
+		v=V/2
+		C=pi*(r**2)*(c-r)
+		V1=(v+C)*1000
+		print("Volume:",round(V1,3),"litros")
+	elif(c>H-r):
+		C=pi*(r**2)*(c-r)
+		vc=(pi/3)*((H-c)**2)*(3*r-(H-c))
+		V1=((V/2)+C-vc)*1000
+		print("Volume:",round(V1,3),"litros")
+elif(H<0 or c<0 or r<0) or (H<c or c<2*r):
+	print("Entradas invalidas")
+-- EXECUTION TIME:
+0.639608
+-- TEST CASE 1:
+---- input:
+11.3
+5.7
+2.3
+---- correct output:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 81987.191 litros
+---- user output:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 81987.191 litros
+-- TEST CASE 2:
+---- input:
+8.5
+9.5
+2.2
+---- correct output:
+Entradas: 8.5 , 9.5 , 2.2
+Entradas invalidas
+---- user output:
+Entradas: 8.5 , 9.5 , 2.2
+Entradas invalidas
+-- TEST CASE 3:
+---- input:
+8
+4
+6
+---- correct output:
+Entradas: 8.0 , 4.0 , 6.0
+Entradas invalidas
+---- user output:
+Entradas: 8.0 , 4.0 , 6.0
+Entradas invalidas
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

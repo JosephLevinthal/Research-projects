@@ -1,0 +1,122 @@
+== TEST (2019-07-02 10:53:26) 
+-- CODE:
+from numpy import *
+from numpy.linalg *
+
+v = array(eval(input("v: ")))
+
+for i in range(v):
+	if i>j:
+		print(min(v))
+-- ERROR:
+File "XXXX", line 2
+    from numpy.linalg *
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:53:34) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+
+for i in range(v):
+	if i>j:
+		print(min(v))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:54:02) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+
+for i in range(size(v)):
+	if i>j:
+		print(min(v))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 10:54:36) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+
+for i in range(size(v)):
+	for j range(size(v)):
+		if i>j:
+			print(min(v))
+-- EXECUTION TIME:
+0.622975
+-- ERROR:
+  File "/home/codebench/codes/1863/2217/main.py", line 7
+    for j range(size(v)):
+              ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:54:38) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+
+for i in range(size(v)):
+	for j range(size(v)):
+		if i>j:
+			print(min(v))
+-- ERROR:
+File "XXXX", line 7
+    for j range(size(v)):
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 10:54:49) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+
+for i in range(size(v)):
+	for j in range(size(v)):
+		if i>j:
+			print(min(v))
+-- EXECUTION TIME:
+1.26388
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1863/2217/main.py", line 9, in <module>
+    print(min(v))
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:54:50) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+v = array(eval(input("v: ")))
+
+for i in range(size(v)):
+	for j in range(size(v)):
+		if i>j:
+			print(min(v))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

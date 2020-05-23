@@ -1,0 +1,70 @@
+== TEST (2019-07-02 18:08:10) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+#entrada da matriz:
+tab=array(eval(input("tabuleiro do jogo: ")))
+#entradas da coordenadas
+linha= int(input("linha do tabuleiro: "))
+coluna= int(input("coluna do tabuleiro: "))
+#condiçoes de print
+if (tab[linha,coluna]=="B"):
+	print("BRANCA")
+elif (tab[linha,coluna]=="P"):
+	print("PRETA")
+elif (tab[linha,coluna]=="V"):
+	print("VAZIA")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 18:08:38) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+#entrada da matriz:
+tab=array(eval(input("tabuleiro do jogo: ")))
+#entradas da coordenadas
+linha= int(input("linha do tabuleiro: "))
+coluna= int(input("coluna do tabuleiro: "))
+#condiçoes de print
+if (tab[linha,coluna]=="B"):
+	print("BRANCA")
+elif (tab[linha,coluna]=="P"):
+	print("PRETA")
+elif (tab[linha,coluna]=="V"):
+	print("VAZIA")
+-- EXECUTION TIME:
+0.833726
+-- TEST CASE 1:
+---- input:
+[['V','V','P'],['V','V','B'],['P','V','V']]
+2
+1
+---- correct output:
+VAZIA
+---- user output:
+VAZIA
+-- TEST CASE 2:
+---- input:
+[['V','P','V','P'],['V','P','V','P'],['V','P','P','B'],['P','B','P','B']]
+1
+1
+---- correct output:
+PRETA
+---- user output:
+PRETA
+-- TEST CASE 3:
+---- input:
+[['B','B','V'],['P','P','P'],['V','P','B']]
+2
+2
+---- correct output:
+BRANCA
+---- user output:
+BRANCA
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,21 @@
+from numpy import*
+from numpy.linalg import*
+m= array([[0,2,11,6,15,11,1],
+	      [2,0,7,12,4,2,15],
+	      [11,7,0,11,8,3,13],
+	      [6,12,11,0,10,2,1],
+	      [15,4,8,10,0,5,13],
+	      [11,2,3,1,5,0,14],
+	      [1,15,13,1,13,14,0]])
+x1=array(eval(input("codigos da linha: ")))
+soma=0
+y1=array(eval(input("codigo da coluna: ")))
+x= (x1//111)-1
+y= (y1//111)-1
+while(x1!=-1 and y1!= -1):
+	soma= soma + m[x,y]
+	x = y
+	y1=array(eval(input("codigo da coluna: ")))
+	y= (y1//111)-1
+	
+print(soma)	

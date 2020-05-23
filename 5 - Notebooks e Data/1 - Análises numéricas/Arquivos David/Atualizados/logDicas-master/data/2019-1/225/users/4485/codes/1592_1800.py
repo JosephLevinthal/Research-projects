@@ -1,0 +1,5 @@
+a=int(input("digite: "))
+b=int(input("digite: "))
+c=int(input("digite: "))
+var=(a**2 + b**2 +c**2)/(a+b+c)
+print(round(var,7))

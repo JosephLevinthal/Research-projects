@@ -1,0 +1,6 @@
+x=float(input("primeira nota:"))
+y=float(input("segunda nota:"))
+z=float(input("terceira nota:"))
+w=float(input("quarta nota:"))
+var1= (1*x + 2*y +3*z + 4*w) / (1 + 2+ 3+ 4)
+print(round(var1, 2))

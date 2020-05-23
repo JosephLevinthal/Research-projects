@@ -1,0 +1,127 @@
+== TEST (2019-03-28 10:17:55) 
+-- CODE:
+from math import *
+
+n = int(float("Digite um numero: "))
+
+factorial(n) = 1 - 365! 
+-- ERROR:
+File "XXXX", line 5
+    factorial(n) = 1 - 365! 
+                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:17:58) 
+-- CODE:
+from math import *
+
+n = int(float("Digite um numero: "))
+
+factorial(n) = 1 - 365
+-- ERROR:
+File "XXXX", line 5
+    factorial(n) = 1 - 365
+    ^
+SyntaxError: can't assign to function call
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:27:45) 
+-- CODE:
+from math import *
+
+x = int(float("Digite um numero: "))
+p = 1 - (factorial(365) / factorial(365 - x)) * (1 / 365 ** x)
+
+y = p * 100
+
+print(round(y, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    x = int(float("Digite um numero: "))
+ValueError: could not convert string to float: 'Digite um numero: '
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:27:56) 
+-- CODE:
+from math import *
+
+x = int(input("Digite um numero: "))
+p = 1 - (factorial(365) / factorial(365 - x)) * (1 / 365 ** x)
+
+y = p * 100
+
+print(round(y, 2))
+-- OUTPUT:
+16.7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-28 10:28:06) 
+-- CODE:
+from math import *
+
+x = int(input("Digite um numero: "))
+p = 1 - (factorial(365) / factorial(365 - x)) * (1 / 365 ** x)
+
+y = p * 100
+
+print(round(y, 2))
+-- EXECUTION TIME:
+0.136734
+-- TEST CASE 1:
+---- input:
+12
+---- correct output:
+16.7
+---- user output:
+16.7
+-- TEST CASE 2:
+---- input:
+24
+---- correct output:
+53.83
+---- user output:
+53.83
+-- TEST CASE 3:
+---- input:
+99
+---- correct output:
+100.0
+---- user output:
+100.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 11:35:19) 
+-- CODE:
+from math import *
+
+x = int(input("Digite um numero: "))
+p = 1 - (factorial(365) / factorial(365 - x)) * (1 / 365 ** x)
+
+y = p * 100
+
+print(round(y, 2))
+-- EXECUTION TIME:
+0.154024
+-- TEST CASE 1:
+---- input:
+12
+---- correct output:
+16.7
+---- user output:
+16.7
+-- TEST CASE 2:
+---- input:
+24
+---- correct output:
+53.83
+---- user output:
+53.83
+-- TEST CASE 3:
+---- input:
+99
+---- correct output:
+100.0
+---- user output:
+100.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

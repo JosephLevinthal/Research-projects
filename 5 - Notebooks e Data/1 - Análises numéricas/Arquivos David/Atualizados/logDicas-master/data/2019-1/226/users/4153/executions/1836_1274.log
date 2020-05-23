@@ -1,0 +1,682 @@
+== TEST (2019-06-30 03:50:58) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+
+m = zeros ((n,n,dtype=int))
+print (m)
+-- ERROR:
+File "XXXX", line 6
+    m = zeros ((n,n,dtype=int))
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 03:51:31) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+
+m = zeros ((n,n))
+print (m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 03:56:35) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+
+m = zeros (((n,n)),dtype=int)
+print (m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 04:26:57) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+
+m = zeros (((n,n)),dtype=int)
+j = 0
+c = 1
+for i in range (size (m)):
+   if (i == j):
+      m [i,j] = c
+print (m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 04:39:33) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   for j in range (n):
+      if(i == j):
+         v [i,j] = c
+      elif (i < j):
+         v[i,j] = c + 1
+      elif (i > j):
+         v[i,j] = c
+      c = c + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 04:40:15) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   for j in range (n):
+      if(i == j):
+         v [i,j] = c
+      elif (i < j):
+         v[i,j] = c + 1
+      elif (i > j):
+         v[i,j] = c
+   c = c + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 04:40:52) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   for j in range (n):
+      if(i == j):
+         v [i,j] = c
+      elif (i > j):
+         v[i,j] = c + 1
+      elif (i < j):
+         v[i,j] = c
+   c = c + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 04:41:53) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   for j in range (n):
+      if(i == j):
+         v [i,j] = c
+      elif (i > j):
+         v[i,j] = c
+      elif (i < j):
+         v[i,j] = c
+   c = c + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 04:42:13) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   for j in range (n):
+      if(i == j):
+         v [i,j] = c
+      elif (i > j):
+         v[i,j] = c + 1
+      elif (i < j):
+         v[i,j] = c
+   c = c + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 04:42:40) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   for j in range (n):
+      if(i == j):
+         v [i,j] = c
+      elif (i > j):
+         v[i,j] = c + 1
+      elif (i < j):
+         v[i,j] = c - 1
+   c = c + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 04:43:06) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   for j in range (n):
+      if(i == j):
+         v [i,j] = c
+      elif (i > j):
+         v[i,j] = c + 1
+      elif (i < j):
+         v[i,j] = c
+   c = c + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 04:44:24) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   for j in range (n):
+      if(i == j):
+         v [i,j] = c
+      elif (i > j):
+         v[i,j] = c - 1
+      elif (i < j):
+         v[i,j] = c + 1
+   c = c + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 04:45:59) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   for j in range (n):
+      if(i == j):
+         v [i,j] = c
+      elif (i > j):
+         v[i,:] = c + 1
+      elif (i < j):
+         v[:,j] = c 
+   c = c + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 04:48:19) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   for j in range (n):
+      if(i == j):
+         v [i,j] = c
+      elif (i > j):
+         v[i,j] = c + 1
+      elif (i < j):
+         v[i,j] = c - 1
+   c = c + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 04:48:35) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   for j in range (n):
+      if(i == j):
+         v [i,j] = c
+      elif (i > j):
+         v[i,j] = c + 1
+      elif (i < j):
+         v[i,j] = c
+   c = c + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 04:49:02) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   for j in range (n):
+      if(i == j):
+         v [i,j] = c
+      elif (i > j):
+         v[i,j] = c
+      elif (i < j):
+         v[i,j] = c
+   c = c + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 04:50:32) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   for j in range (n):
+      if(i == j):
+         v [i,j] = c
+      elif (i > j):
+         v[i,j] = c + 1
+      elif (i < j):
+         v[i,j] = c + 1
+   c = c + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 04:55:25) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+j = 0
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   v [i,:] = c
+   v [:,j] = c
+   c = c + 1
+   j = j + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 04:59:22) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   for j in range (n):
+      if (i == j):
+         v [i,:] = c
+         v [:,j] = c
+   c = c + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 05:03:54) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+j = 0
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   if (j == i):
+      v [i,:] = c
+      v [:,j] = c
+   c = c + 1
+   j = j + (n + 1)
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 05:08:36) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+j = 0
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   if (j == i):
+      v [i,:] = c
+      v [:,j] = c
+   c = c + 1
+   j = j + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 05:15:15) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+j = 0
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   if (i ==j):
+      v [i,j] = c
+   c = c + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 05:15:51) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+j = 0
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   if (i ==j):
+      v [i,j] = c
+   c = c + 1
+   j = j + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 05:16:48) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+j = 0
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   if (i ==j):
+      v [i,j] = c
+      v [i,:] = c
+   c = c + 1
+   j = j + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 05:17:45) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+j = 0
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   if (i ==j):
+      v [i,j] = c
+      v [i,:] = c
+   c = c + 1
+   j = j + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 05:21:14) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+j = 0
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   if (i ==j):
+      v [i,j] = c
+      v [i,j,i,:] = c
+   
+   c = c + 1
+   j = j + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 05:30:23) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+j = 0
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   for j in range (n):
+      if (i == j):
+         v [i,j] = i + 1
+      elif (i > j):
+         v [i,j] = j + 1
+      elif ( i < j)
+         v [i,j] = i + 1
+print (v)
+-- ERROR:
+File "XXXX", line 14
+    elif ( i < j)
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 05:31:09) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+j = 0
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   for j in range (n):
+      if (i == j):
+         v [i,j] = i + 1
+      elif (i > j):
+         v [i,j] = j + 1
+      elif ( i < j):
+         v [i,j] = i + 1
+print (v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-30 05:31:30) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+
+n = int (input ("insira: "))
+j = 0
+c = 1
+v = zeros (((n,n)),dtype=int)
+for i in range (n):
+   for j in range (n):
+      if (i == j):
+         v [i,j] = i + 1
+      elif (i > j):
+         v [i,j] = j + 1
+      elif ( i < j):
+         v [i,j] = i + 1
+print (v)
+-- EXECUTION TIME:
+1.03221
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

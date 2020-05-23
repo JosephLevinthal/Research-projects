@@ -1,0 +1,294 @@
+== TEST (2019-06-26 14:13:10) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+v = array(eval(input("vetor x,y,z:")))
+b = array(["lixamento","pintura", "envernizacao"])
+M = array([600,720,900],[120,480,720],[720,720,1080])
+prod = dot(inv[M]v.T)
+print("lixamento:",round(prod[0]))
+print("pintura:", round(prod[1]))
+print("envernizacao:", round(prod[2]))
+-- ERROR:
+File "XXXX", line 6
+    prod = dot(inv[M]v.T)
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:13:31) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+v = array(eval(input("vetor x,y,z:")))
+b = array(["lixamento","pintura", "envernizacao"])
+M = array([600,720,900],[120,480,720],[720,720,1080])
+prod = dot(inv[M])v.T
+print("lixamento:",round(prod[0]))
+print("pintura:", round(prod[1]))
+print("envernizacao:", round(prod[2]))
+-- ERROR:
+File "XXXX", line 6
+    prod = dot(inv[M])v.T
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:13:58) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+v = array(eval(input("vetor x,y,z:")))
+b = array(["lixamento","pintura", "envernizacao"])
+M = array([600,720,900],[120,480,720],[720,720,1080])
+prod = dot(inv(M)v.T)
+print("lixamento:",round(prod[0]))
+print("pintura:", round(prod[1]))
+print("envernizacao:", round(prod[2]))
+-- ERROR:
+File "XXXX", line 6
+    prod = dot(inv(M)v.T)
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 14:24:57) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+v = array(eval(input("vetor x,y,z:")))
+b = array(["lixamento","pintura", "envernizacao"])
+M = array([600,720,900],[120,480,720],[720,720,1080])
+prod = dot(inv(M)v.T)
+print("lixamento:",round(prod[0]))
+print("pintura:", round(prod[1]))
+print("envernizacao:", round(prod[2]))
+-- EXECUTION TIME:
+0.815491
+-- ERROR:
+  File "/home/codebench/codes/1859/1290/main.py", line 6
+    prod = dot(inv(M)v.T)
+                     ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:25:15) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+v = array(eval(input("vetor x,y,z:")))
+b = array(["lixamento","pintura", "envernizacao"])
+M = array([600,720,900],[120,480,720],[720,720,1080])
+prod = dot(inv[M]v.T)
+print("lixamento:",round(prod[0]))
+print("pintura:", round(prod[1]))
+print("envernizacao:", round(prod[2]))
+-- ERROR:
+File "XXXX", line 6
+    prod = dot(inv[M]v.T)
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:26:00) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+v = array(eval(input("vetor x,y,z:")))
+b = array(["lixamento","pintura", "envernizacao"])
+M = array([600,720,900],[120,480,720],[720,720,1080])
+prod = dot(inv[M]v.T)
+print("lixamento:",round(prod[0]))
+print("pintura:", round(prod[1]))
+print("envernizacao:", round(prod[2]))
+print(max(prod))
+-- ERROR:
+File "XXXX", line 6
+    prod = dot(inv[M]v.T)
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 14:26:04) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+v = array(eval(input("vetor x,y,z:")))
+b = array(["lixamento","pintura", "envernizacao"])
+M = array([600,720,900],[120,480,720],[720,720,1080])
+prod = dot(inv[M]v.T)
+print("lixamento:",round(prod[0]))
+print("pintura:", round(prod[1]))
+print("envernizacao:", round(prod[2]))
+print(max(prod))
+-- EXECUTION TIME:
+0.771397
+-- ERROR:
+  File "/home/codebench/codes/1859/1290/main.py", line 6
+    prod = dot(inv[M]v.T)
+                     ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:26:13) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+v = array(eval(input("vetor x,y,z:")))
+b = array(["lixamento","pintura", "envernizacao"])
+M = array([600,720,900],[120,480,720],[720,720,1080])
+prod = dot(inv[M]v.T)
+print("lixamento:",round(prod[0],0))
+print("pintura:", round(prod[1],0))
+print("envernizacao:", round(prod[2],0))
+print(max(prod))
+-- ERROR:
+File "XXXX", line 6
+    prod = dot(inv[M]v.T)
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:27:59) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+v = array(eval(input("vetor x,y,z:")))
+b = array(["lixamento","pintura", "envernizacao"])
+M = array([600,720,900],[120,480,720],[720,720,1080])
+
+prod = dot((inv[M])v.T)
+
+print("lixamento:",round(prod[0],0))
+print("pintura:", round(prod[1],0))
+print("envernizacao:", round(prod[2],0))
+print(max(prod))
+-- ERROR:
+File "XXXX", line 7
+    prod = dot((inv[M])v.T)
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:28:22) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+v = array(eval(input("vetor x,y,z:")))
+b = array(["lixamento","pintura", "envernizacao"])
+M = array([600,720,900],[120,480,720],[720,720,1080])
+
+prod = array(dot(inv[M])v.T)
+
+print("lixamento:",round(prod[0],0))
+print("pintura:", round(prod[1],0))
+print("envernizacao:", round(prod[2],0))
+print(max(prod))
+-- ERROR:
+File "XXXX", line 7
+    prod = array(dot(inv[M])v.T)
+                            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:28:35) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+v = array(eval(input("vetor x,y,z:")))
+b = array(["lixamento","pintura", "envernizacao"])
+M = array([600,720,900],[120,480,720],[720,720,1080])
+
+prod = array(dot(inv[M])v.T)
+
+print("lixamento:",round(prod[0],0))
+print("pintura:", round(prod[1],0))
+print("envernizacao:", round(prod[2],0))
+print(max(prod))
+-- ERROR:
+File "XXXX", line 7
+    prod = array(dot(inv[M])v.T)
+                            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 14:28:36) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+v = array(eval(input("vetor x,y,z:")))
+b = array(["lixamento","pintura", "envernizacao"])
+M = array([600,720,900],[120,480,720],[720,720,1080])
+
+prod = array(dot(inv[M])v.T)
+
+print("lixamento:",round(prod[0],0))
+print("pintura:", round(prod[1],0))
+print("envernizacao:", round(prod[2],0))
+print(max(prod))
+-- EXECUTION TIME:
+0.741016
+-- ERROR:
+  File "/home/codebench/codes/1859/1290/main.py", line 7
+    prod = array(dot(inv[M])v.T)
+                            ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:42:08) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+v = array(eval(input("vetor x,y,z:")))
+b = array(["lixamento","pintura", "envernizacao"])
+M = array([600,720,900],[120,480,720],[720,720,1080])
+
+prod = dot(inv[M])v.T
+
+print("lixamento:",round(prod[0],0))
+print("pintura:", round(prod[1],0))
+print("envernizacao:", round(prod[2],0))
+print(max(prod))
+-- ERROR:
+File "XXXX", line 7
+    prod = dot(inv[M])v.T
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 14:42:12) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+v = array(eval(input("vetor x,y,z:")))
+b = array(["lixamento","pintura", "envernizacao"])
+M = array([600,720,900],[120,480,720],[720,720,1080])
+
+prod = dot(inv[M])v.T
+
+print("lixamento:",round(prod[0],0))
+print("pintura:", round(prod[1],0))
+print("envernizacao:", round(prod[2],0))
+print(max(prod))
+-- EXECUTION TIME:
+0.636261
+-- ERROR:
+  File "/home/codebench/codes/1859/1290/main.py", line 7
+    prod = dot(inv[M])v.T
+                      ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 14:46:33) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+v = array(eval(input("vetor x,y,z:")))
+b = array(["lixamento","pintura", "envernizacao"])
+M = array([600,720,900],[120,480,720],[720,720,1080])
+
+prod = dot(inv[M])v.T
+
+print("cadeira:",round())
+print("bau:", round())
+print("mesa:", round())
+print(max())
+-- EXECUTION TIME:
+0.747281
+-- ERROR:
+  File "/home/codebench/codes/1859/1290/main.py", line 7
+    prod = dot(inv[M])v.T
+                      ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

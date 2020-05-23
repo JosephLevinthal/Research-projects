@@ -1,0 +1,134 @@
+== TEST (2019-06-13 10:05:05) 
+-- CODE:
+from numpy import*
+s= array(eval(input("saques efetuados: ")))
+m=0
+
+for s[i] in s:
+	if(s[i]<=50):
+		m=m+1
+x= zeros(m,dtype=int)
+for s[i]in s:
+	if(s[i]<=50):
+		x[i]=i
+print(m)
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:06:18) 
+-- CODE:
+from numpy import*
+s= array(eval(input("saques efetuados: ")))
+m=0
+
+for i in range(s):
+	if(s[i]<=50):
+		m=m+1
+x= zeros(m,dtype=int)
+for i in range(s):
+	if(s[i]<=50):
+		x[i]=i
+print(m)
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:06:47) 
+-- CODE:
+from numpy import*
+s= array(eval(input("saques efetuados: ")))
+m=0
+
+for i in range(size(s)):
+	if(s[i]<=50):
+		m=m+1
+x= zeros(m,dtype=int)
+for i in range(size(s)):
+	if(s[i]<=50):
+		x[i]=i
+print(m)
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 10:07:30) 
+-- CODE:
+from numpy import*
+s= array(eval(input("saques efetuados: ")))
+m=0
+w=0
+for i in range(size(s)):
+	if(s[i]<=50):
+		m=m+1
+x= zeros(m,dtype=int)
+for i in range(size(s)):
+	if(s[i]<=50):
+		x[w]=i
+		w=w+1
+print(m)
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 10:07:39) 
+-- CODE:
+from numpy import*
+s= array(eval(input("saques efetuados: ")))
+m=0
+w=0
+for i in range(size(s)):
+	if(s[i]<=50):
+		m=m+1
+x= zeros(m,dtype=int)
+for i in range(size(s)):
+	if(s[i]<=50):
+		x[w]=i
+		w=w+1
+print(m)
+print(x)
+-- EXECUTION TIME:
+1.05308
+-- TEST CASE 1:
+---- input:
+[50,250,120,1350,265,42]
+---- correct output:
+2
+[0 5]
+---- user output:
+2
+[0 5]
+-- TEST CASE 2:
+---- input:
+[200,100,151,320,115]
+
+---- correct output:
+0
+[]
+---- user output:
+0
+[]
+-- TEST CASE 3:
+---- input:
+[50,51,52,53,55,191]
+---- correct output:
+1
+[0]
+---- user output:
+1
+[0]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,68 @@
+== TEST (2019-07-02 18:15:19) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+tab=array(eval(input("digite a matriz que representa o tab: ")))
+l=int(input("digite a linha: "))
+c=int(input("digite a coluna: "))
+
+if (tab[l,c]== 'P'):
+	print("PRETA")
+if (tab[l,c]== 'B'):
+	print("BRANCA")
+if (tab[l,c]== 'V'):
+	print("VAZIA")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 18:15:47) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+tab=array(eval(input("digite a matriz que representa o tab: ")))
+l=int(input("digite a linha: "))
+c=int(input("digite a coluna: "))
+
+if (tab[l,c]== 'P'):
+	print("PRETA")
+if (tab[l,c]== 'B'):
+	print("BRANCA")
+if (tab[l,c]== 'V'):
+	print("VAZIA")
+-- EXECUTION TIME:
+0.930034
+-- TEST CASE 1:
+---- input:
+[['V','V','P'],['V','V','B'],['P','V','V']]
+2
+1
+---- correct output:
+VAZIA
+---- user output:
+VAZIA
+-- TEST CASE 2:
+---- input:
+[['V','P','V','P'],['V','P','V','P'],['V','P','P','B'],['P','B','P','B']]
+1
+1
+---- correct output:
+PRETA
+---- user output:
+PRETA
+-- TEST CASE 3:
+---- input:
+[['B','B','V'],['P','P','P'],['V','P','B']]
+2
+2
+---- correct output:
+BRANCA
+---- user output:
+BRANCA
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

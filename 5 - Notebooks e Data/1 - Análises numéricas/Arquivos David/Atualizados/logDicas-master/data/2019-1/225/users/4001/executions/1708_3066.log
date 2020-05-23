@@ -1,0 +1,277 @@
+== TEST (2019-04-29 15:04:52) 
+-- CODE:
+V = float(input("Qtd inicial de vida: "))
+var1 = int(input("var1: "))
+var2 = int(input("var2: ))
+					  
+-- ERROR:
+File "XXXX", line 3
+    var2 = int(input("var2: ))
+                             ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 15:05:12) 
+-- CODE:
+V = float(input("Qtd inicial de vida: "))
+var1 = int(input("var1: "))
+var2 = int(input("var2: )) 
+					  
+-- ERROR:
+File "XXXX", line 3
+    var2 = int(input("var2: )) 
+                              ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 15:43:19) 
+-- CODE:
+V = float(input("Qtd inicial de vida: "))
+var1 = int(input("var1: "))
+var2 = int(input("var2: "))
+var3 = int(input("var3: "))
+N = var1 + var2 + var3
+if (V < 0) or (var1 < 1) and (var1 > 12) or (var2 < 1) and (var2 > 12) or (var3 < 1) and (var3 > 12):
+	print("Entrada invalida")
+else:
+	if(V - 10 * N <= 0):
+		print(0)
+		print("MORTO")
+	else:
+		print(V - 10 * N)
+		print("VIVO")
+	
+-- OUTPUT:
+0
+MORTO
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 15:43:37) 
+-- CODE:
+V = float(input("Qtd inicial de vida: "))
+var1 = int(input("var1: "))
+var2 = int(input("var2: "))
+var3 = int(input("var3: "))
+N = var1 + var2 + var3
+if (V < 0) or (var1 < 1) and (var1 > 12) or (var2 < 1) and (var2 > 12) or (var3 < 1) and (var3 > 12):
+	print("Entrada invalida")
+else:
+	if(V - 10 * N <= 0):
+		print(0)
+		print("MORTO")
+	else:
+		print(V - 10 * N)
+		print("VIVO")
+	
+-- OUTPUT:
+0
+MORTO
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 15:43:48) 
+-- CODE:
+V = float(input("Qtd inicial de vida: "))
+var1 = int(input("var1: "))
+var2 = int(input("var2: "))
+var3 = int(input("var3: "))
+N = var1 + var2 + var3
+if (V < 0) or (var1 < 1) and (var1 > 12) or (var2 < 1) and (var2 > 12) or (var3 < 1) and (var3 > 12):
+	print("Entrada invalida")
+else:
+	if(V - 10 * N <= 0):
+		print(0)
+		print("MORTO")
+	else:
+		print(V - 10 * N)
+		print("VIVO")
+	
+-- EXECUTION TIME:
+0.230142
+-- TEST CASE 1:
+---- input:
+120
+6
+9
+10
+---- correct output:
+0
+MORTO
+---- user output:
+0
+MORTO
+-- TEST CASE 2:
+---- input:
+200
+15
+20
+3
+---- correct output:
+Entrada invalida
+---- user output:
+0
+MORTO
+-- TEST CASE 3:
+---- input:
+260
+2
+1
+2
+---- correct output:
+210
+VIVO
+---- user output:
+210.0
+VIVO
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 15:44:03) 
+-- CODE:
+V = float(input("Qtd inicial de vida: "))
+var1 = int(input("var1: "))
+var2 = int(input("var2: "))
+var3 = int(input("var3: "))
+N = var1 + var2 + var3
+if (V < 0) or (var1 < 1) and (var1 > 12) or (var2 < 1) and (var2 > 12) or (var3 < 1) and (var3 > 12):
+	print("Entrada invalida")
+else:
+	if(V - 10 * N <= 0):
+		print(0)
+		print("MORTO")
+	else:
+		print(V - 10 * N)
+		print("VIVO")
+	
+-- OUTPUT:
+0
+MORTO
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 15:45:27) 
+-- CODE:
+V = float(input("Qtd inicial de vida: "))
+var1 = int(input("var1: "))
+var2 = int(input("var2: "))
+var3 = int(input("var3: "))
+N = var1 + var2 + var3
+if (V < 0) or (var1 < 1) or (var1 > 12) or (var2 < 1) or (var2 > 12) or (var3 < 1) or (var3 > 12):
+	print("Entrada invalida")
+else:
+	if(V - 10 * N <= 0):
+		print(0)
+		print("MORTO")
+	else:
+		print(V - 10 * N)
+		print("VIVO")
+	
+-- OUTPUT:
+0
+MORTO
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 15:45:41) 
+-- CODE:
+V = float(input("Qtd inicial de vida: "))
+var1 = int(input("var1: "))
+var2 = int(input("var2: "))
+var3 = int(input("var3: "))
+N = var1 + var2 + var3
+if (V < 0) or (var1 < 1) or (var1 > 12) or (var2 < 1) or (var2 > 12) or (var3 < 1) or (var3 > 12):
+	print("Entrada invalida")
+else:
+	if(V - 10 * N <= 0):
+		print(0)
+		print("MORTO")
+	else:
+		print(V - 10 * N)
+		print("VIVO")
+	
+-- EXECUTION TIME:
+0.244483
+-- TEST CASE 1:
+---- input:
+120
+6
+9
+10
+---- correct output:
+0
+MORTO
+---- user output:
+0
+MORTO
+-- TEST CASE 2:
+---- input:
+200
+15
+20
+3
+---- correct output:
+Entrada invalida
+---- user output:
+Entrada invalida
+-- TEST CASE 3:
+---- input:
+260
+2
+1
+2
+---- correct output:
+210
+VIVO
+---- user output:
+210.0
+VIVO
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 15:46:44) 
+-- CODE:
+V = int(input("Qtd inicial de vida: "))
+var1 = int(input("var1: "))
+var2 = int(input("var2: "))
+var3 = int(input("var3: "))
+N = var1 + var2 + var3
+if (V < 0) or (var1 < 1) or (var1 > 12) or (var2 < 1) or (var2 > 12) or (var3 < 1) or (var3 > 12):
+	print("Entrada invalida")
+else:
+	if(V - 10 * N <= 0):
+		print(0)
+		print("MORTO")
+	else:
+		print(V - 10 * N)
+		print("VIVO")
+	
+-- EXECUTION TIME:
+0.205888
+-- TEST CASE 1:
+---- input:
+120
+6
+9
+10
+---- correct output:
+0
+MORTO
+---- user output:
+0
+MORTO
+-- TEST CASE 2:
+---- input:
+200
+15
+20
+3
+---- correct output:
+Entrada invalida
+---- user output:
+Entrada invalida
+-- TEST CASE 3:
+---- input:
+260
+2
+1
+2
+---- correct output:
+210
+VIVO
+---- user output:
+210
+VIVO
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

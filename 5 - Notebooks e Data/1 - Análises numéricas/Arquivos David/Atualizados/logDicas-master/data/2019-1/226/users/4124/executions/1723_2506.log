@@ -1,0 +1,73 @@
+== TEST (2019-05-14 10:50:13) 
+-- CODE:
+qp = int(input("Quantidade inicial de peixes: "))
+pc = float(input("Percentual de crescimento anual: "))/100
+a = 0
+while(qp > 0 and qp < 12000):
+	qr = int(input("Quantidade retirada de peixes: "))
+	qp = qp + (qp * pc) - qr
+	a = a + 1
+if(qp >= 12000):
+	print("LIMITE")
+elif(qp <= 0):
+	print("EXTINCAO")
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    qr = int(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 10:51:16) 
+-- CODE:
+qp = int(input("Quantidade inicial de peixes: "))
+pc = float(input("Percentual de crescimento anual: "))/100
+qr = int(input("Quantidade retirada de peixes: "))
+a = 0
+while(qp > 0 and qp < 12000):
+
+	qp = qp + (qp * pc) - qr
+	a = a + 1
+if(qp >= 12000):
+	print("LIMITE")
+elif(qp <= 0):
+	print("EXTINCAO")
+print(a)
+-- EXECUTION TIME:
+0.155467
+-- TEST CASE 1:
+---- input:
+1234
+6
+135
+---- correct output:
+EXTINCAO
+14
+---- user output:
+EXTINCAO
+14
+-- TEST CASE 2:
+---- input:
+579
+37
+26
+---- correct output:
+LIMITE
+11
+---- user output:
+LIMITE
+11
+-- TEST CASE 3:
+---- input:
+6789
+45
+2345
+---- correct output:
+LIMITE
+4
+---- user output:
+LIMITE
+4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,5 @@
+A = int(input("a:"))
+B = int(input("b:"))
+C = int(input("c:"))
+W = (A ** 2 + B ** 2 + C ** 2) / (A + B + C)
+print(round(W, 7))

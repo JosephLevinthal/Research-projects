@@ -1,0 +1,96 @@
+== TEST (2019-06-25 11:25:12) 
+-- CODE:
+from numpy import*
+from numpy.linalg import* 
+
+x = array([50 , -120, 350 , 870])
+x = x . T
+
+rua = array([
+	[1,-1,0,0]
+	[0,1,-1,0]
+	[0,0,1,0 ]
+	[1,0,0,1 ]
+])
+
+y = dot(inv(rua,x))
+
+print(y)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:25:49) 
+-- CODE:
+from numpy import*
+from numpy.linalg import* 
+
+x = array([50 , -120, 350 , 870])
+x = x . T
+
+rua = array([	
+	[1,-1,0,0]
+	[0,1,-1,0]
+	[0,0,1,0]
+	[1,0,0,1]
+])
+
+y = dot(inv(rua),x)
+
+print(y)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:26:27) 
+-- CODE:
+from numpy import*
+from numpy.linalg import* 
+
+x = array([50 , -120, 350 , 870])
+x = x . T
+
+rua = array([[1,-1,0,0],[0,1,-1,0],[0,0,1,0],[1,0,0,1]])
+
+y = dot(inv(rua),x)
+
+print(y)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:26:38) 
+-- CODE:
+from numpy import*
+from numpy.linalg import* 
+
+x = array([50 , -120, 350 , 870])
+x = x . T
+
+rua = array([[1,-1,0,0],[0,1,-1,0],[0,0,1,0],[1,0,0,1]])
+
+y = dot(inv(rua),x)
+
+print(y)
+
+-- EXECUTION TIME:
+1.1983
+-- TEST CASE 1:
+---- input:
+Não_há
+---- correct output:
+[280. 230. 350. 590.]
+---- user output:
+[280. 230. 350. 590.]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

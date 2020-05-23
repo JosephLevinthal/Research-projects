@@ -1,0 +1,5 @@
+i = float(input("Digite valor do ingresso: "))
+qi = float(input("Digite quantidade de ingressos: "))
+d = i - i*(20/100)
+pp = (i - (i*(d/10)))
+print(round(pp, 2))

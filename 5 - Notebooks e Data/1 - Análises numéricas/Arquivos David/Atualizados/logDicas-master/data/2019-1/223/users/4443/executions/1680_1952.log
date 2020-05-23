@@ -1,0 +1,996 @@
+== TEST (2019-04-30 21:53:45) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+print(ns)	
+	
+	
+-- OUTPUT:
+1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 21:56:37) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+
+# desconto IR	
+elif(s <= 1.903,98):
+	sl = ns
+print(sl)	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 17, in <module>
+    print(sl)	
+NameError: name 'sl' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 21:57:15) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+sl = ns
+# desconto IR	
+elif(s <= 1.903,98):
+	sl = ns
+print(s)	
+	
+-- ERROR:
+File "XXXX", line 15
+    elif(s <= 1.903,98):
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 21:58:20) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+
+else:# desconto IR	
+elif(s <= 1.903,98):
+	sl = ns
+print(s)	
+	
+-- ERROR:
+File "XXXX", line 15
+    elif(s <= 1.903,98):
+       ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 21:58:38) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+
+# desconto IR	
+elif(s <= 1.903,98):
+	sl = ns
+print(s)	
+	
+-- OUTPUT:
+1234.56
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 19:55:44) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+
+# desconto IR	
+elif(ns <= 1.903,98):
+	sl = ns
+print(sl)	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 17, in <module>
+    print(sl)	
+NameError: name 'sl' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 19:56:52) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+
+# desconto IR	
+elif(ns <= 1.903,98):
+	ns = ns
+print(sl)	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 17, in <module>
+    print(sl)	
+NameError: name 'sl' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 19:57:08) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+
+# desconto IR	
+elif(ns <= 1.903,98):
+	ns = ns
+print(ns)	
+	
+-- OUTPUT:
+1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 08:40:20) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+	if(1.903.99 <= ns <= 2.765,66):
+		sl = ns*0.925
+		print(sl)
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+
+# desconto IR	
+elif(ns <= 1.903,98):
+	ns = ns
+print(ns)	
+	
+-- ERROR:
+File "XXXX", line 9
+    if(1.903.99 <= ns <= 2.765,66):
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 08:41:19) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+	if(1.903,99 <= ns <= 2.765,66):
+		sl = ns*0.925
+		print(sl)
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+
+# desconto IR	
+elif(ns <= 1.903,98):
+	ns = ns
+print(ns)	
+	
+-- OUTPUT:
+1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 08:42:53) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+	#if(1.903,99 <= ns <= 2.765,66):
+	#	sl = ns*0.925
+	#	print(sl)
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+
+# desconto IR	
+elif(ns <= 1.903,98):
+	ns = ns
+print(ns)	
+	
+-- OUTPUT:
+1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 08:44:46) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+	if(1.903,99 <= ns <= 2.765,66):
+		sl = ns*0.5
+		print(sl)
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+
+# desconto IR	
+elif(ns <= 1.903,98):
+	ns = ns
+print(ns)	
+	
+-- OUTPUT:
+1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 08:45:11) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+	if(1.903,99 <= ns <= 2.765,66):
+		sl = ns*0.5
+		print(sl)
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+-- OUTPUT:
+1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 08:45:24) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+	if(1.903,99 <= ns <= 2.765,66):
+		sl = ns*0.5
+		print(sl)
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+-- OUTPUT:
+1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 08:45:39) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+	if(1.903,99 <= ns <= 2.765,66):
+		sl = ns*0.5
+		print(sl)
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+-- OUTPUT:
+1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 08:45:49) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+	if(1.903,99 <= ns <= 2.765,66):
+		sl = ns*0.5
+		print(sl)
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+-- OUTPUT:
+1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 08:46:19) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+	if(1.903,99 <= ns <= 2.765,66):
+		sl = ns*0.5
+		print(sl)
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+-- OUTPUT:
+1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 21:48:13) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+print(ns)
+-- OUTPUT:
+1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 21:50:25) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+
+sb_ir = ns
+print(sb_ir)
+
+-- OUTPUT:
+1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 21:57:17) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+
+sb_ir = ns
+if(sb_ir <=1.903,98):
+	sl = sb_ir
+elif(1.903,99 <= sb_ir <= 2.826,65):
+	sl = sb_ir*0,925
+elif(2.826,66 <= sb_ir <= 3.751,05):
+	sl = sb_ir*0,85	
+elif(3.751,06 <= sb_ir <= 4.664,68):
+	sl = sb_ir*0,775	
+elif(sb_ir > 4.664,68):
+	sl = sb_ir*0,725
+print(sl)	
+
+
+-- ERROR:
+File "XXXX", line 19
+    elif(2.826,66 <= sb_ir <= 3.751,05):
+                                     ^
+SyntaxError: invalid token
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 21:58:49) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+
+sb_ir = ns
+if(sb_ir <=1.903,98):
+	sl = sb_ir
+elif(1.903,99 <= sb_ir <= 2.826,65):
+	sl = sb_ir*0,925
+elif(2.826,66 <= sb_ir <= 3.751,1):
+	sl = sb_ir*0,85	
+elif(3.751,1 < sb_ir <= 4.664,68):
+	sl = sb_ir*0,775	
+elif(sb_ir > 4.664,68):
+	sl = sb_ir*0,725
+print(sl)	
+
+
+-- OUTPUT:
+1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 22:00:01) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+
+sb_ir = ns
+if(sb_ir <=1.903,98):
+	sl = sb_ir
+elif(1.903,99 <= sb_ir <= 2.826,65):
+	sl = sb_ir*0,925
+elif(2.826,66 <= sb_ir <= 3.751,1):
+	sl = sb_ir*0,85	
+elif(3.751,1 < sb_ir <= 4.664,68):
+	sl = sb_ir*0,775	
+elif(sb_ir > 4.664,68):
+	sl = sb_ir*0,725
+
+print(sb_ir)
+print(sl)
+
+
+-- OUTPUT:
+1135.7952
+1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 22:00:14) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1.659,38):
+	ns = s*0.92
+elif(1.659,39 <= s <= 2.765,66):
+	ns = s*0.91
+elif(2.765,67 <= s <= 5.531,31):
+	ns = s*0.89
+elif(s > 5.531,31):
+	ns = s-608,44
+
+sb_ir = ns
+if(sb_ir <=1.903,98):
+	sl = sb_ir
+elif(1.903,99 <= sb_ir <= 2.826,65):
+	sl = sb_ir*0,925
+elif(2.826,66 <= sb_ir <= 3.751,1):
+	sl = sb_ir*0,85	
+elif(3.751,1 < sb_ir <= 4.664,68):
+	sl = sb_ir*0,775	
+elif(sb_ir > 4.664,68):
+	sl = sb_ir*0,725
+
+print(sb_ir)
+print(sl)
+
+
+-- OUTPUT:
+1135.7952
+1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 22:04:52) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1659.38):
+	ns = s*0.92
+elif(1659.39 <= s <= 2765.66):
+	ns = s*0.91
+elif(2765.67 <= s <= 5531.31):
+	ns = s*0.89
+elif(s > 5531.31):
+	ns = s-608.44
+
+sb_ir = ns
+if(sb_ir <=1903.98):
+	sl = sb_ir
+elif(1903.99 <= sb_ir <= 2826.65):
+	sl = sb_ir*0.925
+elif(2826.66 <= sb_ir <= 3751.05):
+	sl = sb_ir*0.85	
+elif(3751.1 < sb_ir <= 4664.68):
+	sl = sb_ir*0.775	
+elif(sb_ir > 4664.68):
+	sl = sb_ir*0.725
+
+print(sb_ir)
+print(sl)
+
+
+-- OUTPUT:
+1135.7952
+1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 22:05:49) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1659.38):
+	ns = s*0.92
+elif(1659.39 <= s <= 2765.66):
+	ns = s*0.91
+elif(2765.67 <= s <= 5531.31):
+	ns = s*0.89
+elif(s > 5531.31):
+	ns = s-608.44
+
+sb_ir = ns
+if(sb_ir <=1903.98):
+	sl = sb_ir
+elif(1903.99 <= sb_ir <= 2826.65):
+	sl = sb_ir*0.925
+elif(2826.66 <= sb_ir <= 3751.05):
+	sl = sb_ir*0.85	
+elif(3751.1 < sb_ir <= 4664.68):
+	sl = sb_ir*0.775	
+elif(sb_ir > 4664.68):
+	sl = sb_ir*0.725
+
+print("Salario liquido = R$", sl)
+
+
+-- OUTPUT:
+Salario liquido = R$ 1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 22:06:05) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1659.38):
+	ns = s*0.92
+elif(1659.39 <= s <= 2765.66):
+	ns = s*0.91
+elif(2765.67 <= s <= 5531.31):
+	ns = s*0.89
+elif(s > 5531.31):
+	ns = s-608.44
+
+sb_ir = ns
+if(sb_ir <=1903.98):
+	sl = sb_ir
+elif(1903.99 <= sb_ir <= 2826.65):
+	sl = sb_ir*0.925
+elif(2826.66 <= sb_ir <= 3751.05):
+	sl = sb_ir*0.85	
+elif(3751.1 < sb_ir <= 4664.68):
+	sl = sb_ir*0.775	
+elif(sb_ir > 4664.68):
+	sl = sb_ir*0.725
+
+print("Salario liquido = R$", sl)
+
+
+-- EXECUTION TIME:
+0.141554
+-- TEST CASE 1:
+---- input:
+1234.56
+---- correct output:
+Salario liquido = R$  1135.8
+---- user output:
+Salario liquido = R$ 1135.7952
+-- TEST CASE 2:
+---- input:
+2000
+---- correct output:
+Salario liquido = R$  1820.0
+---- user output:
+Salario liquido = R$ 1820.0
+-- TEST CASE 3:
+---- input:
+5535
+---- correct output:
+Salario liquido = R$  3571.76
+---- user output:
+Salario liquido = R$ 3571.7559999999994
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 22:06:29) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1659.38):
+	ns = s*0.92
+elif(1659.39 <= s <= 2765.66):
+	ns = s*0.91
+elif(2765.67 <= s <= 5531.31):
+	ns = s*0.89
+elif(s > 5531.31):
+	ns = s-608.44
+
+sb_ir = ns
+if(sb_ir <=1903.98):
+	sl = sb_ir
+elif(1903.99 <= sb_ir <= 2826.65):
+	sl = sb_ir*0.925
+elif(2826.66 <= sb_ir <= 3751.05):
+	sl = sb_ir*0.85	
+elif(3751.1 < sb_ir <= 4664.68):
+	sl = sb_ir*0.775	
+elif(sb_ir > 4664.68):
+	sl = sb_ir*0.725
+
+print("Salario liquido = R$", sl)
+
+
+-- OUTPUT:
+Salario liquido = R$ 1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 22:08:17) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1659.38):
+	ns = s*0.92
+elif(1659.39 <= s <= 2765.66):
+	ns = s*0.91
+elif(2765.67 <= s <= 5531.31):
+	ns = s*0.89
+elif(s > 5531.31):
+	ns = s-608.44
+
+sb_ir = ns
+if(sb_ir <=1903.98):
+	sl = sb_ir
+elif(1903.99 <= sb_ir <= 2826.65):
+	sl = sb_ir*0.925
+elif(2826.66 <= sb_ir <= 3751.05):
+	sl = sb_ir*0.85	
+elif(3751.1 < sb_ir <= 4664.68):
+	sl = sb_ir*0.775	
+elif(sb_ir > 4664.68):
+	sl = sb_ir*0.725
+	sl = round(sl, 2)
+print("Salario liquido = R$", sl)
+
+
+-- OUTPUT:
+Salario liquido = R$ 1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 22:08:28) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1659.38):
+	ns = s*0.92
+elif(1659.39 <= s <= 2765.66):
+	ns = s*0.91
+elif(2765.67 <= s <= 5531.31):
+	ns = s*0.89
+elif(s > 5531.31):
+	ns = s-608.44
+
+sb_ir = ns
+if(sb_ir <=1903.98):
+	sl = sb_ir
+elif(1903.99 <= sb_ir <= 2826.65):
+	sl = sb_ir*0.925
+elif(2826.66 <= sb_ir <= 3751.05):
+	sl = sb_ir*0.85	
+elif(3751.1 < sb_ir <= 4664.68):
+	sl = sb_ir*0.775	
+elif(sb_ir > 4664.68):
+	sl = sb_ir*0.725
+	sl = round(sl, 2)
+print("Salario liquido = R$", sl)
+
+
+-- OUTPUT:
+Salario liquido = R$ 1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 22:09:17) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1659.38):
+	ns = s*0.92
+elif(1659.39 <= s <= 2765.66):
+	ns = s*0.91
+elif(2765.67 <= s <= 5531.31):
+	ns = s*0.89
+elif(s > 5531.31):
+	ns = s-608.44
+
+sb_ir = ns
+if(sb_ir <=1903.98):
+	sl = sb_ir
+elif(1903.99 <= sb_ir <= 2826.65):
+	sl = sb_ir*0.925
+elif(2826.66 <= sb_ir <= 3751.05):
+	sl = sb_ir*0.85	
+elif(3751.1 < sb_ir <= 4664.68):
+	sl = sb_ir*0.775	
+elif(sb_ir > 4664.68):
+	sl = sb_ir*0.725
+	sf = round(sl, 2)
+print("Salario liquido = R$", sf)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 26, in <module>
+    print("Salario liquido = R$", sf)
+NameError: name 'sf' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 22:09:36) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1659.38):
+	ns = s*0.92
+elif(1659.39 <= s <= 2765.66):
+	ns = s*0.91
+elif(2765.67 <= s <= 5531.31):
+	ns = s*0.89
+elif(s > 5531.31):
+	ns = s-608.44
+
+sb_ir = ns
+if(sb_ir <=1903.98):
+	sl = sb_ir
+elif(1903.99 <= sb_ir <= 2826.65):
+	sl = sb_ir*0.925
+elif(2826.66 <= sb_ir <= 3751.05):
+	sl = sb_ir*0.85	
+elif(3751.1 < sb_ir <= 4664.68):
+	sl = sb_ir*0.775	
+elif(sb_ir > 4664.68):
+	sl = sb_ir*0.725
+	sf = round(sl, 2)
+print("Salario liquido = R$", sf)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 26, in <module>
+    print("Salario liquido = R$", sf)
+NameError: name 'sf' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 22:10:34) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1659.38):
+	ns = s*0.92
+elif(1659.39 <= s <= 2765.66):
+	ns = s*0.91
+elif(2765.67 <= s <= 5531.31):
+	ns = s*0.89
+elif(s > 5531.31):
+	ns = s-608.44
+
+sb_ir = ns
+if(sb_ir <=1903.98):
+	sl = sb_ir
+elif(1903.99 <= sb_ir <= 2826.65):
+	sl = sb_ir*0.925
+elif(2826.66 <= sb_ir <= 3751.05):
+	sl = sb_ir*0.85	
+elif(3751.1 < sb_ir <= 4664.68):
+	sl = sb_ir*0.775	
+elif(sb_ir > 4664.68):
+	sl = sb_ir*0.725
+	
+print("Salario liquido = R$", round(sl, 2))
+
+
+-- OUTPUT:
+Salario liquido = R$ 1135.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 22:10:46) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1659.38):
+	ns = s*0.92
+elif(1659.39 <= s <= 2765.66):
+	ns = s*0.91
+elif(2765.67 <= s <= 5531.31):
+	ns = s*0.89
+elif(s > 5531.31):
+	ns = s-608.44
+
+sb_ir = ns
+if(sb_ir <=1903.98):
+	sl = sb_ir
+elif(1903.99 <= sb_ir <= 2826.65):
+	sl = sb_ir*0.925
+elif(2826.66 <= sb_ir <= 3751.05):
+	sl = sb_ir*0.85	
+elif(3751.1 < sb_ir <= 4664.68):
+	sl = sb_ir*0.775	
+elif(sb_ir > 4664.68):
+	sl = sb_ir*0.725
+	
+print("Salario liquido = R$", round(sl, 2))
+
+
+-- OUTPUT:
+Salario liquido = R$ 1135.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 22:10:57) 
+-- CODE:
+#Leitura do salario bruto:
+s = float(input("Digite o valor do salario bruto: "))
+
+# desconto previdenciario
+if(s <= 1659.38):
+	ns = s*0.92
+elif(1659.39 <= s <= 2765.66):
+	ns = s*0.91
+elif(2765.67 <= s <= 5531.31):
+	ns = s*0.89
+elif(s > 5531.31):
+	ns = s-608.44
+
+sb_ir = ns
+if(sb_ir <=1903.98):
+	sl = sb_ir
+elif(1903.99 <= sb_ir <= 2826.65):
+	sl = sb_ir*0.925
+elif(2826.66 <= sb_ir <= 3751.05):
+	sl = sb_ir*0.85	
+elif(3751.1 < sb_ir <= 4664.68):
+	sl = sb_ir*0.775	
+elif(sb_ir > 4664.68):
+	sl = sb_ir*0.725
+	
+print("Salario liquido = R$", round(sl, 2))
+
+
+-- EXECUTION TIME:
+0.148242
+-- TEST CASE 1:
+---- input:
+1234.56
+---- correct output:
+Salario liquido = R$  1135.8
+---- user output:
+Salario liquido = R$ 1135.8
+-- TEST CASE 2:
+---- input:
+2000
+---- correct output:
+Salario liquido = R$  1820.0
+---- user output:
+Salario liquido = R$ 1820.0
+-- TEST CASE 3:
+---- input:
+5535
+---- correct output:
+Salario liquido = R$  3571.76
+---- user output:
+Salario liquido = R$ 3571.76
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

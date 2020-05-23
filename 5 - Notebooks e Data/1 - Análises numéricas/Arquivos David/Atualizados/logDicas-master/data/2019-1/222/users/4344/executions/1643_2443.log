@@ -1,0 +1,112 @@
+== TEST (2019-04-14 23:55:03) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+raio = float(input("raio do tanque: "))
+h_ar = float(input("altura da coluna: "))
+option = int(input("1 - volume de ar \n2 - volume de combustivel\n"))
+-- OUTPUT:
+Impar
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 00:00:49) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+import math as m
+raio = float(input("raio do tanque: "))
+h_ar = float(input("altura da coluna: "))
+option = int(input("Numero da opcao desejada\n1 - volume de ar\t2 - volume de combustivel: "))
+
+V_esfera = (4/3)*m.pi*raio**3
+print(V_esfera)
+V_ar		= (1/3)*m.pi*h_ar**2*(3*raio - h_ar)
+print(V_ar)
+V_combus = 
+-- ERROR:
+File "XXXX", line 13
+    V_combus = 
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 00:01:02) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+import math as m
+raio = float(input("raio do tanque: "))
+h_ar = float(input("altura da coluna: "))
+option = int(input("Numero da opcao desejada\n1 - volume de ar\t2 - volume de combustivel: "))
+
+V_esfera = (4/3)*m.pi*raio**3
+print(V_esfera)
+V_ar		= (1/3)*m.pi*h_ar**2*(3*raio - h_ar)
+print(V_ar)
+-- OUTPUT:
+179.59438003021648
+9.025664794069575
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 00:04:24) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+import math as m
+raio = float(input("raio do tanque: "))
+h_ar = float(input("altura da coluna: "))
+option = input("Numero da opcao desejada\n1 - volume de ar\t2 - volume de combustivel: ")
+
+V_esfera = (4/3)*m.pi*raio**3
+V_ar		= (1/3)*m.pi*h_ar**2*(3*raio - h_ar)
+V_combus = V_esfera - V_ar
+
+if option == '1':
+	print(round(V_ar, 4))
+elif option == '2':
+	print(round(V_combus, 4))
+-- OUTPUT:
+9.0257
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 00:04:44) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+import math as m
+raio = float(input("raio do tanque: "))
+h_ar = float(input("altura da coluna: "))
+option = input("Numero da opcao desejada\n1 - volume de ar\t2 - volume de combustivel: ")
+
+V_esfera = (4/3)*m.pi*raio**3
+V_ar		= (1/3)*m.pi*h_ar**2*(3*raio - h_ar)
+V_combus = V_esfera - V_ar
+
+if option == '1':
+	print(round(V_ar, 4))
+elif option == '2':
+	print(round(V_combus, 4))
+-- EXECUTION TIME:
+0.180778
+-- TEST CASE 1:
+---- input:
+3.50
+0.95
+1
+---- correct output:
+9.0257
+---- user output:
+9.0257
+-- TEST CASE 2:
+---- input:
+4.20
+1.30
+2
+---- correct output:
+290.3408
+---- user output:
+290.3408
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

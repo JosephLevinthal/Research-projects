@@ -1,0 +1,256 @@
+== TEST (2019-04-15 14:25:32) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+vinicial=float(input("Informe a velocidade inicial :"))
+angulo=float(input("Informe a angulo lancamento :"))
+dporco=float(input("Informe a distancia do porco :"))
+gravidade=9.8
+
+dlancamento = vinicial^2
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    dlancamento = vinicial^2
+TypeError: unsupported operand type(s) for ^: 'float' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:30:38) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+vinicial=float(input("Informe a velocidade inicial :"))
+angulo=float(input("Informe a angulo lancamento :"))
+dporco=float(input("Informe a distancia do porco :"))
+gravidade=9.8
+
+dlancamento = vinicial**2
+
+print(dlancamento)
+
+
+-- OUTPUT:
+110.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:33:28) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+import math
+
+vinicial=float(input("Informe a velocidade inicial :"))
+angulo=float(input("Informe a angulo lancamento :"))
+dporco=float(input("Informe a distancia do porco :"))
+gravidade=9.8
+
+dlancamento = (vinicial**2)* math.radians(angulo)
+
+print(dlancamento)
+
+
+-- OUTPUT:
+87.55226026473055
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:34:32) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+import math
+
+vinicial=float(input("Informe a velocidade inicial :"))
+angulo=float(input("Informe a angulo lancamento :"))
+dporco=float(input("Informe a distancia do porco :"))
+gravidade=9.8
+
+dlancamento = ((vinicial**2)* math.sin(2*math.radians(angulo)))/gravidade
+
+print(dlancamento)
+
+
+-- OUTPUT:
+11.2482865705094
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:38:30) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+import math
+
+vinicial=float(input("Informe a velocidade inicial :"))
+angulo=float(input("Informe a angulo lancamento :"))
+dporco=float(input("Informe a distancia do porco :"))
+gravidade=9.8
+
+dlancamento = ((vinicial**2)* math.sin(2*math.radians(angulo)))/gravidade
+
+if(math.abs(dporco-dlancamento)<0.1)
+	print("sim")
+else:
+	print("nao")
+
+
+
+
+-- ERROR:
+File "XXXX", line 13
+    if(math.abs(dporco-dlancamento)<0.1)
+                                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:38:44) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+import math
+
+vinicial=float(input("Informe a velocidade inicial :"))
+angulo=float(input("Informe a angulo lancamento :"))
+dporco=float(input("Informe a distancia do porco :"))
+gravidade=9.8
+
+dlancamento = ((vinicial**2)* math.sin(2*math.radians(angulo)))/gravidade
+
+if(abs(dporco-dlancamento)<0.1)
+	print("sim")
+else:
+	print("nao")
+
+
+
+
+-- ERROR:
+File "XXXX", line 13
+    if(abs(dporco-dlancamento)<0.1)
+                                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:39:36) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+import math
+
+vinicial=float(input("Informe a velocidade inicial :"))
+angulo=float(input("Informe a angulo lancamento :"))
+dporco=float(input("Informe a distancia do porco :"))
+gravidade=9.8
+
+dlancamento = ((vinicial**2)* math.sin(2*math.radians(angulo)))/gravidade
+
+if(math.abs(dporco-dlancamento)<0.1):
+	print("sim")
+else:
+	print("nao")
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 13, in <module>
+    if(math.abs(dporco-dlancamento)<0.1):
+AttributeError: module 'math' has no attribute 'abs'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:40:05) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+import math
+
+vinicial=float(input("Informe a velocidade inicial :"))
+angulo=float(input("Informe a angulo lancamento :"))
+dporco=float(input("Informe a distancia do porco :"))
+gravidade=9.8
+
+dlancamento = ((vinicial**2)* math.sin(2*math.radians(angulo)))/gravidade
+
+if(abs(dporco-dlancamento)<0.1):
+	print("sim")
+else:
+	print("nao")
+
+
+
+
+-- OUTPUT:
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:40:12) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+import math
+
+vinicial=float(input("Informe a velocidade inicial :"))
+angulo=float(input("Informe a angulo lancamento :"))
+dporco=float(input("Informe a distancia do porco :"))
+gravidade=9.8
+
+dlancamento = ((vinicial**2)* math.sin(2*math.radians(angulo)))/gravidade
+
+if(abs(dporco-dlancamento)<0.1):
+	print("sim")
+else:
+	print("nao")
+
+
+
+
+-- OUTPUT:
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 14:40:15) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+import math
+
+vinicial=float(input("Informe a velocidade inicial :"))
+angulo=float(input("Informe a angulo lancamento :"))
+dporco=float(input("Informe a distancia do porco :"))
+gravidade=9.8
+
+dlancamento = ((vinicial**2)* math.sin(2*math.radians(angulo)))/gravidade
+
+if(abs(dporco-dlancamento)<0.1):
+	print("sim")
+else:
+	print("nao")
+
+
+
+
+-- EXECUTION TIME:
+0.234762
+-- TEST CASE 1:
+---- input:
+10.5
+45.5
+11.3
+---- correct output:
+sim
+---- user output:
+sim
+-- TEST CASE 2:
+---- input:
+29.5
+17.1
+51.0
+---- correct output:
+nao
+---- user output:
+nao
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

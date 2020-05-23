@@ -1,0 +1,61 @@
+== TEST (2019-04-11 19:56:01) 
+-- CODE:
+a = float(input("preco:"))
+b = float(input("pagamento:"))
+if (a>b):
+	diferenca = b-a
+	msg = "falta"diferenca
+	print(msg)
+-- ERROR:
+File "XXXX", line 5
+    msg = "falta"diferenca
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:56:18) 
+-- CODE:
+a = float(input("preco:"))
+b = float(input("pagamento:"))
+if (a>b):
+	c = b-a
+	msg = "falta"c
+	print(msg)
+-- ERROR:
+File "XXXX", line 5
+    msg = "falta"c
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:56:24) 
+-- CODE:
+a = float(input("preco:"))
+b = float(input("pagamento:"))
+if (a>b):
+	c = b-a
+	msg = c
+	print(msg)
+-- OUTPUT:
+-26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:56:52) 
+-- CODE:
+a = float(input("preco:"))
+b = float(input("pagamento:"))
+if (a>b):
+	c = +(b-a)
+	msg = c
+	print(msg)
+-- OUTPUT:
+-26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:57:17) 
+-- CODE:
+a = float(input("preco:"))
+b = float(input("pagamento:"))
+if (a>b):
+	c = -1*(b-a)
+	msg = c
+	print(msg)
+-- OUTPUT:
+26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

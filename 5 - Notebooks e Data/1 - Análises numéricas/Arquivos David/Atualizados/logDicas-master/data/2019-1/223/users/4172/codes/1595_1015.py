@@ -1,0 +1,8 @@
+x=int(input("n1: "))
+y=int(input("n2: "))
+z=int(input("n3: "))
+a=min(x,y,z)
+b=max(x,y,z)
+print(a)
+print(x+y+z-a-b)
+print(b)

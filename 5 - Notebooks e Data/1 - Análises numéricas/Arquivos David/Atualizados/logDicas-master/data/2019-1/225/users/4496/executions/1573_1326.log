@@ -1,0 +1,100 @@
+== TEST (2019-04-01 15:43:17) 
+-- CODE:
+print n = int + int
+-- ERROR:
+File "XXXX", line 1
+    print n = int + int
+          ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(n = int + int)?
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:43:28) 
+-- CODE:
+print n = (int + int)
+-- ERROR:
+File "XXXX", line 1
+    print n = (int + int)
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:44:22) 
+-- CODE:
+var1 = 8 + 2
+print(var1)
+-- OUTPUT:
+10
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:44:30) 
+-- CODE:
+var1 = 8 + 2 + 1
+print(var1)
+-- OUTPUT:
+11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:44:49) 
+-- CODE:
+var1 = 8 + 2 + 1
+#print(var1)
+-- OUTPUT:
+11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:44:56) 
+-- CODE:
+var1 = 8 + 2 + 1
+print(var1)
+-- OUTPUT:
+11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:45:08) 
+-- CODE:
+var1 = 8 + 2 + 1
+print(8 + 2 + 1)
+-- OUTPUT:
+11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:45:14) 
+-- CODE:
+var1 = 8 + 2 + 1
+print(8 + 2)
+-- OUTPUT:
+10
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:45:37) 
+-- CODE:
+var1 = 40 + 35
+print(8 + 2)
+-- OUTPUT:
+10
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:45:47) 
+-- CODE:
+var1 = 40 + 35
+print(var 1)
+-- ERROR:
+File "XXXX", line 2
+    print(var 1)
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:45:55) 
+-- CODE:
+var1 = 40 + 35
+print(var1)
+-- OUTPUT:
+75
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 15:46:02) 
+-- CODE:
+var1 = 40 + 35
+print(var1)
+-- EXECUTION TIME:
+0.170853
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+75
+---- user output:
+75
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,6 @@
+tempo = float(input("escreva o tempo gasto"))
+vel = float(input("escreva a velocidade media"))
+distancia = (vel * tempo)
+combustivel = (distancia/12)
+print(distancia)
+print(combustivel)

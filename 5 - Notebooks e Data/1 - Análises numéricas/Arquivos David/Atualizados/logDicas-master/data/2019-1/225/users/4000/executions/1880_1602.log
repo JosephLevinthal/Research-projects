@@ -1,0 +1,33 @@
+== TEST (2019-07-03 14:46:37) 
+-- CODE:
+from numpy import*
+v = array(eval(input("m:")))dtype = float
+
+-- ERROR:
+File "XXXX", line 2
+    v = array(eval(input()))dtype = float
+                                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-03 14:46:51) 
+-- CODE:
+from numpy import*
+v = array(eval(input("m:"))dtype=float)
+
+-- ERROR:
+File "XXXX", line 2
+    v = array(eval(input())dtype=float)
+                               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-03 14:47:03) 
+-- CODE:
+from numpy import*
+v = array(eval(input("m:")dtype=float))
+
+-- ERROR:
+File "XXXX", line 2
+    v = array(eval(input()dtype=float))
+                              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

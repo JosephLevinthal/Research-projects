@@ -1,0 +1,1118 @@
+== TEST (2019-04-30 17:22:23) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else (b<=a):
+	print("entradas", a,",", b,",", "invalidas")
+-- ERROR:
+File "XXXX", line 10
+    else (b<=a):
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:22:51) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+	else (b<=a):
+	print("entradas", a,",", b,",", "invalidas")
+-- ERROR:
+File "XXXX", line 10
+    else (b<=a):
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:22:59) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+	elif (b<=a):
+	print("entradas", a,",", b,",", "invalidas")
+-- ERROR:
+File "XXXX", line 11
+    print("entradas", a,",", b,",", "invalidas")
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:23:11) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+		else (b<=a):
+	print("entradas", a,",", b,",", "invalidas")
+-- ERROR:
+File "XXXX", line 10
+    else (b<=a):
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:23:18) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+		else (b<=a):
+			print("entradas", a,",", b,",", "invalidas")
+-- ERROR:
+File "XXXX", line 10
+    else (b<=a):
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:24:44) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+		else:
+			print("entradas", a,",", b,",", "invalidas")
+-- ERROR:
+File "XXXX", line 10
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:24:54) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("entradas", a,",", b,",", "invalidas")
+-- ERROR:
+File "XXXX", line 10
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:24:56) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("entradas", a,",", b,",", "invalidas")
+-- EXECUTION TIME:
+0.130705
+-- TEST CASE 1:
+---- input:
+2
+3
+4
+---- correct output:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+5.5
+6.5
+3.5
+---- correct output:
+Entradas 6.5 e 3.5 invalidas
+---- user output:
+entradas 6.5 , 3.5 , invalidas
+-- TEST CASE 3:
+---- input:
+6.5
+1.1
+22.2
+---- correct output:
+6.5 pertence ao intervalo 1.1 , 22.2
+---- user output:
+6.5 pertence ao intervalo 1.1 , 22.2
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:26:09) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("entradas", a,"e", b, "invalidas")
+-- EXECUTION TIME:
+0.144462
+-- TEST CASE 1:
+---- input:
+2
+3
+4
+---- correct output:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+5.5
+6.5
+3.5
+---- correct output:
+Entradas 6.5 e 3.5 invalidas
+---- user output:
+entradas 6.5 e 3.5 invalidas
+-- TEST CASE 3:
+---- input:
+6.5
+1.1
+22.2
+---- correct output:
+6.5 pertence ao intervalo 1.1 , 22.2
+---- user output:
+6.5 pertence ao intervalo 1.1 , 22.2
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:26:18) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- EXECUTION TIME:
+0.138619
+-- TEST CASE 1:
+---- input:
+2
+3
+4
+---- correct output:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+5.5
+6.5
+3.5
+---- correct output:
+Entradas 6.5 e 3.5 invalidas
+---- user output:
+Entradas 6.5 e 3.5 invalidas
+-- TEST CASE 3:
+---- input:
+6.5
+1.1
+22.2
+---- correct output:
+6.5 pertence ao intervalo 1.1 , 22.2
+---- user output:
+6.5 pertence ao intervalo 1.1 , 22.2
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:26:26) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- EXECUTION TIME:
+0.23557
+-- TEST CASE 1:
+---- input:
+2
+3
+4
+---- correct output:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+5.5
+6.5
+3.5
+---- correct output:
+Entradas 6.5 e 3.5 invalidas
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+6.5
+1.1
+22.2
+---- correct output:
+6.5 pertence ao intervalo 1.1 , 22.2
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:26:26) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- EXECUTION TIME:
+0.13187
+-- TEST CASE 1:
+---- input:
+2
+3
+4
+---- correct output:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+5.5
+6.5
+3.5
+---- correct output:
+Entradas 6.5 e 3.5 invalidas
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+6.5
+1.1
+22.2
+---- correct output:
+6.5 pertence ao intervalo 1.1 , 22.2
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:26:27) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- EXECUTION TIME:
+0.48458
+-- TEST CASE 1:
+---- input:
+2
+3
+4
+---- correct output:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+5.5
+6.5
+3.5
+---- correct output:
+Entradas 6.5 e 3.5 invalidas
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+6.5
+1.1
+22.2
+---- correct output:
+6.5 pertence ao intervalo 1.1 , 22.2
+---- user output:
+6.5 pertence ao intervalo 1.1 , 22.2
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:26:27) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- EXECUTION TIME:
+0.53685
+-- TEST CASE 1:
+---- input:
+2
+3
+4
+---- correct output:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+5.5
+6.5
+3.5
+---- correct output:
+Entradas 6.5 e 3.5 invalidas
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+6.5
+1.1
+22.2
+---- correct output:
+6.5 pertence ao intervalo 1.1 , 22.2
+---- user output:
+6.5 pertence ao intervalo 1.1 , 22.2
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:26:27) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- EXECUTION TIME:
+0.423404
+-- TEST CASE 1:
+---- input:
+2
+3
+4
+---- correct output:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+5.5
+6.5
+3.5
+---- correct output:
+Entradas 6.5 e 3.5 invalidas
+---- user output:
+Entradas 6.5 e 3.5 invalidas
+-- TEST CASE 3:
+---- input:
+6.5
+1.1
+22.2
+---- correct output:
+6.5 pertence ao intervalo 1.1 , 22.2
+---- user output:
+Entradas 6.5 e 3.5 invalidas
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:26:28) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- EXECUTION TIME:
+0.344143
+-- TEST CASE 1:
+---- input:
+2
+3
+4
+---- correct output:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+5.5
+6.5
+3.5
+---- correct output:
+Entradas 6.5 e 3.5 invalidas
+---- user output:
+6.5 pertence ao intervalo 1.1 , 22.2
+-- TEST CASE 3:
+---- input:
+6.5
+1.1
+22.2
+---- correct output:
+6.5 pertence ao intervalo 1.1 , 22.2
+---- user output:
+6.5 pertence ao intervalo 1.1 , 22.2
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:26:28) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- EXECUTION TIME:
+0.552467
+-- TEST CASE 1:
+---- input:
+2
+3
+4
+---- correct output:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+---- user output:
+6.5 pertence ao intervalo 1.1 , 22.2
+-- TEST CASE 2:
+---- input:
+5.5
+6.5
+3.5
+---- correct output:
+Entradas 6.5 e 3.5 invalidas
+---- user output:
+6.5 pertence ao intervalo 1.1 , 22.2
+-- TEST CASE 3:
+---- input:
+6.5
+1.1
+22.2
+---- correct output:
+6.5 pertence ao intervalo 1.1 , 22.2
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:26:28) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- EXECUTION TIME:
+0.542448
+-- TEST CASE 1:
+---- input:
+2
+3
+4
+---- correct output:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+---- user output:
+6.5 pertence ao intervalo 1.1 , 22.2
+-- TEST CASE 2:
+---- input:
+5.5
+6.5
+3.5
+---- correct output:
+Entradas 6.5 e 3.5 invalidas
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+6.5
+1.1
+22.2
+---- correct output:
+6.5 pertence ao intervalo 1.1 , 22.2
+---- user output:
+Entradas 6.5 e 3.5 invalidas
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:26:29) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- EXECUTION TIME:
+0.191939
+-- TEST CASE 1:
+---- input:
+2
+3
+4
+---- correct output:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+5.5
+6.5
+3.5
+---- correct output:
+Entradas 6.5 e 3.5 invalidas
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+6.5
+1.1
+22.2
+---- correct output:
+6.5 pertence ao intervalo 1.1 , 22.2
+---- user output:
+Entradas 6.5 e 3.5 invalidas
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:26:29) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- EXECUTION TIME:
+0.423099
+-- TEST CASE 1:
+---- input:
+2
+3
+4
+---- correct output:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+---- user output:
+Entradas 6.5 e 3.5 invalidas
+-- TEST CASE 2:
+---- input:
+5.5
+6.5
+3.5
+---- correct output:
+Entradas 6.5 e 3.5 invalidas
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+6.5
+1.1
+22.2
+---- correct output:
+6.5 pertence ao intervalo 1.1 , 22.2
+---- user output:
+Entradas 6.5 e 3.5 invalidas
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:26:29) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- EXECUTION TIME:
+0.655447
+-- ERROR:
+sh: 1: cannot open /home/codebench/codes/1679/1103/cbtemp.txt: No such file
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:26:29) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- EXECUTION TIME:
+0.706558
+-- TEST CASE 1:
+---- input:
+2
+3
+4
+---- correct output:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+---- user output:
+Entradas 6.5 e 3.5 invalidas
+-- TEST CASE 2:
+---- input:
+5.5
+6.5
+3.5
+---- correct output:
+Entradas 6.5 e 3.5 invalidas
+---- user output:
+Entradas 6.5 e 3.5 invalidas
+-- TEST CASE 3:
+---- input:
+6.5
+1.1
+22.2
+---- correct output:
+6.5 pertence ao intervalo 1.1 , 22.2
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:26:29) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- EXECUTION TIME:
+0.56223
+-- TEST CASE 1:
+---- input:
+2
+3
+4
+---- correct output:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+---- user output:
+Entradas 6.5 e 3.5 invalidas
+-- TEST CASE 2:
+---- input:
+5.5
+6.5
+3.5
+---- correct output:
+Entradas 6.5 e 3.5 invalidas
+---- user output:
+6.5 pertence ao intervalo 1.1 , 22.2
+-- TEST CASE 3:
+---- input:
+6.5
+1.1
+22.2
+---- correct output:
+6.5 pertence ao intervalo 1.1 , 22.2
+---- user output:
+6.5 pertence ao intervalo 1.1 , 22.2
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:26:29) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- EXECUTION TIME:
+0.424294
+-- TEST CASE 1:
+---- input:
+2
+3
+4
+---- correct output:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+---- user output:
+Entradas 6.5 e 3.5 invalidas
+-- TEST CASE 2:
+---- input:
+5.5
+6.5
+3.5
+---- correct output:
+Entradas 6.5 e 3.5 invalidas
+---- user output:
+6.5 pertence ao intervalo 1.1 , 22.2
+-- TEST CASE 3:
+---- input:
+6.5
+1.1
+22.2
+---- correct output:
+6.5 pertence ao intervalo 1.1 , 22.2
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:26:30) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- EXECUTION TIME:
+0.409784
+-- ERROR:
+sh: 1: cannot open /home/codebench/codes/1679/1103/cbtemp.txt: No such file
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:26:30) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- EXECUTION TIME:
+0.352626
+-- ERROR:
+sh: 1: cannot open /home/codebench/codes/1679/1103/cbtemp.txt: No such file
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:26:37) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- ERROR:
+File "XXXX", line 10
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:27:14) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b)
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,",","e", b,",", "invalidas")
+-- EXECUTION TIME:
+0.120897
+-- TEST CASE 1:
+---- input:
+2
+3
+4
+---- correct output:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+5.5
+6.5
+3.5
+---- correct output:
+Entradas 6.5 e 3.5 invalidas
+---- user output:
+Entradas 6.5 , e 3.5 , invalidas
+-- TEST CASE 3:
+---- input:
+6.5
+1.1
+22.2
+---- correct output:
+6.5 pertence ao intervalo 1.1 , 22.2
+---- user output:
+6.5 pertence ao intervalo 1.1 , 22.2
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:30:09) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b) 
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- EXECUTION TIME:
+0.13677
+-- TEST CASE 1:
+---- input:
+2
+3
+4
+---- correct output:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+5.5
+6.5
+3.5
+---- correct output:
+Entradas 6.5 e 3.5 invalidas
+---- user output:
+Entradas 6.5 e 3.5 invalidas
+-- TEST CASE 3:
+---- input:
+6.5
+1.1
+22.2
+---- correct output:
+6.5 pertence ao intervalo 1.1 , 22.2
+---- user output:
+6.5 pertence ao intervalo 1.1 , 22.2
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:30:12) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b) 
+	elif (x>b) or (x>a):
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- ERROR:
+File "XXXX", line 10
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:30:51) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b) 
+	elif:
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- ERROR:
+File "XXXX", line 8
+    elif:
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:31:03) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b) 
+	else:
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- OUTPUT:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:31:05) 
+-- CODE:
+x = float(input())
+a = float(input())
+b = float(input())
+
+if (b>a):
+	if (a<= x <= b):
+		print(x, "pertence ao intervalo", a, ",", b) 
+	else:
+		print(x, "nao pertence ao intervalo", a, ",", b)
+else:
+	print("Entradas", a,"e", b, "invalidas")
+-- EXECUTION TIME:
+0.140346
+-- TEST CASE 1:
+---- input:
+2
+3
+4
+---- correct output:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+---- user output:
+2.0 nao pertence ao intervalo 3.0 , 4.0
+-- TEST CASE 2:
+---- input:
+5.5
+6.5
+3.5
+---- correct output:
+Entradas 6.5 e 3.5 invalidas
+---- user output:
+Entradas 6.5 e 3.5 invalidas
+-- TEST CASE 3:
+---- input:
+6.5
+1.1
+22.2
+---- correct output:
+6.5 pertence ao intervalo 1.1 , 22.2
+---- user output:
+6.5 pertence ao intervalo 1.1 , 22.2
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

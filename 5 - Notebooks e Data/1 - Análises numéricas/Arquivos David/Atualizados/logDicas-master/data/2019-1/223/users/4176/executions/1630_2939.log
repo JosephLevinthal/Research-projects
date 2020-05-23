@@ -1,0 +1,385 @@
+== TEST (2019-04-02 17:15:43) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=int(venda-83/100)
+print(lucro)
+-- OUTPUT:
+29
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:16:22) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=int(venda-(venda*83/100)
+print(lucro)
+-- ERROR:
+File "XXXX", line 3
+    print(lucro)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:16:31) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=int(venda-(venda*(83/100)
+print(lucro)
+-- ERROR:
+File "XXXX", line 3
+    print(lucro)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:16:39) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=int(venda-(venda*(83/100))
+print(lucro)
+-- ERROR:
+File "XXXX", line 3
+    print(lucro)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:17:06) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=(venda-83/100)
+print(lucro)
+-- OUTPUT:
+29.17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:18:41) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=(venda-83/100)
+despesa=(100+(lucro-20/100))
+
+
+print(round(lucro-despesa,2)
+-- ERROR:
+File "XXXX", line 7
+    
+                                ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:19:27) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=(venda-83/100)
+despesa=(100+(lucro-20/100))
+
+total=int(round(lucro-despesa),2)
+
+print(total)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    total=int(round(lucro-despesa),2)
+TypeError: int() can't convert non-string with explicit base
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:19:54) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=(venda-83/100)
+despesa=(100+(lucro-20/100))
+
+total=round(lucro-despesa),2
+
+print(total)
+-- OUTPUT:
+(-100, 2)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:20:21) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=(venda-83/100)
+despesa=(100+(lucro-20/100))
+
+total=float(round(lucro-despesa),2
+
+print(total)
+-- ERROR:
+File "XXXX", line 7
+    print(total)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:20:29) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=(venda-83/100)
+despesa=(100+(lucro-20/100))
+
+total=float(round(lucro-despesa),2)
+
+print(total)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    total=float(round(lucro-despesa),2)
+TypeError: float() takes at most 1 argument (2 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:21:03) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=float(venda-83/100)
+despesa=float(100+(lucro-20/100))
+
+total=float(round(lucro-despesa),2)
+
+print(total)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    total=float(round(lucro-despesa),2)
+TypeError: float() takes at most 1 argument (2 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:21:31) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=float(venda-83/100)
+despesa=float(100+(lucro-20/100))
+
+total=float(lucro-despesa)
+
+print(total)
+-- OUTPUT:
+-99.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:22:13) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=float(venda*12)-83/100
+despesa=float(100+(lucro-20/100))
+
+total=float(lucro-despesa)
+
+print(total)
+-- OUTPUT:
+-99.80000000000001
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:23:11) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=float(venda*12)-83/100
+despesa=float(100+(lucro-20/100))
+
+total=float(lucro-despesa)
+
+rd= float(round(total),2)
+print(total)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    rd= float(round(total),2)
+TypeError: float() takes at most 1 argument (2 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:24:17) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=float(venda*12)
+lucrototal=(lucro-83/100)
+
+print(lucrototal)
+
+
+-- OUTPUT:
+359.17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:25:14) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=float(venda*12)
+lucrototal=(lucro-83/100)
+
+despesas=(100+lucrototal-20/100)
+
+print(despesa)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    print(despesa)
+NameError: name 'despesa' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:25:28) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=float(venda*12)
+lucrototal=(lucro-83/100)
+
+despesas=float(100+lucrototal-20/100)
+
+print(despesa)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    print(despesa)
+NameError: name 'despesa' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:25:39) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=float(venda*12)
+lucrototal=(lucro-83/100)
+
+despesas=float(100+lucrototal-20/100)
+
+print(despesas)
+
+
+-- OUTPUT:
+458.97
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:26:06) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=float(venda*12)
+lucrototal=(lucro-83/100)
+
+despesas=float(100+lucrototal-20/100)
+
+print(lucrototal)
+
+
+-- OUTPUT:
+359.17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:26:24) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=float(venda*12)
+lucrototal=(lucro-83/100)
+
+despesas=float(100+(lucrototal-20/100))
+
+print(lucrototal)
+
+
+-- OUTPUT:
+359.17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:26:36) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=float(venda*12)
+lucrototal=(lucro-83/100)
+
+despesas=float(100+(lucrototal-20/100))
+
+print(despesas)
+
+
+-- OUTPUT:
+458.97
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:27:32) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=float(venda*12)
+lucrototal=(lucro-83/100)
+
+despesas=float(100+(lucro-20/100))
+
+print(despesas)
+
+
+
+
+-- OUTPUT:
+459.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:28:44) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=float(venda*12)
+lucrototal=(lucro-83/100)
+
+despesas=float(100+(lucro-20/100))
+
+valor=round(lucrototal-despesas),2
+
+print(valor)
+
+
+
+
+-- OUTPUT:
+(-101, 2)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:29:05) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=float(venda*12)
+lucrototal=(lucro-83/100)
+
+despesas=float(100+(lucro-20/100))
+
+valor=round(lucrototal-despesas),2
+
+
+
+
+
+-- OUTPUT:
+(-101, 2)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:29:24) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=float(venda*12)
+lucrototal=(lucro-83/100)
+
+despesas=float(100+(lucro-20/100))
+
+valor=round(lucrototal-despesas),2
+
+print(valor)
+
+
+
+
+
+-- OUTPUT:
+(-101, 2)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:29:36) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=float(venda*12)
+lucrototal=(lucro-83/100)
+
+despesas=float(100+(lucro-20/100))
+
+valor=round(lucrototal-despesas,2)
+
+print(valor)
+
+
+
+
+
+-- OUTPUT:
+-100.63
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:29:57) 
+-- CODE:
+venda=int(input("Vendas/Dia: "))
+lucro=float(venda*12)
+lucrototal=(lucro-83/100)*100
+
+despesas=float(100+(lucro-20/100))
+
+valor=round(lucrototal-despesas,2)
+
+print(valor)
+
+
+
+
+
+-- OUTPUT:
+35457.2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

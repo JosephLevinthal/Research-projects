@@ -1,0 +1,731 @@
+== TEST (2019-04-15 08:23:26) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=R*acos*(sin)*(t1)*sin(t2)+(cos(t1)*cos(t2)*cos(g1-g2))
+
+print(round d,2)
+
+-- ERROR:
+File "XXXX", line 15
+    print(round d,2)
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 08:24:14) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=R*acos*(sin)*(t1)*sin(t2)+(cos(t1)*cos(t2)*cos(g1-g2))
+
+print(round (d,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 13, in <module>
+    d=R*acos*(sin)*(t1)*sin(t2)+(cos(t1)*cos(t2)*cos(g1-g2))
+TypeError: unsupported operand type(s) for *: 'float' and 'builtin_function_or_method'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 08:27:30) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=R*(acos*((sin)*(t1)*sin(t2)))+(cos(t1)*cos(t2)*cos(g1-g2))
+
+#imprimir a distancia
+print(round (d,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 13, in <module>
+    d=R*(acos*((sin)*(t1)*sin(t2)))+(cos(t1)*cos(t2)*cos(g1-g2))
+TypeError: unsupported operand type(s) for *: 'builtin_function_or_method' and 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 08:28:59) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=R*(acos*(sin*t1)*(sin*t2))+(cos(t1)*cos(t2)*cos(g1-g2))
+
+#imprimir a distancia
+print(round (d,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 13, in <module>
+    d=R*(acos*(sin*t1)*(sin*t2))+(cos(t1)*cos(t2)*cos(g1-g2))
+TypeError: unsupported operand type(s) for *: 'builtin_function_or_method' and 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 08:30:12) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=float (R*(acos*(sin*t1)*(sin*t2))+(cos(t1)*cos(t2)*cos(g1-g2)))
+
+#imprimir a distancia
+print(round (d,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 13, in <module>
+    d=float (R*(acos*(sin*t1)*(sin*t2))+(cos(t1)*cos(t2)*cos(g1-g2)))
+TypeError: unsupported operand type(s) for *: 'builtin_function_or_method' and 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 08:34:33) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=float (R*(acos*(sin*t1)*(sin*t2))+((cos(t1)*cos(t2)*cos(g1-g2)))
+
+#imprimir a distancia
+print(round (d,2))
+
+-- ERROR:
+File "XXXX", line 16
+    print(round (d,2))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 08:35:54) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=float (R*(acos*(sin*t1)*(sin*t2))+((cos(t1)*cos(t2)*cos(g1-g2)))
+
+#imprimir a distancia
+print(round (d,2))
+
+-- EXECUTION TIME:
+0.238183
+-- ERROR:
+  File "/home/codebench/codes/1595/1017/main.py", line 16
+    print(round (d,2))
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 08:35:59) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=float (R*(acos*(sin*t1)*(sin*t2))+((cos(t1)*cos(t2)*cos(g1-g2)))
+
+#imprimir a distancia
+print(round (d,2))
+
+-- ERROR:
+File "XXXX", line 16
+    print(round (d,2))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 09:07:46) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=float (R*(acos*(sin*t1)*(sin*t2))+((cos(t1)*cos(t2)*cos(g1-g2)))
+
+#imprimir a distancia
+print(round (d, 2))
+
+-- ERROR:
+File "XXXX", line 16
+    print(round (d, 2))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 09:37:41) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=float(R*(acos*(sin*t1)*(sin*t2))+((cos(t1)*cos(t2)*cos(g1-g2)))
+
+#imprimir a distancia
+print(round (d, 2))
+
+-- ERROR:
+File "XXXX", line 16
+    print(round (d, 2))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 09:37:57) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=float(R*(acos*(sin*t1)*(sin*t2))+((cos(t1)*cos(t2)*cos(g1-g2))))
+
+#imprimir a distancia
+print(round(d, 2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 13, in <module>
+    d=float(R*(acos*(sin*t1)*(sin*t2))+((cos(t1)*cos(t2)*cos(g1-g2))))
+TypeError: unsupported operand type(s) for *: 'builtin_function_or_method' and 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 10:04:47) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=float(R*(acos(sin(t1))*(sin(t2)))+((cos(t1))*(cos(t2))*(cos(g1-g2))))
+
+#imprimir a distancia
+print(round(d, 2))
+
+-- OUTPUT:
+-556.38
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 10:05:54) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=float(R*(acos(sin(t1))*(sin(t2)))+((cos(t1))*(cos(t2))*(cos(g1-g2))))
+
+#imprimir a distancia
+print(round(d, 2))
+
+-- EXECUTION TIME:
+0.140918
+-- TEST CASE 1:
+---- input:
+-3.036131
+-60.04585
+-3.088496
+-59.59464
+---- correct output:
+50.44
+---- user output:
+-556.38
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 10:06:29) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=R*(acos(sin(t1))*(sin(t2)))+((cos(t1))*(cos(t2))*(cos(g1-g2)))
+
+#imprimir a distancia
+print(round(d, 2))
+
+-- EXECUTION TIME:
+0.154638
+-- TEST CASE 1:
+---- input:
+-3.036131
+-60.04585
+-3.088496
+-59.59464
+---- correct output:
+50.44
+---- user output:
+-556.38
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 10:06:33) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=R*(acos(sin(t1))*(sin(t2)))+((cos(t1))*(cos(t2))*(cos(g1-g2)))
+
+#imprimir a distancia
+print(round(d, 2))
+
+-- OUTPUT:
+-556.38
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 10:07:30) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=R*(acos(sin(t1))*(sin(t2)))+((cos(t1))*(cos(t2))*(cos(g1-g2)))
+
+#imprimir a distancia
+print(round(d, 2))
+
+-- EXECUTION TIME:
+0.221814
+-- TEST CASE 1:
+---- input:
+-3.036131
+-60.04585
+-3.088496
+-59.59464
+---- correct output:
+50.44
+---- user output:
+-556.38
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 10:10:26) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=R*(acos(sin(t1))*(sin(t2)))+((cos(t1))*(cos(t2))*(cos(g1-g2)))
+
+#imprimir a distancia
+print(float(round(d, 2))
+
+-- EXECUTION TIME:
+0.191992
+-- ERROR:
+  File "/home/codebench/codes/1595/1017/main.py", line 17
+    
+                            ^
+SyntaxError: unexpected EOF while parsing
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 10:10:32) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=R*(acos(sin(t1))*(sin(t2)))+((cos(t1))*(cos(t2))*(cos(g1-g2)))
+
+#imprimir a distancia
+print(float(round(d, 2))
+
+-- ERROR:
+File "XXXX", line 17
+    
+                            ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 10:10:48) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=R*(acos(sin(t1))*(sin(t2)))+((cos(t1))*(cos(t2))*(cos(g1-g2)))
+
+#imprimir a distancia
+print(float(round(d, 2))
+-- ERROR:
+File "XXXX", line 17
+    
+                            ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 10:11:05) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=R*(acos(sin(t1))*(sin(t2)))+((cos(t1))*(cos(t2))*(cos(g1-g2)))
+
+#imprimir a distancia
+print(round(d, 2))
+-- OUTPUT:
+-556.38
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 10:12:03) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=R*(acos(sin(t1))*(sin(t2)))+((cos(t1))*(cos(t2))*(cos(g1-g2)))
+
+#imprimir a distancia
+print(round(d, 2))
+-- OUTPUT:
+-556.38
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 10:12:05) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=R*(acos(sin(t1))*(sin(t2)))+((cos(t1))*(cos(t2))*(cos(g1-g2)))
+
+#imprimir a distancia
+print(round(d, 2))
+-- EXECUTION TIME:
+0.132211
+-- TEST CASE 1:
+---- input:
+-3.036131
+-60.04585
+-3.088496
+-59.59464
+---- correct output:
+50.44
+---- user output:
+-556.38
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 10:15:42) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=R*acos(sin(t1))*(sin(t2))+((cos(t1))*(cos(t2))*(cos(g1-g2)))
+
+#imprimir a distancia
+print(round(d, 2))
+-- OUTPUT:
+-556.38
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 10:17:11) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=R*acos(sin(t1)*(sin(t2)+(cos(t1)*(cos(t2)*cos(g1-g2))
+
+#imprimir a distancia
+print(round(d,2))
+-- ERROR:
+File "XXXX", line 16
+    print(round(d,2))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 10:17:26) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=R*acos(sin(t1)*sin(t2)+(cos(t1)*(cos(t2)*cos(g1-g2))
+
+#imprimir a distancia
+print(round(d,2))
+-- ERROR:
+File "XXXX", line 16
+    print(round(d,2))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 10:17:40) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=R*acos(sin(t1)*sin(t2)+cos(t1)*cos(t2)*cos(g1-g2))
+
+#imprimir a distancia
+print(round(d,2))
+-- OUTPUT:
+50.44
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 10:23:17) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R=6371.01 #está em km o raio médio da Terra
+d=R*acos(sin(t1)*sin(t2)+cos(t1)*cos(t2)*cos(g1-g2))
+
+#imprimir a distancia
+print(round(d,2))
+-- EXECUTION TIME:
+0.171204
+-- TEST CASE 1:
+---- input:
+-3.036131
+-60.04585
+-3.088496
+-59.59464
+---- correct output:
+50.44
+---- user output:
+50.44
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 10:24:48) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+#Ler os dados de entrada
+from math import*
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+#calcular a distancia
+R=6371.01 #está em km o raio médio da Terra
+d=R*acos(sin(t1)*sin(t2)+cos(t1)*cos(t2)*cos(g1-g2))
+
+#imprimir a distancia
+print(round(d,2))
+-- EXECUTION TIME:
+0.174786
+-- TEST CASE 1:
+---- input:
+-3.036131
+-60.04585
+-3.088496
+-59.59464
+---- correct output:
+50.44
+---- user output:
+50.44
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

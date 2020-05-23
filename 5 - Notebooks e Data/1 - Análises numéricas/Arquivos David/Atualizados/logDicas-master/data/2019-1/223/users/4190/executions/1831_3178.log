@@ -1,0 +1,144 @@
+== TEST (2019-06-13 16:06:23) 
+-- CODE:
+from numpy import *
+v = array(eval(input()))
+x = zeros(size(v))
+
+for i in range(size(v)):
+	if i!=0
+	x[i] = v[i]
+print(x)
+-- ERROR:
+File "XXXX", line 6
+    if i!=0
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:06:34) 
+-- CODE:
+from numpy import *
+v = array(eval(input()))
+x = zeros(size(v))
+
+for i in range(size(v)):
+	if i!=0:
+		x[i] = v[i]
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:07:40) 
+-- CODE:
+from numpy import *
+v = array(eval(input()))
+x = zeros(size(v))
+
+for i in range(size(v)):
+	if i==0:
+		x[-1] = v[i]
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:07:49) 
+-- CODE:
+from numpy import *
+v = array(eval(input()))
+x = zeros(size(v))
+
+for i in range(size(v)):
+	if i==0:
+		x[-1] = v[i]
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:09:01) 
+-- CODE:
+from numpy import *
+v = array(eval(input()))
+x = zeros(size(v), dtype=int)
+
+for i in range(size(v)):
+	if i!=0:
+		x[] = v[i]
+print(x)
+-- ERROR:
+File "XXXX", line 7
+    x[] = v[i]
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:10:50) 
+-- CODE:
+from numpy import *
+v = array(eval(input()))
+x = zeros(size(v), dtype=int)
+
+for i in range(size(v)):
+	if i==0:
+		x[i] = x[i]+v[i]
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:11:21) 
+-- CODE:
+from numpy import *
+v = array(eval(input()))
+x = zeros(size(v), dtype=int)
+
+for i in range(size(v)):
+	if i==0:
+		x[0] = x[i]+v[i]
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:12:40) 
+-- CODE:
+from numpy import *
+v = array(eval(input()))
+x = zeros(size(v), dtype=int)
+
+for i in range(size(v)):
+	if i==0:
+		x[i] = i+-1
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:13:23) 
+-- CODE:
+from numpy import *
+v = array(eval(input()))
+x = zeros(size(v), dtype=int)
+
+for i in range(size(v)):
+	if i==0:
+		x[i] = v[i]+x[-1]
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

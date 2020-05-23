@@ -1,0 +1,281 @@
+== TEST (2019-04-02 10:05:03) 
+-- CODE:
+n= float(input("numero de mols: "))
+v= float(input("seu volume: "))
+t= float(input("sua temperatura: "))
+
+total= (p*V=n* 0,082057*(t+273,1))
+
+print (total)
+-- ERROR:
+File "XXXX", line 5
+    total= (p*V=n* 0,082057*(t+273,1))
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:10:31) 
+-- CODE:
+n= float(input("qual seu numero de mols? "))
+v= float(input("qual seu volume em atm? "))
+t= float(input("qual sua temperatura? "))
+
+total= (p*v=n*0.082057*(t+273,1))
+print(total)
+-- ERROR:
+File "XXXX", line 5
+    total= (p*v=n*0.082057*(t+273,1))
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:11:21) 
+-- CODE:
+n= float(input("qual seu numero de mols? "))
+v= float(input("qual seu volume em atm? "))
+t= float(input("qual sua temperatura? "))
+
+pressao= ((n*0.082057*(t+273,1)/v)
+print(pressao)
+-- ERROR:
+File "XXXX", line 6
+    print(pressao)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:13:13) 
+-- CODE:
+n= float(input("qual seu numero de mols? "))
+v= float(input("qual seu volume? "))
+t= float(input("qual sua temperatura? "))
+
+total= (n*0.082057*(t+273,1)/v)
+print(total)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    total= (n*0.082057*(t+273,1)/v)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:14:44) 
+-- CODE:
+n= float(input("qual seu numero de mols? "))
+v= float(input("qual seu volume? "))
+t= float(input("qual sua temperatura? "))
+
+total= (n*0.082057)
+print(total)
+-- OUTPUT:
+0.082057
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:15:40) 
+-- CODE:
+n= float(input("qual seu numero de mols? "))
+v= float(input("qual seu volume? "))
+t= float(input("qual sua temperatura? "))
+
+total= ((n*0.082057)/(t+273,1))
+print(total)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    total= ((n*0.082057)/(t+273,1))
+TypeError: unsupported operand type(s) for /: 'float' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:16:07) 
+-- CODE:
+n= float(input("qual seu numero de mols? "))
+v= float(input("qual seu volume? "))
+t= float(input("qual sua temperatura? "))
+
+total= (t+273,1)
+print(total)
+-- OUTPUT:
+(293.0, 1)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:16:40) 
+-- CODE:
+n= int(input("qual seu numero de mols? "))
+v= int(input("qual seu volume? "))
+t= int(input("qual sua temperatura? "))
+
+total= (t+273,1)
+print(total)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    v= int(input())
+ValueError: invalid literal for int() with base 10: '320.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:17:17) 
+-- CODE:
+n= int(input("qual seu numero de mols? "))
+v= int(input("qual seu volume? "))
+t= int(input("qual sua temperatura? "))
+
+total= (n*0.082057)/(t+273,1)
+print(total)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    v= int(input())
+ValueError: invalid literal for int() with base 10: '320.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:18:52) 
+-- CODE:
+n= int(input("qual seu numero de mols? "))
+v= int(input("qual seu volume? "))
+t= int(input("qual sua temperatura? "))
+
+nR= (n*0.082057)/(t+273.1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    v= int(input())
+ValueError: invalid literal for int() with base 10: '320.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:19:04) 
+-- CODE:
+n= int(input("qual seu numero de mols? "))
+v= int(input("qual seu volume? "))
+t= int(input("qual sua temperatura? "))
+
+nR= (n*0.082057)/(t+273.1)
+print(nR)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    v= int(input())
+ValueError: invalid literal for int() with base 10: '320.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:19:51) 
+-- CODE:
+n= int(input("qual seu numero de mols? "))
+v= int(input("qual seu volume? "))
+t= int(input("qual sua temperatura? "))
+
+nR= ((n*0.082057)*(t+273.1))/v
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    v= int(input())
+ValueError: invalid literal for int() with base 10: '320.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:20:01) 
+-- CODE:
+n= int(input("qual seu numero de mols? "))
+v= int(input("qual seu volume? "))
+t= int(input("qual sua temperatura? "))
+
+nR= ((n*0.082057)*(t+273.1))/v
+
+print(nR)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    v= int(input())
+ValueError: invalid literal for int() with base 10: '320.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 10:20:09) 
+-- CODE:
+n= int(input("qual seu numero de mols? "))
+v= int(input("qual seu volume? "))
+t= int(input("qual sua temperatura? "))
+
+nR= ((n*0.082057)*(t+273.1))/v
+
+print(nR)
+-- EXECUTION TIME:
+0.1254
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1618/2937/main.py", line 2, in <module>
+    v= int(input())
+ValueError: invalid literal for int() with base 10: '320.0'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:21:43) 
+-- CODE:
+n= int(input("qual seu numero de mols? "))
+v= int(input("qual seu volume? "))
+t= int(input("qual sua temperatura? "))
+
+pressa= (p*v=(n*0.082057)*(t+273.1))
+
+print(pressa)
+-- ERROR:
+File "XXXX", line 5
+    pressa= (p*v=(n*0.082057)*(t+273.1))
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:22:06) 
+-- CODE:
+n= int(input("qual seu numero de mols? "))
+v= int(input("qual seu volume? "))
+t= int(input("qual sua temperatura? "))
+
+pressa=(n*0.082057)*(t+273.1)/v
+
+print(pressa)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    v= int(input())
+ValueError: invalid literal for int() with base 10: '320.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:22:25) 
+-- CODE:
+n= float(input("qual seu numero de mols? "))
+v= float(input("qual seu volume? "))
+t= float(input("qual sua temperatura? "))
+
+pressa=(n*0.082057)*(t+273.1)/v
+
+print(pressa)
+-- OUTPUT:
+0.07515908343750001
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 10:22:30) 
+-- CODE:
+n= float(input("qual seu numero de mols? "))
+v= float(input("qual seu volume? "))
+t= float(input("qual sua temperatura? "))
+
+pressa=(n*0.082057)*(t+273.1)/v
+
+print(pressa)
+-- EXECUTION TIME:
+0.191513
+-- TEST CASE 1:
+---- input:
+1
+320.0
+20.0
+---- correct output:
+0.07515908343750001
+---- user output:
+0.07515908343750001
+-- TEST CASE 2:
+---- input:
+5
+155.8
+80.0
+---- correct output:
+0.9298564409499358
+---- user output:
+0.9298564409499358
+-- TEST CASE 3:
+---- input:
+12
+1220.0
+30.0
+---- correct output:
+0.244637475737705
+---- user output:
+0.244637475737705
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

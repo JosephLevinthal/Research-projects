@@ -1,0 +1,1102 @@
+== TEST (2019-05-23 17:40:20) 
+-- CODE:
+qi    = float(input("Quantia inicial: "))
+tempo = int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0 #acumula o tempo transcorrido em meses
+
+# Atualizacao de saldo
+while (t>=0 and t< tempo): #Condicao do laco: o tempo comeca com 0 meses e eh repetido ate q o tempo total da aplicacao termine
+	rend = saldo * juros/100 #calculo do rendimento: saldo anterior multiplicado pela taxa de juros
+	saldo = saldo + rend # atualizacao do saldo
+	t = t + 1 #contagem dos meses
+	
+	print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    tempo = int(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 17:40:55) 
+-- CODE:
+qi    = float(input("Quantia inicial: "))
+tempo = int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0 #acumula o tempo trnscorrido em meses
+
+# Atualizacao de saldo
+while (t>=0 and t< tempo): #Condicao do laco: o tempo comeca com 0 meses e eh repetido ate q o tempo total da aplicacao termine
+	rend = saldo * juros/100 #calculo do rendimento: saldo anterior multiplicado pela taxa de juros
+	saldo = saldo + rend # atualizacao do saldo
+	t = t + 1 #contagem dos meses
+	
+print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    tempo = int(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:23:33) 
+-- CODE:
+n = input("Digite uma sequência de numeros: ")
+i = 0
+
+while(i<len(n)):
+	n = n[i:3]+"."
+	i = i+3
+print(n)	
+-- OUTPUT:
+.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:24:01) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+
+while(i<len(n)):
+	n = n[i:3]+"."
+	i = i+3
+print(n)	
+-- OUTPUT:
+.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:24:56) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+
+while(i<len(n)):
+	n = n[i:3]
+	i = i+3
+print(n)	
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:25:22) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+
+while(i<=len(n)):
+	n = n[i:3]
+	i = i+3
+print(n)	
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:26:05) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+
+while(i<=len(n)):
+	n = n[i:3]
+	i = i+3
+print(n)	
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:26:25) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+
+while(i<len(n)):
+	n = n[i:3]
+	i = i+3
+print(n)	
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:27:00) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+while(i<len(n)):
+	n = n[i:3]
+	i = i+3
+print(n)	
+print(i)
+-- OUTPUT:
+123
+3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:27:13) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+while(i<len(n)):
+	n = n[i:i+3]
+	i = i+3
+print(n)	
+print(i)
+-- OUTPUT:
+123
+3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:27:54) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+while(i<=len(n)):
+	n = n[i:i+3]
+	i = i+3
+print(n)	
+print(i)
+-- OUTPUT:
+6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:28:59) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+ini = i
+fim = i+3
+while(i<=len(n)):
+	n = n[ini:fim]
+	i = i+3
+print(n)	
+print(i)
+-- OUTPUT:
+123
+6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:29:21) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+ini = i
+fim = i+3
+while(i<=len(n)):
+	n = n[ini:fim]
+	i = i+3
+print(n)	
+print(i)
+-- OUTPUT:
+123
+6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:30:03) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+ini = i
+fim = i+3
+while(i<=len(n)):
+	n = n[ini:fim]
+	i = i+3
+print(n)	
+print(i)
+print(ini)
+print(fim)
+-- OUTPUT:
+123
+6
+0
+3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:30:57) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	n = n[ini:fim]
+	i = i+3
+print(n)	
+print(i)
+print(ini)
+print(fim)
+-- OUTPUT:
+6
+3
+6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:31:46) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	n = n[ini:fim]
+	i = i+3
+	print(n)	
+print(i)
+print(ini)
+print(fim)
+-- OUTPUT:
+123
+
+6
+3
+6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:33:09) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+n = []
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	n = n + "." + n[ini:fim]
+	i = i+3
+	print(n)	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    n = n + "." + n[ini:fim]
+TypeError: can only concatenate list (not "str") to list
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:33:59) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+n = []
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	n = n, ".", n[ini:fim]
+	i = i+3
+	print(n)	
+
+-- OUTPUT:
+([], '.', [])
+(([], '.', []), '.', ())
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:34:34) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+n = []
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	n = n.n[ini:fim]
+	i = i+3
+	print(n)	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    n = n.n[ini:fim]
+AttributeError: 'list' object has no attribute 'n'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:35:08) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+n = []
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	n = n"."n[ini:fim]
+	i = i+3
+	print(n)	
+
+-- ERROR:
+File "XXXX", line 7
+    n = n"."n[ini:fim]
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:35:38) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+n = []
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	n2 = n[ini:fim]
+	i = i+3
+	print(n2)	
+
+-- OUTPUT:
+[]
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:36:35) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	print(n[ini:fim])
+	i = i+3
+	print(n2)	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(n2)	
+NameError: name 'n2' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:36:51) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	print(n[ini:fim])
+	i = i+3
+	
+
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:37:30) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	i = i+3
+print(n[ini:fim])	
+
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:39:31) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+vec = []
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	vec = n[ini:fim]+"."
+	i = i+3
+print()	
+
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:39:50) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+vec = []
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	vec = n[ini:fim]+"."
+	i = i+3
+print(vec)	
+
+-- OUTPUT:
+.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:40:03) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+vec = []
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	vec = n[ini:fim]
+	i = i+3
+print(vec)	
+
+-- OUTPUT:
+.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:40:21) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+vec = []
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	vec = n[ini:fim]
+	i = i+3
+	print(vec)	
+
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:41:48) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+vec = []
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	vec.append(n[ini:fim])
+	vec.append(.)
+	i = i+3
+print(vec)	
+
+-- ERROR:
+File "XXXX", line 8
+    vec.append(.)
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:42:14) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+vec = []
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	vec.append(n[ini:fim])
+	vec.append(".")
+	i = i+3
+print(vec)	
+
+-- OUTPUT:
+['123', '.', '', '.']
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:42:52) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+i = 0
+vec = []
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	vec.append(n[ini:fim])
+	#vec.append(".")
+	i = i+3
+print(vec)	
+
+-- OUTPUT:
+['123', '']
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 10:43:51) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+n = int(n)
+i = 0
+vec = []
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	vec.append(n[ini:fim])
+	#vec.append(".")
+	i = i+3
+print(vec)	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    while(i<=len(n)):
+TypeError: object of type 'int' has no len()
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:06:10) 
+-- CODE:
+n = input("Digite uma sequencia de numeros: ")
+n = int(n)
+i = 0
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	print(n[ini:fim])
+	i = i+3
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    while(i<=len(n)):
+TypeError: object of type 'int' has no len()
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:07:01) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+n = int(n)
+i = 0
+while(i<=size(n):
+	ini = i
+	fim = i+3
+	print(n[ini:fim])
+	i = i+3
+
+
+-- ERROR:
+File "XXXX", line 5
+    while(i<=size(n):
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:07:10) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+n = int(n)
+i = 0
+while(i<=size(n)):
+	ini = i
+	fim = i+3
+	print(n[ini:fim])
+	i = i+3
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:08:00) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+n = eval(n)
+i = 0
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	print(n[ini:fim])
+	i = i+3
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:08:32) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+n = eval(n)
+i = 0
+while(i<=size(n)):
+	ini = i
+	fim = i+3
+	print(n[ini:fim])
+	i = i+3
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:08:49) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+n = n
+i = 0
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	print(n[ini:fim])
+	i = i+3
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:12:14) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+vec = ""
+
+i = 0
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	vec = vec + n[ini:fim]
+	i = i+3
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:12:33) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+vec = ""
+
+i = 0
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	vec = vec + n[ini:fim]
+	i = i+3
+	print(vec)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:12:52) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+vec = ""
+
+i = 0
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	vec = vec + n[ini:fim]
+	i = i+3
+print(vec)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:13:33) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+vec = ""
+
+i = 0
+while(i<=len(n)):
+	ini = i
+	fim = i+3
+	vec = vec + n[ini:fim]+"."
+	i = i+3
+print(vec)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:14:02) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+vec = ""
+
+i = 0
+while(i<=len(n+1)):
+	ini = i
+	fim = i+3
+	vec = vec + n[ini:fim]+"."
+	i = i+3
+print(vec)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:14:16) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+vec = ""
+
+i = 0
+while(i<len(n)):
+	ini = i
+	fim = i+3
+	vec = vec + n[ini:fim]+"."
+	i = i+3
+print(vec)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:14:28) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+vec = ""
+
+i = 0
+while(i<len(n)):
+	ini = i
+	fim = i+3
+	vec = vec + n[ini:fim]+"."
+	i = i+3
+print(vec)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:15:20) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+vec = ""
+
+i = 0
+while(i<len(n)):
+	ini = i
+	fim = i+3
+	vec = vec + "." + n[ini:fim]
+	i = i+3
+print(vec)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:15:55) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+vec = "."
+
+i = 0
+while(i<len(n)):
+	ini = i
+	fim = i+3
+	vec = vec + n[ini:fim]
+	i = i+3
+print(vec)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:16:22) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+vec = "."
+
+i = 0
+while(i<len(n)):
+	ini = i
+	fim = i+3
+	vec = n[ini:fim] + vec  
+	i = i+3
+print(vec)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:16:47) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+vec = "
+
+i = 0
+while(i<len(n)):
+	ini = i
+	fim = i+3
+	vec = n[ini:fim] +"."+ vec  
+	i = i+3
+print(vec)
+
+
+-- ERROR:
+File "XXXX", line 3
+    vec = "
+          ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:17:07) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+vec = ""
+
+i = 0
+while(i<len(n)):
+	ini = i
+	fim = i+3
+	vec = n[ini:fim] + "." + vec  
+	i = i+3
+print(vec)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:18:42) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+vec = "n[:3]"
+
+i = 3
+while(i<len(n)):
+	ini = i
+	fim = i+3
+	vec = vec + n[ini:fim]
+	i = i+3
+print(vec)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:20:05) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+vec = n[:3] + "."
+
+i = 3
+while(i<len(n)):
+	ini = i
+	fim = i+3
+	vec = vec + n[ini:fim]
+	i = i+3
+print(vec)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:20:20) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+vec = n[:3] + "."
+
+i = 3
+while(i<len(n)):
+	ini = i
+	fim = i+3
+	vec = vec + n[ini:fim]
+	i = i+3
+print(vec)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:21:17) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+vec = "." n[:3] + "."
+
+i = 3
+while(i<len(n)):
+	ini = i
+	fim = i+3
+	vec = vec + n[ini:fim]
+	i = i+3
+print(vec)
+
+
+-- ERROR:
+File "XXXX", line 3
+    vec = "." n[:3] + "."
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:21:25) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+vec = "." + n[:3] + "."
+
+i = 3
+while(i<len(n)):
+	ini = i
+	fim = i+3
+	vec = vec + n[ini:fim]
+	i = i+3
+print(vec)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:21:57) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+vec = n[:3] + "."
+
+i = 3
+while(i<len(n)):
+	ini = i
+	fim = i+3
+	vec = vec + n[ini:fim]+"."
+	i = i+3
+print(vec)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:23:37) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+vec = n[:3] + "."
+
+i = 3
+while(i<len(n)):
+	ini = i
+	fim = i+3
+	vec = vec + n[ini:fim]+"."
+	i = i+3
+print(vec[:-1])
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:24:02) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+#vec = n[:3] + "."
+
+i = 0
+while(i<len(n)):
+	ini = i
+	fim = i+3
+	vec = vec + n[ini:fim]+"."
+	i = i+3
+print(vec[:-1])
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 15:24:27) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+#vec = n[:3] + "."
+vec = ""
+i = 0
+while(i<len(n)):
+	ini = i
+	fim = i+3
+	vec = vec + n[ini:fim]+"."
+	i = i+3
+print(vec[:-1])
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-25 15:24:51) 
+-- CODE:
+from numpy import *
+n = input("Digite uma sequencia de numeros: ")
+vec = ""
+i = 0
+while(i<len(n)):
+	ini = i
+	fim = i+3
+	vec = vec + n[ini:fim]+"."
+	i = i+3
+print(vec[:-1])
+
+
+-- EXECUTION TIME:
+0.519031
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789.000.987.654.321
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

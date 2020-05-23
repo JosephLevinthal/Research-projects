@@ -1,0 +1,130 @@
+== TEST (2019-05-27 20:08:16) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+
+data= input()
+
+dia = ""+data[0]+data[1]
+mes= ""+data[2]+data[3]
+ano =""+data[4:]
+
+indice_mes= int(mes)-1
+
+i=0
+while(i>size(vet_mes)):
+	if(i == indice_mes):
+		extenso_mes= vet_mes[i]
+
+i= i+1
+print(dia,"de", extenso_mes, "de", ano)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 10:45:33) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+
+data= input()
+
+dia = ""+data[0]+data[1]
+mes= ""+data[2]+data[3]
+ano =""+data[4:]
+
+indice_mes= int(mes)-1
+
+i=0
+while(i>size(vet_mes)):
+	if(i == indice_mes):
+		extenso_mes=vet_mes[i]
+
+	i= i+1
+print(dia,"de", extenso_mes, "de", ano)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 10:47:00) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+
+data= input()
+
+dia = ""+data[0]+data[1]
+mes= ""+data[2]+data[3]
+ano =""+data[4:]
+
+indice_mes= int(mes)-1
+
+i=0
+while(i<size(vet_mes)):
+	if(i == indice_mes):
+		extenso_mes=vet_mes[i]
+	
+	i= i+1
+
+print(dia, "de", extenso_mes, "de", ano)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 10:47:11) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+
+data= input()
+
+dia = ""+data[0]+data[1]
+mes= ""+data[2]+data[3]
+ano =""+data[4:]
+
+indice_mes= int(mes)-1
+
+i=0
+while(i<size(vet_mes)):
+	if(i == indice_mes):
+		extenso_mes=vet_mes[i]
+	
+	i= i+1
+
+print(dia, "de", extenso_mes, "de", ano)
+-- EXECUTION TIME:
+0.499358
+-- TEST CASE 1:
+---- input:
+26111982
+---- correct output:
+26 de novembro de 1982
+---- user output:
+26 de novembro de 1982
+-- TEST CASE 2:
+---- input:
+07071854
+---- correct output:
+07 de julho de 1854
+---- user output:
+07 de julho de 1854
+-- TEST CASE 3:
+---- input:
+22082000
+---- correct output:
+22 de agosto de 2000
+---- user output:
+22 de agosto de 2000
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

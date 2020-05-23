@@ -1,0 +1,181 @@
+== TEST (2019-05-14 16:57:54) 
+-- CODE:
+habA = int(input("habitantes da cidade A"))
+habB = int(input("habitantes da cidade B"))
+crescA = float(input("crecimento da cidade A"))
+cresc = float(input("crecimento da cidade B"))
+hA=habA
+hB=habB
+anos=0
+
+while(habA<habB):
+	hA=hA*crescA
+	hB=hB*crescB
+	anos=anos+1
+print(anos)
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 11, in <module>
+    hB=hB*crescB
+NameError: name 'crescB' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 17:00:14) 
+-- CODE:
+habA = int(input("habitantes da cidade A"))
+habB = int(input("habitantes da cidade B"))
+crescA = float(input("crecimento da cidade A"))
+crescB= float(input("crecimento da cidade B"))
+hA=habA
+hB=habB
+anos=0
+
+while(habA<=habB):
+	hA=hA*(crescA)100
+	hB=hB*(crescB)100
+	anos=anos+1
+print(anos)
+	
+	
+-- ERROR:
+File "XXXX", line 10
+    hA=hA*(crescA)100
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 17:00:31) 
+-- CODE:
+habA = int(input("habitantes da cidade A"))
+habB = int(input("habitantes da cidade B"))
+crescA = float(input("crecimento da cidade A"))
+crescB= float(input("crecimento da cidade B"))
+hA=habA
+hB=habB
+anos=0
+
+while(habA<=habB):
+	hA=hA*(crescA)/100
+	hB=hB*(crescB)/100
+	anos=anos+1
+print(anos)
+	
+	
+-- ERROR:
+File "XXXX", line 10
+    hA=hA*(crescA)100
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 17:01:58) 
+-- CODE:
+habA = int(input("habitantes da cidade A"))
+habB = int(input("habitantes da cidade B"))
+crescA = float(input("crecimento da cidade A"))
+crescB= float(input("crecimento da cidade B"))
+hA=habA*crescA
+hB=habB*crescB
+anos=0
+
+while(habA<=habB):
+	hA=hA*(crescA)/100
+	hB=hB*(crescB)/100
+	anos=anos+1
+print(anos)
+	
+	
+-- ERROR:
+File "XXXX", line 10
+    hA=hA*(crescA)100
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 17:05:00) 
+-- CODE:
+habA = int(input("habitantes da cidade A"))
+habB = int(input("habitantes da cidade B"))
+crescA = float(input("crecimento da cidade A"))
+crescB= float(input("crecimento da cidade B"))
+
+anos=0
+
+while(habA<=habB):
+	habA=habA+(habA*(crescA/100))
+	habB=habB*(crescB)/100
+	anos=anos+1
+print(anos)
+	
+	
+-- OUTPUT:
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 17:05:39) 
+-- CODE:
+habA = int(input("habitantes da cidade A"))
+habB = int(input("habitantes da cidade B"))
+crescA = float(input("crecimento da cidade A"))
+crescB= float(input("crecimento da cidade B"))
+
+anos=0
+
+while(habA<=habB):
+	habA=habA+(habA*(crescA/100))
+	habB=habB+(habB*(crescB/100))
+	anos=anos+1
+print(anos)
+	
+	
+-- OUTPUT:
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 17:05:52) 
+-- CODE:
+habA = int(input("habitantes da cidade A"))
+habB = int(input("habitantes da cidade B"))
+crescA = float(input("crecimento da cidade A"))
+crescB= float(input("crecimento da cidade B"))
+
+anos=0
+
+while(habA<=habB):
+	habA=habA+(habA*(crescA/100))
+	habB=habB+(habB*(crescB/100))
+	anos=anos+1
+print(anos)
+	
+	
+-- EXECUTION TIME:
+0.150508
+-- TEST CASE 1:
+---- input:
+250150
+580000
+35.5
+10.5
+---- correct output:
+5
+---- user output:
+5
+-- TEST CASE 2:
+---- input:
+180250
+1200000
+10.25
+5.7
+---- correct output:
+45
+---- user output:
+45
+-- TEST CASE 3:
+---- input:
+1000000
+1650000
+12.75
+3.2
+---- correct output:
+6
+---- user output:
+6
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

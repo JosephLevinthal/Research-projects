@@ -1,0 +1,2277 @@
+== SUBMITION (2019-07-02 12:44:39) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab -= 1
+
+	if tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab -= 1
+		elif x == "D":
+			xtab += 1
+		elif x == "W":
+			ytab += 1
+		elif x == "S":
+			ytab -= 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+   elif tabuleiro[ytab,xtab] == 0:
+		moeda = moeda
+	
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+0.629122
+-- ERROR:
+  File "/home/codebench/codes/1834/1280/main.py", line 58
+    elif tabuleiro[ytab,xtab] == 0:
+                                  ^
+IndentationError: unindent does not match any outer indentation level
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:44:44) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab -= 1
+
+	if tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab -= 1
+		elif x == "D":
+			xtab += 1
+		elif x == "W":
+			ytab += 1
+		elif x == "S":
+			ytab -= 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+   elif tabuleiro[ytab,xtab] == 0:
+		moeda = moeda
+	
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+File "XXXX", line 58
+    elif tabuleiro[ytab,xtab] == 0:
+                                  ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:44:56) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab -= 1
+
+	if tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab -= 1
+		elif x == "D":
+			xtab += 1
+		elif x == "W":
+			ytab += 1
+		elif x == "S":
+			ytab -= 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 0:
+		
+		moeda = moeda
+	
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 12:45:00) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab -= 1
+
+	if tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab -= 1
+		elif x == "D":
+			xtab += 1
+		elif x == "W":
+			ytab += 1
+		elif x == "S":
+			ytab -= 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 0:
+		
+		moeda = moeda
+	
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.17468
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  0
+moedas:  5
+life:  100
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  1
+posicao y:  1
+moedas:  6
+life:  85
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  4
+posicao y:  1
+moedas:  13
+life:  80
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:45:02) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab -= 1
+
+	if tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab -= 1
+		elif x == "D":
+			xtab += 1
+		elif x == "W":
+			ytab += 1
+		elif x == "S":
+			ytab -= 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 0:
+		
+		moeda = moeda
+	
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 12:45:58) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab -= 1
+
+	if tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab += 1
+		elif x == "D":
+			xtab -= 1
+		elif x == "W":
+			ytab += 1
+		elif x == "S":
+			ytab -= 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 0:
+		
+		moeda = moeda
+	
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.06456
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/1280/main.py", line 44, in <module>
+    if tabuleiro[ytab,xtab] == 33:
+IndexError: index 11 is out of bounds for axis 0 with size 11
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:46:17) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab -= 1
+
+	if tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab += 1
+		elif x == "D":
+			xtab -= 1
+		elif x == "W":
+			ytab += 1
+		elif x == "S":
+			ytab -= 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+	
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:46:39) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab -= 1
+
+	elif tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab += 1
+		elif x == "D":
+			xtab -= 1
+		elif x == "W":
+			ytab += 1
+		elif x == "S":
+			ytab -= 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+	
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:46:43) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab -= 1
+
+	elif tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab += 1
+		elif x == "D":
+			xtab -= 1
+		elif x == "W":
+			ytab += 1
+		elif x == "S":
+			ytab -= 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+	
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 12:46:44) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab -= 1
+
+	elif tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab += 1
+		elif x == "D":
+			xtab -= 1
+		elif x == "W":
+			ytab += 1
+		elif x == "S":
+			ytab -= 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+	
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.21695
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  0
+moedas:  0
+life:  100
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  2
+posicao y:  13
+moedas:  0
+life:  100
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+Tabuleiro: Movimentos: posicao x:  3
+posicao y:  2
+moedas:  0
+life:  100
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:47:30) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			ytab -= 1
+
+	elif tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab += 1
+		elif x == "D":
+			xtab -= 1
+		elif x == "W":
+			ytab -= 1
+		elif x == "S":
+			ytab += 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+		
+	elif tabuleiro[ytab,xtab] == 0:
+		moeda = moeda
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:48:24) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[0]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[0]:
+			ytab -= 1
+
+	if tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab += 1
+		elif x == "D":
+			xtab -= 1
+		elif x == "W":
+			ytab -= 1
+		elif x == "S":
+			ytab += 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+		
+	elif tabuleiro[ytab,xtab] == 0:
+		moeda = moeda
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 12:48:28) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[0]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[0]:
+			ytab -= 1
+
+	if tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab += 1
+		elif x == "D":
+			xtab -= 1
+		elif x == "W":
+			ytab -= 1
+		elif x == "S":
+			ytab += 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+		
+	elif tabuleiro[ytab,xtab] == 0:
+		moeda = moeda
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.20505
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  4
+posicao y:  1
+moedas:  15
+life:  80
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:48:49) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[0]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[0]:
+			ytab -= 1
+
+	if tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab -= 1
+		elif x == "D":
+			xtab += 1
+		elif x == "W":
+			ytab += 1
+		elif x == "S":
+			ytab -= 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+		
+	elif tabuleiro[ytab,xtab] == 0:
+		moeda = moeda
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 12:48:52) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[0]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[0]:
+			ytab -= 1
+
+	if tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab -= 1
+		elif x == "D":
+			xtab += 1
+		elif x == "W":
+			ytab += 1
+		elif x == "S":
+			ytab -= 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+		
+	elif tabuleiro[ytab,xtab] == 0:
+		moeda = moeda
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.18549
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  9
+life:  90
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  2
+posicao y:  4
+moedas:  19
+life:  60
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  4
+posicao y:  3
+moedas:  15
+life:  85
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 13:59:26) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[0]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[0]:
+			ytab -= 1
+
+	if tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab += 1
+		elif x == "D":
+			xtab -= 1
+		elif x == "W":
+			ytab -= 1
+		elif x == "S":
+			ytab += 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		
+		tabuleiro[ytab,xtab] == 0:
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+0.593137
+-- ERROR:
+  File "/home/codebench/codes/1834/1280/main.py", line 58
+    tabuleiro[ytab,xtab] == 0:
+                             ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 13:59:38) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[0]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[0]:
+			ytab -= 1
+
+	if tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab += 1
+		elif x == "D":
+			xtab -= 1
+		elif x == "W":
+			ytab -= 1
+		elif x == "S":
+			ytab += 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		
+		tabuleiro[ytab,xtab] == 0:
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+0.783537
+-- ERROR:
+  File "/home/codebench/codes/1834/1280/main.py", line 58
+    tabuleiro[ytab,xtab] == 0:
+                             ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:00:08) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[1]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[1]:
+			ytab -= 1
+
+	if tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab += 1
+		elif x == "D":
+			xtab -= 1
+		elif x == "W":
+			ytab -= 1
+		elif x == "S":
+			ytab += 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		
+		tabuleiro[ytab,xtab] == 0:
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+0.651478
+-- ERROR:
+  File "/home/codebench/codes/1834/1280/main.py", line 58
+    tabuleiro[ytab,xtab] == 0:
+                             ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:00:20) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[1]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[1]:
+			ytab -= 1
+
+	if tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab += 1
+		elif x == "D":
+			xtab -= 1
+		elif x == "W":
+			ytab -= 1
+		elif x == "S":
+			ytab += 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		
+		tabuleiro[ytab,xtab] == 0:
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+0.52173
+-- ERROR:
+  File "/home/codebench/codes/1834/1280/main.py", line 58
+    tabuleiro[ytab,xtab] == 0:
+                             ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:00:34) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[0]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[1]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[1]:
+			ytab -= 1
+
+	if tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab += 1
+		elif x == "D":
+			xtab -= 1
+		elif x == "W":
+			ytab -= 1
+		elif x == "S":
+			ytab += 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		
+		tabuleiro[ytab,xtab] == 0:
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+0.526669
+-- ERROR:
+  File "/home/codebench/codes/1834/1280/main.py", line 58
+    tabuleiro[ytab,xtab] == 0:
+                             ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:03:56) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[0]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[0]:
+			ytab -= 1
+
+	if tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab += 1
+		elif x == "D":
+			xtab -= 1
+		elif x == "W":
+			ytab -= 1
+		elif x == "S":
+			ytab += 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		
+		tabuleiro[ytab,xtab] == 0:
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+0.796657
+-- ERROR:
+  File "/home/codebench/codes/1834/1280/main.py", line 58
+    tabuleiro[ytab,xtab] == 0:
+                             ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:29:44) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	if x == 'A':
+		xtab -= 1
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab += 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab += 1 
+		if xtab < 0 or xtab >= shape(tabuleiro)[1]:
+			xtab -= 1
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab -= 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[0]:
+			ytab += 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab += 1
+		if ytab < 0 or ytab >= shape(tabuleiro)[0]:
+			ytab -= 1
+
+	if tabuleiro[ytab,xtab] == 33:
+		if x == "A":
+			xtab += 1
+		elif x == "D":
+			xtab -= 1
+		elif x == "W":
+			ytab -= 1
+		elif x == "S":
+			ytab += 1
+    # Moeda
+	elif tabuleiro[ytab,xtab] == 11:
+		moeda += 1 
+        # Apaga moeda do tabuleiro
+		
+		tabuleiro[ytab,xtab] == 0:
+	# Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life -= 5
+		tabuleiro[ytab,xtab] = 0
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+0.461457
+-- ERROR:
+  File "/home/codebench/codes/1834/1280/main.py", line 58
+    tabuleiro[ytab,xtab] == 0:
+                             ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:33:44) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+tabuleiro = array( 	# Leitura do tabuleiro
+mov = input("Movimentos: ") 							# Sequencia de movimentos do personagem
+xtab = 0														# Posicao inicial do personagem
+ytab = 0
+moeda = 0													# Contadores de atributos do personagem
+life = 100
+# Limites do tabuleiro
+limcol = shape(tabuleiro)[1]							# Limites colunas
+limlinh = shape(tabuleiro)[0]							# Limites linhas
+# Analise da jogada
+for x in mov:
+	if(x == 'A'): 
+		if(xtab-1 != -1):
+			if(tabuleiro[ytab,xtab-1] != 33):
+				xtab = xtab -1# Move personagem para ESQUERDA
+	elif(x == 'D'):     
+		if(xtab+1 != limcol):
+			if(tabuleiro[ytab,xtab+1]!=33):
+				xtab =xtab +1 # Move personagem para DIREITA
+	elif(x == 'W'): 
+		if(ytab-1 != -1):
+			if(tabuleiro[ytab-1,xtab]!=33):
+				ytab = ytab -1											# Move personagem para CIMA
+	elif x == 'S':
+		if(ytab+1 != limlinh):
+			if(tabuleiro[ytab+1,xtab]!=33):
+				ytab = ytab + 1									# Move personagem para BAIXO
+
+# Trata evento
+	if tabuleiro[ytab,xtab] == 11:					# Moeda
+		moeda =moeda +1 
+		tabuleiro[ytab,xtab] = 0 						# Apaga moeda do tabuleiro
+	elif tabuleiro[ytab,xtab] == 22: 
+		life = life - 5									# Zumbi
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+0.785
+-- ERROR:
+  File "/home/codebench/codes/1834/1280/main.py", line 6
+    xtab = 0														# Posicao inicial do personagem
+       ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:34:20) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+tabuleiro = array( 	# Leitura do tabuleiro
+mov = input("Movimentos: ")# Sequencia de movimentos do personagem
+xtab = 0# Posicao inicial do personagem
+ytab = 0
+moeda = 0# Contadores de atributos do personagem
+life = 100
+# Limites do tabuleiro
+limcol = shape(tabuleiro)[1]# Limites colunas
+limlinh = shape(tabuleiro)[0]# Limites linhas
+# Analise da jogada
+for x in mov:
+	if(x == 'A'): 
+		if(xtab-1 != -1):
+			if(tabuleiro[ytab,xtab-1] != 33):
+				xtab = xtab -1# Move personagem para ESQUERDA
+	elif(x == 'D'):     
+		if(xtab+1 != limcol):
+			if(tabuleiro[ytab,xtab+1]!=33):
+				xtab =xtab +1 # Move personagem para DIREITA
+	elif(x == 'W'): 
+		if(ytab-1 != -1):
+			if(tabuleiro[ytab-1,xtab]!=33):
+				ytab = ytab -1# Move personagem para CIMA
+	elif x == 'S':
+		if(ytab+1 != limlinh):
+			if(tabuleiro[ytab+1,xtab]!=33):
+				ytab = ytab + 1# Move personagem para BAIXO
+
+# Trata evento
+	if tabuleiro[ytab,xtab] == 11:# Moeda
+		moeda =moeda +1 
+		tabuleiro[ytab,xtab] = 0 # Apaga moeda do tabuleiro
+	elif tabuleiro[ytab,xtab] == 22: 
+		life = life - 5 # Zumbi
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+0.633936
+-- ERROR:
+  File "/home/codebench/codes/1834/1280/main.py", line 6
+    xtab = 0# Posicao inicial do personagem
+       ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 14:41:03) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+tabuleiro = array(eval(input()))# Leitura do tabuleiro
+mov = input("Movimentos: ")# Sequencia de movimentos do personagem
+xtab = 0 # Posicao inicial do personagem
+ytab = 0
+moeda = 0 # Contadores de atributos do personagem
+life = 100
+# Limites do tabuleiro
+limcol = shape(tabuleiro)[1] # Limites colunas
+limlinh = shape(tabuleiro)[0] # Limites linhas
+# Analise da jogada
+for x in mov:
+	if(x == 'A'): 
+		if(xtab-1 != -1):
+			if(tabuleiro[ytab,xtab-1] != 33):
+				xtab -= 1# Move personagem para ESQUERDA
+	elif(x == 'D'):     
+		if(xtab+1 != limcol):
+			if(tabuleiro[ytab,xtab+1]!=33):
+				xtab += 1 # Move personagem para DIREITA
+	elif(x == 'W'): 
+		if(ytab-1 != -1):
+			if(tabuleiro[ytab-1,xtab]!=33):
+				ytab -= 1# Move personagem para CIMA
+	elif x == 'S':
+		if(ytab+1 != limlinh):
+			if(tabuleiro[ytab+1,xtab]!=33):
+				ytab += 1# Move personagem para BAIXO
+
+# Trata evento
+	if tabuleiro[ytab,xtab] == 11:# Moeda
+		moeda += 1 
+		tabuleiro[ytab,xtab] = 0 # Apaga moeda do tabuleiro
+	elif tabuleiro[ytab,xtab] == 22: 
+		life -= 5 # Zumbi
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:41:10) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+tabuleiro = array(eval(input()))# Leitura do tabuleiro
+mov = input("Movimentos: ")# Sequencia de movimentos do personagem
+xtab = 0 # Posicao inicial do personagem
+ytab = 0
+moeda = 0 # Contadores de atributos do personagem
+life = 100
+# Limites do tabuleiro
+limcol = shape(tabuleiro)[1] # Limites colunas
+limlinh = shape(tabuleiro)[0] # Limites linhas
+# Analise da jogada
+for x in mov:
+	if(x == 'A'): 
+		if(xtab-1 != -1):
+			if(tabuleiro[ytab,xtab-1] != 33):
+				xtab -= 1# Move personagem para ESQUERDA
+	elif(x == 'D'):     
+		if(xtab+1 != limcol):
+			if(tabuleiro[ytab,xtab+1]!=33):
+				xtab += 1 # Move personagem para DIREITA
+	elif(x == 'W'): 
+		if(ytab-1 != -1):
+			if(tabuleiro[ytab-1,xtab]!=33):
+				ytab -= 1# Move personagem para CIMA
+	elif x == 'S':
+		if(ytab+1 != limlinh):
+			if(tabuleiro[ytab+1,xtab]!=33):
+				ytab += 1# Move personagem para BAIXO
+
+# Trata evento
+	if tabuleiro[ytab,xtab] == 11:# Moeda
+		moeda += 1 
+		tabuleiro[ytab,xtab] = 0 # Apaga moeda do tabuleiro
+	elif tabuleiro[ytab,xtab] == 22: 
+		life -= 5 # Zumbi
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.12016
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 15:11:45) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+tabuleiro = array(eval(input()))# Leitura do tabuleiro
+mov = input("Movimentos: ")# Sequencia de movimentos do personagem
+xtab = 0 # Posicao inicial do personagem
+ytab = 0
+moeda = 0 # Contadores de atributos do personagem
+life = 100
+# Limites do tabuleiro
+limcol = shape(tabuleiro)[1] # Limites colunas
+limlinh = shape(tabuleiro)[0] # Limites linhas
+# Analise da jogada
+for x in mov:
+	if(x == 'A'): 
+		if(xtab-1 != -1):
+			if(tabuleiro[ytab,xtab-1] != 33):
+				xtab -= 1# Move personagem para ESQUERDA
+	elif(x == 'D'):     
+		if(xtab+1 != limcol):
+			if(tabuleiro[ytab,xtab+1]!=33):
+				xtab += 1 # Move personagem para DIREITA
+	elif(x == 'W'): 
+		if(ytab-1 != -1):
+			if(tabuleiro[ytab-1,xtab]!=33):
+				ytab -= 1# Move personagem para CIMA
+	elif x == 'S':
+		if(ytab+1 != limlinh):
+			if(tabuleiro[ytab+1,xtab]!=33):
+				ytab += 1# Move personagem para BAIXO
+
+# Trata evento
+	if tabuleiro[ytab,xtab] == 11:# Moeda
+		moeda += 1 
+		tabuleiro[ytab,xtab] = 0 # Apaga moeda do tabuleiro
+	elif tabuleiro[ytab,xtab] == 22: 
+		life -= 5 # Zumbi
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 15:55:24) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+tabuleiro = array(eval(input()))# Leitura do tabuleiro
+mov = input("Movimentos: ")# Sequencia de movimentos do personagem
+xtab = 0 # Posicao inicial do personagem
+ytab = 0
+moeda = 0 # Contadores de atributos do personagem
+life = 100
+# Limites do tabuleiro
+limcol = shape(tabuleiro)[1] # Limites colunas
+limlinh = shape(tabuleiro)[0] # Limites linhas
+# Analise da jogada
+for x in mov:
+	if(x == 'A'): 
+		if(xtab-1 != -1):
+			if(tabuleiro[ytab,xtab-1] != 33):
+				xtab -= 1# Move personagem para ESQUERDA
+	elif(x == 'D'):     
+		if(xtab+1 != limcol):
+			if(tabuleiro[ytab,xtab+1]!=33):
+				xtab += 1 # Move personagem para DIREITA
+	elif(x == 'W'): 
+		if(ytab-1 != -1):
+			if(tabuleiro[ytab-1,xtab]!=33):
+				ytab -= 1# Move personagem para CIMA
+	elif x == 'S':
+		if(ytab+1 != limlinh):
+			if(tabuleiro[ytab+1,xtab]!=33):
+				ytab += 1# Move personagem para BAIXO
+
+# Trata evento
+	if tabuleiro[ytab,xtab] == 11:# Moeda
+		moeda += 1 
+		tabuleiro[ytab,xtab] = 0 # Apaga moeda do tabuleiro
+	elif tabuleiro[ytab,xtab] == 22: 
+		life -= 5 # Zumbi
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+0.988474
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,978 @@
+== TEST (2019-04-26 19:19:18) 
+-- CODE:
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:" H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/3):
+			v = (4/3*(pi*(r**3)))/2
+		elif(h>H/3)and(h<2*H/3):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+		elif(h>2*H/3)and(h<H):
+			v = ((pi*(r**2)*H) + (4/3*pi*(r**3))) - ((pi/3)*(H**2)(3*r-H))
+			print(round(v*1000,3))
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- ERROR:
+File "XXXX", line 8
+    print("Entradas:" H,",",h,",",r)
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-26 19:19:38) 
+-- CODE:
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:"H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/3):
+			v = (4/3*(pi*(r**3)))/2
+		elif(h>H/3)and(h<2*H/3):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+		elif(h>2*H/3)and(h<H):
+			v = ((pi*(r**2)*H) + (4/3*pi*(r**3))) - ((pi/3)*(H**2)(3*r-H))
+			print(round(v*1000,3))
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- ERROR:
+File "XXXX", line 8
+    print("Entradas:"H,",",h,",",r)
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-26 19:20:22) 
+-- CODE:
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/3):
+			v = (4/3*(pi*(r**3)))/2
+		elif(h>H/3)and(h<2*H/3):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+		elif(h>2*H/3)and(h<H):
+			v = ((pi*(r**2)*H) + (4/3*pi*(r**3))) - ((pi/3)*(H**2)(3*r-H))
+			print(round(v*1000,3))
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 15, in <module>
+    v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+NameError: name 'pi' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-26 19:22:54) 
+-- CODE:
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/3):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/3)and(h<2*H/3):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/3)and(h<H):
+			v = ((pi*(r**2)*H) + (4/3*pi*(r**3))) - ((pi/3)*(H**2)(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 16, in <module>
+    v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+NameError: name 'pi' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-26 19:23:49) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/3):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/3)and(h<2*H/3):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/3)and(h<H):
+			v = ((pi*(r**2)*H) + (4/3*pi*(r**3))) - ((pi/3)*(H**2)(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 213277.489 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-26 19:27:08) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/3):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/3)and(h<2*H/3):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/3)and(h<H):
+			v = ((pi*(r**2)*H) + (4/3*pi*(r**3))) - ((pi/3)*(H**2)(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 213277.489 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-26 19:29:42) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/3):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/3)and(h<2*H/3):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/3)and(h<H):
+			v = ((pi*(r**2)*H) + (4/3*pi*(r**3))) - (pi/3*(H**2)*(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 213277.489 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-26 19:36:33) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/3):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/3)and(h<2*H/3):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/3)and(h<H):
+			v = (pi*(r**2)*H) + (4/3*pi*(r**3))# - (pi/3*(H**2)*(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 213277.489 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-26 19:38:17) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/3):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/3)and(h<2*H/3):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/3)and(h<H):
+			v = (pi*(r**2)*H) + (4/3*pi*(r**3))/2# - (pi/3*(H**2)*(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 213277.489 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-26 19:38:53) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/3):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/3)and(h<2*H/3):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/3)and(h<H):
+			v = ((pi*(r**2)*H) + (4/3*pi*(r**3)))/2# - (pi/3*(H**2)*(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 213277.489 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-26 19:42:53) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/4):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/4)and(h<2*H/4):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/4)and(h<3*H/4):
+			v = ((pi*(r**2)*H) + (4/3*pi*(r**3))) - (pi/3*(H**2)*(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 827113.278 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-26 19:43:36) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/4):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/4)and(h<2*H/4):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/4)and(h<=3*H/4):
+			v = ((pi*(r**2)*H) + (4/3*pi*(r**3))) - (pi/3*(H**2)*(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 827113.278 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-26 20:00:30) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/4):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/4)and(h<2*H/4):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/4)and(h<=4*H/4):
+			v = ((pi*(r**2)*H) + (4*pi*(r**3))/3) - (pi/3*(H**2)*(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 827113.278 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-26 20:02:13) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/4):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/4)and(h<2*H/4):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/4)and(h<=4*H/4):
+			v = ((pi*(r**2)*H) + (4*pi*(r**3))/3)# - (pi/3*(H**2)*(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 238759.994 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-26 20:02:59) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/4):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/4)and(h<2*H/4):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/4)and(h<=4*H/4):
+			v = ((pi*(r**2)*H) + (4*pi*(r**3))/3)# - (pi/3*(H**2)*(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 238759.994 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-26 20:03:45) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/4):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/4)and(h<2*H/4):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/4)and(h<=4*H/4):
+			v = ((pi*(r**2)*H) + (4*pi*(r**3))/3)# - (pi/3*(H**2)*(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 238759.994 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-26 20:04:30) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/4):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/4)and(h<2*H/4):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/4)and(h<=4*H/4):
+			v = ((pi*(r**2)*H) + (4*pi*(r**3))/3)# - (pi/3*(H**2)*(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 238759.994 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 23:21:11) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/4):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/4)and(h<2*H/4):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/4)and(h<=4*H/4):
+			v = ((pi*(r**2)*H) + (4*pi*(r**3))/3)# - (pi/3*(H**2)*(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 238759.994 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 23:21:42) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/4):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/4)and(h<2*H/4):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/4)and(h<=4*H/4):
+			v = ((pi*(r**2)*H) + (4*pi*(r**3))/3) - (pi/3*(H**2)*(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 827113.278 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 23:24:07) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/4):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/4)and(h<2*H/4):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/4)and(h<=4*H/4):
+			v = ((pi*(r**2)*H) + (4*pi*(r**3))/3) - (pi/3*(H**2)*(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 827113.278 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 23:24:49) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/4):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/4)and(h<2*H/4):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/4)and(h<=4*H/4):
+			v = ((pi*(r**2)*H) + (4*pi*(r**3))/3) - (pi/3*(H**2)*(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 827113.278 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 23:26:21) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/4):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/4)and(h<2*H/4):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/4)and(h<=4*H/4):
+			v = ((pi*(r**2)*H) + (4*pi*(r**3))/3) - (pi/3*(H**2)*(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 827113.278 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 23:29:15) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/3):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/3)and(h<2*H/3):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/3)and(h<H):
+			v = ((pi*(r**2)*H) + (4*pi*(r**3))/3) - (pi/3*(H**2)*(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 213277.489 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 23:31:19) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/3):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/3)and(h<=2*H/3):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/3)and(h<H):
+			v = ((pi*(r**2)*H) + (4*pi*(r**3))/3) - (pi/3*(H**2)*(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 213277.489 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 23:33:39) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=H/3):
+			v = (4/3*(pi*(r**3)))/2
+			print(a,round(v*1000,3),b)
+		elif(h>H/3)and(h<=2*H/3):
+			v = (pi*(r**2)*H) + ((4/3*(pi*(r**3)))/2)
+			print(a,round(v*1000,3),b)
+		elif(h>2*H/3)and(h<H):
+			v = ((pi*(r**2)*H) + (4*pi*(r**3))/3) - (pi/3*(H**2)*(3*r-H))
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 213277.489 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 10:50:38) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=r):
+			v=(pi/3)*(h**2)*(3*r-h)
+		elif(h>r) and (h<=H-r):
+			x = (4*pi*(r**3))/6
+			y = pi*(r**2)*(H-r)
+			v = x+y
+			print(a,round(v*1000,3),b)
+		elif(h>H-r):
+			x = (4*pi*(r**3))/6
+			y = pi*(r**2)*(a-2*r)
+			z = x - ((pi*((a-h)**2)*(3*r-(a-h)))/3)
+			v = x+y+z
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 175053.731 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 11:13:17) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=r):
+			v=(pi/3)*(h**2)*(3*r-h)
+		elif(h>r) and (h<=H-r):
+			x = (4*pi*(r**3))/6
+			y = pi*(r**2)*(H-r)
+			v = x+y
+			print(a,round(v*1000,3),b)
+		elif(h>H-r):
+			x = (4*pi*(r**3))/6
+			y = pi*(r**2)*(a-2*r)
+			z = x - ((pi*((a-h)**2)*(3*r-(a-h)))/3)
+			v = x+y+z
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 175053.731 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 11:15:38) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=r):
+			v=(pi/3)*(h**2)*(3*r-h)
+			print(a,round(v*1000,3),b)
+		elif(h>r) and (h<=H-r):
+			x = (4*pi*(r**3))/6
+			y = pi*(r**2)*(h-r)
+			v = x+y
+			print(a,round(v*1000,3),b)
+		elif(h>H-r):
+			x = (4*pi*(r**3))/6
+			y = pi*(r**2)*(a-2*r)
+			z = x - ((pi*((a-h)**2)*(3*r-(a-h)))/3)
+			v = x+y+z
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 81987.191 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 11:16:03) 
+-- CODE:
+from math import *
+H = float(input("altura do tanque:"))
+h = float(input("nivel do tanque:"))
+r = float(input("raio do tanque:"))
+
+a = "Volume:"
+b = "litros"
+
+print("Entradas:",H,",",h,",",r)
+
+if(H>0)and(h>0)and(r>0):
+	if(H>h)and(H>2*r):
+		if(h<=r):
+			v=(pi/3)*(h**2)*(3*r-h)
+			print(a,round(v*1000,3),b)
+		elif(h>r) and (h<=H-r):
+			x = (4*pi*(r**3))/6
+			y = pi*(r**2)*(h-r)
+			v = x+y
+			print(a,round(v*1000,3),b)
+		elif(h>H-r):
+			x = (4*pi*(r**3))/6
+			y = pi*(r**2)*(a-2*r)
+			z = x - ((pi*((a-h)**2)*(3*r-(a-h)))/3)
+			v = x+y+z
+			print(a,round(v*1000,3),b)
+	else:
+		print("Entradas invalidas")
+else:
+	print("Entradas invalidas")
+
+-- EXECUTION TIME:
+0.226926
+-- TEST CASE 1:
+---- input:
+11.3
+5.7
+2.3
+---- correct output:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 81987.191 litros
+---- user output:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 81987.191 litros
+-- TEST CASE 2:
+---- input:
+8.5
+9.5
+2.2
+---- correct output:
+Entradas: 8.5 , 9.5 , 2.2
+Entradas invalidas
+---- user output:
+Entradas: 8.5 , 9.5 , 2.2
+Entradas invalidas
+-- TEST CASE 3:
+---- input:
+8
+4
+6
+---- correct output:
+Entradas: 8.0 , 4.0 , 6.0
+Entradas invalidas
+---- user output:
+Entradas: 8.0 , 4.0 , 6.0
+Entradas invalidas
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

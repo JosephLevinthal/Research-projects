@@ -1,0 +1,356 @@
+== TEST (2019-04-02 16:06:58) 
+-- CODE:
+L = input()
+#lucro
+l=12%
+-- ERROR:
+File "XXXX", line 3
+    l=12%
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:07:06) 
+-- CODE:
+L = input()
+#lucro
+l=12%83
+-- ERROR:
+File "XXXX", line 3
+    l=12%
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:07:13) 
+-- CODE:
+L = input()
+#lucro
+l=12%83
+print(l)
+-- OUTPUT:
+12
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:07:14) 
+-- CODE:
+L = input()
+#lucro
+l=12%83
+print(l)
+-- OUTPUT:
+12
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:10:56) 
+-- CODE:
+L = input()
+l = 9,96
+Lu = L%83
+
+#ganho do empregado
+g = 100 
+print(Lu)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    Lu = L%83
+TypeError: not all arguments converted during string formatting
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:11:06) 
+-- CODE:
+L = input()
+l = 9,96
+Lu = L%83
+
+#ganho do empregado
+g = 100 
+print(Lu)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    Lu = L%83
+TypeError: not all arguments converted during string formatting
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:11:30) 
+-- CODE:
+L = int(input())
+l = 9,96
+Lu = L%83
+
+#ganho do empregado
+g = 100 
+print(Lu)
+-- OUTPUT:
+30
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:15:17) 
+-- CODE:
+L = int(input())
+l = 12*0,83
+Lt = L*l
+lf = Lt*0,2
+
+#ganho do empregado
+g = 100 + lf
+
+print(g)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    g = 100 + lf
+TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:15:30) 
+-- CODE:
+L = int(input())
+l = 12*0,83
+Lt = L*l
+lf = Lt*0,2
+
+#ganho do empregado
+g = 100 +
+
+print(g)
+-- ERROR:
+File "XXXX", line 7
+    g = 100 +
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:15:33) 
+-- CODE:
+L = int(input())
+l = 12*0,83
+Lt = L*l
+lf = Lt*0,2
+
+#ganho do empregado
+g = 100
+
+print(g)
+-- OUTPUT:
+100
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:16:23) 
+-- CODE:
+L = int(input())
+l = 12*0.83
+Lt = L*l
+lf = Lt*0.2
+
+#ganho do empregado
+g = 100 + lf
+
+print(g)
+-- OUTPUT:
+159.76
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:17:18) 
+-- CODE:
+L = int(input())
+l = 12*0.83
+Lt = L*l
+lf = Lt*0.2
+
+#ganho do empregado
+g = 100 + lf
+#lucro total
+LT = g--Lt 
+
+print(round(g,2))
+-- OUTPUT:
+159.76
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:17:22) 
+-- CODE:
+L = int(input())
+l = 12*0.83
+Lt = L*l
+lf = Lt*0.2
+
+#ganho do empregado
+g = 100 + lf
+#lucro total
+LT = g-Lt 
+
+print(round(g,2))
+-- OUTPUT:
+159.76
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 16:19:10) 
+-- CODE:
+L = int(input())
+l = 12*0.83
+Lt = L*l
+lf = Lt*0.2
+
+#ganho do empregado
+g = 100 + lf
+
+#lucro total
+LT = 
+print(round(g,2))
+-- EXECUTION TIME:
+0.151521
+-- ERROR:
+  File "/home/codebench/codes/1630/2939/main.py", line 10
+    LT = 
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:19:11) 
+-- CODE:
+L = int(input())
+l = 12*0.83
+Lt = L*l
+lf = Lt*0.2
+
+#ganho do empregado
+g = 100 + lf
+
+#lucro total
+LT = 
+print(round(g,2))
+-- ERROR:
+File "XXXX", line 10
+    LT = 
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:20:18) 
+-- CODE:
+L = int(input())
+l = 12*0.83
+l2 = 12*0.2
+LF = L*l2
+Lt = L*l
+lf = Lt*0.2
+
+#ganho do empregado
+g = 100 + lf
+
+#lucro total
+LT = 
+print(round(g,2))
+-- ERROR:
+File "XXXX", line 12
+    LT = 
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:20:46) 
+-- CODE:
+L = int(input())
+l = 12*0.83
+l2 = 12*0.2
+LF = L*l2
+Lt = L*l
+lf = Lt*0.2
+
+#ganho do empregado
+g = 100 + l2
+
+#lucro total
+LT = Lt- g
+print(round(g,2))
+-- OUTPUT:
+102.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:22:59) 
+-- CODE:
+L = int(input())
+x = (L*12)*0.83
+
+lf = x*0.2
+g = 100 + lf
+
+LT = x - g
+print(round(g,2))
+-- OUTPUT:
+159.76
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:24:09) 
+-- CODE:
+L = int(input())
+x = (L*12)*0,83
+
+lf = L*0.2
+g = 100 + lf
+
+LT = x - g
+print(round(g,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    LT = x - g
+TypeError: unsupported operand type(s) for -: 'tuple' and 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:24:24) 
+-- CODE:
+L = int(input())
+x = (L*12)*0,83
+
+lf = L*0.2
+g = 100 + lf
+
+LT = 
+print(round(g,2))
+-- ERROR:
+File "XXXX", line 7
+    LT = 
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:24:27) 
+-- CODE:
+L = int(input())
+x = (L*12)*0,83
+
+lf = L*0.2
+g = 100 + lf
+
+LT = 1
+print(round(g,2))
+-- OUTPUT:
+106.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 16:24:37) 
+-- CODE:
+L = int(input())
+x = (L*12)*0.83
+
+lf = x*0.2
+g = 100 + lf
+
+LT = x - g
+print(round(LT,2))
+-- OUTPUT:
+139.04
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 16:24:40) 
+-- CODE:
+L = int(input())
+x = (L*12)*0.83
+
+lf = x*0.2
+g = 100 + lf
+
+LT = x - g
+print(round(LT,2))
+-- EXECUTION TIME:
+0.155727
+-- TEST CASE 1:
+---- input:
+30
+---- correct output:
+139.04
+---- user output:
+139.04
+-- TEST CASE 2:
+---- input:
+80
+---- correct output:
+537.44
+---- user output:
+537.44
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

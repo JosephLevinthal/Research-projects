@@ -1,0 +1,227 @@
+== TEST (2019-04-14 21:10:56) 
+-- CODE:
+escala = input("digite escala: ")
+valor = float(input("digite temperatura: "))
+C = (5/9*(f-32))
+
+#if():
+#	mensagem = 
+#else:
+#	mensagem = 
+	
+print(round(c, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    C = (5/9*(f-32))
+NameError: name 'f' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:12:58) 
+-- CODE:
+escala = input("digite escala: ")
+valor = float(input("digite temperatura: "))
+C = 5/9*(f-32)
+
+#if():
+#	mensagem = 
+#else:
+#	mensagem = 
+	
+print(round(c, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    C = 5/9*(f-32)
+NameError: name 'f' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 09:25:22) 
+-- CODE:
+escala = input("digite escala: ")
+valor = float(input("digite temperatura: "))
+C = 5/9*(f-32)
+
+#if():
+#	mensagem = 
+#else:
+#	mensagem = 
+	
+print(round(c, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    C = 5/9*(f-32)
+NameError: name 'f' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 13:03:27) 
+-- CODE:
+escala = input("digite escala: ")
+valor = float(input("digite temperatura: "))
+
+
+if(graus == "C"):
+	graus = (5/9)*(F-32)
+	mensagem = graus
+else:
+	graus = 5/9*(F-32)
+	mensagem = graus
+	
+print(round(graus, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    if(graus == "C"):
+NameError: name 'graus' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 13:03:58) 
+-- CODE:
+escala = input("digite escala: ")
+valor = float(input("digite temperatura: "))
+
+
+if(escala == "C"):
+	graus = (5/9)*(F-32)
+	mensagem = graus
+else:
+	graus = 5/9*(F-32)
+	mensagem = graus
+	
+print(round(graus, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    graus = (5/9)*(F-32)
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 13:06:38) 
+-- CODE:
+escala = input("digite escala: ")
+valor = float(input("digite temperatura: "))
+
+if(escala != "F"):
+	graus = (5/9)*(valor-32)
+else:
+	graus = (valor*(9/5))+32
+	
+print(round(graus, 2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 13:07:01) 
+-- CODE:
+escala = input("digite escala: ")
+valor = float(input("digite temperatura: "))
+
+if(escala != "F"):
+	graus = (5/9)*(valor-32)
+else:
+	graus = (valor*(9/5))+32
+	
+print(round(graus, 2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 13:12:37) 
+-- CODE:
+escala = input("digite escala: ")
+valor = float(input("digite temperatura: "))
+
+if(escala != "F"):
+	graus = (1.8⋅valor)+32
+else:
+	if(escala == "C"):
+		graus = (valor-32)/1.8
+	else:
+		graus = 0
+		print("Valor inválido!")
+		
+	
+print(str(round(graus, 2)))
+-- ERROR:
+File "XXXX", line 5
+    graus = (1.8⋅valor)+32
+                     ^
+SyntaxError: invalid character in identifier
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 13:13:03) 
+-- CODE:
+escala = input("digite escala: ")
+valor = float(input("digite temperatura: "))
+
+if(escala != "F"):
+	graus = (1.8*valor)+32
+else:
+	if(escala == "F"):
+		graus = (valor-32)/1.8
+	else:
+		graus = 0
+		print("Valor inválido!")
+		
+	
+print(str(round(graus, 2)))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 13:13:19) 
+-- CODE:
+escala = input("digite escala: ")
+valor = float(input("digite temperatura: "))
+
+if(escala != "F"):
+	graus = (1.8*valor)+32
+else:
+	if(escala == "F"):
+		graus = (valor-32)/1.8
+	else:
+		graus = 0
+		print("Valor inválido!")
+		
+	
+print(str(round(graus, 2)))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 13:13:32) 
+-- CODE:
+escala = input("digite escala: ")
+valor = float(input("digite temperatura: "))
+
+if(escala != "F"):
+	graus = (1.8*valor)+32
+else:
+	if(escala == "F"):
+		graus = (valor-32)/1.8
+	else:
+		graus = 0
+		print("Valor inválido!")
+		
+	
+print(str(round(graus, 2)))
+-- EXECUTION TIME:
+0.166972
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

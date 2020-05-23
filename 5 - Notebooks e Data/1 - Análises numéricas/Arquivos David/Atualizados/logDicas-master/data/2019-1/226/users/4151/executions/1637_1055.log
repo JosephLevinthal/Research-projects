@@ -1,0 +1,190 @@
+== TEST (2019-04-11 10:37:43) 
+-- CODE:
+from math import*
+v0=float(input("velocidade inicial: "))
+an=float(input("angulo: "))
+d=float(input("distancia entre o passaro e o porco: "))
+g=9,8
+an=radians(an)
+r=((v0)**2 * sin(2an))/g
+
+if abs(d-r<= 0,1):
+	mensagem="sim"
+else:
+	mensagem="nao"
+print(mensagem)
+
+-- ERROR:
+File "XXXX", line 7
+    r=((v0)**2 * sin(2an))/g
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:38:08) 
+-- CODE:
+from math import*
+v0=float(input("velocidade inicial: "))
+an=float(input("angulo: "))
+d=float(input("distancia entre o passaro e o porco: "))
+g=9,8
+an=radians(an)
+r=(v0**2 * sin(2an))/g
+
+if abs(d-r<= 0,1):
+	mensagem="sim"
+else:
+	mensagem="nao"
+print(mensagem)
+
+-- ERROR:
+File "XXXX", line 7
+    r=(v0**2 * sin(2an))/g
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:38:32) 
+-- CODE:
+from math import*
+v0=float(input("velocidade inicial: "))
+an=float(input("angulo: "))
+d=float(input("distancia entre o passaro e o porco: "))
+g=9,8
+an=radians(an)
+r=(v0**2 * sin(2an)/g
+
+if abs(d-r<= 0,1):
+	mensagem="sim"
+else:
+	mensagem="nao"
+print(mensagem)
+
+-- ERROR:
+File "XXXX", line 7
+    r=(v0**2 * sin(2an)/g
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:39:16) 
+-- CODE:
+from math import*
+v0=float(input("velocidade inicial: "))
+an=float(input("angulo: "))
+d=float(input("distancia entre o passaro e o porco: "))
+g=9,8
+an=radians(an)
+r=(v0**2) * sin(2an)/g
+
+if abs(d-r<= 0,1):
+	mensagem="sim"
+else:
+	mensagem="nao"
+print(mensagem)
+
+-- ERROR:
+File "XXXX", line 7
+    r=(v0**2) * sin(2an)/g
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:40:54) 
+-- CODE:
+from math import*
+v0=float(input("velocidade inicial: "))
+an=float(input("angulo: "))
+d=float(input("distancia entre o passaro e o porco: "))
+g=9,8
+an=radians(an)
+r=((v0)**2 * sin(2*an))/g
+
+if abs(d-r<= 0,1):
+	mensagem="sim"
+else:
+	mensagem="nao"
+print(mensagem)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    r=((v0)**2 * sin(2*an))/g
+TypeError: unsupported operand type(s) for /: 'float' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:42:32) 
+-- CODE:
+from math import*
+v0=float(input("velocidade inicial: "))
+an=float(input("angulo: "))
+d=float(input("distancia entre o passaro e o porco: "))
+g=9,8
+an=radians(an)
+r=((v0)**2 * sin(2*an))/g
+
+if abs(d-r<= 0.1):
+	mensagem="sim"
+else:
+	mensagem="nao"
+print(mensagem)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    r=((v0)**2 * sin(2*an))/g
+TypeError: unsupported operand type(s) for /: 'float' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:43:44) 
+-- CODE:
+from math import*
+v0=float(input("velocidade inicial: "))
+an=float(input("angulo: "))
+d=float(input("distancia entre o passaro e o porco: "))
+g=9.8
+an=radians(an)
+r=((v0)**2 * sin(2*an))/g
+
+if abs(d-r<= 0.1):
+	mensagem="sim"
+else:
+	mensagem="nao"
+print(mensagem)
+
+-- OUTPUT:
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:44:14) 
+-- CODE:
+from math import*
+v0=float(input("velocidade inicial: "))
+an=float(input("angulo: "))
+d=float(input("distancia entre o passaro e o porco: "))
+g=9.8
+an=radians(an)
+r=((v0)**2 * sin(2*an))/g
+
+if abs(d-r<= 0.1):
+	mensagem="sim"
+else:
+	mensagem="nao"
+print(mensagem)
+
+-- EXECUTION TIME:
+0.201714
+-- TEST CASE 1:
+---- input:
+10.5
+45.5
+11.3
+---- correct output:
+sim
+---- user output:
+sim
+-- TEST CASE 2:
+---- input:
+29.5
+17.1
+51.0
+---- correct output:
+nao
+---- user output:
+nao
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

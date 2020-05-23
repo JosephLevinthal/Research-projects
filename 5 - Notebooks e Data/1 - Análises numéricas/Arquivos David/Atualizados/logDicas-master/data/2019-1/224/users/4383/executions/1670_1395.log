@@ -1,0 +1,265 @@
+== TEST (2019-04-16 18:29:40) 
+-- CODE:
+#volume de venda
+1,000,00
+#comissao extra
+5% e 10%
+v= print var (1,000,00 ou <)
+C = print int () 
+-- ERROR:
+File "XXXX", line 4
+    5% e 10%
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:31:41) 
+-- CODE:
+#volume de venda
+1,000,00
+#comissao extra
+5% e 10%
+var= 1,000,00 ou < / 5% e 10% 
+-- ERROR:
+File "XXXX", line 4
+    5% e 10%
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:31:47) 
+-- CODE:
+#volume de venda
+1,000,00
+#comissao extra
+5% e 10%
+var= 1,000,00 ou < / 5% e 10% 
+-- ERROR:
+File "XXXX", line 4
+    5% e 10%
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:36:44) 
+-- CODE:
+#volume de venda
+1,000,00
+#comissao extra
+5% e 10%
+print string (1,000,00 ou menos)
+print string (comissao sobre o 1,000,00)
+print var 1,000,00/5%
+print var 1,000,00/10%
+-- ERROR:
+File "XXXX", line 4
+    5% e 10%
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:37:09) 
+-- CODE:
+#volume de venda
+1,000,00
+#comissao extra
+5% e 10%
+
+-- ERROR:
+File "XXXX", line 4
+    5% e 10%
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:38:24) 
+-- CODE:
+#volume de venda
+1,000,00
+#comissao extra
+5% e 10%
+1,000,00/5%
+-- ERROR:
+File "XXXX", line 4
+    5% e 10%
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:42:50) 
+-- CODE:
+#volume de venda
+1,000,00
+#comissao sobre o valor vendido
+5% e 10%
+1,000,00 / 5%
+1,00
+-- ERROR:
+File "XXXX", line 4
+    5% e 10%
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:45:47) 
+-- CODE:
+#volume de venda
+R$1,000,00
+#comissao sobre o valor vendido ou menor que 1,000,00
+5%
+#comissao sobre o valor vendido maior que 1,000,00
+10%
+print input ((1,000,00/ 5%)
+
+-- ERROR:
+File "XXXX", line 2
+    R$1,000,00
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:46:21) 
+-- CODE:
+#volume de venda
+R$1,000,00
+#comissao sobre o valor vendido ou menor que 1,000,00
+5%
+#comissao sobre o valor vendido maior que 1,000,00
+10%
+print (1,000,00/ 5%)
+
+-- ERROR:
+File "XXXX", line 2
+    R$1,000,00
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:47:08) 
+-- CODE:
+#volume de venda
+R$1,000,00
+#comissao sobre o valor vendido ou menor que 1,000,00
+5%
+#comissao sobre o valor vendido maior que 1,000,00
+10%
+s = 1,000,00/5%
+
+-- ERROR:
+File "XXXX", line 2
+    R$1,000,00
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:47:37) 
+-- CODE:
+#volume de venda
+R$1,000,00
+#comissao sobre o valor vendido ou menor que 1,000,00
+5%
+#comissao sobre o valor vendido maior que 1,000,00
+10%
+s = 1,000,00
+#valor final
+s= 1,000,00/5%
+
+-- ERROR:
+File "XXXX", line 2
+    R$1,000,00
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:48:10) 
+-- CODE:
+#volume de venda
+R$1,000,00
+#comissao sobre o valor vendido ou menor que 1,000,00
+5%
+#comissao sobre o valor vendido maior que 1,000,00
+10%
+s = 1,000,00
+#valor final
+s= 1,000,00/5%
+print
+
+-- ERROR:
+File "XXXX", line 2
+    R$1,000,00
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:48:36) 
+-- CODE:
+#volume de venda
+R$1,000,00
+#comissao sobre o valor vendido ou menor que 1,000,00
+5%
+#comissao sobre o valor vendido maior que 1,000,00
+10%
+s = 1,000,00
+#valor final
+print var (= 1,000,00/5%)
+
+
+-- ERROR:
+File "XXXX", line 2
+    R$1,000,00
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:50:12) 
+-- CODE:
+#volume de venda
+R$1.000.00
+#comissao sobre o valor vendido ou menor que 1,000,00
+5%
+#comissao sobre o valor vendido maior que 1,000,00
+10%
+f= 1.000.00
+-- ERROR:
+File "XXXX", line 2
+    R$1.000.00
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:53:27) 
+-- CODE:
+print input(5% comissao sobre o valor verndido 1.000.00 ou menos)
+print input (10% comissao sobre o valor vendido 1.000.000 ou mais)
+f= 1.000.00
+f=1.000.00/5%
+-- ERROR:
+File "XXXX", line 1
+    print input(5% comissao sobre o valor verndido 1.000.00 ou menos)
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:53:58) 
+-- CODE:
+print input(5% comissao sobre o valor verndido 1.000.00 ou menos)
+print input (10% comissao sobre o valor vendido 1.000.000 ou mais)
+f= 1.000.00
+f=1.000.00/ 5%
+-- ERROR:
+File "XXXX", line 1
+    print input(5% comissao sobre o valor verndido 1.000.00 ou menos)
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:54:14) 
+-- CODE:
+print input(5% comissao sobre o valor verndido 1.000.00 ou menos)
+print input (10% comissao sobre o valor vendido 1.000.000 ou mais)
+f= 1.000.00
+f=1.000.00/ 5
+print
+-- ERROR:
+File "XXXX", line 1
+    print input(5% comissao sobre o valor verndido 1.000.00 ou menos)
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:54:52) 
+-- CODE:
+print input(5% comissao sobre o valor verndido 1.000.00 ou menos)
+print input (10% comissao sobre o valor vendido 1.000.000 ou mais)
+f= 1.000.00
+f=1.000.00/ 5
+print=
+-- ERROR:
+File "XXXX", line 1
+    print input(5% comissao sobre o valor verndido 1.000.00 ou menos)
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

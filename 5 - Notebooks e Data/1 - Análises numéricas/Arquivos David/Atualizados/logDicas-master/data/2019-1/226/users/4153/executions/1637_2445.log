@@ -1,0 +1,157 @@
+== TEST (2019-04-11 11:12:19) 
+-- CODE:
+C = input("Insira a escala de temperatura: (C/F)")
+val = float(input("Insira o valor da temperatura: "))
+
+if(C == "C"):
+	C = (5/9) * (F - 32)
+	print(C)
+else:
+	c = (5/9) * (C - 32)
+	print(c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    C = (5/9) * (F - 32)
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:13:43) 
+-- CODE:
+C = input("Insira a escala de temperatura: (C/F)")
+val = float(input("Insira o valor da temperatura: "))
+
+if(C.upper() == "C"):
+	
+	C = (5/9) * (F - 32)
+	print(C)
+else:
+	c = (5/9) * (C - 32)
+	print(c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    C = (5/9) * (F - 32)
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:14:20) 
+-- CODE:
+W = input("Insira a escala de temperatura: (C/F)")
+val = float(input("Insira o valor da temperatura: "))
+
+if(W.upper() == "C"):
+	
+	W = (5/9) * (F - 32)
+	print(C)
+else:
+	c = (5/9) * (C - 32)
+	print(c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    W = (5/9) * (F - 32)
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:16:36) 
+-- CODE:
+C = input("Insira a escala de temperatura: (C/F)")
+val = float(input("Insira o valor da temperatura: "))
+
+if(C.upper() == "C"):
+	
+	F = (9/5) * C + 32
+	print(F)
+else:
+	C = (5/9) * (C - 32)
+	print(C)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    F = (9/5) * C + 32
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:17:27) 
+-- CODE:
+C = input("Insira a escala de temperatura: (C/F)")
+val = float(input("Insira o valor da temperatura: "))
+
+if(C.upper() == "C"):
+	C = float(C)
+	F = (9/5) * C + 32
+	print(F)
+else:
+	C = (5/9) * (C - 32)
+	print(C)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    C = float(C)
+ValueError: could not convert string to float: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:18:22) 
+-- CODE:
+C = input("Insira a escala de temperatura: (C/F)")
+val = float(input("Insira o valor da temperatura: "))
+
+if(C.upper() == "C"):
+	F = (9/5) * val + 32
+	print(F)
+else:
+	C = (5/9) * (val - 32)
+	print(C)
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:18:33) 
+-- CODE:
+C = input("Insira a escala de temperatura: (C/F)")
+val = float(input("Insira o valor da temperatura: "))
+
+if(C.upper() == "C"):
+	F = (9/5) * val + 32
+	print(F)
+else:
+	C = (5/9) * (val - 32)
+	print(C)
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 11:18:45) 
+-- CODE:
+C = input("Insira a escala de temperatura: (C/F)")
+val = float(input("Insira o valor da temperatura: "))
+
+if(C.upper() == "C"):
+	F = (9/5) * val + 32
+	print(F)
+else:
+	C = (5/9) * (val - 32)
+	print(C)
+-- EXECUTION TIME:
+0.227259
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

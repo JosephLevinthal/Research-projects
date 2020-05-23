@@ -1,0 +1,398 @@
+== TEST (2019-05-16 19:06:22) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+qi = qi > 0
+m = 0
+gp = 3
+
+while qi <= 400:
+	perda = 3 * m
+	m = m + 1
+print(perda)
+-- OUTPUT:
+19
+Acima
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:06:57) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+qi = qi > 0
+m = 1
+gp = 3
+
+while qi <= 400:
+	perda = 3 * m
+	m = m + 1
+print(perda)
+-- OUTPUT:
+19
+Acima
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:07:18) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+
+m = 1
+gp = 3
+
+while qi <= 400 and qi >0:
+	perda = 3 * m
+	m = m + 1
+print(perda)
+-- OUTPUT:
+19
+Acima
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:07:48) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+
+m = 1
+gp = 3
+
+while qi <= 400 and qi >0:
+	perda = gp * m
+	m = m + 1
+print(perda)
+-- OUTPUT:
+19
+Acima
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:08:46) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+
+m = 1
+gp = 3
+
+while qi <= 400 and qi >0:
+	perda = qi + (m * gp)
+	m = m + 1
+print(perda)
+-- OUTPUT:
+19
+Acima
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:10:33) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+
+m = 1
+gp = 3 * m
+
+while qi <= 400 and qi >0:
+	perda = (qi + qx) - (gp)
+	m = m + 1
+print(perda)
+-- OUTPUT:
+19
+Acima
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:12:36) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+
+m = 1
+semana = m * 4
+gp = 3 * m
+
+while (qi + qx) != 0:
+	semanas = semanas - (qi + qx)
+	m = m + 1
+print(semanas)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 10, in <module>
+    semanas = semanas - (qi + qx)
+NameError: name 'semanas' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:13:10) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+
+m = 1
+semana = m * 4
+gp = 3 * m
+
+while (qi + qx) != 0:
+	semana = semana - (qi + qx)
+	m = m + 1
+print(semanas)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 10, in <module>
+    semanas = semanas - (qi + qx)
+NameError: name 'semanas' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:14:24) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+
+m = 0
+semana = m * 4
+gp = 3 * m
+
+while qi + qx != 0 and qy < qi + qx:
+	semana = semana - (qi + qx)
+	m = m + 1
+print(semanas)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 10, in <module>
+    semanas = semanas - (qi + qx)
+NameError: name 'semanas' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:24:37) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+
+gp = 0
+t = 3
+c = 0
+
+while qi + qx != 0 and qi + qx == qy:
+	t = (t * (qi + qx)) - (t * qy) 
+	gp = gp + 1
+	c = c + 1
+print(t)
+	
+-- OUTPUT:
+3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:25:02) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+
+gp = 0
+t = 0
+c = 0
+
+while qi + qx != 0 and qi + qx == qy:
+	t = (t * (qi + qx)) - (t * qy) 
+	gp = gp + 1
+	c = c + 1
+print(t)
+	
+-- OUTPUT:
+3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:25:27) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+
+gp = 0
+t = 3
+c = 0
+
+while qi + qx != 0 and qi + qx == qy:
+	t = (t * (qi + qx)) - (t * qy) 
+	gp = gp + 3
+	c = c + 1
+print(t)
+	
+-- OUTPUT:
+3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:25:52) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+
+gp = 0
+t = 3
+c = 0
+
+while qi + qx != 0 and qi + qx == qy:
+	t = (t * (qi + qx)) - (t * qy) 
+	gp = gp + t
+	c = c + 1
+print(t)
+	
+-- OUTPUT:
+3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:27:07) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+
+gp = 0
+t = 3
+c = 0
+
+while qi + qx != 0 and qi + qx == qy:
+	t = (t * (qi + qx)) - (t * qy) 
+	gp = gp + 1
+	c = c + 1
+print(t)
+	
+-- OUTPUT:
+3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:27:31) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+
+gp = 0
+t = 3
+c = 0
+
+while qi + qx != 0 and qi + qx == qy:
+	t = (t * (qi + qx)) - (t * qy) 
+	gp = gp + 1 * t
+	c = c + 1
+print(t)
+	
+-- OUTPUT:
+3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:28:37) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+
+gp = 0
+t = 3
+c = 0
+
+while qi + qx != 0 and qi + qx == qy:
+	t = (t * (qi + qx)) - (t * qy) 
+	gp = gp + 1 
+	c = c + 3
+print(t)
+	
+-- OUTPUT:
+3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:29:24) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+
+gp = 0
+t = 3
+c = 0
+
+while qi + qx != 0 and qi + qx == qy:
+	t = (t * (qi + qx)) - (t * qy) 
+	gp = gp + 1 
+	c = (c + 1) * t
+print(t)
+	
+-- OUTPUT:
+3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:30:25) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+
+gp = 0
+t = 3
+c = 0
+
+while qi + qx != 0 and qi + qx == qy:
+	t = (t * (qi + qx)) - (t * qy) 
+	gp = gp + 1 
+	c = c + 1
+	t = t * c
+print(t)
+	
+-- OUTPUT:
+3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:31:43) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+
+gp = 0
+t = 3
+c = 0
+
+while qi + qx < 400:
+	t = (t * (qi + qx)) - (t * qy) 
+	gp = gp + 1 
+	c = c + 1
+	t =
+print(t)
+	
+-- ERROR:
+File "XXXX", line 13
+    t =
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:31:48) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+
+gp = 0
+t = 3
+c = 0
+
+while qi + qx < 400:
+	t = (t * (qi + qx)) - (t * qy) 
+	gp = gp + 1 
+	c = c + 1
+print(t)
+	
+-- ERROR:
+File "XXXX", line 13
+    t =
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 19:36:44) 
+-- CODE:
+qi = int(input("Digite a quantidade inicial de grifos: "))
+qx = int(input("Digite a quantidade de novos grifos: "))
+qy = int(input("Digite a quantidade de grifos contaminados a cada trimestre: "))
+
+gp = 0
+t = 3
+c = 0
+
+while qi + qx != 400 and qy == qi + qx:
+	t = (t * qx) + qi - (t * qy)
+	gp = gp + 1 
+	c = c + 1
+print(t)
+	
+-- OUTPUT:
+3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,1048 @@
+== TEST (2019-03-14 19:16:37) 
+-- CODE:
+aresta =
+area = 
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 1
+    aresta =
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:19:55) 
+-- CODE:
+aresta = 5
+area = 3/2(3)**2
+ 
+print(round(area 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area 4))
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:20:07) 
+-- CODE:
+aresta = 5
+area = 3/2(3)**2
+ 
+print(round(area 3/2(3)**2))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area 3/2(3)**2))
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:20:43) 
+-- CODE:
+aresta = 5
+area = 3/2(3)**2
+ 
+print(round(area,3/2(3)**2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2(3)**2
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:20:56) 
+-- CODE:
+aresta = 5
+area = 3/2(3)**2
+ 
+print(round(area=3/2(3)**2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2(3)**2
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:21:03) 
+-- CODE:
+aresta = 5
+area = 3/2(3)**2
+ 
+print(round(area=3/2(3)**2)4)
+-- ERROR:
+File "XXXX", line 4
+    print(round(area=3/2(3)**2)4)
+                               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:21:24) 
+-- CODE:
+aresta = 5
+area = 3/2(3)**2
+
+print(round(area = 3/2(3)**2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2(3)**2
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:21:45) 
+-- CODE:
+aresta = 5
+area = 3/2(3)**2
+
+print(round(area=3/2*(3)**2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2(3)**2
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:21:53) 
+-- CODE:
+aresta = 5
+area = 3/2(3)**2
+
+print(round(area=3/2*3**2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2(3)**2
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:22:00) 
+-- CODE:
+aresta = 5
+area = 3/2(3)**2
+
+print(round(area=3/2*3**2),2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2(3)**2
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:22:08) 
+-- CODE:
+aresta = 5
+area = 3/2(3)**2
+
+print(round(area=3/2*3**2),4)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2(3)**2
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:22:15) 
+-- CODE:
+aresta = 5
+area = 3/2(3)**2
+
+print(round(3/2*3**2),4)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2(3)**2
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:22:22) 
+-- CODE:
+aresta = 5
+area = 3/2(3)**2
+
+print(round(3/?2*3**2),4)
+-- ERROR:
+File "XXXX", line 4
+    print(round(3/?2*3**2),4)
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:22:27) 
+-- CODE:
+aresta = 5
+area = 3/2(3)**2
+
+print(round(3//2*3**2),4)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2(3)**2
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:23:22) 
+-- CODE:
+aresta = 5
+area = 3/2(3)**2
+
+print(round(3//2*(3*5)**2),4)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2(3)**2
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:23:36) 
+-- CODE:
+aresta = 5
+area = 3/2(3)**2
+
+print(round(3/2*(3*5)**2),4)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2(3)**2
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:23:50) 
+-- CODE:
+aresta = 5
+area = 
+
+print(round(3/2*(3*5)**2),4)
+-- ERROR:
+File "XXXX", line 2
+    area = 
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:24:02) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*5)**2
+
+print(round(3/2*(3*5)**2),4)
+-- OUTPUT:
+338 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:24:06) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*5)**2
+
+print(round(3/2*(3*5)**2),4)
+-- EXECUTION TIME:
+0.161957
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+338 4
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:24:08) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*5)**2
+
+print(round(3/2*(3*5)**2),4)
+-- OUTPUT:
+338 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:24:40) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*5)**2
+
+print(round(3/2*(3*5)**2),4)
+-- OUTPUT:
+338 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:24:41) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*5)**2
+
+print(round(3/2*(3*5)**2),4)
+-- EXECUTION TIME:
+0.169457
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+338 4
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:24:41) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*5)**2
+
+print(round(3/2*(3*5)**2),4)
+-- OUTPUT:
+338 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:24:52) 
+-- CODE:
+aresta = 5
+area = 3//2*(3*5)**2
+
+print(round(3//2*(3*5)**2),4)
+-- OUTPUT:
+225 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:24:55) 
+-- CODE:
+aresta = 5
+area = 3//2*(3*5)**2
+
+print(round(3//2*(3*5)**2),4)
+-- EXECUTION TIME:
+0.233059
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+225 4
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:25:19) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*5)**2
+
+print(round(3/2*(3*5)**2)4)
+-- ERROR:
+File "XXXX", line 4
+    print(round(3/2*(3*5)**2)4)
+                             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:25:21) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*5)**2
+
+print(round(3/2*(3*5)**2)4)
+-- EXECUTION TIME:
+0.127683
+-- ERROR:
+  File "/home/codebench/codes/1577/1332/main.py", line 4
+    print(round(3/2*(3*5)**2)4)
+                             ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:27:31) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*5)**2
+
+print(round(3/2*(3*5)**2.0),4)
+-- OUTPUT:
+338 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:28:03) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*5)**2
+
+print(round(3/2*(3*5)**2),4)
+-- OUTPUT:
+338 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:28:04) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*5)**2
+
+print(round(3/2*(3*5)**2),4)
+-- OUTPUT:
+338 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:28:11) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*5)**2
+
+print(round(3/2*(3*5)**2), 4)
+-- OUTPUT:
+338 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:29:35) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*5)**2
+
+print(round(3/2*(3*5)**2), 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(3/2*(3*5)**2), 4))
+                                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:30:11) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*5)**2
+
+print(round(3/2*(3*5)**2), 4)
+-- OUTPUT:
+338 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:30:50) 
+-- CODE:
+
+print(round(3/2*(3*5)**2), 4)
+-- OUTPUT:
+338 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:30:59) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*5)**2
+
+print(round(3/2*(3*5)**2), 4)
+-- OUTPUT:
+338 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:32:29) 
+-- CODE:
+aresta = 6
+area = 3/2*(3*6)**2
+
+print(round(3/2*(3*6)**2), 4)
+-- OUTPUT:
+486 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:32:51) 
+-- CODE:
+aresta = 6*5
+area = 3/2*(3*6*5)**2
+
+print(round(3/2*(3*6*5)**2), 4)
+-- OUTPUT:
+12150 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:32:53) 
+-- CODE:
+aresta = 6*5
+area = 3/2*(3*6*5)**2
+
+print(round(3/2*(3*6*5)**2), 4)
+-- EXECUTION TIME:
+0.196303
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12150 4
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:32:54) 
+-- CODE:
+aresta = 6*5
+area = 3/2*(3*6*5)**2
+
+print(round(3/2*(3*6*5)**2), 4)
+-- OUTPUT:
+12150 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:33:01) 
+-- CODE:
+aresta = 6*5
+area = 3/2*(3*6*5)**2
+
+print(round(3/2*(3*6*5)**2),4)
+-- OUTPUT:
+12150 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:33:08) 
+-- CODE:
+aresta = 6*5
+area = 3/2*(3*6*5)**2
+
+print(round(3/2*(3*6*5)**2,4))
+-- OUTPUT:
+12150.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:34:10) 
+-- CODE:
+aresta = 6*5
+area = 3/2*(3*6*5)**2
+
+print(round(3/2*(3*0.5)**2,4))
+-- OUTPUT:
+3.375
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:34:22) 
+-- CODE:
+aresta = 6*5
+area = 3/2*(3*6*5)**2
+
+print(round(3/2*(3*0.5*6)**2,4))
+-- OUTPUT:
+121.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:34:38) 
+-- CODE:
+print(round(3/2*(3*0.5*)**2,4))
+-- EXECUTION TIME:
+0.126785
+-- ERROR:
+  File "/home/codebench/codes/1577/1332/main.py", line 1
+    print(round(3/2*(3*0.5*)**2,4))
+                           ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:34:38) 
+-- CODE:
+print(round(3/2*(3*0.5*)**2,4))
+-- ERROR:
+File "XXXX", line 1
+    print(round(3/2*(3*0.5*)**2,4))
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:34:41) 
+-- CODE:
+print(round(3/2*(3*0.5*)**2, 4))
+-- ERROR:
+File "XXXX", line 1
+    print(round(3/2*(3*0.5*)**2, 4))
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:34:45) 
+-- CODE:
+print(round(3/2*(3*0.5*)**2,4))
+-- ERROR:
+File "XXXX", line 1
+    print(round(3/2*(3*0.5*)**2,4))
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:34:50) 
+-- CODE:
+print(round(3/2*(3*0.5*)**2,4)
+-- ERROR:
+File "XXXX", line 1
+    print(round(3/2*(3*0.5*)**2,4)
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:34:57) 
+-- CODE:
+print(round(3/2*(3*0.5)**2,4))
+-- OUTPUT:
+3.375
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:35:00) 
+-- CODE:
+print(round(3/2*(3*0.5)**2,4))
+-- EXECUTION TIME:
+0.148278
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+3.375
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:35:01) 
+-- CODE:
+print(round(3/2*(3*0.5)**2,4))
+-- OUTPUT:
+3.375
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:35:20) 
+-- CODE:
+print(round(3/2*(3*6)**20.5,4))
+-- OUTPUT:
+8.112927849103442e+25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:35:32) 
+-- CODE:
+print(round(3/2*(3*6)**2.5,4))
+-- OUTPUT:
+2061.9234
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:35:33) 
+-- CODE:
+print(round(3/2*(3*6)**2.5,4))
+-- EXECUTION TIME:
+0.165188
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+2061.9234
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:35:34) 
+-- CODE:
+print(round(3/2*(3*6)**2.5,4))
+-- OUTPUT:
+2061.9234
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:35:49) 
+-- CODE:
+print(round(3/2*(3*6)**2.5),4)
+-- OUTPUT:
+2062 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:35:58) 
+-- CODE:
+print(round(3/2*(3*6)**2.5, 4))
+-- OUTPUT:
+2061.9234
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:36:07) 
+-- CODE:
+print(round(3/2*(3*6)**0.5, 4))
+-- OUTPUT:
+6.364
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:36:09) 
+-- CODE:
+print(round(3/2*(3*6)**0.5, 4))
+-- EXECUTION TIME:
+0.203965
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+6.364
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:36:10) 
+-- CODE:
+print(round(3/2*(3*6)**0.5, 4))
+-- OUTPUT:
+6.364
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:36:11) 
+-- CODE:
+print(round(3/2*(3*6)**0.5, 4))
+-- EXECUTION TIME:
+0.179829
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+6.364
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:36:12) 
+-- CODE:
+print(round(3/2*(3*6)**0.5, 4))
+-- OUTPUT:
+6.364
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:36:37) 
+-- CODE:
+print(round(3/2*(3*2)**0.5, 4))
+-- OUTPUT:
+3.6742
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:36:39) 
+-- CODE:
+print(round(3/2*(3*2)**0.5, 4))
+-- EXECUTION TIME:
+0.179389
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+3.6742
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:36:39) 
+-- CODE:
+print(round(3/2*(3*2)**0.5, 4))
+-- OUTPUT:
+3.6742
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:36:42) 
+-- CODE:
+print(round(3/2*(3*)**0.5, 4))
+-- EXECUTION TIME:
+0.161358
+-- ERROR:
+  File "/home/codebench/codes/1577/1332/main.py", line 1
+    print(round(3/2*(3*)**0.5, 4))
+                       ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:36:43) 
+-- CODE:
+print(round(3/2*(3*)**0.5, 4))
+-- ERROR:
+File "XXXX", line 1
+    print(round(3/2*(3*)**0.5, 4))
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:37:06) 
+-- CODE:
+print(round(3/2*(3*5)**0.5, 4))
+-- OUTPUT:
+5.8095
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:37:07) 
+-- CODE:
+print(round(3/2*(3*5)**0.5, 4))
+-- EXECUTION TIME:
+0.133496
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+5.8095
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:37:08) 
+-- CODE:
+print(round(3/2*(3*5)**0.5, 4))
+-- OUTPUT:
+5.8095
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:37:21) 
+-- CODE:
+print(round(3/2*(3*6*5)**0.5, 4))
+-- OUTPUT:
+14.2302
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:37:22) 
+-- CODE:
+print(round(3/2*(3*6*5)**0.5, 4))
+-- EXECUTION TIME:
+0.130383
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+14.2302
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:37:23) 
+-- CODE:
+print(round(3/2*(3*6*5)**0.5, 4))
+-- OUTPUT:
+14.2302
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:37:45) 
+-- CODE:
+print(round(3/2*(3*6)**0.5, 4))
+-- OUTPUT:
+6.364
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:37:46) 
+-- CODE:
+print(round(3/2*(3*6)**0.5, 4))
+-- EXECUTION TIME:
+0.202659
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+6.364
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:37:47) 
+-- CODE:
+print(round(3/2*(3*6)**0.5, 4))
+-- OUTPUT:
+6.364
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:38:01) 
+-- CODE:
+print(round(3/2*(3*6)**0.5*2, 4))
+-- OUTPUT:
+12.7279
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:38:02) 
+-- CODE:
+print(round(3/2*(3*6)**0.5*2, 4))
+-- EXECUTION TIME:
+0.138494
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.7279
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:38:03) 
+-- CODE:
+print(round(3/2*(3*6)**0.5*2, 4))
+-- OUTPUT:
+12.7279
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:38:08) 
+-- CODE:
+print(round(3/2*(3*6)**0.5*2, 4))
+-- EXECUTION TIME:
+0.14639
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.7279
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:38:09) 
+-- CODE:
+print(round(3/2*(3*6)**0.5*2, 4))
+-- EXECUTION TIME:
+0.142356
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.7279
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:38:10) 
+-- CODE:
+print(round(3/2*(3*6)**0.5*2, 4))
+-- EXECUTION TIME:
+0.122951
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.7279
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:38:10) 
+-- CODE:
+print(round(3/2*(3*6)**0.5*2, 4))
+-- EXECUTION TIME:
+0.124749
+-- ERROR:
+sh: 1: cannot open /home/codebench/codes/1577/1332/cbtemp.txt: No such file
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:38:10) 
+-- CODE:
+print(round(3/2*(3*6)**0.5*2, 4))
+-- EXECUTION TIME:
+0.113059
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.7279
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:38:10) 
+-- CODE:
+print(round(3/2*(3*6)**0.5*2, 4))
+-- OUTPUT:
+12.7279
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:38:27) 
+-- CODE:
+print(round(3/2*(3*6*2)**0.5, 4))
+-- OUTPUT:
+9.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:38:28) 
+-- CODE:
+print(round(3/2*(3*6*2)**0.5, 4))
+-- EXECUTION TIME:
+0.226925
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+9.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:38:29) 
+-- CODE:
+print(round(3/2*(3*6*2)**0.5, 4))
+-- OUTPUT:
+9.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:38:45) 
+-- CODE:
+print(round(3/2*(3*6)*2)**0.5, 4))
+-- ERROR:
+File "XXXX", line 1
+    print(round(3/2*(3*6)*2)**0.5, 4))
+                                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:38:54) 
+-- CODE:
+print(round(3/2*(3*5)**0.5, 4))
+-- OUTPUT:
+5.8095
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:38:58) 
+-- CODE:
+print(round(3/2*(3*6)**0.5, 4))
+-- OUTPUT:
+6.364
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:39:22) 
+-- CODE:
+print(round(3/2*(3*6)**0.5, 4))
+-- OUTPUT:
+6.364
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 19:39:23) 
+-- CODE:
+print(round(3/2*(3*6)**0.5, 4))
+-- EXECUTION TIME:
+0.190092
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+6.364
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 19:39:23) 
+-- CODE:
+print(round(3/2*(3*6)**0.5, 4))
+-- OUTPUT:
+6.364
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:04:22) 
+-- CODE:
+print(round(3/2*(3*6)**0.5, 4))
+-- OUTPUT:
+6.364
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:04:26) 
+-- CODE:
+print(round(3/2*(3*6)**0.5, 4))
+-- OUTPUT:
+6.364
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:04:29) 
+-- CODE:
+print(round(3/2*(3*6)**0.5, 4))
+-- EXECUTION TIME:
+0.184069
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+6.364
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:04:46) 
+-- CODE:
+print(round(3/2*(3)*0.5, 4))
+-- OUTPUT:
+2.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:04:50) 
+-- CODE:
+print(round(3/2*(3)*0.5, 4))
+-- EXECUTION TIME:
+0.157307
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+2.25
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:05:10) 
+-- CODE:
+print(round(3/2*(3)*0.5*5**2, 4))
+-- OUTPUT:
+56.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:05:11) 
+-- CODE:
+print(round(3/2*(3)*0.5*5**2, 4))
+-- EXECUTION TIME:
+0.188639
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+56.25
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-15 21:05:27) 
+-- CODE:
+print(round(3/2*(3)**0.5*5**2, 4))
+-- OUTPUT:
+64.9519
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-15 21:05:28) 
+-- CODE:
+print(round(3/2*(3)**0.5*5**2, 4))
+-- EXECUTION TIME:
+0.135392
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+64.9519
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

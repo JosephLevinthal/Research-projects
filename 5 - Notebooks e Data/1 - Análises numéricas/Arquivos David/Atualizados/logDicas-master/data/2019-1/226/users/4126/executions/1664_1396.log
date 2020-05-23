@@ -1,0 +1,398 @@
+== TEST (2019-04-16 10:08:19) 
+-- CODE:
+consumo = float(input("comida:"))
+total = consumo + /10
+total s = consumo + /6
+if(consumo <= 300):
+	print(total)
+else:
+	print(total s)
+-- ERROR:
+File "XXXX", line 2
+    total = consumo + /10
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:10:47) 
+-- CODE:
+cosumo = float(input("conta:"))
+gorjeta1 = consumo + /10
+gorjeta2 = consumo + /6
+
+-- ERROR:
+File "XXXX", line 2
+    gorjeta1 = consumo + /10
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:26:53) 
+-- CODE:
+cosumo = float(input("comido:"))
+gorjeta1 = consumo + /10
+gorjeta2 = cosumo + /6
+
+if(consumo <= 300)
+	print("gorjeta1"):
+else:
+	print("gorjeta2")
+-- ERROR:
+File "XXXX", line 2
+    gorjeta1 = consumo + /10
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:27:03) 
+-- CODE:
+cosumo = float(input("comido:"))
+gorjeta1 = consumo + /10
+gorjeta2 = cosumo + /6
+
+if(consumo <= 300):
+	print("gorjeta1")
+else:
+	print("gorjeta2")
+-- ERROR:
+File "XXXX", line 2
+    gorjeta1 = consumo + /10
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:27:26) 
+-- CODE:
+cosumo = float(input("comido:"))
+gorjeta1 = consumo + consumo/10
+gorjeta2 = cosumo + consumo/6
+
+if(consumo <= 300):
+	print("gorjeta1")
+else:
+	print("gorjeta2")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    gorjeta1 = consumo + consumo/10
+NameError: name 'consumo' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:27:47) 
+-- CODE:
+cosumo = float(input("comido:"))
+gorjeta1 = consumo + consumo/10
+gorjeta2 = cosumo + consumo/6
+
+if(consumo <= 300):
+	print("gorjeta1")
+else:
+	print("gorjeta2")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    gorjeta1 = consumo + consumo/10
+NameError: name 'consumo' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:28:45) 
+-- CODE:
+cosumo = float(input("comido:"))
+gorjeta1 = consumo + consumo/10
+gorjeta2 = cosumo + consumo/6
+
+if(consumo <= 300):
+	print(round("gorjeta1",2))
+else:
+	print(round("gorjeta2",2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    gorjeta1 = consumo + consumo/10
+NameError: name 'consumo' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:30:35) 
+-- CODE:
+cosumo = float(input("comido:"))
+total1 = consumo + consumo/10
+total2 = cosumo + consumo/0.6
+
+if(consumo <= 300):
+	print(round("total1",2))
+else:
+	print(round("total2",2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    total1 = consumo + consumo/10
+NameError: name 'consumo' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:31:11) 
+-- CODE:
+consumo = float(input("comido:"))
+total1 = consumo + consumo/10
+total2 = consumo + consumo/6
+
+if(consumo <= 300):
+	print(round("total1",2))
+else:
+	print(round("total2",2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print(round("total1",2))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:31:45) 
+-- CODE:
+consumo = float(input("comido:"))
+total1 = consumo + consumo/10
+total2 = consumo + consumo/6
+
+if(consumo <= 300):
+	print(round("total1"),2)
+else:
+	print(round("total2"),2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print(round("total1"),2)
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:32:44) 
+-- CODE:
+consumo = float(input("comido:"))
+total1 = consumo + consumo/10
+total2 = consumo + consumo/6
+
+if(consumo <= 300):
+	print(round("total1",2))
+else:
+	print(round("total2",2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print(round("total1",2))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:33:03) 
+-- CODE:
+consumo = float(input("comido:"))
+total1 = consumo + consumo/10
+totalb = consumo + consumo/6
+
+if(consumo <= 300):
+	print(round("totala",2))
+else:
+	print(round("totalb",2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print(round("totala",2))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:33:15) 
+-- CODE:
+consumo = float(input("comido:"))
+totala = consumo + consumo/10
+totalb = consumo + consumo/6
+
+if(consumo <= 300):
+	print(round("totala",2))
+else:
+	print(round("totalb",2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print(round("totala",2))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:36:29) 
+-- CODE:
+consumo = float(input("comido:"))
+totala = consumo + consumo/10
+totalb = consumo + consumo/6
+
+if(consumo <= 300):
+	print(round("totala",2))
+else:
+	print(round("totalb",2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print(round("totala",2))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:37:20) 
+-- CODE:
+consumo = float(input("comido:"))
+total1 = consumo + consumo/10
+total2 = consumo + consumo/6
+
+if(consumo <= 300):
+	print(round("total1",2))
+else:
+	print(round("total2",2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print(round("total1",2))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:37:34) 
+-- CODE:
+consumo = float(input("comido:"))
+total1 = consumo + consumo/10
+total2 = consumo + consumo/6
+
+if(consumo <= 300):
+	print(round(total1,2))
+else:
+	print(round(total2,2))
+-- OUTPUT:
+246.95
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:37:41) 
+-- CODE:
+consumo = float(input("comido:"))
+total1 = consumo + consumo/10
+total2 = consumo + consumo/6
+
+if(consumo <= 300):
+	print(round(total1,2))
+else:
+	print(round(total2,2))
+-- EXECUTION TIME:
+0.15388
+-- TEST CASE 1:
+---- input:
+224.5
+---- correct output:
+246.95
+---- user output:
+246.95
+-- TEST CASE 2:
+---- input:
+365.15
+---- correct output:
+387.06
+---- user output:
+426.01
+-- TEST CASE 3:
+---- input:
+500
+---- correct output:
+530.0
+---- user output:
+583.33
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:37:50) 
+-- CODE:
+consumo = float(input("comido:"))
+total1 = consumo + consumo/10
+total2 = consumo + consumo/6
+
+if(consumo <= 300):
+	print(round(total1,2))
+else:
+	print(round(total2,2))
+-- OUTPUT:
+246.95
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:38:21) 
+-- CODE:
+consumo = float(input("comido:"))
+total1 = consumo + consumo/10
+total2 = consumo + consumo/6
+
+if(consumo <= 500):
+	print(round(total1,2))
+else:
+	print(round(total2,2))
+-- OUTPUT:
+246.95
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:38:27) 
+-- CODE:
+consumo = float(input("comido:"))
+total1 = consumo + consumo/10
+total2 = consumo + consumo/6
+
+if(consumo <= 300):
+	print(round(total1,2))
+else:
+	print(round(total2,2))
+-- OUTPUT:
+246.95
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:40:38) 
+-- CODE:
+consumo = float(input("comido:"))
+total1 = consumo + consumo/10
+total2 = consumo + consumo/6
+
+if(consumo <= 300):
+	print(round(total1,2))
+else:
+	print(round(total2,2))
+-- OUTPUT:
+246.95
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:41:28) 
+-- CODE:
+consumo = float(input("comido:"))
+total1 = consumo + consumo/10
+total2 = consumo + consumo/6
+
+if(consumo <= 300):
+	print(round(total1,2))
+else:
+	print(round(total2,2))
+-- OUTPUT:
+246.95
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:42:37) 
+-- CODE:
+consumo = float(input("comido:"))
+total1 = consumo + 10/100 * consumo
+total2 = consumo + 6/100 * consumo
+
+if(consumo <= 300):
+	print(round(total1,2))
+else:
+	print(round(total2,2))
+-- OUTPUT:
+246.95
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:42:49) 
+-- CODE:
+consumo = float(input("comido:"))
+total1 = consumo + 10/100 * consumo
+total2 = consumo + 6/100 * consumo
+
+if(consumo <= 300):
+	print(round(total1,2))
+else:
+	print(round(total2,2))
+-- EXECUTION TIME:
+0.204016
+-- TEST CASE 1:
+---- input:
+224.5
+---- correct output:
+246.95
+---- user output:
+246.95
+-- TEST CASE 2:
+---- input:
+365.15
+---- correct output:
+387.06
+---- user output:
+387.06
+-- TEST CASE 3:
+---- input:
+500
+---- correct output:
+530.0
+---- user output:
+530.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,61 @@
+== TEST (2019-05-27 23:19:26) 
+-- CODE:
+from numpy import*
+v1=array(eval(input()))
+v2=array(eval(input()))
+soma=0
+i=0
+while(i<size(v1)):
+	calc=(v1[i]-v2[i])**2
+	soma=soma+calc
+	i=i+1
+soma=(soma)**0.5
+print(round(soma,4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-27 23:19:53) 
+-- CODE:
+from numpy import*
+v1=array(eval(input()))
+v2=array(eval(input()))
+soma=0
+i=0
+while(i<size(v1)):
+	calc=(v1[i]-v2[i])**2
+	soma=soma+calc
+	i=i+1
+soma=(soma)**0.5
+print(round(soma,4))
+-- EXECUTION TIME:
+0.472451
+-- TEST CASE 1:
+---- input:
+[12,8,24]
+[1,2,3]
+---- correct output:
+24.454
+---- user output:
+24.454
+-- TEST CASE 2:
+---- input:
+[5,8,3,9,10]
+[1,5,6,4,12]
+---- correct output:
+7.9373
+---- user output:
+7.9373
+-- TEST CASE 3:
+---- input:
+[78,95,62,77]
+[34,12,56,78]
+---- correct output:
+94.1382
+---- user output:
+94.1382
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

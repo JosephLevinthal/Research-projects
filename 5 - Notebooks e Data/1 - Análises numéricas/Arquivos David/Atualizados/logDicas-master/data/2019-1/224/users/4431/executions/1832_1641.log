@@ -1,0 +1,214 @@
+== TEST (2019-06-13 18:02:46) 
+-- CODE:
+from numpy import*
+x=array(eval(input("Digite a quantidade de alunos : ")))
+h=0
+for i in x:
+	if(i%3==0):
+		h=h+1
+m=zeros(h,dtype=int)
+y=0
+print(h)	
+for i in x:
+	if(i%3==0):
+		  m[y]=y
+			
+			
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 18:03:33) 
+-- CODE:
+from numpy import*
+x=array(eval(input("Digite a quantidade de alunos : ")))
+h=0
+for i in x:
+	if(i%3==0):
+		h=h+1
+m=zeros(h,dtype=int)
+y=0
+print(h)	
+for i in x:
+	if(i%3==0):
+		  m[y]=x[i]
+			y=y+1
+print(m)			
+		
+			
+			
+-- ERROR:
+File "XXXX", line 13
+    y=y+1
+        ^
+TabError: inconsistent use of tabs and spaces in indentation
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 18:03:45) 
+-- CODE:
+from numpy import*
+x=array(eval(input("Digite a quantidade de alunos : ")))
+h=0
+for i in x:
+	if(i%3==0):
+		h=h+1
+m=zeros(h,dtype=int)
+y=0
+print(h)	
+for i in x:
+	if(i%3==0):
+		m[y]=x[i]
+		y=y+1
+print(m)			
+		
+			
+			
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 18:04:40) 
+-- CODE:
+from numpy import*
+x=array(eval(input("Digite a quantidade de alunos : ")))
+h=0
+for i in x:
+	if(i%3==0):
+		h=h+1
+m=zeros(h,dtype=int)
+y=0
+print(h)	
+for i in x:
+	h=0
+	if(i%3==0):
+		m[y]=x[h]
+		y=y+1
+		h=h+1
+	else:
+		h=h+1
+print(m)			
+		
+			
+			
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 18:05:10) 
+-- CODE:
+from numpy import*
+x=array(eval(input("Digite a quantidade de alunos : ")))
+h=0
+for i in x:
+	if(i%3==0):
+		h=h+1
+m=zeros(h,dtype=int)
+y=0
+print(h)
+h=0
+for i in x:
+	if(i%3==0):
+		m[y]=x[h]
+		y=y+1
+		h=h+1
+	else:
+		h=h+1
+print(m)			
+		
+			
+			
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 18:05:27) 
+-- CODE:
+from numpy import*
+x=array(eval(input("Digite a quantidade de alunos : ")))
+h=0
+for i in x:
+	if(i%3==0):
+		h=h+1
+m=zeros(h,dtype=int)
+y=0
+print(h)
+h=0
+for i in x:
+	if(i%3==0):
+		m[y]=h
+		y=y+1
+		h=h+1
+	else:
+		h=h+1
+print(m)			
+		
+			
+			
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 18:05:42) 
+-- CODE:
+from numpy import*
+x=array(eval(input("Digite a quantidade de alunos : ")))
+h=0
+for i in x:
+	if(i%3==0):
+		h=h+1
+m=zeros(h,dtype=int)
+y=0
+print(h)
+h=0
+for i in x:
+	if(i%3==0):
+		m[y]=h
+		y=y+1
+		h=h+1
+	else:
+		h=h+1
+print(m)			
+		
+			
+			
+-- EXECUTION TIME:
+0.870397
+-- TEST CASE 1:
+---- input:
+[10,20,31,1,13,15,20,33,36,63,25,10,2]
+---- correct output:
+4
+[5 7 8 9]
+---- user output:
+4
+[5 7 8 9]
+-- TEST CASE 2:
+---- input:
+[15,20,30,15,36,63,25,10,2]
+---- correct output:
+5
+[0 2 3 4 5]
+---- user output:
+5
+[0 2 3 4 5]
+-- TEST CASE 3:
+---- input:
+[10,20,31,15,36,63,26,10,2]
+---- correct output:
+3
+[3 4 5]
+---- user output:
+3
+[3 4 5]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,459 @@
+== TEST (2019-04-18 17:37:34) 
+-- CODE:
+p1a = input()
+p1b = input()
+p2a = input()
+p2b = input()
+p3a = input()
+p3b = input()
+p1=p1a/p1b
+p2=p2a/p2b
+p3=p3a/p3b
+vet = [p1,p2,p3]
+for i in xrange[0:2]:
+	print(i)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    p1=p1a/p1b
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 17:38:07) 
+-- CODE:
+p1a = input()
+p1b = input()
+p2a = input()
+p2b = input()
+p3a = input()
+p3b = input()
+p1=(float)p1a/p1b
+p2=(float)p2a/p2b
+p3=(float)p3a/p3b
+vet = [p1,p2,p3]
+for i in xrange[0:2]:
+	print(i)
+-- ERROR:
+File "XXXX", line 7
+    p1=(float)p1a/p1b
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 17:38:54) 
+-- CODE:
+p1a = float(input())
+p1b = float(input())
+p2a = float(input())
+p2b = float(input())
+p3a = float(input())
+p3b = float(input())
+p1=p1a/p1b
+p2=p2a/p2b
+p3=p3a/p3b
+vet = [p1,p2,p3]
+for i in xrange[0:2]:
+	print(i)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 11, in <module>
+    for i in xrange[0:2]:
+NameError: name 'xrange' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 17:39:06) 
+-- CODE:
+p1a = float(input())
+p1b = float(input())
+p2a = float(input())
+p2b = float(input())
+p3a = float(input())
+p3b = float(input())
+p1=p1a/p1b
+p2=p2a/p2b
+p3=p3a/p3b
+vet = [p1,p2,p3]
+for i in range[0:2]:
+	print(i)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 11, in <module>
+    for i in range[0:2]:
+TypeError: 'type' object is not subscriptable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 17:39:18) 
+-- CODE:
+p1a = float(input())
+p1b = float(input())
+p2a = float(input())
+p2b = float(input())
+p3a = float(input())
+p3b = float(input())
+p1=p1a/p1b
+p2=p2a/p2b
+p3=p3a/p3b
+vet = [p1,p2,p3]
+for i in range[0,2]:
+	print(i)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 11, in <module>
+    for i in range[0,2]:
+TypeError: 'type' object is not subscriptable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 17:40:28) 
+-- CODE:
+p1a = float(input())
+p1b = float(input())
+p2a = float(input())
+p2b = float(input())
+p3a = float(input())
+p3b = float(input())
+p1=p1a/p1b
+p2=p2a/p2b
+p3=p3a/p3b
+vet = [p1,p2,p3]
+for i in range(3):
+	print(i)
+-- OUTPUT:
+0
+1
+2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 17:41:53) 
+-- CODE:
+p1a = float(input())
+p1b = float(input())
+p2a = float(input())
+p2b = float(input())
+p3a = float(input())
+p3b = float(input())
+p1=p1a/p1b
+p2=p2a/p2b
+p3=p3a/p3b
+vet = [p1,p2,p3]
+maior = vet[0]
+for i in range(3):
+	if(maior>vet[i]):
+		maior=vet[i]
+print(maior)
+-- OUTPUT:
+1.0606060606060606
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 17:43:42) 
+-- CODE:
+p1a = float(input())
+p1b = float(input())
+p2a = float(input())
+p2b = float(input())
+p3a = float(input())
+p3b = float(input())
+p1=p1a/p1b
+p2=p2a/p2b
+p3=p3a/p3b
+vet = [p1,p2,p3]
+maior = vet[0]
+for i in range(3):
+	if(maior>vet[i]):
+		maior=vet[i]
+vet.remove(maior)
+print(vet)
+-- OUTPUT:
+[1.0634920634920635, 1.75]
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 17:44:10) 
+-- CODE:
+p1a = float(input())
+p1b = float(input())
+p2a = float(input())
+p2b = float(input())
+p3a = float(input())
+p3b = float(input())
+p1=p1a/p1b
+p2=p2a/p2b
+p3=p3a/p3b
+vet = [p1,p2,p3]
+maior = vet[0]
+for i in range(3):
+	if(maior>vet[i]):
+		maior=vet[i]
+#vet.remove(maior)
+print(vet)
+-- OUTPUT:
+[1.0634920634920635, 1.75, 1.0606060606060606]
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 17:44:44) 
+-- CODE:
+p1a = float(input())
+p1b = float(input())
+p2a = float(input())
+p2b = float(input())
+p3a = float(input())
+p3b = float(input())
+p1=p1a/p1b
+p2=p2a/p2b
+p3=p3a/p3b
+vet = [p1,p2,p3]
+maior = vet[0]
+for i in range(1:3):
+	if(maior>vet[i]):
+		maior=vet[i]
+#vet.remove(maior)
+print(vet)
+-- ERROR:
+File "XXXX", line 12
+    for i in range(1:3):
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 17:44:55) 
+-- CODE:
+p1a = float(input())
+p1b = float(input())
+p2a = float(input())
+p2b = float(input())
+p3a = float(input())
+p3b = float(input())
+p1=p1a/p1b
+p2=p2a/p2b
+p3=p3a/p3b
+vet = [p1,p2,p3]
+maior = vet[0]
+for i in range(1,3):
+	if(maior>vet[i]):
+		maior=vet[i]
+#vet.remove(maior)
+print(vet)
+-- OUTPUT:
+[1.0634920634920635, 1.75, 1.0606060606060606]
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 17:46:33) 
+-- CODE:
+p1a = float(input())
+p1b = float(input())
+p2a = float(input())
+p2b = float(input())
+p3a = float(input())
+p3b = float(input())
+p1=p1a/p1b
+p2=p2a/p2b
+p3=p3a/p3b
+vet = [p1,p2,p3]
+maior = -99999
+for i in range(1,3):
+	if(maior<vet[i]):
+		maior=vet[i]
+vet.remove(maior)
+print(vet)
+-- OUTPUT:
+[1.0634920634920635, 1.0606060606060606]
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 17:49:19) 
+-- CODE:
+p1a = float(input())
+p1b = float(input())
+p2a = float(input())
+p2b = float(input())
+p3a = float(input())
+p3b = float(input())
+p1=p1a/p1b
+p2=p2a/p2b
+p3=p3a/p3b
+vet = [p1,p2,p3]
+maior = -99999
+for i in range(1,3):
+	if(maior<vet[i]):
+		maior=vet[i]
+vet.remove(maior)
+print(vet[2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 16, in <module>
+    print(vet[2])
+IndexError: list index out of range
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 17:53:49) 
+-- CODE:
+p1a = float(input())
+p1b = float(input())
+p2a = float(input())
+p2b = float(input())
+p3a = float(input())
+p3b = float(input())
+p1=p1a/p1b
+p2=p2a/p2b
+p3=p3a/p3b
+indexMen=0
+vet = [p1,p2,p3]
+maior = -99999
+menor = 99999
+for i in range(1,3):
+	if(maior<vet[i]):
+		maior=vet[i]
+		index=i
+	if(vet[i]<menor):
+		menor = vet[i]
+		indexMai=i
+		
+print("maior",maior)
+print("menor",menor)
+-- OUTPUT:
+maior 1.75
+menor 1.0606060606060606
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 17:56:31) 
+-- CODE:
+p1a = float(input())
+p1b = float(input())
+p2a = float(input())
+p2b = float(input())
+p3a = float(input())
+p3b = float(input())
+p1=p1a/p1b
+p2=p2a/p2b
+p3=p3a/p3b
+indexMen=0
+vet = [p1,p2,p3]
+maior = -99999
+menor = 99999
+for i in range(1,3):
+	if(maior<vet[i]):
+		maior=vet[i]
+		index=i
+	if(vet[i]<menor):
+		menor = vet[i]
+		indexMai=i
+for i in vet:
+	if(i!=maior and i!=menor):
+		mid = i
+		
+print("maior",maior)
+print("mid",mid)
+print("menor",menor)
+-- OUTPUT:
+maior 1.75
+mid 1.0634920634920635
+menor 1.0606060606060606
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 18:01:16) 
+-- CODE:
+p1a = float(input())
+p1b = float(input())
+p2a = float(input())
+p2b = float(input())
+p3a = float(input())
+p3b = float(input())
+p1=p1a/p1b
+p2=p2a/p2b
+p3=p3a/p3b
+indexMen=0
+vet = [p1,p2,p3]
+maior = -99999
+menor = 99999
+for i in range(1,3):
+	if(maior<vet[i]):
+		maior=vet[i]
+		index=i
+	if(vet[i]<menor):
+		menor = vet[i]
+		indexMai=i
+for i in vet:
+	if(i!=maior and i!=menor):
+		mid = i
+if(vet[0]==maior):
+	if(vet[1]>vet[2]):
+		print("2 e 3")
+	elif(vet[2]>vet[1]):
+		print("3 e 2")
+if(vet[1]==maior):
+	if(vet[0]>vet[2]):
+		print("1 e 3")
+	elif(vet[2]>vet[0]):
+		print("3 e 1")
+if(vet[2]==maior):
+	if(vet[0]>vet[1]):
+		print("1 e 2")
+	elif(vet[1]>vet[0]):
+		print("2 e 1")
+-- OUTPUT:
+1 e 3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-18 18:02:02) 
+-- CODE:
+p1a = float(input())
+p1b = float(input())
+p2a = float(input())
+p2b = float(input())
+p3a = float(input())
+p3b = float(input())
+p1=p1a/p1b
+p2=p2a/p2b
+p3=p3a/p3b
+indexMen=0
+vet = [p1,p2,p3]
+maior = -99999
+menor = 99999
+for i in range(1,3):
+	if(maior<vet[i]):
+		maior=vet[i]
+		index=i
+	if(vet[i]<menor):
+		menor = vet[i]
+		indexMai=i
+for i in vet:
+	if(i!=maior and i!=menor):
+		mid = i
+if(vet[0]==maior):
+	if(vet[1]>vet[2]):
+		print("2 e 3")
+	elif(vet[2]>vet[1]):
+		print("3 e 2")
+if(vet[1]==maior):
+	if(vet[0]>vet[2]):
+		print("1 e 3")
+	elif(vet[2]>vet[0]):
+		print("3 e 1")
+if(vet[2]==maior):
+	if(vet[0]>vet[1]):
+		print("1 e 2")
+	elif(vet[1]>vet[0]):
+		print("2 e 1")
+-- EXECUTION TIME:
+0.135507
+-- TEST CASE 1:
+---- input:
+6.7
+6.3
+7.0
+4.0
+7.0
+6.6
+---- correct output:
+1 e 3
+---- user output:
+1 e 3
+-- TEST CASE 2:
+---- input:
+1.0
+2.0
+3.0
+6.0
+8.0
+10.0
+---- correct output:
+1 e 2
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+20.0
+30.0
+5.0
+10.0
+5.0
+10.0
+---- correct output:
+2 e 3
+---- user output:
+1 e 3
+1 e 2
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

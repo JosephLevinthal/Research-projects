@@ -1,0 +1,159 @@
+== SUBMITION (2019-05-11 21:03:07) 
+-- CODE:
+QItam = int(input("Quantidade inicial de tambaquis no tanque:"))
+cresTam = int(input("Percentual de crescimento anual da quantidade de tambaquis no tamque: "))/100
+QTamVen = int(input("Quantidade de tambaquis retirados todos os anos para venda: "))
+
+anos = 0 
+QT = QItam
+while(QT  > 0 and QT < 12000):
+	QT = QT + (QT * cresTam)
+	QT = QT - QTamVen
+	anos = anos + 1
+	if(QT <= 0):
+		print("extincao".upper())
+	elif(QT >= 12000):
+		print("limite".upper())
+	print(anos)
+-- EXECUTION TIME:
+0.03126
+-- ERROR:
+Error response from daemon: Container 7750cf393d0a684d3f8b44b5b6e202cd99ea3a8d68a2a7b5a0612e96b04382e6 is not running
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 16:13:19) 
+-- CODE:
+QItam = int(input("Quantidade inicial de tambaquis no tanque:"))
+cresTam = int(input("Percentual de crescimento anual da quantidade de tambaquis no tamque: "))/100
+QTamVen = int(input("Quantidade de tambaquis retirados todos os anos para venda: "))
+
+anos = 0 
+QT = QItam
+while(QT  > 0 and QT < 12000):
+	QT = QT + (QT * cresTam)
+	QT = QT - QTamVen
+	anos = anos + 1
+	if(QT <= 0):
+		print("extincao".upper())
+	elif(QT >= 12000):
+		print("limite".upper())
+	print(anos)
+-- EXECUTION TIME:
+0.298905
+-- TEST CASE 1:
+---- input:
+1234
+6
+135
+---- correct output:
+EXTINCAO
+14
+---- user output:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+EXTINCAO
+14
+-- TEST CASE 2:
+---- input:
+579
+37
+26
+---- correct output:
+LIMITE
+11
+---- user output:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+LIMITE
+11
+-- TEST CASE 3:
+---- input:
+6789
+45
+2345
+---- correct output:
+LIMITE
+4
+---- user output:
+1
+2
+3
+LIMITE
+4
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 16:45:13) 
+-- CODE:
+QItam = int(input("Quantidade inicial de tambaquis no tanque:"))
+cresTam = int(input("Percentual de crescimento anual da quantidade de tambaquis no tamque: "))/100
+QTamVen = int(input("Quantidade de tambaquis retirados todos os anos para venda: "))
+
+anos = 0 
+QT = QItam
+while(QT  > 0 and QT < 12000):
+	QT = QT + (QT * cresTam)
+	QT = QT - QTamVen
+	anos = anos + 1
+	if(QT <= 0):
+		print("extincao".upper())
+	elif(QT >= 12000):
+		print("limite".upper())
+print(anos)
+-- EXECUTION TIME:
+0.151524
+-- TEST CASE 1:
+---- input:
+1234
+6
+135
+---- correct output:
+EXTINCAO
+14
+---- user output:
+EXTINCAO
+14
+-- TEST CASE 2:
+---- input:
+579
+37
+26
+---- correct output:
+LIMITE
+11
+---- user output:
+LIMITE
+11
+-- TEST CASE 3:
+---- input:
+6789
+45
+2345
+---- correct output:
+LIMITE
+4
+---- user output:
+LIMITE
+4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

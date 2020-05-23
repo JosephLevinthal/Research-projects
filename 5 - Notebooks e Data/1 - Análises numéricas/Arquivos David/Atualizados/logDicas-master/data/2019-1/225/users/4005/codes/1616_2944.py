@@ -1,0 +1,7 @@
+panquecas=float(input(":"))
+novos=(panquecas*125/1000)
+leite=(panquecas*22.5)
+farinha=(panquecas*13.75)
+print(novos)
+print(leite)
+print(farinha)

@@ -1,0 +1,45 @@
+== TEST (2019-06-11 19:40:30) 
+-- CODE:
+from numpy import*
+f= array(eval(input("vetor numero de faltas: ")))
+i=0
+s=0
+t=0
+q=0
+qi=0
+sx=0
+sb=0
+for v in f:
+	if f[i]== 2:
+		s= s + 1
+		i =i + 1
+	elif f[i]== 3:
+		t= t + 1
+		i = i + 1
+	elif f[i]==4:
+		q=q + 1
+		i = i + 1
+	elif f[i]==5:
+		qi= qi + 1
+		i = i + 1
+	elif f[i]==6:
+		sx= sx + 1
+		i = i + 1
+	elif f[1]==7:
+		sb= sb + 1
+		i = i + 1
+
+tf= zeros(6, dtype=int)
+tf[0]=(s*size(f))/100
+tf[1]=(t*size(f))/100
+tf[2]=(q*size(f))/100
+tf[3]=(qi*size(f))/100
+tf[4]=(sx*size(f))/100
+tf[5]=(sb*size(f))/100
+print(tf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

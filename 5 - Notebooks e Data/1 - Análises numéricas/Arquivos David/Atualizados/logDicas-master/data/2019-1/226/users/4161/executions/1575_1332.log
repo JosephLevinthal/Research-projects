@@ -1,0 +1,177 @@
+== TEST (2019-03-12 21:16:16) 
+-- CODE:
+aresta =
+area = 
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 1
+    aresta =
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 21:20:55) 
+-- CODE:
+aresta =
+area = 
+ 
+print(round(area, 4))
+print(3/2*3**0,5)
+-- ERROR:
+File "XXXX", line 1
+    aresta =
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 21:21:15) 
+-- CODE:
+aresta =
+area = 
+ 
+print(round(area, 4))
+print(3/2)*(3**0,5)
+-- ERROR:
+File "XXXX", line 1
+    aresta =
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 21:21:58) 
+-- CODE:
+aresta =
+area = 
+ 
+print(round(area, 4))
+print(3/2)
+-- ERROR:
+File "XXXX", line 1
+    aresta =
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 21:22:13) 
+-- CODE:
+aresta = print(3/2)
+area = 
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 2
+    area = 
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 21:22:48) 
+-- CODE:
+print(3/2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print(round(area, 4))
+NameError: name 'area' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 21:23:10) 
+-- CODE:
+print(3/2)
+ 
+
+-- OUTPUT:
+1.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 21:23:29) 
+-- CODE:
+print(3/2*3**0,5)
+ 
+
+-- OUTPUT:
+1.5 5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 21:24:02) 
+-- CODE:
+print(3/2)*(3**0,5)
+ 
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    print(3/2)*(3**0,5)
+TypeError: can't multiply sequence by non-int of type 'NoneType'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 21:24:13) 
+-- CODE:
+print(3/2*3**0,5)
+ 
+
+-- OUTPUT:
+1.5 5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 21:24:20) 
+-- CODE:
+print(3/2*3)
+ 
+
+-- OUTPUT:
+4.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 21:24:59) 
+-- CODE:
+print(3/2*(3**0.5)
+ 
+
+-- ERROR:
+File "XXXX", line 3
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 21:25:07) 
+-- CODE:
+print(3/2*3**0.5)
+ 
+
+-- OUTPUT:
+2.598076211353316
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 21:31:37) 
+-- CODE:
+print(3/2*3**0.5*5**2)
+ 
+
+-- OUTPUT:
+64.9519052838329
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 21:32:27) 
+-- CODE:
+print(round(3/2*3**0.5*5**2))
+ 
+
+-- OUTPUT:
+65
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 21:32:56) 
+-- CODE:
+print(round(3/2*3**0.5*5**2,4))
+ 
+
+-- OUTPUT:
+64.9519
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-12 21:33:05) 
+-- CODE:
+print(round(3/2*3**0.5*5**2,4))
+ 
+
+-- EXECUTION TIME:
+0.1671
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+64.9519
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

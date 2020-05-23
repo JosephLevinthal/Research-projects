@@ -1,0 +1,109 @@
+== TEST (2019-03-22 21:11:13) 
+-- CODE:
+n=int(input("numero de pessoas:"))
+
+pr=(1-((365/365-n)*(1/365**n))
+
+print(pr)
+-- ERROR:
+File "XXXX", line 5
+    print(pr)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 21:12:08) 
+-- CODE:
+n=int(input("numero de pessoas:"))
+
+pr=(1-((365/365-n)*(1/365**n)))
+
+print(pr)
+-- OUTPUT:
+1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:40:10) 
+-- CODE:
+n=int(input("numero de pessoas:"))
+from math import *
+pr=(1-((factorial(365)/factorial(365-n))*(1/365**n)))
+
+print(pr)
+-- OUTPUT:
+0.1670247888380645
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:41:06) 
+-- CODE:
+n=int(input("numero de pessoas:"))
+from math import *
+pr=(1-((factorial(365)/factorial(365-n))*(1/365**n)))
+a=pr*100
+print(a)
+-- OUTPUT:
+16.70247888380645
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-28 10:41:39) 
+-- CODE:
+n=int(input("numero de pessoas:"))
+from math import *
+pr=(1-((factorial(365)/factorial(365-n))*(1/365**n)))
+a=pr*100
+print(round(a,2))
+-- EXECUTION TIME:
+0.179442
+-- TEST CASE 1:
+---- input:
+12
+---- correct output:
+16.7
+---- user output:
+16.7
+-- TEST CASE 2:
+---- input:
+24
+---- correct output:
+53.83
+---- user output:
+53.83
+-- TEST CASE 3:
+---- input:
+99
+---- correct output:
+100.0
+---- user output:
+100.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-10 22:34:56) 
+-- CODE:
+n=int(input("numero de pessoas:"))
+from math import *
+pr=(1-((factorial(365)/factorial(365-n))*(1/365**n)))
+a=pr*100
+print(round(a,2))
+-- EXECUTION TIME:
+0.143512
+-- TEST CASE 1:
+---- input:
+12
+---- correct output:
+16.7
+---- user output:
+16.7
+-- TEST CASE 2:
+---- input:
+24
+---- correct output:
+53.83
+---- user output:
+53.83
+-- TEST CASE 3:
+---- input:
+99
+---- correct output:
+100.0
+---- user output:
+100.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

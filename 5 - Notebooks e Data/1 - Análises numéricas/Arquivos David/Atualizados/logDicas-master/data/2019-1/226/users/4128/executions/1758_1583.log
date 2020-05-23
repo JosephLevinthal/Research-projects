@@ -1,0 +1,263 @@
+== TEST (2019-05-28 13:07:20) 
+-- CODE:
+x = str(input("Mais de oito mil:"))
+
+a = x[0 : 3]
+b = x[3 : 6]
+c = x[6 : 9]
+
+print(a +,"."+b+,"." +c)
+-- ERROR:
+File "XXXX", line 7
+    print(a +,"."+b+,"." +c)
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 13:07:27) 
+-- CODE:
+x = str(input("Mais de oito mil:"))
+
+a = x[0 : 3]
+b = x[3 : 6]
+c = x[6 : 9]
+
+print(a +"."+b+"." +c)
+-- OUTPUT:
+123..
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 13:07:37) 
+-- CODE:
+x = str(input("Mais de oito mil:"))
+
+a = x[0 : 3]
+b = x[3 : 6]
+c = x[6 : 9]
+
+print(a +"."+b+"." +c)
+-- EXECUTION TIME:
+0.150473
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123..
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 13:51:16) 
+-- CODE:
+x = str(input("Mais de oito mil:"))
+
+a = x[0:3]
+b = x[3:6]
+c = x[6:9]
+
+print(a+"."+b+"."+c)
+-- OUTPUT:
+123..
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 13:54:36) 
+-- CODE:
+x = str(input("Mais de oito mil:"))
+
+a = x[0:3]
+b = x[3:6]
+c = x[6:9]
+z = x[-1:-4]
+print(a+"."+b+"."+c+"."+z)
+-- OUTPUT:
+123...
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 13:54:55) 
+-- CODE:
+x = str(input("Mais de oito mil:"))
+
+a = x[0:3]
+b = x[3:6]
+c = x[6:9]
+z = x[-1:-4]
+print(a+"."+b+"."+c+"."+z)
+-- EXECUTION TIME:
+0.215528
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123...
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789.
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321.
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 13:55:04) 
+-- CODE:
+x = str(input("Mais de oito mil:"))
+
+a = x[0:3]
+b = x[3:6]
+c = x[6:9]
+
+print(a+"."+b+"."+c)
+-- OUTPUT:
+123..
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 13:55:07) 
+-- CODE:
+x = str(input("Mais de oito mil:"))
+
+a = x[0:3]
+b = x[3:6]
+c = x[6:9]
+
+print(a+"."+b+"."+c)
+-- EXECUTION TIME:
+0.229625
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123..
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 12:49:33) 
+-- CODE:
+x = str(input("Mais de oito mil:"))
+
+n = ""
+i = 0 
+j = 3
+c = 0
+while(i != len(x)):
+	a = x[i:j]
+	n = n+a+' . '
+	i = i + 3
+	j = j + 3
+	c = c + 3
+print(x[:-1])
+-- OUTPUT:
+12
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 12:50:03) 
+-- CODE:
+x = str(input("Mais de oito mil:"))
+
+n = ""
+i = 0 
+j = 3
+c = 0
+while(i != len(x)):
+	a = x[i:j]
+	n = n+a+' . '
+	i = i + 3
+	j = j + 3
+	c = c + 3
+print(n[:-1])
+-- OUTPUT:
+123 .
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 12:50:14) 
+-- CODE:
+x = str(input("Mais de oito mil:"))
+
+n = ""
+i = 0 
+j = 3
+c = 0
+while(i != len(x)):
+	a = x[i:j]
+	n = n+a+'.'
+	i = i + 3
+	j = j + 3
+	c = c + 3
+print(n[:-1])
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 12:50:18) 
+-- CODE:
+x = str(input("Mais de oito mil:"))
+
+n = ""
+i = 0 
+j = 3
+c = 0
+while(i != len(x)):
+	a = x[i:j]
+	n = n+a+'.'
+	i = i + 3
+	j = j + 3
+	c = c + 3
+print(n[:-1])
+-- EXECUTION TIME:
+0.192849
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789.000.987.654.321
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

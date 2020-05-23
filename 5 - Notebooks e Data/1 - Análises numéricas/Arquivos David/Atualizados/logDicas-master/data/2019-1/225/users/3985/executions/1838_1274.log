@@ -1,0 +1,213 @@
+== TEST (2019-06-26 10:02:02) 
+-- CODE:
+from numpt import*-
+from numpy.linalg import*
+
+v= float(input())
+m= zeros((v,v), dtype=int)
+v=v-1
+k=0
+for i in range(n,-1,-1):
+	M[i][j] = i+1
+	M[j][i] = i+1
+print(M)
+-- ERROR:
+File "XXXX", line 1
+    from numpt import*-
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 10:02:21) 
+-- CODE:
+from numpt import*
+from numpy.linalg import*
+
+v= float(input())
+m= zeros((v,v), dtype=int)
+v=v-1
+k=0
+for i in range(n,-1,-1):
+	M[i][j] = i+1
+	M[j][i] = i+1
+print(M)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpt import*
+ModuleNotFoundError: No module named 'numpt'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 10:02:28) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v= float(input())
+m= zeros((v,v), dtype=int)
+v=v-1
+k=0
+for i in range(n,-1,-1):
+	M[i][j] = i+1
+	M[j][i] = i+1
+print(M)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 10:03:29) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v= float(input())
+m= zeros((v,v), dtype=int)
+v=v-1
+k=0
+for i in range(v,-1,-1):
+	m[i][j] = i+1
+	m[j][i] = i+1
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 10:03:39) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v= int(input())
+m= zeros((v,v), dtype=int)
+v=v-1
+k=0
+for i in range(v,-1,-1):
+	m[i][j] = i+1
+	m[j][i] = i+1
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 10:04:10) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v= int(input())
+m= zeros((v,v), dtype=int)
+v=v-1
+k=0
+for i in range(v,-1,-1):
+	for j in range(N,-1,-1):
+		m[i][j] = i+1
+		m[j][i] = i+1
+	print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 10:04:17) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v= int(input())
+m= zeros((v,v), dtype=int)
+v=v-1
+k=0
+for i in range(v,-1,-1):
+	for j in range(v,-1,-1):
+		m[i][j] = i+1
+		m[j][i] = i+1
+	print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 10:05:09) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v= int(input())
+m= zeros((v,v), dtype=int)
+v=v-1
+k=0
+for i in range(v,-1,-1):
+	for j in range(v,-1,-1):
+		m[i][j] = i+1
+		m[j][i] = i+1
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 10:07:34) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v= int(input())
+m= zeros((v,v), dtype=int)
+v=v-1
+k=0
+for i in range(v,-1,-1):
+	for j in range(v,-1,-1):
+		m[i][j] = i+1
+		m[j][i] = i+1
+print(m)
+-- EXECUTION TIME:
+1.28538
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

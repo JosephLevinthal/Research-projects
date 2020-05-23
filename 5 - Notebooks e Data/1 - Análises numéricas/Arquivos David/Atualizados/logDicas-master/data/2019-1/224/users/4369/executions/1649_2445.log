@@ -1,0 +1,1287 @@
+== TEST (2019-04-09 18:39:16) 
+-- CODE:
+t = input("Digite C pu F: ")
+vT = float(input("Digite o valor da temperatura: "))
+eqC = (5/9) * (F - 32)
+eqF = (5/9) * (C - 32)
+if(t == C):
+	print(eqC)
+else:
+	print(eqF)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    eqC = (5/9) * (F - 32)
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:41:08) 
+-- CODE:
+t = input("Digite C pu F: ")
+vT = float(input("Digite o valor da temperatura: "))
+eqC = (5/9) * (vT - 32)
+if(t == C):
+	print(eqC)
+else:
+	print(eqF)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if(t == C):
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:42:26) 
+-- CODE:
+t = input("Digite C pu F: ")
+vT = float(input("Digite o valor da temperatura: "))
+eqC = (5/9) * (vT - 32)
+if(t == C):
+	print(eqC)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if(t == C):
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:53:20) 
+-- CODE:
+t = input("Digite C pu F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = (5/9) * (vT - 32)
+F = ((160 + vT) * 9) / 5
+if(t == C):
+	print(round(C, 2))
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if(t == C):
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:54:16) 
+-- CODE:
+t = input("Digite C pu F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = (5/9) * (vT - 32)
+F = ((160 + vT) * 9) / 5
+if(t == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- OUTPUT:
+864.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:55:49) 
+-- CODE:
+t = input("Digite C pu F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = (5/9) * (F - 32)
+F = ((160 + C) * 9) / 5
+if(t == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    C = (5/9) * (F - 32)
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:52:47) 
+-- CODE:
+t = input("Digite C pu F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = (5/9) * (F - 32)
+F = ((160 + C) * 9) / 5
+if(t == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    C = (5/9) * (F - 32)
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:53:22) 
+-- CODE:
+t = input("Digite C pu F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = (5/9) * (t - 32)
+F = ((160 + t) * 9) / 5
+if(t == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    C = (5/9) * (t - 32)
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:59:39) 
+-- CODE:
+t = input("Digite C pu F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = (5/9) * (vT - 32)
+F = ((160 + vT) * 9) / 5
+if(t == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- OUTPUT:
+864.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:00:48) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = (5/9) * (vT - 32)
+F = ((160 + vT) * 9) / 5
+if(t.upper() == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- OUTPUT:
+864.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:00:57) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = (5/9) * (vT - 32)
+F = ((160 + vT) * 9) / 5
+if(t.upper() == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- OUTPUT:
+864.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:01:12) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = (5/9) * (vT - 32)
+F = ((160 + vT) * 9) / 5
+if(t.upper() == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- OUTPUT:
+864.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:02:04) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = (5/9) * (vT - 32)
+F = ((160 + vT) * 9) / 5
+if(t.upper() == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- OUTPUT:
+864.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:02:37) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = (5/9) * (vT - 32)
+F = ((160 + vT) * 9) / 5
+if(t.upper() == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- OUTPUT:
+864.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:04:53) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = (5/9) * (vT - 32)
+F = 
+if(t.upper() == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- ERROR:
+File "XXXX", line 4
+    F = 
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:05:00) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = (5/9) * (vT - 32)
+if(t.upper() == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    print(round(F, 2))
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:05:24) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = (5/9) * (vT - 32)
+F = 2 * 3
+if(t.upper() == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- OUTPUT:
+6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:07:24) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = 2 * 3
+if(t.upper() == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- OUTPUT:
+6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:07:35) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = 2 * 3
+if(t.upper() == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- OUTPUT:
+6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:08:14) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+print(C)
+
+#if(t.upper() == C):
+#	print(round(C, 2))
+#else:
+#	print(round(F, 2))
+
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:11:07) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+print(F)
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:12:04) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == F):
+	print(F)
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:12:15) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == F):
+	print(C)
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 19:12:44) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == F):
+	print(C)
+else:
+	print(F)
+
+
+-- EXECUTION TIME:
+0.166204
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+608.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+Digite C ou F: Digite o valor da temperatura: 32.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:12:47) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == F):
+	print(C)
+else:
+	print(F)
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:12:57) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == C):
+	print(C)
+else:
+	print(F)
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:13:13) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == C):
+	print(C)
+else:
+	print(F)
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 19:13:23) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == C):
+	print(C)
+else:
+	print(F)
+
+
+-- EXECUTION TIME:
+0.197568
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+608.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:13:32) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == C):
+	print(F)
+else:
+	print(F)
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 19:13:41) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == C):
+	print(F)
+else:
+	print(F)
+
+
+-- EXECUTION TIME:
+0.223371
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+608.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 19:13:48) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == C):
+	print(F)
+else:
+	print(C)
+
+
+-- EXECUTION TIME:
+0.213854
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.77777777777778
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 19:13:51) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == C):
+	print(F)
+else:
+	print(C)
+
+
+-- EXECUTION TIME:
+0.144209
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.77777777777778
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 19:13:53) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == C):
+	print(F)
+else:
+	print(C)
+
+
+-- EXECUTION TIME:
+0.180443
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.77777777777778
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:14:19) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == C):
+	print(F)
+else:
+	print(C)
+
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:14:36) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == C):
+	print(F)
+else:
+	print(C)
+
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:14:45) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == C):
+	print(C)
+else:
+	print(C)
+
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:14:57) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == C):
+	print(C)
+else:
+	print(F)
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:15:33) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t = C):
+	print(C)
+else:
+	print(F)
+
+
+-- ERROR:
+File "XXXX", line 5
+    if(t = C):
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:15:43) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == C):
+	print(C)
+else:
+	print(F)
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:16:06) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == C):
+	print(round(C, 2))
+else:
+	print(F)
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 19:16:19) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- EXECUTION TIME:
+0.170913
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+608.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 19:16:23) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- EXECUTION TIME:
+0.14075
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+608.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:16:24) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:16:30) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:16:48) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:17:11) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+C = 5/9 * (vT - 32)
+F = (vT * (9/5) + 32)
+if(t == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:17:22) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+F = 5/9 * (vT - 32)
+C = (vT * (9/5) + 32)
+if(t == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 19:17:29) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+F = 5/9 * (vT - 32)
+C = (vT * (9/5) + 32)
+if(t == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- EXECUTION TIME:
+0.136439
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 19:17:32) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+F = 5/9 * (vT - 32)
+C = (vT * (9/5) + 32)
+if(t == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- EXECUTION TIME:
+0.168348
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 19:17:38) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+F = 5/9 * (vT - 32)
+C = (vT * (9/5) + 32)
+if(t == F):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- EXECUTION TIME:
+0.215077
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 19:17:39) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+F = 5/9 * (vT - 32)
+C = (vT * (9/5) + 32)
+if(t == F):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- EXECUTION TIME:
+0.163611
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 19:17:40) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+F = 5/9 * (vT - 32)
+C = (vT * (9/5) + 32)
+if(t == F):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- EXECUTION TIME:
+0.154208
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:17:59) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+F = 5/9 * (vT - 32)
+C = (vT * (9/5) + 32)
+if(t == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:18:22) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+F = 5/9 * (vT - 32)
+C = (vT * (9/5) + 32)
+if(t == F):
+	print(round(F, 2))
+else:
+	print(round(C, 2))
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:18:36) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+F = 5/9 * (vT - 32)
+C = (vT * (9/5) + 32)
+if(t == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:19:05) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+F = 5/9 * (vT - 32)
+C = (vT * (9/5) + 32)
+if(t == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:19:42) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+F = 5/9 * (vT - 32)
+C = (vT * (9/5) + 32)
+if(t.upper() == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 19:19:48) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+F = 5/9 * (vT - 32)
+C = (vT * (9/5) + 32)
+if(t.upper() == C):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- EXECUTION TIME:
+0.237982
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 19:20:51) 
+-- CODE:
+t = input("Digite C ou F: ")
+vT = float(input("Digite o valor da temperatura: "))
+F = 5/9 * (vT - 32)
+C = (vT * (9/5) + 32)
+if(t.upper() == "C"):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+
+
+-- EXECUTION TIME:
+0.15117
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

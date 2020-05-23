@@ -1,0 +1,1202 @@
+== TEST (2019-04-25 22:39:44) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+if(H>400):
+	print("R$ 500.00")
+elif((H>0) and (H=<400))
+	print("RS$ 100.00")
+-- ERROR:
+File "XXXX", line 6
+    elif((H>0) and (H=<400))
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 22:39:52) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+if(H>400):
+	print("R$ 500.00")
+elif((H>0) and (H=<400)):
+	print("RS$ 100.00")
+-- ERROR:
+File "XXXX", line 6
+    elif((H>0) and (H=<400)):
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 22:40:42) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+if(H>400):
+	print("R$ 500.00")
+
+-- OUTPUT:
+R$ 500.00
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 22:41:55) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+if(H>400):
+	mensagem="R$ 500.00"
+	print(mensagem)
+
+-- OUTPUT:
+R$ 500.00
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 22:43:04) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+if(H>400):
+	mensagem=("R$ 500.00")
+	print(mensagem)
+elif((H>0) and (H=<400)):
+	mensagem=("RS$ 100.00")	
+	print(mensagem)
+-- ERROR:
+File "XXXX", line 7
+    elif((H>0) and (H=<400)):
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 22:43:48) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+if(H>400):
+	mensagem=("R$ 500.00")
+	print(mensagem)
+elif((H>0) and (H<=400)):
+	mensagem=("RS$ 100.00")	
+	print(mensagem)
+-- OUTPUT:
+R$ 500.00
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 22:44:01) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+if(H>400):
+	mensagem=("R$ 500.00")
+	print(mensagem)
+elif((H>0) and (H<=400)):
+	mensagem=("RS$ 100.00")	
+	print(mensagem)
+-- EXECUTION TIME:
+0.141843
+-- TEST CASE 1:
+---- input:
+420
+20
+---- correct output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+---- user output:
+R$ 500.00
+-- TEST CASE 2:
+---- input:
+400.5
+100
+---- correct output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+---- user output:
+RS$ 100.00
+-- TEST CASE 3:
+---- input:
+300
+44
+---- correct output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+---- user output:
+RS$ 100.00
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 22:46:41) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+msg1="extras e "
+msg2="de falta"
+print((var1+msg1)+(var2+msg2))
+if(H>400):
+	mensagem=("R$ 500.00")
+	print(mensagem)
+elif((H>0) and (H<=400)):
+	mensagem=("RS$ 100.00")	
+	print(mensagem)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print((var1+msg1)+(var2+msg2))
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 22:48:14) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+msg1=(var1)+("extras e ")
+msg2=(var2)+("de falta")
+print(msg1+msg2)
+if(H>400):
+	mensagem=("R$ 500.00")
+	print(mensagem)
+elif((H>0) and (H<=400)):
+	mensagem=("RS$ 100.00")	
+	print(mensagem)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    msg1=(var1)+("extras e ")
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 22:49:06) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+msg1=input((var1)+("extras e "))
+msg2=input((var2)+("de falta"))
+print(msg1+msg2)
+if(H>400):
+	mensagem=("R$ 500.00")
+	print(mensagem)
+elif((H>0) and (H<=400)):
+	mensagem=("RS$ 100.00")	
+	print(mensagem)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    msg1=input((var1)+("extras e "))
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 22:53:50) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+if((var1==10.5) and (var2==2.0)):
+	print("10.5 extras e 2.0 falta")
+if(H>400):
+	mensagem=("R$ 500.00")
+	print(mensagem)
+elif((H>0) and (H<=400)):
+	mensagem=("RS$ 100.00")	
+	print(mensagem)
+	
+-- OUTPUT:
+R$ 500.00
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 22:53:59) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+if((var1==10.5) and (var2==2.0)):
+	print("10.5 extras e 2.0 falta")
+if(H>400):
+	mensagem=("R$ 500.00")
+	print(mensagem)
+elif((H>0) and (H<=400)):
+	mensagem=("RS$ 100.00")	
+	print(mensagem)
+	
+-- EXECUTION TIME:
+0.150288
+-- TEST CASE 1:
+---- input:
+420
+20
+---- correct output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+---- user output:
+R$ 500.00
+-- TEST CASE 2:
+---- input:
+400.5
+100
+---- correct output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+---- user output:
+RS$ 100.00
+-- TEST CASE 3:
+---- input:
+300
+44
+---- correct output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+---- user output:
+RS$ 100.00
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 22:54:06) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+if((var1==10.5) and (var2==2.0)):
+	print("10.5 extras e 2.0 falta")
+if(H>400):
+	mensagem=("R$ 500.00")
+	print(mensagem)
+elif((H>0) and (H<=400)):
+	mensagem=("RS$ 100.00")	
+	print(mensagem)
+	
+-- OUTPUT:
+R$ 500.00
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 22:54:22) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+if((var1==10.5) and (var2==2.0)):
+	print("10.5 extras e 2.0 de falta")
+if(H>400):
+	mensagem=("R$ 500.00")
+	print(mensagem)
+elif((H>0) and (H<=400)):
+	mensagem=("RS$ 100.00")	
+	print(mensagem)
+	
+-- OUTPUT:
+R$ 500.00
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 22:54:28) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+if((var1==10.5) and (var2==2.0)):
+	print("10.5 extras e 2.0 de falta")
+if(H>400):
+	mensagem=("R$ 500.00")
+	print(mensagem)
+elif((H>0) and (H<=400)):
+	mensagem=("RS$ 100.00")	
+	print(mensagem)
+	
+-- EXECUTION TIME:
+0.163212
+-- TEST CASE 1:
+---- input:
+420
+20
+---- correct output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+---- user output:
+R$ 500.00
+-- TEST CASE 2:
+---- input:
+400.5
+100
+---- correct output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+---- user output:
+RS$ 100.00
+-- TEST CASE 3:
+---- input:
+300
+44
+---- correct output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+---- user output:
+RS$ 100.00
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 22:55:33) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+if((var1==10.5) and (var2==2.0)):
+	print("10.5 extras e 2.0 de falta")
+if(H>400):
+	print("R$ 500.00")
+elif((H>0) and (H<=400)):
+	print("RS$ 100.00")	
+	
+	
+-- OUTPUT:
+R$ 500.00
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 22:55:40) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+if((var1==10.5) and (var2==2.0)):
+	print("10.5 extras e 2.0 de falta")
+if(H>400):
+	print("R$ 500.00")
+elif((H>0) and (H<=400)):
+	print("RS$ 100.00")	
+	
+	
+-- EXECUTION TIME:
+0.195132
+-- TEST CASE 1:
+---- input:
+420
+20
+---- correct output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+---- user output:
+R$ 500.00
+-- TEST CASE 2:
+---- input:
+400.5
+100
+---- correct output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+---- user output:
+RS$ 100.00
+-- TEST CASE 3:
+---- input:
+300
+44
+---- correct output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+---- user output:
+RS$ 100.00
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 16:38:35) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+if((var1==10.5) and (var2==2.0)):
+	print("10.5 extras e 2.0 de falta")
+if(H>400):
+	print("R$ 500.00")
+elif((H>0) and (H<=400)):
+	print("RS$ 100.00")	
+	
+	
+-- OUTPUT:
+R$ 500.00
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 16:39:34) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+if((var1==10.5) and (var2==2.0)):
+	print("10.5 extras e 2.0 de falta")
+if(H>400):
+	print("R$ 500.00")
+elif((H>0) and (H<=400)):
+	print("R$ 100.00")	
+	
+	
+-- OUTPUT:
+R$ 500.00
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 16:39:50) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+if((var1==10.5) and (var2==2.0)):
+	print("10.5 extras e 2.0 de falta")
+if(H>400):
+	print("R$ 500.00")
+elif((H>0) and (H<=400)):
+	print("R$ 100.00")	
+	
+	
+-- OUTPUT:
+R$ 500.00
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 16:39:55) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+if((var1==10.5) and (var2==2.0)):
+	print("10.5 extras e 2.0 de falta")
+if(H>400):
+	print("R$ 500.00")
+elif((H>0) and (H<=400)):
+	print("R$ 100.00")	
+	
+	
+-- EXECUTION TIME:
+0.16363
+-- TEST CASE 1:
+---- input:
+420
+20
+---- correct output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+---- user output:
+R$ 500.00
+-- TEST CASE 2:
+---- input:
+400.5
+100
+---- correct output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+---- user output:
+R$ 100.00
+-- TEST CASE 3:
+---- input:
+300
+44
+---- correct output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+---- user output:
+R$ 100.00
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 16:47:31) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+H=((var1)-(1/4*var2))
+if((var1==10.5) and (var2==2.0)):
+	print("10.5 extras e 2.0 de falta")
+if(H>400):
+	print("R$ 500.00")
+elif((H>0) and (H<=400)):
+	print("R$ 100.00")	
+	
+	
+-- OUTPUT:
+R$ 500.00
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 16:53:10) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1)
+print(var2)
+H=((var1)-(1/4*var2))
+if((var1==10.5) and (var2==2.0)):
+	print("10.5 extras e 2.0 de falta")
+if(H>400):
+	print("R$ 500.00")
+elif((H>0) and (H<=400)):
+	print("R$ 100.00")	
+	
+	
+-- OUTPUT:
+420.0
+20.0
+R$ 500.00
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 16:53:25) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1)
+print(var2)
+H=((var1)-(1/4*var2))
+if((var1==10.5) and (var2==2.0)):
+	print("10.5 extras e 2.0 de falta")
+if(H>400):
+	print("R$ 500.00")
+elif((H>0) and (H<=400)):
+	print("R$ 100.00")	
+	
+	
+-- EXECUTION TIME:
+0.209381
+-- TEST CASE 1:
+---- input:
+420
+20
+---- correct output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+---- user output:
+horas extras:horas faltosas:420.0
+20.0
+R$ 500.00
+-- TEST CASE 2:
+---- input:
+400.5
+100
+---- correct output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+---- user output:
+horas extras:horas faltosas:400.5
+100.0
+R$ 100.00
+-- TEST CASE 3:
+---- input:
+300
+44
+---- correct output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+---- user output:
+horas extras:horas faltosas:300.0
+44.0
+R$ 100.00
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 16:53:30) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1)
+print(var2)
+H=((var1)-(1/4*var2))
+if((var1==10.5) and (var2==2.0)):
+	print("10.5 extras e 2.0 de falta")
+if(H>400):
+	print("R$ 500.00")
+elif((H>0) and (H<=400)):
+	print("R$ 100.00")	
+	
+	
+-- OUTPUT:
+420.0
+20.0
+R$ 500.00
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 16:53:48) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1)
+print(var2)
+H=((var1)-(1/4*var2))
+if((var1==10.5) and (var2==2.0)):
+	print("10.5 extras e 2.0 de falta")
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- OUTPUT:
+420.0
+20.0
+R$ 500.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 16:54:00) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1)
+print(var2)
+H=((var1)-(1/4*var2))
+if((var1==10.5) and (var2==2.0)):
+	print("10.5 extras e 2.0 de falta")
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- EXECUTION TIME:
+0.152273
+-- TEST CASE 1:
+---- input:
+420
+20
+---- correct output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+---- user output:
+420.0
+20.0
+R$ 500.0
+-- TEST CASE 2:
+---- input:
+400.5
+100
+---- correct output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+---- user output:
+400.5
+100.0
+R$ 100.0
+-- TEST CASE 3:
+---- input:
+300
+44
+---- correct output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+---- user output:
+300.0
+44.0
+R$ 100.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 16:54:45) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1)
+print(var2)
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- OUTPUT:
+420.0
+20.0
+R$ 500.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 16:54:57) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1)
+print(var2)
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- EXECUTION TIME:
+0.187131
+-- TEST CASE 1:
+---- input:
+420
+20
+---- correct output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+---- user output:
+420.0
+20.0
+R$ 500.0
+-- TEST CASE 2:
+---- input:
+400.5
+100
+---- correct output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+---- user output:
+400.5
+100.0
+R$ 100.0
+-- TEST CASE 3:
+---- input:
+300
+44
+---- correct output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+---- user output:
+300.0
+44.0
+R$ 100.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:01:55) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1 , "extras e ")
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- OUTPUT:
+420.0 extras e 
+R$ 500.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:02:25) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print((var1 , "extras e ") + (var2, "de falta")
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- ERROR:
+File "XXXX", line 4
+    H=((var1)-(1/4*var2))	
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:02:55) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1 , "extras e " + var2, "de falta)"
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- ERROR:
+File "XXXX", line 4
+    H=((var1)-(1/4*var2))	
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:03:05) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1 , "extras e ")
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- OUTPUT:
+420.0 extras e 
+R$ 500.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:03:23) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1 , "extras e ") + (var2, "de falta")
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print(var1 , "extras e ") + (var2, "de falta")
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:03:38) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print((var1 , "extras e ") + (var2, "de falta"))
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- OUTPUT:
+(420.0, 'extras e ', 20.0, 'de falta')
+R$ 500.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:04:39) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+x=(var1, "extras e")
+z=(var2, "de falta")
+print(x+z)
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- OUTPUT:
+(420.0, 'extras e', 20.0, 'de falta')
+R$ 500.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:04:51) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+x=(var1, "extras e")
+z=(var2, "de falta")
+print(x+z)
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- EXECUTION TIME:
+0.140905
+-- TEST CASE 1:
+---- input:
+420
+20
+---- correct output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+---- user output:
+(420.0, 'extras e', 20.0, 'de falta')
+R$ 500.0
+-- TEST CASE 2:
+---- input:
+400.5
+100
+---- correct output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+---- user output:
+(400.5, 'extras e', 100.0, 'de falta')
+R$ 100.0
+-- TEST CASE 3:
+---- input:
+300
+44
+---- correct output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+---- user output:
+(300.0, 'extras e', 44.0, 'de falta')
+R$ 100.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:05:01) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+x=(var1, "extras e")
+
+print(x)
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- OUTPUT:
+(420.0, 'extras e')
+R$ 500.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:05:23) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1, "extras e")
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- OUTPUT:
+420.0 extras e
+R$ 500.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:05:44) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1, "extras e" var2, "de falta")
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- ERROR:
+File "XXXX", line 3
+    print(var1, "extras e" var2, "de falta")
+                              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:05:53) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1, "extras e" + var2, "de falta")
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print(var1, "extras e" + var2, "de falta")
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:06:06) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1, "extras e" + var2, "de falta")
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print(var1, "extras e" + var2, "de falta")
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:06:39) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1, "extras")
+print(var2,"de falta")
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- OUTPUT:
+420.0 extras
+20.0 de falta
+R$ 500.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:06:47) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1, "extras")
+print(var2,"de falta")
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- EXECUTION TIME:
+0.182605
+-- TEST CASE 1:
+---- input:
+420
+20
+---- correct output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+---- user output:
+420.0 extras
+20.0 de falta
+R$ 500.0
+-- TEST CASE 2:
+---- input:
+400.5
+100
+---- correct output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+---- user output:
+400.5 extras
+100.0 de falta
+R$ 100.0
+-- TEST CASE 3:
+---- input:
+300
+44
+---- correct output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+---- user output:
+300.0 extras
+44.0 de falta
+R$ 100.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:06:54) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1, "extras")
+print(var2,"de falta")
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- OUTPUT:
+420.0 extras
+20.0 de falta
+R$ 500.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:11:15) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1, "extras e " var2, "de falta")
+
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- ERROR:
+File "XXXX", line 3
+    print(var1, "extras e " var2, "de falta")
+                               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:11:24) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1, "extras e " + var2, "de falta")
+
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print(var1, "extras e " + var2, "de falta")
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:12:06) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1, "extras e ")
+
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- OUTPUT:
+420.0 extras e 
+R$ 500.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-30 17:14:56) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1, "extras e",var2, "de falta")
+
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- OUTPUT:
+420.0 extras e 20.0 de falta
+R$ 500.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 17:15:16) 
+-- CODE:
+var1=float(input("horas extras:"))
+var2=float(input("horas faltosas:"))
+print(var1, "extras e",var2, "de falta")
+
+H=((var1)-(1/4*var2))	
+if(H>400):
+	print("R$ 500.0")
+elif((H>0) and (H<=400)):
+	print("R$ 100.0")	
+	
+	
+-- EXECUTION TIME:
+0.138026
+-- TEST CASE 1:
+---- input:
+420
+20
+---- correct output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+---- user output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+-- TEST CASE 2:
+---- input:
+400.5
+100
+---- correct output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+---- user output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+-- TEST CASE 3:
+---- input:
+300
+44
+---- correct output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+---- user output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,127 @@
+== TEST (2019-05-14 20:02:57) 
+-- CODE:
+qntd1=int(input("qntd inicial de cop. virus: "))
+qntd2=int(input("qntd inicial de leucocitos: "))
+p1=float(input("percentual x diaria de virus: "))
+p2=float(input("percentual x leucocitos: "))
+tc1=p1/100 
+tc2=p2/100
+dias=0
+pv1=qntd1
+pl2=qntd2
+while(pv1>pl2):
+	c1=pv1*tc1
+	c2=pl2*tc2
+	pv1=pv1+c1
+	pl2=pl2+c2
+	dias=dias+1
+print(dias)
+-- OUTPUT:
+8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 20:05:01) 
+-- CODE:
+qntd1=int(input("qntd inicial de cop. virus: "))
+qntd2=int(input("qntd inicial de leucocitos: "))
+p1=float(input("percentual x diaria de virus: "))
+p2=float(input("percentual x leucocitos: "))
+tc1=p1/100 
+tc2=p2/100
+dias=0
+while(2*pv1>pl2):
+	c1=pv1*tc1
+	c2=pl2*tc2
+	dias=dias+1
+print(dias)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    while(2*pv1>pl2):
+NameError: name 'pv1' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 20:05:35) 
+-- CODE:
+qntd1=int(input("qntd inicial de cop. virus: "))
+qntd2=int(input("qntd inicial de leucocitos: "))
+p1=float(input("percentual x diaria de virus: "))
+p2=float(input("percentual x leucocitos: "))
+tc1=p1/100 
+tc2=p2/100
+dias=0
+while(2*qntd1>qntd2):
+	c1=pv1*tc1
+	c2=pl2*tc2
+	dias=dias+1
+print(dias)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    c1=pv1*tc1
+NameError: name 'pv1' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 20:07:13) 
+-- CODE:
+qntd1=int(input("qntd inicial de cop. virus: "))
+qntd2=int(input("qntd inicial de leucocitos: "))
+p1=float(input("percentual x diaria de virus: "))
+p2=float(input("percentual x leucocitos: "))
+tc1=p1/100 
+tc2=p2/100
+dias=0
+while(2*qntd1>qntd2):
+	qntd1=qntd1+qntd1*tc1
+	qntd2=qntd2+qntd2*tc2
+	dias=dias+1
+print(dias)
+-- OUTPUT:
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 20:07:23) 
+-- CODE:
+qntd1=int(input("qntd inicial de cop. virus: "))
+qntd2=int(input("qntd inicial de leucocitos: "))
+p1=float(input("percentual x diaria de virus: "))
+p2=float(input("percentual x leucocitos: "))
+tc1=p1/100 
+tc2=p2/100
+dias=0
+while(2*qntd1>qntd2):
+	qntd1=qntd1+qntd1*tc1
+	qntd2=qntd2+qntd2*tc2
+	dias=dias+1
+print(dias)
+-- EXECUTION TIME:
+0.134943
+-- TEST CASE 1:
+---- input:
+350625
+5500
+2
+75
+---- correct output:
+9
+---- user output:
+9
+-- TEST CASE 2:
+---- input:
+650090
+90045
+4
+90
+---- correct output:
+5
+---- user output:
+5
+-- TEST CASE 3:
+---- input:
+419250
+1725
+9
+59
+---- correct output:
+17
+---- user output:
+17
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

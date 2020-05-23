@@ -1,0 +1,401 @@
+== TEST (2019-04-09 11:56:47) 
+-- CODE:
+x = "escala: "
+v = int(input("valor da temperatura: "))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    v = int(input())
+ValueError: invalid literal for int() with base 10: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:57:24) 
+-- CODE:
+x = str("escala: ")
+v = int(input("valor da temperatura: "))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    v = int(input())
+ValueError: invalid literal for int() with base 10: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:57:37) 
+-- CODE:
+x =  ("escala: ")
+v = int(input("valor da temperatura: "))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    v = int(input())
+ValueError: invalid literal for int() with base 10: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 13:34:49) 
+-- CODE:
+"escala: " 
+v = int(input("valor da temperatura: "))
+
+if(.upper()== C):
+	msg = (v * 9 / 5) + 32
+else:
+	msg = (5 / 9) * ( v - 32)
+
+x = round(msg, 2)
+print(x)
+-- ERROR:
+File "XXXX", line 4
+    if(.upper()== C):
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 13:35:23) 
+-- CODE:
+x = input("escala: ")
+v = int(input("valor da temperatura: "))
+
+if(x.upper()== C):
+	msg = (v * 9 / 5) + 32
+else:
+	msg = (5 / 9) * ( v - 32)
+
+x = round(msg, 2)
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if(x.upper()== C):
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 13:36:44) 
+-- CODE:
+x = input("escala: ")
+v = float(input("valor da temperatura: "))
+
+if(x.upper()== C):
+	msg = (v * 9 / 5) + 32
+else:
+	msg = (5 / 9) * ( v - 32)
+
+x = round(msg, 2)
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if(x.upper()== C):
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 13:37:54) 
+-- CODE:
+x = input("escala: ")
+v = float(input("valor da temperatura: "))
+C = x
+
+if(x.upper() == C):
+	msg = (v * 9 / 5) + 32
+else:
+	msg = (5 / 9) * ( v - 32)
+
+x = round(msg, 2)
+print(x)
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 13:38:13) 
+-- CODE:
+x = input("escala: ")
+v = float(input("valor da temperatura: "))
+C = x
+
+if(x.upper() == C):
+	msg = (v * 9 / 5) + 32
+else:
+	msg = (5 / 9) * ( v - 32)
+
+x = round(msg, 2)
+print(x)
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 13:38:45) 
+-- CODE:
+x = input("escala: ")
+v = float(input("valor da temperatura: "))
+C = x
+
+if(x.upper() == C):
+	msg = (v * 9 / 5) + 32
+else:
+	msg = (5 / 9) + ( v - 32)
+
+x = round(msg, 2)
+print(x)
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 13:42:57) 
+-- CODE:
+x = input("escala: ")
+v = float(input("valor da temperatura: "))
+C = x
+
+if(x.upper() == C):
+	msg = (v * 9 / 5) + 32
+else:
+	msg = (V - 32 / 9) * 5
+
+x = round(msg, 2)
+print(x)
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 13:45:15) 
+-- CODE:
+x = input("escala: ")
+v = float(input("valor da temperatura: "))
+C = C
+
+if(x.upper() == C):
+	msg = (v * 9 / 5) + 32
+else:
+	msg = (V - 32 / 9) * 5
+
+x = round(msg, 2)
+print(x)
+-- EXECUTION TIME:
+0.237167
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1637/2445/main.py", line 3, in <module>
+    C = C
+NameError: name 'C' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 13:45:22) 
+-- CODE:
+x = input("escala: ")
+v = float(input("valor da temperatura: "))
+C = C
+
+if(x.upper() == C):
+	msg = (v * 9 / 5) + 32
+else:
+	msg = (V - 32 / 9) * 5
+
+x = round(msg, 2)
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    C = C
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 13:47:31) 
+-- CODE:
+x = input("escala: ")
+v = float(input("valor da temperatura: "))
+C = x
+
+if(x.upper() == "C"):
+	msg = (v * 9 / 5) + 32
+else:
+	msg = (V - 32 / 9) * 5
+
+x = round(msg, 2)
+print(x)
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 13:47:56) 
+-- CODE:
+x = input("escala: ")
+v = float(input("valor da temperatura: "))
+C = x
+
+if(x.upper() == "C"):
+	msg = (v * 9 / 5) + 32
+else:
+	msg = (v - 32 / 9) * 5
+
+x = round(msg, 2)
+print(x)
+-- EXECUTION TIME:
+0.172902
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+1582.22
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 13:48:01) 
+-- CODE:
+x = input("escala: ")
+v = float(input("valor da temperatura: "))
+C = x
+
+if(x.upper() == "C"):
+	msg = (v * 9 / 5) + 32
+else:
+	msg = (v - 32 / 9) * 5
+
+x = round(msg, 2)
+print(x)
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 13:48:54) 
+-- CODE:
+x = input("escala: ")
+v = float(input("valor da temperatura: "))
+C = x
+
+if(x.upper() == "C"):
+	msg = (v * 9 / 5) + 32
+else:
+	msg = (v - 32 / 9) * 5
+
+x = round(msg, 2)
+print(x)
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 13:49:06) 
+-- CODE:
+x = input("escala: ")
+v = float(input("valor da temperatura: "))
+C = x
+
+if(x.upper() == "C"):
+	msg = (v * 9 / 5) + 32
+else:
+	msg = (v - 32 / 9) * 5
+
+x = round(msg, 2)
+print(x)
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 13:50:36) 
+-- CODE:
+x = input("escala: ")
+v = float(input("valor da temperatura: "))
+C = x
+
+if(x.upper() == "C"):
+	msg = (v * 9 / 5) + 32
+else:
+	msg = v
+
+x = round(msg, 2)
+print(x)
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 13:51:07) 
+-- CODE:
+x = input("escala: ")
+v = float(input("valor da temperatura: "))
+C = x
+
+if(x.upper() == "C"):
+	msg = (v * 9 / 5) + 32
+else:
+	msg = v - 32 / 9
+
+x = round(msg, 2)
+print(x)
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 13:51:38) 
+-- CODE:
+x = input("escala: ")
+v = float(input("valor da temperatura: "))
+C = x
+
+if(x.upper() == "C"):
+	msg = (v * 9 / 5) + 32
+else:
+	msg = (v - 32) / 9
+
+x = round(msg, 2)
+print(x)
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 13:51:50) 
+-- CODE:
+x = input("escala: ")
+v = float(input("valor da temperatura: "))
+C = x
+
+if(x.upper() == "C"):
+	msg = (v * 9 / 5) + 32
+else:
+	msg = (v - 32) / 9
+
+x = round(msg, 2)
+print(x)
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 13:52:17) 
+-- CODE:
+x = input("escala: ")
+v = float(input("valor da temperatura: "))
+C = x
+
+if(x.upper() == "C"):
+	msg = (v * 9 / 5) + 32
+else:
+	msg = ((v - 32) / 9) * 5
+
+x = round(msg, 2)
+print(x)
+-- EXECUTION TIME:
+0.130044
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

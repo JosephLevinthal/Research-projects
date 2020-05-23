@@ -1,0 +1,1716 @@
+== TEST (2019-04-14 19:56:56) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x < y):
+	mensagem = "falta"+" "+(y-x)
+else:
+	mensagem = "troco"+" "+"de"+(x-y)
+print(mensagem)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    mensagem = "troco"+" "+"de"+(x-y)
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 19:57:35) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x < y):
+	mensagem = ("falta"+" "+(y-x))
+else:
+	mensagem = ("troco"+" "+"de"+(x-y))
+print(mensagem)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    mensagem = ("troco"+" "+"de"+(x-y))
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 19:58:18) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x < y):
+	mensagem1 = "falta"+ (y-x)
+else:
+	mensagem = ("troco"+" "+"de"+(x-y))
+print(mensagem1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    mensagem = ("troco"+" "+"de"+(x-y))
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 19:59:13) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x < y):
+	mensagem1 = "falta"+ " " + ( x - y)
+else:
+	mensagem = ("troco"+" "+"de"+(x-y))
+print(mensagem1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    mensagem = ("troco"+" "+"de"+(x-y))
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 19:59:34) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x < y):
+	mensagem1 = "falta"+ x
+else:
+	mensagem = ("troco"+" "+"de"+(x-y))
+print(mensagem1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    mensagem = ("troco"+" "+"de"+(x-y))
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:01:19) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1 = x-y
+else:
+	mensagem = ("troco"+" "+"de"+(x-y))
+print(mensagem1)
+
+-- OUTPUT:
+26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:01:34) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1 = x-y
+else:
+	mensagem = ("troco"+" "+"de"+(x-y))
+print(mensagem1)
+
+-- OUTPUT:
+26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:02:44) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1 = "falta" , x-y
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- OUTPUT:
+('falta', 26.0)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:03:25) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1 = "falta" + x-y
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    mensagem1 = "falta" + x-y
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:03:46) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1 = ("falta" + x-y)
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    mensagem1 = ("falta" + x-y)
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:04:13) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1 = ("falta" + (x-y))
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    mensagem1 = ("falta" + (x-y))
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:04:40) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1 = "falta" , (x-y)
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- OUTPUT:
+('falta', 26.0)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:05:02) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1 = "falta" (x-y)
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    mensagem1 = "falta" (x-y)
+TypeError: 'str' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:05:16) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1 = "falta" , (x-y)
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- OUTPUT:
+('falta', 26.0)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 20:05:30) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1 = "falta" + (x-y)
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- EXECUTION TIME:
+0.176065
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1644/2447/main.py", line 4, in <module>
+    mensagem1 = "falta" + (x-y)
+TypeError: Can't convert 'float' object to str implicitly
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:05:30) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1 = "falta" + (x-y)
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    mensagem1 = "falta" + (x-y)
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:05:39) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1 = "falta" +, (x-y)
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- ERROR:
+File "XXXX", line 4
+    mensagem1 = "falta" +, (x-y)
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:06:30) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1 = ("falta") + x-y
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    mensagem1 = ("falta") + x-y
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:09:41) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1=("falta"+" "+(x-y)"
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- ERROR:
+File "XXXX", line 4
+    mensagem1=("falta"+" "+(x-y)"
+                                ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:10:05) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1=("falta"+" "+"x-y"
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- ERROR:
+File "XXXX", line 5
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:10:18) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1=("falta"+" "+"x-y")
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- OUTPUT:
+falta x-y
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:10:42) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1=("falta"+" "+(x-y))
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    mensagem1=("falta"+" "+(x-y))
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:11:43) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1=("falta"+" "+ (y-x)
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- ERROR:
+File "XXXX", line 5
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:11:49) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1=("falta"+" "+ (y-x))
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    mensagem1=("falta"+" "+ (y-x))
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:12:20) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1=("falta"+" "+"(y-x)")
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- OUTPUT:
+falta (y-x)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:12:53) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1=("falta"+" "+"x-y"
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- ERROR:
+File "XXXX", line 5
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:12:59) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1=("falta"+" "+"x-y")
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- OUTPUT:
+falta x-y
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:13:09) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1=("falta"+" "+"(x-y)")
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- OUTPUT:
+falta (x-y)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:13:48) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1=("falta"+" "+laranja)
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    mensagem1=("falta"+" "+laranja)
+NameError: name 'laranja' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:14:01) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1=("falta"+" "+ x)
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    mensagem1=("falta"+" "+ x)
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:14:17) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1=("falta"+" "+(x))
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    mensagem1=("falta"+" "+(x))
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:14:40) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1=("falta"+" "+ y )
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    mensagem1=("falta"+" "+ y )
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:15:02) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1=("falta"+" "+ y +" ")
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    mensagem1=("falta"+" "+ y +" ")
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:15:17) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:"))
+if ( x > y):
+	mensagem1=("falta"+" "+y+" ")
+else:
+	mensagem = "troco"+" "+"de" +(x-y)
+print(mensagem1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    mensagem1=("falta"+" "+y+" ")
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:16:49) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:")
+	mensagem1=("falta"+" "+y+" ")
+print(mensagem1)
+
+-- ERROR:
+File "XXXX", line 3
+    mensagem1=("falta"+" "+y+" ")
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:16:59) 
+-- CODE:
+x = float(input("x:"))
+y = float(input("Y:")
+			 
+mensagem1=("falta"+" "+y+" ")
+print(mensagem1)
+
+-- ERROR:
+File "XXXX", line 4
+    mensagem1=("falta"+" "+y+" ")
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:17:31) 
+-- CODE:
+preço = float(input("x:"))
+pagamento= float(input("Y:")
+			 
+mensagem1=("falta"+" "+pagamento+" ")
+print(mensagem1)
+
+-- ERROR:
+File "XXXX", line 4
+    mensagem1=("falta"+" "+pagamento+" ")
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:17:46) 
+-- CODE:
+preço = float(input("x:"))
+pagamento= float(input("Y:")
+			 
+mensagem1 =("falta"+" "+pagamento)
+print(mensagem1)
+
+-- ERROR:
+File "XXXX", line 4
+    mensagem1 =("falta"+" "+pagamento)
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 20:23:55) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	msg=("falta"+ T)
+else:
+	msg=("troco+" "+"de"+" "+"G") 
+print(msg)
+-- EXECUTION TIME:
+0.194935
+-- ERROR:
+  File "/home/codebench/codes/1644/2447/main.py", line 8
+    msg=("troco+" "+"de"+" "+"G") 
+                      ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:23:58) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	msg=("falta"+ T)
+else:
+	msg=("troco+" "+"de"+" "+"G") 
+print(msg)
+-- ERROR:
+File "XXXX", line 8
+    msg=("troco+" "+"de"+" "+"G") 
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:24:11) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	msg=("falta"+ T)
+else:
+	msg=("troco+" "+"de"+" "+G) 
+print(msg)
+-- ERROR:
+File "XXXX", line 8
+    msg=("troco+" "+"de"+" "+G) 
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:24:46) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	msg1=("falta"+ T)
+else:
+	msg=("troco+" "+"de"+" ") 
+print(msg1)
+-- ERROR:
+File "XXXX", line 8
+    msg=("troco+" "+"de"+" ") 
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:25:26) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	msg1=("falta"+ T)
+else:
+	msg=("troco+" "+"de"+" "+"g")
+print(msg1)
+-- ERROR:
+File "XXXX", line 8
+    msg=("troco+" "+"de"+" "+"g")
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:25:52) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	msg1=("falta"+ T)
+else:
+	msg=("troco"+" "+"de"+" "+ g)
+print(msg1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    msg1=("falta"+ T)
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:26:00) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	msg1=("falta"+ T)
+else:
+	msg=("troco"+" "+"de"+" "+ g)
+print(msg1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    msg1=("falta"+ T)
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 20:26:01) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	msg1=("falta"+ T)
+else:
+	msg=("troco"+" "+"de"+" "+ g)
+print(msg1)
+-- EXECUTION TIME:
+0.192735
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1644/2447/main.py", line 6, in <module>
+    msg1=("falta"+ T)
+TypeError: Can't convert 'float' object to str implicitly
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:26:08) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	msg1=("falta"+ T)
+else:
+	msg=("troco"+" "+"de"+" "+ g)
+print(msg1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    msg1=("falta"+ T)
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:26:21) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	msg1=("falta",  T)
+else:
+	msg=("troco"+" "+"de"+" "+ g)
+print(msg1)
+-- OUTPUT:
+('falta', -26.0)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:26:37) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	msg1=("falta",T)
+else:
+	msg=("troco"+" "+"de"+" "+ g)
+print(msg1)
+-- OUTPUT:
+('falta', -26.0)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:27:13) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	msg1=("falta",T)
+else:
+	msg=("troco"," ","de"," ", g)
+print(msg1)
+-- OUTPUT:
+('falta', -26.0)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:27:41) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	msg1=("falta",T)
+else:
+	msg=("troco"+" "+"de"+" "+ g)
+print(msg1)
+-- OUTPUT:
+('falta', -26.0)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:27:51) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	msg1=("falta" T)
+else:
+	msg=("troco"+" "+"de"+" "+ g)
+print(msg1)
+-- ERROR:
+File "XXXX", line 6
+    msg1=("falta" T)
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:28:06) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	msg1="falta" + T
+else:
+	msg=("troco"+" "+"de"+" "+ g)
+print(msg1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    msg1="falta" + T
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:28:29) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	msg1="falta"+T
+else:
+	msg=("troco"+" "+"de"+" "+ g)
+print(msg1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    msg1="falta"+T
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:28:49) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	msg1=("falta"+T)
+else:
+	msg=("troco"+" "+"de"+" "+ g)
+print(msg1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    msg1=("falta"+T)
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:33:19) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	print("falta" + T)
+else:
+	print("troco"+" "+"de"+" "+ g)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print("falta" + T)
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:33:33) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	print("falta" T)
+else:
+	print("troco"+" "+"de"+" "+ g)
+-- ERROR:
+File "XXXX", line 6
+    print("falta" T)
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:33:46) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	print("falta" + T)
+else:
+	print("troco"+" "+"de"+" "+ g)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print("falta" + T)
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:34:03) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	print("falta" , t)
+else:
+	print("troco"+" "+"de"+" "+ g)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print("falta" , t)
+NameError: name 't' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:34:20) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	print("falta",t)
+else:
+	print("troco"+" "+"de"+" "+ g)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print("falta",t)
+NameError: name 't' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:35:43) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	print(("falta")+(T))
+else:
+	print("troco"+" "+"de"+" "+ g)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print(("falta")+(T))
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:37:47) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	print("falta"+T)
+else:
+	print("troco"+" "+"de"+" "+ g)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print("falta"+T)
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:38:01) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+T=pag-pre
+G=pre-pag
+if(pre>pag):
+	print("falta"*T)
+else:
+	print("troco"+" "+"de"+" "+ g)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print("falta"*T)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:38:32) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	print("falta"+(pag-pre))
+else:
+	print("troco"+" "+"de"+" "+ g)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print("falta"+(pag-pre))
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 20:38:51) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	print("falta"+ pag-pre)
+else:
+	print("troco"+" "+"de"+" "+ g)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print("falta"+ pag-pre)
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:06:18) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	print("falta" , pag-pre)
+else:
+	print("troco"+" "+"de"+" "+ g)
+-- OUTPUT:
+falta -26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:07:04) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	print("falta" , pag-pre)
+else:
+	print("troco de" , pag-pre)
+-- OUTPUT:
+falta -26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 21:07:14) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	print("falta" , pag-pre)
+else:
+	print("troco de" , pag-pre)
+-- EXECUTION TIME:
+0.135354
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta -26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+troco de 28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+troco de 0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 21:07:59) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	print("falta" , pag-pre)
+else:
+	print("troco de" , pre-pag)
+-- EXECUTION TIME:
+0.135817
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta -26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+troco de -28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+troco de 0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 21:08:36) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	print("falta" , round(pag-pre,2)
+else:
+	print("troco de" , round(pre-pag,2)
+-- EXECUTION TIME:
+0.21622
+-- ERROR:
+  File "/home/codebench/codes/1644/2447/main.py", line 5
+    else:
+       ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 21:08:48) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	print("falta" , round(pag-pre,2))
+else:
+	print("troco de" , round(pre-pag,2))
+-- EXECUTION TIME:
+0.153387
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta -26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+troco de -28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+troco de 0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:09:59) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	print("falta" , round(pre-pag,2))
+else:
+	print("troco de" , round(pag-pre,2))
+-- OUTPUT:
+falta 26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:10:20) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	print("falta" , round(pre-pag,2))
+else:
+	print("troco de" , round(pag-pre,2))
+-- OUTPUT:
+falta 26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 21:10:25) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	print("falta" , round(pre-pag,2))
+else:
+	print("troco de" , round(pag-pre,2))
+-- EXECUTION TIME:
+0.133128
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+troco de 28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+troco de 0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 21:10:52) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	print("falta" , round(pre-pag,2))
+else:
+	print("troco de" , round(pag-pre,2))
+-- EXECUTION TIME:
+0.193559
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+troco de 28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+X:y:troco de 0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 21:11:48) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	dif=pre-pag
+	print("falta" , round(dif,2))
+else:
+	dif=pag-pre
+	print("troco de" , round(dif,2))
+-- EXECUTION TIME:
+0.199485
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+troco de 28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+troco de 0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:12:32) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	dif=pre-pag
+	print("falta" , round(dif,2))
+else:
+	dif=pag-pre
+	print("troco de" , round(dif,2))
+-- OUTPUT:
+falta 26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 21:13:30) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	dif=pre-pag
+	print("falta" , round(dif,2))
+else:
+	dif=pag-pre
+	print("troco de" , round(dif,2))
+-- EXECUTION TIME:
+0.14721
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+troco de 28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+troco de 0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 21:14:06) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	dif=pre-pag
+	msg = ("falta" , round(dif,2))
+else:
+	dif=pag-pre
+	msg =("troco de" , round(dif,2))
+print(msg)
+-- EXECUTION TIME:
+0.188962
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+('falta', 26.0)
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+('troco de', 28.0)
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+('troco de', 0.0)
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 21:14:36) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	dif=pre-pag
+	print("falta",round(dif,2))
+else:
+	dif=pag-pre
+	print("troco de",round(dif,2))
+-- EXECUTION TIME:
+0.133109
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+troco de 28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+troco de 0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:14:37) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	dif=pre-pag
+	print("falta",round(dif,2))
+else:
+	dif=pag-pre
+	print("troco de",round(dif,2))
+-- OUTPUT:
+falta 26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 21:23:27) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	dif=pre-pag
+	print("falta",round(dif,2))
+else:
+	dif2=pag-pre
+	print("troco de",round(dif2,2))
+-- EXECUTION TIME:
+0.156786
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+troco de 28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+troco de 0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 21:23:33) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	dif=pre-pag
+	print("falta",round(dif,2))
+else:
+	dif2=pag-pre
+	print("troco de",round(dif2,2))
+-- EXECUTION TIME:
+0.157757
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+troco de 28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+falta 26.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 21:23:33) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	dif=pre-pag
+	print("falta",round(dif,2))
+else:
+	dif2=pag-pre
+	print("troco de",round(dif2,2))
+-- EXECUTION TIME:
+0.194968
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+falta 26.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+troco de 28.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 21:23:33) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	dif=pre-pag
+	print("falta",round(dif,2))
+else:
+	dif2=pag-pre
+	print("troco de",round(dif2,2))
+-- EXECUTION TIME:
+0.185157
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+troco de 28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+troco de 0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 21:23:51) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	dif=pre-pag
+	print("falta",round(dif,2))
+else:
+	dif=pag-pre
+	print("troco de",round(dif2,2))
+-- EXECUTION TIME:
+0.126392
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 21:24:13) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	dif=pre-pag
+	print("falta",round(dif,2))
+else:
+	dif=pag-pre
+	print("troco de",round(dif,2))
+-- EXECUTION TIME:
+0.153334
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+troco de 28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+troco de 0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 21:40:46) 
+-- CODE:
+pre = float(input("X:"))
+pag = float(input("y:"))
+if(pre>pag):
+	dif=pre-pag
+	print("Falta",round(dif,2))
+else:
+	dif=pag-pre
+	print("Troco de",round(dif,2))
+-- EXECUTION TIME:
+0.138514
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+Falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+Troco de 28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+Troco de 0.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

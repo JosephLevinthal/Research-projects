@@ -1,0 +1,6 @@
+var1=float(input("primeira nota:"))
+var2=float(input("segunda nota:"))
+var3=float(input("terceira nota:"))
+var4=float(input("quarta nota:"))
+var5=float((var1+var2*2+var3*3+var4*4)/10)
+print(round(var5, 2))

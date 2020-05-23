@@ -1,0 +1,109 @@
+== TEST (2019-04-09 10:47:35) 
+-- CODE:
+x=float(input("preco sem desconto: "))
+
+if(x>=200):
+	print(x-(x*0,5))
+else:
+	print(x)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(x-(x*0,5))
+TypeError: unsupported operand type(s) for -: 'float' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:48:06) 
+-- CODE:
+x=float(input("preco sem desconto: "))
+
+if(x>=200):
+	print(x-(x*0.5))
+else:
+	print(x)
+
+-- OUTPUT:
+100.045
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:49:33) 
+-- CODE:
+x=float(input("preco sem desconto: "))
+
+if(x>=200):
+	print(round(x-(x*0.05,2))
+else:
+	print(x)
+
+-- ERROR:
+File "XXXX", line 5
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:49:46) 
+-- CODE:
+x=float(input("preco sem desconto: "))
+
+if(x>=200):
+	print(round(x-(x*0.05,2)))
+else:
+	print(x)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(x-(x*0.05,2)))
+TypeError: unsupported operand type(s) for -: 'float' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:50:19) 
+-- CODE:
+x=float(input("preco sem desconto: "))
+
+if(x>=200):
+	print(round(x-(x*0.05)),2)
+else:
+	print(x)
+
+-- OUTPUT:
+190 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:50:47) 
+-- CODE:
+x=float(input("preco sem desconto: "))
+
+if(x>=200):
+	print(round(x-(x*0.05),2))
+else:
+	print(x)
+
+-- OUTPUT:
+190.09
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 10:50:58) 
+-- CODE:
+x=float(input("preco sem desconto: "))
+
+if(x>=200):
+	print(round(x-(x*0.05),2))
+else:
+	print(x)
+
+-- EXECUTION TIME:
+0.191415
+-- TEST CASE 1:
+---- input:
+200.09
+---- correct output:
+190.09
+---- user output:
+190.09
+-- TEST CASE 2:
+---- input:
+200.53
+---- correct output:
+190.5
+---- user output:
+190.5
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

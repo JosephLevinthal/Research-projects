@@ -1,0 +1,309 @@
+== TEST (2019-05-16 09:52:19) 
+-- CODE:
+num=int(input("digite um numero: "))
+contadora=1
+apr=1/12
+
+while(contadora<num):
+	denominador=((contadora+2)*(3**contadora+1))
+	apr=apr*(apr+(-1)**(contadora+1)*1/denominador)
+	
+	contadora=contadora+1
+	
+print(round(apr, 8))
+-- OUTPUT:
+-0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 09:53:12) 
+-- CODE:
+num=int(input("digite um numero: "))
+contadora=1
+apr=1/12
+
+while(contadora<num):
+	denominador=((contadora+2)*(3**contadora+1))
+	apr=(apr+(-1)**(contadora+1)*1/denominador)
+	
+	contadora=contadora+1
+	
+print(round(apr, 8))
+-- OUTPUT:
+0.14723
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 09:53:40) 
+-- CODE:
+num=int(input("digite um numero: "))
+contadora=1
+apr=1/12
+
+while(contadora<num):
+	denominador=((contadora+2)*(3**contadora+1))
+	apr=apr+(-1)**(contadora+1)*1/denominador
+	
+	contadora=contadora+1
+	
+print(round(apr, 8))
+-- OUTPUT:
+0.14723
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 09:53:56) 
+-- CODE:
+num=int(input("digite um numero: "))
+contadora=1
+apr=1/12
+
+while(contadora<num):
+	denominador=((contadora+2)*(3**contadora+1))
+	apr=apr+(-1)**(contadora)*1/denominador
+	
+	contadora=contadora+1
+	
+print(round(apr, 8))
+-- OUTPUT:
+0.01943667
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 09:55:01) 
+-- CODE:
+num=int(input("digite um numero: "))
+contadora=0
+apr=1/12
+
+while(contadora<num):
+	denominador=((contadora+2)*(3**contadora+1))
+	apr=apr+(-1)**(contadora+1)*1/denominador
+	
+	contadora=contadora+1
+	
+print(round(apr, 8))
+-- OUTPUT:
+-0.10277
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 09:57:44) 
+-- CODE:
+num=int(input("digite um numero: "))
+contadora=1
+apr=1/12
+fr=0
+
+while(contadora<num):
+	denominador=((contadora+2)*(3**(contadora-1))
+	apr=apr+(-1)**(contadora+1)*1/denominador
+	
+	contadora=contadora+1
+	
+print(round(apr, 8))
+-- ERROR:
+File "XXXX", line 8
+    apr=apr+(-1)**(contadora+1)*1/denominador
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 09:58:39) 
+-- CODE:
+num=int(input("digite um numero: "))
+contadora=1
+apr=1/12
+fr=0
+
+while(contadora<num):
+	denominador=((contadora+2)*(3**(contadora))
+	apr=apr+(-1)**(contadora+1)*1/denominador
+	
+	contadora=contadora+1
+	
+print(round(apr, 8))
+-- ERROR:
+File "XXXX", line 8
+    apr=apr+(-1)**(contadora+1)*1/denominador
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 09:58:50) 
+-- CODE:
+num=int(input("digite um numero: "))
+contadora=1
+apr=1/12
+
+
+while(contadora<num):
+	denominador=((contadora+2)*(3**(contadora))
+	apr=apr+(-1)**(contadora+1)*1/denominador
+	
+	contadora=contadora+1
+	
+print(round(apr, 8))
+-- ERROR:
+File "XXXX", line 8
+    apr=apr+(-1)**(contadora+1)*1/denominador
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 15:44:10) 
+-- CODE:
+num=int(input("digite um numero: "))
+contadora=1
+apr=1/12
+
+
+while(contadora<num):
+	denominador=((contadora+2)*(3**(contadora))
+	apr=apr*(-1)**(contadora+1)*1/denominador
+	
+	contadora=contadora+1
+	
+print(round(apr, 8))
+-- ERROR:
+File "XXXX", line 8
+    apr=apr*(-1)**(contadora+1)*1/denominador
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 15:44:25) 
+-- CODE:
+num=int(input("digite um numero: "))
+contadora=1
+apr=1/12
+
+
+while(contadora<num):
+	denominador=((contadora+2)*(3**(contadora))
+	apr=apr+(-1)**(contadora+1)*1/denominador
+	
+	contadora=contadora+1
+	
+print(round(apr, 8))
+-- ERROR:
+File "XXXX", line 8
+    apr=apr+(-1)**(contadora+1)*1/denominador
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 15:44:36) 
+-- CODE:
+num=int(input("digite um numero: "))
+contadora=1
+apr=1/12
+
+
+while(contadora<num):
+	denominador=((contadora+2)*(3**(contadora))
+	apr=apr+(-1)**(contadora)*1/denominador
+	
+	contadora=contadora+1
+	
+print(round(apr, 8))
+-- ERROR:
+File "XXXX", line 8
+    apr=apr+(-1)**(contadora)*1/denominador
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 15:51:00) 
+-- CODE:
+num=int(input("digite um numero: "))
+contadora=1
+apr=1/12
+pt=0
+
+while(contadora<num):
+	if(denominador>1)
+	denominador=contadora*3**pt
+	else:
+		denominador=contadora*(3**(pt+1))
+		apr=apr+(-1)**(contadora)*1/denominador
+	
+	contadora=contadora+1
+	
+print(round(apr, 8))
+-- ERROR:
+File "XXXX", line 7
+    if(denominador>1)
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 15:51:11) 
+-- CODE:
+num=int(input("digite um numero: "))
+contadora=1
+apr=1/12
+pt=0
+
+while(contadora<num):
+	if(denominador>1):
+	denominador=contadora*3**pt
+	else:
+		denominador=contadora*(3**(pt+1))
+		apr=apr+(-1)**(contadora)*1/denominador
+	
+	contadora=contadora+1
+	
+print(round(apr, 8))
+-- ERROR:
+File "XXXX", line 8
+    denominador=contadora*3**pt
+              ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 15:51:35) 
+-- CODE:
+num=int(input("digite um numero: "))
+contadora=1
+apr=1/12
+pt=0
+
+while(contadora<num):
+	if(denominador>1):
+		denominador=contadora*3**pt
+	else:
+		denominador=contadora*(3**(pt+1))
+		apr=apr+(-1)**(contadora)*1/denominador
+	
+	contadora=contadora+1
+	
+print(round(apr, 8))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    if(denominador>1):
+NameError: name 'denominador' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 15:52:51) 
+-- CODE:
+num=int(input("digite um numero: "))
+contadora=1
+apr=1/12
+pt=0
+denominador=1
+while(contadora<num):
+	if(denominador>1):
+		denominador=contadora*3**pt
+	else:
+		denominador=contadora*(3**(pt+1))
+		apr=apr+(-1)**(contadora)*1/denominador
+	
+	contadora=contadora+1
+	
+print(round(apr, 8))
+-- OUTPUT:
+-0.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 15:53:17) 
+-- CODE:
+num=int(input("digite um numero: "))
+contadora=1
+apr=1/12
+pt=0
+denominador=0
+while(contadora<num):
+	if(denominador>1):
+		denominador=contadora*3**pt
+	else:
+		denominador=contadora*(3**(pt+1))
+		apr=apr+(-1)**(contadora)*1/denominador
+	
+	contadora=contadora+1
+	
+print(round(apr, 8))
+-- OUTPUT:
+-0.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,115 @@
+== TEST (2019-04-04 19:35:03) 
+-- CODE:
+n = int(input("quantas pessoas estao no grupo? "))
+
+from math import *
+formula = 1 - factorial(365)/ factorial(365 - n) * 1/365**n
+
+total = formula%100
+
+print(total)
+-- OUTPUT:
+0.16702478883806438
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:35:19) 
+-- CODE:
+n = int(input("quantas pessoas estao no grupo? "))
+
+from math import *
+formula = 1 - factorial(365)/ factorial(365 - n) * 1/365**n
+
+total = %formula
+
+print(total)
+-- ERROR:
+File "XXXX", line 6
+    total = %formula
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:36:38) 
+-- CODE:
+n = int(input("quantas pessoas estao no grupo? "))
+
+from math import *
+formula = (1 - factorial(365)/ factorial(365 - n) * (1/365**n))*100
+
+
+print(formula)
+-- OUTPUT:
+16.70247888380645
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:36:52) 
+-- CODE:
+n = int(input("quantas pessoas estao no grupo? "))
+
+from math import *
+formula = (1 - factorial(365)/ factorial(365 - n) * (1/365**n))*100
+
+
+print(round(formula, 2)
+-- ERROR:
+File "XXXX", line 8
+    
+                           ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:37:01) 
+-- CODE:
+n = int(input("quantas pessoas estao no grupo? "))
+
+from math import *
+formula = (1 - factorial(365)/ factorial(365 - n) * (1/365**n))*100
+
+print(round(formula, 2)
+-- ERROR:
+File "XXXX", line 7
+    
+                           ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:37:09) 
+-- CODE:
+n = int(input("quantas pessoas estao no grupo? "))
+
+from math import *
+formula = (1 - factorial(365)/ factorial(365 - n) * (1/365**n))*100
+
+print(round(formula, 2))
+-- OUTPUT:
+16.7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-04 19:37:11) 
+-- CODE:
+n = int(input("quantas pessoas estao no grupo? "))
+
+from math import *
+formula = (1 - factorial(365)/ factorial(365 - n) * (1/365**n))*100
+
+print(round(formula, 2))
+-- EXECUTION TIME:
+0.143772
+-- TEST CASE 1:
+---- input:
+12
+---- correct output:
+16.7
+---- user output:
+16.7
+-- TEST CASE 2:
+---- input:
+24
+---- correct output:
+53.83
+---- user output:
+53.83
+-- TEST CASE 3:
+---- input:
+99
+---- correct output:
+100.0
+---- user output:
+100.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

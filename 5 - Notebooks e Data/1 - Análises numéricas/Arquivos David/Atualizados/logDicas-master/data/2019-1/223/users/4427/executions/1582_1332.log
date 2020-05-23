@@ -1,0 +1,184 @@
+== TEST (2019-04-02 12:38:16) 
+-- CODE:
+aresta = 5
+area = ((3 / 2) * ((3)**0.5)))*(a*2))
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 2
+    area = ((3 / 2) * ((3)**0.5)))*(a*2))
+                                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:38:41) 
+-- CODE:
+aresta = 5
+area = ((3 / 2)*((3)**0.5))*(a*2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = ((3 / 2)*((3)**0.5))*(a*2)
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:40:17) 
+-- CODE:
+aresta = 5
+var1 = 3 / 2
+area = var1*((3)**0.5))*(a*2)
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 3
+    area = var1*((3)**0.5))*(a*2)
+                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:41:05) 
+-- CODE:
+aresta = a
+a=5
+var1 = 3 / 2
+area = var1*((3)**0.5))*(a*2)
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    area = var1*((3)**0.5))*(a*2)
+                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:41:27) 
+-- CODE:
+aresta = a
+a=5
+var1 = 3 / 2
+area = var1*(3**0.5))*(a*2)
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    area = var1*(3**0.5))*(a*2)
+                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:41:55) 
+-- CODE:
+aresta = a
+a = 5
+var1 = 3 / 2
+area = var1*(3**0.5)*(a*2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    aresta = a
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:42:22) 
+-- CODE:
+aresta = 5
+var1 = 3 / 2
+area = var1*(3**0.5)*(a*2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    area = var1*(3**0.5)*(a*2)
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:45:31) 
+-- CODE:
+area = 5 
+area = 3/2 * 3 ** 0.5 * area ** 2
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    area = var1*(3**0.5)*(a*2)
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:46:00) 
+-- CODE:
+area = 5 
+area = 3/2
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    area = var1*(3**0.5)*(a*2)
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:47:31) 
+-- CODE:
+aresta = 5 
+area = 3/2
+print(round(area,2))
+
+-- OUTPUT:
+1.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:48:10) 
+-- CODE:
+aresta = 5 
+area = 3/2 * (3 ** 0.5)
+print(round(area,2))
+
+-- OUTPUT:
+2.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:48:34) 
+-- CODE:
+aresta = 5 
+area = 3/2 * (3 ** 0.5) * (aresta ** 2)
+print(round(area,2))
+
+-- OUTPUT:
+64.95
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:49:18) 
+-- CODE:
+aresta = 5 
+area = 3/2 * (3 ** 0.5) * (aresta ** 2)
+print(round(area,4))
+
+-- OUTPUT:
+64.9519
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:49:51) 
+-- CODE:
+aresta = 5 
+area = 3/2 * (3 ** 0.5) * (aresta ** 2)
+print(round(area,4))
+
+-- OUTPUT:
+64.9519
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:50:07) 
+-- CODE:
+aresta = 5 
+area = 3/2 * (3 ** 0.5) * (aresta ** 2)
+print(round(area,4))
+
+-- OUTPUT:
+64.9519
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 14:29:34) 
+-- CODE:
+aresta = 5 
+area = 3/2 * (3 ** 0.5) * (aresta ** 2)
+print(round(area,4))
+
+-- EXECUTION TIME:
+0.14829
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+64.9519
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

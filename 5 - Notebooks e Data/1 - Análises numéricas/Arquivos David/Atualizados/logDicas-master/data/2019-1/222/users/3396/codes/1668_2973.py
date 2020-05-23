@@ -1,0 +1,11 @@
+poi=int(input("poi:"))
+vob=int(input("vob:"))
+ted=int(input("ted:"))
+limv=100
+s=(poi+(vob*ted))
+if(s>limv):
+	print(s)
+	print("ACIMA")
+else:
+	print(s)
+	print("OK")

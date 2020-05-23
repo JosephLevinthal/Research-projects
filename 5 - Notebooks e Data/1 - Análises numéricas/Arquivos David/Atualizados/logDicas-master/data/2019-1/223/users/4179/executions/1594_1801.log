@@ -1,0 +1,154 @@
+== TEST (2019-04-04 17:14:08) 
+-- CODE:
+N=float(input("Qual o nome do objeto:"))
+R=float(int(input("Quantas repeticoes:")))
+
+N*R
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    N=float(input())
+ValueError: could not convert string to float: 'livro'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 17:14:28) 
+-- CODE:
+N=float(input("Qual o nome do objeto:"))
+R=float(int(input("Quantas repeticoes:")))
+
+N*R
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    N=float(input())
+ValueError: could not convert string to float: 'livro'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 17:15:03) 
+-- CODE:
+N=float(input("Qual o nome do objeto:"))
+R=float(int(input("Quantas repeticoes:")))
+
+frase("Abra + N")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    N=float(input())
+ValueError: could not convert string to float: 'livro'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 17:16:04) 
+-- CODE:
+N=(input("Qual o nome do objeto:"))
+R=float(int(input("Quantas repeticoes:")))
+
+frase("Abra" + N)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    frase("Abra" + N)
+NameError: name 'frase' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 17:16:43) 
+-- CODE:
+N=(input("Qual o nome do objeto:"))
+R=float(int(input("Quantas repeticoes:")))
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    frase("Abra" + N)
+NameError: name 'frase' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 17:24:44) 
+-- CODE:
+N=input("Qual o nome do objeto:")
+R=int(input("Quantas repeticoes:"))
+
+frase=("Abra" + " " + n " ") * R
+
+-- ERROR:
+File "XXXX", line 4
+    frase=("Abra" + " " + n " ") * R
+                              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 17:24:50) 
+-- CODE:
+N=input("Qual o nome do objeto:")
+R=int(input("Quantas repeticoes:"))
+
+frase=("Abra" + " " + n + " ") * R
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    frase=("Abra" + " " + n + " ") * R
+NameError: name 'n' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 17:25:08) 
+-- CODE:
+N=input("Qual o nome do objeto:")
+R=int(input("Quantas repeticoes:"))
+
+frase=("Abra" + " " + N + " ") * R
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    frase=("Abra" + " " + n + " ") * R
+NameError: name 'n' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 17:25:59) 
+-- CODE:
+N=input("Qual o nome do objeto:")
+R=int(input("Quantas repeticoes:"))
+
+frase=("Abra" + " " + N + " ") * R
+
+print(frase)
+
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-04 17:26:09) 
+-- CODE:
+N=input("Qual o nome do objeto:")
+R=int(input("Quantas repeticoes:"))
+
+frase=("Abra" + " " + N + " ") * R
+
+print(frase)
+
+-- EXECUTION TIME:
+0.233144
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

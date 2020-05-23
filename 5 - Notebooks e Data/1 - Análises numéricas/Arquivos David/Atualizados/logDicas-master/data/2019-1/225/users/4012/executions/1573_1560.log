@@ -1,0 +1,43 @@
+== TEST (2019-03-12 22:06:18) 
+-- CODE:
+string = "Augusta Ada Byron, a Condessa de Lovelace, nasceu em 1815, na Inglaterra."
+print(string(Augusta Ada Byron, a Condessa de Lovelace, nasceu em 1815, na Inglaterra.).lower())
+-- ERROR:
+File "XXXX", line 2
+    print(string(Augusta Ada Byron, a Condessa de Lovelace, nasceu em 1815, na Inglaterra.).lower())
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 22:06:43) 
+-- CODE:
+string = "Augusta Ada Byron, a Condessa de Lovelace, nasceu em 1815, na Inglaterra."
+print(string("Augusta Ada Byron, a Condessa de Lovelace, nasceu em 1815, na Inglaterra.").lower())
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print(string("Augusta Ada Byron, a Condessa de Lovelace, nasceu em 1815, na Inglaterra.").lower())
+TypeError: 'str' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 22:06:56) 
+-- CODE:
+string = "Augusta Ada Byron, a Condessa de Lovelace, nasceu em 1815, na Inglaterra."
+print(str("Augusta Ada Byron, a Condessa de Lovelace, nasceu em 1815, na Inglaterra.").lower())
+-- OUTPUT:
+augusta ada byron, a condessa de lovelace, nasceu em 1815, na inglaterra.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-12 22:07:07) 
+-- CODE:
+string = "Augusta Ada Byron, a Condessa de Lovelace, nasceu em 1815, na Inglaterra."
+print(str("Augusta Ada Byron, a Condessa de Lovelace, nasceu em 1815, na Inglaterra.").lower())
+-- EXECUTION TIME:
+0.19674
+-- TEST CASE 1:
+---- input:
+nonono
+---- correct output:
+augusta ada byron, a condessa de lovelace, nasceu em 1815, na inglaterra.
+---- user output:
+augusta ada byron, a condessa de lovelace, nasceu em 1815, na inglaterra.
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,350 @@
+== TEST (2019-04-09 10:59:28) 
+-- CODE:
+from math import*
+v0 = float(input("Velocidade inicial:"))
+a = int(input("Angulo:"))
+d = float(input())
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    a = int(input())
+ValueError: invalid literal for int() with base 10: '45.5'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:02:16) 
+-- CODE:
+from math import*
+v0 = float(input("Velocidade inicial:"))
+a = int(input("Angulo:"))
+d = float(input("Distancia do porco horizontalmente:"))
+g= 9.8
+a = radians(a)
+R = (((v0)**2)*sin(2*a))/g
+print(R)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    a = int(input())
+ValueError: invalid literal for int() with base 10: '45.5'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:02:32) 
+-- CODE:
+from math import*
+v0 = float(input("Velocidade inicial:"))
+a = int(input("Angulo:"))
+d = float(input("Distancia do porco horizontalmente:"))
+g= 9.8
+a = radians(a)
+R = (((v0)**2)*sin(2*a))/g
+print(R)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    a = int(input())
+ValueError: invalid literal for int() with base 10: '45.5'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:02:47) 
+-- CODE:
+from math import*
+v0 = float(input("Velocidade inicial:"))
+a = float(input("Angulo:"))
+d = float(input("Distancia do porco horizontalmente:"))
+g= 9.8
+a = radians(a)
+R = (((v0)**2)*sin(2*a))/g
+print(R)
+-- OUTPUT:
+11.2482865705094
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:03:35) 
+-- CODE:
+from math import*
+v0 = float(input("Velocidade inicial:"))
+a = float(input("Angulo:"))
+d = float(input("Distancia do porco horizontalmente:"))
+g= 9.8
+a = radians(a)
+R = (((v0)**2)*sin(2*a))/g
+print(R)
+-- OUTPUT:
+11.2482865705094
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:05:56) 
+-- CODE:
+from math import*
+v0 = float(input("Velocidade inicial:"))
+a = float(input("Angulo:"))
+d = float(input("Distancia do porco horizontalmente:"))
+g= 9.8
+a = radians(a)
+R = (((v0)**2)*sin(2*a))/g
+x = abs(R-d)
+print(x)
+-- OUTPUT:
+0.05171342949060076
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:07:55) 
+-- CODE:
+from math import*
+v0 = float(input("Velocidade inicial:"))
+a = float(input("Angulo:"))
+d = float(input("Distancia do porco horizontalmente:"))
+g= 9.8
+a = radians(a)
+R = (((v0)**2)*sin(2*a))/g
+if (abs(R-d)<=0,1):
+	print("sim")
+else:
+	print("nao")
+
+-- OUTPUT:
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:08:27) 
+-- CODE:
+from math import*
+v0 = float(input("Velocidade inicial:"))
+a = float(input("Angulo:"))
+d = float(input("Distancia do porco horizontalmente:"))
+g= 9.8
+a = radians(a)
+R = (((v0)**2)*sin(2*a))/g
+if (abs(d-R)<=0,1):
+	print("sim")
+else:
+	print("nao")
+
+-- OUTPUT:
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:09:07) 
+-- CODE:
+from math import*
+v0 = float(input("Velocidade inicial:"))
+a = float(input("Angulo:"))
+d = float(input("Distancia do porco horizontalmente:"))
+g= 9.8
+ang = radians(a)
+R = (((v0)**2)*sin(2*ang))/g
+if (abs(d-R)<=0,1):
+	print("sim")
+else:
+	print("nao")
+
+-- OUTPUT:
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:09:35) 
+-- CODE:
+from math import*
+v0 = float(input("Velocidade inicial:"))
+a = float(input("Angulo:"))
+d = float(input("Distancia do porco horizontalmente:"))
+g= 9.8
+ang = radians(a)
+R = (((v0)**2)*sin(2*ang))/g
+if (abs(d-R)>=0,1):
+	print("sim")
+else:
+	print("nao")
+
+-- OUTPUT:
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:09:51) 
+-- CODE:
+from math import*
+v0 = float(input("Velocidade inicial:"))
+a = float(input("Angulo:"))
+d = float(input("Distancia do porco horizontalmente:"))
+g= 9.8
+ang = radians(a)
+R = (((v0)**2)*sin(2*ang))/g
+if (abs(d-R)<=0,1):
+	print("sim")
+else:
+	print("nao")
+
+-- OUTPUT:
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:11:13) 
+-- CODE:
+from math import*
+v0 = float(input("Velocidade inicial:"))
+a = float(input("Angulo:"))
+d = float(input("Distancia do porco horizontalmente:"))
+g= 9.8
+ang = radians(a)
+R = (((v0)**2)*sin(2*ang))/g
+if (abs(d-R)<=0.1):
+	print("sim")
+else:
+	print("nao")
+
+-- OUTPUT:
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 11:11:16) 
+-- CODE:
+from math import*
+v0 = float(input("Velocidade inicial:"))
+a = float(input("Angulo:"))
+d = float(input("Distancia do porco horizontalmente:"))
+g= 9.8
+ang = radians(a)
+R = (((v0)**2)*sin(2*ang))/g
+if (abs(d-R)<=0.1):
+	print("sim")
+else:
+	print("nao")
+
+-- EXECUTION TIME:
+0.19023
+-- TEST CASE 1:
+---- input:
+10.5
+45.5
+11.3
+---- correct output:
+sim
+---- user output:
+sim
+-- TEST CASE 2:
+---- input:
+29.5
+17.1
+51.0
+---- correct output:
+nao
+---- user output:
+nao
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 11:33:30) 
+-- CODE:
+from math import*
+v0 = float(input("Velocidade inicial:"))
+a = float(input("Angulo:"))
+d = float(input("Distancia do porco horizontalmente:"))
+g= 9.8
+ang = radians(a)
+R = (((v0)**2)*sin(2*ang))/g
+if (abs(d-R)>=0.1):
+	print("sim")
+else:
+	print("nao")
+
+-- EXECUTION TIME:
+0.156178
+-- TEST CASE 1:
+---- input:
+10.5
+45.5
+11.3
+---- correct output:
+sim
+---- user output:
+nao
+-- TEST CASE 2:
+---- input:
+29.5
+17.1
+51.0
+---- correct output:
+nao
+---- user output:
+sim
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 11:33:36) 
+-- CODE:
+from math import*
+v0 = float(input("Velocidade inicial:"))
+a = float(input("Angulo:"))
+d = float(input("Distancia do porco horizontalmente:"))
+g= 9.8
+ang = radians(a)
+R = (((v0)**2)*sin(2*ang))/g
+if (abs(d-R)<=0.1):
+	print("sim")
+else:
+	print("nao")
+
+-- EXECUTION TIME:
+0.202253
+-- TEST CASE 1:
+---- input:
+10.5
+45.5
+11.3
+---- correct output:
+sim
+---- user output:
+sim
+-- TEST CASE 2:
+---- input:
+29.5
+17.1
+51.0
+---- correct output:
+nao
+---- user output:
+nao
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:20:33) 
+-- CODE:
+from math import*
+v0 = float(input("Velocidade inicial:"))
+a = float(input("Angulo:"))
+d = float(input("Distancia do porco horizontalmente:"))
+g= 9.8
+ang = radians(a)
+R = (((v0)**2)*sin(2*ang))/g
+if (abs(d-R)<=0.1):
+	print("sim")
+else:
+	print("nao")
+
+-- OUTPUT:
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:21:09) 
+-- CODE:
+from math import*
+v0 = float(input("Velocidade inicial:"))
+a = float(input("Angulo:"))
+d = float(input("Distancia do porco horizontalmente:"))
+g= 9.8
+ang = radians(a)
+R = (((v0)**2)*sin(2*ang))/g
+x = abs(d-R)
+if (x<=0.1):
+	print("sim")
+else:
+	print("nao")
+
+-- OUTPUT:
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:21:38) 
+-- CODE:
+from math import*
+v0 = float(input("Velocidade inicial:"))
+a = float(input("Angulo:"))
+d = float(input("Distancia do porco horizontalmente:"))
+g= 9.8
+ang = radians(a)
+R = (((v0)**2)*sin(2*ang))/g
+x = abs(d-R)
+if (x<=0.1):
+	print("sim")
+else:
+	print("nao")
+
+-- OUTPUT:
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

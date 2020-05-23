@@ -1,0 +1,406 @@
+== TEST (2019-06-10 16:52:19) 
+-- CODE:
+num = int(input())
+arte=[]
+while(i < num):
+	while(j < (num*2)):
+		if(j): print("o", end="")
+		else: print("*", end="")
+		j+=1
+	print("")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    while(i < num):
+NameError: name 'i' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 16:53:24) 
+-- CODE:
+num = int(input())
+arte=[]
+i=0
+while(i < num):
+	j=0
+	while(j < (num*2)):
+		if(j): print("o", end="")
+		else: print("*", end="")
+		j+=1
+	i+=1
+	print("")
+	
+-- OUTPUT:
+*ooooooooooooooooooooo
+*ooooooooooooooooooooo
+*ooooooooooooooooooooo
+*ooooooooooooooooooooo
+*ooooooooooooooooooooo
+*ooooooooooooooooooooo
+*ooooooooooooooooooooo
+*ooooooooooooooooooooo
+*ooooooooooooooooooooo
+*ooooooooooooooooooooo
+*ooooooooooooooooooooo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 16:58:50) 
+-- CODE:
+num = int(input())
+arte=[]
+i=1
+while(i <= num):
+	j=0
+	while(j < num):
+		if(j == (num-i)): print('o', end="")
+		else: print('*', end="")
+	
+-- OUTPUT:
+****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 16:59:19) 
+-- CODE:
+num = int(input())
+arte=[]
+i=1
+while(i <= num):
+	j=0
+	while(j < num):
+		if(j == (num-i)): print('o', end="")
+		else: print('*', end="")
+		j+=1
+	i+=1
+	
+-- OUTPUT:
+**********o*********o*********o*********o*********o*********o*********o*********o*********o*********o*********o**********
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 16:59:54) 
+-- CODE:
+num = int(input())
+arte=[]
+i=1
+while(i <= num):
+	j=0
+	while(j < num):
+		if(j == (num-i)): print('o', end="")
+		else: print('*', end="")
+		if(j==(num*2)): print("")
+		j+=1
+	i+=1
+	
+-- OUTPUT:
+**********o*********o*********o*********o*********o*********o*********o*********o*********o*********o*********o**********
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:01:10) 
+-- CODE:
+num = int(input())
+arte=[]
+i=1
+while(i <= num):
+	j=0
+	while(j < num):
+		if(j == (num-i)): print('o', end="")
+		else: print('*', end="")
+		j+=1
+	j=num
+	while(j<(num*2)):
+		if(j==num+i): print('o', end="")
+		else: print('*', end="")
+		if(j==(num*2)): print("")
+	i+=1
+	
+-- OUTPUT:
+**********o*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:01:25) 
+-- CODE:
+num = int(input())
+arte=[]
+i=1
+while(i <= num):
+	j=0
+	while(j < num):
+		if(j == (num-i)): print('o', end="")
+		else: print('*', end="")
+		j+=1
+	j=num
+	while(j<(num*2)):
+		if(j==num+i): print('o', end="")
+		else: print('*', end="")
+		if(j==(num*2)): print("")
+		j+=1
+	i+=1
+	
+-- OUTPUT:
+**********o*o******************o***o****************o*****o**************o*******o************o*********o**********o***********o********o*************o******o***************o****o*****************o**o*******************oo*********************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:01:48) 
+-- CODE:
+num = int(input())
+arte=[]
+i=1
+while(i <= num):
+	j=0
+	while(j < num):
+		if(j == (num-i)): print('o', end="")
+		else: print('*', end="")
+		j+=1
+	j=num
+	while(j<(num*2)):
+		if(j==num+i): print('o', end="")
+		else: print('*', end="")
+		if(j==(num*2)-1): print("")
+		j+=1
+	i+=1
+	
+-- OUTPUT:
+**********o*o*********
+*********o***o********
+********o*****o*******
+*******o*******o******
+******o*********o*****
+*****o***********o****
+****o*************o***
+***o***************o**
+**o*****************o*
+*o*******************o
+o*********************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 17:02:39) 
+-- CODE:
+num = int(input())
+arte=[]
+i=1
+while(i <= num):
+	j=0
+	while(j <= num):
+		if(j == (num-i)): print('o', end="")
+		else: print('*', end="")
+		j+=1
+	j=num
+	while(j<=(num*2)):
+		if(j==num+i): print('o', end="")
+		else: print('*', end="")
+		if(j==(num*2)): print("")
+		j+=1
+	i+=1
+	
+-- OUTPUT:
+**********o**o**********
+*********o****o*********
+********o******o********
+*******o********o*******
+******o**********o******
+*****o************o*****
+****o**************o****
+***o****************o***
+**o******************o**
+*o********************o*
+o**********************o
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-10 17:06:03) 
+-- CODE:
+num = int(input())
+arte=[]
+i=1
+while(i <= num):
+	j=0
+	while(j < num):
+		if(j == (num-i)): print('o', end="")
+		else: print('*', end="")
+	
+-- EXECUTION TIME:
+425.863
+-- ERROR:
+Killed
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 07:09:04) 
+-- CODE:
+num = int(input())
+arte=[]
+i=1
+while(i <= num):
+	j=0
+	while(j <= num):
+		if(j == (num-i)): print('o', end="")
+		else: print('*', end="")
+		j+=1
+	j=num
+	while(j<=(num*2)):
+		if(j==num+i): print('o', end="")
+		else: print('*', end="")
+		if(j==(num*2)): print("")
+		j+=1
+	i+=1
+	
+-- OUTPUT:
+**********o**o**********
+*********o****o*********
+********o******o********
+*******o********o*******
+******o**********o******
+*****o************o*****
+****o**************o****
+***o****************o***
+**o******************o**
+*o********************o*
+o**********************o
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 07:09:56) 
+-- CODE:
+num = int(input())
+arte=[]
+i=1
+while(i <= num):
+	j=0
+	while(j <= num):
+		if(j == (num-i)): print('o', end="")
+		else: print('*', end="")
+		j+=1
+	j=num
+	while(j<=(num*2)):
+		if(j==num+i):
+	print('o', end="")
+	   else: print('*', end="")
+		if(j==(num*2)): print("")
+		j+=1
+	i+=1
+	
+-- ERROR:
+File "XXXX", line 13
+    print('o', end="")
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 11:30:02) 
+-- CODE:
+n = int(input(" "))
+
+cont = 0
+
+for i in range(n,0,-1):
+	print(i*'*' + 'o'*cont + i*'*')
+	cont = cont + 2
+-- EXECUTION TIME:
+0.781394
+-- TEST CASE 1:
+---- input:
+11
+---- correct output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+---- user output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+-- TEST CASE 2:
+---- input:
+19
+---- correct output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+---- user output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+-- TEST CASE 3:
+---- input:
+26
+---- correct output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo********
+*******oooooooooooooooooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooooooooooooooooo*
+---- user output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo**
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

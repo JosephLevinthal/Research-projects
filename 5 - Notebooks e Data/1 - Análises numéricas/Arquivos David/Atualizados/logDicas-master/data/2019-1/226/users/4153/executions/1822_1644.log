@@ -1,0 +1,139 @@
+== TEST (2019-06-13 11:02:10) 
+-- CODE:
+from numpy import *
+
+notas = array(eval(input("Insira as notas: ")))
+
+rep = 0
+for i in range(size(notas)):
+	if(notas[i] < 5.0):
+		rep = rep + 1
+print(rep)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 11:04:34) 
+-- CODE:
+from numpy import *
+
+notas = array(eval(input("Insira as notas: ")))
+
+rep = 0
+for i in range(size(notas)):
+	if(notas[i] < 5.0):
+		rep = rep + 1
+print(rep)
+ar = zeros(rep)
+x = 0
+for r in range(size(notas)):
+	if(notas[r] < 5):
+		ar[x] = r
+		x = x + 1
+print(ar)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 11:04:56) 
+-- CODE:
+from numpy import *
+
+notas = array(eval(input("Insira as notas: ")))
+
+rep = 0
+for i in range(size(notas)):
+	if(notas[i] < 5.0):
+		rep = rep + 1
+print(rep)
+ar = zeros(rep, dtype=int)
+x = 0
+for r in range(size(notas)):
+	if(notas[r] < 5):
+		ar[x] = r
+		x = x + 1
+print(ar)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 11:05:09) 
+-- CODE:
+from numpy import *
+
+notas = array(eval(input("Insira as notas: ")))
+
+rep = 0
+for i in range(size(notas)):
+	if(notas[i] < 5.0):
+		rep = rep + 1
+print(rep)
+ar = zeros(rep, dtype=int)
+x = 0
+for r in range(size(notas)):
+	if(notas[r] < 5):
+		ar[x] = r
+		x = x + 1
+print(ar)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 11:05:39) 
+-- CODE:
+from numpy import *
+
+notas = array(eval(input("Insira as notas: ")))
+
+rep = 0
+for i in range(size(notas)):
+	if(notas[i] < 5.0):
+		rep = rep + 1
+print(rep)
+ar = zeros(rep, dtype=int)
+x = 0
+for r in range(size(notas)):
+	if(notas[r] < 5):
+		ar[x] = r
+		x = x + 1
+print(ar)
+-- EXECUTION TIME:
+1.05821
+-- TEST CASE 1:
+---- input:
+[4.3,5.2,3.6,10,9.8,7.1,5,9.0,4.2,7.0,4.5]
+---- correct output:
+4
+[ 0  2  8 10]
+---- user output:
+4
+[ 0  2  8 10]
+-- TEST CASE 2:
+---- input:
+[7.5,2.4,3.6,4,7.9,4.5,4.2,7.0,4.5]
+---- correct output:
+6
+[1 2 3 5 6 8]
+---- user output:
+6
+[1 2 3 5 6 8]
+-- TEST CASE 3:
+---- input:
+[3.6,2.9,5,7,4.5,7.8,9.0]
+---- correct output:
+3
+[0 1 4]
+---- user output:
+3
+[0 1 4]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

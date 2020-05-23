@@ -1,0 +1,76 @@
+== TEST (2019-05-28 18:57:25) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+data = input(":")
+dia = int(data[0:2])
+mes = int(data[3:5])
+ano = data[6:]
+ini = 3*(mes - 1)
+fim = ini + 3
+mes_abrev = vet_mes[ini:fim]
+nova_data = str(dia) + '-' + mes_abrev + '-'+ ano
+print(nova_data)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 12:53:10) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+s = input("Digite os caracteres")
+dd=(s[0:2])
+mes = (s[2:4])
+aaaa = (s[4:])
+int(s[2:4])
+mm = vet_mes[int(s[2:4])-1]
+print(dd + " de " + mm + " de " + aaaa)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 12:53:24) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+s = input("Digite os caracteres")
+dd=(s[0:2])
+mes = (s[2:4])
+aaaa = (s[4:])
+int(s[2:4])
+mm = vet_mes[int(s[2:4])-1]
+print(dd + " de " + mm + " de " + aaaa)
+-- EXECUTION TIME:
+0.534216
+-- TEST CASE 1:
+---- input:
+26111982
+---- correct output:
+26 de novembro de 1982
+---- user output:
+26 de novembro de 1982
+-- TEST CASE 2:
+---- input:
+07071854
+---- correct output:
+07 de julho de 1854
+---- user output:
+07 de julho de 1854
+-- TEST CASE 3:
+---- input:
+22082000
+---- correct output:
+22 de agosto de 2000
+---- user output:
+22 de agosto de 2000
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

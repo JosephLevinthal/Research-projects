@@ -1,0 +1,403 @@
+== TEST (2019-04-15 11:59:04) 
+-- CODE:
+tem=float(input("temperau em C ou F?: "))
+val=float(input("valor da temperatura: "))
+c=5/9*(tem-32)
+f=1.8*c-32
+if(tem==c):
+	men=c
+else:
+	men=f
+print(round(men,2))	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    tem=float(input())
+ValueError: could not convert string to float: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 12:00:05) 
+-- CODE:
+tem=float(input("temperau em C ou F?: "))
+val=float(input("valor da temperatura: "))
+c=5/9*(tem-32)
+f=1.8*c-32
+if(tem=="c"):
+	men=c
+else:
+	men="f"
+print(round(men,2))	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    tem=float(input())
+ValueError: could not convert string to float: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 12:01:41) 
+-- CODE:
+tem=input("temperau em C ou F?: ")
+val=float(input("valor da temperatura: "))
+c=5/9*(tem-32)
+f=1.8*c-32
+if(tem=="c"):
+	men=c
+else:
+	men=f
+print(round(men,2))	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    c=5/9*(tem-32)
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 12:02:47) 
+-- CODE:
+tem=input("temperau em C ou F?: ")
+val=float(input("valor da temperatura: "))
+c=5/9*(val-32)
+f=1.8*val-32
+if(tem=="c"):
+	men=c
+else:
+	men=f
+print(round(men,2))	
+-- OUTPUT:
+544.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 12:04:12) 
+-- CODE:
+tem=input("temperau em C ou F?: ")
+val=float(input("valor da temperatura: "))
+c=5/9*(val-32)
+f=1.8*val+32
+if(tem=="c"):
+	men=c
+else:
+	men=f
+print(round(men,2))	
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 12:08:12) 
+-- CODE:
+tem=input("temperatura em C ou F?: ")
+val=float(input("valor da temperatura: "))
+c=5/9*(val-32)
+f=1.8*val+32
+if(tem=="c"):
+	men=c
+else:
+	men=f
+print(round(men,2))	
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 12:11:38) 
+-- CODE:
+tem=input("temperatura em C ou F?: ")
+val=float(input("valor da temperatura: "))
+c=5/9*(val-32)
+f=1.8*val+32
+if(tem=="c"):
+	men=f
+else:
+	men=c
+print(round(men,2))	
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 12:12:24) 
+-- CODE:
+tem=input("temperatura em C ou F?: ")
+val=float(input("valor da temperatura: "))
+c=5/9*(val-32)
+f=1.8*val+32
+if(tem=="c"):
+	men=f
+else:
+	men=c
+print(round(men,2))	
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 12:12:45) 
+-- CODE:
+tem=input("temperatura em C ou F?: ")
+val=float(input("valor da temperatura: "))
+c=5/9*(val-32)
+f=1.8*val+32
+if(tem=="c"):
+	men=f
+else:
+	men=c
+print(round(men,2))	
+-- EXECUTION TIME:
+0.120454
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 12:12:52) 
+-- CODE:
+tem=input("temperatura em C ou F?: ")
+val=float(input("valor da temperatura: "))
+c=5/9*(val-32)
+f=1.8*val+32
+if(tem=="c"):
+	men=f
+else:
+	men=c
+print(round(men,2))	
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 12:14:04) 
+-- CODE:
+tem=input("temperatura em C ou F?: ")
+val=float(input("valor da temperatura: "))
+c=5/9*(val-32)
+f=1.8*val+32
+if(tem=="c"):
+	men=f
+else:
+	men=c
+print(round(men,2))	
+-- EXECUTION TIME:
+0.139979
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 12:17:59) 
+-- CODE:
+tem=input("temperatura em C ou F?: ")
+val=float(input("valor da temperatura: "))
+c=5/9*(val-32)
+f=1.8*val+32
+if(tem.upper()=="c"):
+	men=f
+else:
+	men=c
+print(round(men,2))	
+-- EXECUTION TIME:
+0.192036
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 12:20:46) 
+-- CODE:
+tem=input("temperatura em C ou F?: ")
+val=float(input("valor da temperatura: "))
+c=5/9*(val-32)
+f=1.8*val+32
+if(tem.upper()=="c"):
+	men=f
+else:
+	men=c
+print(round(men,2))	
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 12:21:21) 
+-- CODE:
+tem=input("temperatura em C ou F?: ")
+val=float(input("valor da temperatura: "))
+c=5/9*(val-32)
+f=1.8*val+32
+if(tem.upper()=="c"):
+	men=f
+else:
+	men=c
+print(round(men,2))	
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 12:21:38) 
+-- CODE:
+tem=input("temperatura em C ou F?: ")
+val=float(input("valor da temperatura: "))
+c=5/9*(val-32)
+f=1.8*val+32
+if(tem.upper()=="c"):
+	men=f
+else:
+	men=c
+print(round(men,2))	
+-- EXECUTION TIME:
+0.131318
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 12:25:57) 
+-- CODE:
+tem=input("temperatura em C ou F?: ")
+val=float(input("valor da temperatura: "))
+x=val.upper()
+c=5/9*(x-32)
+f=1.8*x+32
+if(tem.upper()=="c"):
+	men=f
+else:
+	men=c
+print(round(men,2))	
+-- EXECUTION TIME:
+0.142852
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1643/2445/main.py", line 3, in <module>
+    x=val.upper()
+AttributeError: 'float' object has no attribute 'upper'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 12:26:01) 
+-- CODE:
+tem=input("temperatura em C ou F?: ")
+val=float(input("valor da temperatura: "))
+x=val.upper()
+c=5/9*(x-32)
+f=1.8*x+32
+if(tem.upper()=="c"):
+	men=f
+else:
+	men=c
+print(round(men,2))	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    x=val.upper()
+AttributeError: 'float' object has no attribute 'upper'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 12:28:12) 
+-- CODE:
+tem=input("temperatura em C ou F?: ")
+val=float(input("valor da temperatura: "))
+x=tem.upper()
+c=5/9*(val-32)
+f=1.8*val+32
+if(x=="C"):
+	men=f
+else:
+	men=c
+print(round(men,2))	
+-- EXECUTION TIME:
+0.147702
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

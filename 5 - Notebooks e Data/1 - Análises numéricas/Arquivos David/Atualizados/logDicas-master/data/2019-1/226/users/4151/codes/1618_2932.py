@@ -1,0 +1,5 @@
+r1=float(input("resistor1: "))
+r2=float(input("resistor2: "))
+r3=float(input("resistor3: "))
+req=(r1*r2*r3)/((r1*r2)+(r2*r3)+(r1*r3))
+print(req)

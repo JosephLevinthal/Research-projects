@@ -1,0 +1,106 @@
+== TEST (2019-06-11 11:21:48) 
+-- CODE:
+from numpy import*
+from math import*
+
+j = array(eval(input('')))
+
+m = sum(j)/size(j)
+
+for i in range(j):
+	d = sqrt((j[i]-m)**2/size(j)-1)**1/2
+	
+print(d)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 11:55:42) 
+-- CODE:
+from numpy import*
+
+j = array(eval(input('')))
+
+m = sum(j)/size(j) 
+
+a=0
+
+for i in range(size(j)):
+	a = a + (j[i] - m) ** 2
+
+d = round((a/(size(x)-1))**(1/2), 3)
+	
+print(d)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 11:55:59) 
+-- CODE:
+from numpy import*
+
+j = array(eval(input('')))
+
+m = sum(j)/size(j) 
+
+a=0
+
+for i in range(size(j)):
+	a = a + (j[i] - m) ** 2
+
+d = round((a/(size(j)-1))**(1/2), 3)
+	
+print(d)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 11:56:08) 
+-- CODE:
+from numpy import*
+
+j = array(eval(input('')))
+
+m = sum(j)/size(j) 
+
+a=0
+
+for i in range(size(j)):
+	a = a + (j[i] - m) ** 2
+
+d = round((a/(size(j)-1))**(1/2), 3)
+	
+print(d)
+-- EXECUTION TIME:
+1.00176
+-- TEST CASE 1:
+---- input:
+[-4,250,-1,30,12]
+---- correct output:
+108.498
+---- user output:
+108.498
+-- TEST CASE 2:
+---- input:
+[12.5,25.2,50.39,47.3,0.9]
+---- correct output:
+21.526
+---- user output:
+21.526
+-- TEST CASE 3:
+---- input:
+[1.5,1.9,1.2,1.3,1.4,1.1,1.75]
+
+---- correct output:
+0.29
+---- user output:
+0.29
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

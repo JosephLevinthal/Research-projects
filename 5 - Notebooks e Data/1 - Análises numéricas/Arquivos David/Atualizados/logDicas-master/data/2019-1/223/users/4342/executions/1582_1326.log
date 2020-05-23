@@ -1,0 +1,208 @@
+== TEST (2019-03-16 21:20:36) 
+-- CODE:
+B="40"
+A="35"
+valortotal=A+B
+print(valortotal)
+-- OUTPUT:
+3540
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-16 21:23:19) 
+-- CODE:
+B="40"
+A="35"
+valortotal=sum"A;B"
+print(valortotal)
+-- ERROR:
+File "XXXX", line 3
+    valortotal=sum"A;B"
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-16 21:25:27) 
+-- CODE:
+B="40"
+A="35"
+valortotal="A + B"
+print(valortotal)
+-- OUTPUT:
+A + B
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-16 21:25:49) 
+-- CODE:
+B="40"
+A="35"
+valortotal="A * B"
+print(valortotal)
+-- OUTPUT:
+A * B
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-16 21:26:32) 
+-- CODE:
+B="40"
+valortotal="35+B"
+print(valortotal)
+-- OUTPUT:
+35+B
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-16 21:26:45) 
+-- CODE:
+B="40"
+valortotal=35+B
+print(valortotal)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    valortotal=35+B
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-16 21:27:14) 
+-- CODE:
+B="40"
+valortotal=(35+B)
+print(valortotal)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    valortotal=(35+B)
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-16 21:27:36) 
+-- CODE:
+A=35
+B="40"
+valortotal=(A+B)
+print(valortotal)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    valortotal=(A+B)
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-16 21:27:46) 
+-- CODE:
+A="35"
+B="40"
+valortotal=(A+B)
+print(valortotal)
+-- OUTPUT:
+3540
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-16 21:28:12) 
+-- CODE:
+A="7"
+B="5"
+valortotal=(A+B)
+print(valortotal)
+-- OUTPUT:
+75
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-16 21:28:14) 
+-- CODE:
+A="7"
+B="5"
+valortotal=(A+B)
+print(valortotal)
+-- EXECUTION TIME:
+0.162797
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+75
+---- user output:
+75
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-16 21:31:21) 
+-- CODE:
+A="7"
+B="5"
+valortotal=(A*B)
+print(valortotal)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    valortotal=(A*B)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-16 21:31:35) 
+-- CODE:
+A="7"
+B="5"
+valortotal=str(A*B)
+print(valortotal)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    valortotal=str(A*B)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-16 21:31:46) 
+-- CODE:
+A="7"
+B="5"
+valortotal="str"(A*B)
+print(valortotal)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    valortotal="str"(A*B)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-16 21:32:05) 
+-- CODE:
+(int)
+A="7"
+B="5"
+valortotal="str"(A*B)
+print(valortotal)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    valortotal="str"(A*B)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-16 21:32:22) 
+-- CODE:
+
+A="7"
+B="5"
+valortotal="str"(A+B)
+print(valortotal)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    valortotal="str"(A+B)
+TypeError: 'str' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-16 21:32:29) 
+-- CODE:
+
+A="7"
+B="5"
+valortotal=(A+B)
+print(valortotal)
+-- OUTPUT:
+75
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-16 21:32:40) 
+-- CODE:
+
+A="7"
+B="5"
+valortotal=(A+B)
+print(valortotal)
+-- EXECUTION TIME:
+0.164232
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+75
+---- user output:
+75
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

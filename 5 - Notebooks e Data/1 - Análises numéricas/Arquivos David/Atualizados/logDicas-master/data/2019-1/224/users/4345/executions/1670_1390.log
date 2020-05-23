@@ -1,0 +1,84 @@
+== TEST (2019-04-16 18:09:52) 
+-- CODE:
+consumo= 10
+valor = round(1,20*2,2)
+print(valor)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    valor = round(1,20*2,2)
+TypeError: round() takes at most 2 arguments (3 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:09:58) 
+-- CODE:
+consumo= 10
+valor = round(1,20*2 ,2)
+print(valor)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    valor = round(1,20*2 ,2)
+TypeError: round() takes at most 2 arguments (3 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:10:11) 
+-- CODE:
+consumo= 10
+valor = round(1,20*2 ,3)
+print(valor)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    valor = round(1,20*2 ,3)
+TypeError: round() takes at most 2 arguments (3 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:10:53) 
+-- CODE:
+x= 10
+y= 1,20
+round(x*y, 2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    round(x*y, 2)
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:11:07) 
+-- CODE:
+x= 10
+y= 1,20
+round(x*y, 2)
+print(round)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    round(x*y, 2)
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:27:54) 
+-- CODE:
+round(798/78, 2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    round(x*y, 2)
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:28:06) 
+-- CODE:
+round(798/78, 2)
+print(round)
+-- OUTPUT:
+<built-in function round>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 18:32:24) 
+-- CODE:
+l=float(input("digite a:"))
+s=float(input("digite b:"))
+r=float(input("digite c:"))
+print(round(2*l+3*s+2*r, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    s=float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

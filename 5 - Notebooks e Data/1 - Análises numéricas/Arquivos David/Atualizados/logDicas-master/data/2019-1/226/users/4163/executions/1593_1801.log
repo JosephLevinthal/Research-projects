@@ -1,0 +1,575 @@
+== TEST (2019-03-31 19:00:38) 
+-- CODE:
+l = ("Abra :")
+n = input("objeto :")
+o = input("numero de repeticoes ")
+print( l + n)*o
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print( l + n)*o
+TypeError: can't multiply sequence by non-int of type 'NoneType'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:01:23) 
+-- CODE:
+l = ("Abra :")
+n = input("objeto :")
+o = input("numero de repeticoes ")
+print(( l + n)*o)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(( l + n)*o)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:02:36) 
+-- CODE:
+l = ("Abra :")
+n = input("objeto :")
+o = input("numero de repeticoes ")
+print( l + n)
+-- OUTPUT:
+Abra :livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:03:09) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = input("numero de repeticoes ")
+print( l + n)
+-- OUTPUT:
+Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:04:04) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = input("numero de repeticoes ")
+print( l + n * o)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print( l + n * o)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:04:29) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = input("numero de repeticoes ")
+print( (l + n) * o)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print( (l + n) * o)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:07:01) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = int(input("numero de repeticoes "))
+p = print(l + n)
+q = print(p*o)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    q = print(p*o)
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:08:29) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = int(input("numero de repeticoes "))
+p = print(l + n)
+q = print(NoneType(p*o))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    q = print(NoneType(p*o))
+NameError: name 'NoneType' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:09:39) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = int(input("numero de repeticoes "))
+p = print(l + n)
+q = print((p)*o)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    q = print((p)*o)
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:10:58) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = int(input("numero de repeticoes "))
+p = print(l + n)
+q = print((p)int(*o))
+-- ERROR:
+File "XXXX", line 5
+    q = print((p)int(*o))
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:12:31) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = int(input("numero de repeticoes "))
+p = print(l + n)
+q = print(p*o)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    q = print(p*o)
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:12:58) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = int(input("numero de repeticoes "))
+p = print(l + n)
+q = print(int(p*o))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    q = print(int(p*o))
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:13:43) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = int(input("numero de repeticoes "))
+p = print(l + n)
+q = print((p)*int(o))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    q = print((p)*int(o))
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:17:03) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = int(input("numero de repeticoes "))
+p = print(l + n)
+q = print( p * o )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    q = print( p * o )
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:17:28) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = input("numero de repeticoes ")
+p = print(l + n)
+q = print( p * o )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    q = print( p * o )
+TypeError: can't multiply sequence by non-int of type 'NoneType'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:19:06) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = input("numero de repeticoes ")
+p = print(l + n)
+q = print( p * 4 )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    q = print( p * 4 )
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:19:46) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = input("numero de repeticoes ")
+p = print(l + n)
+q = print( p * "4" )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    q = print( p * "4" )
+TypeError: can't multiply sequence by non-int of type 'NoneType'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:22:31) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = input("numero de repeticoes ")
+p = print(l + n)
+q = print( p .repeat(o) )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    q = print( p .repeat(o) )
+AttributeError: 'NoneType' object has no attribute 'repeat'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:22:56) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = input("numero de repeticoes ")
+p = print(l + n)
+q = print( p*(o) )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    q = print( p*(o) )
+TypeError: can't multiply sequence by non-int of type 'NoneType'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:32:36) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = input("numero de repeticoes ")
+p = print(l + n)
+q = print( p*(o))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    q = print( p*(o))
+TypeError: can't multiply sequence by non-int of type 'NoneType'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:38:06) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = input("numero de repeticoes ")
+var $str= print(l + n)
+q = print($str, o)
+-- ERROR:
+File "XXXX", line 4
+    var $str= print(l + n)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:38:39) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = input("numero de repeticoes ")
+var = print(l + n)
+q = print(var, o)
+-- OUTPUT:
+Abra livro
+None 8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:39:28) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = input("numero de repeticoes ")
+var = print(l + n)
+q = print(var)#, *o)
+-- OUTPUT:
+Abra livro
+None
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:40:13) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = input("numero de repeticoes ")
+var = print(l + n)
+q = print(var, *o)
+-- OUTPUT:
+Abra livro
+None 8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:53:51) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = int(input("numero de repeticoes "))
+var = print(l + n)
+print("var"*o)
+-- OUTPUT:
+Abra livro
+varvarvarvarvarvarvarvar
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:54:32) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = int(input("numero de repeticoes "))
+var =l + n
+print("var"*o)
+-- OUTPUT:
+varvarvarvarvarvarvarvar
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:55:59) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = int(input("numero de repeticoes "))
+var =l + n
+print(var*o)
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:56:26) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = int(input("numero de repeticoes "))
+var =l + n
+print(var*o)
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:56:48) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = int(input("numero de repeticoes "))
+var =l + n
+print(var*o)
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-31 19:57:06) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = int(input("numero de repeticoes "))
+var =l + n
+print(var*o)
+-- EXECUTION TIME:
+0.214434
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carroAbra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 19:59:07) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = int(input("numero de repeticoes "))
+var =l + n
+print(var*o)
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-31 19:59:55) 
+-- CODE:
+l = ("Abra ")
+n = input("objeto ")
+o = int(input("numero de repeticoes "))
+var =l + n
+print(var*o)
+-- EXECUTION TIME:
+0.210566
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carroAbra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 20:00:45) 
+-- CODE:
+l = ("Abra ")
+n = input(" objeto ")
+o = int(input("numero de repeticoes "))
+var =l + n
+print(var*o)
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 20:01:25) 
+-- CODE:
+l = (" Abra ")
+n = input(" objeto ")
+o = int(input("numero de repeticoes "))
+var =l + n
+print(var*o)
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 20:01:38) 
+-- CODE:
+l = (" Abra ")
+n = input(" objeto ")
+o = int(input("numero de repeticoes "))
+var =l + n
+print(var*o)
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-31 20:01:50) 
+-- CODE:
+l = (" Abra ")
+n = input(" objeto ")
+o = int(input("numero de repeticoes "))
+var =l + n
+print(var*o)
+-- EXECUTION TIME:
+0.167501
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-31 20:03:02) 
+-- CODE:
+l = (" Abra ")
+n = input(" objeto ")
+o = int(input("numero de repeticoes "))
+var =l + n
+print(var*o)
+-- EXECUTION TIME:
+0.160995
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 20:03:07) 
+-- CODE:
+l = (" Abra ")
+n = input(" objeto ")
+o = int(input("numero de repeticoes "))
+var =l + n
+print(var*o)
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-31 20:03:27) 
+-- CODE:
+l = (" Abra ")
+n = input(" objeto ")
+o = int(input("numero de repeticoes "))
+var =l + n
+print(var*o)
+-- EXECUTION TIME:
+0.166207
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

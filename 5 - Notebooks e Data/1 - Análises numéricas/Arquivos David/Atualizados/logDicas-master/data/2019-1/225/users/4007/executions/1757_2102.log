@@ -1,0 +1,62 @@
+== TEST (2019-07-03 13:06:25) 
+-- CODE:
+from numpy import*
+v = array(eval(input("v: ")))
+t = []
+i = 0
+while (i < size(v)):
+	if (v[i] % 2 != 0):
+		v[i] = 0
+	
+	i = i + 1
+print(v)
+		
+		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-03 13:06:40) 
+-- CODE:
+from numpy import*
+v = array(eval(input("v: ")))
+t = []
+i = 0
+while (i < size(v)):
+	if (v[i] % 2 != 0):
+		v[i] = 0
+	
+	i = i + 1
+print(v)
+		
+		
+
+-- EXECUTION TIME:
+1.16475
+-- TEST CASE 1:
+---- input:
+[11,21,31,41,51]
+---- correct output:
+[0 0 0 0 0]
+---- user output:
+[0 0 0 0 0]
+-- TEST CASE 2:
+---- input:
+[12,22,32,42,52]
+---- correct output:
+[12 22 32 42 52]
+---- user output:
+[12 22 32 42 52]
+-- TEST CASE 3:
+---- input:
+[1,3,5,2,4,6]
+---- correct output:
+[0 0 0 2 4 6]
+---- user output:
+[0 0 0 2 4 6]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

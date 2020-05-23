@@ -1,0 +1,123 @@
+== TEST (2019-06-12 14:14:03) 
+-- CODE:
+# Módulo
+from math import * 
+# Entradas
+TA = array(eval(input("Gols do time A")))
+TB = array(eval(input("Gols do time B")))
+# Contador do vetor
+cont = zeros(3, dtype=int)
+# Laço "For"
+for i in range(size(TA)):
+	if (TA[i] > TB[i]):
+		cont[0] = cont[0] + 1
+	elif (TA[i] == TB[i]):
+		cont[1] = cont[1] + 1
+	elif (TA[i] < TB[i]):
+		cont[2] = cont[2] + 1
+# Saída
+print(cont)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    TA = array(eval(input()))
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:14:23) 
+-- CODE:
+# Módulo
+from numpy import * 
+# Entradas
+TA = array(eval(input("Gols do time A")))
+TB = array(eval(input("Gols do time B")))
+# Contador do vetor
+cont = zeros(3, dtype=int)
+# Laço "For"
+for i in range(size(TA)):
+	if (TA[i] > TB[i]):
+		cont[0] = cont[0] + 1
+	elif (TA[i] == TB[i]):
+		cont[1] = cont[1] + 1
+	elif (TA[i] < TB[i]):
+		cont[2] = cont[2] + 1
+# Saída
+print(cont)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:14:50) 
+-- CODE:
+# Módulo
+from numpy import * 
+# Entradas
+TA = array(eval(input("Gols do time A: ")))
+TB = array(eval(input("Gols do time B: ")))
+# Contador do vetor
+cont = zeros(3, dtype=int)
+# Laço "For"
+for i in range(size(TA)):
+	if (TA[i] > TB[i]):
+		cont[0] = cont[0] + 1
+	elif (TA[i] == TB[i]):
+		cont[1] = cont[1] + 1
+	elif (TA[i] < TB[i]):
+		cont[2] = cont[2] + 1
+# Saída
+print(cont)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 14:15:08) 
+-- CODE:
+# Módulo
+from numpy import * 
+# Entradas
+TA = array(eval(input("Gols do time A: ")))
+TB = array(eval(input("Gols do time B: ")))
+# Contador do vetor
+cont = zeros(3, dtype=int)
+# Laço "For"
+for i in range(size(TA)):
+	if (TA[i] > TB[i]):
+		cont[0] = cont[0] + 1
+	elif (TA[i] == TB[i]):
+		cont[1] = cont[1] + 1
+	elif (TA[i] < TB[i]):
+		cont[2] = cont[2] + 1
+# Saída
+print(cont)
+-- EXECUTION TIME:
+0.854509
+-- TEST CASE 1:
+---- input:
+[2,3,2,4,3,5,3,4,2,3,1,0]
+[3,3,1,0,2,3,3,0,1,2,1,1]
+---- correct output:
+[7 3 2]
+---- user output:
+[7 3 2]
+-- TEST CASE 2:
+---- input:
+[1,2,1,2,1,2,1,2,0]
+[3,5,3,3,3,3,3,3,3]
+---- correct output:
+[0 0 9]
+---- user output:
+[0 0 9]
+-- TEST CASE 3:
+---- input:
+[1,2,2,2,2,1,1,2,2,1,1,2,2]
+[0,1,1,1,0,0,0,0,0,0,1,1,1]
+---- correct output:
+[12 1 0]
+---- user output:
+[12  1  0]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

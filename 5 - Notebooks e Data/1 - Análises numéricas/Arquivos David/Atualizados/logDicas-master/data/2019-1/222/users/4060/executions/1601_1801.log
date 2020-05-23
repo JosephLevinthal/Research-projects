@@ -1,0 +1,477 @@
+== TEST (2019-03-29 06:54:54) 
+-- CODE:
+a=input("abra ")
+print(a)
+-- OUTPUT:
+livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 07:05:39) 
+-- CODE:
+a=input("abra ")
+b=input(a+"numero ")
+print(a*)
+-- ERROR:
+File "XXXX", line 3
+    print(a*)
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 07:05:50) 
+-- CODE:
+a=input("abra ")
+b=input(a+"numero ")
+print(a*b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print(a*b)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 07:06:37) 
+-- CODE:
+a=input("abra ")
+b=input(a+"numero ")
+print(a*b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print(a*b)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 07:07:23) 
+-- CODE:
+a=input()
+b=input(a+"numero ")
+print(a*b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print(a*b)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 07:07:58) 
+-- CODE:
+a=input()
+b=input()
+print(a*b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print(a*b)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 07:09:10) 
+-- CODE:
+a=input()
+b=input()
+print((abra+a)*b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print((abra+a)*b)
+NameError: name 'abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 07:12:08) 
+-- CODE:
+a=input()
+b=input()
+print(("abra+a")*b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print(("abra+a")*b)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 07:12:39) 
+-- CODE:
+a=input()
+b=input()
+print(("abra"+a)*b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print(("abra"+a)*b)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:21:55) 
+-- CODE:
+a=input()
+print("abra"+a)
+-- OUTPUT:
+abralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:22:42) 
+-- CODE:
+a=input()
+print("abra "+a)
+-- OUTPUT:
+abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:25:06) 
+-- CODE:
+a=input()
+b="abra "+a
+print(b)
+-- OUTPUT:
+abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:25:48) 
+-- CODE:
+a=input()
+b="abra "+a
+print(b*2)
+-- OUTPUT:
+abra livroabra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-29 22:26:08) 
+-- CODE:
+a=input()
+b="abra "+a
+print(b*2)
+-- EXECUTION TIME:
+0.180657
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+abra livroabra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+abra carroabra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+abra caixaabra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:27:08) 
+-- CODE:
+a=input()
+b=int(input())
+c="abra "+a
+print(b*c)
+-- OUTPUT:
+abra livroabra livroabra livroabra livroabra livroabra livroabra livroabra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:28:03) 
+-- CODE:
+a=input()
+b=int(input(""))
+c="abra "+a
+print(b*c)
+-- OUTPUT:
+abra livroabra livroabra livroabra livroabra livroabra livroabra livroabra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:28:39) 
+-- CODE:
+a=input()
+
+c="abra "+a
+print(2*c)
+-- OUTPUT:
+abra livroabra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:29:20) 
+-- CODE:
+a=input()
+b=2
+c="abra "+a
+print(b*c)
+-- OUTPUT:
+abra livroabra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:30:08) 
+-- CODE:
+a=input()
+b=float(input())
+c="abra "+a
+print(b*c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(b*c)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:30:24) 
+-- CODE:
+a=input()
+b=float(input())
+c="abra "+a
+print(b*c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(b*c)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:30:25) 
+-- CODE:
+a=input()
+b=float(input())
+c="abra "+a
+print(b*c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(b*c)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:33:02) 
+-- CODE:
+a=input()
+b=float(input())
+c="abra "+a
+print(b*c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(b*c)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:34:25) 
+-- CODE:
+a=input()
+
+c="abra "+a
+print(4*c)
+-- OUTPUT:
+abra livroabra livroabra livroabra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:35:08) 
+-- CODE:
+a=input()
+
+c=" abra "+a
+print(4*c)
+-- OUTPUT:
+abra livro abra livro abra livro abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:36:43) 
+-- CODE:
+a=input()
+b=float(input)
+c=" abra "+a
+print(4*c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    b=float(input)
+TypeError: float() argument must be a string or a number, not 'builtin_function_or_method'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:37:00) 
+-- CODE:
+a=input()
+b=float(input())
+c=" abra "+a
+print(4*c)
+-- OUTPUT:
+abra livro abra livro abra livro abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:37:28) 
+-- CODE:
+a=input()
+b=float(input())
+c=" abra "+a
+print(b*c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(b*c)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:38:02) 
+-- CODE:
+a=input()
+b=float(input("num "))
+c=" abra "+a
+print(b*c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(b*c)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:39:38) 
+-- CODE:
+a=input()
+b=float(input("num "))
+c=" abra "+a
+d=b*c
+print(d)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    d=b*c
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:40:17) 
+-- CODE:
+a=input()
+b=int(input("num "))
+c=" abra "+a
+d=b*c
+print(d)
+-- OUTPUT:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-29 22:40:36) 
+-- CODE:
+a=input()
+b=int(input("num "))
+c=" abra "+a
+d=b*c
+print(d)
+-- EXECUTION TIME:
+0.176806
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+abra carro abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:40:56) 
+-- CODE:
+a=input()
+b=int(input("num "))
+c=" abra "+a
+d=b*c
+print(d)
+-- OUTPUT:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:41:22) 
+-- CODE:
+a=input()
+b=int(input())
+c=" abra "+a
+d=b*c
+print(d)
+-- OUTPUT:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-29 22:41:29) 
+-- CODE:
+a=input()
+b=int(input())
+c=" abra "+a
+d=b*c
+print(d)
+-- EXECUTION TIME:
+0.127325
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+abra carro abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:41:43) 
+-- CODE:
+a=input()
+b=int(input())
+c=" abra "+a
+d=b*c
+print(d)
+-- OUTPUT:
+abra livro abra livro abra livro abra livro abra livro abra livro abra livro abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 22:42:24) 
+-- CODE:
+a=input()
+b=int(input())
+c=" Abra "+a
+d=b*c
+print(d)
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-29 22:42:32) 
+-- CODE:
+a=input()
+b=int(input())
+c=" Abra "+a
+d=b*c
+print(d)
+-- EXECUTION TIME:
+0.163958
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,156 @@
+== TEST (2019-04-02 18:02:21) 
+-- CODE:
+#primeiramente importamos o valor de pi do math
+import math* 
+print(pi)
+-- ERROR:
+File "XXXX", line 2
+    import math* 
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 18:03:19) 
+-- CODE:
+#primeiramente importamos o valor de pi do math
+from math import *
+print(pi)
+
+-- OUTPUT:
+3.141592653589793
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 18:06:24) 
+-- CODE:
+#primeiramente importamos o valor de pi do math
+from math import *
+#definimos as variaveis da equacao
+R=input("distancia do cento da rosquinha para seu tubo em cm")
+r=input("grossura da rsoquinha em cm")
+Q=input("quantidade de rosquinhas que se quer fazer")
+M=(2pi**2)*R*(r**2)*Q
+print(M)
+
+-- ERROR:
+File "XXXX", line 7
+    M=(2pi**2)*R*(r**2)*Q
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 18:06:44) 
+-- CODE:
+#primeiramente importamos o valor de pi do math
+from math import *
+#definimos as variaveis da equacao
+R=input("distancia do cento da rosquinha para seu tubo em cm")
+r=input("grossura da rsoquinha em cm")
+Q=input("quantidade de rosquinhas que se quer fazer")
+M=(2*pi**2)*R*(r**2)*Q
+print(M)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    M=(2*pi**2)*R*(r**2)*Q
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 18:07:20) 
+-- CODE:
+#primeiramente importamos o valor de pi do math
+from math import *
+#definimos as variaveis da equacao
+R=input("distancia do cento da rosquinha para seu tubo em cm")
+r=input("grossura da rsoquinha em cm")
+Q=input("quantidade de rosquinhas que se quer fazer")
+M=int((2*pi**2)*R*(r**2)*Q)
+print(M)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    M=int((2*pi**2)*R*(r**2)*Q)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 18:08:12) 
+-- CODE:
+#primeiramente importamos o valor de pi do math
+from math import *
+#definimos as variaveis da equacao
+R=int(input("distancia do cento da rosquinha para seu tubo em cm"))
+r=int(input("grossura da rsoquinha em cm"))
+Q=int(input("quantidade de rosquinhas que se quer fazer"))
+M=(2*pi**2)*R*(r**2)*Q
+print(M)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    R=int(input())
+ValueError: invalid literal for int() with base 10: '8.4'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 18:09:10) 
+-- CODE:
+#primeiramente importamos o valor de pi do math
+from math import *
+#definimos as variaveis da equacao
+R=int(input("distancia do cento da rosquinha para seu tubo em cm"))
+r=int(input("grossura da rsoquinha em cm"))
+Q=int(input("quantidade de rosquinhas que se quer fazer"))
+M=(2*pi**2)*R*(r**2)*Q
+m=round(M, 2)
+print(m)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    R=int(input())
+ValueError: invalid literal for int() with base 10: '8.4'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 18:09:35) 
+-- CODE:
+#primeiramente importamos o valor de pi do math
+from math import *
+#definimos as variaveis da equacao
+R=float(input("distancia do cento da rosquinha para seu tubo em cm"))
+r=float(input("grossura da rsoquinha em cm"))
+Q=float(input("quantidade de rosquinhas que se quer fazer"))
+M=(2*pi**2)*R*(r**2)*Q
+m=round(M, 2)
+print(m)
+
+-- OUTPUT:
+103630.85
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 18:09:47) 
+-- CODE:
+#primeiramente importamos o valor de pi do math
+from math import *
+#definimos as variaveis da equacao
+R=float(input("distancia do cento da rosquinha para seu tubo em cm"))
+r=float(input("grossura da rsoquinha em cm"))
+Q=float(input("quantidade de rosquinhas que se quer fazer"))
+M=(2*pi**2)*R*(r**2)*Q
+m=round(M, 2)
+print(m)
+
+-- EXECUTION TIME:
+0.186606
+-- TEST CASE 1:
+---- input:
+8.4
+2.5
+100
+---- correct output:
+103630.85
+---- user output:
+103630.85
+-- TEST CASE 2:
+---- input:
+14.1
+3.8
+5
+---- correct output:
+20094.91
+---- user output:
+20094.91
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

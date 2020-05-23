@@ -1,0 +1,205 @@
+== TEST (2019-07-09 10:32:09) 
+-- CODE:
+from numpy import *
+from numpy.linalg import*
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 10:39:10) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+matr = input(" ")
+f = array(eval(input(" ")))
+print([matr[0], f[0]])
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 10:45:14) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+m = input(" ")
+f = array(eval(input(" ")))
+new = (zeros(size(m), dtype=int)
+		 
+
+
+-- ERROR:
+File "XXXX", line 8
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 10:45:25) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+m = input(" ")
+f = array(eval(input(" ")))
+new = (zeros(size(m), dtype=int)
+
+
+
+-- ERROR:
+File "XXXX", line 8
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 10:46:38) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+m = input(" ")
+f = array(eval(input(" ")))
+new = (zeros(size(m), dtype=int)
+print(new)
+
+
+-- ERROR:
+File "XXXX", line 6
+    print(new)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 10:46:50) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+m = input(" ")
+f = array(eval(input(" ")))
+new = (zeros(size(f), dtype=int)
+print(new)
+
+
+-- ERROR:
+File "XXXX", line 6
+    print(new)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 10:52:35) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+al = array(eval(input("alunos: ")))
+fa = array(eval(input("faltas: ")))
+while(size(al) == size(fa)):
+	print("["al[0], fa[0]"]")
+
+-- ERROR:
+File "XXXX", line 6
+    print("["al[0], fa[0]"]")
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 10:52:52) 
+-- CODE:
+from numpy import *
+al = array(eval(input("alunos: ")))
+fa = array(eval(input("faltas: ")))
+while(size(al) == size(fa)):
+	print("["al[0], fa[0]"]")
+
+-- ERROR:
+File "XXXX", line 5
+    print("["al[0], fa[0]"]")
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 10:53:09) 
+-- CODE:
+from numpy import *
+al = array(eval(input("alunos: ")))
+fa = array(eval(input("faltas: ")))
+
+print("["al[0], fa[0]"]")
+
+-- ERROR:
+File "XXXX", line 5
+    print("["al[0], fa[0]"]")
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 10:53:19) 
+-- CODE:
+from numpy import *
+al = array(eval(input("alunos: ")))
+fa = array(eval(input("faltas: ")))
+
+print(al[0])
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 10:56:29) 
+-- CODE:
+from numpy import *
+al = array(eval(input("alunos: ")))
+fa = array(eval(input("faltas: ")))
+
+print('O aluno que possui o maior numero de faltas e o')
+
+-- EXECUTION TIME:
+1.07794
+-- TEST CASE 1:
+---- input:
+1,2,3,4,5
+10
+6
+30
+8
+6
+---- correct output:
+[[ 1 10]
+ [ 2  6]
+ [ 3 30]
+ [ 4  8]
+ [ 5  6]]
+O aluno que possui o maior numero de faltas e o 3
+---- user output:
+O aluno que possui o maior numero de faltas e o
+-- TEST CASE 2:
+---- input:
+111,222,333,444
+75
+0
+26
+36
+---- correct output:
+[[111  75]
+ [222   0]
+ [333  26]
+ [444  36]]
+O aluno que possui o maior numero de faltas e o 111
+---- user output:
+O aluno que possui o maior numero de faltas e o
+-- TEST CASE 3:
+---- input:
+301,303,305,307
+11
+12
+13
+45
+---- correct output:
+[[301  11]
+ [303  12]
+ [305  13]
+ [307  45]]
+O aluno que possui o maior numero de faltas e o 307
+---- user output:
+O aluno que possui o maior numero de faltas e o
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

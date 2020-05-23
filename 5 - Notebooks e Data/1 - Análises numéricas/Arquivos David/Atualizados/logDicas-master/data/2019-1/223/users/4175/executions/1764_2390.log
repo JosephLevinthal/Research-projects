@@ -1,0 +1,73 @@
+== TEST (2019-05-30 10:01:12) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input()))
+y = array(eval(input()))
+
+h = 0
+a = 1
+b = 1
+
+c = arange(size(x),dtype = int)
+
+while size(c) > h:
+	c[h] = x[h] - y[h]
+	
+	if max(c) > c[h]:
+		a += 1
+	else:
+		b += 1
+	h += 1
+
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 10:01:34) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input()))
+y = array(eval(input()))
+
+h = 0
+a = 1
+b = 1
+
+c = arange(size(x),dtype = int)
+
+while size(c) > h:
+	c[h] = x[h] - y[h]
+	
+	if max(c) > c[h]:
+		a += 1
+	else:
+		b += 1
+	h += 1
+
+print(b)
+-- EXECUTION TIME:
+0.326365
+-- TEST CASE 1:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,110,12]
+[5,6,7,8,9,10,11,12,13,1,15,12]
+---- correct output:
+10
+---- user output:
+11
+-- TEST CASE 2:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,11,12]
+[5,6,7,8,9,10,11,12,3,14,11,12]
+---- correct output:
+9
+---- user output:
+10
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,7 @@
+qtd_panquecas=int(input("quantidade de panquecas: "))
+ovo=(qtd_panquecas*1/8)
+leite=(qtd_panquecas*22.5)
+farinha=(qtd_panquecas*13.75)
+print(ovo)
+print(leite)
+print(farinha)

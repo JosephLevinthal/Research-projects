@@ -1,0 +1,104 @@
+== TEST (2019-04-16 00:43:01) 
+-- CODE:
+x=0,5
+z=radians(x)
+print(z)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    z=radians(x)
+NameError: name 'radians' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:43:22) 
+-- CODE:
+x=0,5
+z=math(radians(x))
+print(z)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    z=math(radians(x))
+NameError: name 'math' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:44:25) 
+-- CODE:
+from math import *
+x=0,5
+z=math(radians(x))
+print(z)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    z=math(radians(x))
+NameError: name 'math' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:44:36) 
+-- CODE:
+from math import *
+x=0,5
+z=(radians(x)
+print(z)
+-- ERROR:
+File "XXXX", line 4
+    print(z)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:44:50) 
+-- CODE:
+from math import *
+x=0,5
+z=(radians(x))
+print(z)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    z=(radians(x))
+TypeError: must be real number, not tuple
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:45:01) 
+-- CODE:
+from math import *
+x=0,5
+z=float(radians(x))
+print(z)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    z=float(radians(x))
+TypeError: must be real number, not tuple
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:45:48) 
+-- CODE:
+from math import *
+x=float(input("angulo:")
+z=float(radians(x))
+print(z)
+-- ERROR:
+File "XXXX", line 3
+    z=float(radians(x))
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:46:06) 
+-- CODE:
+from math import *
+x=float(input("angulo:")
+
+-- ERROR:
+File "XXXX", line 3
+    
+                   ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 00:46:22) 
+-- CODE:
+from math import *
+x=float(input("angulo:")
+print(x)
+-- ERROR:
+File "XXXX", line 3
+    print(x)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,177 @@
+== TEST (2019-03-25 18:32:02) 
+-- CODE:
+ob = print("nome do objeto: ")
+nr = print("quantas vezes: ")
+nome = abra + ob*nr
+print(nome)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    nome = abra + ob*nr
+NameError: name 'abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 18:32:16) 
+-- CODE:
+ob = print("nome do objeto: ")
+nr = print("quantas vezes: ")
+nome = "abra" + ob*nr
+print(nome)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    nome = "abra" + ob*nr
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'NoneType'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 18:33:13) 
+-- CODE:
+ob = print("nome do objeto: ")
+nr = print("quantas vezes: ")
+nome = "abra" + "ob*nr"
+print(nome)
+-- OUTPUT:
+nome do objeto: 
+quantas vezes: 
+abraob*nr
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 18:35:57) 
+-- CODE:
+ob =  input("nome do objeto: "))
+nr = int(input("quantas vezes: "))
+rp = ob*nr
+print("Abra", rp)
+
+-- ERROR:
+File "XXXX", line 1
+    ob =  input())
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 18:36:28) 
+-- CODE:
+ob =  input("nome do objeto: ")
+nr = int(input("quantas vezes: "))
+rp = ob*nr
+print("Abra", rp)
+
+-- OUTPUT:
+Abra livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 18:37:41) 
+-- CODE:
+ob =  input("nome do objeto: ")
+nr = int(input("quantas vezes: "))
+rp = "Abra" + ob*nr
+print()
+
+-- OUTPUT:
+Abra livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 18:37:52) 
+-- CODE:
+ob =  input("nome do objeto: ")
+nr = int(input("quantas vezes: "))
+rp = "Abra" + ob*nr
+print(rp)
+
+-- OUTPUT:
+Abralivrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 18:38:21) 
+-- CODE:
+ob =  input("nome do objeto: ")
+nr = int(input("quantas vezes: "))
+rp = ("Abra" + ob)nr
+print(rp)
+
+-- ERROR:
+File "XXXX", line 3
+    rp = ("Abra" + ob)nr
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 18:38:29) 
+-- CODE:
+ob =  input("nome do objeto: ")
+nr = int(input("quantas vezes: "))
+rp = ("Abra" + ob)*nr
+print(rp)
+
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 18:38:57) 
+-- CODE:
+ob =  input("nome do objeto: ")
+nr = int(input("quantas vezes: "))
+rp = ("Abra" + ob)*nr
+print(rp, 1)
+
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro 1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 18:40:28) 
+-- CODE:
+ob =  input("nome do objeto: ")
+nr = int(input("quantas vezes: "))
+rp = ("Abra"  + ob)*nr
+print(rp, )
+
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 18:40:46) 
+-- CODE:
+ob =  input("nome do objeto: ")
+nr = int(input("quantas vezes: "))
+rp = ("Abra"  + ob)*nr
+print( rp  )
+
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 18:42:41) 
+-- CODE:
+ob =  input("nome do objeto: ")
+nr = int(input("quantas vezes: "))
+rp = ("Abra "  + ob)*nr
+print( rp  )
+
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-25 18:42:58) 
+-- CODE:
+ob =  input("nome do objeto: ")
+nr = int(input("quantas vezes: "))
+rp = (" Abra "  + ob)*nr
+print( rp  )
+
+-- EXECUTION TIME:
+0.199672
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

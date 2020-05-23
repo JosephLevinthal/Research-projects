@@ -1,0 +1,449 @@
+== TEST (2019-04-01 15:53:16) 
+-- CODE:
+print (250/6)
+-- OUTPUT:
+41.666666666666664
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:53:48) 
+-- CODE:
+print (int(250/6))
+-- OUTPUT:
+41
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:53:58) 
+-- CODE:
+print (float(250/6))
+-- OUTPUT:
+41.666666666666664
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:54:05) 
+-- CODE:
+print (int(250/6))
+-- OUTPUT:
+41
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:54:57) 
+-- CODE:
+print (round 2(250/6))
+-- ERROR:
+File "XXXX", line 1
+    print (round 2(250/6))
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:55:09) 
+-- CODE:
+print (round(250/6))
+-- OUTPUT:
+42
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:55:20) 
+-- CODE:
+print (round 1(250/6))
+-- ERROR:
+File "XXXX", line 1
+    print (round 1(250/6))
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:16:50) 
+-- CODE:
+print (250/6)
+-- OUTPUT:
+41.666666666666664
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:18:49) 
+-- CODE:
+round(250/6, 2)
+print (round)
+-- OUTPUT:
+<built-in function round>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:19:49) 
+-- CODE:
+insert(round 250/6,2)
+print (round)
+-- ERROR:
+File "XXXX", line 1
+    insert(round 250/6,2)
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:27:58) 
+-- CODE:
+insert(round 250//6,2)
+print (round)
+-- ERROR:
+File "XXXX", line 1
+    insert(round 250//6,2)
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:29:50) 
+-- CODE:
+input(round 250//6,2)
+print (round)
+-- ERROR:
+File "XXXX", line 1
+    input(round 250//6,2)
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:30:57) 
+-- CODE:
+input(round(250//6))
+
+-- OUTPUT:
+41
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:31:15) 
+-- CODE:
+input(float(250//6,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    input(float(250//6,2))
+TypeError: float() takes at most 1 argument (2 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:31:32) 
+-- CODE:
+input(float(250//6)2)
+
+-- ERROR:
+File "XXXX", line 1
+    input(float(250//6)2)
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:31:52) 
+-- CODE:
+input(float(250//6,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    input(float(250//6,2))
+TypeError: float() takes at most 1 argument (2 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:33:26) 
+-- CODE:
+input(250//6 float(1,2))
+print (float(1,2))
+-- ERROR:
+File "XXXX", line 1
+    input(250//6 float(1,2))
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:33:37) 
+-- CODE:
+input(250//6 float(1,2))
+print (float 1,2))
+-- ERROR:
+File "XXXX", line 1
+    input(250//6 float(1,2))
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:34:02) 
+-- CODE:
+float (1,2) 250//6
+
+-- ERROR:
+File "XXXX", line 1
+    float (1,2) 250//6
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:36:09) 
+-- CODE:
+var1 "250//6"
+float (var1)
+
+-- ERROR:
+File "XXXX", line 1
+    var1 "250//6"
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:37:09) 
+-- CODE:
+var1 "250//6"
+print (round var1)
+-- ERROR:
+File "XXXX", line 1
+    var1 "250//6"
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:37:19) 
+-- CODE:
+var1 "250//6"
+print (round(var1))
+-- ERROR:
+File "XXXX", line 1
+    var1 "250//6"
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:37:28) 
+-- CODE:
+var1 "250//6"
+print (var1)
+-- ERROR:
+File "XXXX", line 1
+    var1 "250//6"
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:37:42) 
+-- CODE:
+var1 "250//6"
+print "var1"
+-- ERROR:
+File "XXXX", line 1
+    var1 "250//6"
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:37:51) 
+-- CODE:
+var1 250//6
+print "var1"
+-- ERROR:
+File "XXXX", line 1
+    var1 250//6
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:37:58) 
+-- CODE:
+var1 250//6
+print var1
+-- ERROR:
+File "XXXX", line 1
+    var1 250//6
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:38:04) 
+-- CODE:
+var1 250//6
+print (var1)
+-- ERROR:
+File "XXXX", line 1
+    var1 250//6
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:38:15) 
+-- CODE:
+var1 (250//6)
+print (var1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    var1 (250//6)
+NameError: name 'var1' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:38:30) 
+-- CODE:
+var1 float(250//6)
+print (var1)
+-- ERROR:
+File "XXXX", line 1
+    var1 float(250//6)
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:39:33) 
+-- CODE:
+var1 = input(250//6)
+print (float(1,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print (float(1,2))
+TypeError: float() takes at most 1 argument (2 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:39:46) 
+-- CODE:
+var1 = input(250//6)
+print (float(2))
+-- OUTPUT:
+412.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:40:37) 
+-- CODE:
+var1 = input(250//6)
+print (float(var1,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print (float(var1,2))
+TypeError: float() takes at most 1 argument (2 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:40:51) 
+-- CODE:
+var1 = input(250//6)
+print (round(var1,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print (round(var1,2))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:41:07) 
+-- CODE:
+var = input(250//6)
+print (round(var,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print (round(var,2))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:41:34) 
+-- CODE:
+var = input(250//4,6)
+print (round(var,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    var = input(250//4,6)
+TypeError: input expected at most 1 arguments, got 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:41:43) 
+-- CODE:
+var = input float(250//4,6)
+print (round(var,2))
+-- ERROR:
+File "XXXX", line 1
+    var = input float(250//4,6)
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:42:49) 
+-- CODE:
+var = round(250//6,2)
+print (var)
+-- OUTPUT:
+41
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:43:17) 
+-- CODE:
+var = (250//6,2)
+print (var)
+-- OUTPUT:
+(41, 2)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:43:30) 
+-- CODE:
+var = (250//6,3)
+print (var)
+-- OUTPUT:
+(41, 3)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:43:41) 
+-- CODE:
+var = (250//6)(2)
+print (var)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    var = (250//6)(2)
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:44:21) 
+-- CODE:
+var = float(250//6)
+print (var)
+-- OUTPUT:
+41.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-04 12:44:41) 
+-- CODE:
+var = float(250//6)
+print (var)
+-- EXECUTION TIME:
+0.182451
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+41.67
+---- user output:
+41.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:49:04) 
+-- CODE:
+var = float(250//6)
+print (var,2)
+-- OUTPUT:
+41.0 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 12:49:55) 
+-- CODE:
+var = float(250//6)
+print (var)
+250//6
+print (250//6)
+
+-- OUTPUT:
+41.0
+41
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 14:45:22) 
+-- CODE:
+num = 250/6
+print(round(num,2))
+-- OUTPUT:
+41.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 14:45:23) 
+-- CODE:
+num = 250/6
+print(round(num,2))
+-- OUTPUT:
+41.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 14:45:23) 
+-- CODE:
+num = 250/6
+print(round(num,2))
+-- OUTPUT:
+41.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 14:45:28) 
+-- CODE:
+num = 250/6
+print(round(num,2))
+-- OUTPUT:
+41.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 14:45:57) 
+-- CODE:
+num = 250/6
+print (round(num,2))
+-- OUTPUT:
+41.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-05 14:46:02) 
+-- CODE:
+num = 250/6
+print (round(num,2))
+-- EXECUTION TIME:
+0.133943
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+41.67
+---- user output:
+41.67
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

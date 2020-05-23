@@ -1,0 +1,291 @@
+== TEST (2019-04-01 14:32:46) 
+-- CODE:
+from math import *
+n = int(float("n pessoas: "))
+pn = factorial((1 - 365)/(365 - n)*1/(365**n))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    n = int(float("n pessoas: "))
+ValueError: could not convert string to float: 'n pessoas: '
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 14:33:01) 
+-- CODE:
+from math import *
+n = int(float("pessoas: "))
+pn = factorial((1 - 365)/(365 - n)*1/(365**n))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    n = int(float("pessoas: "))
+ValueError: could not convert string to float: 'pessoas: '
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 14:33:17) 
+-- CODE:
+from math import *
+n = int(input("pessoas: "))
+pn = factorial((1 - 365)/(365 - n)*1/(365**n))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    pn = factorial((1 - 365)/(365 - n)*1/(365**n))
+ValueError: factorial() only accepts integral values
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 14:33:31) 
+-- CODE:
+from math import *
+n = int(input("N. pessoas: "))
+pn = factorial((1 - 365)/(365 - n)*1/(365**n))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    pn = factorial((1 - 365)/(365 - n)*1/(365**n))
+ValueError: factorial() only accepts integral values
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 14:35:09) 
+-- CODE:
+from math import *
+n = int(input("N. pessoas: "))
+pn = (1 - 365)/(365 - n)*1/(365**n)
+f = factorial(pn,2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    f = factorial(pn,2)
+TypeError: factorial() takes exactly one argument (2 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 14:35:27) 
+-- CODE:
+from math import *
+n = int(input("N. pessoas: "))
+pn = (1 - 365)/(365 - n)*1/(365**n)
+f = factorial(pn)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    f = factorial(pn)
+ValueError: factorial() only accepts integral values
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 14:35:53) 
+-- CODE:
+from math import * factorial
+n = int(input("N. pessoas: "))
+pn = (1 - 365)/(365 - n)*1/(365**n)
+f = factorial(pn)
+-- ERROR:
+File "XXXX", line 1
+    from math import * factorial
+                               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 14:36:07) 
+-- CODE:
+from math import *
+n = int(input("N. pessoas: "))
+pn = (1 - 365)/(365 - n)*1/(365**n)
+f = factorial(pn)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    f = factorial(pn)
+ValueError: factorial() only accepts integral values
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:13:30) 
+-- CODE:
+from math import *
+n = int(input("N. pessoas: "))
+pn = 1 - (365!)/(365 - n)! * 1/(365**n)
+f = factorial(pn)
+-- ERROR:
+File "XXXX", line 3
+    pn = 1 - (365!)/(365 - n)! * 1/(365**n)
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:13:49) 
+-- CODE:
+from math import *
+n = int(input("N. pessoas: "))
+pn = 1 - (365)/(365 - n) * 1/(365**n)
+f = factorial(pn)
+-- ERROR:
+File "XXXX", line 3
+    pn = 1 - (365!)/(365 - n)! * 1/(365**n)
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:14:41) 
+-- CODE:
+from math import *
+n = int(input("N. pessoas: "))
+pn = 1 - (365)/(365 - n) * 1/(365**n)
+f = factorial(pn)
+print(f)
+-- OUTPUT:
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 16:36:32) 
+-- CODE:
+from math import *
+n = int(input("N. pessoas: "))
+pn = 1 - (365)/(365 - n) * 1/(365**n)
+f = factorial(pn)
+print(f)
+-- EXECUTION TIME:
+0.129672
+-- TEST CASE 1:
+---- input:
+12
+---- correct output:
+16.7
+---- user output:
+1
+-- TEST CASE 2:
+---- input:
+24
+---- correct output:
+53.83
+---- user output:
+1
+-- TEST CASE 3:
+---- input:
+99
+---- correct output:
+100.0
+---- user output:
+1
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:37:27) 
+-- CODE:
+from math import *
+n = int(input("N. pessoas: "))
+pn = 1 - (365)/(365 - n) * 1/(365**n)
+f = factorial(pn)
+print(pn)
+-- OUTPUT:
+1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:38:48) 
+-- CODE:
+from math import *
+n = int(input("N. pessoas: "))
+pn = factorial(1 - (365!)/(365 - n)! * 1/(365**n))
+f = factorial(pn)
+print(pn)
+-- ERROR:
+File "XXXX", line 3
+    pn = factorial(1 - (365!)/(365 - n)! * 1/(365**n))
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:38:51) 
+-- CODE:
+from math import *
+n = int(input("N. pessoas: "))
+pn = factorial(1 - (365!)/(365 - n)! * 1/(365**n))
+f = factorial(pn)
+print(pn)
+-- ERROR:
+File "XXXX", line 3
+    pn = factorial(1 - (365!)/(365 - n)! * 1/(365**n))
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:39:03) 
+-- CODE:
+from math import *
+n = int(input("N. pessoas: "))
+pn = factorial(1 - (365!)/(365 - n)! * 1/(365**n))
+f = factorial(pn)
+print(pn)
+-- ERROR:
+File "XXXX", line 3
+    pn = factorial(1 - (365!)/(365 - n)! * 1/(365**n))
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:40:27) 
+-- CODE:
+from math import *
+n = int(input("N. pessoas: "))
+pn = factorial(1 - (365!)/(365 - n)! * 1/(365**n))
+f = factorial(pn)
+print(pn)
+-- ERROR:
+File "XXXX", line 3
+    pn = factorial(1 - (365!)/(365 - n)! * 1/(365**n))
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-03 13:16:23) 
+-- CODE:
+from math import*
+n = int(input("N. pessoas: "))
+pn = 1 - (365!)/(365 - n)! * 1/(365**n)
+f = factorial(pn)
+print(pn)
+-- ERROR:
+File "XXXX", line 3
+    pn = 1 - (365!)/(365 - n)! * 1/(365**n)
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-03 13:17:43) 
+-- CODE:
+from math import*
+n = int(input("N. pessoas: "))
+pn = 1 - (365 / (365 - n)) * 1/(365**n)
+f = factorial(pn)
+print(pn)
+-- OUTPUT:
+1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-03 13:18:06) 
+-- CODE:
+from math import*
+n = int(input("N. pessoas: "))
+pn = 1 - (365 / (365 - n)) * 1/(365**n)
+f = factorial(pn)
+print(pn)
+-- EXECUTION TIME:
+0.148893
+-- TEST CASE 1:
+---- input:
+12
+---- correct output:
+16.7
+---- user output:
+1.0
+-- TEST CASE 2:
+---- input:
+24
+---- correct output:
+53.83
+---- user output:
+1.0
+-- TEST CASE 3:
+---- input:
+99
+---- correct output:
+100.0
+---- user output:
+1.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 18:59:26) 
+-- CODE:
+from math import*
+n = int(input("N. pessoas: "))
+pn = 1 - (365 / (365 - n)) * 1/(365**n)
+f = factorial(pn)
+print(pn)
+-- OUTPUT:
+1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

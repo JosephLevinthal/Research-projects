@@ -1,0 +1,63 @@
+== SUBMITION (2019-05-28 18:47:56) 
+-- CODE:
+from numpy import *
+pal = input("digite a frase: ")
+copy = ""
+i = 0
+#retira os espaços da frase
+while(i<len(pal)):
+	if(pal[i] == " "):
+		copy = copy + ""
+	else:
+		copy = copy + str(pal[i])
+	i = i + 1
+print(copy.upper())
+valor = 0
+i2 = 0
+#analisa se a frase é um palindromo ou não
+while(i2<len(copy)):
+	if(copy[i2] == copy[-1*(i2+1)]): #quando é palindromo então ex: string[0] == string[-1];
+		valor = valor + 1             #string[1] == string[-2], e assim por diante.
+	else:
+		valor = valor + 0
+	i2 = i2 + 1
+#se o toda a string copy ter simetria, então o valor vai ser igual ao tamanho da string sem espaço.
+#pois para todo o copy[i2] == copy[-(1+i2)] no laço, adiciona-se o valor 1, assim para todos os caracteres. 
+#se todos os caracteres forem simétricos então o adicionar-se-à 1 a todos os caracteres comparados, o valor chegará ao máximo.
+if(valor == len(copy)):
+	print("1")
+else:
+	print("0")
+
+-- EXECUTION TIME:
+0.526745
+-- TEST CASE 1:
+---- input:
+ACARARAJADADAJARARACA
+---- correct output:
+ACARARAJADADAJARARACA
+1
+---- user output:
+ACARARAJADADAJARARACA
+1
+-- TEST CASE 2:
+---- input:
+CACHORRO
+---- correct output:
+CACHORRO
+0
+---- user output:
+CACHORRO
+0
+-- TEST CASE 3:
+---- input:
+amalanadanalama
+---- correct output:
+AMALANADANALAMA
+1
+---- user output:
+AMALANADANALAMA
+1
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

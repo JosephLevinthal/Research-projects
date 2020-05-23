@@ -1,0 +1,67 @@
+== SUBMITION (2019-06-12 10:49:31) 
+-- CODE:
+from numpy import*
+import numpy as np
+v1 = array(eval(input(" ")))
+v2 = array(eval(input(" ")))
+a = zeros(len(v1), dtype=float)
+for i in range(len(v1)):
+	a[i] = round(v1[i]/(v2[i]**2),2)
+maior = a.max()
+print(a)
+print("O MAIOR IMC DA TURMA EH:",maior)
+if maior <= 17:
+	print("MUITO ABAIXO DO PESO")
+elif maior <= 18.49:
+	print("ABAIXO DO PESO")
+elif maior <= 24.99:
+	print("PESO NORMAL")
+elif maior <= 29.99:
+	print("ACIMA DO PESO")
+elif maior <34.99:
+	print("OBESIDADE")
+elif maior <= 39.99:
+	print("OBESIDADE SEVERA")
+else:
+	print("OBESIDADE MORBIDA")
+-- EXECUTION TIME:
+1.01729
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[37.79 31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

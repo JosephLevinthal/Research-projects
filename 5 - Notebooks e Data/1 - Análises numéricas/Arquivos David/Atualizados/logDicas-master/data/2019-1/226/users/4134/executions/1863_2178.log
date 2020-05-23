@@ -1,0 +1,795 @@
+== TEST (2019-07-02 11:08:57) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = int(input("dimensao da matriz:")
+mat = zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if(i>j):
+		  mat[i,j] = sum(mat[i,j])
+		 else:
+		  mat[i,j] = sum(mat[i,j])
+print(mat)
+-- ERROR:
+File "XXXX", line 5
+    mat = zeros((n,n), dtype=int)
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:10:12) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = int(input("dimensao da matriz:")
+mat = zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if(i>j):
+		  mat[i,j] = 1
+		 elif(i<j):
+		  mat[i,j] = -1
+		 else:
+		  mat[i,j] = 0
+print(mat)
+-- ERROR:
+File "XXXX", line 5
+    mat = zeros((n,n), dtype=int)
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:11:24) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = int(input("dimensao da matriz:")
+
+mat = zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if(i>j):
+		  mat[i,j] = 1
+		 elif(i<j):
+		  mat[i,j] = -1
+		 else:
+		  mat[i,j] = 0
+print(mat)
+-- ERROR:
+File "XXXX", line 6
+    mat = zeros((n,n), dtype=int)
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:11:41) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = int(input("dimensao da matriz:")
+
+mat= zeros((n,n),dtype = int)
+
+for i in range(n):
+	for j in range(n):
+		if(i>j):
+		  mat[i,j] = 1
+		 elif(i<j):
+		  mat[i,j] = -1
+		 else:
+		  mat[i,j] = 0
+print(mat)
+-- ERROR:
+File "XXXX", line 6
+    mat= zeros((n,n),dtype = int)
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:12:49) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = int(input("dimensao da matriz:"))
+
+mat= zeros((n,n),dtype = int)
+
+for i in range(n):
+	for j in range(n):
+		if(i>j):
+		  mat[i,j] = 1
+		 elif(i<j):
+		  mat[i,j] = -1
+		 else:
+		  mat[i,j] = 0
+print(mat)
+-- ERROR:
+File "XXXX", line 12
+    elif(i<j):
+             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:15:16) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = int(input("dimensao da matriz:"))
+
+mat = zeros((n,n),dtype = int)
+
+for i in range(n):
+	for j in range(n):
+		if(i<j):
+			mat[i,j] = sum(mat[i,j])
+		else:
+			mat[i,j] = sum(mat[i,j])
+print(mat)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 11:15:59) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = int(input("dimensao da matriz:"))
+
+mat = zeros((n,n),dtype = int)
+
+for i in range(n):
+	for j in range(n):
+		if(i<j):
+			mat[i,j] = sum(mat[i,j])
+		else:
+			mat[i,j] = sum(mat[i,j])
+print(mat)
+-- EXECUTION TIME:
+0.879581
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1863/2178/main.py", line 4, in <module>
+    n = int(input())
+ValueError: invalid literal for int() with base 10: '[[10,8,2],[20,16,4],[40,32,8]]'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:19:15) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = int(input("dimensao da matriz:"))
+
+mat = zeros((n,n),dtype = int)
+
+for i in range(n):
+	for j in range(n):
+		if(i<j):
+			mat[i,j] = sum(mat[i,j])
+		elif(i<j):
+			mat[i,j] = sum(mat[i,j])
+		else:
+			mat[i,j] = mat[i,j]
+print(mat)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:20:12) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(input("entrada:")))
+
+mat = zeros((n,n),dtype = int)
+
+for i in range(n):
+	for j in range(n):
+		if(i<j):
+			mat[i,j] = sum(mat[i,j])
+		elif(i<j):
+			mat[i,j] = sum(mat[i,j])
+		else:
+			mat[i,j] = mat[i,j]
+print(mat)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:20:24) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(input("entrada:")))
+
+mat = zeros((n),dtype = int)
+
+for i in range(n):
+	for j in range(n):
+		if(i<j):
+			mat[i,j] = sum(mat[i,j])
+		elif(i<j):
+			mat[i,j] = sum(mat[i,j])
+		else:
+			mat[i,j] = mat[i,j]
+print(mat)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:21:05) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(input("entrada:")))
+
+for i in range(n):
+	for j in range(n):
+		if(i<j):
+			mat[i,j] = sum(mat[i,j])
+		elif(i<j):
+			mat[i,j] = sum(mat[i,j])
+		else:
+			mat[i,j] = mat[i,j]
+print(mat)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:21:36) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(int(input("entrada:"))))
+
+for i in range(n):
+	for j in range(n):
+		if(i<j):
+			mat[i,j] = sum(mat[i,j])
+		elif(i<j):
+			mat[i,j] = sum(mat[i,j])
+		else:
+			mat[i,j] = mat[i,j]
+print(mat)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:25:35) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(input("entrada:")))
+mat = ones((n,n), dtype=int)
+for i in range(n):
+	for j in range(n):
+		if(i<j):
+			mat[i,j] = sum(mat[i,j])
+		else:
+			mat[i,j] = sum(mat[i,j])
+print(mat)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:26:06) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(input("entrada:")))
+mat = ones((n,n), dtype=int)
+mat= size(n)
+for i in range(n):
+	for j in range(n):
+		if(i<j):
+			mat[i,j] = sum(mat[i,j])
+		else:
+			mat[i,j] = sum(mat[i,j])
+print(mat)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:30:14) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("entrada:")))
+v = zeros((shape(x)[0], dtype= float)
+a = shape(x)[1]
+
+for i in range(a):
+	for j in range(a):
+		if(i<j):
+			v[i,j] = sum(v[i,j])
+		else:
+			v[i,j] = sum(v[i,j])
+print(v)
+-- ERROR:
+File "XXXX", line 5
+    v = zeros((shape(x)[0], dtype= float)
+                                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:31:00) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("entrada:")))
+j = shape(x)[0]
+v = zeros((j), dtype= float)
+a = shape(x)[1]
+
+for i in range(a):
+	for j in range(a):
+		if(i<j):
+			v[i,j] = sum(v[i,j])
+		else:
+			v[i,j] = sum(v[i,j])
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:31:24) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("entrada:")))
+j = shape(x)[0]
+v = zeros((j), dtype= float)
+
+
+for i in range(a):
+	for j in range(a):
+		if(i<j):
+			v[i,j] = sum(v[i,j])
+		else:
+			v[i,j] = sum(v[i,j])
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:31:30) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("entrada:")))
+j = shape(x)[0]
+v = zeros((j), dtype= float)
+
+
+for i in range(a):
+	for j in range(a):
+		if(i<j):
+			v[i,j] = sum(v[i,j])
+		else:
+			v[i,j] = sum(v[i,j])
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:31:58) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("entrada:")))
+j = shape(x)[0]
+v = zeros((j), dtype= float)
+
+
+for i in range(size(x)):
+	for j in range(size(x)):
+		if(i<j):
+			v[i,j] = sum(v[i,j])
+		else:
+			v[i,j] = sum(v[i,j])
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:34:23) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("entrada:")))
+v = zeros((x), dtype=float)
+
+for i in range(v):
+	for j in range(v):
+		if(i<j):
+			v[i,j] = sum(v[i,j])
+		else:
+			v[i,j] = sum(v[i,j])
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:34:47) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("entrada:")))
+v = zeros((x), dtype=int)
+
+for i in range(v):
+	for j in range(v):
+		if(i<j):
+			v[i,j] = sum(v[i,j])
+		else:
+			v[i,j] = sum(v[i,j])
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:36:07) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("entrada:")))
+v = zeros((x,x), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if(i<j):
+			v[i,j] = sum(v[i,j])
+		else:
+			v[i,j] = sum(v[i,j])
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:37:23) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(input("entrada:")))
+mat = zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if(i<j):
+			mat[i,j] = sum(mat[i,j])
+		else:
+			mat[i,j] = sum(mat[i,j])
+print(mat)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:38:47) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(input("entrada:")))
+for i in range(n):
+	for j in range(n):
+		if(i<j):
+			mat[i,j] = sum(mat[i,j])
+		else:
+			mat[i,j] = sum(mat[i,j])
+print(mat)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:39:39) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = int(input("entrada:")
+for i in range(n):
+	for j in range(n):
+		if(i<j):
+			mat[i,j] = sum(mat[i,j])
+		else:
+			mat[i,j] = sum(mat[i,j])
+print(mat)
+-- ERROR:
+File "XXXX", line 5
+    for i in range(n):
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:40:21) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = int(input("entrada:")
+mat = zeros((n,n), dtype=int)
+for i in range(n):
+	for j in range(n):
+		if(i<j):
+			mat[i,j] = sum(mat[i,j])
+		else:
+			mat[i,j] = sum(mat[i,j])
+print(mat)
+-- ERROR:
+File "XXXX", line 5
+    mat = zeros((n,n), dtype=int)
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:40:28) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = int(input("entrada:"))
+mat = zeros((n,n), dtype=int)
+for i in range(n):
+	for j in range(n):
+		if(i<j):
+			mat[i,j] = sum(mat[i,j])
+		else:
+			mat[i,j] = sum(mat[i,j])
+print(mat)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:40:37) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = int(input("entrada:"))
+mat = zeros((n,n), dtype=int)
+for i in range(n):
+	for j in range(n):
+		if(i<j):
+			mat[i,j] = sum(mat[i,j])
+		else:
+			mat[i,j] = sum(mat[i,j])
+print(mat)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:40:53) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(input("entrada:"))
+mat = zeros((n,n), dtype=int)
+for i in range(n):
+	for j in range(n):
+		if(i<j):
+			mat[i,j] = sum(mat[i,j])
+		else:
+			mat[i,j] = sum(mat[i,j])
+print(mat)
+-- ERROR:
+File "XXXX", line 5
+    mat = zeros((n,n), dtype=int)
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:41:04) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(input("entrada:"))
+mat = zeros((n), dtype=int)
+for i in range(n):
+	for j in range(n):
+		if(i<j):
+			mat[i,j] = sum(mat[i,j])
+		else:
+			mat[i,j] = sum(mat[i,j])
+print(mat)
+-- ERROR:
+File "XXXX", line 5
+    mat = zeros((n), dtype=int)
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:41:15) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(input("entrada:"))
+
+for i in range(n):
+	for j in range(n):
+		if(i<j):
+			mat[i,j] = sum(mat[i,j])
+		else:
+			mat[i,j] = sum(mat[i,j])
+print(mat)
+-- ERROR:
+File "XXXX", line 6
+    for i in range(n):
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:53:01) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("entrada:"))
+j = shape(x)[0]
+v = zeros((j), dtype = int)
+a = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[0]):
+		if(i>j):
+			v[a] = sum(x[i,j])
+			 a = a + 1
+print(v)
+-- ERROR:
+File "XXXX", line 5
+    j = shape(x)[0]
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:54:12) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("entrada:"))
+j = shape(x)[0]
+v = zeros((j), dtype = int)
+a = 0
+t = shape(x)[0]
+for i in range(t):
+	for j in range(t):
+		if(i>j):
+			v[a] = sum(x[i,j])
+			 a = a + 1
+b = sum(v)
+print(round(b,2))
+-- ERROR:
+File "XXXX", line 5
+    j = shape(x)[0]
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:54:37) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("entrada:"))
+k = shape(x)[0]
+v = zeros((j), dtype = int)
+a = 0
+t = shape(x)[0]
+for i in range(t):
+	for j in range(t):
+		if(i>j):
+			v[a] = sum(x[i,j])
+			 a = a + 1
+b = sum(v)
+print(round(b,2))
+-- ERROR:
+File "XXXX", line 5
+    k = shape(x)[0]
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 11:54:40) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("entrada:"))
+k = shape(x)[0]
+v = zeros((j), dtype = int)
+a = 0
+t = shape(x)[0]
+for i in range(t):
+	for j in range(t):
+		if(i>j):
+			v[a] = sum(x[i,j])
+			 a = a + 1
+b = sum(v)
+print(round(b,2))
+-- EXECUTION TIME:
+0.532549
+-- ERROR:
+  File "/home/codebench/codes/1863/2178/main.py", line 5
+    k = shape(x)[0]
+    ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 11:54:45) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("entrada:"))
+k = shape(x)[0]
+v = zeros((j), dtype = int)
+a = 0
+t = shape(x)[0]
+for i in range(t):
+	for j in range(t):
+		if(i>j):
+			v[a] = sum(x[i,j])
+			 a = a + 1
+b = sum(v)
+print(round(b,2))
+-- EXECUTION TIME:
+0.745297
+-- ERROR:
+  File "/home/codebench/codes/1863/2178/main.py", line 5
+    k = shape(x)[0]
+    ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

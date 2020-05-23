@@ -1,0 +1,119 @@
+== TEST (2019-04-11 21:32:37) 
+-- CODE:
+import math
+pessoas = float(input("digite pessoas"))
+p(n) = (1-factorial(365)/(factorial(365-pessoas)))*1/365**pessoas
+print(round(p(n), 2))
+-- ERROR:
+File "XXXX", line 3
+    p(n) = (1-factorial(365)/(factorial(365-pessoas)))*1/365**pessoas
+    ^
+SyntaxError: can't assign to function call
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 21:35:34) 
+-- CODE:
+import math
+pessoas = float(input("digite pessoas"))
+p(n) = (1-factorial(365)/(factorial(365-pessoas))*1/(365**pessoas))
+print(round(p(n), 2))
+-- ERROR:
+File "XXXX", line 3
+    p(n) = (1-factorial(365)/(factorial(365-pessoas))*1/(365**pessoas))
+    ^
+SyntaxError: can't assign to function call
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 21:36:34) 
+-- CODE:
+import math
+pessoas = float(input("digite pessoas"))
+p(n) = (1-(365)factorial/((365-pessoas)factorial)*1/(365**pessoas))
+print(round(p(n), 2))
+-- ERROR:
+File "XXXX", line 3
+    p(n) = (1-(365)factorial/((365-pessoas)factorial)*1/(365**pessoas))
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 21:36:51) 
+-- CODE:
+import math
+pessoas = float(input("digite pessoas"))
+p(n) = 1-(365)factorial/((365-pessoas)factorial)*1/(365**pessoas)
+print(round(p(n), 2))
+-- ERROR:
+File "XXXX", line 3
+    p(n) = 1-(365)factorial/((365-pessoas)factorial)*1/(365**pessoas)
+                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 09:36:40) 
+-- CODE:
+from math import *
+n = float(input("digite pessoas"))
+p = 1-((factorial(365)/factorial(365-n))*(1/(365**n)))
+print(round(p, 2))
+-- OUTPUT:
+0.17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 09:37:20) 
+-- CODE:
+from math import *
+n = int(input("digite pessoas"))
+p = 1-((factorial(365)/factorial(365-n))*(1/(365**n)))
+print(round(p, 2))
+-- OUTPUT:
+0.17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 09:39:11) 
+-- CODE:
+from math import *
+n = int(input("digite pessoas"))
+p = 1-((factorial(365)/factorial(365-n))*(1/(365**n)))
+x = p*100
+print(round(p, 2))
+-- OUTPUT:
+0.17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 09:39:25) 
+-- CODE:
+from math import *
+n = int(input("digite pessoas"))
+p = 1-((factorial(365)/factorial(365-n))*(1/(365**n)))
+x = p*100
+print(round(x, 2))
+-- OUTPUT:
+16.7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-13 09:40:42) 
+-- CODE:
+from math import *
+n = int(input("digite pessoas"))
+p = 1-((factorial(365)/factorial(365-n))*(1/(365**n)))
+x = p*100
+print(round(x, 2))
+-- EXECUTION TIME:
+0.129229
+-- TEST CASE 1:
+---- input:
+12
+---- correct output:
+16.7
+---- user output:
+16.7
+-- TEST CASE 2:
+---- input:
+24
+---- correct output:
+53.83
+---- user output:
+53.83
+-- TEST CASE 3:
+---- input:
+99
+---- correct output:
+100.0
+---- user output:
+100.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,210 @@
+== TEST (2019-04-18 18:19:55) 
+-- CODE:
+for i in range[2]:
+	for j in range[3]:
+		if(i == 0):
+			imagem[i][j] = float(input("Distancia entre os olhos da imagem " + str(j + 1) + ": "))
+		else:
+			imagem[i][j] = float(input("Distancia entre o nariz e o queixo da imagem " + str(j + 1) + ": "))
+
+print("" + str(imagem[0][0]) + " " + str(imagem[0][1]) + " " + str(imagem[0][2]))
+print("" + str(imagem[1][0]) + " " + str(imagem[1][1]) + " " + str(imagem[1][2]))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    for i in range[2]:
+TypeError: 'type' object is not subscriptable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 18:22:02) 
+-- CODE:
+i = 0
+j = 0
+
+while(i < 2):
+	while(j < 3):
+		if(i == 0):
+			imagem[i][j] = float(input("Distancia entre os olhos da imagem " + str(j + 1) + ": "))
+		else:
+			imagem[i][j] = float(input("Distancia entre o nariz e o queixo da imagem " + str(j + 1) + ": "))
+
+		j = j + 1
+		
+	i = i + 1
+
+print("" + str(imagem[0][0]) + " " + str(imagem[0][1]) + " " + str(imagem[0][2]))
+print("" + str(imagem[1][0]) + " " + str(imagem[1][1]) + " " + str(imagem[1][2]))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    imagem[i][j] = float(input("Distancia entre os olhos da imagem " + str(j + 1) + ": "))
+NameError: name 'imagem' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 18:46:56) 
+-- CODE:
+from numpy import*
+
+imagens = array(eval(input()))
+
+print("" + str(imagem[0][0]) + " " + str(imagem[0][1]) + " " + str(imagem[0][2]))
+print("" + str(imagem[1][0]) + " " + str(imagem[1][1]) + " " + str(imagem[1][2]))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 18:49:29) 
+-- CODE:
+from numpy import*
+
+imagens = array(eval(input()))
+
+print("" + str(imagens(0, 0)) + " " + str(imagens(0, 1)) + " " + str(imagens(0, 2)))
+print("" + str(imagens(1, 0)) + " " + str(imagens(1, 1)) + " " + str(imagens(1, 2)))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 18:55:51) 
+-- CODE:
+from numpy.ndarray import *
+
+imagens = array(eval(input()))
+
+print("" + str(imagens(0, 0)) + " " + str(imagens(0, 1)) + " " + str(imagens(0, 2)))
+print("" + str(imagens(1, 0)) + " " + str(imagens(1, 1)) + " " + str(imagens(1, 2)))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy.ndarray import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 18:56:03) 
+-- CODE:
+from numpy import *
+
+imagens = array(eval(input()))
+
+print("" + str(imagens(0, 0)) + " " + str(imagens(0, 1)) + " " + str(imagens(0, 2)))
+print("" + str(imagens(1, 0)) + " " + str(imagens(1, 1)) + " " + str(imagens(1, 2)))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 22:27:29) 
+-- CODE:
+a1 = float(input("Distancia entre os olhos da imagem 1: "))
+b1 = float(input("Distancia entre o nariz e queixo da imagem 1: "))
+a2 = float(input("Distancia entre os olhos da imagem 2: "))
+b2 = float(input("Distancia entre o nariz e queixo da imagem 2: "))
+a3 = float(input("Distancia entre os olhos da imagem 3: "))
+b3 = float(input("Distancia entre o nariz e queixo da imagem 3: "))
+
+p1 = a1 / b1
+p2 = a2 / b2
+p3 = a3 / b3
+
+menor_diferença = min(abs(p1 - p2), abs(p1 - p3), abs(p2 - p3))
+
+if(menor_diferença == abs(p1 - p2)):
+	print(1 + " e " + 2)
+elif(menor_diferença == abs(p1 - p3)):
+	print(1 + " e " + 3)
+else:
+	print(2 + " e " + 3)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 17, in <module>
+    print(1 + " e " + 3)
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-18 22:29:18) 
+-- CODE:
+a1 = float(input("Distancia entre os olhos da imagem 1: "))
+b1 = float(input("Distancia entre o nariz e queixo da imagem 1: "))
+a2 = float(input("Distancia entre os olhos da imagem 2: "))
+b2 = float(input("Distancia entre o nariz e queixo da imagem 2: "))
+a3 = float(input("Distancia entre os olhos da imagem 3: "))
+b3 = float(input("Distancia entre o nariz e queixo da imagem 3: "))
+
+p1 = a1 / b1
+p2 = a2 / b2
+p3 = a3 / b3
+
+menor_diferença = min(abs(p1 - p2), abs(p1 - p3), abs(p2 - p3))
+
+if(menor_diferença == abs(p1 - p2)):
+	print(str(1) + " e " + str(2))
+elif(menor_diferença == abs(p1 - p3)):
+	print(str(1) + " e " + str(3))
+else:
+	print(str(2) + " e " + str(3))
+-- OUTPUT:
+1 e 3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-18 22:30:15) 
+-- CODE:
+a1 = float(input("Distancia entre os olhos da imagem 1: "))
+b1 = float(input("Distancia entre o nariz e queixo da imagem 1: "))
+a2 = float(input("Distancia entre os olhos da imagem 2: "))
+b2 = float(input("Distancia entre o nariz e queixo da imagem 2: "))
+a3 = float(input("Distancia entre os olhos da imagem 3: "))
+b3 = float(input("Distancia entre o nariz e queixo da imagem 3: "))
+
+p1 = a1 / b1
+p2 = a2 / b2
+p3 = a3 / b3
+
+menor_diferença = min(abs(p1 - p2), abs(p1 - p3), abs(p2 - p3))
+
+if(menor_diferença == abs(p1 - p2)):
+	print(str(1) + " e " + str(2))
+elif(menor_diferença == abs(p1 - p3)):
+	print(str(1) + " e " + str(3))
+else:
+	print(str(2) + " e " + str(3))
+-- EXECUTION TIME:
+0.190381
+-- TEST CASE 1:
+---- input:
+6.7
+6.3
+7.0
+4.0
+7.0
+6.6
+---- correct output:
+1 e 3
+---- user output:
+1 e 3
+-- TEST CASE 2:
+---- input:
+1.0
+2.0
+3.0
+6.0
+8.0
+10.0
+---- correct output:
+1 e 2
+---- user output:
+1 e 2
+-- TEST CASE 3:
+---- input:
+20.0
+30.0
+5.0
+10.0
+5.0
+10.0
+---- correct output:
+2 e 3
+---- user output:
+2 e 3
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

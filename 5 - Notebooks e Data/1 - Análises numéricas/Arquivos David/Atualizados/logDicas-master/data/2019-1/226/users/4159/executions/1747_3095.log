@@ -1,0 +1,121 @@
+== TEST (2019-05-16 10:17:50) 
+-- CODE:
+res = input("resultado do jogo: V/E/D (para fechar X)").upper()
+v = 0
+e = 0
+d = 0
+while(res=="X"):
+	if(res=="V"):
+		v = v + 3
+	elif(res=="E"):
+		e = e + 2
+	elif(res=="D"):
+		d = d + 1
+print(v)
+print(e)
+print(d)
+		
+-- OUTPUT:
+0
+0
+0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 10:19:30) 
+-- CODE:
+res = input("resultado do jogo: V/E/D (para fechar X)").upper()
+v = 0
+e = 0
+d = 0
+while(res!="X"):
+	if(res=="V"):
+		v = v + 3
+	elif(res=="E"):
+		e = e + 2
+	elif(res=="D"):
+		d = d + 1
+	res = input("novo resultado ").upper()
+print(v)
+print(e)
+print(d)
+		
+-- OUTPUT:
+6
+2
+3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-16 10:19:44) 
+-- CODE:
+res = input("resultado do jogo: V/E/D (para fechar X)").upper()
+v = 0
+e = 0
+d = 0
+while(res!="X"):
+	if(res=="V"):
+		v = v + 3
+	elif(res=="E"):
+		e = e + 2
+	elif(res=="D"):
+		d = d + 1
+	res = input("novo resultado ").upper()
+print(v)
+print(e)
+print(d)
+		
+-- EXECUTION TIME:
+0.217172
+-- TEST CASE 1:
+---- input:
+v
+V
+E
+D
+D
+a
+b
+c
+d
+X
+---- correct output:
+6
+2
+3
+---- user output:
+6
+2
+3
+-- TEST CASE 2:
+---- input:
+V
+E
+C
+B
+A
+X
+---- correct output:
+3
+2
+0
+---- user output:
+3
+2
+0
+-- TEST CASE 3:
+---- input:
+A
+A
+v
+v
+V
+V
+X
+---- correct output:
+12
+0
+0
+---- user output:
+12
+0
+0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

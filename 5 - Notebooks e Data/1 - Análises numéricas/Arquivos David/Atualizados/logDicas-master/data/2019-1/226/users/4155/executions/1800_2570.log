@@ -1,0 +1,425 @@
+== TEST (2019-06-12 23:43:59) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+n = size(x)
+c = 0
+m = sum(x)/size(x)
+for i in range(size(x)):
+	c = c * (abs(x[i] - m))
+p = round(((c)**1/n), 3)
+print(p)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 23:44:40) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+c = 0
+m = sum(x)/size(x)
+for i in range(size(x)):
+	c = c * (abs(x[i] - m))
+p = round(((c)**1/size(x)), 3)
+print(p)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 23:45:01) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+c = 0
+m = sum(x)/size(x)
+for i in range(size(x)):
+	c = c * abs(x[i] - m)
+p = round(((c)**1/size(x)), 3)
+print(p)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 23:45:54) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+c = 0
+m = sum(x)/size(x)
+for i in range(size(x)):
+	c = c * abs(x[i] - m)
+p = round(((c)**1/size(x)), 3)
+print(p)
+-- EXECUTION TIME:
+0.965545
+-- TEST CASE 1:
+---- input:
+[-25,8,-6,10,12,13,-4,-7,-9]
+---- correct output:
+8.839
+---- user output:
+0.0
+-- TEST CASE 2:
+---- input:
+[-1.5,-5.5,-3.8,-9.6,-12.8,-13.3,-15.9]
+---- correct output:
+3.757
+---- user output:
+0.0
+-- TEST CASE 3:
+---- input:
+[32.2,31.6,42.8,61.7,10.5,52.7,15.9,17.8,19.2]
+---- correct output:
+0.212
+---- user output:
+0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 23:47:08) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+c = 0
+m = sum(x)/size(x)
+for i in range(size(x)):
+	c = c * abs(x[i] - m)
+	c = c+1 
+p = round(((c)**1/size(x)), 3)
+print(p)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 23:47:29) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+c = 0
+m = sum(x)/size(x)
+for i in range(size(x)):
+	c = c * abs(x[i] - m)
+p = round(((c)**1/size(x)), 3)
+print(p)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 23:50:43) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+c = 0
+m = sum(x)/size(x)
+for i in range(size(x)):
+	c = c * abs(x[i] - m)
+p = round(((c)**(1/size(x)), 3)
+print(p)
+-- EXECUTION TIME:
+0.814709
+-- ERROR:
+  File "/home/codebench/codes/1800/2570/main.py", line 8
+    print(p)
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 23:51:17) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+c = 1
+m = sum(x)/size(x)
+for i in range(size(x)):
+	c = c * abs(x[i] - m)
+p = round(((c)**(1/size(x)), 3)
+print(p)
+-- EXECUTION TIME:
+0.895432
+-- ERROR:
+  File "/home/codebench/codes/1800/2570/main.py", line 8
+    print(p)
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 23:52:01) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+c = 0
+m = sum(x)/size(x)
+for i in x:
+	c = c * abs(x - m)
+p = round(((c)**(1/size(x)), 3)
+print(p)
+-- EXECUTION TIME:
+0.750213
+-- ERROR:
+  File "/home/codebench/codes/1800/2570/main.py", line 8
+    print(p)
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 23:52:40) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+c = 0
+m = sum(x)/size(x)
+for i in x:
+	c = c * abs(x - m)
+p = ((c)**(1/size(x))
+print(round(p, 3)
+-- EXECUTION TIME:
+0.8632
+-- ERROR:
+  File "/home/codebench/codes/1800/2570/main.py", line 8
+    print(round(p, 3)
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 23:52:50) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+c = 0
+m = sum(x)/size(x)
+for x in x:
+	c = c * abs(x - m)
+p = ((c)**(1/size(x))
+print(round(p, 3)
+-- EXECUTION TIME:
+0.790975
+-- ERROR:
+  File "/home/codebench/codes/1800/2570/main.py", line 8
+    print(round(p, 3)
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 23:53:24) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+c = 0
+m = sum(x)/size(x)
+for i in size(x):
+	c = c * abs(x[i] - m)
+p = ((c)**(1/size(x))
+print(round(p, 3)
+-- EXECUTION TIME:
+0.816548
+-- ERROR:
+  File "/home/codebench/codes/1800/2570/main.py", line 8
+    print(round(p, 3)
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 23:54:05) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+c = 0
+m = sum(x)/size(x)
+for i in size(x):
+	c = c * abs(x[i] - m)
+p = c**(1/size(x)
+print(round(p, 3)
+-- EXECUTION TIME:
+0.583073
+-- ERROR:
+  File "/home/codebench/codes/1800/2570/main.py", line 8
+    print(round(p, 3)
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 23:54:27) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+c = 0
+m = sum(x)/size(x)
+for i in range(size(x)):
+	c = c * abs(x[i] - m)
+p = c**(1/size(x)
+print(round(p, 3)
+-- EXECUTION TIME:
+0.750744
+-- ERROR:
+  File "/home/codebench/codes/1800/2570/main.py", line 8
+    print(round(p, 3)
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 23:55:06) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+c = 0
+m = sum(x)/size(x)
+for i in range(size(x)):
+	c = c * abs(x[i] - m)
+p = c**(1/size(x)
+print(round(p, 3)
+-- ERROR:
+File "XXXX", line 8
+    print(round(p, 3)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 23:55:17) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+c = 0
+m = sum(x)/size(x)
+for i in range(size(x)):
+	c = c * abs(x[i] - m)
+p = c**(1/size(x)
+print(round(p, 3))
+-- EXECUTION TIME:
+0.749596
+-- ERROR:
+  File "/home/codebench/codes/1800/2570/main.py", line 8
+    print(round(p, 3))
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 23:55:17) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+c = 0
+m = sum(x)/size(x)
+for i in range(size(x)):
+	c = c * abs(x[i] - m)
+p = c**(1/size(x)
+print(round(p, 3))
+-- ERROR:
+File "XXXX", line 8
+    print(round(p, 3))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 23:55:39) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+c = 0
+m = sum(x)/size(x)
+for i in range(size(x)):
+	c = c * abs(x[i] - m)
+p = c**(1/size(x))
+print(round(p, 3))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 23:56:15) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+c = 0
+m = sum(x)/size(x)
+for y in x:
+	c = c * abs(y - m)
+p = c**(1/size(x))
+print(round(p, 3))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 23:56:20) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+c = 0
+m = sum(x)/size(x)
+for y in x:
+	c = c * abs(y - m)
+p = c**(1/size(x))
+print(round(p, 3))
+-- EXECUTION TIME:
+1.15615
+-- TEST CASE 1:
+---- input:
+[-25,8,-6,10,12,13,-4,-7,-9]
+---- correct output:
+8.839
+---- user output:
+0.0
+-- TEST CASE 2:
+---- input:
+[-1.5,-5.5,-3.8,-9.6,-12.8,-13.3,-15.9]
+---- correct output:
+3.757
+---- user output:
+0.0
+-- TEST CASE 3:
+---- input:
+[32.2,31.6,42.8,61.7,10.5,52.7,15.9,17.8,19.2]
+---- correct output:
+0.212
+---- user output:
+0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 23:56:27) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+c = 1
+m = sum(x)/size(x)
+for y in x:
+	c = c * abs(y - m)
+p = c**(1/size(x))
+print(round(p, 3))
+-- EXECUTION TIME:
+1.13592
+-- TEST CASE 1:
+---- input:
+[-25,8,-6,10,12,13,-4,-7,-9]
+---- correct output:
+8.839
+---- user output:
+8.839
+-- TEST CASE 2:
+---- input:
+[-1.5,-5.5,-3.8,-9.6,-12.8,-13.3,-15.9]
+---- correct output:
+3.757
+---- user output:
+3.757
+-- TEST CASE 3:
+---- input:
+[32.2,31.6,42.8,61.7,10.5,52.7,15.9,17.8,19.2]
+---- correct output:
+0.212
+---- user output:
+0.212
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

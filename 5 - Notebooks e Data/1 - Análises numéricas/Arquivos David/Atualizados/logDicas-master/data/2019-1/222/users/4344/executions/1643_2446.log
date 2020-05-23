@@ -1,0 +1,582 @@
+== TEST (2019-04-15 00:30:48) 
+-- CODE:
+password = int(input("senha: "))
+
+a = password % 6
+print(a)
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 00:31:26) 
+-- CODE:
+password = int(input("senha: "))
+
+a = password % 5
+print(a)
+-- OUTPUT:
+2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 00:34:13) 
+-- CODE:
+password = int(input("senha: "))
+
+a = password % 5
+print(a)
+b = password % 3
+print(b)
+-- OUTPUT:
+2
+0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 00:37:32) 
+-- CODE:
+password = int(input("senha: "))
+
+a = password % 5
+print(a)
+b = password // 5
+print(b)
+-- OUTPUT:
+2
+17522
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 00:38:44) 
+-- CODE:
+password = int(input("senha: "))
+
+a = password % 5
+print(a)
+b = password // 5
+print(b)
+-- OUTPUT:
+2
+17522
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 00:43:53) 
+-- CODE:
+password = int(input("senha: "))
+num_char = len(password)
+print(num_char)
+a = password % 5
+print(a)
+b = password // (a)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    num_char = len(password)
+TypeError: object of type 'int' has no len()
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 00:44:10) 
+-- CODE:
+password = input("senha: ")
+num_char = len(password)
+print(num_char)
+a = password % 5
+print(a)
+b = password // (a)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    a = password % 5
+TypeError: not all arguments converted during string formatting
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 00:45:39) 
+-- CODE:
+password = input("senha: ")
+num_char = len(password)
+print(num_char)
+a = int(password) % (num_char - 1)
+print(a)
+b = int(password) // (a*(num_char -1))
+print(b)
+-- OUTPUT:
+6
+2
+8761
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 00:46:56) 
+-- CODE:
+password = input("senha: ")
+num_char = len(password)
+print(num_char)
+senha[] = password
+print(senha)
+-- ERROR:
+File "XXXX", line 4
+    senha[] = password
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 00:47:20) 
+-- CODE:
+password = input("senha: ")
+num_char = len(password)
+print(num_char)
+senha = array(password)
+print(senha)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    senha = array(password)
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:55:00) 
+-- CODE:
+password = input("senha: ")
+num_char = len(password)
+print(num_char)
+senha = array(password)
+print(senha)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    senha = array(password)
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 15:55:44) 
+-- CODE:
+password = input("senha: ")
+num_char = len(password)
+print(num_char)
+senha = array("password")
+print(senha)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    senha = array("password")
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 16:19:27) 
+-- CODE:
+a = input("digite um numero: ")
+b = input("digite um numero: ")
+c = input("digite um numero: ")
+d = input("digite um numero: ")
+e = input("digite um numero: ")
+f = input("digite um numero: ")
+if((a + b + c == d + e + f)/2):
+	print("acesso liberado")
+else:
+   print("senha invalida")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    b = input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 16:20:33) 
+-- CODE:
+a = input("digite um numero: ")
+b = input("digite um numero: ")
+c = input("digite um numero: ")
+d = input("digite um numero: ")
+e = input("digite um numero: ")
+f = input("digite um numero: ")
+if((a + b + c == d + e + f)/2):
+	print("acesso liberado")
+else:
+   print("senha invalida")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    b = input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 16:21:32) 
+-- CODE:
+a = input("digite um numero: ")
+b = input("digite um numero: ")
+c = input("digite um numero: ")
+d = input("digite um numero: ")
+e = input("digite um numero: ")
+f = input("digite um numero: ")
+if((a + b + c == d + e + f)/2):
+	print("acesso liberado")
+else:
+   print("senha invalida")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    b = input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 16:22:24) 
+-- CODE:
+a = input("digite um numero: ")
+b = input("digite um numero: ")
+c = input("digite um numero: ")
+d = input("digite um numero: ")
+e = input("digite um numero: ")
+f = input("digite um numero: ")
+if((a + b + c == d + e + f)/2):
+	print("acesso liberado")
+else:
+   print("senha invalida")
+-- EXECUTION TIME:
+0.149235
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1643/2446/main.py", line 2, in <module>
+    b = input()
+EOFError: EOF when reading a line
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 16:24:51) 
+-- CODE:
+a = input("digite um numero: ")
+b = input("digite um numero: ")
+c = input("digite um numero: ")
+d = input("digite um numero: ")
+e = input("digite um numero: ")
+f = input("digite um numero: ")
+if((b + d + f == a + c + e)/2):
+	print("acesso liberado")
+else:
+   print("senha invalida")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    b = input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 16:26:37) 
+-- CODE:
+a = input("digite um numero: ")
+b = input("digite um numero: ")
+c = input("digite um numero: ")
+d = input("digite um numero: ")
+e = input("digite um numero: ")
+f = input("digite um numero: ")
+if((b + d + f == a + c + e)/3):
+	print("acesso liberado")
+else:
+   print("senha invalida")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    b = input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 16:27:07) 
+-- CODE:
+a = input("digite um numero: ")
+b = input("digite um numero: ")
+c = input("digite um numero: ")
+d = input("digite um numero: ")
+e = input("digite um numero: ")
+f = input("digite um numero: ")
+if((b + d + f == a + c + e)/3):
+	print("acesso liberado")
+else:
+   print("senha invalida")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    b = input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 16:28:17) 
+-- CODE:
+a = input("digite um numero: ")
+b = input("digite um numero: ")
+c = input("digite um numero: ")
+d = input("digite um numero: ")
+e = input("digite um numero: ")
+f = input("digite um numero: ")
+if((b + d + f) == (a + c + e)/3):
+	print("acesso liberado")
+else:
+   print("senha invalida")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    b = input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 16:29:18) 
+-- CODE:
+a = input("digite um numero: ")
+b = input("digite um numero: ")
+c = input("digite um numero: ")
+d = input("digite um numero: ")
+e = input("digite um numero: ")
+f = input("digite um numero: ")
+if(b + d + f == (a + c + e)/3):
+	print("acesso liberado")
+else:
+   print("senha invalida")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    b = input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 16:30:19) 
+-- CODE:
+a = input("digite um numero: ")
+b = input("digite um numero: ")
+c = input("digite um numero: ")
+d = input("digite um numero: ")
+e = input("digite um numero: ")
+f = input("digite um numero: ")
+if(b + d + f == (a + c + e)//3):
+	print("acesso liberado")
+else:
+   print("senha invalida")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    b = input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 16:35:48) 
+-- CODE:
+b = input("digite um numero: ")
+d = input("digite um numero: ")
+f = input("digite um numero: ")
+a = input("digite um numero: ")
+c = input("digite um numero: ")
+e = input("digite um numero: ")
+if(b + d + f == (a + c + e)//3):
+	print("acesso liberado")
+else:
+   print("senha invalida")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    d = input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 16:51:18) 
+-- CODE:
+a = input("leia um numero inteiro de quatro digitos:"))
+b = a//1000
+b1 = a%1000
+c = b1//100
+c1 = b1%100
+d = c1//10
+d1 = c1%10
+e = d1//1
+e1 = d1%1
+f = e1//0
+if(b + d + f == (a + c + e)/2):
+	print("acesso liberado")
+else:
+	print("senha invalida")
+
+
+-- ERROR:
+File "XXXX", line 1
+    a = input())
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 17:08:45) 
+-- CODE:
+s = int(input("digite a senha: "))
+#primeiro numero
+a = s//100000
+#segundo numero
+b = s//10000
+c = b%10
+#terceiro numero
+d = s//1000
+e = d%10
+#quarto numero
+f = s//100
+g = f%10
+#quinto numero
+h = s//10
+i = h%10
+#sexto numero
+j = s%10
+
+sx = c+g+j
+sy = a+e+i
+m =sx%sy
+if(m==0):
+   men="acesso liberado"
+else:
+	men="senha invalida"
+	print(men)
+-- ERROR:
+File "XXXX", line 1
+    a = input())
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 17:09:28) 
+-- CODE:
+s = int(input("digite a senha: "))
+#primeiro numero
+a = s//100000
+#segundo numero
+b = s//10000
+c = b%10
+#terceiro numero
+d = s//1000
+e = d%10
+#quarto numero
+f = s//100
+g = f%10
+#quinto numero
+h = s//10
+i = h%10
+#sexto numero
+j = s%10
+
+sx = c+g+j
+sy = a+e+i
+m =sx%sy
+if(m==0):
+   men="acesso liberado"
+else:
+	men="senha invalida"
+	print(men)
+-- ERROR:
+File "XXXX", line 1
+    a = input())
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 17:09:58) 
+-- CODE:
+s = int(input("digite a senha: "))
+#primeiro numero
+a = s//100000
+#segundo numero
+b = s//10000
+c = b%10
+#terceiro numero
+d = s//1000
+e = d%10
+#quarto numero
+f = s//100
+g = f%10
+#quinto numero
+h = s//10
+i = h%10
+#sexto numero
+j = s%10
+
+sx = c+g+j
+sy = a+e+i
+m =sx%sy
+if(m==0):
+   men="acesso liberado"
+else:
+	men="senha invalida"
+	print(men)
+-- EXECUTION TIME:
+0.185756
+-- TEST CASE 1:
+---- input:
+087612
+---- correct output:
+acesso liberado
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+760834
+---- correct output:
+senha invalida
+---- user output:
+senha invalida
+-- TEST CASE 3:
+---- input:
+122967
+---- correct output:
+acesso liberado
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 17:10:10) 
+-- CODE:
+s = int(input("digite a senha: "))
+#primeiro numero
+a = s//100000
+#segundo numero
+b = s//10000
+c = b%10
+#terceiro numero
+d = s//1000
+e = d%10
+#quarto numero
+f = s//100
+g = f%10
+#quinto numero
+h = s//10
+i = h%10
+#sexto numero
+j = s%10
+
+sx = c+g+j
+sy = a+e+i
+m =sx%sy
+if(m==0):
+   men="acesso liberado"
+else:
+	men="senha invalida"
+print(men)
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 17:10:35) 
+-- CODE:
+s = int(input("digite a senha: "))
+#primeiro numero
+a = s//100000
+#segundo numero
+b = s//10000
+c = b%10
+#terceiro numero
+d = s//1000
+e = d%10
+#quarto numero
+f = s//100
+g = f%10
+#quinto numero
+h = s//10
+i = h%10
+#sexto numero
+j = s%10
+
+sx = c+g+j
+sy = a+e+i
+m =sx%sy
+if(m==0):
+   men="acesso liberado"
+else:
+	men="senha invalida"
+print(men)
+-- EXECUTION TIME:
+0.251154
+-- TEST CASE 1:
+---- input:
+087612
+---- correct output:
+acesso liberado
+---- user output:
+acesso liberado
+-- TEST CASE 2:
+---- input:
+760834
+---- correct output:
+senha invalida
+---- user output:
+senha invalida
+-- TEST CASE 3:
+---- input:
+122967
+---- correct output:
+acesso liberado
+---- user output:
+acesso liberado
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

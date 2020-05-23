@@ -1,0 +1,292 @@
+== TEST (2019-06-25 16:02:40) 
+-- CODE:
+"""
+Lab 07 – Exercicio 01
+@author: IComp / UFAM
+SISTEMAS DE EQUACOES LINEARES -- FRUTAS
+"""
+
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array([[3 , 12 , 1], [12 , 2 , 0], [0 , 2 , 3]])
+
+# Vetor de constantes (informado no enunciado)
+compras = array([23.6, 52.6, 27.7])
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(frutas, compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[0] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 16:02:58) 
+-- CODE:
+"""
+Lab 07 – Exercicio 01
+@author: IComp / UFAM
+SISTEMAS DE EQUACOES LINEARES -- FRUTAS
+"""
+
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array([[3 , 12 , 1], [12 , 2 , 0], [0 , 2 , 3]])
+
+# Vetor de constantes (informado no enunciado)
+compras = array([23.6, 52.6, 27.7])
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(frutas, compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[0] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- EXECUTION TIME:
+1.03332
+-- TEST CASE 1:
+---- input:
+nada
+---- correct output:
+abacate:  2.9
+banana:  0.5
+caqui:  8.9
+caqui
+
+---- user output:
+abacate:  729.7
+banana:  388.4
+caqui:  188.3
+abacate
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 16:14:14) 
+-- CODE:
+"""
+Lab 07 – Exercicio 01
+@author: IComp / UFAM
+SISTEMAS DE EQUACOES LINEARES -- FRUTAS
+"""
+
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array([[3 , 12 , 1], [12 , 2 , 0], [0 , 2 , 3]])
+
+# Vetor de constantes (informado no enunciado)
+compras = array([23.6, 52.6, 27.7])
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(frutas), compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[0] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- EXECUTION TIME:
+1.3185
+-- TEST CASE 1:
+---- input:
+nada
+---- correct output:
+abacate:  2.9
+banana:  0.5
+caqui:  8.9
+caqui
+
+---- user output:
+abacate:  4.4
+banana:  0.1
+caqui:  9.2
+caqui
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 16:14:56) 
+-- CODE:
+"""
+Lab 07 – Exercicio 01
+@author: IComp / UFAM
+SISTEMAS DE EQUACOES LINEARES -- FRUTAS
+"""
+
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array([[3 , 12 , 1], [12 , 2 , 0], [0 , 2 , 3]])
+
+# Vetor de constantes (informado no enunciado)
+compras = array([23.6, 52.6, 27.7])
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(frutas), compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[1] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- EXECUTION TIME:
+1.18471
+-- TEST CASE 1:
+---- input:
+nada
+---- correct output:
+abacate:  2.9
+banana:  0.5
+caqui:  8.9
+caqui
+
+---- user output:
+abacate:  4.4
+banana:  0.1
+caqui:  9.2
+caqui
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 16:15:11) 
+-- CODE:
+"""
+Lab 07 – Exercicio 01
+@author: IComp / UFAM
+SISTEMAS DE EQUACOES LINEARES -- FRUTAS
+"""
+
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array([[3 , 12 , 1], [12 , 2 , 0], [0 , 2 , 3]])
+
+# Vetor de constantes (informado no enunciado)
+compras = array([23.6, 52.6, 27.7])
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(frutas), compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[1] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 16:15:49) 
+-- CODE:
+"""
+Lab 07 – Exercicio 01
+@author: IComp / UFAM
+SISTEMAS DE EQUACOES LINEARES -- FRUTAS
+"""
+
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array([[3 , 12 , 1], [12 , 0 , 2], [0 , 2 , 3]])
+
+# Vetor de constantes (informado no enunciado)
+compras = array([23.6, 52.6, 27.7])
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(frutas), compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[1] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- EXECUTION TIME:
+1.19473
+-- TEST CASE 1:
+---- input:
+nada
+---- correct output:
+abacate:  2.9
+banana:  0.5
+caqui:  8.9
+caqui
+
+---- user output:
+abacate:  2.9
+banana:  0.5
+caqui:  8.9
+caqui
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

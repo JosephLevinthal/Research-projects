@@ -1,0 +1,328 @@
+== TEST (2019-05-09 11:15:47) 
+-- CODE:
+from math import *
+
+a = int(input('numero de termos da serie: '))
+n = 0
+i = 0
+h = 4
+p = 0
+while     :
+	p += (-1)**i*(4/(factorial(3**i)-factorial(h)))
+	h += 2
+	i += 1
+print(round(3 + p,8))
+-- ERROR:
+File "XXXX", line 8
+    while     :
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:16:12) 
+-- CODE:
+from math import *
+
+a = int(input('numero de termos da serie: '))
+n = 0
+i = 0
+h = 4
+p = 0
+while i<a:
+	p += (-1)**i*(4/(factorial(3**i)-factorial(h)))
+	h += 2
+	i += 1
+print(round(3 + p,8))
+-- OUTPUT:
+2.8317016
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:24:39) 
+-- CODE:
+from math import *
+
+a = int(input('numero de termos da serie: '))
+i = 0
+p = 0
+while i<a:
+	p += (-1)**i*(4/(2*2**i*3*2**i*4**i))
+	i += 1		  
+print(round(3 + p,8))
+-- OUTPUT:
+3.62745158
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:27:01) 
+-- CODE:
+a = int(input('numero de termos da serie: '))
+i = 0
+p = 0
+while i-1<a:
+	p += (-1)**i*(4/(2*2**i*3*2**i*4**i))
+	i += 1		  
+print(round(3 + p,8))
+-- OUTPUT:
+3.62745094
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:28:18) 
+-- CODE:
+a = int(input('numero de termos da serie: '))
+i = 0
+p = 0
+while i<a:
+	p += (-1)**i*(4/(2*2**i*3*2**i*4*2**i))
+	i += 1		  
+print(round(3 + p,8))
+-- OUTPUT:
+3.14815267
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:28:48) 
+-- CODE:
+a = int(input('numero de termos da serie: '))
+i = 0
+p = 0
+while i+1<a:
+	p += (-1)**i*(4/(2*2**i*3*2**i*4*2**i))
+	i += 1		  
+print(round(3 + p,8))
+-- OUTPUT:
+3.14811198
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-09 11:28:56) 
+-- CODE:
+a = int(input('numero de termos da serie: '))
+i = 0
+p = 0
+while i+1<a:
+	p += (-1)**i*(4/(2*2**i*3*2**i*4*2**i))
+	i += 1		  
+print(round(3 + p,8))
+-- EXECUTION TIME:
+0.300896
+-- TEST CASE 1:
+---- input:
+5
+---- correct output:
+3.13968254
+---- user output:
+3.14811198
+-- TEST CASE 2:
+---- input:
+22
+---- correct output:
+3.14161607
+---- user output:
+3.14814815
+-- TEST CASE 3:
+---- input:
+19
+---- correct output:
+3.14155633
+---- user output:
+3.14814815
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:29:07) 
+-- CODE:
+a = int(input('numero de termos da serie: '))
+i = 0
+p = 0
+while i+1<a:
+	p += (-1)**i*(4/(2*2**i*3*2**i*4*2**i))
+	i += 1		  
+print(round(3 + p,8))
+-- OUTPUT:
+3.14811198
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:29:42) 
+-- CODE:
+a = int(input('numero de termos da serie: '))
+i = 0
+p = 0
+while i<a-1:
+	p += (-1)**i*(4/(2*2**i*3*2**i*4*2**i))
+	i += 1		  
+print(round(3 + p,8))
+-- OUTPUT:
+3.14811198
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-09 11:29:49) 
+-- CODE:
+a = int(input('numero de termos da serie: '))
+i = 0
+p = 0
+while i<a-1:
+	p += (-1)**i*(4/(2*2**i*3*2**i*4*2**i))
+	i += 1		  
+print(round(3 + p,8))
+-- EXECUTION TIME:
+0.208171
+-- TEST CASE 1:
+---- input:
+5
+---- correct output:
+3.13968254
+---- user output:
+3.14811198
+-- TEST CASE 2:
+---- input:
+22
+---- correct output:
+3.14161607
+---- user output:
+3.14814815
+-- TEST CASE 3:
+---- input:
+19
+---- correct output:
+3.14155633
+---- user output:
+3.14814815
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:30:19) 
+-- CODE:
+a = int(input('numero de termos da serie: '))
+i = 0
+p = 0
+while i<a-1:
+	p += (-1)**i*(4/(2*2**i*3*2**i*4*2**i))
+	i += 1		  
+print(round(3 + p,8))
+-- OUTPUT:
+3.14811198
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:30:31) 
+-- CODE:
+a = int(input('numero de termos da serie: '))
+i = 0
+p = 0
+while i<a-1:
+	p += (-1)**i*(4/(2*2**i*3*2**i*4*2**i))
+	i += 1		  
+print(round(3 + p,8))
+-- OUTPUT:
+3.14811198
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:30:37) 
+-- CODE:
+a = int(input('numero de termos da serie: '))
+i = 0
+p = 0
+while i<a-1:
+	p += (-1)**i*(4/(2*2**i*3*2**i*4*2**i))
+	i += 1		  
+print(round(3 + p,8))
+-- OUTPUT:
+3.14811198
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:30:43) 
+-- CODE:
+a = int(input('numero de termos da serie: '))
+i = 0
+p = 0
+while i<a-1:
+	p += (-1)**i*(4/(2*2**i*3*2**i*4*2**i))
+	i += 1		  
+print(round(3 + p,8))
+-- OUTPUT:
+3.14811198
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:34:17) 
+-- CODE:
+a = int(input('numero de termos da serie: '))
+i = 0
+p = 0
+while i<a-1:
+	p += (-1)**i*(4/(2*2**i*3*2**i*4*2**i))
+	i += 1		  
+print(round(3 + p,8))
+-- OUTPUT:
+3.14811198
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:34:23) 
+-- CODE:
+a = int(input('numero de termos da serie: '))
+i = 0
+p = 0
+while i<a-1:
+	p += (-1)**i*(4/(2*2**i*3*2**i*4*2**i))
+	i += 1		  
+print(round(3 + p,8))
+-- OUTPUT:
+3.14811198
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:34:39) 
+-- CODE:
+a = int(input('numero de termos da serie: '))
+i = 0
+p = 0
+while i<a-1:
+	p += (-1)**i*(4/(2*2**i*3*2**i*4*2**i))
+	i += 1		  
+print(round(3.0 + p,8))
+-- OUTPUT:
+3.14811198
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:35:27) 
+-- CODE:
+a = int(input('numero de termos da serie: '))
+i = 0
+p = 0
+while i<a:
+	p += (-1)**i*(4/(2*2**i*3*2**i*4*2**i))
+	i += 1		  
+print(round(3.0 + p,8))
+-- OUTPUT:
+3.14815267
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:40:35) 
+-- CODE:
+a = int(input('numero de termos da serie: '))
+i = 0
+p = 0
+h = 0
+while i<a-1:
+	p += (-1)**i*(4/((2+h)*(3+h)*(4+h)))
+	i += 1
+	h += 2
+print(round(3.0 + p,8))
+-- OUTPUT:
+3.13968254
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-09 11:40:38) 
+-- CODE:
+a = int(input('numero de termos da serie: '))
+i = 0
+p = 0
+h = 0
+while i<a-1:
+	p += (-1)**i*(4/((2+h)*(3+h)*(4+h)))
+	i += 1
+	h += 2
+print(round(3.0 + p,8))
+-- EXECUTION TIME:
+0.158157
+-- TEST CASE 1:
+---- input:
+5
+---- correct output:
+3.13968254
+---- user output:
+3.13968254
+-- TEST CASE 2:
+---- input:
+22
+---- correct output:
+3.14161607
+---- user output:
+3.14161607
+-- TEST CASE 3:
+---- input:
+19
+---- correct output:
+3.14155633
+---- user output:
+3.14155633
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

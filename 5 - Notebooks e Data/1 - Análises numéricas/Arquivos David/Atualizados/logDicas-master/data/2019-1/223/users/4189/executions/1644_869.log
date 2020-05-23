@@ -1,0 +1,88 @@
+== TEST (2019-04-11 16:31:39) 
+-- CODE:
+compra = float(input("valor da compra:"))
+if(compra > 200)
+   total = compra*100/5
+else:
+	total = compra
+print(total)
+-- ERROR:
+File "XXXX", line 2
+    if(compra > 200)
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 16:31:51) 
+-- CODE:
+compra = float(input("valor da compra:"))
+if(compra>200)
+   total = compra*100/5
+else:
+	total = compra
+print(total)
+-- ERROR:
+File "XXXX", line 2
+    if(compra>200)
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 16:31:58) 
+-- CODE:
+compra = float(input("valor da compra:"))
+if(compra>200):
+   total = compra*100/5
+else:
+	total = compra
+print(total)
+-- OUTPUT:
+4001.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 16:32:08) 
+-- CODE:
+compra = float(input("valor da compra:"))
+if(compra>200):
+   total = compra*100/5
+else:
+	total = compra
+print(total)
+-- OUTPUT:
+4001.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 16:37:01) 
+-- CODE:
+compra = float(input("valor da compra:"))
+if(compra>200):
+   total = (-compra/20)+compra
+else:
+	total = compra
+print(round(total,2))
+-- OUTPUT:
+190.09
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 16:37:07) 
+-- CODE:
+compra = float(input("valor da compra:"))
+if(compra>200):
+   total = (-compra/20)+compra
+else:
+	total = compra
+print(round(total,2))
+-- EXECUTION TIME:
+0.139597
+-- TEST CASE 1:
+---- input:
+200.09
+---- correct output:
+190.09
+---- user output:
+190.09
+-- TEST CASE 2:
+---- input:
+200.53
+---- correct output:
+190.5
+---- user output:
+190.5
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,1148 @@
+== TEST (2019-06-11 19:18:17) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(peso, dtype=float)
+for i in range(size(peso)):
+	vet[i] = round(peso[i]/(altura[i]**2), 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:", max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z , 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 24.99):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 29.99):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 34.99):
+	print("OBESIDADE")
+elif (z >= 35 and z < 39.99):
+	print("OBESIADE SEVERA")
+elif (z > 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 19:19:04) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(peso, dtype=int)
+for i in range(size(peso)):
+	vet[i] = round(peso[i]/(altura[i]**2), 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:", max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z , 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 24.99):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 29.99):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 34.99):
+	print("OBESIDADE")
+elif (z >= 35 and z < 39.99):
+	print("OBESIADE SEVERA")
+elif (z > 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 19:20:23) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(size(peso), dtype=float)
+for i in range(size(peso)):
+	vet[i] = round(peso[i]/(altura[i]**2), 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:", max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z , 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 24.99):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 29.99):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 34.99):
+	print("OBESIDADE")
+elif (z >= 35 and z < 39.99):
+	print("OBESIADE SEVERA")
+elif (z > 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 19:21:14) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(size(peso), dtype=float)
+for i in range(size(peso)):
+	vet[i] = round(peso[i]/(altura[i]**2), 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:", max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z < 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 24.99):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 29.99):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 34.99):
+	print("OBESIDADE")
+elif (z >= 35 and z < 39.99):
+	print("OBESIADE SEVERA")
+elif (z > 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- EXECUTION TIME:
+1.06188
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[37.79 31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIADE SEVERA
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 19:21:40) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(size(peso), dtype=float)
+for i in range(size(peso)):
+	vet[i] = round(peso[i]/(altura[i]**2), 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:", max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z < 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 24.99):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 29.99):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 34.99):
+	print("OBESIDADE")
+elif (z >= 35 and z < 39.99):
+	print("OBESIADE SEVERA")
+elif (z > 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 19:22:44) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(size(peso), dtype=float)
+for i in range(size(peso)):
+	vet[i] = round(peso[i]/(altura[i]**2), 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:", max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z < 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 24.99):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 29.99):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 34.99):
+	print("OBESIDADE")
+elif (z >= 35 and z < 39.99):
+	print("OBESIADE SEVERA")
+elif (z > 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- EXECUTION TIME:
+1.03468
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[37.79 31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIADE SEVERA
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 19:23:58) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(size(peso), dtype=float)
+for i in range(size(peso)):
+	vet[i] = round(peso[i]/(altura[i]**2), 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:",max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z < 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 24.99):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 29.99):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 34.99):
+	print("OBESIDADE")
+elif (z >= 35 and z < 39.99):
+	print("OBESIADE SEVERA")
+elif (z > 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- EXECUTION TIME:
+1.07664
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[37.79 31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIADE SEVERA
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 19:24:58) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(size(peso), dtype=float)
+for i in range(size(peso)):
+	vet[i] = round(peso[i]/(altura[i]**2), 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:",max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z < 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 25):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 30):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 35):
+	print("OBESIDADE")
+elif (z >= 35 and z < 40):
+	print("OBESIADE SEVERA")
+elif (z > 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 19:25:25) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(size(peso), dtype=float)
+for i in range(size(peso)):
+	vet[i] = round(peso[i]/(altura[i]**2), 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:",max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z < 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 25):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 30):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 35):
+	print("OBESIDADE")
+elif (z >= 35 and z < 40):
+	print("OBESIADE SEVERA")
+elif (z > 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- EXECUTION TIME:
+1.12807
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[37.79 31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIADE SEVERA
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 19:25:48) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(size(peso), dtype=float)
+for i in range(size(peso)):
+	vet[i] = round(peso[i]/(altura[i]**2), 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:",max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z < 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 25):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 30):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 35):
+	print("OBESIDADE")
+elif (z >= 35 and z < 40):
+	print("OBESIADE SEVERA")
+elif (z >= 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- EXECUTION TIME:
+1.06633
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[37.79 31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIADE SEVERA
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 19:27:22) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(size(peso), dtype=float)
+for i in range(size(peso)):
+	vet[i] = round(peso[i]/(altura[i]**2), 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:",max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z < 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 25):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 30):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 35):
+	print("OBESIDADE")
+elif (z >= 35 and z < 40):
+	print("OBESIADE SEVERA")
+elif (z >= 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- EXECUTION TIME:
+1.22242
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[37.79 31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIADE SEVERA
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 19:28:08) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(size(peso), dtype=float)
+for i in range(size(peso)):
+	vet[i] = round(peso[i]/(altura[i]**2), 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:",max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z < 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 25):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 30):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 35):
+	print("OBESIDADE")
+elif (z >= 35 and z < 40):
+	print("OBESIADE SEVERA")
+elif (z >= 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 19:32:09) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(size(peso), dtype=float)
+for i in range(size(peso)):
+	vet[i] = round(peso[i]/(altura[i]**2) , 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:", max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z < 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 25):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 30):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 35):
+	print("OBESIDADE")
+elif (z >= 35 and z < 40):
+	print("OBESIADE SEVERA")
+elif (z >= 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 19:33:03) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(size(peso), dtype=float)
+for i in range(size(peso)):
+	vet[ i ] = round((peso[i]) / (altura[i]**2), 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:", max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z < 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 25):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 30):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 35):
+	print("OBESIDADE")
+elif (z >= 35 and z < 40):
+	print("OBESIADE SEVERA")
+elif (z >= 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 19:33:28) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(size(peso), dtype=float)
+for i in range(size(peso)):
+	vet[ i ] = round((peso[i]) / (altura[i]**2), 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:", max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z < 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 25):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 30):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 35):
+	print("OBESIDADE")
+elif (z >= 35 and z < 40):
+	print("OBESIADE SEVERA")
+elif (z >= 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- EXECUTION TIME:
+1.21694
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[37.79 31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIADE SEVERA
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 19:34:06) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(size(peso), dtype=float)
+for i in range(size(peso)):
+	vet[ i ] = round((peso[i]) / (altura[i]**2), 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:", max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z < 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 25):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 29,99):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 34.99):
+	print("OBESIDADE")
+elif (z >= 35 and z < 39.99):
+	print("OBESIADE SEVERA")
+elif (z >= 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 19:34:18) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(size(peso), dtype=float)
+for i in range(size(peso)):
+	vet[i] = round((peso[i]) / (altura[i]**2), 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:", max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z < 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 25):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 29,99):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 34.99):
+	print("OBESIDADE")
+elif (z >= 35 and z < 39.99):
+	print("OBESIADE SEVERA")
+elif (z >= 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 19:34:48) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(size(peso), dtype=float)
+for i in range(size(peso)):
+	vet[i] = round((peso[i]) / (altura[i]**2), 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:", max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z < 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 25):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 29,99):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 34.99):
+	print("OBESIDADE")
+elif (z >= 35 and z < 39.99):
+	print("OBESIADE SEVERA")
+elif (z >= 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- EXECUTION TIME:
+1.02743
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[37.79 31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+ACIMA DO PESO
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 19:35:02) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(size(peso), dtype=float)
+for i in range(size(peso)):
+	vet[i] = round((peso[i]) / (altura[i]**2), 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:", max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z < 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 25):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 29,99):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 34.99):
+	print("OBESIDADE")
+elif (z >= 35 and z < 39.99):
+	print("OBESIADE SEVERA")
+elif (z >= 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 19:37:52) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(size(peso), dtype=float)
+for i in range(size(peso)):
+	vet[i] = round((peso[i]) / (altura[i]**2), 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:", max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z < 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 25):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 29,99):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 34.99):
+	print("OBESIDADE")
+elif (z >= 35 and z < 39.99):
+	print("OBESIADE SEVERA")
+elif (z >= 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- EXECUTION TIME:
+0.862983
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[37.79 31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+ACIMA DO PESO
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 17:08:18) 
+-- CODE:
+from numpy import *
+peso = array(eval(input("Pesos dos alunos: ")))
+altura = array(eval(input("Altura dos alunos: ")))
+vet = zeros(size(peso), dtype=float)
+for i in range(size(peso)):
+	vet[i] = round((peso[i]) / (altura[i]**2), 2)
+print(vet)
+print("O MAIOR IMC DA TURMA EH:", max(vet))
+z = max(vet)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif (z >= 17 and z < 18.5):
+	print("ABAIXO DO PESO")
+elif (z >= 18.5 and z < 25):
+	print("PESO NORMAL")
+elif (z >= 25 and  z < 29,99):
+	print("ACIMA DO PESO")
+elif (z >= 30 and z < 34.99):
+	print("OBESIDADE")
+elif (z >= 35 and z < 39.99):
+	print("OBESIADE SEVERA")
+elif (z >= 40):
+	print("OBESIDADE MORBIDA")
+	
+
+-- EXECUTION TIME:
+1.216
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[37.79 31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+ACIMA DO PESO
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 19:32:59) 
+-- CODE:
+from numpy import*
+
+peso = array(eval(input("Peso: ")))
+alt =  array(eval(input("Altura: ")))
+
+imcs = zeros(size(peso), dtype=float)						
+
+for x in range(size(peso)):
+	imcs[x] = round(peso[x]/(alt[x]**2), 2)
+print(imcs)
+print("O MAIOR IMC DA TURMA EH:",max(imcs))
+
+z = max(imcs)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif(z >= 17 and z < 18.5):
+	print("ABAIXO DO PESO")
+elif(z >=18.5 and z < 25):
+	print("PESO NORMAL")
+elif(z >= 25 and z < 30):
+	print('ACIMA DO PESO')
+elif(z >= 30 and z < 35):
+	print("OBESIDADE")
+elif(z >= 35 and z < 40 ):
+	print("OBESIDADE SEVERA")
+elif(z >= 40):
+	print("OBESIDADE MORBIDA")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 19:35:36) 
+-- CODE:
+from numpy import*
+
+peso = array(eval(input("Peso: ")))
+alt =  array(eval(input("Altura: ")))
+
+imcs = zeros(size(peso), dtype=float)						
+
+for x in range(size(peso)):
+	imcs[x] = round(peso[x]/(alt[x]**2), 2)
+print(imcs)
+print("O MAIOR IMC DA TURMA EH:",max(imcs))
+
+z = max(imcs)
+if (z < 17):
+	print("MUITO ABAIXO DO PESO")
+elif(z >= 17 and z < 18.5):
+	print("ABAIXO DO PESO")
+elif(z >=18.5 and z < 25):
+	print("PESO NORMAL")
+elif(z >= 25 and z < 30):
+	print('ACIMA DO PESO')
+elif(z >= 30 and z < 35):
+	print("OBESIDADE")
+elif(z >= 35 and z < 40 ):
+	print("OBESIDADE SEVERA")
+elif(z >= 40):
+	print("OBESIDADE MORBIDA")
+-- EXECUTION TIME:
+1.02997
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[37.79 31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

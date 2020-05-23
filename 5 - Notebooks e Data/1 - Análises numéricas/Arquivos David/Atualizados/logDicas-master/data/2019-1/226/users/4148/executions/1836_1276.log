@@ -1,0 +1,424 @@
+== TEST (2019-06-27 11:03:57) 
+-- CODE:
+from numpy import*   
+from numpy.linalg import*
+
+mat = array(eval(input(" ")))
+
+dias = zeros(shape(n)[1], dtype=int)
+
+for i in range(shape(dias)[1]):
+	dias[i] = sum(mat[:, i])
+for i in range(size(dias)):
+	if dias[i] == max(dias):
+		print(i + 1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*   
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-27 11:04:03) 
+-- CODE:
+from numpy import*   
+from numpy.linalg import*
+
+mat = array(eval(input(" ")))
+
+dias = zeros(shape(n)[1], dtype=int)
+
+for i in range(shape(dias)[1]):
+	dias[i] = sum(mat[:, i])
+for i in range(size(dias)):
+	if dias[i] == max(dias):
+		print(i + 1)
+-- EXECUTION TIME:
+0.836108
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1836/1276/main.py", line 6, in <module>
+    dias = zeros(shape(n)[1], dtype=int)
+NameError: name 'n' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-27 11:04:20) 
+-- CODE:
+from numpy import*   
+from numpy.linalg import*
+
+mat = array(eval(input(" ")))
+
+dias = zeros(shape(mat)[1], dtype=int)
+
+for i in range(shape(dias)[1]):
+	dias[i] = sum(mat[:, i])
+for i in range(size(dias)):
+	if dias[i] == max(dias):
+		print(i + 1)
+-- EXECUTION TIME:
+0.962513
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1836/1276/main.py", line 8, in <module>
+    for i in range(shape(dias)[1]):
+IndexError: tuple index out of range
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-27 11:44:43) 
+-- CODE:
+from numpy import*   
+from numpy.linalg import*
+
+mat = array(eval(input(" ")))
+
+dias = zeros(7, dtype=int)
+
+for i in range(7):
+	dias[i] = sum(mat[:, i])
+for i in range(size(7)):
+	if max(dias)==sum(mat[:,i])
+		print(i + 1)
+-- EXECUTION TIME:
+0.616219
+-- ERROR:
+  File "/home/codebench/codes/1836/1276/main.py", line 11
+    if max(dias)==sum(mat[:,i])
+                              ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-27 11:45:35) 
+-- CODE:
+from numpy import*   
+from numpy.linalg import*
+
+mat = array(eval(input(" ")))
+
+dias = zeros(7, dtype=int)
+
+for i in range(7):
+	dias[i] = sum(mat[:,i])
+for i in range(7):
+	if max(dias)==sum(mat[:,i])
+		print(i + 1)
+-- EXECUTION TIME:
+0.783396
+-- ERROR:
+  File "/home/codebench/codes/1836/1276/main.py", line 11
+    if max(dias)==sum(mat[:,i])
+                              ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 14:48:50) 
+-- CODE:
+from numpy import*   
+from numpy.linalg import*
+
+mat = array(eval(input(" ")))
+
+dias = zeros(7, dtype=int)
+
+for i in range(7):
+	dias[i] = sum(mat[:,i])
+for i in range(7):
+	if max(dias)==sum(mat[:,i])
+		print(i + 1)
+-- EXECUTION TIME:
+0.728446
+-- ERROR:
+  File "/home/codebench/codes/1836/1276/main.py", line 11
+    if max(dias)==sum(mat[:,i])
+                              ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 18:51:56) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+a = array(eval(input()))
+b = zeros(shape(a)[0], dtype=int)
+
+for i in range(shape(a[0])):
+	b[i] = sum(a[i,:])
+print(b)
+-- EXECUTION TIME:
+0.874957
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1836/1276/main.py", line 6, in <module>
+    for i in range(shape(a[0])):
+TypeError: 'tuple' object cannot be interpreted as an integer
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 18:52:29) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+a = array(eval(input()))
+b = zeros(shape(a)[0], dtype=int)
+
+for i in range(shape(a)[0]):
+	b[i] = sum(a[i,:])
+print(b)
+-- EXECUTION TIME:
+1.02796
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+[28 21 42 16 47 41 21]
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+[39 42 39 58 19 27 40 41 41]
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+[45 30 28 37 26 40 40 47]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 18:52:55) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+a = array(eval(input()))
+b = zeros(shape(a)[0], dtype=int)
+
+for i in range(shape(a)[0]):
+	b[i] = sum(a[i,:])
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 18:52:56) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+a = array(eval(input()))
+b = zeros(shape(a)[0], dtype=int)
+
+for i in range(shape(a)[0]):
+	b[i] = sum(a[i,:])
+print(b)
+-- EXECUTION TIME:
+1.01768
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+[28 21 42 16 47 41 21]
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+[39 42 39 58 19 27 40 41 41]
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+[45 30 28 37 26 40 40 47]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 18:53:03) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+a = array(eval(input()))
+b = zeros(shape(a)[0], dtype=int)
+
+for i in range(shape(a)[0]):
+	b[i] = sum(a[i,:])
+print(b)
+-- EXECUTION TIME:
+0.735278
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+[28 21 42 16 47 41 21]
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+[39 42 39 58 19 27 40 41 41]
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+[45 30 28 37 26 40 40 47]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 18:58:51) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+a = array(eval(input()))
+b = zeros(shape(a)[0], dtype=int)
+
+for i in range(shape(a)[0]):
+	b[i] = sum(a[i,:])
+print(b)
+-- EXECUTION TIME:
+1.25731
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+[28 21 42 16 47 41 21]
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+[39 42 39 58 19 27 40 41 41]
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+[45 30 28 37 26 40 40 47]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 19:18:54) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+a = array(eval(input()))
+b = zeros(shape(a)[0], dtype=int)
+
+for i in range(shape(a)[0]):
+	b[i] = sum(a[i,:])
+print(b)
+-- EXECUTION TIME:
+1.06554
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+[28 21 42 16 47 41 21]
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+[39 42 39 58 19 27 40 41 41]
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+[45 30 28 37 26 40 40 47]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 19:34:03) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+a = array(eval(input()))
+b = zeros(shape(a)[0], dtype=int)
+
+for i in range(shape(a)[0]):
+	b[i] = sum(a[i,:])
+print(b)
+-- EXECUTION TIME:
+1.05369
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+[28 21 42 16 47 41 21]
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+[39 42 39 58 19 27 40 41 41]
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+[45 30 28 37 26 40 40 47]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 19:37:14) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+a = array(eval(input()))
+b = zeros(7, dtype=int)
+
+for i in range(7):
+	b[i] = sum(a[:,i])
+for i in range(7):
+	if max(b)==sum(a[:,i]):
+		print(i+1)
+-- EXECUTION TIME:
+1.13066
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+7
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,48 @@
+== TEST (2019-04-15 19:49:18) 
+-- CODE:
+juro=float(input())
+taxa=(1500*juro)
+qf=1500*(1+taxa)**
+print(qf)
+-- ERROR:
+File "XXXX", line 3
+    qf=1500*(1+taxa)**
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:49:46) 
+-- CODE:
+juro=float(input())
+taxa=(1500*juro)
+Qf=(1500*(1+taxa)**
+print(Qf)
+-- ERROR:
+File "XXXX", line 5
+    
+             ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:50:06) 
+-- CODE:
+juro=float(input())
+taxa=(1500*juro)/100
+Qf=(1500*(1+taxa)**
+print(Qf)
+-- ERROR:
+File "XXXX", line 5
+    
+             ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:50:18) 
+-- CODE:
+juro=float(input())
+taxa=(1500*juro)/100
+Qf=(1500*(1+taxa)**36
+print(Qf)
+-- ERROR:
+File "XXXX", line 4
+    print(Qf)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

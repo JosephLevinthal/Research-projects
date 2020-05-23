@@ -1,0 +1,65 @@
+== SUBMITION (2019-05-14 11:21:39) 
+-- CODE:
+qi = int(input("quantidade inicial:"))
+c = int(input("crescimento da parada:"))
+lim = 8000
+t = 0
+while (0<qi<lim):
+	v = int(input("peixes tirados: "))
+	qi = qi - v + c*qi/100
+	t = t+1
+if (qi <= 0):
+	print("ZERO")
+elif (qi>=lim):
+	print("MAXIMO")
+print(t)
+-- EXECUTION TIME:
+0.158672
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+ZERO
+3
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+MAXIMO
+7
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

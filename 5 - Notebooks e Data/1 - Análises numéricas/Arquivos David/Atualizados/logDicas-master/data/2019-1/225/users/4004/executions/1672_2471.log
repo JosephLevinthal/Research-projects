@@ -1,0 +1,656 @@
+== TEST (2019-04-28 20:34:23) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada: ",age ,"anos e IMC", imc)
+-- OUTPUT:
+Entrada:  0 anos e IMC 0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 20:34:44) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age ,"anos e IMC", imc)
+-- OUTPUT:
+Entrada: 0 anos e IMC 0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 20:35:07) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age ,"anos e IMC ",imc)
+-- OUTPUT:
+Entrada: 0 anos e IMC  0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 20:36:53) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age ,"anos e IMC ",imc)
+
+if (130 > age < 0) or (imc <= 0):
+	print("Dados invalidos")
+-- OUTPUT:
+Entrada: 0 anos e IMC  0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 20:38:02) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age ,"anos e IMC ",imc)
+
+if not((130 < age > 0) or (imc > 0)):
+	print("Dados invalidos")
+else
+-- ERROR:
+File "XXXX", line 8
+    else
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 20:38:10) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age ,"anos e IMC ",imc)
+
+if not((130 < age > 0) or (imc > 0)):
+	print("Dados invalidos")
+-- OUTPUT:
+Entrada: 0 anos e IMC  0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 20:38:37) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age ,"anos e IMC ",imc)
+
+if not((130 > age < 0) or (imc <= 0)):
+	print("Dados invalidos")
+-- OUTPUT:
+Entrada: 0 anos e IMC  0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 20:42:39) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age ,"anos e IMC ",imc)
+
+if (130 > age < 0) or (imc <= 0):
+	print("Dados invalidos")
+else:
+	if age < 45:
+		if imc < 22.0:
+			print("baixo")
+		else:
+			print("medio")
+	else:
+		if: imc < 22.0:
+			print("medio")
+		else:
+			print("alto")
+-- ERROR:
+File "XXXX", line 15
+    if: imc < 22.0:
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 20:44:50) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age ,"anos e IMC ",imc)
+
+if (130 > age < 0) or (imc <= 0):
+	print("Dados invalidos")
+else:
+	if age < 45:
+		if imc < 22.0:
+			Z = "Baixo"
+		else:
+			Z = "Medio"
+	else:
+		if imc < 22.0:
+			Z = "Medio"
+		else:
+			Z = "Alto"
+	print("Risco:", Z)
+-- OUTPUT:
+Entrada: 0 anos e IMC  0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 20:45:06) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age ,"anos e IMC",imc)
+
+if (130 > age < 0) or (imc <= 0):
+	print("Dados invalidos")
+else:
+	if age < 45:
+		if imc < 22.0:
+			Z = "Baixo"
+		else:
+			Z = "Medio"
+	else:
+		if imc < 22.0:
+			Z = "Medio"
+		else:
+			Z = "Alto"
+	print("Risco:", Z)
+-- OUTPUT:
+Entrada: 0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 20:45:17) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age ,"anos e IMC",imc)
+
+if (130 > age < 0) or (imc <= 0):
+	print("Dados invalidos")
+else:
+	if age < 45:
+		if imc < 22.0:
+			Z = "Baixo"
+		else:
+			Z = "Medio"
+	else:
+		if imc < 22.0:
+			Z = "Medio"
+		else:
+			Z = "Alto"
+	print("Risco:", Z)
+-- EXECUTION TIME:
+0.143147
+-- TEST CASE 1:
+---- input:
+0
+0
+---- correct output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+---- user output:
+Entrada: 0 anos e IMC 0.0
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+25
+25
+---- correct output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+---- user output:
+Entrada: 25 anos e IMC 25.0
+Risco: Medio
+-- TEST CASE 3:
+---- input:
+50
+25
+---- correct output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+---- user output:
+Entrada: 50 anos e IMC 25.0
+Risco: Alto
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 20:45:42) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age ,"anos e IMC",imc)
+
+if (130 > age < 0) or (imc <= 0):
+	print("Dados invalidos")
+else:
+	if age < 45:
+		if imc < 22.0:
+			Z = "Baixo"
+		else:
+			Z = "Medio"
+	else:
+		if imc < 22.0:
+			Z = "Medio"
+		else:
+			Z = "Alto"
+	print("Risco:", Z)
+-- OUTPUT:
+Entrada: 0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 20:45:54) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age ,"anos e IMC",imc)
+
+if (130 > age < 0) or (imc <= 0):
+	print("Dados invalidos")
+else:
+	if age < 45:
+		if imc < 22.0:
+			Z = "Baixo"
+		else:
+			Z = "Medio"
+	else:
+		if imc < 22.0:
+			Z = "Medio"
+		else:
+			Z = "Alto"
+	print("Risco:", Z)
+-- OUTPUT:
+Entrada: 0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 20:46:10) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age ,"anos e IMC",imc)
+
+if (130 > age < 0) or (imc <= 0):
+	print("Dados invalidos")
+else:
+	if age < 45:
+		if imc < 22.0:
+			Z = "Baixo"
+		else:
+			Z = "Medio"
+	else:
+		if imc < 22.0:
+			Z = "Medio"
+		else:
+			Z = "Alto"
+	print("Risco:", Z)
+-- OUTPUT:
+Entrada: 0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 20:46:41) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age ,"anos e IMC",imc)
+
+if (130 > age or age < 0) or (imc <= 0):
+	print("Dados invalidos")
+else:
+	if age < 45:
+		if imc < 22.0:
+			Z = "Baixo"
+		else:
+			Z = "Medio"
+	else:
+		if imc < 22.0:
+			Z = "Medio"
+		else:
+			Z = "Alto"
+	print("Risco:", Z)
+-- OUTPUT:
+Entrada: 0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 20:47:26) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age ,"anos e IMC",imc)
+
+if age > 130 or age < 0 or (imc <= 0):
+	print("Dados invalidos")
+else:
+	if age < 45:
+		if imc < 22.0:
+			Z = "Baixo"
+		else:
+			Z = "Medio"
+	else:
+		if imc < 22.0:
+			Z = "Medio"
+		else:
+			Z = "Alto"
+	print("Risco:", Z)
+-- OUTPUT:
+Entrada: 0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 20:47:36) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age ,"anos e IMC",imc)
+
+if age > 130 or age < 0 or (imc <= 0):
+	print("Dados invalidos")
+else:
+	if age < 45:
+		if imc < 22.0:
+			Z = "Baixo"
+		else:
+			Z = "Medio"
+	else:
+		if imc < 22.0:
+			Z = "Medio"
+		else:
+			Z = "Alto"
+	print("Risco:", Z)
+-- EXECUTION TIME:
+0.140848
+-- TEST CASE 1:
+---- input:
+0
+0
+---- correct output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+---- user output:
+Entrada: 0 anos e IMC 0.0
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+25
+25
+---- correct output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+---- user output:
+Entrada: 25 anos e IMC 25.0
+Risco: Medio
+-- TEST CASE 3:
+---- input:
+50
+25
+---- correct output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+---- user output:
+Entrada: 50 anos e IMC 25.0
+Risco: Alto
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 20:48:18) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age,"anos e IMC",imc)
+
+if age > 130 or age < 0 or (imc <= 0):
+	print("Dados invalidos")
+else:
+	if age < 45:
+		if imc < 22.0:
+			Z = "Baixo"
+		else:
+			Z = "Medio"
+	else:
+		if imc < 22.0:
+			Z = "Medio"
+		else:
+			Z = "Alto"
+	print("Risco: ",Z)
+-- OUTPUT:
+Entrada: 0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 20:48:38) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age,"anos e IMC",imc)
+
+if age > 130 or age < 0 or (imc <= 0):
+	print("Dados invalidos")
+else:
+	if age < 45:
+		if imc < 22.0:
+			Z = "Baixo"
+		else:
+			Z = "Medio"
+	else:
+		if imc < 22.0:
+			Z = "Medio"
+		else:
+			Z = "Alto"
+	print("Risco: ",Z)
+-- OUTPUT:
+Entrada: 0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 20:48:45) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age,"anos e IMC",imc)
+
+if age > 130 or age < 0 or (imc <= 0):
+	print("Dados invalidos")
+else:
+	if age < 45:
+		if imc < 22.0:
+			Z = "Baixo"
+		else:
+			Z = "Medio"
+	else:
+		if imc < 22.0:
+			Z = "Medio"
+		else:
+			Z = "Alto"
+	print("Risco: ",Z)
+-- OUTPUT:
+Entrada: 0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 20:49:09) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age,"anos e IMC",imc)
+
+if age > 130 or age < 0 or (imc <= 0):
+	print("Dados invalidos")
+else:
+	if age < 45:
+		if imc < 22.0:
+			Z = "Baixo"
+		else:
+			Z = "Medio"
+	else:
+		if imc < 22.0:
+			Z = "Medio"
+		else:
+			Z = "Alto"
+	print("Risco:",Z)
+-- OUTPUT:
+Entrada: 0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 20:49:17) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age,"anos e IMC",imc)
+
+if age > 130 or age < 0 or (imc <= 0):
+	print("Dados invalidos")
+else:
+	if age < 45:
+		if imc < 22.0:
+			Z = "Baixo"
+		else:
+			Z = "Medio"
+	else:
+		if imc < 22.0:
+			Z = "Medio"
+		else:
+			Z = "Alto"
+	print("Risco:",Z)
+-- EXECUTION TIME:
+0.1336
+-- TEST CASE 1:
+---- input:
+0
+0
+---- correct output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+---- user output:
+Entrada: 0 anos e IMC 0.0
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+25
+25
+---- correct output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+---- user output:
+Entrada: 25 anos e IMC 25.0
+Risco: Medio
+-- TEST CASE 3:
+---- input:
+50
+25
+---- correct output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+---- user output:
+Entrada: 50 anos e IMC 25.0
+Risco: Alto
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 20:49:43) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age,"anos e IMC",imc)
+
+if age > 130 or age < 0 or (imc <= 0):
+	print("Dados invalidos")
+else:
+	if age < 45:
+		if imc < 22.0:
+			Z = "Baixo"
+		else:
+			Z = "Medio"
+	else:
+		if imc < 22.0:
+			Z = "Medio"
+		else:
+			Z = "Alto"
+	print("Risco:",Z)
+-- OUTPUT:
+Entrada: 0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 15:38:20) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entrada:",age,"anos e IMC",imc)
+
+if age > 130 or age < 0 or (imc <= 0):
+	print("Dados invalidos")
+else:
+	if age < 45:
+		if imc < 22.0:
+			Z = "Baixo"
+		else:
+			Z = "Medio"
+	else:
+		if imc < 22.0:
+			Z = "Medio"
+		else:
+			Z = "Alto"
+	print("Risco:",Z)
+-- OUTPUT:
+Entrada: 0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 15:38:39) 
+-- CODE:
+age = int(input("idade: "))
+imc = float(input("IMC: "))
+
+print("Entradas:",age,"anos e IMC",imc)
+
+if age > 130 or age < 0 or (imc <= 0):
+	print("Dados invalidos")
+else:
+	if age < 45:
+		if imc < 22.0:
+			Z = "Baixo"
+		else:
+			Z = "Medio"
+	else:
+		if imc < 22.0:
+			Z = "Medio"
+		else:
+			Z = "Alto"
+	print("Risco:",Z)
+-- EXECUTION TIME:
+0.130597
+-- TEST CASE 1:
+---- input:
+0
+0
+---- correct output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+---- user output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+25
+25
+---- correct output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+---- user output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+-- TEST CASE 3:
+---- input:
+50
+25
+---- correct output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+---- user output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

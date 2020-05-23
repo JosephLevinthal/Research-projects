@@ -1,0 +1,342 @@
+== TEST (2019-04-16 16:14:48) 
+-- CODE:
+altura1 = float(input("Digite sua altura: "))
+altura2 = float(input("Digite a altura do acompanhante: "))
+
+if(altura1 >= 1.37):
+	mensagem = "sim"
+print (mensagem)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print (mensagem)
+NameError: name 'mensagem' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:17:34) 
+-- CODE:
+altura1 = float(input("Digite sua altura: "))
+altura2 = float(input("Digite a altura do acompanhante: "))
+
+if(altura1 >= 1.37, altura2 >=1.37):
+	mensagem = "sim"
+else:
+	mensagem = "nao"
+print (mensagem)
+-- OUTPUT:
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:18:50) 
+-- CODE:
+altura1 = float(input("Digite sua altura: "))
+altura2 = float(input("Digite a altura do acompanhante: "))
+
+if(altura1 >= 1.37, altura2 >=1.37):
+	mensagem = "sim"
+else:
+	mensagem = "nao"
+print (mensagem)
+-- OUTPUT:
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:29:53) 
+-- CODE:
+altura1 = float(input("Digite sua altura: "))
+altura2 = float(input("Digite a altura do acompanhante: "))
+
+if(altura1, altura2 >= 1.37):
+	mensagem = "sim"
+else:
+	mensagem = "nao"
+print (mensagem)
+-- OUTPUT:
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:31:08) 
+-- CODE:
+altura1 = float(input("Digite sua altura: "))
+altura2 = float(input("Digite a altura do acompanhante: "))
+
+if(altura1 >= 1.37), (altura2 >= 1.37):
+	mensagem = "sim"
+	
+else:
+	mensagem = "nao"
+print (mensagem)
+-- ERROR:
+File "XXXX", line 4
+    if(altura1 >= 1.37), (altura2 >= 1.37):
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:33:12) 
+-- CODE:
+altura1 = float(input("Digite sua altura: "))
+altura2 = float(input("Digite a altura do acompanhante: "))
+
+if(altura1 >= 1.37) 
+	mensagem = "sim"
+	(altura2 >= 1.37):
+	mensagem = "sim"
+	
+else:
+	mensagem = "nao"
+print (mensagem)
+print (maior(altura1, altura2))
+-- ERROR:
+File "XXXX", line 4
+    if(altura1 >= 1.37) 
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:33:26) 
+-- CODE:
+altura1 = float(input("Digite sua altura: "))
+altura2 = float(input("Digite a altura do acompanhante: "))
+
+if(altura1 >= 1.37):
+	mensagem = "sim"
+	(altura2 >= 1.37):
+	mensagem = "sim"
+	
+else:
+	mensagem = "nao"
+print (mensagem)
+print (maior(altura1, altura2))
+-- ERROR:
+File "XXXX", line 6
+    (altura2 >= 1.37):
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:33:43) 
+-- CODE:
+altura1 = float(input("Digite sua altura: "))
+altura2 = float(input("Digite a altura do acompanhante: "))
+
+if(altura1 >= 1.37):
+	mensagem = "sim"
+	if(altura2 >= 1.37):
+	mensagem = "sim"
+	
+else:
+	mensagem = "nao"
+print (mensagem)
+print (maior(altura1, altura2))
+-- ERROR:
+File "XXXX", line 7
+    mensagem = "sim"
+           ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:33:55) 
+-- CODE:
+altura1 = float(input("Digite sua altura: "))
+altura2 = float(input("Digite a altura do acompanhante: "))
+
+if(altura1 >= 1.37):
+	mensagem = "sim"
+	
+if(altura2 >= 1.37):
+	mensagem = "sim"
+	
+else:
+	mensagem = "nao"
+print (mensagem)
+print (maior(altura1, altura2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 13, in <module>
+    print (maior(altura1, altura2))
+NameError: name 'maior' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:34:33) 
+-- CODE:
+altura1 = float(input("Digite sua altura: "))
+altura2 = float(input("Digite a altura do acompanhante: "))
+
+if(altura1 >= 1.37):
+	mensagem = "sim"
+	
+if(altura2 >= 1.37):
+	mensagem = "sim"
+	
+else:
+	mensagem = "nao"
+print (mensagem)
+print (altura1, altura2).maior()
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 13, in <module>
+    print (altura1, altura2).maior()
+AttributeError: 'NoneType' object has no attribute 'maior'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:35:05) 
+-- CODE:
+altura1 = float(input("Digite sua altura: "))
+altura2 = float(input("Digite a altura do acompanhante: "))
+
+if(altura1 >= 1.37):
+	mensagem = "sim"
+	
+if(altura2 >= 1.37):
+	mensagem = "sim"
+	
+else:
+	mensagem = "nao"
+print (mensagem)
+print maior(altura1, altura2)
+-- ERROR:
+File "XXXX", line 13
+    print maior(altura1, altura2)
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:35:22) 
+-- CODE:
+altura1 = float(input("Digite sua altura: "))
+altura2 = float(input("Digite a altura do acompanhante: "))
+
+if(altura1 >= 1.37):
+	mensagem = "sim"
+	
+if(altura2 >= 1.37):
+	mensagem = "sim"
+	
+else:
+	mensagem = "nao"
+print (mensagem)
+print (maior(altura1, altura2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 13, in <module>
+    print (maior(altura1, altura2))
+NameError: name 'maior' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:36:04) 
+-- CODE:
+altura1 = float(input("Digite sua altura: "))
+altura2 = float(input("Digite a altura do acompanhante: "))
+
+if(altura1 >= 1.37):
+	mensagem = "sim"
+	
+if(altura2 >= 1.37):
+	mensagem = "sim"
+	
+else:
+	mensagem = "nao"
+print (mensagem)
+print max(altura1, altura2)
+-- ERROR:
+File "XXXX", line 13
+    print max(altura1, altura2)
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:36:20) 
+-- CODE:
+altura1 = float(input("Digite sua altura: "))
+altura2 = float(input("Digite a altura do acompanhante: "))
+
+if(altura1 >= 1.37):
+	mensagem = "sim"
+	
+if(altura2 >= 1.37):
+	mensagem = "sim"
+	
+else:
+	mensagem = "nao"
+print (mensagem)
+print (max(altura1, altura2))
+-- OUTPUT:
+nao
+1.26
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:36:37) 
+-- CODE:
+altura1 = float(input("Digite sua altura: "))
+altura2 = float(input("Digite a altura do acompanhante: "))
+
+if(altura1 >= 1.37):
+	mensagem = "sim"
+	
+if(altura2 >= 1.37):
+	mensagem = "sim"
+	
+else:
+	mensagem = "nao"
+print (mensagem)
+print (max(altura1, altura2))
+-- OUTPUT:
+nao
+1.26
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:36:51) 
+-- CODE:
+altura1 = float(input("Digite sua altura: "))
+altura2 = float(input("Digite a altura do acompanhante: "))
+
+if(altura1 >= 1.37):
+	mensagem = "sim"
+	
+if(altura2 >= 1.37):
+	mensagem = "sim"
+	
+else:
+	mensagem = "nao"
+print (mensagem)
+print (max(altura1, altura2))
+-- OUTPUT:
+nao
+1.26
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 16:37:18) 
+-- CODE:
+altura1 = float(input("Digite sua altura: "))
+altura2 = float(input("Digite a altura do acompanhante: "))
+
+if(altura1 >= 1.37):
+	mensagem = "sim"
+	
+if(altura2 >= 1.37):
+	mensagem = "Sim"
+	
+else:
+	mensagem = "Nao"
+print (mensagem)
+print (max(altura1, altura2))
+-- EXECUTION TIME:
+0.132605
+-- TEST CASE 1:
+---- input:
+1.25
+1.26
+---- correct output:
+Nao
+1.26
+---- user output:
+Nao
+1.26
+-- TEST CASE 2:
+---- input:
+1.20
+1.53
+---- correct output:
+Sim
+1.53
+---- user output:
+Sim
+1.53
+-- TEST CASE 3:
+---- input:
+1.85
+1.9
+---- correct output:
+Sim
+1.9
+---- user output:
+Sim
+1.9
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

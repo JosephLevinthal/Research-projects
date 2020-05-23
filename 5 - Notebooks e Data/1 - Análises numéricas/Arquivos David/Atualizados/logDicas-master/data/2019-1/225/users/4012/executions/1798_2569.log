@@ -1,0 +1,49 @@
+== SUBMITION (2019-06-11 17:19:36) 
+-- CODE:
+from numpy import*
+from math import sqrt
+x1 = [10,20,30,40,50,60,70,80,90,100]
+x = array(eval(input()))
+
+media=0
+for i in x:
+	media += i
+
+media = media/(size(x))
+
+desvio=0
+for i in x:
+	desvio += (i-media)**2
+
+desvio = desvio/((size(x))-1)
+desvio = round(sqrt(desvio),3)
+
+print(desvio)
+
+-- EXECUTION TIME:
+0.941115
+-- TEST CASE 1:
+---- input:
+[-4,250,-1,30,12]
+---- correct output:
+108.498
+---- user output:
+108.498
+-- TEST CASE 2:
+---- input:
+[12.5,25.2,50.39,47.3,0.9]
+---- correct output:
+21.526
+---- user output:
+21.526
+-- TEST CASE 3:
+---- input:
+[1.5,1.9,1.2,1.3,1.4,1.1,1.75]
+
+---- correct output:
+0.29
+---- user output:
+0.29
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

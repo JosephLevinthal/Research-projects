@@ -1,0 +1,5 @@
+tempo=float(input("tempo gasto: "))
+vm=float(input("velocidade media: "))
+d=(tempo*vm)
+print(d)
+print(float(d/12))

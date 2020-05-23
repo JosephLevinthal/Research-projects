@@ -1,0 +1,2081 @@
+== TEST (2019-04-22 20:25:57) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t) 
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-22 20:33:53) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+if ((t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif(t == "R"):
+	ct = c * 0.44
+	print("Valor total: R$" , ct)
+else:
+	ct = c * 0.65
+	print("Valor total: R$" , ct)
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -36.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-22 20:36:33) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+if ((t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif((t == "R") and (c <= 500)):
+	ct = c * 0.44
+	print("Valor total: R$" , ct)
+else:
+	ct = c * 0.65
+	print("Valor total: R$" , ct)
+elif((t == "C") and (c <= 1000)):
+	ct = c * 0.55
+	print("Valor total: R$" , ct)
+	
+-- ERROR:
+File "XXXX", line 15
+    elif((t == "C") and (c <= 1000)):
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-22 20:44:35) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+if ((t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif((t == "R") and (c <= 500)):
+	ct = c * 0.44
+	print("Valor total: R$" , ct)
+else:
+	ct = c * 0.65
+	print("Valor total: R$" , ct)
+if((t == "C") and (c <= 1000)):
+	ct = c * 0.55
+	print("Valor total: R$" , ct)
+elif((t == "C") and (t > 1000)):
+	ct = c * 0.6
+	print("Valor total: R$" , ct)
+elif((t == "I") and (c <= 5000)):
+	ct= c * 0.55
+	print("Valor total: R$" , ct)
+elif
+	
+-- ERROR:
+File "XXXX", line 24
+    elif
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-22 20:46:43) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+if ((t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif((t == "R") and (c <= 500)):
+	ct = c * 0.44
+	print("Valor total: R$" , ct)
+else:
+	ct = c * 0.65
+	print("Valor total: R$" , ct)
+if((t == "C") and (c <= 1000)):
+	ct = c * 0.55
+	print("Valor total: R$" , ct)
+elif((t == "C") and (t > 1000)):
+	ct = c * 0.6
+	print("Valor total: R$" , ct)
+elif((t == "I") and (c <= 5000)):
+	ct= c * 0.55
+	print("Valor total: R$" , ct)
+elif((t == "I") and (c > 500)):
+	ct = c * 0.6
+	print("Valor total: R$" , ct )
+else:
+	ct = c * 0.6
+	print("Valor total: R$" , ct)
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -36.4
+Valor total: R$ -30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-22 20:47:12) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+if ((t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif((t == "R") and (c <= 500)):
+	ct = c * 0.44
+	print("Valor total: R$" , ct)
+else:
+	ct = c * 0.65
+	print("Valor total: R$" , ct)
+if((t == "C") and (c <= 1000)):
+	ct = c * 0.55
+	print("Valor total: R$" , ct)
+elif((t == "C") and (t > 1000)):
+	ct = c * 0.6
+	print("Valor total: R$" , ct)
+elif((t == "I") and (c <= 5000)):
+	ct= c * 0.55
+	print("Valor total: R$" , ct)
+elif((t == "I") and (c > 500)):
+	ct = c * 0.6
+	print("Valor total: R$" , ct )
+else:
+	ct = c * 0.6
+	print("Valor total: R$" , ct)
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -36.4
+Valor total: R$ -30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-22 20:49:03) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+if ((t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif((t == "R") and (c <= 500)):
+	ct = c * 0.44
+	print("Valor total: R$" , ct)
+else:
+	ct = c * 0.65
+	print("Valor total: R$" , ct)
+if((t == "C") and (c <= 1000)):
+	ct = c * 0.55
+	print("Valor total: R$" , ct)
+if((t == "C") and (t > 1000)):
+	ct = c * 0.6
+	print("Valor total: R$" , ct)
+elif((t == "I") and (c <= 5000)):
+	ct= c * 0.55
+	print("Valor total: R$" , ct)
+elif((t == "I") and (c > 500)):
+	ct = c * 0.6
+	print("Valor total: R$" , ct )
+else:
+	ct = c * 0.6
+	print("Valor total: R$" , ct)
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -36.4
+Valor total: R$ -30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-22 20:49:32) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+if ((t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif((t == "R") and (c <= 500)):
+	ct = c * 0.44
+	print("Valor total: R$" , ct)
+else:
+	ct = c * 0.65
+	print("Valor total: R$" , ct)
+if((t == "C") and (c <= 1000)):
+	ct = c * 0.55
+	print("Valor total: R$" , ct)
+if((t == "C") and (c > 1000)):
+	ct = c * 0.6
+	print("Valor total: R$" , ct)
+elif((t == "I") and (c <= 5000)):
+	ct= c * 0.55
+	print("Valor total: R$" , ct)
+elif((t == "I") and (c > 500)):
+	ct = c * 0.6
+	print("Valor total: R$" , ct )
+else:
+	ct = c * 0.6
+	print("Valor total: R$" , ct)
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -36.4
+Valor total: R$ -30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-22 20:52:05) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+if ((t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif((t == "R") and (c <= 500)):
+	ct = c * 0.44
+	print("Valor total: R$" , ct)
+else:
+	ct = c * 0.65
+	print("Valor total: R$" , ct)
+if((t == "C") and (c <= 1000)):
+	ct = c * 0.55
+	print("Valor total: R$" , ct)
+if((t == "C") and (c <= 1000)):
+	ct = c * 0.6
+	print("Valor total: R$" , ct)
+elif((t == "C") and (c > 1000)):
+	ct = c * 0.6
+	print("Valor total: R$" , ct)
+elif((t == "I") and (c <= 5000)):
+	ct= c * 0.55
+	print("Valor total: R$" , ct)
+elif((t == "I") and (c > 500)):
+	ct = c * 0.6
+	print("Valor total: R$" , ct )
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -36.4
+Valor total: R$ -30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-22 20:52:46) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+if ((t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif((t == "R") and (c <= 500)):
+	ct = c * 0.44
+	print("Valor total: R$" , ct)
+else:
+	ct = c * 0.65
+	print("Valor total: R$" , ct)
+if((t == "C") and (c <= 1000)):
+	ct = c * 0.55
+	print("Valor total: R$" , ct)
+if((t == "C") and (c < 1000)):
+	ct = c * 0.6
+	print("Valor total: R$" , ct)
+elif((t == "I") and (c <= 5000)):
+	ct= c * 0.55
+	print("Valor total: R$" , ct)
+elif((t == "I") and (c > 500)):
+	ct = c * 0.6
+	print("Valor total: R$" , ct )
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -36.4
+Valor total: R$ -30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 22:27:31) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 22:27:38) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 22:27:45) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 22:30:54) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") or (t != "C") or (t != "I")):
+	print("Dados invalidos")
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 22:31:18) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") or (t != "C") or (t != "I")):
+	print("Dados invalidos")
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 22:35:48) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") or (t != "C") or (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print(c * 0.44)
+	else:
+		print(c * 0.65)
+	if((t == "C") and (c <= 1000)):
+		print(c * 0.55)
+	elif:
+-- ERROR:
+File "XXXX", line 12
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 22:36:08) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") or (t != "C") or (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print(c * 0.44)
+else:
+		print(c * 0.65)
+if((t == "C") and (c <= 1000)):
+		print(c * 0.55)
+elif:
+-- ERROR:
+File "XXXX", line 16
+    elif:
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 22:36:49) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") or (t != "C") or (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print(c * 0.44)
+else:
+	print(c * 0.65)
+if((t == "C") and (c <= 1000)):
+	print(c * 0.55)
+elif:
+	print(c * 0.60)
+-- ERROR:
+File "XXXX", line 16
+    elif:
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 22:38:25) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") or (t != "C") or (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print(c * 0.44)
+else:
+	print(c * 0.65)
+if((t == "C") and (c <= 1000)):
+	print(c * 0.55)
+elif ((t == "C") and (c > 1000)):
+	print(c * 0.60)
+elif ((t == "I") and (c <= 5000)):
+	print(c * 0.55)
+else:
+	print(c * 0.60)
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+-30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-23 22:39:16) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") or (t != "C") or (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print(c * 0.44)
+else:
+	print(c * 0.65)
+if((t == "C") and (c <= 1000)):
+	print(c * 0.55)
+elif ((t == "C") and (c > 1000)):
+	print(c * 0.60)
+elif ((t == "I") and (c <= 5000)):
+	print(c * 0.55)
+else:
+	print(c * 0.60)
+-- EXECUTION TIME:
+0.169508
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+-30.800000000000004
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Dados invalidos
+573.3
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 22:40:28) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") or (t != "C") or (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print(c * 0.44)
+elif((t == "R") and (c > 500)):
+	print(c * 0.65)
+elif((t == "C") and (c <= 1000)):
+	print(c * 0.55)
+elif ((t == "C") and (c > 1000)):
+	print(c * 0.60)
+elif ((t == "I") and (c <= 5000)):
+	print(c * 0.55)
+else:
+	print(c * 0.60)
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 22:41:14) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print(c * 0.44)
+elif((t == "R") and (c > 500)):
+	print(c * 0.65)
+elif((t == "C") and (c <= 1000)):
+	print(c * 0.55)
+elif ((t == "C") and (c > 1000)):
+	print(c * 0.60)
+elif ((t == "I") and (c <= 5000)):
+	print(c * 0.55)
+else:
+	print(c * 0.60)
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+-30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 22:42:33) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print( "Valor total: R$" ,c * 0.44)
+elif((t == "R") and (c > 500)):
+	print("Valor total: R$" ,c * 0.65)
+elif((t == "C") and (c <= 1000)):
+	print("Valor total: R$" ,c * 0.55)
+elif ((t == "C") and (c > 1000)):
+	print("Valor total: R$" ,c * 0.60)
+elif ((t == "I") and (c <= 5000)):
+	print("Valor total: R$" ,c * 0.55)
+else:
+	print("Valor total: R$" ,c * 0.60)
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-23 22:42:54) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print( "Valor total: R$" ,c * 0.44)
+elif((t == "R") and (c > 500)):
+	print("Valor total: R$" ,c * 0.65)
+elif((t == "C") and (c <= 1000)):
+	print("Valor total: R$" ,c * 0.55)
+elif ((t == "C") and (c > 1000)):
+	print("Valor total: R$" ,c * 0.60)
+elif ((t == "I") and (c <= 5000)):
+	print("Valor total: R$" ,c * 0.55)
+else:
+	print("Valor total: R$" ,c * 0.60)
+-- EXECUTION TIME:
+0.239665
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.800000000000004
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.075
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-23 22:42:54) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print( "Valor total: R$" ,c * 0.44)
+elif((t == "R") and (c > 500)):
+	print("Valor total: R$" ,c * 0.65)
+elif((t == "C") and (c <= 1000)):
+	print("Valor total: R$" ,c * 0.55)
+elif ((t == "C") and (c > 1000)):
+	print("Valor total: R$" ,c * 0.60)
+elif ((t == "I") and (c <= 5000)):
+	print("Valor total: R$" ,c * 0.55)
+else:
+	print("Valor total: R$" ,c * 0.60)
+-- EXECUTION TIME:
+0.171603
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.800000000000004
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.800000000000004
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-23 22:42:55) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print( "Valor total: R$" ,c * 0.44)
+elif((t == "R") and (c > 500)):
+	print("Valor total: R$" ,c * 0.65)
+elif((t == "C") and (c <= 1000)):
+	print("Valor total: R$" ,c * 0.55)
+elif ((t == "C") and (c > 1000)):
+	print("Valor total: R$" ,c * 0.60)
+elif ((t == "I") and (c <= 5000)):
+	print("Valor total: R$" ,c * 0.55)
+else:
+	print("Valor total: R$" ,c * 0.60)
+-- EXECUTION TIME:
+0.197478
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.800000000000004
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.800000000000004
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-23 22:42:55) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print( "Valor total: R$" ,c * 0.44)
+elif((t == "R") and (c > 500)):
+	print("Valor total: R$" ,c * 0.65)
+elif((t == "C") and (c <= 1000)):
+	print("Valor total: R$" ,c * 0.55)
+elif ((t == "C") and (c > 1000)):
+	print("Valor total: R$" ,c * 0.60)
+elif ((t == "I") and (c <= 5000)):
+	print("Valor total: R$" ,c * 0.55)
+else:
+	print("Valor total: R$" ,c * 0.60)
+-- EXECUTION TIME:
+0.182955
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.075
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.075
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-23 22:42:55) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print( "Valor total: R$" ,c * 0.44)
+elif((t == "R") and (c > 500)):
+	print("Valor total: R$" ,c * 0.65)
+elif((t == "C") and (c <= 1000)):
+	print("Valor total: R$" ,c * 0.55)
+elif ((t == "C") and (c > 1000)):
+	print("Valor total: R$" ,c * 0.60)
+elif ((t == "I") and (c <= 5000)):
+	print("Valor total: R$" ,c * 0.55)
+else:
+	print("Valor total: R$" ,c * 0.60)
+-- EXECUTION TIME:
+0.262768
+-- ERROR:
+sh: 1: cannot open /home/codebench/codes/1671/1101/cbtemp.txt: No such file
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-23 22:42:55) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print( "Valor total: R$" ,c * 0.44)
+elif((t == "R") and (c > 500)):
+	print("Valor total: R$" ,c * 0.65)
+elif((t == "C") and (c <= 1000)):
+	print("Valor total: R$" ,c * 0.55)
+elif ((t == "C") and (c > 1000)):
+	print("Valor total: R$" ,c * 0.60)
+elif ((t == "I") and (c <= 5000)):
+	print("Valor total: R$" ,c * 0.55)
+else:
+	print("Valor total: R$" ,c * 0.60)
+-- EXECUTION TIME:
+0.404426
+-- ERROR:
+sh: 1: cannot open /home/codebench/codes/1671/1101/cbtemp.txt: No such file
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-23 22:42:55) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print( "Valor total: R$" ,c * 0.44)
+elif((t == "R") and (c > 500)):
+	print("Valor total: R$" ,c * 0.65)
+elif((t == "C") and (c <= 1000)):
+	print("Valor total: R$" ,c * 0.55)
+elif ((t == "C") and (c > 1000)):
+	print("Valor total: R$" ,c * 0.60)
+elif ((t == "I") and (c <= 5000)):
+	print("Valor total: R$" ,c * 0.55)
+else:
+	print("Valor total: R$" ,c * 0.60)
+-- EXECUTION TIME:
+0.638593
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.075
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.075
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 22:42:55) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print( "Valor total: R$" ,c * 0.44)
+elif((t == "R") and (c > 500)):
+	print("Valor total: R$" ,c * 0.65)
+elif((t == "C") and (c <= 1000)):
+	print("Valor total: R$" ,c * 0.55)
+elif ((t == "C") and (c > 1000)):
+	print("Valor total: R$" ,c * 0.60)
+elif ((t == "I") and (c <= 5000)):
+	print("Valor total: R$" ,c * 0.55)
+else:
+	print("Valor total: R$" ,c * 0.60)
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-23 22:42:56) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print( "Valor total: R$" ,c * 0.44)
+elif((t == "R") and (c > 500)):
+	print("Valor total: R$" ,c * 0.65)
+elif((t == "C") and (c <= 1000)):
+	print("Valor total: R$" ,c * 0.55)
+elif ((t == "C") and (c > 1000)):
+	print("Valor total: R$" ,c * 0.60)
+elif ((t == "I") and (c <= 5000)):
+	print("Valor total: R$" ,c * 0.55)
+else:
+	print("Valor total: R$" ,c * 0.60)
+-- EXECUTION TIME:
+0.641614
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.075
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-23 22:42:56) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print( "Valor total: R$" ,c * 0.44)
+elif((t == "R") and (c > 500)):
+	print("Valor total: R$" ,c * 0.65)
+elif((t == "C") and (c <= 1000)):
+	print("Valor total: R$" ,c * 0.55)
+elif ((t == "C") and (c > 1000)):
+	print("Valor total: R$" ,c * 0.60)
+elif ((t == "I") and (c <= 5000)):
+	print("Valor total: R$" ,c * 0.55)
+else:
+	print("Valor total: R$" ,c * 0.60)
+-- EXECUTION TIME:
+0.731658
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.800000000000004
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+consumo de energia:tipo de instacao:Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.075
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-23 22:42:56) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print( "Valor total: R$" ,c * 0.44)
+elif((t == "R") and (c > 500)):
+	print("Valor total: R$" ,c * 0.65)
+elif((t == "C") and (c <= 1000)):
+	print("Valor total: R$" ,c * 0.55)
+elif ((t == "C") and (c > 1000)):
+	print("Valor total: R$" ,c * 0.60)
+elif ((t == "I") and (c <= 5000)):
+	print("Valor total: R$" ,c * 0.55)
+else:
+	print("Valor total: R$" ,c * 0.60)
+-- EXECUTION TIME:
+0.447186
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.075
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-23 22:42:56) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print( "Valor total: R$" ,c * 0.44)
+elif((t == "R") and (c > 500)):
+	print("Valor total: R$" ,c * 0.65)
+elif((t == "C") and (c <= 1000)):
+	print("Valor total: R$" ,c * 0.55)
+elif ((t == "C") and (c > 1000)):
+	print("Valor total: R$" ,c * 0.60)
+elif ((t == "I") and (c <= 5000)):
+	print("Valor total: R$" ,c * 0.55)
+else:
+	print("Valor total: R$" ,c * 0.60)
+-- EXECUTION TIME:
+0.379566
+-- ERROR:
+sh: 1: cannot open /home/codebench/codes/1671/1101/cbtemp.txt: No such file
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-23 22:42:56) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print( "Valor total: R$" ,c * 0.44)
+elif((t == "R") and (c > 500)):
+	print("Valor total: R$" ,c * 0.65)
+elif((t == "C") and (c <= 1000)):
+	print("Valor total: R$" ,c * 0.55)
+elif ((t == "C") and (c > 1000)):
+	print("Valor total: R$" ,c * 0.60)
+elif ((t == "I") and (c <= 5000)):
+	print("Valor total: R$" ,c * 0.55)
+else:
+	print("Valor total: R$" ,c * 0.60)
+-- EXECUTION TIME:
+0.384489
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.800000000000004
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-23 22:42:56) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print( "Valor total: R$" ,c * 0.44)
+elif((t == "R") and (c > 500)):
+	print("Valor total: R$" ,c * 0.65)
+elif((t == "C") and (c <= 1000)):
+	print("Valor total: R$" ,c * 0.55)
+elif ((t == "C") and (c > 1000)):
+	print("Valor total: R$" ,c * 0.60)
+elif ((t == "I") and (c <= 5000)):
+	print("Valor total: R$" ,c * 0.55)
+else:
+	print("Valor total: R$" ,c * 0.60)
+-- EXECUTION TIME:
+0.233879
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.800000000000004
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 22:43:15) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	print( "Valor total: R$" ,c * 0.44)
+elif((t == "R") and (c > 500)):
+	print("Valor total: R$" ,c * 0.65)
+elif((t == "C") and (c <= 1000)):
+	print("Valor total: R$" ,c * 0.55)
+elif ((t == "C") and (c > 1000)):
+	print("Valor total: R$" ,c * 0.6)
+elif ((t == "I") and (c <= 5000)):
+	print("Valor total: R$" ,c * 0.55)
+else:
+	print("Valor total: R$" ,c * 0.6)
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 22:47:59) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.6
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+elif:
+	msg = c * 0.6
+print("Valor total: R$", msg)
+-- ERROR:
+File "XXXX", line 20
+    elif:
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-23 22:48:40) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.6
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.6
+print("Valor total: R$", msg)
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.800000000000004
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-23 22:48:51) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.6
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.6
+print("Valor total: R$", msg)
+-- EXECUTION TIME:
+0.164129
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.800000000000004
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.075
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-24 14:32:45) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.6
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.6
+print("Valor total: R$", round(msg , 2)
+-- ERROR:
+File "XXXX", line 23
+    
+                                           ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-24 14:32:48) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.6
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.6
+print("Valor total: R$", round(msg , 2)
+-- EXECUTION TIME:
+0.194786
+-- ERROR:
+  File "/home/codebench/codes/1671/1101/main.py", line 23
+    
+                                           ^
+SyntaxError: unexpected EOF while parsing
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-24 14:32:49) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.6
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.6
+print("Valor total: R$", round(msg , 2)
+-- ERROR:
+File "XXXX", line 23
+    
+                                           ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-24 14:32:55) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.6
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.6
+print("Valor total: R$", round(msg , 2))
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-24 14:32:57) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.6
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.6
+print("Valor total: R$", round(msg , 2))
+-- EXECUTION TIME:
+0.130969
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.8
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-24 14:32:59) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.6
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.6
+print("Valor total: R$", round(msg , 2))
+-- EXECUTION TIME:
+0.181892
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.8
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-24 14:32:59) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.6
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.6
+print("Valor total: R$", round(msg , 2))
+-- EXECUTION TIME:
+0.154458
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-24 14:36:04) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+print("Valor total: R$" , round(msg , 2))
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+print("Valor total: R$" , round(msg , 2))
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+print("Valor total: R$" , round(msg , 2))
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.6
+print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.6
+print("Valor total: R$", round(msg , 2))
+-- ERROR:
+File "XXXX", line 13
+    elif((t == "R") and (c > 500)):
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-24 14:37:07) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+print("Valor total: R$" , round(msg , 2))
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+print("Valor total: R$" , round(msg , 2))
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+print("Valor total: R$" , round(msg , 2))
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.6
+print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.6
+print("Valor total: R$", round(msg , 2))
+-- ERROR:
+File "XXXX", line 13
+    elif((t == "R") and (c > 500)):
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-24 14:38:46) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+	print("Valor total: R$" , round(msg , 2))
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+	print("Valor total: R$" , round(msg , 2))
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.6
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.6
+	print("Valor total: R$", round(msg , 2))
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-24 14:39:01) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+	print("Valor total: R$" , round(msg , 2))
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+	print("Valor total: R$" , round(msg , 2))
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.6
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.6
+	print("Valor total: R$", round(msg , 2))
+-- EXECUTION TIME:
+0.204761
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.8
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-24 14:39:12) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+	print("Valor total: R$" , round(msg , 2))
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+	print("Valor total: R$" , round(msg , 2))
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.6
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.6
+	print("Valor total: R$", round(msg , 2))
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-24 14:39:32) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+	print("Valor total: R$" , round(msg , 2))
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+	print("Valor total: R$" , round(msg , 2))
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.6
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.6
+	print("Valor total: R$", round(msg , 2))
+-- EXECUTION TIME:
+0.177737
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.8
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-24 14:40:02) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+	print("Valor total: R$" , round(msg , 2))
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+	print("Valor total: R$" , round(msg , 2))
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.6
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.6
+	print("Valor total: R$", round(msg , 2))
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-24 14:40:19) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+	print("Valor total: R$" , round(msg , 2))
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+	print("Valor total: R$" , round(msg , 2))
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.60
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.60
+	print("Valor total: R$", round(msg , 2))
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-24 14:40:37) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+	print("Valor total: R$" , round(msg , 2))
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+	print("Valor total: R$" , round(msg , 2))
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.60
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.60
+	print("Valor total: R$", round(msg , 2))
+-- EXECUTION TIME:
+0.190914
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.8
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-24 14:41:47) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) and (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+	print("Valor total: R$" , round(msg , 2))
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+	print("Valor total: R$" , round(msg , 2))
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.60
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.60
+	print("Valor total: R$", round(msg , 2))
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -30.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-24 14:42:41) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) or (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+	print("Valor total: R$" , round(msg , 2))
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+	print("Valor total: R$" , round(msg , 2))
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.60
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.60
+	print("Valor total: R$", round(msg , 2))
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-24 14:42:49) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+c = float(input("consumo de energia:"))
+t = input("tipo de instacao:")
+print("Entradas:" , c , "kWh e tipo" , t)
+
+if ((c < 0) or (t != "R") and (t != "C") and (t != "I")):
+	print("Dados invalidos")
+elif ((t == "R") and (c <= 500)):
+	msg = c * 0.44
+	print("Valor total: R$" , round(msg , 2))
+elif((t == "R") and (c > 500)):
+	msg = c * 0.65
+	print("Valor total: R$" , round(msg , 2))
+elif((t == "C") and (c <= 1000)):
+	msg = c * 0.55
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "C") and (c > 1000)):
+	msg =c * 0.60
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c <= 5000)):
+	msg = c * 0.55
+	print("Valor total: R$" , round(msg , 2))
+elif ((t == "I") and (c > 5000)):
+	msg = c * 0.60
+	print("Valor total: R$", round(msg , 2))
+-- EXECUTION TIME:
+0.135771
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

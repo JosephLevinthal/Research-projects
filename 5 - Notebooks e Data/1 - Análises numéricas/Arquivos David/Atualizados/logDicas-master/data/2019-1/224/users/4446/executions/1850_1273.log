@@ -1,0 +1,481 @@
+== TEST (2019-07-01 16:05:26) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+vet=zeros(4, dtype=float)
+x3=350
+x2 = -120 + x3
+x1 = 50 + x2
+x4= 870 - x1
+
+vet[0]=round(x1, 1)
+vet[1]=round(x2, 1)
+vet[2]=round(x3, 1)
+vet[3]=round(x4, 1)
+
+print(vet)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 16:13:50) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat=array([[x1,-x2, 0, 0], 
+			  [0, x2,-x3, 0], 
+			  [0, 0, x3, 0], 
+			  [x1, 0, 0, x4]])
+matig=array([[50], [-120], [350]])
+mat=matig
+
+vet=zeros(4, dtype=float)
+
+vet[0]=round(x1, 1)
+vet[1]=round(x2, 1)
+vet[2]=round(x3, 1)
+vet[3]=round(x4, 1)
+
+print(vet)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 16:14:28) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat=array([[x1,-x2, 0, 0], 
+			  [0, x2,-x3, 0], 
+			  [0, 0, x3, 0], 
+			  [x1, 0, 0, x4]])
+matig=array([[50], [-120], [350]])
+sum(mat)=matig
+
+vet=zeros(4, dtype=float)
+
+vet[0]=round(x1, 1)
+vet[1]=round(x2, 1)
+vet[2]=round(x3, 1)
+vet[3]=round(x4, 1)
+
+print(vet)
+
+-- ERROR:
+File "XXXX", line 9
+    sum(mat)=matig
+    ^
+SyntaxError: can't assign to function call
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 16:25:04) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat=array([[1,-1, 0, 0], 
+			  [0, 1,-1, 0], 
+			  [0, 0, 1, 0], 
+			  [1, 0, 0, 1]])
+matig=array([[50], [-120], [350]])
+
+tot=dot(inv(mat), matig.T)
+
+vet=zeros(4, dtype=float)
+
+vet[0]=round(x1, 1)
+vet[1]=round(x2, 1)
+vet[2]=round(x3, 1)
+vet[3]=round(x4, 1)
+
+print(tot)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 16:34:31) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat=array([[x1,-x2, 0, 0], 
+			  [0, x2,-x3, 0], 
+			  [0, 0, x3, 0], 
+			  [x1, 0, 0, x4]])
+matig=array([[50], [-120], [350]])
+
+tot= sum(mat) + matig.T
+
+vet=zeros(4, dtype=float)
+
+vet[0]=round(x1, 1)
+vet[1]=round(x2, 1)
+vet[2]=round(x3, 1)
+vet[3]=round(x4, 1)
+
+print(tot)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 16:35:41) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat=array([[x1,-x2, 0, 0], 
+			  [0, x2,-x3, 0], 
+			  [0, 0, x3, 0], 
+			  [x1, 0, 0, x4]])
+matig=array([[50], [-120], [350]])
+
+sum(mat)=matig.T
+
+vet=zeros(4, dtype=float)
+
+vet[0]=round(x1, 1)
+vet[1]=round(x2, 1)
+vet[2]=round(x3, 1)
+vet[3]=round(x4, 1)
+
+print(tot)
+
+-- ERROR:
+File "XXXX", line 10
+    sum(mat)=matig.T
+    ^
+SyntaxError: can't assign to function call
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 16:39:43) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat=array([[1,-1, 0, 0], 
+			  [0, 1,-1, 0], 
+			  [0, 0, 1, 0], 
+			  [1, 0, 0, 1]])
+var=array([[x1],[x2],[x3],[x4]])
+matig=array([[50], [-120], [350]])
+
+r= dot( inv(mat), matig.T)
+print(r)
+vet=zeros(4, dtype=float)
+
+vet[0]=round(x1, 1)
+vet[1]=round(x2, 1)
+vet[2]=round(x3, 1)
+vet[3]=round(x4, 1)
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 16:42:02) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat=array([[1,-1, 0, 0], 
+			  [0, 1,-1, 0], 
+			  [0, 0, 1, 0], 
+			  [1, 0, 0, 1]])
+var=array([[x1],[x2],[x3],[x4]])
+matig=array([[50], [-120], [350]])
+
+=rdot(mat, var.T)
+print(r)
+vet=zeros(4, dtype=float)
+
+vet[0]=round(x1, 1)
+vet[1]=round(x2, 1)
+vet[2]=round(x3, 1)
+vet[3]=round(x4, 1)
+
+
+
+-- ERROR:
+File "XXXX", line 11
+    =rdot(mat, var.T)
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 16:42:13) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat=array([[1,-1, 0, 0], 
+			  [0, 1,-1, 0], 
+			  [0, 0, 1, 0], 
+			  [1, 0, 0, 1]])
+var=array([[x1],[x2],[x3],[x4]])
+matig=array([[50], [-120], [350]])
+
+r=dot(mat, var.T)
+print(r)
+vet=zeros(4, dtype=float)
+
+vet[0]=round(x1, 1)
+vet[1]=round(x2, 1)
+vet[2]=round(x3, 1)
+vet[3]=round(x4, 1)
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 16:46:34) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat=array([[1,-1, 0, 0], 
+			  [0, 1,-1, 0], 
+			  [0, 0, 1, 0], 
+			  [1, 0, 0, 1]])
+matig=array([[50], [-120], [350]])
+
+r=dot(inv(mat), matig)
+print(r)
+vet=zeros(4, dtype=float)
+
+vet[0]=round(x1, 1)
+vet[1]=round(x2, 1)
+vet[2]=round(x3, 1)
+vet[3]=round(x4, 1)
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 16:49:24) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat=array([[1,-1, 0, 0], 
+			  [0, 1,-1, 0], 
+			  [0, 0, 1, 0], 
+			  [1, 0, 0, 1]])
+matig=array([[50], [-120], [350], [870]])
+
+r=dot(inv(mat), matig)
+print(r)
+vet=zeros(4, dtype=float)
+
+vet[0]=round(x1, 1)
+vet[1]=round(x2, 1)
+vet[2]=round(x3, 1)
+vet[3]=round(x4, 1)
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 16:49:38) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat=array([[1,-1, 0, 0], 
+			  [0, 1,-1, 0], 
+			  [0, 0, 1, 0], 
+			  [1, 0, 0, 1]])
+matig=array([[50], [-120], [350], [870]])
+
+r=dot(inv(mat), matig)
+print(r)
+vet=zeros(4, dtype=float)
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 16:57:59) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat=array([[1,-1, 0, 0], 
+			  [0, 1,-1, 0], 
+			  [0, 0, 1, 0], 
+			  [1, 0, 0, 1]])
+matig=array([[50], [-120], [350], [870]])
+
+r=dot(inv(mat), matig.T)
+print(r)
+vet=zeros(4, dtype=float)
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 16:58:20) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat=array([[1,-1, 0, 0], 
+			  [0, 1,-1, 0], 
+			  [0, 0, 1, 0], 
+			  [1, 0, 0, 1]])
+matig=array([[50], [-120], [350], [870]])
+
+r=dot(inv(mat), matig)
+print(r)
+vet=zeros(4, dtype=float)
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 16:59:02) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat=array([[1,-1, 0, 0], 
+			  [0, 1,-1, 0], 
+			  [0, 0, 1, 0], 
+			  [1, 0, 0, 1]])
+matig=array([50,-120,350,870])
+
+r=dot(inv(mat), matig)
+print(r)
+vet=zeros(4, dtype=float)
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 16:59:16) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat=array([[1,-1, 0, 0], 
+			  [0, 1,-1, 0], 
+			  [0, 0, 1, 0], 
+			  [1, 0, 0, 1]])
+matig=array([50,-120,350,870])
+
+r=dot(inv(mat), matig.T)
+print(r)
+vet=zeros(4, dtype=float)
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 17:01:17) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat=array([[1,-1, 0, 0], 
+			  [0, 1,-1, 0], 
+			  [0, 0, 1, 0], 
+			  [1, 0, 0, 1]])
+inter=array([50,-120,350,870])
+r=dot (inv (mat), matig.T)
+print(r)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 17:01:34) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat=array([[1,-1, 0, 0], 
+			  [0, 1,-1, 0], 
+			  [0, 0, 1, 0], 
+			  [1, 0, 0, 1]])
+inter=array([50,-120,350,870])
+r=dot (inv (mat), inter.T)
+print(r)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 17:01:41) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat=array([[1,-1, 0, 0], 
+			  [0, 1,-1, 0], 
+			  [0, 0, 1, 0], 
+			  [1, 0, 0, 1]])
+inter=array([50,-120,350,870])
+r=dot (inv (mat), inter.T)
+print(r)
+-- EXECUTION TIME:
+0.821858
+-- TEST CASE 1:
+---- input:
+Não_há
+---- correct output:
+[280. 230. 350. 590.]
+---- user output:
+[280. 230. 350. 590.]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

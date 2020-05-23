@@ -1,0 +1,191 @@
+== TEST (2019-06-04 16:08:39) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+rom numpy import *
+v = arange(5)
+print(v)
+
+
+
+
+
+-- ERROR:
+File "XXXX", line 4
+    rom numpy import *
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 16:09:11) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+from numpy import *
+
+v = arange(5)
+print(v)
+
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 16:23:09) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+from numpy import *
+
+v = range(5)
+print(v)
+
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 16:27:11) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+from numpy import *
+# Atribui valores a um vetor 'v'
+notas = array(eval(input("Informe as notas: ")))
+# Soma dos valores do vetor. Comeca em ZERO.
+soma = 0
+# Calcula a soma
+for i in range(size(notas)):
+soma = soma + notas[i]
+# Divide a soma pelo numero de
+# elementos do vetor, para determinar a media
+media = soma / size(notas)
+print(round(media, 2))
+
+
+
+
+-- ERROR:
+File "XXXX", line 12
+    soma = soma + notas[i]
+       ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 16:27:23) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+
+from numpy import *
+# Atribui valores a um vetor 'v'
+notas = array(eval(input("Informe as notas: ")))
+# Soma dos valores do vetor. Comeca em ZERO.
+soma = 0
+# Calcula a soma
+for i in range(size(notas)):
+	soma = soma + notas[i]
+# Divide a soma pelo numero de
+# elementos do vetor, para determinar a media
+media = soma / size(notas)
+print(round(media, 2))
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-30 12:11:06) 
+-- CODE:
+from math import * 
+*
+
+#Leitura dos valores
+v0 = float(input("Digite a v0: "))
+a = float(input("Digite o angulo do vetor de lancamento: "))
+D = float(input("Digite a distancia em metros entre o passaro e o porco: "))
+rad = radians(a)
+Ra = v0**2
+Rb = sin(2 * rad)
+g = 9.8
+R = (Ra * Rb)/g
+dif = abs(D - R)
+dif = round(dif, 2)
+
+if(dif <= 0.1):
+	print("sim")
+
+else:
+	print("nao")
+-- EXECUTION TIME:
+0.90406
+-- ERROR:
+  File "/home/codebench/codes/1644/1055/main.py", line 2
+    *
+    ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-30 12:11:19) 
+-- CODE:
+from math import * 
+
+
+#Leitura dos valores
+v0 = float(input("Digite a v0: "))
+a = float(input("Digite o angulo do vetor de lancamento: "))
+D = float(input("Digite a distancia em metros entre o passaro e o porco: "))
+rad = radians(a)
+Ra = v0**2
+Rb = sin(2 * rad)
+g = 9.8
+R = (Ra * Rb)/g
+dif = abs(D - R)
+dif = round(dif, 2)
+
+if(dif <= 0.1):
+	print("sim")
+
+else:
+	print("nao")
+-- EXECUTION TIME:
+0.716
+-- TEST CASE 1:
+---- input:
+10.5
+45.5
+11.3
+---- correct output:
+sim
+---- user output:
+sim
+-- TEST CASE 2:
+---- input:
+29.5
+17.1
+51.0
+---- correct output:
+nao
+---- user output:
+nao
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

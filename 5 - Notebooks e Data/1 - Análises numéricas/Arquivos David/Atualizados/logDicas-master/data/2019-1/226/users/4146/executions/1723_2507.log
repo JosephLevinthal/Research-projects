@@ -1,0 +1,139 @@
+== TEST (2019-05-14 11:32:45) 
+-- CODE:
+p = int(input("Peixes: "))
+c = int(input("Crescimento: "))
+crescp = p
+t = 0
+
+while (crescp < 8000) and (crescp > 0):
+	r = int(input("Retirados: "))
+	crescp = crescp + (crescp * (c/100)) - r
+	t = t + 1
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    qt= qt+(ql*(pc/100))-qr
+NameError: name 'ql' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:32:53) 
+-- CODE:
+p = int(input("Peixes: "))
+c = int(input("Crescimento: "))
+crescp = p
+t = 0
+
+while (crescp < 8000) and (crescp > 0):
+	r = int(input("Retirados: "))
+	crescp = crescp + (crescp * (c/100)) - r
+	t = t + 1
+	
+print(t)	
+-- OUTPUT:
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:33:13) 
+-- CODE:
+p = int(input("Peixes: "))
+c = int(input("Crescimento: "))
+crescp = p
+t = 0
+
+while (crescp < 8000) and (crescp > 0):
+	r = int(input("Retirados: "))
+	crescp = crescp + (crescp * (c/100)) - r
+	t = t + 1
+	
+print(t)	
+-- OUTPUT:
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:34:00) 
+-- CODE:
+p = int(input("Peixes: "))
+c = int(input("Crescimento: "))
+crescp = p
+t = 0
+
+while (crescp < 8000) and (crescp > 0):
+	r = int(input("Retirados: "))
+	crescp = crescp + (crescp * (c/100)) - r
+	t = t + 1
+	
+if (crescp <= 0):
+	print("ZERO")
+else:
+	print("MAXIMO")
+	
+print(t)	
+-- OUTPUT:
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 11:34:29) 
+-- CODE:
+p = int(input("Peixes: "))
+c = int(input("Crescimento: "))
+crescp = p
+t = 0
+
+while (crescp < 8000) and (crescp > 0):
+	r = int(input("Retirados: "))
+	crescp = crescp + (crescp * (c/100)) - r
+	t = t + 1
+	
+if (crescp <= 0):
+	print("ZERO")
+else:
+	print("MAXIMO")
+	
+print(t)	
+-- EXECUTION TIME:
+1.5748
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+ZERO
+3
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+MAXIMO
+7
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

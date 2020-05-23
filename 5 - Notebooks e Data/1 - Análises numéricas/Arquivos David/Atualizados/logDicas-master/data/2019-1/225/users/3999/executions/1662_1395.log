@@ -1,0 +1,698 @@
+== TEST (2019-04-15 14:05:05) 
+-- CODE:
+v=float(input("Valor :"))
+
+if(v<=1000):
+	print(round(v*5/100,2))
+else:
+	print(round(v/1000*5/100+v*10/100,2))
+-- OUTPUT:
+49.78
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:08:51) 
+-- CODE:
+v=float(input("Valor :"))
+
+if(v<=1000):
+	print(round(v*5/100,2))
+else:
+	print(round((5/100*v+10/100*(v-v*5/100),2)
+-- ERROR:
+File "XXXX", line 7
+    
+                                               ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:08:54) 
+-- CODE:
+v=float(input("Valor :"))
+
+if(v<=1000):
+	print(round(v*5/100,2))
+else:
+	print(round((5/100*v+10/100*(v-v*5/100),2)
+-- ERROR:
+File "XXXX", line 7
+    
+                                               ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:10:44) 
+-- CODE:
+v=float(input("Valor :"))
+v2= (5*v)/100 + (v-v*0.5)*0.1
+if(v<=1000):
+	print(round(v*5/100,2))
+else:
+	print(round(v2,2))
+-- OUTPUT:
+49.78
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:11:12) 
+-- CODE:
+v=float(input("Valor :"))
+v2= (5*v)/100 + (v-v*0.05)*0.1
+if(v<=1000):
+	print(round(v*5/100,2))
+else:
+	print(round(v2,2))
+-- OUTPUT:
+49.78
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 14:13:24) 
+-- CODE:
+v=float(input("Valor :"))
+v2= 0.05*v + (v-v*0.05)*0.1
+if(v<=1000):
+	print(round(v*5/100,2))
+else:
+	print(round(v2,2))
+-- EXECUTION TIME:
+0.207925
+-- TEST CASE 1:
+---- input:
+995.58
+---- correct output:
+49.78
+---- user output:
+49.78
+-- TEST CASE 2:
+---- input:
+4500.86
+---- correct output:
+400.09
+---- user output:
+652.62
+-- TEST CASE 3:
+---- input:
+100
+---- correct output:
+5.0
+---- user output:
+5.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 14:23:40) 
+-- CODE:
+v=float(input("Valor :"))
+v2= 0.05*1000 + (v-v*0.05)*0.1
+if(v<=1000):
+	print(round(v*5/100,2))
+else:
+	print(round(v2,2))
+-- EXECUTION TIME:
+0.174699
+-- TEST CASE 1:
+---- input:
+995.58
+---- correct output:
+49.78
+---- user output:
+49.78
+-- TEST CASE 2:
+---- input:
+4500.86
+---- correct output:
+400.09
+---- user output:
+477.58
+-- TEST CASE 3:
+---- input:
+100
+---- correct output:
+5.0
+---- user output:
+5.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:23:58) 
+-- CODE:
+v=float(input("Valor :"))
+v2= 0.05*1000 + (v-1000*0.05)*0.1
+if(v<=1000):
+	print(round(v*5/100,2))
+else:
+	print(round(v2,2))
+-- OUTPUT:
+49.78
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 14:26:23) 
+-- CODE:
+v=float(input("Valor :"))
+v2=0.05*(v-1000)+0.1*(v-(v-1000))
+if(v<=1000):
+	print(round(v*5/100,2))
+else:
+	print(round(v2,2))
+-- EXECUTION TIME:
+0.154756
+-- TEST CASE 1:
+---- input:
+995.58
+---- correct output:
+49.78
+---- user output:
+49.78
+-- TEST CASE 2:
+---- input:
+4500.86
+---- correct output:
+400.09
+---- user output:
+275.04
+-- TEST CASE 3:
+---- input:
+100
+---- correct output:
+5.0
+---- user output:
+5.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:27:30) 
+-- CODE:
+v=float(input("Valor :"))
+v2=0.05*(v-1000)
+v3=(v-v2)*0.1
+if(v<=1000):
+	print(round(v*5/100,2))
+else:
+	print(round(v2+v3,2))
+-- OUTPUT:
+49.78
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:28:09) 
+-- CODE:
+v=float(input("Valor :"))
+v2=0.05*(v)
+v3=(v-v2)*0.1
+if(v<=1000):
+	print(round(v*5/100,2))
+else:
+	print(round(v2+v3,2))
+-- OUTPUT:
+49.78
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:37:51) 
+-- CODE:
+v=float(input("Valor: ")
+if(v<=1000):
+		  print(v*0.05)
+else:
+		  print(50+(v-50)*0.1)
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 2
+    if(v<=1000):
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:38:09) 
+-- CODE:
+v=float(input("Valor: ")
+if(v=<1000):
+		  print(v*0.05)
+else:
+		  print(50+(v-50)*0.1)
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 2
+    if(v=<1000):
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:38:22) 
+-- CODE:
+v=float(input("Valor: ")
+if(v<=1000):
+		  print(v*0.05)
+else:
+		  print(50+(v-50)*0.1)
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 2
+    if(v<=1000):
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:38:33) 
+-- CODE:
+v=float(input("Valor: ")
+if(v<=1000):
+		 print(v*0.05)
+else:
+		 print(50+(v-50)*0.1)
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 2
+    if(v<=1000):
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:38:44) 
+-- CODE:
+v=float(input("Valor: ")
+if(v<=1.000):
+		 print(v*0.05)
+else:
+		 print(50+(v-50)*0.1)
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 2
+    if(v<=1.000):
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:38:57) 
+-- CODE:
+v=float(input("Valor: ")
+if(v<=1.000):
+		print(v*0.05)
+else:
+		 print(50+(v-50)*0.1)
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 2
+    if(v<=1.000):
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 14:39:26) 
+-- CODE:
+v=float(input("Valor: ")
+if(v<=1000):
+		print(v*0.05)
+else:
+		 print(50+(v-50)*0.1)
+		  
+		  
+
+-- EXECUTION TIME:
+0.22596
+-- ERROR:
+  File "/home/codebench/codes/1662/1395/main.py", line 2
+    if(v<=1000):
+               ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:39:28) 
+-- CODE:
+v=float(input("Valor: ")
+if(v<=1000):
+		print(v*0.05)
+else:
+		 print(50+(v-50)*0.1)
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 2
+    if(v<=1000):
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:39:57) 
+-- CODE:
+v=float(input("Valor: ")
+if(v<=1000):
+		  print(v*0.05)
+		
+else:
+		 print(50+(v-50)*0.1)
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 2
+    if(v<=1000):
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 14:40:10) 
+-- CODE:
+v=float(input("Valor: ")
+if(v<=1000):
+		  print(v*0.05)
+		
+else:
+		 print(50+(v-50)*0.1)
+		  
+		  
+
+-- EXECUTION TIME:
+0.221848
+-- ERROR:
+  File "/home/codebench/codes/1662/1395/main.py", line 2
+    if(v<=1000):
+               ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:40:19) 
+-- CODE:
+v=float(input("Valor: ")
+if(v<=1000):
+		  print(v*0.05)
+		
+else:
+		 print(50+(v-50)*0.1)
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 2
+    if(v<=1000):
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:40:54) 
+-- CODE:
+v=float(input("Valor: ")
+
+		  if(v<=1000):
+		  print(v*0.05)
+		
+else:
+		 print(50+(v-50)*0.1)
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 3
+    if(v<=1000):
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:41:01) 
+-- CODE:
+v=float(input("Valor: ")
+
+if(v<=1000):
+		  print(v*0.05)
+		
+else:
+		 print(50+(v-50)*0.1)
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 3
+    if(v<=1000):
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:41:26) 
+-- CODE:
+v=float(input("Valor: ")
+
+if(v <= 1000):
+		  print(v*0.05)
+		
+else:
+		 print(50+(v-50)*0.1)
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 3
+    if(v <= 1000):
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:43:15) 
+-- CODE:
+v=float(input("Valor: ")
+
+if(v>1000):
+		  print(50+(v-50)*0.1)
+		  
+		
+else:
+		 print(v*0.05)
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 3
+    if(v>1000):
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:43:30) 
+-- CODE:
+V=float(input("Valor: ")
+
+if(V>1000):
+		  print(50+(v-50)*0.1)
+		  
+		
+else:
+		 print(v*0.05)
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 3
+    if(V>1000):
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:43:39) 
+-- CODE:
+V=float(input("Valor: ")
+
+if(V>1000)
+		  print(50+(v-50)*0.1)
+		  
+		
+else:
+		 print(v*0.05)
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 4
+    print(50+(v-50)*0.1)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:44:23) 
+-- CODE:
+V=float(input("Valor: ")
+x1=50+(v-50)*0.1
+if(V>1000):
+		  print(x1)
+		  
+		
+else:
+		 print(V*0.05)
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 2
+    x1=50+(v-50)*0.1
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:44:37) 
+-- CODE:
+V=float(input("Valor: ")
+x1=50+(V-50)*0.1
+if(V>1000):
+		  print(x1)
+		  
+		
+else:
+		 print(V*0.05)
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 2
+    x1=50+(V-50)*0.1
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:45:06) 
+-- CODE:
+V=float(input("Valor: ")
+x1=50+(V-50)*0.1
+if(V > 1000):
+		  print(x1)
+		  
+		
+else:
+		 print(V*0.05)
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 2
+    x1=50+(V-50)*0.1
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:45:47) 
+-- CODE:
+V=float(input("Valor: ")
+x1=50+(V-50)*0.1
+if(V > 1000):
+		  print(round(x1,2))
+		  
+		
+else:
+		 print(round(V*0.05,2))
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 2
+    x1=50+(V-50)*0.1
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:46:24) 
+-- CODE:
+V=float(input("Valor: ")
+x1=0.05*1000+(V-50)*0.1
+if(V > 1000):
+		  print(round(x1,2))
+		  
+		
+else:
+		 print(round(V*0.05,2))
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 2
+    x1=0.05*1000+(V-50)*0.1
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:47:21) 
+-- CODE:
+V=float(input("Valor: ")
+x1=0.05*1000+(V-50)*0.1
+if(V > 1000):
+		 print(round(x1,2))
+		  
+		
+else:
+		 print(round(V*0.05,2))
+		  
+		  
+
+-- ERROR:
+File "XXXX", line 2
+    x1=0.05*1000+(V-50)*0.1
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:47:50) 
+-- CODE:
+V=float(input("Valor: "))
+x1=0.05*1000+(V-50)*0.1
+if(V > 1000):
+		 print(round(x1,2))
+		  
+		
+else:
+		 print(round(V*0.05,2))
+		  
+		  
+
+-- OUTPUT:
+49.78
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:48:56) 
+-- CODE:
+V=float(input("Valor: "))
+x1=0.05*1000+0.1*(v-1000)
+if(V > 1000):
+		 print(round(x1,2))
+		  
+		
+else:
+		 print(round(V*0.05,2))
+		  
+		  
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    x1=0.05*1000+0.1*(v-1000)
+NameError: name 'v' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 14:49:07) 
+-- CODE:
+V=float(input("Valor: "))
+x1=0.05*1000+0.1*(V-1000)
+if(V > 1000):
+		 print(round(x1,2))
+		  
+		
+else:
+		 print(round(V*0.05,2))
+		  
+		  
+
+-- OUTPUT:
+49.78
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 14:49:12) 
+-- CODE:
+V=float(input("Valor: "))
+x1=0.05*1000+0.1*(V-1000)
+if(V > 1000):
+		 print(round(x1,2))
+		  
+		
+else:
+		 print(round(V*0.05,2))
+		  
+		  
+
+-- EXECUTION TIME:
+0.17549
+-- TEST CASE 1:
+---- input:
+995.58
+---- correct output:
+49.78
+---- user output:
+49.78
+-- TEST CASE 2:
+---- input:
+4500.86
+---- correct output:
+400.09
+---- user output:
+400.09
+-- TEST CASE 3:
+---- input:
+100
+---- correct output:
+5.0
+---- user output:
+5.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

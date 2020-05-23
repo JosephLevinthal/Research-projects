@@ -1,0 +1,476 @@
+== TEST (2019-04-09 16:50:10) 
+-- CODE:
+E = input("C")
+T  = float(input("temp: "))
+			
+E2 = input("F")
+T2 = float(input("temp:"))
+			  
+E=5/9*(E2-32)
+			  
+if E=="C":
+	input(E)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    E2 = input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 16:50:34) 
+-- CODE:
+E = input("C: ")
+T  = float(input("temp: "))
+			
+E2 = input("F")
+T2 = float(input("temp:"))
+			  
+Ez=5/9*(E2-32)
+			  
+if E=="C":
+	input(Ez)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    E2 = input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 12:20:53) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+c=5/9*(T-32)
+F=T*5/9-32
+if E=="C":
+	mensagem=(c)
+else:
+	mensagem=(F)
+	
+print(mensagem)
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 12:21:40) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+c=5/9*(T-32)
+F=T*5/9-32
+if E=="C":
+	mensagem=(c)
+else:
+	mensagem=(F)
+	
+print(round(mensagem,2)
+-- ERROR:
+File "XXXX", line 11
+    
+                           ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 12:21:44) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+c=5/9*(T-32)
+F=T*5/9-32
+if E=="C":
+	mensagem=(c)
+else:
+	mensagem=(F)
+	
+print(round(mensagem,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 12:23:02) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+c=5/9*(T-32)
+F=T-32
+if E=="C":
+	mensagem=(c)
+else:
+	mensagem=(F)
+	
+print(round(mensagem,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 12:23:58) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+c= 5/9 * ( T-32 )
+
+if E=="C":
+	mensagem=(c)
+else:
+	mensagem=(F)
+	
+print(round(mensagem,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 12:27:21) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+
+C= 5/9 * ( T - 32 )
+F= 5/9 * T + 32
+if E=="C":
+	mensagem=(c)
+else:
+	mensagem=(F)
+	
+print(round(mensagem,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    mensagem=(c)
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 12:27:45) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+
+C= 5/9 * ( T - 32 )
+F= (5/9 * T) - 32
+if E=="C":
+	mensagem=(c)
+else:
+	mensagem=(F)
+	
+print(round(mensagem,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    mensagem=(c)
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 12:37:57) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+
+C=5/9*(T-32)
+F= 5/9 * (T+32)
+
+if E=="C":
+	mensagem=(C)
+else:
+	mensagem=(F)
+	
+print(round(mensagem,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 12:38:17) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+
+C=5/9*(T-32)
+F= 5/9 * (T+32)
+
+if E=="C":
+	mensagem=(C)
+else:
+	mensagem=(F)
+	
+print(round(mensagem,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 12:38:27) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+
+C=5/9*(T-32)
+F= 5/9 * (T+32)
+
+if E=="C":
+	mensagem=(C)
+else:
+	mensagem=(F)
+	
+print(round(mensagem,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 12:38:44) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+
+C=5/9*(T-32)
+F= 5/9 * (T+32)
+
+if E=="C":
+	mensagem=(C)
+else:
+	mensagem=(F)
+	
+print(round(mensagem,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 12:39:10) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+
+C=5/9*(T-32)
+F= 5/9 * (T+32)
+
+if E=="C":
+	mensagem=(F)
+else:
+	mensagem=(C)
+	
+print(round(mensagem,2))
+-- OUTPUT:
+195.56
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 12:39:12) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+
+C=5/9*(T-32)
+F= 5/9 * (T+32)
+
+if E=="C":
+	mensagem=(F)
+else:
+	mensagem=(C)
+	
+print(round(mensagem,2))
+-- EXECUTION TIME:
+0.139302
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+195.56
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 12:39:16) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+
+C=5/9*(T-32)
+F= 5/9 * (T+32)
+
+if E=="C":
+	mensagem=(F)
+else:
+	mensagem=(C)
+	
+print(round(mensagem,2))
+-- OUTPUT:
+195.56
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 12:39:58) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+
+C=5/9*(T-32)
+F= 5/9 * (T+32)
+
+if E=="C":
+	mensagem=(C)
+else:
+	mensagem=(F)
+	
+print(round(mensagem,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 12:40:16) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+
+C=5/9*(T-32)
+F= 5/9 * (T+32)
+
+if E=="F":
+	mensagem=(C)
+else:
+	mensagem=(F)
+	
+print(round(mensagem,2))
+-- OUTPUT:
+195.56
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 12:40:28) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+
+C=5/9*(T-32)
+F= 5/9 * (T+32)
+
+if E=="F":
+	mensagem=(C)
+else:
+	mensagem=(F)
+	
+print(round(mensagem,2))
+-- OUTPUT:
+195.56
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 12:40:37) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+
+C=5/9*(T-32)
+F= 5/9 * (T+32)
+
+if E=="F":
+	mensagem=(C)
+else:
+	mensagem=(F)
+	
+print(round(mensagem,2))
+-- OUTPUT:
+195.56
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 12:42:07) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+
+C=5/9*(T-32)
+F= (5/9 * T)+32
+
+if E=="F":
+	mensagem=(C)
+else:
+	mensagem=(F)
+	
+print(round(mensagem,2))
+-- OUTPUT:
+209.78
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 12:42:18) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+
+C=5/9*(T-32)
+F= (5/9 * T)+32
+
+if E=="F":
+	mensagem=(C)
+else:
+	mensagem=(F)
+	
+print(round(mensagem,2))
+-- OUTPUT:
+209.78
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 12:43:09) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+
+C=5/9*(T-32)
+F= (9/5 * T)+32
+
+if E=="F":
+	mensagem=(C)
+else:
+	mensagem=(F)
+	
+print(round(mensagem,2))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 12:43:17) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+
+C=5/9*(T-32)
+F= (9/5 * T)+32
+
+if E=="F":
+	mensagem=(C)
+else:
+	mensagem=(F)
+	
+print(round(mensagem,2))
+-- EXECUTION TIME:
+0.27445
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 13:32:06) 
+-- CODE:
+E = input("celsius/fahrenheit [C/F] : ")
+T = float(input("temperatura: "))
+
+C=5/9*(T-32)
+F= (9/5 * T)+32
+
+if E=="F":
+	mensagem=(C)
+else:
+	mensagem=(F)
+	
+print(round(mensagem,2))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

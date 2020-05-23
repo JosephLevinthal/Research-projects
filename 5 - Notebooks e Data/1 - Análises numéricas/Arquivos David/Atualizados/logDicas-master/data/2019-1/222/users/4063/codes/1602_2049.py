@@ -1,0 +1,6 @@
+dividendo = int(input("quanto vale x: "))
+divisor = int(input("quanto vale y: "))
+print(dividendo)
+print(divisor)
+print(dividendo // divisor)
+print (dividendo % divisor)

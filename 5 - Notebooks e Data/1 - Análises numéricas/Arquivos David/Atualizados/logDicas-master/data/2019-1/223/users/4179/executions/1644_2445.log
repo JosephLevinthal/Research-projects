@@ -1,0 +1,117 @@
+== TEST (2019-04-16 10:57:35) 
+-- CODE:
+from math import *
+T=input("Qual escala: C/F: ")
+v=float(input("Qual o valor da temperatura: "))
+
+C=5/9*(F-32)
+
+if (T == C):
+	C=320.0
+	F=5/9*(C-32)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    C=5/9*(F-32)
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:58:07) 
+-- CODE:
+from math import *
+T=input("Qual escala: C/F: ")
+v=float(input("Qual o valor da temperatura: "))
+
+C=5/9*("F"-32)
+
+if (T == C):
+	C=320.0
+	F=5/9*(C-32)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    C=5/9*("F"-32)
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:59:27) 
+-- CODE:
+from math import *
+T=input("Qual escala: C/F: ")
+v=float(input("Qual o valor da temperatura: "))
+
+C=5/9*(v-32)
+
+if (T == C):
+	C=320.0
+	F=5/9*(C-32)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    C=5/9*("F"-32)
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:59:54) 
+-- CODE:
+from math import *
+T=input("Qual escala: C/F: ")
+v=float(input("Qual o valor da temperatura: "))
+
+C=5/9*(v-32)
+
+print(C)
+	
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:00:22) 
+-- CODE:
+from math import *
+T=input("Qual escala: C/F: ")
+v=float(input("Qual o valor da temperatura: "))
+
+C=5/9*(v-32)
+
+print(round(C,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 11:00:34) 
+-- CODE:
+from math import *
+T=input("Qual escala: C/F: ")
+v=float(input("Qual o valor da temperatura: "))
+
+C=5/9*(v-32)
+
+print(round(C,2))
+-- EXECUTION TIME:
+0.183589
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

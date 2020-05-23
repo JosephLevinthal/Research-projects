@@ -1,0 +1,100 @@
+== TEST (2019-06-04 17:00:50) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vetor: ")))
+# Contador de nos. pares
+npar = 0
+for i in range(size(vet)):
+
+	if (vet[i] % 2 == 0):
+		npar = npar + 1
+print(npar)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 17:01:39) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vetor: ")))
+# Contador de nos. pares
+npar = 0
+for i in range(size(vet)):
+
+	if (vet[i] % 2 != 0):
+		npar = npar + 1
+print(npar)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 16:32:03) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vetor: ")))
+# Contador de nos. pares
+npar = 0
+for i in range(size(vet)):
+
+	if (vet[i] % 2 != 0):
+		npar = npar + 1
+print(npar)
+-- EXECUTION TIME:
+1.18249
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1644/2446/main.py", line 2, in <module>
+    vet = array(eval(input()))
+  File "<string>", line 1
+    087612
+         ^
+SyntaxError: invalid token
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 16:32:19) 
+-- CODE:
+x=int (input("numero de 6 digitos: "))
+
+s1=x//100000
+s2=(x//10000)%10
+s3=(x//1000)%10
+s4=(x//100)%10
+s5=(x//10)%10
+s6=x%10
+
+w=(s2+s4+s6)%(s1+s3+s5)
+
+if w==0:
+	print("acesso liberado")
+else:
+	print("senha invalida")
+-- EXECUTION TIME:
+0.56018
+-- TEST CASE 1:
+---- input:
+087612
+---- correct output:
+acesso liberado
+---- user output:
+acesso liberado
+-- TEST CASE 2:
+---- input:
+760834
+---- correct output:
+senha invalida
+---- user output:
+senha invalida
+-- TEST CASE 3:
+---- input:
+122967
+---- correct output:
+acesso liberado
+---- user output:
+acesso liberado
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,1493 @@
+== TEST (2019-06-26 18:10:13) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+
+principal = 0
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+		else:
+			secundaria = secundaria + mat[i,j]
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:11:44) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+
+principal = 0
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+		else:
+			secundaria = secundaria + mat[i,j]
+print(principal - secundaria)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:11:56) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+
+principal = 0
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+		else:
+			secundaria = secundaria + mat[i,j]
+print(principal - secundaria)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:20:55) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+reversa = sorted(mat, reverse=True)
+print(mat)
+print(reversa)
+principal = 0
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+		else:
+			secundaria = secundaria + mat[i,j]
+#print(principal - secundaria)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:27:03) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+reversa = zeros((ordem, ordem))
+for j in range(ordem):
+	reversa[:,j] = sorted(mat[:,j, reverse=True])
+print(mat)
+print(reversa)
+principal = 0
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+		else:
+			secundaria = secundaria + mat[i,j]
+#print(principal - secundaria)
+-- ERROR:
+File "XXXX", line 7
+    reversa[:,j] = sorted(mat[:,j, reverse=True])
+                                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:31:23) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+reversa = zeros((ordem, ordem))
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+print(principal)
+secundaria = 0
+for j in range(ordem):
+	mat[:,j] = sorted(mat[:,j], reverse=True)
+	if(i == j):
+		secundaria = secundaria + mat[i,j]
+print(secundaria)
+#print(principal - secundaria)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:32:31) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+reversa = zeros((ordem, ordem))
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+print(principal)
+secundaria = 0
+for j in range(ordem):
+	mat[:,j] = sorted(mat[:,j], reverse=True)
+	if(i == j):
+		secundaria = secundaria + mat[i,j]
+print(secundaria)
+#print(principal - secundaria)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:33:37) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+reversa = zeros((ordem, ordem))
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+print(principal)
+print(mat)
+secundaria = 0
+for j in range(ordem):
+	mat[:,j] = sorted(mat[:,j], reverse=True)
+	if(i == j):
+		secundaria = secundaria + mat[i,j]
+print(mat)
+print(secundaria)
+#print(principal - secundaria)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:34:44) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+reversa = zeros((ordem, ordem))
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+print(principal)
+print(mat)
+secundaria = 0
+for j in range(ordem):
+	mat[i,:] = sorted(mat[i,:], reverse=True)
+	if(i == j):
+		secundaria = secundaria + mat[i,j]
+print(mat)
+print(secundaria)
+#print(principal - secundaria)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:36:38) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+reversa = zeros((ordem, ordem))
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+print(principal)
+print(mat)
+secundaria = 0
+for j in range(ordem):
+	mat[:,j] = sorted(mat[:,j], reverse=True)
+	if(i == j):
+		secundaria = secundaria + mat[i,j]
+print(mat)
+print(secundaria)
+#print(principal - secundaria)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:40:24) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+reversa = zeros((ordem, ordem))
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+#print(principal)
+print(mat)
+#secundaria = 0
+for i in range(ordem):
+	mat[i,:] = sorted(mat[i,:], reverse=True)
+print(mat)
+#print(secundaria)
+#print(principal - secundaria)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:42:16) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+#principal = 0
+#for i in range(ordem):
+#	for j in range(ordem):
+#		if(i == j):
+#			principal = principal + mat[i,j]
+#print(principal)
+#print(mat)
+#secundaria = 0
+for i in range(ordem):
+	mat[i,:] = sorted(mat[i,:], reverse=True)
+print(mat)
+#print(secundaria)
+#print(principal - secundaria)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:43:10) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+#principal = 0
+#for i in range(ordem):
+#	for j in range(ordem):
+#		if(i == j):
+#			principal = principal + mat[i,j]
+#print(principal)
+#print(mat)
+#secundaria = 0
+for i in range(ordem):
+	mat[i,:] = sorted(mat[i,:], reverse=True)
+	print(mat)
+#print(secundaria)
+#print(principal - secundaria)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:43:20) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+#principal = 0
+#for i in range(ordem):
+#	for j in range(ordem):
+#		if(i == j):
+#			principal = principal + mat[i,j]
+#print(principal)
+#print(mat)
+#secundaria = 0
+for i in range(ordem):
+	mat[i,:] = sorted(mat[i,:], reverse=True)
+	print(mat)
+#print(secundaria)
+#print(principal - secundaria)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:49:14) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+print(range(ordem))
+#principal = 0
+#for i in range(ordem):
+#	for j in range(ordem):
+#		if(i == j):
+#			principal = principal + mat[i,j]
+#print(principal)
+#print(mat)
+#secundaria = 0
+for i in range(shape(mat)[0]):
+	mat[i,:] = sorted(mat[i,:], reverse=True)
+	print(mat)
+#print(secundaria)
+#print(principal - secundaria)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:51:50) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+diaria = array(eval(input("Digite a diaria de cada funcionario: ")))
+n = shape(diaria)[0]
+
+for i in range(n):
+	diaria[i,:] = sorted(diaria[i,:], reverse=True)
+	print(diaria[i,0])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:53:09) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+diaria = array(eval(input("Digite a diaria de cada funcionario: ")))
+n = shape(diaria)[0]
+
+for i in range(n):
+	diaria[i,:] = sorted(diaria[i,:], reverse=True)
+print(diaria)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:54:25) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+diaria = array(eval(input("Digite a diaria de cada funcionario: ")))
+n = shape(diaria)[0]
+
+for i in range(n):
+	diaria[i,:] = sorted(diaria[i,:], reverse=True)
+print(diaria)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:03:37) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+diaria = array(eval(input("Digite a diaria de cada funcionario: ")))
+n = shape(diaria)[0]
+
+for i in range(n):
+	diaria[i,:] = sorted(diaria[i,:], reverse=True)
+print(diaria)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:04:07) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+diaria = array(eval(input("Digite a diaria de cada funcionario: ")))
+n = shape(diaria)[0]
+
+for i in range(n):
+	diaria[i,:] = sorted(diaria[i,:], reverse=True)
+print(diaria)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:09:32) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+print(det(mat))
+					
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:21:56) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+print(range(ordem))
+					
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:23:39) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+print(range(5))
+					
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:23:51) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+#ordem = array(eval(input("Digite a ordem da matriz: ")))
+#mat = array(eval(input("Digite a matriz de ordem dada: ")))
+print(range(5))
+					
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:24:13) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+#ordem = array(eval(input("Digite a ordem da matriz: ")))
+#mat = array(eval(input("Digite a matriz de ordem dada: ")))
+range(5)
+					
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:24:30) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+#ordem = array(eval(input("Digite a ordem da matriz: ")))
+#mat = array(eval(input("Digite a matriz de ordem dada: ")))
+n = range(5)
+print(n)					
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:24:50) 
+-- CODE:
+from numpy import *
+#from numpy.linalg import *
+#ordem = array(eval(input("Digite a ordem da matriz: ")))
+#mat = array(eval(input("Digite a matriz de ordem dada: ")))
+n = range(5)
+print(n)					
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:25:06) 
+-- CODE:
+#from numpy import *
+#from numpy.linalg import *
+#ordem = array(eval(input("Digite a ordem da matriz: ")))
+#mat = array(eval(input("Digite a matriz de ordem dada: ")))
+n = range(5)
+print(n)					
+-- OUTPUT:
+range(0, 5)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:25:30) 
+-- CODE:
+from math import *
+#from numpy import *
+#from numpy.linalg import *
+#ordem = array(eval(input("Digite a ordem da matriz: ")))
+#mat = array(eval(input("Digite a matriz de ordem dada: ")))
+n = range(5)
+print(n)					
+-- OUTPUT:
+range(0, 5)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:26:02) 
+-- CODE:
+from math import *
+#from numpy import *
+#from numpy.linalg import *
+#ordem = array(eval(input("Digite a ordem da matriz: ")))
+#mat = array(eval(input("Digite a matriz de ordem dada: ")))
+n = sorte(5)
+print(n)					
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    n = sorte(5)
+NameError: name 'sorte' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:26:12) 
+-- CODE:
+from math import *
+#from numpy import *
+#from numpy.linalg import *
+#ordem = array(eval(input("Digite a ordem da matriz: ")))
+#mat = array(eval(input("Digite a matriz de ordem dada: ")))
+n = sort(5)
+print(n)					
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    n = sort(5)
+NameError: name 'sort' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:27:28) 
+-- CODE:
+from math import *
+#from numpy import *
+#from numpy.linalg import *
+#ordem = array(eval(input("Digite a ordem da matriz: ")))
+#mat = array(eval(input("Digite a matriz de ordem dada: ")))
+print(range(5))			
+-- OUTPUT:
+range(0, 5)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:28:17) 
+-- CODE:
+from math import *
+#from numpy import *
+#from numpy.linalg import *
+#ordem = array(eval(input("Digite a ordem da matriz: ")))
+#mat = array(eval(input("Digite a matriz de ordem dada: ")))
+for i in range(5):
+print(i)			
+-- ERROR:
+File "XXXX", line 7
+    print(i)			
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:28:26) 
+-- CODE:
+from math import *
+#from numpy import *
+#from numpy.linalg import *
+#ordem = array(eval(input("Digite a ordem da matriz: ")))
+#mat = array(eval(input("Digite a matriz de ordem dada: ")))
+for i in range(5):
+	print(i)			
+-- OUTPUT:
+0
+1
+2
+3
+4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:29:12) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+#mat = array(eval(input("Digite a matriz de ordem dada: ")))
+for i in range(ordem):
+	print(i)			
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:29:43) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+for i in range(ordem//2):
+	print(i)			
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 19:34:05) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+for i in range(ordem//2):
+	aux = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux
+print(mat)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 20:24:35) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+aux = zeros((ordem, 1))
+for i in range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+print(mat)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 20:29:37) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+
+aux = zeros((ordem, 1))
+for i in range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			secundaria = secundaria + mat[i,j]
+print(principal - secundaria)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 20:31:13) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+mat = array(eval(input("Digite a matriz de ordem dada: ")))
+
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+
+aux = zeros((ordem, 1))
+for i in range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			secundaria = secundaria + mat[i,j]
+print(principal - secundaria)		
+-- EXECUTION TIME:
+1.18567
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1835/2222/main.py", line 10, in <module>
+    principal = principal + mat[i,j]
+IndexError: too many indices for array
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 20:45:21) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+
+l = 0
+mat = zeros((ordem, ordem))
+while(l < ordem):
+	vl = array(eval(input("Digite a linha da matriz: ")))
+	mat[l,:] = np.copy(vl)
+	l = l + 1
+
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+
+aux = zeros((ordem, 1))
+for i in range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			secundaria = secundaria + mat[i,j]
+print(principal - secundaria)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 20:46:26) 
+-- CODE:
+import numpy as np
+
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+
+l = 0
+mat = zeros((ordem, ordem))
+while(l < ordem):
+	vl = array(eval(input("Digite a linha da matriz: ")))
+	mat[l,:] = np.copy(vl)
+	l = l + 1
+
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+
+aux = zeros((ordem, 1))
+for i in range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			secundaria = secundaria + mat[i,j]
+print(principal - secundaria)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 20:47:36) 
+-- CODE:
+
+import numpy as np
+
+ordem = np.array(eval(input("Digite a ordem da matriz: ")))
+
+l = 0
+mat = zeros((ordem, ordem))
+while(l < ordem):
+	vl = np.array(eval(input("Digite a linha da matriz: ")))
+	mat[l,:] = np.copy(vl)
+	l = l + 1
+
+principal = 0
+for i in np.range(ordem):
+	for j in np.range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+
+aux = zeros((ordem, 1))
+for i in np.range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+
+secundaria = 0
+for i in np.range(ordem):
+	for j in np.range(ordem):
+		if(i == j):
+			secundaria = secundaria + mat[i,j]
+print(principal - secundaria)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 20:48:00) 
+-- CODE:
+
+import numpy as np
+
+ordem = np.array(eval(input("Digite a ordem da matriz: ")))
+
+l = 0
+mat = zeros((ordem, ordem))
+while(l < ordem):
+	vl = np.array(eval(input("Digite a linha da matriz: ")))
+	mat[l,:] = np.copy(vl)
+	l = l + 1
+
+principal = 0
+for i in np.range(ordem):
+	for j in np.range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+
+aux = np.zeros((ordem, 1))
+for i in np.range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+
+secundaria = 0
+for i in np.range(ordem):
+	for j in np.range(ordem):
+		if(i == j):
+			secundaria = secundaria + mat[i,j]
+print(principal - secundaria)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 20:49:19) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+
+l = 0
+mat = zeros((ordem, ordem))
+while(l < ordem):
+	vl = array(eval(input("Digite a linha da matriz: ")))
+	mat[l,:] = vl[,:]
+	l = l + 1
+
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+
+aux = zeros((ordem, 1))
+for i in range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			secundaria = secundaria + mat[i,j]
+print(principal - secundaria)		
+-- ERROR:
+File "XXXX", line 9
+    mat[l,:] = vl[,:]
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 20:49:27) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+
+l = 0
+mat = zeros((ordem, ordem))
+while(l < ordem):
+	vl = array(eval(input("Digite a linha da matriz: ")))
+	mat[l,:] = vl[0,:]
+	l = l + 1
+
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+
+aux = zeros((ordem, 1))
+for i in range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			secundaria = secundaria + mat[i,j]
+print(principal - secundaria)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 20:50:02) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+
+l = 0
+mat = zeros((ordem, ordem))
+while(l < ordem):
+	vl = array(eval(input("Digite a linha da matriz: ")))
+	mat[l,:] = vl
+	l = l + 1
+
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+
+aux = zeros((ordem, 1))
+for i in range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			secundaria = secundaria + mat[i,j]
+print(principal - secundaria)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 20:52:23) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+
+l = 0
+mat = zeros((ordem, ordem))
+while(l < ordem):
+	vl = array(eval(input("Digite a linha da matriz: ")))
+	mat[l,:] = vl
+	l = l + 1
+
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+
+aux = zeros((ordem, 1))
+for i in range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			secundaria = secundaria + mat[i,j]
+dif = int(principal - secundaria)
+print(dif)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 20:52:37) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+
+l = 0
+mat = zeros((ordem, ordem))
+while(l < ordem):
+	vl = array(eval(input("Digite a linha da matriz: ")))
+	mat[l,:] = vl
+	l = l + 1
+
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+
+aux = zeros((ordem, 1))
+for i in range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			secundaria = secundaria + mat[i,j]
+dif = int(principal - secundaria)
+print(dif)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 20:53:06) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+
+l = 0
+mat = zeros((ordem, ordem))
+while(l < ordem):
+	vl = array(eval(input("Digite a linha da matriz: ")))
+	mat[l,:] = vl
+	l = l + 1
+
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+
+aux = zeros((ordem, 1))
+for i in range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			secundaria = secundaria + mat[i,j]
+dif = int(principal - secundaria)
+print(dif)		
+-- EXECUTION TIME:
+1.31486
+-- TEST CASE 1:
+---- input:
+3
+16 8 9
+4 1 3
+8 7 8
+---- correct output:
+7
+---- user output:
+0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 20:53:13) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+
+l = 0
+mat = zeros((ordem, ordem))
+while(l < ordem):
+	vl = array(eval(input("Digite a linha da matriz: ")))
+	mat[l,:] = vl
+	l = l + 1
+
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+
+aux = zeros((ordem, 1))
+for i in range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			secundaria = secundaria + mat[i,j]
+dif = int(principal - secundaria)
+print(dif)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 20:53:56) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+
+l = 0
+mat = zeros((ordem, ordem))
+while(l < ordem):
+	vl = array(eval(input("Digite a linha da matriz: ")))
+	mat[l,:] = vl
+	l = l + 1
+
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+
+aux = zeros((ordem, 1))
+for i in range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			secundaria = secundaria + mat[i,j]
+dif = int(principal - secundaria)
+print(dif)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 20:56:13) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+
+l = 0
+mat = zeros((ordem, ordem))
+while(l < ordem):
+	vl = array(eval(input("Digite a linha da matriz: ")))
+	mat[l,:] = vl
+	l = l + 1
+
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+
+aux = zeros((ordem, 1))
+for i in range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			secundaria = secundaria + mat[i,j]
+dif = int(principal - secundaria)
+print(dif)		
+-- EXECUTION TIME:
+1.1727
+-- TEST CASE 1:
+---- input:
+3
+16 8 9
+4 1 3
+8 7 8
+---- correct output:
+7
+---- user output:
+0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 20:57:27) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+
+l = 0
+mat = zeros((ordem, ordem))
+while(l < ordem):
+	vl = array(eval(input("Digite a linha da matriz: ")))
+	mat[l,:] = vl
+	l = l + 1
+
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+
+aux = zeros((ordem, 1))
+for i in range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			secundaria = secundaria + mat[i,j]
+dif = int(principal - secundaria)
+print(dif)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-27 16:15:45) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+
+l = 0
+mat = zeros((ordem, ordem))
+while(l < ordem):
+	vl = array(eval(input("Digite a linha da matriz: ")))
+	mat[l,:] = vl
+	l = l + 1
+
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+
+aux = zeros((ordem, 1))
+for i in range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			secundaria = secundaria + mat[i,j]
+dif = int(principal - secundaria)
+print(dif)		
+-- EXECUTION TIME:
+0.901012
+-- TEST CASE 1:
+---- input:
+3
+16 8 9
+4 1 3
+8 7 8
+---- correct output:
+7
+---- user output:
+0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 16:16:02) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+
+l = 0
+mat = zeros((ordem, ordem))
+while(l < ordem):
+	vl = array(eval(input("Digite a linha da matriz: ")))
+	mat[l,:] = vl
+	l = l + 1
+
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+
+aux = zeros((ordem, 1))
+for i in range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			secundaria = secundaria + mat[i,j]
+dif = int(principal - secundaria)
+print(dif)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 16:21:11) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+
+mat = zeros((ordem, ordem))
+for i in range(ordem):
+	for j in range(ordem):
+		valor = int(input("Digite a ordem da matriz: "))
+		mat[i,j] = valor
+		
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+
+aux = zeros((ordem, 1))
+for i in range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			secundaria = secundaria + mat[i,j]
+dif = int(principal - secundaria)
+print(dif)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-27 16:21:46) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ordem = array(eval(input("Digite a ordem da matriz: ")))
+
+mat = zeros((ordem, ordem))
+for i in range(ordem):
+	for j in range(ordem):
+		valor = int(input("Digite a ordem da matriz: "))
+		mat[i,j] = valor
+		
+principal = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			principal = principal + mat[i,j]
+
+aux = zeros((ordem, 1))
+for i in range(ordem//2):
+	aux[:,0] = mat[:,i]
+	mat[:,i] = mat[:, -1-i]
+	mat[:, -1-i] = aux[:,0]
+
+secundaria = 0
+for i in range(ordem):
+	for j in range(ordem):
+		if(i == j):
+			secundaria = secundaria + mat[i,j]
+dif = int(principal - secundaria)
+print(dif)		
+-- EXECUTION TIME:
+1.18839
+-- TEST CASE 1:
+---- input:
+3
+16 8 9
+4 1 3
+8 7 8
+---- correct output:
+7
+---- user output:
+7
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

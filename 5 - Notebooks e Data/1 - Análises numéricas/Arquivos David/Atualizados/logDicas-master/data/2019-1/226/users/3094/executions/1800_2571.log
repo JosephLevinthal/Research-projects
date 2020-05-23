@@ -1,0 +1,61 @@
+== TEST (2019-06-12 23:20:16) 
+-- CODE:
+from numpy import *
+a = input("kjnkirjfi: ").upper()
+for x in a:
+	a = a.replace("A", "")
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 23:20:45) 
+-- CODE:
+from numpy import *
+a = input("kjnkirjfi: ")
+for x in a:
+	a = a.replace("A", "")
+	a =  a.replace("a", "")
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 23:20:53) 
+-- CODE:
+from numpy import *
+a = input("kjnkirjfi: ")
+for x in a:
+	a = a.replace("A", "")
+	a =  a.replace("a", "")
+print(a)
+-- EXECUTION TIME:
+0.974244
+-- TEST CASE 1:
+---- input:
+Instituto_de_Computacao-ICOMP-UFAM
+---- correct output:
+Instituto_de_Computco-ICOMP-UFM
+---- user output:
+Instituto_de_Computco-ICOMP-UFM
+-- TEST CASE 2:
+---- input:
+a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-aa-a-a-a-a-a-a-a-a-a-a
+---- correct output:
+-----------------------------
+---- user output:
+-----------------------------
+-- TEST CASE 3:
+---- input:
+.aaaaaaaaaaaaaaaaaaaaa.bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb.aaaaaaaaaaaaaaaaa.
+---- correct output:
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb..
+---- user output:
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb..
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

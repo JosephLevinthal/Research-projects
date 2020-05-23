@@ -1,0 +1,68 @@
+== SUBMITION (2019-05-29 21:29:37) 
+-- CODE:
+from numpy import*
+
+a = array(eval(input()), dtype = int)
+b = array(eval(input()), dtype = int)
+c = array([], dtype = int) #the inverted b
+
+i = size(b) - 1
+while(i >= 0):
+	c = append(c, [b[i]])
+	i = i - 1
+
+i = 0
+while(i < size(a)):
+	if(a[i] >= c[i]):
+		print(a[i])
+	else:
+		print(c[i])
+	
+	i = i + 1
+-- EXECUTION TIME:
+0.431367
+-- TEST CASE 1:
+---- input:
+[1,3,5,7,9]
+[2,4,6,8,10]
+---- correct output:
+10
+8
+6
+7
+9
+---- user output:
+10
+8
+6
+7
+9
+-- TEST CASE 2:
+---- input:
+[55,12,40]
+[100,2,17]
+---- correct output:
+55
+12
+100
+---- user output:
+55
+12
+100
+-- TEST CASE 3:
+---- input:
+[2,3,5,7]
+[11,13,17,19]
+---- correct output:
+19
+17
+13
+11
+---- user output:
+19
+17
+13
+11
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,113 @@
+== TEST (2019-06-26 20:10:54) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n = int(input("Numero: "))
+
+x = ((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if(i == j):
+			x[i,j] = i + 1
+		elif(i > j):
+			x[i,j] = j + 1
+		elif(i < j):
+			x[i,j] = i + 1
+			
+print(x)			
+-- ERROR:
+File "XXXX", line 6
+    x = ((n,n), dtype=int)
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 20:11:21) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n = int(input("Numero: "))
+
+x = zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if(i == j):
+			x[i,j] = i + 1
+		elif(i > j):
+			x[i,j] = j + 1
+		elif(i < j):
+			x[i,j] = i + 1
+			
+print(x)			
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 20:11:31) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n = int(input("Numero: "))
+
+x = zeros((n,n), dtype=int)
+
+for i in range(n):
+	for j in range(n):
+		if(i == j):
+			x[i,j] = i + 1
+		elif(i > j):
+			x[i,j] = j + 1
+		elif(i < j):
+			x[i,j] = i + 1
+			
+print(x)			
+-- EXECUTION TIME:
+0.971865
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

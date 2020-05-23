@@ -1,0 +1,932 @@
+== TEST (2019-05-13 10:11:37) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+x = qiv + qil + pv + pl
+print(x)
+-- OUTPUT:
+356202
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:20:36) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+virus = 0
+leu = 0
+dias = 0
+while(2*leu == virus):
+	virus = qiv + (qiv * pov)
+	leu = leu + (qil * pol)
+	dia = dia + 1
+print(dia)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 14, in <module>
+    dia = dia + 1
+NameError: name 'dia' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:21:07) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+virus = 0
+leu = 0
+dia = 0
+while(2*leu == virus):
+	virus = qiv + (qiv * pov)
+	leu = leu + (qil * pol)
+	dia = dia + 1
+print(dia)
+-- OUTPUT:
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:21:41) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+virus = 0
+leu = 0
+dia = 0
+while(leu == 2*virus):
+	virus = qiv + (qiv * pov)
+	leu = leu + (qil * pol)
+	dia = dia + 1
+print(dia)
+-- OUTPUT:
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:21:52) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+virus = 0
+leu = 0
+dia = 0
+while(leu == 2*virus):
+	virus = qiv + (qiv * pov)
+	leu = leu + (qil * pol)
+	dia = dia + 1
+print(dia)
+-- OUTPUT:
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:22:40) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+virus = 0
+leu = 0
+dia = 0
+while(leu == 2*virus):
+	virus = qiv + (qiv * pov)
+	leu = leu + (qil * pol)
+	dia = dia + 1
+	print(dia,virus,leu)
+print(dia)
+-- OUTPUT:
+1 357637.5 4125.0
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:24:41) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+
+virus = 0
+leu = 0
+dia = 0
+
+while(leu >= 2*virus):
+	virus = qiv + (qiv * pov)
+	leu = leu + (qil * pol)
+	dia = dia + 1
+	print(dia,virus,leu)
+
+print(dia)
+-- OUTPUT:
+1 357637.5 4125.0
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:31:00) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+
+dia = 0
+
+while(qil >= 2*qiv):
+	qiv = qiv + (qiv * pov)
+	qil = qil + (qil * pol)
+	dia = dia + 1
+	print(dia,virus,leu)
+
+print(dia)
+-- OUTPUT:
+1 357637.5 4125.0
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:31:31) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+
+dia = 0
+
+while(qil >= 2*qiv):
+	qiv = qiv + (qiv * pov)
+	qil = qil + (qil * pol)
+	dia = dia + 1
+	print(dia,virus,leu)
+
+print(dia)
+-- OUTPUT:
+1 357637.5 4125.0
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:33:20) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+
+dia = 0
+
+while (qfl >= 2 * qfv):
+	qfv = qfv + (qiv * pov)
+	qfl = qfl + (qil * pol)
+	dia = dia + 1
+	print(dia,virus,leu)
+
+print(dia)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 11, in <module>
+    while (qfl >= 2 * qfv):
+NameError: name 'qfl' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:34:09) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+qfl = 0
+dia = 0
+qfv = 0
+while (qfl >= 2 * qfv):
+	qfv = qfv + (qiv * pov)
+	qfl = qfl + (qil * pol)
+	dia = dia + 1
+	print(dia,virus,leu)
+
+print(dia)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 15, in <module>
+    print(dia,virus,leu)
+NameError: name 'virus' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:35:04) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+qfl = 0
+dia = 0
+qfv = 0
+while (qfl >= 2 * qfv):
+	qfv = qfv + (qiv * pov)
+	qfl = qfl + (qil * pol)
+	dia = dia + 1
+	print(dia,qfv,qfl)
+
+print(dia)
+-- OUTPUT:
+1 7012.5 4125.0
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:37:56) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+qfl = 0
+dia = 0
+qfv = 0
+while (qfl <= 2 * qfv):
+	qfv = qfv + (qiv * pov)
+	qfl = qfl + (qil * pol)
+	dia = dia + 1
+	print(dia,qfv,qfl)
+
+print(dia)
+-- OUTPUT:
+1 7012.5 4125.0
+2 14025.0 8250.0
+3 21037.5 12375.0
+4 28050.0 16500.0
+5 35062.5 20625.0
+6 42075.0 24750.0
+7 49087.5 28875.0
+8 56100.0 33000.0
+9 63112.5 37125.0
+10 70125.0 41250.0
+11 77137.5 45375.0
+12 84150.0 49500.0
+13 91162.5 53625.0
+14 98175.0 57750.0
+15 105187.5 61875.0
+16 112200.0 66000.0
+17 119212.5 70125.0
+18 126225.0 74250.0
+19 133237.5 78375.0
+20 140250.0 82500.0
+21 147262.5 86625.0
+22 154275.0 90750.0
+23 161287.5 94875.0
+24 168300.0 99000.0
+25 175312.5 103125.0
+26 182325.0 107250.0
+27 189337.5 111375.0
+28 196350.0 115500.0
+29 203362.5 119625.0
+30 210375.0 123750.0
+31 217387.5 127875.0
+32 224400.0 132000.0
+33 231412.5 136125.0
+34 238425.0 140250.0
+35 245437.5 144375.0
+36 252450.0 148500.0
+37 259462.5 152625.0
+38 266475.0 156750.0
+39 273487.5 160875.0
+40 280500.0 165000.0
+41 287512.5 169125.0
+42 294525.0 173250.0
+43 301537.5 177375.0
+44 308550.0 181500.0
+45 315562.5 185625.0
+46 322575.0 189750.0
+47 329587.5 193875.0
+48 336600.0 198000.0
+49 343612.5 202125.0
+50 350625.0 206250.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:38:19) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+qfl = 0
+dia = 0
+qfv = 0
+while (qfl <= 2 * qfv):
+	qfv = qfv + (qiv * pov)
+	qfl = qfl + (qil * pol)
+	dia = dia + 1
+	print(dia,qfv,qfl)
+
+print(dia)
+-- OUTPUT:
+1 7012.5 4125.0
+2 14025.0 8250.0
+3 21037.5 12375.0
+4 28050.0 16500.0
+5 35062.5 20625.0
+6 42075.0 24750.0
+7 49087.5 28875.0
+8 56100.0 33000.0
+9 63112.5 37125.0
+10 70125.0 41250.0
+11 77137.5 45375.0
+12 84150.0 49500.0
+13 91162.5 53625.0
+14 98175.0 57750.0
+15 105187.5 61875.0
+16 112200.0 66000.0
+17 119212.5 70125.0
+18 126225.0 74250.0
+19 133237.5 78375.0
+20 140250.0 82500.0
+21 147262.5 86625.0
+22 154275.0 90750.0
+23 161287.5 94875.0
+24 168300.0 99000.0
+25 175312.5 103125.0
+26 182325.0 107250.0
+27 189337.5 111375.0
+28 196350.0 115500.0
+29 203362.5 119625.0
+30 210375.0 123750.0
+31 217387.5 127875.0
+32 224400.0 132000.0
+33 231412.5 136125.0
+34 238425.0 140250.0
+35 245437.5 144375.0
+36 252450.0 148500.0
+37 259462.5 152625.0
+38 266475.0 156750.0
+39 273487.5 160875.0
+40 280500.0 165000.0
+41 287512.5 169125.0
+42 294525.0 173250.0
+43 301537.5 177375.0
+44 308550.0 181500.0
+45 315562.5 185625.0
+46 322575.0 189750.0
+47 329587.5 193875.0
+48 336600.0 198000.0
+49 343612.5 202125.0
+50 350625.0 206250.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:39:42) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+qfl = 0
+dia = 0
+qfv = 0
+while (qfl <= 2 * qfv):
+	qfv = qfv + (qiv * pov)
+	qfl = qfl + (qil * pol)
+	dia = dia + 1
+	print(dia,qfv,qfl)
+
+print(dia)
+-- OUTPUT:
+1 7012.5 4125.0
+2 14025.0 8250.0
+3 21037.5 12375.0
+4 28050.0 16500.0
+5 35062.5 20625.0
+6 42075.0 24750.0
+7 49087.5 28875.0
+8 56100.0 33000.0
+9 63112.5 37125.0
+10 70125.0 41250.0
+11 77137.5 45375.0
+12 84150.0 49500.0
+13 91162.5 53625.0
+14 98175.0 57750.0
+15 105187.5 61875.0
+16 112200.0 66000.0
+17 119212.5 70125.0
+18 126225.0 74250.0
+19 133237.5 78375.0
+20 140250.0 82500.0
+21 147262.5 86625.0
+22 154275.0 90750.0
+23 161287.5 94875.0
+24 168300.0 99000.0
+25 175312.5 103125.0
+26 182325.0 107250.0
+27 189337.5 111375.0
+28 196350.0 115500.0
+29 203362.5 119625.0
+30 210375.0 123750.0
+31 217387.5 127875.0
+32 224400.0 132000.0
+33 231412.5 136125.0
+34 238425.0 140250.0
+35 245437.5 144375.0
+36 252450.0 148500.0
+37 259462.5 152625.0
+38 266475.0 156750.0
+39 273487.5 160875.0
+40 280500.0 165000.0
+41 287512.5 169125.0
+42 294525.0 173250.0
+43 301537.5 177375.0
+44 308550.0 181500.0
+45 315562.5 185625.0
+46 322575.0 189750.0
+47 329587.5 193875.0
+48 336600.0 198000.0
+49 343612.5 202125.0
+50 350625.0 206250.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:40:17) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+qfl = 0
+dia = 0
+qfv = 0
+while (qfl <= 2 * qfv):
+	qfv = qfv + (qiv * pov)
+	qfl = qfl + (qil * pol)
+	dia = dia + 1
+	print(dia,qfv,qfl)
+
+print(dia)
+-- OUTPUT:
+1 7012.5 4125.0
+2 14025.0 8250.0
+3 21037.5 12375.0
+4 28050.0 16500.0
+5 35062.5 20625.0
+6 42075.0 24750.0
+7 49087.5 28875.0
+8 56100.0 33000.0
+9 63112.5 37125.0
+10 70125.0 41250.0
+11 77137.5 45375.0
+12 84150.0 49500.0
+13 91162.5 53625.0
+14 98175.0 57750.0
+15 105187.5 61875.0
+16 112200.0 66000.0
+17 119212.5 70125.0
+18 126225.0 74250.0
+19 133237.5 78375.0
+20 140250.0 82500.0
+21 147262.5 86625.0
+22 154275.0 90750.0
+23 161287.5 94875.0
+24 168300.0 99000.0
+25 175312.5 103125.0
+26 182325.0 107250.0
+27 189337.5 111375.0
+28 196350.0 115500.0
+29 203362.5 119625.0
+30 210375.0 123750.0
+31 217387.5 127875.0
+32 224400.0 132000.0
+33 231412.5 136125.0
+34 238425.0 140250.0
+35 245437.5 144375.0
+36 252450.0 148500.0
+37 259462.5 152625.0
+38 266475.0 156750.0
+39 273487.5 160875.0
+40 280500.0 165000.0
+41 287512.5 169125.0
+42 294525.0 173250.0
+43 301537.5 177375.0
+44 308550.0 181500.0
+45 315562.5 185625.0
+46 322575.0 189750.0
+47 329587.5 193875.0
+48 336600.0 198000.0
+49 343612.5 202125.0
+50 350625.0 206250.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:40:35) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+qfl = 0
+dia = 0
+qfv = 0
+while (qfl <= 2 * qfv):
+	qfv = qfv + (qiv * pov)
+	qfl = qfl + (qil * pol)
+	dia = dia + 1
+	print(dia,qfv,qfl)
+
+print(dia)
+-- OUTPUT:
+1 7012.5 4125.0
+2 14025.0 8250.0
+3 21037.5 12375.0
+4 28050.0 16500.0
+5 35062.5 20625.0
+6 42075.0 24750.0
+7 49087.5 28875.0
+8 56100.0 33000.0
+9 63112.5 37125.0
+10 70125.0 41250.0
+11 77137.5 45375.0
+12 84150.0 49500.0
+13 91162.5 53625.0
+14 98175.0 57750.0
+15 105187.5 61875.0
+16 112200.0 66000.0
+17 119212.5 70125.0
+18 126225.0 74250.0
+19 133237.5 78375.0
+20 140250.0 82500.0
+21 147262.5 86625.0
+22 154275.0 90750.0
+23 161287.5 94875.0
+24 168300.0 99000.0
+25 175312.5 103125.0
+26 182325.0 107250.0
+27 189337.5 111375.0
+28 196350.0 115500.0
+29 203362.5 119625.0
+30 210375.0 123750.0
+31 217387.5 127875.0
+32 224400.0 132000.0
+33 231412.5 136125.0
+34 238425.0 140250.0
+35 245437.5 144375.0
+36 252450.0 148500.0
+37 259462.5 152625.0
+38 266475.0 156750.0
+39 273487.5 160875.0
+40 280500.0 165000.0
+41 287512.5 169125.0
+42 294525.0 173250.0
+43 301537.5 177375.0
+44 308550.0 181500.0
+45 315562.5 185625.0
+46 322575.0 189750.0
+47 329587.5 193875.0
+48 336600.0 198000.0
+49 343612.5 202125.0
+50 350625.0 206250.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:49:34) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+
+qfl = 0
+dia = 0
+qfv = 0
+
+while (qfl*2>qfv):
+	qfv = qfv + (qiv * pov)
+	qfl = qfl + (qil * pol)
+	dia = dia + 1
+	print(dia,qfv,qfl)
+
+print(dia)
+-- OUTPUT:
+1 7012.5 4125.0
+2 14025.0 8250.0
+3 21037.5 12375.0
+4 28050.0 16500.0
+5 35062.5 20625.0
+6 42075.0 24750.0
+7 49087.5 28875.0
+8 56100.0 33000.0
+9 63112.5 37125.0
+10 70125.0 41250.0
+11 77137.5 45375.0
+12 84150.0 49500.0
+13 91162.5 53625.0
+14 98175.0 57750.0
+15 105187.5 61875.0
+16 112200.0 66000.0
+17 119212.5 70125.0
+18 126225.0 74250.0
+19 133237.5 78375.0
+20 140250.0 82500.0
+21 147262.5 86625.0
+22 154275.0 90750.0
+23 161287.5 94875.0
+24 168300.0 99000.0
+25 175312.5 103125.0
+26 182325.0 107250.0
+27 189337.5 111375.0
+28 196350.0 115500.0
+29 203362.5 119625.0
+30 210375.0 123750.0
+31 217387.5 127875.0
+32 224400.0 132000.0
+33 231412.5 136125.0
+34 238425.0 140250.0
+35 245437.5 144375.0
+36 252450.0 148500.0
+37 259462.5 152625.0
+38 266475.0 156750.0
+39 273487.5 160875.0
+40 280500.0 165000.0
+41 287512.5 169125.0
+42 294525.0 173250.0
+43 301537.5 177375.0
+44 308550.0 181500.0
+45 315562.5 185625.0
+46 322575.0 189750.0
+47 329587.5 193875.0
+48 336600.0 198000.0
+49 343612.5 202125.0
+50 350625.0 206250.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:57:13) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+
+dia = 0
+
+while (!=(qil*2>qiv)):
+	qiv = qiv + (qiv * pov)
+	qil = qil + (qil * pol)
+	dia = dia + 1
+	print(dia,qfv,qfl)
+
+print(dia)
+-- ERROR:
+File "XXXX", line 11
+    while (!=(qil*2>qiv)):
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:57:35) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+
+dia = 0
+
+while (!(qil*2>qiv)):
+	qiv = qiv + (qiv * pov)
+	qil = qil + (qil * pol)
+	dia = dia + 1
+	print(dia,qfv,qfl)
+
+print(dia)
+-- ERROR:
+File "XXXX", line 11
+    while (!(qil*2>qiv)):
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:58:49) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+
+dia = 0
+
+while (qil*2<qiv):
+	qiv = qiv + (qiv * pov)
+	qil = qil + (qil * pol)
+	dia = dia + 1
+	print(dia,qfv,qfl)
+
+print(dia)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 15, in <module>
+    print(dia,qfv,qfl)
+NameError: name 'qfv' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 12:59:22) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+
+dia = 0
+
+while (qil*2<qiv):
+	qiv = qiv + (qiv * pov)
+	qil = qil + (qil * pol)
+	dia = dia + 1
+	print(dia,qiv,qil)
+
+print(dia)
+-- OUTPUT:
+1 357637.5 9625.0
+2 364790.25 16843.75
+3 372086.055 29476.5625
+4 379527.7761 51583.984375
+5 387118.331622 90271.97265625
+6 394860.69825444004 157975.9521484375
+7 402757.91221952887 276457.9162597656
+7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:02:42) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+
+dia = 0
+
+while (qil/2<qiv):
+	qiv = qiv + (qiv * pov)
+	qil = qil + (qil * pol)
+	dia = dia + 1
+	print(dia,qiv,qil)
+
+print(dia)
+-- OUTPUT:
+1 357637.5 9625.0
+2 364790.25 16843.75
+3 372086.055 29476.5625
+4 379527.7761 51583.984375
+5 387118.331622 90271.97265625
+6 394860.69825444004 157975.9521484375
+7 402757.91221952887 276457.9162597656
+8 410813.07046391943 483801.35345458984
+9 419029.3318731978 846652.3685455322
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-13 13:05:00) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+
+dia = 0
+
+while (qil/2<qiv):
+	
+	qiv = qiv + (qiv * pov)
+	qil = qil + (qil * pol)
+	dia = dia + 1
+
+print(dia)
+-- EXECUTION TIME:
+0.200803
+-- TEST CASE 1:
+---- input:
+350625
+5500
+2
+75
+---- correct output:
+9
+---- user output:
+9
+-- TEST CASE 2:
+---- input:
+650090
+90045
+4
+90
+---- correct output:
+5
+---- user output:
+5
+-- TEST CASE 3:
+---- input:
+419250
+1725
+9
+59
+---- correct output:
+17
+---- user output:
+17
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-13 14:33:49) 
+-- CODE:
+qiv = int(input("quantidade inicial de copias do viros: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+pv = int(input("percentual do virus: "))
+pl = int(input("percentual de leucocitos: "))
+
+pov = pv / 100
+pol = pl / 100
+
+dia = 0
+
+while (qil/2<qiv):
+	
+	qiv = qiv + (qiv * pov)
+	qil = qil + (qil * pol)
+	dia = dia + 1
+
+print(dia)
+-- EXECUTION TIME:
+0.185361
+-- TEST CASE 1:
+---- input:
+350625
+5500
+2
+75
+---- correct output:
+9
+---- user output:
+9
+-- TEST CASE 2:
+---- input:
+650090
+90045
+4
+90
+---- correct output:
+5
+---- user output:
+5
+-- TEST CASE 3:
+---- input:
+419250
+1725
+9
+59
+---- correct output:
+17
+---- user output:
+17
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

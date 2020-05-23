@@ -1,0 +1,86 @@
+== TEST (2019-07-02 16:49:41) 
+-- CODE:
+from numpy import *
+
+N= array(eval(input("dimensao matriz:")))
+coluna = int(input("coluna:"))
+lin = int(input("linha:"))
+casa = N[coluna, lin]
+	if (casa == "P"):
+		print("PRETA")
+	elif(casa == "B"):
+		print("BRANCA")
+	elif(casa == "V"):
+		print("VAZIA")
+-- ERROR:
+File "XXXX", line 7
+    if (casa == "P"):
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 16:49:56) 
+-- CODE:
+from numpy import *
+
+N= array(eval(input("dimensao matriz:")))
+coluna = int(input("coluna:"))
+lin = int(input("linha:"))
+casa = N[coluna, lin]
+if (casa == "P"):
+	print("PRETA")
+elif(casa == "B"):
+	print("BRANCA")
+elif(casa == "V"):
+	print("VAZIA")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 16:50:21) 
+-- CODE:
+from numpy import *
+
+N= array(eval(input("dimensao matriz:")))
+coluna = int(input("coluna:"))
+lin = int(input("linha:"))
+casa = N[coluna, lin]
+if (casa == "P"):
+	print("PRETA")
+elif(casa == "B"):
+	print("BRANCA")
+elif(casa == "V"):
+	print("VAZIA")
+-- EXECUTION TIME:
+1.05265
+-- TEST CASE 1:
+---- input:
+[['V','V','P'],['V','V','B'],['P','V','V']]
+2
+1
+---- correct output:
+VAZIA
+---- user output:
+VAZIA
+-- TEST CASE 2:
+---- input:
+[['V','P','V','P'],['V','P','V','P'],['V','P','P','B'],['P','B','P','B']]
+1
+1
+---- correct output:
+PRETA
+---- user output:
+PRETA
+-- TEST CASE 3:
+---- input:
+[['B','B','V'],['P','P','P'],['V','P','B']]
+2
+2
+---- correct output:
+BRANCA
+---- user output:
+BRANCA
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

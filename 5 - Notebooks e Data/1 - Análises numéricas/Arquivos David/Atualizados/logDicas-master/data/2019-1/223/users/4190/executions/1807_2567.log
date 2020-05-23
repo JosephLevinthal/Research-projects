@@ -1,0 +1,1226 @@
+== TEST (2019-06-09 00:54:18) 
+-- CODE:
+n = input('N: ')
+
+for i in n:
+	f1 = n[i]-1
+	
+print(f1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    f1 = n[i]-1
+TypeError: string indices must be integers
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 15:02:06) 
+-- CODE:
+n = input('N: ')
+
+for i in n:
+	f1 = n[i]-1
+	
+print(f1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    f1 = n[i]-1
+TypeError: string indices must be integers
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 15:19:11) 
+-- CODE:
+n = input('N: ')
+i = 0
+
+while i < n:
+	f1 = n
+	print(f1)
+	for e in n:
+		f1 = f1-1
+	print(f1)
+	i = i+1
+	
+	
+print(f1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    while i < n:
+TypeError: '<' not supported between instances of 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 15:20:49) 
+-- CODE:
+n = int(input('N: '))
+i = 0
+
+while i < n:
+	f1 = n*'*'
+	print(f1)
+	for e in n:
+		f1 = f1-1
+	print(f1)
+	i = i+1
+	
+	
+print(f1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    for e in n:
+TypeError: 'int' object is not iterable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 15:23:12) 
+-- CODE:
+n = int(input('N: '))
+i = 0
+
+while i < n:
+	f1 = n*'*'
+	print(f1)
+	f1 = f1-1
+	print(f1)
+	i = i+1
+	
+	
+print(f1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    f1 = f1-1
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 15:23:54) 
+-- CODE:
+n = int(input('N: '))
+i = 0
+
+while i < n:
+	f1 = n*'*'
+	print(f1)
+	f1 = n-1
+	print(f1)
+	i = i+1
+	
+	
+print(f1)
+-- OUTPUT:
+********
+7
+********
+7
+********
+7
+********
+7
+********
+7
+********
+7
+********
+7
+********
+7
+7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 15:24:30) 
+-- CODE:
+n = int(input('N: '))
+i = 0
+
+while i < n:
+	f1 = n*'*'
+	print(f1)
+	f1 = n-1
+	i = i+1
+	
+	
+print(f1)
+-- OUTPUT:
+********
+********
+********
+********
+********
+********
+********
+********
+7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 15:28:10) 
+-- CODE:
+n = int(input('N: '))
+i = 0
+
+while i < n:
+	n = n*'*'
+	print(f1)
+	n = n-1
+	i = i+1
+	
+	
+print(n)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print(f1)
+NameError: name 'f1' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 15:28:29) 
+-- CODE:
+n = int(input('N: '))
+i = 0
+
+while i < n:
+	n = n*'*'
+	print(n)
+	n = n-1
+	i = i+1
+	
+	
+print(n)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    n = n-1
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 15:29:43) 
+-- CODE:
+n = int(input('N: '))
+i = 0
+
+while i < n:
+	n = n*'*'
+	print(n)
+	n = str(n)-1
+	i = i+1
+	
+	
+print(n)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    n = str(n)-1
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 16:15:05) 
+-- CODE:
+n = int(input('N: '))
+i = 0
+
+while i < n:
+	n = n*'*'
+	print(n)
+	for e in n:
+		n = n-1
+	i = i+1
+	
+	
+print(n)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    n = n-1
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 16:16:19) 
+-- CODE:
+n = int(input('N: '))
+i = 0
+t = n
+while i < n:
+	t = t*'*'
+	print(n)
+	for e in n:
+		t = n-1
+	i = i+1
+	
+	
+print(t)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    for e in n:
+TypeError: 'int' object is not iterable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 16:17:04) 
+-- CODE:
+n = int(input('N: '))
+i = 0
+t = n
+while i < n:
+	t = t*'*'
+	print(t)
+	t = n-1
+	i = i+1
+	
+	
+print(t)
+-- OUTPUT:
+********
+*******
+*******
+*******
+*******
+*******
+*******
+*******
+7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 16:18:23) 
+-- CODE:
+n = int(input('N: '))
+i = 0
+t = n
+while i < n:
+	t = t*'*'
+	print(t)
+	t = t-1
+	i = i+1
+	
+	
+print(t)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    t = t-1
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 16:25:14) 
+-- CODE:
+n = int(input('N: '))
+i = 0
+t = n
+while i < n:
+	n = t*'*'
+	print(t)
+	t = n-1
+	
+	i = i+1
+	
+	
+print(t)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    t = n-1
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 16:31:22) 
+-- CODE:
+n = int(input('N: '))
+i = 0
+t = n
+while i < n:
+	t = t*'*'
+	print(t)
+	t = t-1
+	
+	i = i+1
+	
+	
+print(t)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    t = t-1
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 16:37:04) 
+-- CODE:
+n = int(input('N: '))
+i = 0
+
+while i < n:
+	b = n
+	for e in n:
+		f1 = b*'*'
+		print(f1)
+		b = b-1
+	
+	i = i+1
+	
+	
+print(t)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    for e in n:
+TypeError: 'int' object is not iterable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 16:40:33) 
+-- CODE:
+n = int(input('N: '))
+i = 0
+
+while i < n:
+	b = n
+	f1 = b*'*'
+	print(f1)
+	b = b-1
+	
+	i = i+1
+	
+	
+print(t)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 13, in <module>
+    print(t)
+NameError: name 't' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 16:46:35) 
+-- CODE:
+n = int(input('N: '))
+i = 0
+print(n*'*')
+
+while i < n:
+	n = n-1
+	f1 = n*'*'
+	print(f1)
+	
+	i = i+1
+	
+
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 16:47:36) 
+-- CODE:
+n = int(input('N: '))
+i = 1
+print(n*'*')
+
+while i < n:
+	n = n-1
+	f1 = n*'*'
+	print(f1)
+	
+	i = i+1
+	
+
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 16:48:42) 
+-- CODE:
+n = int(input('N: '))
+i = 0
+print(n*'*')
+
+while n>i:
+	n = n-1
+	f1 = n*'*'
+	print(f1)
+	
+	i = i+1
+	
+
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 16:49:01) 
+-- CODE:
+n = int(input('N: '))
+i = 0
+print(n*'*')
+
+while n>=i:
+	n = n-1
+	f1 = n*'*'
+	print(f1)
+	
+	i = i+1
+	
+
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+***
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 16:51:00) 
+-- CODE:
+n = int(input('N: '))
+i = n
+print(n*'*')
+
+while i!=1:
+	n = n-1
+	f1 = n*'*'
+	print(f1)
+	
+	i = i-1
+	
+
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+***
+**
+*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 16:54:39) 
+-- CODE:
+n = int(input('N: '))
+i = n
+print(n*'*')
+
+while i!=1:
+	n = n-1
+	f1 = n*'*'
+	print(f1)
+	
+	i = i-1
+	
+t = 1
+while t!=n: 
+	f2 = t*'*'
+	print(f2)
+	t = t+1
+
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+***
+**
+*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 17:49:47) 
+-- CODE:
+n = int(input('N: '))
+e = '*'
+
+for i in range(n):
+	f1 = e*(a-i)
+	print(f1)
+	print(i)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    f1 = e*(a-i)
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 17:50:11) 
+-- CODE:
+n = int(input('N: '))
+e = '*'
+
+for i in range(n):
+	f1 = e*(n-i)
+	print(f1)
+	print(i)
+
+-- OUTPUT:
+********
+0
+*******
+1
+******
+2
+*****
+3
+****
+4
+***
+5
+**
+6
+*
+7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:10:37) 
+-- CODE:
+n = int(input('N: '))
+e = '*'
+
+for i in range(n):
+	f1 = e*(n-i)
+	print(f1)
+	print(i)
+for i in range(n):
+	f2 = e*(n-(n-i))
+	print(f2)
+	print(i)
+-- OUTPUT:
+********
+0
+*******
+1
+******
+2
+*****
+3
+****
+4
+***
+5
+**
+6
+*
+7
+
+0
+*
+1
+**
+2
+***
+3
+****
+4
+*****
+5
+******
+6
+*******
+7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:13:08) 
+-- CODE:
+n = int(input('N: '))
+e = '*'
+
+for i in range(n):
+	f1 = e*(n-i)
+	print(f1)
+	print(i)
+for i in range(n):
+	f2 = e*(n-(n+i))
+	print(f2)
+	print(i)
+-- OUTPUT:
+********
+0
+*******
+1
+******
+2
+*****
+3
+****
+4
+***
+5
+**
+6
+*
+7
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:13:52) 
+-- CODE:
+n = int(input('N: '))
+e = '*'
+
+for i in range(n):
+	f1 = e*(n-i)
+	print(f1)
+	print(i)
+for i in range(n):
+	f2 = e*(n+(n-i))
+	print(f2)
+	print(i)
+-- OUTPUT:
+********
+0
+*******
+1
+******
+2
+*****
+3
+****
+4
+***
+5
+**
+6
+*
+7
+****************
+0
+***************
+1
+**************
+2
+*************
+3
+************
+4
+***********
+5
+**********
+6
+*********
+7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:15:25) 
+-- CODE:
+n = int(input('N: '))
+e = '*'
+
+for i in range(n):
+	f1 = e*(n-i)
+	print(f1)
+	
+for i in range(n):
+	f2 = e*(n-(n-i))
+	print(f2)
+	print(i)
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+0
+*
+1
+**
+2
+***
+3
+****
+4
+*****
+5
+******
+6
+*******
+7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:16:36) 
+-- CODE:
+n = int(input('N: '))
+e = '*'
+
+for i in range(n):
+	f1 = e*(n-i)
+	print(f1)
+	
+for i in range(n):
+	f2 = e*(n-(n-1))
+	print(f2)
+	print(i)
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+0
+*
+1
+*
+2
+*
+3
+*
+4
+*
+5
+*
+6
+*
+7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:17:20) 
+-- CODE:
+n = int(input('N: '))
+e = '*'
+
+for i in range(n):
+	f1 = e*(n-i)
+	print(f1)
+	
+for i in range(n):
+	f2 = e*(n-1)
+	print(f2)
+	print(i)
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+***
+**
+*
+*******
+0
+*******
+1
+*******
+2
+*******
+3
+*******
+4
+*******
+5
+*******
+6
+*******
+7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:17:47) 
+-- CODE:
+n = int(input('N: '))
+e = '*'
+
+for i in range(n):
+	f1 = e*(n-i)
+	print(f1)
+	
+for i in range(n):
+	f2 = e*(n+i)
+	print(f2)
+	print(i)
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+***
+**
+*
+********
+0
+*********
+1
+**********
+2
+***********
+3
+************
+4
+*************
+5
+**************
+6
+***************
+7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:19:14) 
+-- CODE:
+n = int(input('N: '))
+e = '*'
+
+for i in range(n):
+	f1 = e*(n-i)
+	print(f1)
+	
+for i in range(n):
+	f2 = e*n-(n-1)
+	print(f2)
+	print(i)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    f2 = e*n-(n-1)
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:20:52) 
+-- CODE:
+n = int(input('N: '))
+e = '*'
+
+for i in range(n):
+	f1 = e*(n-i)
+	print(f1)
+	
+for i in range(n):
+	f2 = e*(n-(n-1))
+	print(f2)
+	print(i)
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+0
+*
+1
+*
+2
+*
+3
+*
+4
+*
+5
+*
+6
+*
+7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:21:21) 
+-- CODE:
+n = int(input('N: '))
+e = '*'
+
+for i in range(n):
+	f1 = e*(n-i)
+	print(f1)
+	
+for i in range(n):
+	f2 = e*(n-(n-i))
+	print(f2)
+	print(i)
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+0
+*
+1
+**
+2
+***
+3
+****
+4
+*****
+5
+******
+6
+*******
+7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:21:57) 
+-- CODE:
+n = int(input('N: '))
+e = '*'
+
+for i in range(n):
+	f1 = e*(n-i)
+	print(f1)
+	
+for i in range(n):
+	f2 = e*(n-(n-i)+1)
+	print(f2)
+	print(i)
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+0
+**
+1
+***
+2
+****
+3
+*****
+4
+******
+5
+*******
+6
+********
+7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:22:53) 
+-- CODE:
+n = int(input('N: '))
+e = '*'
+
+for i in range(n):
+	f1 = e*(n-i)
+	print(f1)
+	
+for i in range(n):
+	f2 = e*(n-(n-i)+1)
+	print(f2)
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+**
+***
+****
+*****
+******
+*******
+********
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-09 18:23:39) 
+-- CODE:
+n = int(input('N: '))
+e = '*'
+
+for i in range(n):
+	f1 = e*(n-i)
+	print(f1)
+	
+for i in range(n):
+	f2 = e*(n-(n-i)+1)
+	print(f2)
+-- EXECUTION TIME:
+0.795502
+-- TEST CASE 1:
+---- input:
+8
+---- correct output:
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+**
+***
+****
+*****
+******
+*******
+********
+
+---- user output:
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+**
+***
+****
+*****
+******
+*******
+********
+-- TEST CASE 2:
+---- input:
+11
+---- correct output:
+***********
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+
+---- user output:
+***********
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+-- TEST CASE 3:
+---- input:
+25
+---- correct output:
+*************************
+************************
+***********************
+**********************
+*********************
+********************
+*******************
+******************
+*****************
+****************
+***************
+**************
+*************
+************
+***********
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+************
+*************
+**************
+***************
+****************
+*****************
+******************
+*******************
+********************
+*********************
+**********************
+***********************
+************************
+*************************
+
+---- user output:
+*************************
+************************
+***********************
+**********************
+*********************
+********************
+*******************
+******************
+*****************
+****************
+***************
+**************
+*************
+************
+***********
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+************
+*************
+**************
+***************
+****************
+*****************
+******************
+*******************
+********************
+*********************
+**********************
+***********************
+************************
+*************************
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

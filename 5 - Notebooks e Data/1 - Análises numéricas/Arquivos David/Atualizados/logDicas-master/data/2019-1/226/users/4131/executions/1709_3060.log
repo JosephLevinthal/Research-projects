@@ -1,0 +1,441 @@
+== TEST (2019-05-02 10:11:05) 
+-- CODE:
+d1 = int(input("dado 1:"))
+d2 = int(input("dado 2:"))
+rd = int(input("rodada:"))
+CONSTRICAO = d1+d2==12
+POLEN = d1+d2<5 1 a 4
+FRAQUEZA = 11=<d1+d2>=5
+-- ERROR:
+File "XXXX", line 5
+    POLEN = d1+d2<5 1 a 4
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:11:13) 
+-- CODE:
+d1 = int(input("dado 1:"))
+d2 = int(input("dado 2:"))
+rd = int(input("rodada:"))
+CONSTRICAO = d1+d2==12
+POLEN = d1+d2<5 
+FRAQUEZA = 11=<d1+d2>=5
+-- ERROR:
+File "XXXX", line 6
+    FRAQUEZA = 11=<d1+d2>=5
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:11:25) 
+-- CODE:
+d1 = int(input("dado 1:"))
+d2 = int(input("dado 2:"))
+rd = int(input("rodada:"))
+CONSTRICAO = d1+d2==12
+POLEN = d1+d2<5 
+FRAQUEZA = 11<=d1+d2>=5
+-- ERROR:
+File "XXXX", line 6
+    FRAQUEZA = 11=<d1+d2>=5
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:13:12) 
+-- CODE:
+d1 = int(input("dado 1:"))
+d2 = int(input("dado 2:"))
+rd = int(input("rodada:"))
+CONSTRICAO = d1+d2==12
+POLEN = d1+d2<5 
+FRAQUEZA = 11<=d1+d2>=5
+if(CONSTRICAO):
+	print(CONSTRICAO)
+-- ERROR:
+File "XXXX", line 6
+    FRAQUEZA = 11=<d1+d2>=5
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:16:12) 
+-- CODE:
+d1 = int(input("dado 1:"))
+d2 = int(input("dado 2:"))
+r = int(input("rodada:"))
+CONSTRICAO = d1+d2==12
+POLEN = d1+d2<5 
+FRAQUEZA = 11<=d1+d2>=5
+if(CONSTRICAO):
+	print(CONSTRICAO)
+	print(d1+d2+1)
+	elif(POLEN):
+		print(POLEN)
+		print((d1+d2+1)*r)
+	elif(FRAQUEZA):
+		print(FRAQUEZA)
+		print(d1*d2)
+	
+-- ERROR:
+File "XXXX", line 10
+    elif(POLEN):
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:17:14) 
+-- CODE:
+d1 = int(input("dado 1:"))
+d2 = int(input("dado 2:"))
+r = int(input("rodada:"))
+CONSTRICAO = d1+d2==12
+POLEN = d1+d2<5 
+FRAQUEZA = 11<=d1+d2>=5
+if(CONSTRICAO):
+	print(CONSTRICAO)
+	print(d1+d2+1)
+elif(POLEN):
+	print(POLEN)
+	print((d1+d2+1)*r)
+elif(FRAQUEZA):
+	print(FRAQUEZA)
+	print(d1*d2)
+	
+-- ERROR:
+File "XXXX", line 10
+    elif(POLEN):
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:17:44) 
+-- CODE:
+d1 = int(input("dado 1:"))
+d2 = int(input("dado 2:"))
+r = int(input("rodada:"))
+CONSTRICAO = d1+d2==12
+POLEN = d1+d2<5 
+FRAQUEZA = 11<=d1+d2>=5
+if(CONSTRICAO):
+	print(CONSTRICAO)
+	print(d1+d2+1)
+elif(POLEN):
+	print(POLEN)
+	print((d1+d2+1)*r)
+elif(FRAQUEZA):
+	print("FRAQUEZA")
+	print(d1*d2)
+	
+-- ERROR:
+File "XXXX", line 10
+    elif(POLEN):
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 10:18:03) 
+-- CODE:
+d1 = int(input("dado 1:"))
+d2 = int(input("dado 2:"))
+r = int(input("rodada:"))
+CONSTRICAO = d1+d2==12
+POLEN = d1+d2<5 
+FRAQUEZA = 11<=d1+d2>=5
+if(CONSTRICAO):
+	print("CONSTRICAO")
+	print(d1+d2+1)
+elif(POLEN):
+	print("POLEN")
+	print((d1+d2+1)*r)
+elif(FRAQUEZA):
+	print("FRAQUEZA")
+	print(d1*d2)
+	
+-- EXECUTION TIME:
+0.170375
+-- TEST CASE 1:
+---- input:
+5
+3
+8
+---- correct output:
+FRAQUEZA
+15
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+7
+8
+5
+---- correct output:
+Entrada invalida
+---- user output:
+FRAQUEZA
+56
+-- TEST CASE 3:
+---- input:
+1
+1
+9
+---- correct output:
+POLEN
+27
+---- user output:
+POLEN
+27
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:18:05) 
+-- CODE:
+d1 = int(input("dado 1:"))
+d2 = int(input("dado 2:"))
+r = int(input("rodada:"))
+CONSTRICAO = d1+d2==12
+POLEN = d1+d2<5 
+FRAQUEZA = 11<=d1+d2>=5
+if(CONSTRICAO):
+	print("CONSTRICAO")
+	print(d1+d2+1)
+elif(POLEN):
+	print("POLEN")
+	print((d1+d2+1)*r)
+elif(FRAQUEZA):
+	print("FRAQUEZA")
+	print(d1*d2)
+	
+-- ERROR:
+File "XXXX", line 10
+    elif(POLEN):
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:19:53) 
+-- CODE:
+d1 = int(input("dado 1:"))
+d2 = int(input("dado 2:"))
+r = int(input("rodada:"))
+CONSTRICAO = d1+d2==12
+POLEN = d1+d2<5 
+FRAQUEZA = 11<=d1+d2>=5
+if(CONSTRICAO):
+	print("CONSTRICAO")
+	print(d1+d2+1)
+elif(POLEN):
+	print("POLEN")
+	print((d1+d2+1)*r)
+elif(FRAQUEZA):
+	print("FRAQUEZA")
+	print(d1*d2)
+elif(d1==0)or(d1>6)or(d2==0)or(d2>6):
+	print("Entrada invalida")
+-- ERROR:
+File "XXXX", line 10
+    elif(POLEN):
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 10:20:05) 
+-- CODE:
+d1 = int(input("dado 1:"))
+d2 = int(input("dado 2:"))
+r = int(input("rodada:"))
+CONSTRICAO = d1+d2==12
+POLEN = d1+d2<5 
+FRAQUEZA = 11<=d1+d2>=5
+if(CONSTRICAO):
+	print("CONSTRICAO")
+	print(d1+d2+1)
+elif(POLEN):
+	print("POLEN")
+	print((d1+d2+1)*r)
+elif(FRAQUEZA):
+	print("FRAQUEZA")
+	print(d1*d2)
+elif(d1==0)or(d1>6)or(d2==0)or(d2>6):
+	print("Entrada invalida")
+-- EXECUTION TIME:
+0.207276
+-- TEST CASE 1:
+---- input:
+5
+3
+8
+---- correct output:
+FRAQUEZA
+15
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+7
+8
+5
+---- correct output:
+Entrada invalida
+---- user output:
+FRAQUEZA
+56
+-- TEST CASE 3:
+---- input:
+1
+1
+9
+---- correct output:
+POLEN
+27
+---- user output:
+POLEN
+27
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:20:13) 
+-- CODE:
+d1 = int(input("dado 1:"))
+d2 = int(input("dado 2:"))
+r = int(input("rodada:"))
+CONSTRICAO = d1+d2==12
+POLEN = d1+d2<5 
+FRAQUEZA = 11<=d1+d2>=5
+if(CONSTRICAO):
+	print("CONSTRICAO")
+	print(d1+d2+1)
+elif(POLEN):
+	print("POLEN")
+	print((d1+d2+1)*r)
+elif(FRAQUEZA):
+	print("FRAQUEZA")
+	print(d1*d2)
+elif(d1==0)or(d1>6)or(d2==0)or(d2>6):
+	print("Entrada invalida")
+-- ERROR:
+File "XXXX", line 10
+    elif(POLEN):
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:20:22) 
+-- CODE:
+d1 = int(input("dado 1:"))
+d2 = int(input("dado 2:"))
+r = int(input("rodada:"))
+CONSTRICAO = d1+d2==12
+POLEN = d1+d2<5 
+FRAQUEZA = 11<=d1+d2>=5
+if(CONSTRICAO):
+	print("CONSTRICAO")
+	print(d1+d2+1)
+elif(POLEN):
+	print("POLEN")
+	print((d1+d2+1)*r)
+elif(FRAQUEZA):
+	print("FRAQUEZA")
+	print(d1*d2)
+elif(d1==0)or(d1>6)or(d2==0)or(d2>6):
+	print("Entrada invalida")
+-- ERROR:
+File "XXXX", line 10
+    elif(POLEN):
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:20:51) 
+-- CODE:
+d1 = int(input("dado 1:"))
+d2 = int(input("dado 2:"))
+r = int(input("rodada:"))
+CONSTRICAO = d1+d2==12
+POLEN = d1+d2<5 
+FRAQUEZA = 11<=d1+d2>=5
+if(CONSTRICAO):
+	print("CONSTRICAO")
+	print(d1+d2+1)
+elif(POLEN):
+	print("POLEN")
+	print((d1+d2+1)*r)
+elif(FRAQUEZA):
+	print("FRAQUEZA")
+	print(d1*d2)
+elif(d1==0)or(d1>6)or(d2==0)or(d2>6):
+	print("Entrada invalida")
+-- ERROR:
+File "XXXX", line 10
+    elif(POLEN):
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 10:21:28) 
+-- CODE:
+d1 = int(input("dado 1:"))
+d2 = int(input("dado 2:"))
+r = int(input("rodada:"))
+CONSTRICAO = d1+d2==12
+POLEN = d1+d2<5 
+FRAQUEZA = 11>=d1+d2>=5
+if(CONSTRICAO):
+	print("CONSTRICAO")
+	print(d1+d2+1)
+elif(POLEN):
+	print("POLEN")
+	print((d1+d2+1)*r)
+elif(FRAQUEZA):
+	print("FRAQUEZA")
+	print(d1*d2)
+elif(d1==0)or(d1>6)or(d2==0)or(d2>6):
+	print("Entrada invalida")
+-- OUTPUT:
+FRAQUEZA
+15
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 10:21:35) 
+-- CODE:
+d1 = int(input("dado 1:"))
+d2 = int(input("dado 2:"))
+r = int(input("rodada:"))
+CONSTRICAO = d1+d2==12
+POLEN = d1+d2<5 
+FRAQUEZA = 11>=d1+d2>=5
+if(CONSTRICAO):
+	print("CONSTRICAO")
+	print(d1+d2+1)
+elif(POLEN):
+	print("POLEN")
+	print((d1+d2+1)*r)
+elif(FRAQUEZA):
+	print("FRAQUEZA")
+	print(d1*d2)
+elif(d1==0)or(d1>6)or(d2==0)or(d2>6):
+	print("Entrada invalida")
+-- EXECUTION TIME:
+0.202069
+-- TEST CASE 1:
+---- input:
+5
+3
+8
+---- correct output:
+FRAQUEZA
+15
+---- user output:
+FRAQUEZA
+15
+-- TEST CASE 2:
+---- input:
+7
+8
+5
+---- correct output:
+Entrada invalida
+---- user output:
+Entrada invalida
+-- TEST CASE 3:
+---- input:
+1
+1
+9
+---- correct output:
+POLEN
+27
+---- user output:
+POLEN
+27
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

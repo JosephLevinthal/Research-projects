@@ -1,0 +1,7 @@
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+s = input()
+
+print(int(s[0]) + int(s[1]) + int(s[2]) + int(s[3]))

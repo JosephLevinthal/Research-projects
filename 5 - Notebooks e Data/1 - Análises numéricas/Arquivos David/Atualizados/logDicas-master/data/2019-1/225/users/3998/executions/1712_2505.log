@@ -1,0 +1,377 @@
+== TEST (2019-05-13 13:30:54) 
+-- CODE:
+from math import*
+x = eval(input("angulo medido em radianos: "))
+k = int(input("termo em série: "))
+
+soma = 0    #variavel acumuladora
+i = 2       #variavel contador
+
+while(i < k):
+	soma = soma + x**i/ factorial(3 *i)
+	i = i + 2
+print(round(soma,10))
+-- OUTPUT:
+0.0034269587
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:32:17) 
+-- CODE:
+from math import*
+x = eval(input("angulo medido em radianos: "))
+k = eval(input("termo em série: "))
+
+soma = 0    #variavel acumuladora
+i = 2       #variavel contador
+
+while(i < k):
+	soma = soma + (x)**i/ factorial(3 *i)
+	i = i + 2
+print(round(soma,10))
+-- OUTPUT:
+0.0034269587
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:32:39) 
+-- CODE:
+from math import*
+x = eval(input("angulo medido em radianos: "))
+k = int(input("termo em série: "))
+
+soma = 0    #variavel acumuladora
+i = 2       #variavel contador
+
+while(i < k):
+	soma = soma + (x)**i/ factorial(3 *i)
+	i = i + 2
+print(round(soma,10))
+-- OUTPUT:
+0.0034269587
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:32:59) 
+-- CODE:
+from math import*
+x = eval(input("angulo medido em radianos: "))
+k = int(input("termo em serie: "))
+
+soma = 0    #variavel acumuladora
+i = 2       #variavel contador
+
+while(i < k):
+	soma = soma + (x)**i/ factorial(3 *i)
+	i = i + 2
+print(round(soma,10))
+-- OUTPUT:
+0.0034269587
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:41:12) 
+-- CODE:
+from math import*
+x = eval(input("angulo medido em radianos: "))
+k = int(input("termo em serie: "))
+
+soma = 0    #variavel acumuladora
+i = 0       #variavel contador
+sinal = + sinal
+
+while(i < k):
+	soma = soma + sinal**(2*i + 1)/ factorial(2*i+1)
+	i = i + 1
+	sinal = -sinal
+print(round(soma,10))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    sinal = + sinal
+NameError: name 'sinal' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:44:07) 
+-- CODE:
+from math import*
+x = eval(input("angulo medido em radianos: "))
+k = int(input("termo em serie: "))
+
+soma = 0    #variavel acumuladora
+i = 0       #variavel contador
+sinal = + x
+
+while(i < k):
+	soma = soma + sinal**(2*i + 1)/ factorial(2*i+1)
+	i = i + 1
+	sinal = -sinal
+print(round(soma,10))
+-- OUTPUT:
+1.0000035426
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-13 13:44:19) 
+-- CODE:
+from math import*
+x = eval(input("angulo medido em radianos: "))
+k = int(input("termo em serie: "))
+
+soma = 0    #variavel acumuladora
+i = 0       #variavel contador
+sinal = + x
+
+while(i < k):
+	soma = soma + sinal**(2*i + 1)/ factorial(2*i+1)
+	i = i + 1
+	sinal = -sinal
+print(round(soma,10))
+-- EXECUTION TIME:
+0.213874
+-- TEST CASE 1:
+---- input:
+pi/2
+5
+---- correct output:
+1.0000035426
+---- user output:
+1.0000035426
+-- TEST CASE 2:
+---- input:
+-pi/2
+4
+---- correct output:
+-0.9998431014
+---- user output:
+-0.9998431014
+-- TEST CASE 3:
+---- input:
+pi/3
+3
+---- correct output:
+0.8662952838
+---- user output:
+0.8662952838
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-13 14:58:55) 
+-- CODE:
+from math import*
+x = eval(input("angulo medido em radianos: "))
+k = int(input("termo em serie: "))
+
+soma = 0    #variavel acumuladora
+i = 0       #variavel contador
+sinal = + x
+cont = 3
+while(i < k):
+	#soma = soma + sinal**(2*i + 1)/ factorial(2*i+1)
+	soma = soma + sinal* x**(cont)/ factorial(cont)
+	i = i + 1
+	cont = cont + 2
+	sinal = -sinal
+print(round(soma,10))
+-- EXECUTION TIME:
+0.187847
+-- TEST CASE 1:
+---- input:
+pi/2
+5
+---- correct output:
+1.0000035426
+---- user output:
+0.8966048618
+-- TEST CASE 2:
+---- input:
+-pi/2
+4
+---- correct output:
+-0.9998431014
+---- user output:
+0.8965992088
+-- TEST CASE 3:
+---- input:
+pi/3
+3
+---- correct output:
+0.8662952838
+---- user output:
+0.1897273563
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-13 14:59:30) 
+-- CODE:
+from math import*
+x = eval(input("angulo medido em radianos: "))
+k = int(input("termo em serie: "))
+
+soma = x    #variavel acumuladora
+i = 0       #variavel contador
+sinal = - x
+cont = 3
+while(i < k-1):
+	#soma = soma + sinal**(2*i + 1)/ factorial(2*i+1)
+	soma = soma + sinal * x**(cont)/ factorial(cont)
+	i = i + 1
+	cont = cont + 2
+	sinal = -sinal
+print(round(soma,10))
+-- EXECUTION TIME:
+0.226549
+-- TEST CASE 1:
+---- input:
+pi/2
+5
+---- correct output:
+1.0000035426
+---- user output:
+0.674197118
+-- TEST CASE 2:
+---- input:
+-pi/2
+4
+---- correct output:
+-0.9998431014
+---- user output:
+-2.467647556
+-- TEST CASE 3:
+---- input:
+pi/3
+3
+---- correct output:
+0.8662952838
+---- user output:
+0.8577571398
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-13 15:00:29) 
+-- CODE:
+from math import*
+x = eval(input("angulo medido em radianos: "))
+k = int(input("termo em serie: "))
+
+soma = x    #variavel acumuladora
+i = 0       #variavel contador
+sinal = - x
+cont = 3
+while(i < k-1):
+	#soma = soma + sinal**(2*i + 1)/ factorial(2*i+1)
+	soma = soma + sinal * (x**(cont)/ factorial(cont))
+	i = i + 1
+	cont = cont + 2
+	sinal = -sinal
+print(round(soma,10))
+-- EXECUTION TIME:
+0.160902
+-- TEST CASE 1:
+---- input:
+pi/2
+5
+---- correct output:
+1.0000035426
+---- user output:
+0.674197118
+-- TEST CASE 2:
+---- input:
+-pi/2
+4
+---- correct output:
+-0.9998431014
+---- user output:
+-2.467647556
+-- TEST CASE 3:
+---- input:
+pi/3
+3
+---- correct output:
+0.8662952838
+---- user output:
+0.8577571398
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-13 15:01:40) 
+-- CODE:
+from math import*
+x = eval(input("angulo medido em radianos: "))
+k = int(input("termo em serie: "))
+
+soma = x    #variavel acumuladora
+i = 0       #variavel contador
+sinal = - 1
+cont = 3
+while(i < k-1):
+	#soma = soma + sinal**(2*i + 1)/ factorial(2*i+1)
+	soma = soma + sinal * (x**(cont)/ factorial(cont))
+	i = i + 1
+	cont = cont + 2
+	sinal = sinal * -sinal
+print(round(soma,10))
+-- EXECUTION TIME:
+0.130936
+-- TEST CASE 1:
+---- input:
+pi/2
+5
+---- correct output:
+1.0000035426
+---- user output:
+0.8402974077
+-- TEST CASE 2:
+---- input:
+-pi/2
+4
+---- correct output:
+-0.9998431014
+---- user output:
+-0.8404578489
+-- TEST CASE 3:
+---- input:
+pi/3
+3
+---- correct output:
+0.8662952838
+---- user output:
+0.8453062793
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-13 15:02:39) 
+-- CODE:
+from math import*
+x = eval(input("angulo medido em radianos: "))
+k = int(input("termo em serie: "))
+
+soma = x    #variavel acumuladora
+i = 0       #variavel contador
+sinal = - 1
+cont = 3
+while(i < k-1):
+	#soma = soma + sinal**(2*i + 1)/ factorial(2*i+1)
+	soma = soma + sinal**(i+1) * (x**(cont)/ factorial(cont))
+	i = i + 1
+	cont = cont + 2
+	#sinal = sinal * -sinal
+print(round(soma,10))
+-- EXECUTION TIME:
+0.137628
+-- TEST CASE 1:
+---- input:
+pi/2
+5
+---- correct output:
+1.0000035426
+---- user output:
+1.0000035426
+-- TEST CASE 2:
+---- input:
+-pi/2
+4
+---- correct output:
+-0.9998431014
+---- user output:
+-0.9998431014
+-- TEST CASE 3:
+---- input:
+pi/3
+3
+---- correct output:
+0.8662952838
+---- user output:
+0.8662952838
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

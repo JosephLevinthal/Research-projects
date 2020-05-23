@@ -1,0 +1,113 @@
+== TEST (2019-05-22 19:59:36) 
+-- CODE:
+s=input("Digite os caracteres: ")
+print(replace(s.upper()))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print(replace(s.upper()))
+NameError: name 'replace' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-22 20:00:04) 
+-- CODE:
+from numpy import*
+s=input("Digite os caracteres: ")
+print(replace(s.upper()))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-22 20:00:52) 
+-- CODE:
+from numpy import*
+s=input("Digite os caracteres: ")
+print(s.replace.upper())
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-22 20:01:04) 
+-- CODE:
+from numpy import*
+s=input("Digite os caracteres: ")
+print(s.replace.upper())
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-27 15:49:05) 
+-- CODE:
+s=input("Digite a frase: ")
+s= s.replace(' ','')
+n=""
+c=0
+i=-1
+j=1 #palindromo (supondo)
+while(i>=-len(s)):
+	n= n+s[i]
+	if(s[i]!=s[c]):
+		j=0
+	c=c+1
+	i=i-1
+print(s.upper())
+print(j)
+	
+-- OUTPUT:
+ACARARAJADADAJARARACA
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-27 15:49:08) 
+-- CODE:
+s=input("Digite a frase: ")
+s= s.replace(' ','')
+n=""
+c=0
+i=-1
+j=1 #palindromo (supondo)
+while(i>=-len(s)):
+	n= n+s[i]
+	if(s[i]!=s[c]):
+		j=0
+	c=c+1
+	i=i-1
+print(s.upper())
+print(j)
+	
+-- EXECUTION TIME:
+0.14173
+-- TEST CASE 1:
+---- input:
+ACARARAJADADAJARARACA
+---- correct output:
+ACARARAJADADAJARARACA
+1
+---- user output:
+ACARARAJADADAJARARACA
+1
+-- TEST CASE 2:
+---- input:
+CACHORRO
+---- correct output:
+CACHORRO
+0
+---- user output:
+CACHORRO
+0
+-- TEST CASE 3:
+---- input:
+amalanadanalama
+---- correct output:
+AMALANADANALAMA
+1
+---- user output:
+AMALANADANALAMA
+1
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

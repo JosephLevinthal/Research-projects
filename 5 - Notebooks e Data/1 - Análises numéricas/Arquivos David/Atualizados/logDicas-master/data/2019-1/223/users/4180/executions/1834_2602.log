@@ -1,0 +1,293 @@
+== TEST (2019-06-25 16:07:49) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(
+mg = mg.T
+
+alimentos = array([[2,1,4],[1,2,0],[2,3,2]])
+
+bac = dot(inv(alimentos),mg)
+
+print("estafilococo:",round(bac[0],1))
+print("salmonela:",round(bac[1],1))
+print("coli:",round(bac[2],1))
+
+if(bac[0] == min(bac)):
+	print("estafilococo")
+elif(bac[1] == min(bac)):
+	print("salmonela")
+else:
+	print("coli")
+-- ERROR:
+File "XXXX", line 7
+    alimentos = array([[2,1,4],[1,2,0],[2,3,2]])
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 16:08:21) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval("D:")
+mg = mg.T
+
+alimentos = array([[2,1,4],[1,2,0],[2,3,2]])
+
+bac = dot(inv(alimentos),mg)
+
+print("estafilococo:",round(bac[0],1))
+print("salmonela:",round(bac[1],1))
+print("coli:",round(bac[2],1))
+
+if(bac[0] == min(bac)):
+	print("estafilococo")
+elif(bac[1] == min(bac)):
+	print("salmonela")
+else:
+	print("coli")
+-- ERROR:
+File "XXXX", line 5
+    mg = mg.T
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 16:08:25) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval("D:"))
+mg = mg.T
+
+alimentos = array([[2,1,4],[1,2,0],[2,3,2]])
+
+bac = dot(inv(alimentos),mg)
+
+print("estafilococo:",round(bac[0],1))
+print("salmonela:",round(bac[1],1))
+print("coli:",round(bac[2],1))
+
+if(bac[0] == min(bac)):
+	print("estafilococo")
+elif(bac[1] == min(bac)):
+	print("salmonela")
+else:
+	print("coli")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 16:12:41) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array([2,1,4],[1,2,0],[2,3,2])
+mg = mg.T
+
+alimentos = array([[2,1,4],[1,2,0],[2,3,2]])
+
+bac = dot(inv(alimentos),mg)
+
+print("estafilococo:",round(bac[0],1))
+print("salmonela:",round(bac[1],1))
+print("coli:",round(bac[2],1))
+
+if(bac[0] == min(bac)):
+	print("estafilococo")
+elif(bac[1] == min(bac)):
+	print("salmonela")
+else:
+	print("coli")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 16:26:58) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+
+alimentos = array([[2,1,4],[1,2,0],[2,3,2]])
+
+bac = dot(inv(alimentos),mg)
+
+print("estafilococo:",round(bac[0],1))
+print("salmonela:",round(bac[1],1))
+print("coli:",round(bac[2],1))
+
+if(bac[0] == min(bac)):
+	print("estafilococo")
+elif(bac[1] == min(bac)):
+	print("salmonela")
+else:
+	print("coli")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 16:27:03) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+
+alimentos = array([[2,1,4],[1,2,0],[2,3,2]])
+
+bac = dot(inv(alimentos),mg)
+
+print("estafilococo:",round(bac[0],1))
+print("salmonela:",round(bac[1],1))
+print("coli:",round(bac[2],1))
+
+if(bac[0] == min(bac)):
+	print("estafilococo")
+elif(bac[1] == min(bac)):
+	print("salmonela")
+else:
+	print("coli")
+-- EXECUTION TIME:
+1.03848
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo: 1923.4
+salmonela: 1864.5
+coli: -439.0
+coli
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo: -31711.0
+salmonela: 16783.4
+coli: 12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo: 22647.2
+salmonela: -9717.3
+coli: -6745.3
+salmonela
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 16:30:11) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+
+alimentos = array([[2,1,4],[1,2,0],[2,3,2]])
+
+bac = dot(inv(alimentos),mg)
+
+print("estafilococo:",round(bac[0],1))
+print("salmonela:",round(bac[1],1))
+print("coli:",round(bac[2],1))
+
+if(bac[0] == min(bac)):
+	print("estafilococo")
+elif(bac[1] == min(bac)):
+	print("salmonela")
+else:
+	print("coli")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 16:30:18) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+
+alimentos = array([[2,1,4],[1,2,0],[2,3,2]])
+
+bac = dot(inv(alimentos),mg)
+
+print("estafilococo:",round(bac[0],1))
+print("salmonela:",round(bac[1],1))
+print("coli:",round(bac[2],1))
+
+if(bac[0] == min(bac)):
+	print("estafilococo")
+elif(bac[1] == min(bac)):
+	print("salmonela")
+else:
+	print("coli")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 16:30:36) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+
+alimentos = array([[2,1,4],[1,2,0],[2,3,2]])
+
+bac = dot(inv(alimentos),mg)
+
+print("estafilococo:",round(bac[0],1))
+print("salmonela:",round(bac[1],1))
+print("coli:",round(bac[2],1))
+
+if(bac[0] == min(bac)):
+	print("estafilococo")
+elif(bac[1] == min(bac)):
+	print("salmonela")
+else:
+	print("coli")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

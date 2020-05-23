@@ -1,0 +1,184 @@
+== TEST (2019-05-02 11:12:34) 
+-- CODE:
+x = float(int("Determine x"))
+
+if ((x<=-1) or (x>=1)):
+	print(round(x*x, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    x = float(int("Determine x"))
+ValueError: invalid literal for int() with base 10: 'Determine x'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:13:07) 
+-- CODE:
+x = float(input("Determine x"))
+
+if ((x<=-1) or (x>=1)):
+	print(round(x*x, 4))
+-- OUTPUT:
+3.9601
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:13:11) 
+-- CODE:
+x = float(input("Determine x: "))
+
+if ((x<=-1) or (x>=1)):
+	print(round(x*x, 4))
+-- OUTPUT:
+3.9601
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:16:17) 
+-- CODE:
+x = float(input("Determine x: "))
+
+if (x = 0)
+	if ((x<=-1) or (x>=1)):
+		print(round(x*x, 4))
+	elif (x>-1 and x<0) or (X>0 and x<1):
+		print(round(x, 4))
+else:
+	print(round("1", 4))
+-- ERROR:
+File "XXXX", line 3
+    if (x = 0)
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:16:51) 
+-- CODE:
+x = float(input("Determine x: "))
+
+if ((x<=-1) or (x>=1)):
+	print(round(x*x, 4))
+elif (x>-1 and x<0) or (X>0 and x<1):
+	print(round(x, 4))
+-- OUTPUT:
+3.9601
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:17:01) 
+-- CODE:
+x = float(input("Determine x: "))
+
+if ((x<=-1) or (x>=1)):
+	print(round(x*x, 4))
+elif (x>-1 and x<0) or (X>0 and x<1):
+	print(round(x, 4))
+-- OUTPUT:
+3.9601
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:17:50) 
+-- CODE:
+x = float(input("Determine x: "))
+
+if ((x<=-1) or (x>=1)):
+	print(round(x*x, 4))
+elif ((x>-1 and x<0) or (X>0 and x<1)):
+	print(round(x, 4))
+ 
+-- OUTPUT:
+3.9601
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:18:22) 
+-- CODE:
+x = float(input("Determine x: "))
+
+if ((x<=-1) or (x>=1)):
+	print(round(x*x, 4))
+elif ((x>-1 and x<0) or (x>0 and x<1)):
+	print(round(x, 4))
+ 
+-- OUTPUT:
+3.9601
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:20:01) 
+-- CODE:
+x = float(input("Determine x: "))
+
+if ((x<=-1) or (x>=1)):
+	print(round(x*x, 4))
+elif ((x>-1 and x<0) or (x>0 and x<1)):
+	print(round(x, 4))
+elif (x==0):
+	print(round("1", 4))
+-- OUTPUT:
+3.9601
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:20:21) 
+-- CODE:
+x = float(input("Determine x: "))
+
+if ((x<=-1) or (x>=1)):
+	print(round(x*x, 4))
+elif ((x>-1 and x<0) or (x>0 and x<1)):
+	print(round(x, 4))
+elif (x=0):
+	print(round("1", 4))
+-- ERROR:
+File "XXXX", line 7
+    elif (x=0):
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:20:53) 
+-- CODE:
+x = float(input("Determine x: "))
+
+if ((x<=-1) or (x>=1)):
+	print(round(x*x, 4))
+elif ((x>-1 and x<0) or (x>0 and x<1)):
+	print(round(x, 4))
+elif (x==0):
+	print(round("1", 4))
+-- OUTPUT:
+3.9601
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:21:09) 
+-- CODE:
+x = float(input("Determine x: "))
+
+if ((x<=-1) or (x>=1)):
+	print(round(x*x, 4))
+elif ((x>-1 and x<0) or (x>0 and x<1)):
+	print(round(x, 4))
+elif (x==0):
+	print(round(1, 4))
+-- OUTPUT:
+3.9601
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 11:21:15) 
+-- CODE:
+x = float(input("Determine x: "))
+
+if ((x<=-1) or (x>=1)):
+	print(round(x*x, 4))
+elif ((x>-1 and x<0) or (x>0 and x<1)):
+	print(round(x, 4))
+elif (x==0):
+	print(round(1, 4))
+-- EXECUTION TIME:
+0.126161
+-- TEST CASE 1:
+---- input:
+-1.99
+---- correct output:
+3.9601
+---- user output:
+3.9601
+-- TEST CASE 2:
+---- input:
+0.99
+---- correct output:
+0.99
+---- user output:
+0.99
+-- TEST CASE 3:
+---- input:
+-1.01
+---- correct output:
+1.0201
+---- user output:
+1.0201
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,1 @@
+percurso=int(input())

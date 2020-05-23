@@ -1,0 +1,301 @@
+== TEST (2019-03-27 14:01:54) 
+-- CODE:
+n = int(input('numero com 4 digitos: '))
+a = n//1000
+print(a)
+b = (n-(n//1000)*1000)//100
+print(b)
+-- OUTPUT:
+2
+0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 14:04:04) 
+-- CODE:
+n = int(input('numero com 4 digitos: '))
+a = n//1000
+print(a)
+b = (n-(n//1000)*1000)//100
+print(b)
+c = (n%100)//10
+print(c)
+d = n%10
+print(d)
+-- OUTPUT:
+2
+0
+0
+0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 14:06:15) 
+-- CODE:
+n = int(input('numero com 4 digitos: '))
+a = n//1000
+b = (n-(n//1000)*1000)//100
+c = (n%100)//10
+d = n%10
+
+print((a*2+b*3+c*4+d*5)%11)
+-- OUTPUT:
+4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 14:06:34) 
+-- CODE:
+n = int(input('numero com 4 digitos: '))
+a = n//1000
+b = (n-(n//1000)*1000)//100
+c = (n%100)//10
+d = n%10
+
+print((a*2+b*3+c*4+d*5)%11)
+-- OUTPUT:
+4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 14:09:01) 
+-- CODE:
+from math import*
+n = int(input('numero com 4 digitos: '))
+a = n//1000
+b = (n-(n//1000)*1000)//100
+c = (n%100)//10
+d = n%10
+
+print((a*2+b*3+c*4+d*5).mod(11))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print((a*2+b*3+c*4+d*5).mod(11))
+AttributeError: 'int' object has no attribute 'mod'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 14:09:54) 
+-- CODE:
+from math import*
+n = int(input('numero com 4 digitos: '))
+a = n//1000
+b = (n-(n//1000)*1000)//100
+c = (n%100)//10
+d = n%10
+
+print(mod((a*2+b*3+c*4+d*5),11))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(mod((a*2+b*3+c*4+d*5),11))
+NameError: name 'mod' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 14:12:20) 
+-- CODE:
+from math import*
+n = int(input('numero com 4 digitos: '))
+a = n//1000
+print(a)
+b = (n-(n//1000)*1000)//100
+print(b)
+c = (n%100)//10
+print(c)
+d = n%10
+print(d)
+
+print((a*2+b*3+c*4+d*5)*11)
+-- OUTPUT:
+2
+0
+0
+0
+44
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-27 14:13:50) 
+-- CODE:
+from math import*
+n = int(input('numero com 4 digitos: '))
+a = n//1000
+print(a)
+b = (n-(n//1000)*1000)//100
+print(b)
+c = (n%100)//10
+print(c)
+d = n//10
+print(d)
+
+print((a*2+b*3+c*4+d*5)*11)
+-- OUTPUT:
+2
+0
+0
+200
+11044
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:09:47) 
+-- CODE:
+n = int(input('numero com 4 digitos: '))
+a = n//1000
+print(a)
+b = (n-(n//1000)*1000)//100
+print(b)
+c = ((n-(n//1000)*1000)//100)*100//10
+print(c)
+d = n%10
+print(d)
+
+print((a*2+b*3+c*4+d*5)*11)
+-- OUTPUT:
+2
+0
+0
+0
+44
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:15:30) 
+-- CODE:
+n = int(input('numero com 4 digitos: '))
+a = n//1000
+print(a)
+b = (n-(n//1000)*1000)//100
+print(b)
+c = (n-(n-((n//1000)*1000)+((n-(n//1000)*1000)//100)*100))//10
+print(c)
+d = n%10
+print(d)
+
+print((a*2+b*3+c*4+d*5)%11)
+-- OUTPUT:
+2
+0
+200
+0
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:19:45) 
+-- CODE:
+n = int(input('numero com 4 digitos: '))
+a = n//1000
+print(a)
+b = (n//100)%10
+print(b)
+c = (n//10)%10
+print(c)
+d = n%10
+print(d)
+
+#(n-(n-((n//1000)*1000)+((n-(n//1000)*1000)//100)*100))//10
+print((a*2+b*3+c*4+d*5)%11)
+-- OUTPUT:
+2
+0
+0
+0
+4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:23:05) 
+-- CODE:
+n = int(input('numero com 4 digitos: '))
+a = n//1000
+
+b = (n//100)%10
+
+c = (n//10)%10
+
+d = n%10
+
+
+#(n-(n-((n//1000)*1000)+((n-(n//1000)*1000)//100)*100))//10
+print((a*5+b*4+c*3+d*2)%11)
+-- OUTPUT:
+10
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:23:31) 
+-- CODE:
+n = int(input('numero com 4 digitos: '))
+a = n//1000
+
+b = (n//100)%10
+
+c = (n//10)%10
+
+d = n%10
+
+
+#(n-(n-((n//1000)*1000)+((n-(n//1000)*1000)//100)*100))//10
+print((a*5+b*4+c*3+d*2)%11)
+-- OUTPUT:
+10
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-28 10:23:43) 
+-- CODE:
+n = int(input('numero com 4 digitos: '))
+a = n//1000
+
+b = (n//100)%10
+
+c = (n//10)%10
+
+d = n%10
+
+
+#(n-(n-((n//1000)*1000)+((n-(n//1000)*1000)//100)*100))//10
+print((a*5+b*4+c*3+d*2)%11)
+-- EXECUTION TIME:
+0.187536
+-- TEST CASE 1:
+---- input:
+2000
+---- correct output:
+10
+---- user output:
+10
+-- TEST CASE 2:
+---- input:
+3550
+---- correct output:
+6
+---- user output:
+6
+-- TEST CASE 3:
+---- input:
+0007
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-28 10:25:03) 
+-- CODE:
+n = int(input('numero com 4 digitos: '))
+a = n//1000
+
+b = (n//100)%10
+
+c = (n//10)%10
+
+d = n%10
+
+
+#(n-(n-((n//1000)*1000)+((n-(n//1000)*1000)//100)*100))//10
+print((a*5+b*4+c*3+d*2)%11)
+-- EXECUTION TIME:
+0.152597
+-- TEST CASE 1:
+---- input:
+2000
+---- correct output:
+10
+---- user output:
+10
+-- TEST CASE 2:
+---- input:
+3550
+---- correct output:
+6
+---- user output:
+6
+-- TEST CASE 3:
+---- input:
+0007
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,198 @@
+== TEST (2019-05-01 20:05:56) 
+-- CODE:
+h1=float(input(" altura total: "))
+h2=float(input("nivel de combustivel no taque: "))
+r=float(input("raio dos bojos semiesfericos inferior e superior: "))
+print("Entradas: ", h1,",",h2"," , r)
+
+-- ERROR:
+File "XXXX", line 4
+    print("Entradas: ", h1,",",h2"," , r)
+                                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 20:06:54) 
+-- CODE:
+h1=float(input(" altura total: "))
+h2=float(input("nivel de combustivel no taque: "))
+r=float(input("raio dos bojos semiesfericos inferior e superior: "))
+print("Entradas: "h1 ,"," h2 ,"," r)
+
+-- ERROR:
+File "XXXX", line 4
+    print("Entradas: "h1 ,"," h2 ,"," r)
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 20:08:02) 
+-- CODE:
+h1=float(input(" altura total: "))
+h2=float(input("nivel de combustivel no taque: "))
+r=float(input("raio dos bojos semiesfericos inferior e superior: "))
+print("Entradas: ",h1,"," , h2,",", r)
+
+-- OUTPUT:
+Entradas:  11.3 , 5.7 , 2.3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 20:38:19) 
+-- CODE:
+h1=float(input(" altura total: "))
+h2=float(input("nivel de combustivel no taque: "))
+r=float(input("raio dos bojos semiesfericos inferior e superior: "))
+print("Entradas: ",h1,"," , h2,",", r)
+if(h1>0 and h2>0 and r>0 and h1>h2 and h1>2*r):
+	if(h2<=r):
+		v=(pi/3)*(h**2)*(3*r-h)
+		print("Volume: ",round(v*1000,3),"litros")
+	elif(r<h2 and h<=h1-r):
+		#v=(pi*(r**2)*h2)+((pi/3)*(h2**2)*(3*r-h2))
+		v=(4*pi*(r**3)/6)+(pi*(r**2)*(h2-r))
+		print("Volume: ",round(v*1000,3),"litros")
+	elif(h2>h1-r):
+		v=(4*pi*(r**3)/6)+((pi/3)*((r**2)*(h2-r))*2)
+		print("Volume: ",round(v*1000,3),"litros")
+else:
+	print(Entradas invalidas)
+
+-- ERROR:
+File "XXXX", line 17
+    print(Entradas invalidas)
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 20:38:31) 
+-- CODE:
+h1=float(input(" altura total: "))
+h2=float(input("nivel de combustivel no taque: "))
+r=float(input("raio dos bojos semiesfericos inferior e superior: "))
+print("Entradas: ",h1,"," , h2,",", r)
+if(h1>0 and h2>0 and r>0 and h1>h2 and h1>2*r):
+	if(h2<=r):
+		v=(pi/3)*(h**2)*(3*r-h)
+		print("Volume: ",round(v*1000,3),"litros")
+	elif(r<h2 and h<=h1-r):
+		#v=(pi*(r**2)*h2)+((pi/3)*(h2**2)*(3*r-h2))
+		v=(4*pi*(r**3)/6)+(pi*(r**2)*(h2-r))
+		print("Volume: ",round(v*1000,3),"litros")
+	elif(h2>h1-r):
+		v=(4*pi*(r**3)/6)+((pi/3)*((r**2)*(h2-r))*2)
+		print("Volume: ",round(v*1000,3),"litros")
+else:
+	print("Entradas invalidas")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    elif(r<h2 and h<=h1-r):
+NameError: name 'h' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 20:39:30) 
+-- CODE:
+h1=float(input(" altura total: "))
+h2=float(input("nivel de combustivel no taque: "))
+r=float(input("raio dos bojos semiesfericos inferior e superior: "))
+print("Entradas: ",h1,"," , h2,",", r)
+if(h1>0 and h2>0 and r>0 and h1>h2 and h1>2*r):
+	if(h2<=r):
+		v=(pi/3)*(h**2)*(3*r-h)
+		print("Volume: ",round(v*1000,3),"litros")
+	elif(r<h2 and h2<=h1-r):
+		#v=(pi*(r**2)*h2)+((pi/3)*(h2**2)*(3*r-h2))
+		v=(4*pi*(r**3)/6)+(pi*(r**2)*(h2-r))
+		print("Volume: ",round(v*1000,3),"litros")
+	elif(h2>h1-r):
+		v=(4*pi*(r**3)/6)+((pi/3)*((r**2)*(h2-r))*2)
+		print("Volume: ",round(v*1000,3),"litros")
+else:
+	print("Entradas invalidas")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 11, in <module>
+    v=(4*pi*(r**3)/6)+(pi*(r**2)*(h2-r))
+NameError: name 'pi' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 20:40:21) 
+-- CODE:
+h1=float(input(" altura total: "))
+h2=float(input("nivel de combustivel no taque: "))
+r=float(input("raio dos bojos semiesfericos inferior e superior: "))
+print("Entradas: ",h1,"," , h2,",", r)
+from math import*
+if(h1>0 and h2>0 and r>0 and h1>h2 and h1>2*r):
+	if(h2<=r):
+		v=(pi/3)*(h**2)*(3*r-h)
+		print("Volume: ",round(v*1000,3),"litros")
+	elif(r<h2 and h2<=h1-r):
+		#v=(pi*(r**2)*h2)+((pi/3)*(h2**2)*(3*r-h2))
+		v=(4*pi*(r**3)/6)+(pi*(r**2)*(h2-r))
+		print("Volume: ",round(v*1000,3),"litros")
+	elif(h2>h1-r):
+		v=(4*pi*(r**3)/6)+((pi/3)*((r**2)*(h2-r))*2)
+		print("Volume: ",round(v*1000,3),"litros")
+else:
+	print("Entradas invalidas")
+
+-- OUTPUT:
+Entradas:  11.3 , 5.7 , 2.3
+Volume:  81987.191 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-01 20:40:49) 
+-- CODE:
+h1=float(input(" altura total: "))
+h2=float(input("nivel de combustivel no taque: "))
+r=float(input("raio dos bojos semiesfericos inferior e superior: "))
+print("Entradas: ",h1,"," , h2,",", r)
+from math import*
+if(h1>0 and h2>0 and r>0 and h1>h2 and h1>2*r):
+	if(h2<=r):
+		v=(pi/3)*(h**2)*(3*r-h)
+		print("Volume: ",round(v*1000,3),"litros")
+	elif(r<h2 and h2<=h1-r):
+		#v=(pi*(r**2)*h2)+((pi/3)*(h2**2)*(3*r-h2))
+		v=(4*pi*(r**3)/6)+(pi*(r**2)*(h2-r))
+		print("Volume: ",round(v*1000,3),"litros")
+	elif(h2>h1-r):
+		v=(4*pi*(r**3)/6)+((pi/3)*((r**2)*(h2-r))*2)
+		print("Volume: ",round(v*1000,3),"litros")
+else:
+	print("Entradas invalidas")
+
+-- EXECUTION TIME:
+0.145142
+-- TEST CASE 1:
+---- input:
+11.3
+5.7
+2.3
+---- correct output:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 81987.191 litros
+---- user output:
+Entradas:  11.3 , 5.7 , 2.3
+Volume:  81987.191 litros
+-- TEST CASE 2:
+---- input:
+8.5
+9.5
+2.2
+---- correct output:
+Entradas: 8.5 , 9.5 , 2.2
+Entradas invalidas
+---- user output:
+Entradas:  8.5 , 9.5 , 2.2
+Entradas invalidas
+-- TEST CASE 3:
+---- input:
+8
+4
+6
+---- correct output:
+Entradas: 8.0 , 4.0 , 6.0
+Entradas invalidas
+---- user output:
+Entradas:  8.0 , 4.0 , 6.0
+Entradas invalidas
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

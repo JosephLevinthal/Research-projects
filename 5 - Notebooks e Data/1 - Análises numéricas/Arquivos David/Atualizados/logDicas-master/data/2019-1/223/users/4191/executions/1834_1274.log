@@ -1,0 +1,473 @@
+== TEST (2019-07-01 19:19:26) 
+-- CODE:
+from numpy import *
+from numpy.linealg import *
+
+n=int(input("Numero inteiro: "))
+
+matriz=array((n,n))
+
+for i in range (n):	
+	for j in range(n):
+		matriz[i,j]=i+1
+		
+print(matriz)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 19:19:37) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n=int(input("Numero inteiro: "))
+
+matriz=array((n,n))
+
+for i in range (n):	
+	for j in range(n):
+		matriz[i,j]=i+1
+		
+print(matriz)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 19:20:22) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n=int(input("Numero inteiro: "))
+
+matriz=array((n,n))
+
+for i in range (n):	
+	for j in range(n):
+		matriz[i,j]=j+1
+		
+print(matriz)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 19:20:52) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n=int(input("Numero inteiro: "))
+
+matriz=array((n,n))
+cont=0
+for i in range (n):	
+	for j in range(n):
+		matriz[i,j]=cont+1
+		cont=cont+1
+print(matriz)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 19:21:54) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n=int(input("Numero inteiro: "))
+
+matriz=zeros(n,n)
+
+for i in range (n):	
+	for j in range(n):
+		matriz[i,j]=i+1
+		
+print(matriz)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 19:22:19) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n=int(input("Numero inteiro: "))
+
+matriz=zeros((n,n), dtype=int)
+
+for i in range (n):	
+	for j in range(n):
+		matriz[i,j]=i+1
+		
+print(matriz)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 19:36:20) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n=int(input("Numero inteiro: "))
+
+matriz=zeros((n,n), dtype=int)
+
+for i in range (n):	
+	for j in range(n):
+		if(i==j):
+			matriz[i,j]=i+1
+		if(i==0)	or (j==0):
+			matriz[i,j]=1
+		if(i!=j)and(i!=0)and(j!=0):
+			matriz[i,j]=i+2
+		
+print(matriz)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 19:38:35) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n=int(input("Numero inteiro: "))
+
+matriz=zeros((n,n), dtype=int)
+
+for i in range (n):	
+	for j in range(n):
+		if(i==j):
+			matriz[i,j]=i+1
+		if(i==0)	or (j==0):
+			matriz[i,j]=1
+		if(i!=j)and(i!=0)and(j!=0):
+			matriz[i,j]=j+2
+		
+print(matriz)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 19:40:16) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n=int(input("Numero inteiro: "))
+
+matriz=zeros((n,n), dtype=int)
+
+for i in range (n):	
+	for j in range(n):
+		if(i==j):
+			matriz[i,j]=i+1
+		if(i==0)	or (j==0):
+			matriz[i,j]=1
+		if(i!=j)and(i!=0)and(j!=0):
+			matriz[i,j]=i-i+2
+		
+print(matriz)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 19:40:23) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n=int(input("Numero inteiro: "))
+
+matriz=zeros((n,n), dtype=int)
+
+for i in range (n):	
+	for j in range(n):
+		if(i==j):
+			matriz[i,j]=i+1
+		if(i==0)	or (j==0):
+			matriz[i,j]=1
+		if(i!=j)and(i!=0)and(j!=0):
+			matriz[i,j]=i-i+2
+		
+print(matriz)		
+
+-- EXECUTION TIME:
+1.22435
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 2 2 2 2 2]
+ [1 2 2 4 2 2 2 2]
+ [1 2 2 2 5 2 2 2]
+ [1 2 2 2 2 6 2 2]
+ [1 2 2 2 2 2 7 2]
+ [1 2 2 2 2 2 2 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 19:40:28) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n=int(input("Numero inteiro: "))
+
+matriz=zeros((n,n), dtype=int)
+
+for i in range (n):	
+	for j in range(n):
+		if(i==j):
+			matriz[i,j]=i+1
+		if(i==0)	or (j==0):
+			matriz[i,j]=1
+		if(i!=j)and(i!=0)and(j!=0):
+			matriz[i,j]=i-i+2
+		
+print(matriz)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 19:40:35) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n=int(input("Numero inteiro: "))
+
+matriz=zeros((n,n), dtype=int)
+
+for i in range (n):	
+	for j in range(n):
+		if(i==j):
+			matriz[i,j]=i+1
+		if(i==0)	or (j==0):
+			matriz[i,j]=1
+		if(i!=j)and(i!=0)and(j!=0):
+			matriz[i,j]=i-i+2
+		
+print(matriz)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 19:45:42) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n=int(input("Numero inteiro: "))
+
+matriz=zeros((n,n), dtype=int)
+
+for i in range (n):	
+	for j in range(n):
+		if(i==j):
+			matriz[i,j]=i+1
+		if(i==0)	or (j==0):
+			matriz[i,j]=1
+		if(i!=j)and(i!=0)and(j!=0):
+			matriz[i,j]=j
+		
+print(matriz)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 19:47:57) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n=int(input("Numero inteiro: "))
+
+matriz=zeros((n,n), dtype=int)
+
+for i in range (n):	
+	for j in range(n):
+		if(i==j):
+			matriz[i,j]=i+1
+		if(i==0)	or (j==0):
+			matriz[i,j]=1
+		if(i!=j)and(i!=0)and(j!=0):
+			matriz[i,j]=n-i
+		
+print(matriz)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 19:49:31) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n=int(input("Numero inteiro: "))
+
+matriz=zeros((n,n), dtype=int)
+
+for i in range (n):	
+	for j in range(n):
+		matriz[i,j=min(i,j)+1
+		
+print(matriz)		
+
+-- ERROR:
+File "XXXX", line 10
+    matriz[i,j=min(i,j)+1
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 19:49:38) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n=int(input("Numero inteiro: "))
+
+matriz=zeros((n,n), dtype=int)
+
+for i in range (n):	
+	for j in range(n):
+		matriz[i,j]=min(i,j)+1
+		
+print(matriz)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 19:52:36) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n=int(input("Numero inteiro: "))
+
+matriz=zeros((n,n), dtype=int)
+
+for i in range (n):	
+	for j in range(n):
+		matriz[i,j]=min(i,j)+1
+		
+print(matriz)		
+
+-- EXECUTION TIME:
+1.08302
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

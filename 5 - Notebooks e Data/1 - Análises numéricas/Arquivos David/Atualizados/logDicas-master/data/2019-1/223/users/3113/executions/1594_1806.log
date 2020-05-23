@@ -1,0 +1,113 @@
+== TEST (2019-04-01 18:36:21) 
+-- CODE:
+n=float(input("pessoas:"))
+
+p=1-(factorial(365)/factorial(365-n))*(1/365**n)
+
+print(p)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    p=1-(factorial(365)/factorial(365-n))*(1/365**n)
+NameError: name 'factorial' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:36:41) 
+-- CODE:
+from math import*
+n=float(input("pessoas:"))
+
+p=1-(factorial(365)/factorial(365-n))*(1/365**n)
+
+print(p)
+-- OUTPUT:
+0.16702478883806438
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:37:08) 
+-- CODE:
+from math import*
+n=float(input("pessoas:"))
+
+p=1-(factorial(365)/factorial(365-n))*(1/365**n)
+s=p*100
+print(p)
+-- OUTPUT:
+0.16702478883806438
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:37:18) 
+-- CODE:
+from math import*
+n=float(input("pessoas:"))
+
+p=1-(factorial(365)/factorial(365-n))*(1/365**n)
+s=p*100
+print(s)
+-- OUTPUT:
+16.70247888380644
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:37:50) 
+-- CODE:
+from math import*
+n=int(input("pessoas:"))
+
+p=1-(factorial(365)/factorial(365-n))*(1/365**n)
+s=p*100
+print(round(s,4))
+-- OUTPUT:
+16.7025
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:37:55) 
+-- CODE:
+from math import*
+n=int(input("pessoas:"))
+
+p=1-(factorial(365)/factorial(365-n))*(1/365**n)
+s=p*100
+print(round(s,4))
+-- OUTPUT:
+16.7025
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:38:05) 
+-- CODE:
+from math import*
+n=int(input("pessoas:"))
+
+p=1-(factorial(365)/factorial(365-n))*(1/365**n)
+s=p*100
+print(round(s,2))
+-- OUTPUT:
+16.7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 18:38:12) 
+-- CODE:
+from math import*
+n=int(input("pessoas:"))
+
+p=1-(factorial(365)/factorial(365-n))*(1/365**n)
+s=p*100
+print(round(s,2))
+-- EXECUTION TIME:
+0.185458
+-- TEST CASE 1:
+---- input:
+12
+---- correct output:
+16.7
+---- user output:
+16.7
+-- TEST CASE 2:
+---- input:
+24
+---- correct output:
+53.83
+---- user output:
+53.83
+-- TEST CASE 3:
+---- input:
+99
+---- correct output:
+100.0
+---- user output:
+100.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

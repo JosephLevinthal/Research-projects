@@ -1,0 +1,2812 @@
+== TEST (2019-05-23 16:57:12) 
+-- CODE:
+n = int(input("Digite os numeros: "))
+
+print(n[0:2],".",n[3:5],".",n[6:8])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print(n[0:2],".",n[3:5],".",n[6:8])
+TypeError: 'int' object is not subscriptable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 17:00:32) 
+-- CODE:
+n = input("Digite os numeros: "))
+
+a = int(n[:2])
+b = int(n[3:5])
+c = int(n[6:8])
+
+d = a+"."+b+"."+c
+-- ERROR:
+File "XXXX", line 1
+    n = input())
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 17:00:36) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+a = int(n[:2])
+b = int(n[3:5])
+c = int(n[6:8])
+
+d = a+"."+b+"."+c
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    b = int(n[3:5])
+ValueError: invalid literal for int() with base 10: ''
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 17:00:43) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+a = int(n[:2])
+b = int(n[3:5])
+c = int(n[6:8])
+
+d = a+"."+b+"."+c
+
+print(d)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    b = int(n[3:5])
+ValueError: invalid literal for int() with base 10: ''
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 17:01:01) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+a = int(n[:2])
+b = int(n[3:5])
+c = int(n[6:8])
+
+d = a,".",b,"."+c
+
+print(d)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    b = int(n[3:5])
+ValueError: invalid literal for int() with base 10: ''
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 17:01:32) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+a = int(n[:2])
+b = int(n[3:5])
+c = int(n[6:8])
+
+print(a,".",b,".",c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    b = int(n[3:5])
+ValueError: invalid literal for int() with base 10: ''
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 17:02:09) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+a = int(n[:2])
+b = int(n[3:5])
+c = int(n[6:8])
+
+print(a+"."+b+"."+c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    b = int(n[3:5])
+ValueError: invalid literal for int() with base 10: ''
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 20:48:31) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+print(int(n[0:2],"."))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print(int(n[0:2],"."))
+TypeError: 'str' object cannot be interpreted as an integer
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 22:32:19) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+new = n[0:2] + "." + n[3:5] + "." + n[6:8]
+
+print(new)
+-- OUTPUT:
+12..
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 22:33:04) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+new = n[1:3] + "." + n[4:6] + "." + n[7:9]
+
+print(new)
+-- OUTPUT:
+23..
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 22:33:32) 
+-- CODE:
+n = input("Digite os numeros: ")
+a = [0:2]
+new = n[1:3] + "." + n[4:6] + "." + n[7:9]
+print(a)
+print(new)
+-- ERROR:
+File "XXXX", line 2
+    a = [0:2]
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 22:33:42) 
+-- CODE:
+n = input("Digite os numeros: ")
+a = n[0:2]
+new = n[1:3] + "." + n[4:6] + "." + n[7:9]
+print(a)
+print(new)
+-- OUTPUT:
+12
+23..
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 22:34:14) 
+-- CODE:
+n = input("Digite os numeros: ")
+a = n[0:3]
+new = n[1:3] + "." + n[4:6] + "." + n[7:9]
+print(a)
+print(new)
+-- OUTPUT:
+123
+23..
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 22:34:40) 
+-- CODE:
+n = input("Digite os numeros: ")
+a = n[0:3]
+new = n[0:3] + "." + n[4:7] + "." + n[8:10]
+print(a)
+print(new)
+-- OUTPUT:
+123
+123..
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 22:35:03) 
+-- CODE:
+n = input("Digite os numeros: ")
+a = n[0:3]
+new = n[0:3] + "." + n[3:7] + "." + n[7:90]
+print(a)
+print(new)
+-- OUTPUT:
+123
+123..
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 22:35:13) 
+-- CODE:
+n = input("Digite os numeros: ")
+a = n[0:3]
+new = n[0:3] + "." + n[3:7] + "." + n[7:9]
+print(a)
+print(new)
+-- OUTPUT:
+123
+123..
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 22:35:33) 
+-- CODE:
+n = input("Digite os numeros: ")
+a = n[0:3]
+new = n[0:3] + "." + n[3:6] + "." + n[6:9]
+print(a)
+print(new)
+-- OUTPUT:
+123
+123..
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 22:35:42) 
+-- CODE:
+n = input("Digite os numeros: ")
+a = n[0:3]
+new = n[0:3] + "." + n[3:6] + "." + n[6:9]
+print(a)
+print(new)
+-- OUTPUT:
+123
+123..
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-24 22:35:58) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+new = n[0:3] + "." + n[3:6] + "." + n[6:9]
+
+print(new)
+-- EXECUTION TIME:
+0.199985
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123..
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 22:38:29) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+if(size(n) == 3):
+	a = n[0:3]
+
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if(size(n) == 3):
+NameError: name 'size' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 22:38:46) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+if(len(n) == 3):
+	a = n[0:3]
+
+print(a)
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 22:40:51) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) == 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) == 9):
+	a = n[0:3]+"."+n[3:6]+"."+n[6:9]
+
+print(a)
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-24 22:41:04) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) == 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) == 9):
+	a = n[0:3]+"."+n[3:6]+"."+n[6:9]
+
+print(a)
+-- EXECUTION TIME:
+0.144037
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 22:42:16) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) == 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) == 9):
+	a = n[0:3] + "." + n[3:6] +"."+ n[6:9]
+elif(len(n) == 10):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9] + "." + n[9:10]
+
+print(a)
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-24 22:42:30) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) == 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) == 9):
+	a = n[0:3] + "." + n[3:6] +"."+ n[6:9]
+elif(len(n) == 10):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9] + "." + n[9:10]
+
+print(a)
+-- EXECUTION TIME:
+0.183185
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 22:42:58) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) == 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) == 9):
+	a = n[0:3] + "." + n[3:6] +"."+ n[6:9]
+elif(len(n) == 12):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9] + "." + n[9:12]
+
+print(a)
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-24 22:43:03) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) == 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) == 9):
+	a = n[0:3] + "." + n[3:6] +"."+ n[6:9]
+elif(len(n) == 12):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9] + "." + n[9:12]
+
+print(a)
+-- EXECUTION TIME:
+0.289413
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-24 22:43:19) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) == 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) == 9):
+	a = n[0:3] + "." + n[3:6] +"."+ n[6:9]
+elif(len(n) > 9):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9] + "." + n[9:12]
+
+print(a)
+-- EXECUTION TIME:
+0.174785
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789.000
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-24 22:43:31) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) == 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) == 9):
+	a = n[0:3] + "." + n[3:6] +"."+ n[6:9]
+elif(len(n) == 12):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9] + "." + n[9:12]
+
+print(a)
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-24 22:45:01) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) == 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) == 9):
+	a = n[0:3] + "." + n[3:6] +"."+ n[6:9]
+
+
+print(a)
+-- EXECUTION TIME:
+0.129339
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+Digite os numeros: 987.654.321
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-24 22:46:23) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) == 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) == 9):
+	a = n[0:3] + "." + n[3:6] +"."+ n[6:9]
+
+
+print(a)
+-- EXECUTION TIME:
+0.172298
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 16:22:35) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] +"."+ n[6:9]
+
+
+print(a)
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 16:22:47) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] +"."+ n[6:9]
+
+
+print(a)
+-- EXECUTION TIME:
+0.19649
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 16:22:50) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] +"."+ n[6:9]
+
+
+print(a)
+-- EXECUTION TIME:
+0.144787
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 16:22:59) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] +"."+ n[6:9]
+
+
+print(a)
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 16:23:18) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] +"."+ n[6:9]
+
+
+print(a)
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 16:23:22) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] +"."+ n[6:9]
+
+
+print(a)
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 16:23:30) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] +"."+ n[6:9]
+
+
+print(a)
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 16:26:34) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+i = 0
+
+while(i < len(n)):
+	if(len)
+	
+	
+	
+-- ERROR:
+File "XXXX", line 6
+    if(len)
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 16:27:42) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] +"."+ n[6:9]
+
+
+print(a)
+	
+	
+	
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 16:27:56) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] +"."+ n[6:9]
+
+
+print(a)
+	
+	
+	
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 16:28:03) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] +"."+ n[6:9]
+
+
+print(a)
+	
+	
+	
+-- EXECUTION TIME:
+0.163439
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 16:28:12) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3]+ "."+n[3:6] +"."+ n[6:9]
+
+
+print(a)
+	
+	
+	
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 16:28:14) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3]+ "."+n[3:6] +"."+ n[6:9]
+
+
+print(a)
+	
+	
+	
+-- EXECUTION TIME:
+0.154429
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 16:28:21) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3]+ "."+n[3:6]+"."+n[6:9]
+
+
+print(a)
+	
+	
+	
+-- EXECUTION TIME:
+0.227079
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 16:28:24) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3]+ "."+n[3:6]+"."+n[6:9]
+
+
+print(a)
+	
+	
+	
+-- EXECUTION TIME:
+0.203197
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 16:29:06) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3]+"."+n[3:6]+"."+n[6:9]
+
+
+print(a)
+	
+	
+	
+-- EXECUTION TIME:
+0.229433
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 16:29:48) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3] + "." + n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9]
+
+
+print(a)
+	
+	
+	
+-- EXECUTION TIME:
+0.156976
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 16:34:14) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3] + "." + n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9]
+
+
+print(a)
+	
+	
+	
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 16:35:50) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3] + "." + n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9]
+elif(len(n) > 9 and len(n) <= 12):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9] + "." + n[9:12]
+elif(len(n) > 12 and len(n) <= 15):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9] + "." + n[9:12] + "." + n[12:15]
+
+
+print(a)
+	
+	
+	
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 16:35:56) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3] + "." + n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9]
+elif(len(n) > 9 and len(n) <= 12):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9] + "." + n[9:12]
+elif(len(n) > 12 and len(n) <= 15):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9] + "." + n[9:12] + "." + n[12:15]
+
+
+print(a)
+	
+	
+	
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 16:35:57) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3] + "." + n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9]
+elif(len(n) > 9 and len(n) <= 12):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9] + "." + n[9:12]
+elif(len(n) > 12 and len(n) <= 15):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9] + "." + n[9:12] + "." + n[12:15]
+
+
+print(a)
+	
+	
+	
+-- EXECUTION TIME:
+0.135446
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 16:36:02) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3] + "." + n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9]
+elif(len(n) > 9 and len(n) <= 12):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9] + "." + n[9:12]
+elif(len(n) > 12 and len(n) <= 15):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9] + "." + n[9:12] + "." + n[12:15]
+
+
+print(a)
+	
+	
+	
+-- EXECUTION TIME:
+0.173755
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 16:36:11) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3] + "." + n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9]
+elif(len(n) > 9 and len(n) <= 12):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9] + "." + n[9:12]
+elif(len(n) > 12 and len(n) <= 15):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9] + "." + n[9:12] + "." + n[12:15]
+
+
+print(a)
+	
+	
+	
+-- EXECUTION TIME:
+0.146088
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 16:36:12) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3] + "." + n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9]
+elif(len(n) > 9 and len(n) <= 12):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9] + "." + n[9:12]
+elif(len(n) > 12 and len(n) <= 15):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9] + "." + n[9:12] + "." + n[12:15]
+
+
+print(a)
+	
+	
+	
+-- EXECUTION TIME:
+0.275688
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 16:36:12) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3] + "." + n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9]
+elif(len(n) > 9 and len(n) <= 12):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9] + "." + n[9:12]
+elif(len(n) > 12 and len(n) <= 15):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9] + "." + n[9:12] + "." + n[12:15]
+
+
+print(a)
+	
+	
+	
+-- EXECUTION TIME:
+0.400199
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+987.654.321
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 16:51:32) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3] + "." + n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9]
+
+
+
+print(a)
+	
+	
+	
+-- EXECUTION TIME:
+0.143826
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 17:48:04) 
+-- CODE:
+n = input("Digite os numeros: ")
+len(n)
+
+
+
+
+
+print(a)
+	
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(a)
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 17:48:27) 
+-- CODE:
+n = input("Digite os numeros: ")
+a = len(n)
+	
+print(a)	
+	
+-- OUTPUT:
+3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 17:48:48) 
+-- CODE:
+n = input("Digite os numeros: ")
+a = (n / 3) - 1
+	
+print(a)	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    a = (n / 3) - 1
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 17:49:02) 
+-- CODE:
+n = input("Digite os numeros: ")
+a = (len(n) / 3) - 1
+	
+print(a)	
+	
+-- OUTPUT:
+0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 22:11:06) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3] + "." + n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9]
+
+print(a)
+	
+	
+	
+	
+	
+n = input("Digite os numeros: ")
+a = (len(n) / 3) - 1
+
+aux = zeros(a, dtype = int)
+j = 0
+i = 0
+
+while(i < len):
+	aux[j] = n[0:3]+"."
+	j = j + 1
+
+print(a)	
+	
+-- EXECUTION TIME:
+0.159102
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1764/1583/main.py", line 17, in <module>
+    n = input()
+EOFError: EOF when reading a line
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:11:43) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3):
+	a = n[0:3] + "." + n[3:6]
+elif(len(n) > 6):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9]
+
+print(a)
+	
+	
+	
+	
+	
+n = input("Digite os numeros: ")
+a = (len(n) / 3) - 1
+
+aux = zeros(a, dtype = int)
+j = 0
+i = 0
+
+while(i < len):
+	aux[j] = n[0:3]+"."
+	j = j + 1
+
+print(a)	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 17, in <module>
+    n = input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 22:11:53) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3):
+	a = n[0:3] + "." + n[3:6]
+elif(len(n) > 6):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9]
+
+print(a)
+	
+	
+	
+	
+	
+n = input("Digite os numeros: ")
+a = (len(n) / 3) - 1
+
+aux = zeros(a, dtype = int)
+j = 0
+i = 0
+
+while(i < len):
+	aux[j] = n[0:3]+"."
+	j = j + 1
+
+print(a)	
+	
+-- EXECUTION TIME:
+0.263429
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1764/1583/main.py", line 17, in <module>
+    n = input()
+EOFError: EOF when reading a line
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 22:12:02) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3 and len(n) <= 6):
+	a = n[0:3] + "." + n[3:6]
+elif(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9]
+
+print(a)
+	
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+0.140818
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+Digite os numeros: 987.654.321
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 22:12:16) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3):
+	a = n[0:3] + "." + n[3:6]
+elif(len(n) > 6):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9]
+
+print(a)
+	
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+0.159958
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 22:12:32) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3):
+	a = n[0:3] + "." + n[3:6]
+elif(len(n) > 6):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9]
+
+print(a)
+	
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+0.207013
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:14:53) 
+-- CODE:
+n = input("Digite os numeros: ")
+a = (len(n) / 3) - 1
+
+aux = zeros(a, dtype = int)
+j = 0
+i = 0
+
+while(i < len(n)):
+	if(n[i] > 3)
+	aux[j] = n[i]+"."
+	j = j + 1
+
+print(a)	
+	
+	
+	
+	
+
+-- ERROR:
+File "XXXX", line 9
+    if(n[i] > 3)
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:15:10) 
+-- CODE:
+n = input("Digite os numeros: ")
+a = (len(n) / 3) - 1
+
+aux = zeros(a, dtype = int)
+j = 0
+i = 0
+
+while(i < len(n)):
+	if(n[i] > 3):
+		aux[j] = n[i]+"."
+	j = j + 1
+
+print(a)	
+	
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    aux = zeros(a, dtype = int)
+NameError: name 'zeros' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:15:21) 
+-- CODE:
+n = input("Digite os numeros: ")
+a = (len(n) / 3) - 1
+
+aux = zeros(a, dtype = int)
+j = 0
+i = 0
+
+while(i < len(n)):
+	if(n[i] > 3):
+		aux[j] = n[i]+"."
+		j = j + 1
+	i = i + 1	
+
+print(a)	
+	
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    aux = zeros(a, dtype = int)
+NameError: name 'zeros' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:17:20) 
+-- CODE:
+n = input("Digite os numeros: ")
+if(len(n) > 0):
+	a = (len(n) / 3) - 1 
+
+aux = zeros(a, dtype = int)
+j = 0
+i = 0
+
+while(i < len(n)):
+	if(n[i] > 3):
+		aux[j] = n[i]+"."
+		j = j + 1
+	i = i + 1	
+
+print(a)	
+	
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    aux = zeros(a, dtype = int)
+NameError: name 'zeros' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:18:18) 
+-- CODE:
+n = input("Digite os numeros: ")
+if(len(n) > 0):
+	a = (len(n) / 3) - 1 
+a
+aux = zeros(a, dtype = int)
+j = 0
+i = 0
+
+while(i < len(n)):
+	if(n[i] > 3):
+		aux[j] = n[i]+"."
+		j = j + 1
+	i = i + 1	
+
+print(a)	
+	
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    aux = zeros(a, dtype = int)
+NameError: name 'zeros' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:19:23) 
+-- CODE:
+n = input("Digite os numeros: ")
+i = 0
+n = 0
+while(i < len(n)):
+	n = n + 1
+	i = i + 1 
+	
+
+print(n)	
+	
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    while(i < len(n)):
+TypeError: object of type 'int' has no len()
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 22:20:23) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3):
+	a = n[0:3] + "." + n[3:6]
+elif(len(n) > 6):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9]
+
+print(a)
+	
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+0.187604
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:20:49) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) > 6):
+	a = n[0:3]+"."+n[3:6]+"."+n[6:9]
+
+print(a)
+	
+	
+	
+	
+	
+
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:21:03) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+elif(len(n) > 3):
+	a = n[0:3]+"."+n[3:6]
+elif(len(n) > 6):
+	a = n[0:3]+"."+n[3:6]+"."+n[6:9]
+
+print(a)
+	
+	
+	
+	
+	
+
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:21:37) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+if(len(n) > 3):
+	a = n[0:3]+"."+n[3:6]
+if(len(n) > 6):
+	a = n[0:3]+"."+n[3:6]+"."+n[6:9]
+
+print(a)
+	
+	
+	
+	
+	
+
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 22:21:48) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+if(len(n) > 3):
+	a = n[0:3]+"."+n[3:6]
+if(len(n) > 6):
+	a = n[0:3]+"."+n[3:6]+"."+n[6:9]
+
+print(a)
+	
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+0.207053
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:23:20) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+
+
+print(n[0:3]+"."+n[3:6]+"."+n[6:9])
+	
+	
+	
+	
+	
+
+-- OUTPUT:
+123..
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 22:23:32) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+
+
+print(n[0:3]+"."+n[3:6]+"."+n[6:9])
+	
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+0.135426
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123..
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:24:22) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+if(len(n) > 3 and len(n) <= 6):
+	a = n[0:3]+"."+n[3:6]
+if(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9]
+
+print(a)
+	
+	
+	
+	
+	
+
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 22:24:34) 
+-- CODE:
+n = input("Digite os numeros: ")
+
+
+if(len(n) == 3):
+	a = n[0:3]
+if(len(n) > 3 and len(n) <= 6):
+	a = n[0:3]+"."+n[3:6]
+if(len(n) > 6 and len(n) <= 9):
+	a = n[0:3] + "." + n[3:6] + "." + n[6:9]
+
+print(a)
+	
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+0.153467
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 15:58:26) 
+-- CODE:
+from numpy import*
+n  = input(" ")
+
+i = 0
+d = 3
+o="."
+s=" "
+
+while(i<len(n)):
+	if(i<len(n) - 4):
+		s = s+n[i:d]+0
+		else:
+			s+n[i:d]
+		i = i +3
+		d = d+3
+print(s)
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+0.216962
+-- ERROR:
+  File "/home/codebench/codes/1764/1583/main.py", line 12
+    else:
+       ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 15:58:37) 
+-- CODE:
+from numpy import*
+n  = input(" ")
+
+i = 0
+d = 3
+o="."
+s=""
+
+while(i<len(n)):
+	if(i<len(n) - 4):
+		s = s+n[i:d]+0
+		else:
+			s+n[i:d]
+		i = i +3
+		d = d+3
+print(s)
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+0.171744
+-- ERROR:
+  File "/home/codebench/codes/1764/1583/main.py", line 12
+    else:
+       ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 15:59:01) 
+-- CODE:
+from numpy import*
+n  = input(" ")
+
+i = 0
+d = 3
+o="."
+s=""
+
+while(i<len(n)):
+	if(i<len(n) - 4):
+		s = s+n[i:d]+0
+	else:
+		s+n[i:d]
+	i = i +3
+	d = d+3
+print(s)
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+0.468302
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 15:59:06) 
+-- CODE:
+from numpy import*
+n  = input(" ")
+
+i = 0
+d = 3
+o="."
+s=""
+
+while(i<len(n)):
+	if(i<len(n) - 4):
+		s = s+n[i:d]+0
+	else:
+		s+n[i:d]
+	i = i +3
+	d = d+3
+print(s)
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+0.482384
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 15:59:10) 
+-- CODE:
+from numpy import*
+n  = input(" ")
+
+i = 0
+d = 3
+o="."
+s=""
+
+while(i<len(n)):
+	if(i<len(n) - 4):
+		s = s+n[i:d]+0
+	else:
+		s+n[i:d]
+	i = i +3
+	d = d+3
+print(s)
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+0.930294
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 15:59:10) 
+-- CODE:
+from numpy import*
+n  = input(" ")
+
+i = 0
+d = 3
+o="."
+s=""
+
+while(i<len(n)):
+	if(i<len(n) - 4):
+		s = s+n[i:d]+0
+	else:
+		s+n[i:d]
+	i = i +3
+	d = d+3
+print(s)
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+1.96428
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1764/1583/main.py", line 11, in <module>
+    s = s+n[i:d]+0
+TypeError: Can't convert 'int' object to str implicitly
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 15:59:10) 
+-- CODE:
+from numpy import*
+n  = input(" ")
+
+i = 0
+d = 3
+o="."
+s=""
+
+while(i<len(n)):
+	if(i<len(n) - 4):
+		s = s+n[i:d]+0
+	else:
+		s+n[i:d]
+	i = i +3
+	d = d+3
+print(s)
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+2.01484
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1764/1583/main.py", line 11, in <module>
+    s = s+n[i:d]+0
+TypeError: Can't convert 'int' object to str implicitly
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 15:59:10) 
+-- CODE:
+from numpy import*
+n  = input(" ")
+
+i = 0
+d = 3
+o="."
+s=""
+
+while(i<len(n)):
+	if(i<len(n) - 4):
+		s = s+n[i:d]+0
+	else:
+		s+n[i:d]
+	i = i +3
+	d = d+3
+print(s)
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+3.06634
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1764/1583/main.py", line 11, in <module>
+    s = s+n[i:d]+0
+TypeError: Can't convert 'int' object to str implicitly
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 15:59:11) 
+-- CODE:
+from numpy import*
+n  = input(" ")
+
+i = 0
+d = 3
+o="."
+s=""
+
+while(i<len(n)):
+	if(i<len(n) - 4):
+		s = s+n[i:d]+0
+	else:
+		s+n[i:d]
+	i = i +3
+	d = d+3
+print(s)
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+3.01097
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1764/1583/main.py", line 11, in <module>
+    s = s+n[i:d]+0
+TypeError: Can't convert 'int' object to str implicitly
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 15:59:11) 
+-- CODE:
+from numpy import*
+n  = input(" ")
+
+i = 0
+d = 3
+o="."
+s=""
+
+while(i<len(n)):
+	if(i<len(n) - 4):
+		s = s+n[i:d]+0
+	else:
+		s+n[i:d]
+	i = i +3
+	d = d+3
+print(s)
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+2.33788
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 15:59:28) 
+-- CODE:
+from numpy import*
+n  = input(" ")
+
+i = 0
+d = 3
+o="."
+s=""
+
+while(i<len(n)):
+	if(i<len(n) - 4):
+		s = s+n[i:d]+0
+	else:
+		s = s+n[i:d]
+	i = i +3
+	d = d+3
+print(s)
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+0.437248
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 16:00:00) 
+-- CODE:
+from numpy import*
+n  = input(" ")
+
+i = 0
+d = 3
+o="."
+s=""
+
+while(i<len(n)):
+	if(i<(len(n) - 4)):
+		s = s+n[i:d]+0
+	else:
+		s = s+n[i:d]
+	i = i +3
+	d = d+3
+print(s)
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+0.400985
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 18:23:24) 
+-- CODE:
+from numpy import*
+n  = input(" ")
+
+i = 0
+d = 3
+o="."
+s=""
+
+while(i<len(n)):
+	if(i<(len(n) - 4)):
+		s = s+n[i:d]+o
+	else:
+		s = s+n[i:d]
+	i = i +3
+	d = d + 3
+print(s)
+	
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 18:23:36) 
+-- CODE:
+from numpy import*
+n  = input(" ")
+
+i = 0
+d = 3
+o="."
+s=""
+
+while(i<len(n)):
+	if(i<(len(n) - 4)):
+		s = s+n[i:d]+o
+	else:
+		s = s+n[i:d]
+	i = i +3
+	d = d + 3
+print(s)
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+0.37945
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789.000.987.654.321
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 16:15:41) 
+-- CODE:
+from numpy import*
+n  = input(" ")
+
+i = 0
+d = 3
+o="."
+s=""
+
+while(i < len(n)):
+	if(i < (len(n) - 4)):
+		s = s + n[i:d] + o
+	else:
+		s = s+n[i:d]
+	i = i + 3
+	d = d + 3
+
+print(s)
+	
+	
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-04 16:16:06) 
+-- CODE:
+from numpy import*
+
+n = input("Digite os numeros: ")
+
+i = 0
+d = 3
+o="."
+s=""
+
+while(i < len(n)):
+	if(i < (len(n) - 4)):
+		s = s + n[i:d] + o
+	else:
+		s = s+n[i:d]
+	i = i + 3
+	d = d + 3
+
+print(s)
+	
+	
+	
+	
+
+-- EXECUTION TIME:
+1.19098
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789.000.987.654.321
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

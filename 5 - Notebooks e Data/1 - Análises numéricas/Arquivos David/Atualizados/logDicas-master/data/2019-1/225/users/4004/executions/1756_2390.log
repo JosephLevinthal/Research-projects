@@ -1,0 +1,1092 @@
+== TEST (2019-05-29 13:08:28) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+m = array(["janeiro","fevereiro","marco","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"])
+
+print(m[12])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:08:47) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+m = array(["janeiro","fevereiro","marco","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"])
+
+print(m[11])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:18:16) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+
+while i > size(p):
+	z[i] = p[i] - f[i]
+	i = i + 1
+
+print(max(z))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:19:48) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+
+while i < size(p):
+	z[i] = p[i] - f[i]
+	i = i + 1
+
+print(max(z))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:21:27) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	z[i] = p[i] - f[i]
+	i = i + 1
+	if z[i] == max(z):
+		m = i
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:27:24) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	z[i] = p[i] - f[i]
+	i = i + 1
+	if z[i] == max(z):
+		m = i
+	else:
+		m = m
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:28:18) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	z[i] = p[i] - f[i]
+	i = i + 1
+	if z[i] == max(z):
+		m = i
+	else:
+		m = m
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 13:28:21) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	z[i] = p[i] - f[i]
+	i = i + 1
+	if z[i] == max(z):
+		m = i
+	else:
+		m = m
+print(m)
+-- EXECUTION TIME:
+0.441938
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1756/2390/main.py", line 13, in <module>
+    if z[i] == max(z):
+IndexError: index 12 is out of bounds for axis 0 with size 12
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:28:43) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	z[i] = p[i] - f[i]
+	i = i + 1
+	if z[i] == max(z):
+		m = i + 1
+	else:
+		m = m
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 13:28:49) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	z[i] = p[i] - f[i]
+	i = i + 1
+	if z[i] == max(z):
+		m = i + 1
+	else:
+		m = m
+print(m)
+-- EXECUTION TIME:
+0.373292
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1756/2390/main.py", line 13, in <module>
+    if z[i] == max(z):
+IndexError: index 12 is out of bounds for axis 0 with size 12
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:28:56) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	z[i] = p[i] - f[i]
+	i = i + 1
+	if z[i] == max(z):
+		m = i + 1
+	else:
+		m = m
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:30:08) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	if z[i] == max(z):
+	m = i + 1
+	else:
+		m = m
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(m)
+-- ERROR:
+File "XXXX", line 12
+    m = i + 1
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:30:19) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	if z[i] == max(z):
+		m = i + 1
+	else:
+		m = m
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:35:38) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	if z[i] == max(z):
+		m = i + 1
+	else:
+		m = m
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 13:38:41) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	if z[i] == max(z):
+		m = i + 1
+	else:
+		m = m
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(m)
+-- EXECUTION TIME:
+0.621724
+-- TEST CASE 1:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,110,12]
+[5,6,7,8,9,10,11,12,13,1,15,12]
+---- correct output:
+10
+---- user output:
+1
+-- TEST CASE 2:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,11,12]
+[5,6,7,8,9,10,11,12,3,14,11,12]
+---- correct output:
+9
+---- user output:
+1
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:40:06) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	if z[i] == min(z):
+		m = i + 1
+	else:
+		m = m
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 13:40:18) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	if z[i] == min(z):
+		m = i + 1
+	else:
+		m = m
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(m)
+-- EXECUTION TIME:
+0.471713
+-- TEST CASE 1:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,110,12]
+[5,6,7,8,9,10,11,12,13,1,15,12]
+---- correct output:
+10
+---- user output:
+12
+-- TEST CASE 2:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,11,12]
+[5,6,7,8,9,10,11,12,3,14,11,12]
+---- correct output:
+9
+---- user output:
+12
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:41:35) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	if z[i] == max(z):
+		m = i + 1
+	else:
+		m = m
+	z[i] = p[i] - f[i]
+	i = i + 1
+	print(z[i])
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:41:51) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	if z[i] == max(z):
+		m = i + 1
+	else:
+		m = m
+	z[i] = p[i] - f[i]
+	print(z)
+	i = i + 1
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 13:45:41) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	if z[i] == max(z):
+		m = i + 1
+	else:
+		m = m
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(m)
+-- EXECUTION TIME:
+0.41329
+-- TEST CASE 1:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,110,12]
+[5,6,7,8,9,10,11,12,13,1,15,12]
+---- correct output:
+10
+---- user output:
+1
+-- TEST CASE 2:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,11,12]
+[5,6,7,8,9,10,11,12,3,14,11,12]
+---- correct output:
+9
+---- user output:
+presenca: faltosos: 1
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:46:10) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	if z[i] == max(z):
+		m = i + 1
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 13:46:12) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	if z[i] == max(z):
+		m = i + 1
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(m)
+-- EXECUTION TIME:
+0.478353
+-- TEST CASE 1:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,110,12]
+[5,6,7,8,9,10,11,12,13,1,15,12]
+---- correct output:
+10
+---- user output:
+1
+-- TEST CASE 2:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,11,12]
+[5,6,7,8,9,10,11,12,3,14,11,12]
+---- correct output:
+9
+---- user output:
+1
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:46:47) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	if z[i] == max(z):
+		m = i + 1
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(z[m])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:47:37) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	if z[i] == max(z):
+		m = i + 1
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(z[m])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:47:48) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	if z[i] == max(p):
+		m = i + 1
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(z[m])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 13:47:51) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < size(p):
+	if z[i] == max(p):
+		m = i + 1
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(z[m])
+-- EXECUTION TIME:
+0.553866
+-- TEST CASE 1:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,110,12]
+[5,6,7,8,9,10,11,12,13,1,15,12]
+---- correct output:
+10
+---- user output:
+5
+-- TEST CASE 2:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,11,12]
+[5,6,7,8,9,10,11,12,3,14,11,12]
+---- correct output:
+9
+---- user output:
+5
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:48:19) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < 12:
+	if z[i] == max():
+		m = i + 1
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(z[m])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 13:48:22) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < 12:
+	if z[i] == max():
+		m = i + 1
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(z[m])
+-- EXECUTION TIME:
+0.397334
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1756/2390/main.py", line 11, in <module>
+    if z[i] == max():
+TypeError: max expected 1 arguments, got 0
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 13:48:29) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < 12:
+	if z[i] == max(z):
+		m = i + 1
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(z[m])
+-- EXECUTION TIME:
+0.627139
+-- TEST CASE 1:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,110,12]
+[5,6,7,8,9,10,11,12,13,1,15,12]
+---- correct output:
+10
+---- user output:
+14
+-- TEST CASE 2:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,11,12]
+[5,6,7,8,9,10,11,12,3,14,11,12]
+---- correct output:
+9
+---- user output:
+14
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:50:18) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < 12:
+	if z[i] != max(z):
+		m = m
+	else:
+		m = i + 1
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(z[m])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 13:50:20) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < 12:
+	if z[i] != max(z):
+		m = m
+	else:
+		m = i + 1
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(z[m])
+-- EXECUTION TIME:
+0.494308
+-- TEST CASE 1:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,110,12]
+[5,6,7,8,9,10,11,12,13,1,15,12]
+---- correct output:
+10
+---- user output:
+14
+-- TEST CASE 2:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,11,12]
+[5,6,7,8,9,10,11,12,3,14,11,12]
+---- correct output:
+9
+---- user output:
+14
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 13:51:59) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < 12:
+	if z[i] != max(z):
+		m = m
+	else:
+		m = i + 1
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(z)
+-- EXECUTION TIME:
+0.41678
+-- TEST CASE 1:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,110,12]
+[5,6,7,8,9,10,11,12,13,1,15,12]
+---- correct output:
+10
+---- user output:
+[ 5 14 23 32 41 50 59 68 77 86 95  0]
+-- TEST CASE 2:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,11,12]
+[5,6,7,8,9,10,11,12,3,14,11,12]
+---- correct output:
+9
+---- user output:
+[ 5 14 23 32 41 50 59 68 77 86  0  0]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 13:52:07) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < 12:
+	if z[i] != max(z):
+		m = m
+	else:
+		m = i + 1
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(m)
+-- EXECUTION TIME:
+0.433138
+-- TEST CASE 1:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,110,12]
+[5,6,7,8,9,10,11,12,13,1,15,12]
+---- correct output:
+10
+---- user output:
+1
+-- TEST CASE 2:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,11,12]
+[5,6,7,8,9,10,11,12,3,14,11,12]
+---- correct output:
+9
+---- user output:
+1
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:53:42) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < 12:
+	if z[i] != max(z):
+		m = m
+	else:
+		m = i + 1
+	z[i] = p[i] - f[i]
+	i = i + 1
+	print(i)
+	print(z[i])
+	print(p[i])
+	print(f[i])
+	print(m)
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:54:47) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < 12:
+	if z[i] != max(z):
+		m = m
+	else:
+		m = i + 1
+	z[i] = p[i] - f[i]
+	print(i)
+	print(p[i])
+	print(f[i])
+	print(m)
+	i = i + 1
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 13:55:29) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < 12:
+	if z[i] != max(z):
+		m = m
+	else:
+		m = i + 1
+	z[i] = p[i] - f[i]
+	print(i)
+	print(z[i])
+	print(p[i])
+	print(f[i])
+	print(m)
+	i = i + 1
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 13:57:13) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < 12:
+	if z[i] != max(z):
+		m = m
+	else:
+		m = i + 1
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(m)
+-- EXECUTION TIME:
+0.585535
+-- TEST CASE 1:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,110,12]
+[5,6,7,8,9,10,11,12,13,1,15,12]
+---- correct output:
+10
+---- user output:
+1
+-- TEST CASE 2:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,11,12]
+[5,6,7,8,9,10,11,12,3,14,11,12]
+---- correct output:
+9
+---- user output:
+1
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 13:57:28) 
+-- CODE:
+from numpy import*
+
+p = array(eval(input("presenca: ")))
+f = array(eval(input("faltosos: ")))
+
+z = zeros(12, dtype=int)
+i = 0
+m = 0
+
+while i < 12:
+	if z[i] != max(z):
+		m = m
+	else:
+		m = i + 1
+	z[i] = p[i] - f[i]
+	i = i + 1
+print(m)
+-- EXECUTION TIME:
+0.389334
+-- TEST CASE 1:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,110,12]
+[5,6,7,8,9,10,11,12,13,1,15,12]
+---- correct output:
+10
+---- user output:
+1
+-- TEST CASE 2:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,11,12]
+[5,6,7,8,9,10,11,12,3,14,11,12]
+---- correct output:
+9
+---- user output:
+1
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

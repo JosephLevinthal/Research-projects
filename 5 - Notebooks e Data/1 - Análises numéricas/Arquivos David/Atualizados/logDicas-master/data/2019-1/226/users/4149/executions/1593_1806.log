@@ -1,0 +1,175 @@
+== TEST (2019-03-28 10:58:54) 
+-- CODE:
+from math import *
+np=float(input("digite o numero de pessoas na sala: "))
+
+result= (np=1-(factorial(365)/(365-np) * 1/365**np))
+
+-- ERROR:
+File "XXXX", line 4
+    result= (np=1-(factorial(365)/(365-np) * 1/365**np))
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:59:16) 
+-- CODE:
+from math import *
+np=float(input("digite o numero de pessoas na sala: "))
+
+result= (np=1-(factorial(365)/(365-np) * 1/365**2))
+
+-- ERROR:
+File "XXXX", line 4
+    result= (np=1-(factorial(365)/(365-np) * 1/365**2))
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 10:59:36) 
+-- CODE:
+from math import *
+np=float(input("digite o numero de pessoas na sala: "))
+
+result= (1-(factorial(365)/(365-np) * 1/365**np))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    result= (1-(factorial(365)/(365-np) * 1/365**np))
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:00:39) 
+-- CODE:
+from math import *
+np=float(input("digite o numero de pessoas na sala: "))
+
+result= (1-(factorial(365)/(365-np) * 1/365**np))
+print(result,2)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    result= (1-(factorial(365)/(365-np) * 1/365**np))
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:02:05) 
+-- CODE:
+from math import *
+np=int(input("digite o numero de pessoas na sala: "))
+
+result= (1-(factorial(365)/factorial(365-np) * 1/365**np))
+print(result,2)
+
+-- OUTPUT:
+0.16702478883806438 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:03:09) 
+-- CODE:
+from math import *
+np=int(input("digite o numero de pessoas na sala: "))
+
+result= (1-(factorial(365)/factorial(365-np) * 1/365**np))
+
+result2= result*100
+print(round(result,2))
+
+-- OUTPUT:
+0.17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-28 11:03:28) 
+-- CODE:
+from math import *
+np=int(input("digite o numero de pessoas na sala: "))
+
+result= (1-(factorial(365)/factorial(365-np) * 1/365**np))
+
+result2= result*10000
+print(round(result,2))
+
+-- EXECUTION TIME:
+0.167305
+-- TEST CASE 1:
+---- input:
+12
+---- correct output:
+16.7
+---- user output:
+0.17
+-- TEST CASE 2:
+---- input:
+24
+---- correct output:
+53.83
+---- user output:
+0.54
+-- TEST CASE 3:
+---- input:
+99
+---- correct output:
+100.0
+---- user output:
+1.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:03:31) 
+-- CODE:
+from math import *
+np=int(input("digite o numero de pessoas na sala: "))
+
+result= (1-(factorial(365)/factorial(365-np) * 1/365**np))
+
+result2= result*10000
+print(round(result,2))
+
+-- OUTPUT:
+0.17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:03:52) 
+-- CODE:
+from math import *
+np=int(input("digite o numero de pessoas na sala: "))
+
+result= (1-(factorial(365)/factorial(365-np) * 1/365**np))
+
+result2= result*100
+print(round(result2,2))
+
+-- OUTPUT:
+16.7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-28 11:04:00) 
+-- CODE:
+from math import *
+np=int(input("digite o numero de pessoas na sala: "))
+
+result= (1-(factorial(365)/factorial(365-np) * 1/365**np))
+
+result2= result*100
+print(round(result2,2))
+
+-- EXECUTION TIME:
+0.21759
+-- TEST CASE 1:
+---- input:
+12
+---- correct output:
+16.7
+---- user output:
+16.7
+-- TEST CASE 2:
+---- input:
+24
+---- correct output:
+53.83
+---- user output:
+53.83
+-- TEST CASE 3:
+---- input:
+99
+---- correct output:
+100.0
+---- user output:
+100.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

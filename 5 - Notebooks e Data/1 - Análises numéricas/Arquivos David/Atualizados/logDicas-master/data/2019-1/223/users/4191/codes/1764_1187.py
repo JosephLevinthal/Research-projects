@@ -1,0 +1,10 @@
+vetor=input("string: ")
+
+print(vetor[0])
+print(vetor[-1])
+print(len(vetor))
+s=vetor.lower()
+print(s)
+r=vetor.upper()
+print(r)
+print(vetor*500)

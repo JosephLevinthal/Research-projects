@@ -1,0 +1,80 @@
+== TEST (2019-05-11 12:33:33) 
+-- CODE:
+peixes = int(input("Quantidade inicial de tambaquis no tanque: "))
+percent = float(input("Percentual de crescimento anual da quantidade de tambaquis: "))
+venda = int(input("Quantidade de tambaquis retirados todos os anos para venda: "))
+
+anos = 0
+cap = 12000
+
+while(peixes < cap and peixes > 0):
+	peixes = peixes - venda + (peixes * percent / 100)
+	anos = anos + 1
+	
+if(peixes <= 0):
+	print("EXTINCAO")
+elif(peixes >= cap):
+	print("LIMITE")
+	
+print(anos)
+-- OUTPUT:
+EXTINCAO
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-11 12:34:02) 
+-- CODE:
+peixes = int(input("Quantidade inicial de tambaquis no tanque: "))
+percent = float(input("Percentual de crescimento anual da quantidade de tambaquis: "))
+venda = int(input("Quantidade de tambaquis retirados todos os anos para venda: "))
+
+anos = 0
+cap = 12000
+
+while(peixes < cap and peixes > 0):
+	peixes = peixes - venda + (peixes * percent / 100)
+	anos = anos + 1
+	
+if(peixes <= 0):
+	print("EXTINCAO")
+elif(peixes >= cap):
+	print("LIMITE")
+	
+print(anos)
+-- EXECUTION TIME:
+0.127586
+-- TEST CASE 1:
+---- input:
+1234
+6
+135
+---- correct output:
+EXTINCAO
+14
+---- user output:
+EXTINCAO
+14
+-- TEST CASE 2:
+---- input:
+579
+37
+26
+---- correct output:
+LIMITE
+11
+---- user output:
+LIMITE
+11
+-- TEST CASE 3:
+---- input:
+6789
+45
+2345
+---- correct output:
+LIMITE
+4
+---- user output:
+LIMITE
+4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

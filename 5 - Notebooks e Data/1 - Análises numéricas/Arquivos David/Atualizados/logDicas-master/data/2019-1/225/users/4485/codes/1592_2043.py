@@ -1,0 +1,6 @@
+p= float(input("PRIMEIRA"))
+e= float(input("segunda"))
+d= float(input("terceira"))
+r= float(input("quarta"))
+o= (1*p+2*e+d*3+r*4)/(1+2+3+4)
+print(round(o,2))

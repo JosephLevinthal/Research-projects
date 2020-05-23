@@ -1,0 +1,780 @@
+== TEST (2019-06-11 10:24:44) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if v[i] % 2 != 0:
+		i = i + 1
+		g2 = zeros(i, dtype=int)
+	for i in v:
+		g2[i] = g2[i] + 1
+print(g2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 20:49:23) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if i % 2 != 0:
+		i = i + 1
+
+g2 = zeros(i, dtype=int)
+
+a = 0
+b = 0
+
+for i2 in v:
+	if i2 % 2 != 0:
+		g2[a] = v[b]
+		a = a + 1
+	b = b + 1
+print(g2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 21:00:43) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if i % 2 != 0:
+		i = i + 1
+
+g2 = zeros(i, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if r % 2 != 0:
+		g2[a] = v[b]
+		a = a + 1
+	b = b + 1
+print(g2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 21:01:52) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if i % 2 != 0:
+		i = i + 1
+
+g2 = zeros(i, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if r % 2 != 0:
+		g2[a] = v[b]
+		a = a + 1
+	b = b + 1
+print(g2)
+-- EXECUTION TIME:
+1.17886
+-- TEST CASE 1:
+---- input:
+[75247561,76546316,75713658,97135671,70356874]
+---- correct output:
+[75247561 97135671]
+---- user output:
+[75247561 97135671        0 ...        0        0        0]
+-- TEST CASE 2:
+---- input:
+[13017594,57417542,85024758,12475981,75942785,91875987,29584192,85794217]
+---- correct output:
+[12475981 75942785 91875987 85794217]
+---- user output:
+[12475981 75942785 91875987 ...        0        0        0]
+-- TEST CASE 3:
+---- input:
+[31874903,74902746,23742046]
+---- correct output:
+[31874903]
+---- user output:
+[31874903        0        0 ...        0        0        0]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 21:03:09) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if i % 2 != 0:
+		i = i + 1
+
+g2 = zeros(i, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if r % 2 != 0:
+		g2[a] = v[b]
+		a = a + 1
+	b = b + 1
+print(g2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 21:07:57) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if i % 2 != 0:
+		i = i + 1
+
+g2 = zeros(i, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if r % 2 != 0:
+		g2[a] = v[b]
+		a = a + 1
+		b = b + 1
+print(g2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 21:11:32) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if (i % 2) != 0:
+		i = i + 1
+
+g2 = zeros(i, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if (r % 2) != 0:
+		g2[a] = v[b]
+		a = a + 1
+	b = b + 1
+print(g2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 21:12:28) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if (i % 2) != 0:
+		i = i + 1
+
+g2 = zeros(2, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if (r % 2) != 0:
+		g2[a] = v[b]
+		a = a + 1
+	b = b + 1
+print(g2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 21:12:56) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if (i % 2) != 0:
+		i = i + 1
+
+g2 = zeros(2, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if (r % 2) != 0:
+		g2[a] = v[b]
+		a = a + 1
+	b = b + 1
+print(g2)
+-- EXECUTION TIME:
+0.9753
+-- TEST CASE 1:
+---- input:
+[75247561,76546316,75713658,97135671,70356874]
+---- correct output:
+[75247561 97135671]
+---- user output:
+[75247561 97135671]
+-- TEST CASE 2:
+---- input:
+[13017594,57417542,85024758,12475981,75942785,91875987,29584192,85794217]
+---- correct output:
+[12475981 75942785 91875987 85794217]
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+[31874903,74902746,23742046]
+---- correct output:
+[31874903]
+---- user output:
+[31874903        0]
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 21:14:31) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if (i % 2) != 0:
+		i+ = 1
+
+g2 = zeros(2, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if (r % 2) != 0:
+		g2[a] = v[b]
+		a+ = 1
+	b+ = 1
+print(g2)
+-- ERROR:
+File "XXXX", line 9
+    i+ = 1
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 21:14:55) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if (i % 2) != 0:
+		i+ = 1
+
+g2 = zeros(i, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if (r % 2) != 0:
+		g2[a] = v[b]
+		a+ = 1
+	b+ = 1
+print(g2)
+-- ERROR:
+File "XXXX", line 9
+    i+ = 1
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 21:15:38) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if (i % 2) != 0:
+		i = i + 1
+
+g2 = zeros(i, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if (r % 2) != 0:
+		g2[a] = v[b]
+		a+ = 1
+	b+ = 1
+print(g2)
+-- ERROR:
+File "XXXX", line 19
+    a+ = 1
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 21:16:04) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if (i % 2) != 0:
+		i = i + 1
+
+g2 = zeros(i, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if (r % 2) != 0:
+		g2[a] = v[b]
+		a = a + 1
+	b = b + 1
+print(g2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 21:17:58) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if (i % 2) != 0:
+		i = i + 1
+
+g2 = zeros(i, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if (r % 2) != 0:
+		g2[r] = v[r]
+
+print(g2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 21:21:10) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if (i % 2) != 0:
+		i = i + 1
+
+g2 = zeros(i, dtype=int)
+
+a = 0
+b = 0
+
+for r in range(size(v)):
+	if (r % 2) != 0:
+		g2[r] = v[r]
+
+print(g2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 21:22:29) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if (i % 2) != 0:
+		i = i + 1
+
+g2 = zeros(i, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if (r % 2) != 0:
+		g2[a] = v[b]
+		a = a + 1
+	b = b + 1
+print(g2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 21:22:42) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if (i % 2) != 0:
+		i = i + 1
+
+g2 = zeros(i, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if (r % 2) != 0:
+		g2[a] = v[b]
+		a = a + 1
+	b = b + 1
+print(g2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 21:23:30) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if (i % 2) != 0:
+		i = i + 1
+
+g2 = zeros(i, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if (r % 2) != 0:
+		g2[a] = v[b]
+		a = a + 1
+	b = b + 1
+print(g2)
+-- EXECUTION TIME:
+1.04843
+-- TEST CASE 1:
+---- input:
+[75247561,76546316,75713658,97135671,70356874]
+---- correct output:
+[75247561 97135671]
+---- user output:
+[75247561 97135671        0 ...        0        0        0]
+-- TEST CASE 2:
+---- input:
+[13017594,57417542,85024758,12475981,75942785,91875987,29584192,85794217]
+---- correct output:
+[12475981 75942785 91875987 85794217]
+---- user output:
+[12475981 75942785 91875987 ...        0        0        0]
+-- TEST CASE 3:
+---- input:
+[31874903,74902746,23742046]
+---- correct output:
+[31874903]
+---- user output:
+[31874903        0        0 ...        0        0        0]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 21:24:54) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if (i % 2) != 0:
+		i = i + 1
+g = zeros(i, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if (r % 2) != 0:
+		g[a] = v[b]
+		a = a + 1
+	b = b + 1
+print(g2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 21:26:08) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if (i % 2) != 0:
+		i = i + 1
+g = zeros(i, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if (r % 2) != 0:
+		g[a] = v[b]
+		a = a + 1
+	b = b + 1
+print(g)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 21:26:50) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+i = 0
+
+for i in v:
+	if (i % 2) != 0:
+		i = i + 1
+g = zeros(i, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if (r % 2) != 0:
+		g[a] = v[b]
+		a = a + 1
+	b = b + 1
+print(g)
+-- EXECUTION TIME:
+1.07775
+-- TEST CASE 1:
+---- input:
+[75247561,76546316,75713658,97135671,70356874]
+---- correct output:
+[75247561 97135671]
+---- user output:
+[75247561 97135671        0 ...        0        0        0]
+-- TEST CASE 2:
+---- input:
+[13017594,57417542,85024758,12475981,75942785,91875987,29584192,85794217]
+---- correct output:
+[12475981 75942785 91875987 85794217]
+---- user output:
+[12475981 75942785 91875987 ...        0        0        0]
+-- TEST CASE 3:
+---- input:
+[31874903,74902746,23742046]
+---- correct output:
+[31874903]
+---- user output:
+[31874903        0        0 ...        0        0        0]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 21:27:27) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+x = 0
+
+for i in v:
+	if (i % 2) != 0:
+		x = x + 1
+g = zeros(i, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if (r % 2) != 0:
+		g[a] = v[b]
+		a = a + 1
+	b = b + 1
+print(g)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 21:28:19) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+x = 0
+
+for i in v:
+	if (i % 2) != 0:
+		x = x + 1
+g = zeros(x, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if (r % 2) != 0:
+		g[a] = v[b]
+		a = a + 1
+	b = b + 1
+print(g)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 21:28:54) 
+-- CODE:
+from numpy import *
+
+v = array(eval(input("dgt: ")))
+
+x = 0
+
+for i in v:
+	if (i % 2) != 0:
+		x = x + 1
+g = zeros(x, dtype=int)
+
+a = 0
+b = 0
+
+for r in v:
+	if (r % 2) != 0:
+		g[a] = v[b]
+		a = a + 1
+	b = b + 1
+print(g)
+-- EXECUTION TIME:
+1.18999
+-- TEST CASE 1:
+---- input:
+[75247561,76546316,75713658,97135671,70356874]
+---- correct output:
+[75247561 97135671]
+---- user output:
+[75247561 97135671]
+-- TEST CASE 2:
+---- input:
+[13017594,57417542,85024758,12475981,75942785,91875987,29584192,85794217]
+---- correct output:
+[12475981 75942785 91875987 85794217]
+---- user output:
+[12475981 75942785 91875987 85794217]
+-- TEST CASE 3:
+---- input:
+[31874903,74902746,23742046]
+---- correct output:
+[31874903]
+---- user output:
+[31874903]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

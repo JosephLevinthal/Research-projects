@@ -1,0 +1,1058 @@
+== TEST (2019-06-09 18:28:23) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	print(n)
+-- OUTPUT:
+11
+11
+11
+11
+11
+11
+11
+11
+11
+11
+11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:28:48) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	print(i)
+-- OUTPUT:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:30:28) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*(n*2)
+	print(f)
+-- OUTPUT:
+**********************
+**********************
+**********************
+**********************
+**********************
+**********************
+**********************
+**********************
+**********************
+**********************
+**********************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:31:21) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*(n*2)-i
+	print(f)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    f = a*(n*2)-i
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:32:08) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*(n*2-i)
+	print(f)
+-- OUTPUT:
+**********************
+*********************
+********************
+*******************
+******************
+*****************
+****************
+***************
+**************
+*************
+************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:34:18) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*(n*2)
+	print(f)
+-- OUTPUT:
+**********************
+**********************
+**********************
+**********************
+**********************
+**********************
+**********************
+**********************
+**********************
+**********************
+**********************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:35:42) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*((n*2)-(2*i))+2*o
+	print(f)
+-- OUTPUT:
+**********************oo
+********************oo
+******************oo
+****************oo
+**************oo
+************oo
+**********oo
+********oo
+******oo
+****oo
+**oo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:37:22) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*((n*2)-(2*i))+2*o*2+((i*2)-(2*n))*a
+	print(f)
+-- OUTPUT:
+**********************oooo
+********************oooo
+******************oooo
+****************oooo
+**************oooo
+************oooo
+**********oooo
+********oooo
+******oooo
+****oooo
+**oooo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:38:36) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*((n*2)-(2*i))+o*((i*2)-(2*n))*a
+	print(f)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    f = a*((n*2)-(2*i))+o*((i*2)-(2*n))*a
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:38:53) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*((n*2)-(2*i))+o*((i*2)-(2*n))
+	print(f)
+-- OUTPUT:
+**********************
+********************
+******************
+****************
+**************
+************
+**********
+********
+******
+****
+**
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:39:18) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*((n*2)-(2*i))+o*(i*2)
+	print(f)
+-- OUTPUT:
+**********************
+********************oo
+******************oooo
+****************oooooo
+**************oooooooo
+************oooooooooo
+**********oooooooooooo
+********oooooooooooooo
+******oooooooooooooooo
+****oooooooooooooooooo
+**oooooooooooooooooooo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:41:06) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*((n*2)-(2*i))+(o*(i*2))+(n*2)*a
+	print(f)
+-- OUTPUT:
+********************************************
+********************oo**********************
+******************oooo**********************
+****************oooooo**********************
+**************oooooooo**********************
+************oooooooooo**********************
+**********oooooooooooo**********************
+********oooooooooooooo**********************
+******oooooooooooooooo**********************
+****oooooooooooooooooo**********************
+**oooooooooooooooooooo**********************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:41:35) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*((n*2)-(2*i))+(o*(i*2))+(i*2)*a
+	print(f)
+-- OUTPUT:
+**********************
+********************oo**
+******************oooo****
+****************oooooo******
+**************oooooooo********
+************oooooooooo**********
+**********oooooooooooo************
+********oooooooooooooo**************
+******oooooooooooooooo****************
+****oooooooooooooooooo******************
+**oooooooooooooooooooo********************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:42:32) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*((n*2)-(2*i))+(o*(i*2))+(n*2)*a
+	print(f)
+-- OUTPUT:
+********************************************
+********************oo**********************
+******************oooo**********************
+****************oooooo**********************
+**************oooooooo**********************
+************oooooooooo**********************
+**********oooooooooooo**********************
+********oooooooooooooo**********************
+******oooooooooooooooo**********************
+****oooooooooooooooooo**********************
+**oooooooooooooooooooo**********************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:43:57) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*((n*2)-(2*i))+(o*(i*2))-(i*2*(a))
+	print(f)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    f = a*((n*2)-(2*i))+(o*(i*2))-(i*2*(a))
+TypeError: unsupported operand type(s) for -: 'str' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:45:27) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*((n*2)-(2*i))+(o*(i*2))+a*(i*2)-(a*i)
+	print(f)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    f = a*((n*2)-(2*i))+(o*(i*2))+a*(i*2)-(a*i)
+TypeError: unsupported operand type(s) for -: 'str' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:46:41) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*((n*2)-(2*i))+(o*(i*2))+a*((i*2)-(n*i))
+	print(f)
+-- OUTPUT:
+**********************
+********************oo
+******************oooo
+****************oooooo
+**************oooooooo
+************oooooooooo
+**********oooooooooooo
+********oooooooooooooo
+******oooooooooooooooo
+****oooooooooooooooooo
+**oooooooooooooooooooo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:47:19) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*((n*2)-(2*i))+(o*(i*2))+a*((i*2)+(n*i))
+	print(f)
+-- OUTPUT:
+**********************
+********************oo*************
+******************oooo**************************
+****************oooooo***************************************
+**************oooooooo****************************************************
+************oooooooooo*****************************************************************
+**********oooooooooooo******************************************************************************
+********oooooooooooooo*******************************************************************************************
+******oooooooooooooooo********************************************************************************************************
+****oooooooooooooooooo*********************************************************************************************************************
+**oooooooooooooooooooo**********************************************************************************************************************************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:47:59) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*((n*2)-(2*i))+(o*(i*2))+a*((i*2)+(n*2))
+	print(f)
+-- OUTPUT:
+********************************************
+********************oo************************
+******************oooo**************************
+****************oooooo****************************
+**************oooooooo******************************
+************oooooooooo********************************
+**********oooooooooooo**********************************
+********oooooooooooooo************************************
+******oooooooooooooooo**************************************
+****oooooooooooooooooo****************************************
+**oooooooooooooooooooo******************************************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:48:30) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*((n*2)-(2*i))+(o*(i*2))+a*((i*2)-(n*2))
+	print(f)
+-- OUTPUT:
+**********************
+********************oo
+******************oooo
+****************oooooo
+**************oooooooo
+************oooooooooo
+**********oooooooooooo
+********oooooooooooooo
+******oooooooooooooooo
+****oooooooooooooooooo
+**oooooooooooooooooooo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:48:51) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*((n*2)-(2*i))+(o*(i*2))+a*((n*2)-(i*2))
+	print(f)
+-- OUTPUT:
+********************************************
+********************oo********************
+******************oooo******************
+****************oooooo****************
+**************oooooooo**************
+************oooooooooo************
+**********oooooooooooo**********
+********oooooooooooooo********
+******oooooooooooooooo******
+****oooooooooooooooooo****
+**oooooooooooooooooooo**
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:49:59) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*((n*2)-(2*i))+(o*(i*2))+a*((n*2)-(i*2))
+	print(f)
+-- OUTPUT:
+********************************************
+********************oo********************
+******************oooo******************
+****************oooooo****************
+**************oooooooo**************
+************oooooooooo************
+**********oooooooooooo**********
+********oooooooooooooo********
+******oooooooooooooooo******
+****oooooooooooooooooo****
+**oooooooooooooooooooo**
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:51:05) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	f = a*((n*2)-(2*i))+(o*(i*2))
+	#+a*((n*2)-(i*2))
+	print(f)
+-- OUTPUT:
+**********************
+********************oo
+******************oooo
+****************oooooo
+**************oooooooo
+************oooooooooo
+**********oooooooooooo
+********oooooooooooooo
+******oooooooooooooooo
+****oooooooooooooooooo
+**oooooooooooooooooooo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:52:29) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	p1 = a*((n*2)-(2*i))+(o*(i*2))
+	p2 = a*((n*2)-(i*2))
+	f = p1+p2
+	print(f)
+-- OUTPUT:
+********************************************
+********************oo********************
+******************oooo******************
+****************oooooo****************
+**************oooooooo**************
+************oooooooooo************
+**********oooooooooooo**********
+********oooooooooooooo********
+******oooooooooooooooo******
+****oooooooooooooooooo****
+**oooooooooooooooooooo**
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:53:06) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	p1 = a*((n*2)-(2*i))+(o*(i*2))
+	p2 = a*((n*2)-(i*2))
+	f = p1+p2
+	print(f)
+-- OUTPUT:
+********************************************
+********************oo********************
+******************oooo******************
+****************oooooo****************
+**************oooooooo**************
+************oooooooooo************
+**********oooooooooooo**********
+********oooooooooooooo********
+******oooooooooooooooo******
+****oooooooooooooooooo****
+**oooooooooooooooooooo**
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:55:14) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	#p1 = a*((n*2)-(2*i))+(o*(i*2))
+	p2 = (o*(i*2))+a*((n*2)-(i*2))
+	#f = p1+p2
+	print(p2)
+-- OUTPUT:
+**********************
+oo********************
+oooo******************
+oooooo****************
+oooooooo**************
+oooooooooo************
+oooooooooooo**********
+oooooooooooooo********
+oooooooooooooooo******
+oooooooooooooooooo****
+oooooooooooooooooooo**
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:56:24) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+
+for i in range(n):
+	p1 = a*((n*2)-(2*i))+(o*(i*2))
+	p2 = (o*(i*2))'*'*((n*2)-(i*2))
+	f = p1+p2
+	print(f)
+-- ERROR:
+File "XXXX", line 7
+    p2 = (o*(i*2))'*'*((n*2)-(i*2))
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:57:15) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+b = '*'
+
+for i in range(n):
+	p1 = a*((n*2)-(2*i))+(o*(i*2))
+	p2 = (o*(i*2))+'*'*((n*2)-(i*2))
+	f = p1+p2
+	print(f)
+-- OUTPUT:
+********************************************
+********************oooo********************
+******************oooooooo******************
+****************oooooooooooo****************
+**************oooooooooooooooo**************
+************oooooooooooooooooooo************
+**********oooooooooooooooooooooooo**********
+********oooooooooooooooooooooooooooo********
+******oooooooooooooooooooooooooooooooo******
+****oooooooooooooooooooooooooooooooooooo****
+**oooooooooooooooooooooooooooooooooooooooo**
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:58:23) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+b = '*'
+
+for i in range(n):
+	p1 = a*((n*2)-(2*i))+(o*(i*2))
+	#p2 = (o*(i*2))+'*'*((n*2)-(i*2))
+	#f = p1+p2
+	print(p1))
+-- ERROR:
+File "XXXX", line 10
+    print(p1))
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:58:34) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+b = '*'
+
+for i in range(n):
+	p1 = a*((n*2)-(2*i))+(o*(i*2))
+	#p2 = (o*(i*2))+'*'*((n*2)-(i*2))
+	#f = p1+p2
+	print(p1)
+-- OUTPUT:
+**********************
+********************oo
+******************oooo
+****************oooooo
+**************oooooooo
+************oooooooooo
+**********oooooooooooo
+********oooooooooooooo
+******oooooooooooooooo
+****oooooooooooooooooo
+**oooooooooooooooooooo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 18:59:17) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+b = '*'
+
+for i in range(n):
+	p1 = a*((n*2)-(i+1))+(o*(i*2))
+	#p2 = (o*(i*2))+'*'*((n*2)-(i*2))
+	#f = p1+p2
+	print(p1)
+-- OUTPUT:
+*********************
+********************oo
+*******************oooo
+******************oooooo
+*****************oooooooo
+****************oooooooooo
+***************oooooooooooo
+**************oooooooooooooo
+*************oooooooooooooooo
+************oooooooooooooooooo
+***********oooooooooooooooooooo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 19:00:32) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+b = '*'
+
+for i in range(n):
+	p1 = a*(n*2-(2*i))+(o*(i*2))
+	#p2 = (o*(i*2))+'*'*((n*2)-(i*2))
+	#f = p1+p2
+	print(p1)
+-- OUTPUT:
+**********************
+********************oo
+******************oooo
+****************oooooo
+**************oooooooo
+************oooooooooo
+**********oooooooooooo
+********oooooooooooooo
+******oooooooooooooooo
+****oooooooooooooooooo
+**oooooooooooooooooooo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 19:00:48) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+b = '*'
+
+for i in range(n):
+	p1 = a*(n-(2*i))+(o*(i*2))
+	#p2 = (o*(i*2))+'*'*((n*2)-(i*2))
+	#f = p1+p2
+	print(p1)
+-- OUTPUT:
+***********
+*********oo
+*******oooo
+*****oooooo
+***oooooooo
+*oooooooooo
+oooooooooooo
+oooooooooooooo
+oooooooooooooooo
+oooooooooooooooooo
+oooooooooooooooooooo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 19:01:27) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+b = '*'
+
+for i in range(n):
+	p1 = a*((n*2)-i)+(o*(i*2))
+	#p2 = (o*(i*2))+'*'*((n*2)-(i*2))
+	#f = p1+p2
+	print(p1)
+-- OUTPUT:
+**********************
+*********************oo
+********************oooo
+*******************oooooo
+******************oooooooo
+*****************oooooooooo
+****************oooooooooooo
+***************oooooooooooooo
+**************oooooooooooooooo
+*************oooooooooooooooooo
+************oooooooooooooooooooo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 19:02:37) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+b = '*'
+
+for i in range(n):
+	#p1 = a*((n*2)-i)+(o*(i*2))
+	p2 = (o*(i*2))+a*((n*2)+i)
+	#f = p1+p2
+	print(p2)
+-- OUTPUT:
+**********************
+oo***********************
+oooo************************
+oooooo*************************
+oooooooo**************************
+oooooooooo***************************
+oooooooooooo****************************
+oooooooooooooo*****************************
+oooooooooooooooo******************************
+oooooooooooooooooo*******************************
+oooooooooooooooooooo********************************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 19:03:04) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+b = '*'
+
+for i in range(n):
+	#p1 = a*((n*2)-i)+(o*(i*2))
+	p2 = (o*(i*2))+a*((n*2)-i)
+	#f = p1+p2
+	print(p2)
+-- OUTPUT:
+**********************
+oo*********************
+oooo********************
+oooooo*******************
+oooooooo******************
+oooooooooo*****************
+oooooooooooo****************
+oooooooooooooo***************
+oooooooooooooooo**************
+oooooooooooooooooo*************
+oooooooooooooooooooo************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 19:03:27) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+b = '*'
+
+for i in range(n):
+	p1 = a*((n*2)-i)+(o*(i*2))
+	p2 = (o*(i*2))+a*((n*2)-i)
+	f = p1+p2
+	print(f)
+-- OUTPUT:
+********************************************
+*********************oooo*********************
+********************oooooooo********************
+*******************oooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooooo*****************
+****************oooooooooooooooooooooooo****************
+***************oooooooooooooooooooooooooooo***************
+**************oooooooooooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooooooooooooooo************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 19:04:23) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+b = '*'
+
+for i in range(n):
+	f = a*((n*2)-i)+(o*(i*2))+a*((n*2)-i)
+	#f = p1+p2
+	print(f)
+-- OUTPUT:
+********************************************
+*********************oo*********************
+********************oooo********************
+*******************oooooo*******************
+******************oooooooo******************
+*****************oooooooooo*****************
+****************oooooooooooo****************
+***************oooooooooooooo***************
+**************oooooooooooooooo**************
+*************oooooooooooooooooo*************
+************oooooooooooooooooooo************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 19:05:13) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+b = '*'
+
+for i in range(n):
+	f = (a*((n*2)-i)+(o*(i*2)))+a*((n*2)-i)
+	#f = p1+p2
+	print(f)
+-- OUTPUT:
+********************************************
+*********************oo*********************
+********************oooo********************
+*******************oooooo*******************
+******************oooooooo******************
+*****************oooooooooo*****************
+****************oooooooooooo****************
+***************oooooooooooooo***************
+**************oooooooooooooooo**************
+*************oooooooooooooooooo*************
+************oooooooooooooooooooo************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 19:06:09) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+b = '*'
+
+for i in range(n):
+	f = (a*((n*2)-i)+(o*(i*2)))+a*((n-i)
+	#f = p1+p2
+	print(f)
+-- ERROR:
+File "XXXX", line 9
+    print(f)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 19:06:27) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+b = '*'
+
+for i in range(n):
+	f = (a*((n*2)-i)+(o*(i*2)))+a*(n-i)
+	#f = p1+p2
+	print(f)
+-- OUTPUT:
+*********************************
+*********************oo**********
+********************oooo*********
+*******************oooooo********
+******************oooooooo*******
+*****************oooooooooo******
+****************oooooooooooo*****
+***************oooooooooooooo****
+**************oooooooooooooooo***
+*************oooooooooooooooooo**
+************oooooooooooooooooooo*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 19:07:22) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+b = '*'
+
+for i in range(n):
+	f = a*(n-i)+(o*(i*2))+a*(n-i)
+	#f = p1+p2
+	print(f)
+-- OUTPUT:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-09 19:07:41) 
+-- CODE:
+n = int(input('N: '))
+a = '*'
+o = 'o'
+b = '*'
+
+for i in range(n):
+	f = a*(n-i)+(o*(i*2))+a*(n-i)
+	#f = p1+p2
+	print(f)
+-- EXECUTION TIME:
+0.889349
+-- TEST CASE 1:
+---- input:
+11
+---- correct output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+---- user output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+-- TEST CASE 2:
+---- input:
+19
+---- correct output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+---- user output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+-- TEST CASE 3:
+---- input:
+26
+---- correct output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo********
+*******oooooooooooooooooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooooooooooooooooo*
+---- user output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo**
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,2485 @@
+== TEST (2019-07-01 23:40:38) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat1 = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat2 = zeros(mat1, dtype=int)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 23:41:13) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+vet = shape(mat)[0]
+print(vet)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 23:41:52) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+vet = shape(mat)[0]
+vet1 = zeros(vet, dtype=int)
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 23:43:46) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+vet = shape(mat)[0]
+vet1 = zeros(vet, dtype=int)
+print(vet1)
+for i in range(vet1):
+	vet1[i] = mat[i]
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 23:44:17) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+vet = shape(mat)[0]
+vet1 = zeros(vet, dtype=int)
+print(vet1)
+for i in range(size(vet1)):
+	vet1[i] = mat[i]
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:28:32) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,2,3,4], [10,20,30,40], [100,200,300,400], [1000,2000,3000,4000]])
+mat = mat.T
+vetor = sorted(mat, reverse=true)
+print(vetor)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:28:58) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,2,3,4], [10,20,30,40], [100,200,300,400], [1000,2000,3000,4000]])
+mat = mat.T
+vetor = sorted(mat, reverse=True)
+print(vetor)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:51:25) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet = zeros(mat1, dtype=int)
+for i in range(vet):
+	for j in range(vet):
+		vet[i] = mat[i,j]
+print(vet)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:52:02) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet = zeros(mat1, dtype=int)
+for i in range(size(vet):
+	for j in range(size(vet)):
+		vet[i] = mat[i,j]
+print(vet)
+
+-- ERROR:
+File "XXXX", line 7
+    for i in range(size(vet):
+                            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:52:22) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet = zeros(mat1, dtype=int)
+for i in range(size(vet)):
+	for j in range(size(vet)):
+		vet[i] = mat[i,j]
+print(vet)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:53:42) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet = zeros(mat1, dtype=int)
+for i in range(size(vet)):
+	for j in range(size(vet)):
+		vet[i] = mat1[i,j]
+print(vet)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:53:49) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet = zeros(mat1, dtype=int)
+for i in range(size(vet)):
+	for j in range(size(vet)):
+		vet[i] = mat[i,j]
+print(vet)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:55:44) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[1]
+vet = zeros(mat1, dtype=int)
+for i in range(size(vet)):
+	for j in range(size(vet)):
+		vet[i] = mat[i,j]
+print(vet)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:55:52) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet = zeros(mat1, dtype=int)
+for i in range(size(vet)):
+	for j in range(size(vet)):
+		vet[i] = mat[i,j]
+print(vet)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:58:26) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet)):
+	for j in range(size(vet)):
+		vet1[i] = mat[i,:]
+print(vet)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:58:40) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,:]
+print(vet)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:59:08) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,j]
+print(vet)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:59:21) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,j]
+print(vet)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:59:32) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,j]
+print(vet1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:00:50) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[:,j]
+print(vet1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:01:02) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,j]
+print(vet1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:02:22) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,j]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet2[i] = mat[i,j]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet3[i] = mat[i,j]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet4[i] = mat[i,j]
+
+print(vet1)
+print(vet2)
+print(vet3)
+print(vet4)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:03:02) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,j]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet2[i] = mat[i,j + 1]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet3[i] = mat[i,j + 2]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet4[i] = mat[i,j + 3]
+
+print(vet1)
+print(vet2)
+print(vet3)
+print(vet4)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:03:27) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,0]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet2[i] = mat[i,1]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet3[i] = mat[i,2]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet4[i] = mat[i,3]
+
+print(vet1)
+print(vet2)
+print(vet3)
+print(vet4)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:04:06) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,3]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet2[i] = mat[i,2]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet3[i] = mat[i,1]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet4[i] = mat[i,0]
+
+print(vet1)
+print(vet2)
+print(vet3)
+print(vet4)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 08:04:13) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,3]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet2[i] = mat[i,2]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet3[i] = mat[i,1]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet4[i] = mat[i,0]
+
+print(vet1)
+print(vet2)
+print(vet3)
+print(vet4)
+
+-- EXECUTION TIME:
+1.09674
+-- TEST CASE 1:
+---- input:
+[[1,1,1,1],[2,2,2,2],[3,3,3,3],[4,4,4,4]]
+---- correct output:
+[[4 4 4 4]
+[3 3 3 3]
+[2 2 2 2]
+[1 1 1 1]]
+---- user output:
+[   4   40  400 4000]
+[   3   30  300 3000]
+[   2   20  200 2000]
+[   1   10  100 1000]
+-- TEST CASE 2:
+---- input:
+[[4,1,1,3],[3,2,2,3],[2,3,3,3],[1,4,4,3]]
+---- correct output:
+[[4 4 4 3]
+[3 3 3 3]
+[2 2 2 3]
+[1 1 1 3]]
+---- user output:
+[   4   40  400 4000]
+[   3   30  300 3000]
+[   2   20  200 2000]
+[   1   10  100 1000]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:05:02) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,3]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet2[i] = mat[i,2]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet3[i] = mat[i,1]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet4[i] = mat[i,0]
+matf = zeros((4,4), dtype=int)
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:05:59) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,3]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet2[i] = mat[i,2]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet3[i] = mat[i,1]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet4[i] = mat[i,0]
+matf = zeros((4,4), dtype=int)
+print(matf)
+matf[0, :] = vet1
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:07:09) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,3]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet2[i] = mat[i,2]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet3[i] = mat[i,1]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet4[i] = mat[i,0]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 08:07:21) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,3]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet2[i] = mat[i,2]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet3[i] = mat[i,1]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet4[i] = mat[i,0]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- EXECUTION TIME:
+1.1834
+-- TEST CASE 1:
+---- input:
+[[1,1,1,1],[2,2,2,2],[3,3,3,3],[4,4,4,4]]
+---- correct output:
+[[4 4 4 4]
+[3 3 3 3]
+[2 2 2 2]
+[1 1 1 1]]
+---- user output:
+[[   4   40  400 4000]
+ [   3   30  300 3000]
+ [   2   20  200 2000]
+ [   1   10  100 1000]]
+-- TEST CASE 2:
+---- input:
+[[4,1,1,3],[3,2,2,3],[2,3,3,3],[1,4,4,3]]
+---- correct output:
+[[4 4 4 3]
+[3 3 3 3]
+[2 2 2 3]
+[1 1 1 3]]
+---- user output:
+[[   4   40  400 4000]
+ [   3   30  300 3000]
+ [   2   20  200 2000]
+ [   1   10  100 1000]]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 08:07:31) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array([[1,10,100,1000], [2,20,200,2000], [3,30,300,3000], [4,40,400,4000]])
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,3]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet2[i] = mat[i,2]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet3[i] = mat[i,1]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet4[i] = mat[i,0]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- EXECUTION TIME:
+0.930348
+-- TEST CASE 1:
+---- input:
+[[1,1,1,1],[2,2,2,2],[3,3,3,3],[4,4,4,4]]
+---- correct output:
+[[4 4 4 4]
+[3 3 3 3]
+[2 2 2 2]
+[1 1 1 1]]
+---- user output:
+[[   4   40  400 4000]
+ [   3   30  300 3000]
+ [   2   20  200 2000]
+ [   1   10  100 1000]]
+-- TEST CASE 2:
+---- input:
+[[4,1,1,3],[3,2,2,3],[2,3,3,3],[1,4,4,3]]
+---- correct output:
+[[4 4 4 3]
+[3 3 3 3]
+[2 2 2 3]
+[1 1 1 3]]
+---- user output:
+[[   4   40  400 4000]
+ [   3   30  300 3000]
+ [   2   20  200 2000]
+ [   1   10  100 1000]]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:08:01) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,3]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet2[i] = mat[i,2]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet3[i] = mat[i,1]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet4[i] = mat[i,0]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 08:08:22) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,3]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet2[i] = mat[i,2]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet3[i] = mat[i,1]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet4[i] = mat[i,0]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- EXECUTION TIME:
+1.1086
+-- TEST CASE 1:
+---- input:
+[[1,1,1,1],[2,2,2,2],[3,3,3,3],[4,4,4,4]]
+---- correct output:
+[[4 4 4 4]
+[3 3 3 3]
+[2 2 2 2]
+[1 1 1 1]]
+---- user output:
+[[4 4 4 4]
+ [3 3 3 3]
+ [2 2 2 2]
+ [1 1 1 1]]
+-- TEST CASE 2:
+---- input:
+[[4,1,1,3],[3,2,2,3],[2,3,3,3],[1,4,4,3]]
+---- correct output:
+[[4 4 4 3]
+[3 3 3 3]
+[2 2 2 3]
+[1 1 1 3]]
+---- user output:
+[[1 4 4 3]
+ [2 3 3 3]
+ [3 2 2 3]
+ [4 1 1 3]]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:10:08) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,3]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet2[i] = mat[i,2]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet3[i] = mat[i,1]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet4[i] = mat[i,0]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:10:59) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,3]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet2[i] = mat[i,2]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet3[i] = mat[i,1]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet4[i] = mat[i,0]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 08:11:16) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,3]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet2[i] = mat[i,2]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet3[i] = mat[i,1]
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet4[i] = mat[i,0]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- EXECUTION TIME:
+0.97421
+-- TEST CASE 1:
+---- input:
+[[1,1,1,1],[2,2,2,2],[3,3,3,3],[4,4,4,4]]
+---- correct output:
+[[4 4 4 4]
+[3 3 3 3]
+[2 2 2 2]
+[1 1 1 1]]
+---- user output:
+[[4 4 4 4]
+ [3 3 3 3]
+ [2 2 2 2]
+ [1 1 1 1]]
+-- TEST CASE 2:
+---- input:
+[[4,1,1,3],[3,2,2,3],[2,3,3,3],[1,4,4,3]]
+---- correct output:
+[[4 4 4 3]
+[3 3 3 3]
+[2 2 2 3]
+[1 1 1 3]]
+---- user output:
+[[1 4 4 3]
+ [2 3 3 3]
+ [3 2 2 3]
+ [4 1 1 3]]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:11:59) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,3]
+		vet2[i] = mat[i,2]
+		vet3[i] = mat[i,1]
+		vet4[i] = mat[i,0]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:12:10) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,3]
+		vet2[i] = mat[i,2]
+		vet3[i] = mat[i,1]
+		vet4[i] = mat[i,0]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 08:12:28) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,3]
+		vet2[i] = mat[i,2]
+		vet3[i] = mat[i,1]
+		vet4[i] = mat[i,0]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- EXECUTION TIME:
+1.04417
+-- TEST CASE 1:
+---- input:
+[[1,1,1,1],[2,2,2,2],[3,3,3,3],[4,4,4,4]]
+---- correct output:
+[[4 4 4 4]
+[3 3 3 3]
+[2 2 2 2]
+[1 1 1 1]]
+---- user output:
+[[4 4 4 4]
+ [3 3 3 3]
+ [2 2 2 2]
+ [1 1 1 1]]
+-- TEST CASE 2:
+---- input:
+[[4,1,1,3],[3,2,2,3],[2,3,3,3],[1,4,4,3]]
+---- correct output:
+[[4 4 4 3]
+[3 3 3 3]
+[2 2 2 3]
+[1 1 1 3]]
+---- user output:
+[[1 4 4 3]
+ [2 3 3 3]
+ [3 2 2 3]
+ [4 1 1 3]]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:13:49) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,(j - 1)]
+		vet2[i] = mat[i,(j - 2)]
+		vet3[i] = mat[i,(j - 3)]
+		vet4[i] = mat[i,(j - 4)]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 08:14:13) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for i in range(size(vet1)):
+	for j in range(size(vet1)):
+		vet1[i] = mat[i,(j - 1)]
+		vet2[i] = mat[i,(j - 2)]
+		vet3[i] = mat[i,(j - 3)]
+		vet4[i] = mat[i,(j - 4)]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- EXECUTION TIME:
+0.928091
+-- TEST CASE 1:
+---- input:
+[[1,1,1,1],[2,2,2,2],[3,3,3,3],[4,4,4,4]]
+---- correct output:
+[[4 4 4 4]
+[3 3 3 3]
+[2 2 2 2]
+[1 1 1 1]]
+---- user output:
+[[3 3 3 3]
+ [2 2 2 2]
+ [1 1 1 1]
+ [4 4 4 4]]
+-- TEST CASE 2:
+---- input:
+[[4,1,1,3],[3,2,2,3],[2,3,3,3],[1,4,4,3]]
+---- correct output:
+[[4 4 4 3]
+[3 3 3 3]
+[2 2 2 3]
+[1 1 1 3]]
+---- user output:
+[[2 3 3 3]
+ [3 2 2 3]
+ [4 1 1 3]
+ [1 4 4 3]]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:15:08) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(size(vet1)):
+	for i in range(size(vet1)):
+		vet1[i] = mat[i,(j - 1)]
+		vet2[i] = mat[i,(j - 2)]
+		vet3[i] = mat[i,(j - 3)]
+		vet4[i] = mat[i,(j - 4)]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 08:15:25) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(size(vet1)):
+	for i in range(size(vet1)):
+		vet1[i] = mat[i,(j - 1)]
+		vet2[i] = mat[i,(j - 2)]
+		vet3[i] = mat[i,(j - 3)]
+		vet4[i] = mat[i,(j - 4)]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- EXECUTION TIME:
+1.20838
+-- TEST CASE 1:
+---- input:
+[[1,1,1,1],[2,2,2,2],[3,3,3,3],[4,4,4,4]]
+---- correct output:
+[[4 4 4 4]
+[3 3 3 3]
+[2 2 2 2]
+[1 1 1 1]]
+---- user output:
+[[3 3 3 3]
+ [2 2 2 2]
+ [1 1 1 1]
+ [4 4 4 4]]
+-- TEST CASE 2:
+---- input:
+[[4,1,1,3],[3,2,2,3],[2,3,3,3],[1,4,4,3]]
+---- correct output:
+[[4 4 4 3]
+[3 3 3 3]
+[2 2 2 3]
+[1 1 1 3]]
+---- user output:
+[[2 3 3 3]
+ [3 2 2 3]
+ [4 1 1 3]
+ [1 4 4 3]]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:17:00) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(size(vet1)):
+	for i in range(size(vet1)):
+		vet1[i] = mat[i,(j - 1)]
+		vet2[i] = mat[i,(j - 2)]
+		vet3[i] = mat[i,(j - 3)]
+		vet4[i] = mat[i,(j - 4)]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:17:58) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(size(vet1)):
+	for i in range(size(vet1)):
+		vet1[i] = mat[i,3]
+		vet2[i] = mat[i,2]
+		vet3[i] = mat[i,1]
+		vet4[i] = mat[i,0]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 08:18:07) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(size(vet1)):
+	for i in range(size(vet1)):
+		vet1[i] = mat[i,3]
+		vet2[i] = mat[i,2]
+		vet3[i] = mat[i,1]
+		vet4[i] = mat[i,0]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- EXECUTION TIME:
+0.745198
+-- TEST CASE 1:
+---- input:
+[[1,1,1,1],[2,2,2,2],[3,3,3,3],[4,4,4,4]]
+---- correct output:
+[[4 4 4 4]
+[3 3 3 3]
+[2 2 2 2]
+[1 1 1 1]]
+---- user output:
+[[4 4 4 4]
+ [3 3 3 3]
+ [2 2 2 2]
+ [1 1 1 1]]
+-- TEST CASE 2:
+---- input:
+[[4,1,1,3],[3,2,2,3],[2,3,3,3],[1,4,4,3]]
+---- correct output:
+[[4 4 4 3]
+[3 3 3 3]
+[2 2 2 3]
+[1 1 1 3]]
+---- user output:
+[[1 4 4 3]
+ [2 3 3 3]
+ [3 2 2 3]
+ [4 1 1 3]]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:18:15) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(size(vet1)):
+	for i in range(size(vet1)):
+		vet1[i] = mat[i,3]
+		vet2[i] = mat[i,2]
+		vet3[i] = mat[i,1]
+		vet4[i] = mat[i,0]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:19:46) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,3]
+		vet2[i] = mat[i,2]
+		vet3[i] = mat[i,1]
+		vet4[i] = mat[i,0]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 08:19:55) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,3]
+		vet2[i] = mat[i,2]
+		vet3[i] = mat[i,1]
+		vet4[i] = mat[i,0]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- EXECUTION TIME:
+1.06605
+-- TEST CASE 1:
+---- input:
+[[1,1,1,1],[2,2,2,2],[3,3,3,3],[4,4,4,4]]
+---- correct output:
+[[4 4 4 4]
+[3 3 3 3]
+[2 2 2 2]
+[1 1 1 1]]
+---- user output:
+[[4 4 4 4]
+ [3 3 3 3]
+ [2 2 2 2]
+ [1 1 1 1]]
+-- TEST CASE 2:
+---- input:
+[[4,1,1,3],[3,2,2,3],[2,3,3,3],[1,4,4,3]]
+---- correct output:
+[[4 4 4 3]
+[3 3 3 3]
+[2 2 2 3]
+[1 1 1 3]]
+---- user output:
+[[1 4 4 3]
+ [2 3 3 3]
+ [3 2 2 3]
+ [4 1 1 3]]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:22:12) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,j]
+		vet2[i] = mat[i,(j + 1)]
+		vet3[i] = mat[i,(j + 2)]
+		vet4[i] = mat[i,(j + 3)]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:23:02) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:24:47) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+vet1 = sorted(vet1, reverse=True)
+vet2 = sorted(vet2, reverse=True)
+vet3 = sorted(vet3, reverse=True)
+vet4 = sorted(vet4, reverse=True)
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:24:55) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+vet1 = sorted(vet1, reverse=True)
+vet2 = sorted(vet2, reverse=True)
+vet3 = sorted(vet3, reverse=True)
+vet4 = sorted(vet4, reverse=True)
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:25:15) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+vet1 = sorted(vet1, reverse=True)
+vet2 = sorted(vet2, reverse=True)
+vet3 = sorted(vet3, reverse=True)
+vet4 = sorted(vet4, reverse=True)
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:25:24) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+vet1 = sorted(vet1, reverse=True)
+vet2 = sorted(vet2, reverse=True)
+vet3 = sorted(vet3, reverse=True)
+vet4 = sorted(vet4, reverse=True)
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:26:20) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+vet1 = sorted(vet1, reverse=True)
+vet2 = sorted(vet2, reverse=True)
+vet3 = sorted(vet3, reverse=True)
+vet4 = sorted(vet4, reverse=True)
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:26:52) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = inv(mat)
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+vet1 = sorted(vet1, reverse=True)
+vet2 = sorted(vet2, reverse=True)
+vet3 = sorted(vet3, reverse=True)
+vet4 = sorted(vet4, reverse=True)
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:27:04) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+vet1 = sorted(vet1, reverse=True)
+vet2 = sorted(vet2, reverse=True)
+vet3 = sorted(vet3, reverse=True)
+vet4 = sorted(vet4, reverse=True)
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:28:07) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[3,0]
+		vet2[i] = mat[2,1]
+		vet3[i] = mat[1,2]
+		vet4[i] = mat[0,3]
+vet1 = sorted(vet1, reverse=True)
+vet2 = sorted(vet2, reverse=True)
+vet3 = sorted(vet3, reverse=True)
+vet4 = sorted(vet4, reverse=True)
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:28:31) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+vet1 = sorted(vet1, reverse=True)
+vet2 = sorted(vet2, reverse=True)
+vet3 = sorted(vet3, reverse=True)
+vet4 = sorted(vet4, reverse=True)
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:29:25) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+vet1 = sorted(vet1, reverse=True)
+vet2 = sorted(vet2, reverse=True)
+vet3 = sorted(vet3, reverse=True)
+vet4 = sorted(vet4, reverse=True)
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf.T)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:34:46) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+vet1 = sorted(vet1, reverse=True)
+vet2 = sorted(vet2, reverse=True)
+vet3 = sorted(vet3, reverse=True)
+vet4 = sorted(vet4, reverse=True)
+matf = zeros((4,4), dtype=int).T
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:36:32) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+vet1 = sorted(vet1, reverse=True)
+vet2 = sorted(vet2, reverse=True)
+vet3 = sorted(vet3, reverse=True)
+vet4 = sorted(vet4, reverse=True)
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf.T)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:37:06) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+vet1 = sorted(vet1, reverse=True)
+vet2 = sorted(vet2, reverse=True)
+vet3 = sorted(vet3, reverse=True)
+vet4 = sorted(vet4, reverse=True)
+matf = zeros((4,4), dtype=int)
+matf[:, 0] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf.T)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:37:26) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+vet1 = sorted(vet1, reverse=True)
+vet2 = sorted(vet2, reverse=True)
+vet3 = sorted(vet3, reverse=True)
+vet4 = sorted(vet4, reverse=True)
+matf = zeros((4,4), dtype=int)
+matf[:, 0] = vet1
+matf[:, 1] = vet2
+matf[:, 2] = vet3
+matf[:, 3] = vet4
+print(matf.T)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:37:47) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+vet1 = sorted(vet1, reverse=True)
+vet2 = sorted(vet2, reverse=True)
+vet3 = sorted(vet3, reverse=True)
+vet4 = sorted(vet4, reverse=True)
+matf = zeros((4,4), dtype=int)
+matf[:, 0] = vet4
+matf[:, 1] = vet3
+matf[:, 2] = vet2
+matf[:, 3] = vet1
+print(matf.T)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:38:06) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+vet1 = sorted(vet1, reverse=True)
+vet2 = sorted(vet2, reverse=True)
+vet3 = sorted(vet3, reverse=True)
+vet4 = sorted(vet4, reverse=True)
+matf = zeros((4,4), dtype=int)
+matf[:, 0] = vet4
+matf[:, 1] = vet3
+matf[:, 2] = vet2
+matf[:, 3] = vet1
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:40:06) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+vet1 = sorted(vet1, reverse=True)
+vet2 = sorted(vet2, reverse=True)
+vet3 = sorted(vet3, reverse=True)
+vet4 = sorted(vet4, reverse=True)
+matf = zeros((4,4), dtype=int)
+matf[:, 0] = vet4
+matf[:, 1] = vet3
+matf[:, 2] = vet2
+matf[:, 3] = vet1
+print(matf.T)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:40:24) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+vet1 = sorted(vet1, reverse=True)
+vet2 = sorted(vet2, reverse=True)
+vet3 = sorted(vet3, reverse=True)
+vet4 = sorted(vet4, reverse=True)
+matf = zeros((4,4), dtype=int)
+matf[:, 0] = vet4
+matf[:, 1] = vet3
+matf[:, 2] = vet2
+matf[:, 3] = vet1
+print(inv(matf))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:41:24) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+vet1 = sorted(vet1, reverse=True)
+vet2 = sorted(vet2, reverse=True)
+vet3 = sorted(vet3, reverse=True)
+vet4 = sorted(vet4, reverse=True)
+matf = zeros((4,4), dtype=int)
+matf[:, 0] = vet4
+matf[:, 1] = vet3
+matf[:, 2] = vet2
+#matf[:, 3] = vet1
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:42:18) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+matf = zeros((4,4), dtype=int)
+matf[:, 0] = vet4
+matf[:, 1] = vet3
+matf[:, 2] = vet2
+matf[:, 3] = vet1
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:42:37) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+matf = zeros((4,4), dtype=int)
+matf[:, 0] = vet4
+matf[:, 1] = vet3
+matf[:, 2] = vet2
+matf[:, 3] = vet1
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:43:07) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+matf = zeros((4,4), dtype=int)
+matf[:, 0] = vet1
+matf[:, 1] = vet2
+matf[:, 2] = vet3
+matf[:, 3] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:43:20) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+matf = zeros((4,4), dtype=int)
+matf[:, 0] = vet1
+matf[:, 1] = vet2
+matf[:, 2] = vet3
+matf[:, 3] = vet4
+print(matf.T)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:44:15) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:44:26) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat = array(eval(input()))
+mat = mat.T
+mat1 = shape(mat)[0]
+vet1 = zeros(mat1, dtype=int)
+vet2 = zeros(mat1, dtype=int)
+vet3 = zeros(mat1, dtype=int)
+vet4 = zeros(mat1, dtype=int)
+for j in range(shape(mat)[0]):
+	for i in range(shape(mat)[0]):
+		vet1[i] = mat[i,0]
+		vet2[i] = mat[i,1]
+		vet3[i] = mat[i,2]
+		vet4[i] = mat[i,3]
+matf = zeros((4,4), dtype=int)
+matf[0, :] = vet1
+matf[1, :] = vet2
+matf[2, :] = vet3
+matf[3, :] = vet4
+print(matf.T)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:47:02) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+x = x.T
+mat1 = zeros(shape(x)[0],dtype = int)
+mat2 = zeros(shape(x)[0],dtype = int)
+mat3 = zeros(shape(x)[0],dtype = int)
+mat4 = zeros(shape(x)[0],dtype = int)
+
+mat1 = sorted(x[0,:], reverse=True)
+mat2 = sorted(x[1,:], reverse=True)
+mat3 = sorted(x[2,:], reverse=True)
+mat4 = sorted(x[3,:], reverse=True)
+
+
+y = zeros((4,4), dtype=int)
+
+y[:,0] = mat1
+y[:,1] = mat2
+y[:,2] = mat3
+y[:,3] = mat4
+
+
+print(y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 08:47:20) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+x = x.T
+mat1 = zeros(shape(x)[0],dtype = int)
+mat2 = zeros(shape(x)[0],dtype = int)
+mat3 = zeros(shape(x)[0],dtype = int)
+mat4 = zeros(shape(x)[0],dtype = int)
+
+mat1 = sorted(x[0,:], reverse=True)
+mat2 = sorted(x[1,:], reverse=True)
+mat3 = sorted(x[2,:], reverse=True)
+mat4 = sorted(x[3,:], reverse=True)
+
+
+y = zeros((4,4), dtype=int)
+
+y[:,0] = mat1
+y[:,1] = mat2
+y[:,2] = mat3
+y[:,3] = mat4
+
+
+print(y)
+-- EXECUTION TIME:
+1.07995
+-- TEST CASE 1:
+---- input:
+[[1,1,1,1],[2,2,2,2],[3,3,3,3],[4,4,4,4]]
+---- correct output:
+[[4 4 4 4]
+[3 3 3 3]
+[2 2 2 2]
+[1 1 1 1]]
+---- user output:
+[[4 4 4 4]
+ [3 3 3 3]
+ [2 2 2 2]
+ [1 1 1 1]]
+-- TEST CASE 2:
+---- input:
+[[4,1,1,3],[3,2,2,3],[2,3,3,3],[1,4,4,3]]
+---- correct output:
+[[4 4 4 3]
+[3 3 3 3]
+[2 2 2 3]
+[1 1 1 3]]
+---- user output:
+[[4 4 4 3]
+ [3 3 3 3]
+ [2 2 2 3]
+ [1 1 1 3]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

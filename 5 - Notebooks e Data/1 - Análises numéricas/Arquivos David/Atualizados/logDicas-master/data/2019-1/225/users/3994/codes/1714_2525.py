@@ -1,0 +1,1 @@
+n=int(input("Digite o numero inteiro"))

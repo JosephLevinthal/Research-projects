@@ -1,0 +1,247 @@
+== TEST (2019-05-01 23:13:43) 
+-- CODE:
+altura_total = float(input())
+nivel = float(input())
+raio = float(input())
+
+if(altura_total >0 and nivel >0 and raio >0 and altura_total>nivel and altura>2*raio):
+	print("*")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    if(altura_total >0 and nivel >0 and raio >0 and altura_total>nivel and altura>2*raio):
+NameError: name 'altura' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 23:14:08) 
+-- CODE:
+altura_total = float(input())
+nivel = float(input())
+raio = float(input())
+
+if(altura_total >0 and nivel >0 and raio >0 and altura_total>nivel and altura_total>2*raio):
+	print("*")
+-- OUTPUT:
+*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 23:32:05) 
+-- CODE:
+altura_total = float(input())
+nivel = float(input())
+raio = float(input())
+
+if(altura_total >0 and nivel >0 and raio >0 and altura_total>nivel and altura_total>2*raio):
+	f_cilindro = (3.14)*(raio**2)*altura_total
+	f_esfera = (4/3)*(3.14)*(raio**3)
+	f_calota = ((3.14/3)*(altura_total**2))*(3*raio - altura_total)
+	print("*")
+-- OUTPUT:
+*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 23:35:54) 
+-- CODE:
+from math import *
+altura_total = float(input())
+nivel = float(input())
+raio = float(input())
+
+if(altura_total >0 and nivel >0 and raio >0 and altura_total>nivel and altura_total>2*raio):
+	f_cilindro = (pi)*(raio**2)*altura_total
+	f_calota = pi/3 * altura_total**2 *(3*raio - altura_total)
+	f_esfera = (4/3)*(pi)*(raio**3) - f_calota
+	print("calota: {}".format(f_calota))
+-- OUTPUT:
+calota: -588.3532833740919
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 23:36:39) 
+-- CODE:
+from math import *
+altura_total = float(input())
+nivel = float(input())
+raio = float(input())
+
+if(altura_total >0 and nivel >0 and raio >0 and altura_total>nivel and altura_total>2*raio):
+	f_cilindro = (pi)*(raio**2)*altura_total
+	f_calota = ((pi/3) * (altura_total**2)) *(3*raio - altura_total)
+	f_esfera = (4/3)*(pi)*(raio**3) - f_calota
+	print("calota: {}".format(f_calota))
+-- OUTPUT:
+calota: -588.3532833740919
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 23:37:12) 
+-- CODE:
+from math import *
+altura_total = float(input())
+nivel = float(input())
+raio = float(input())
+
+if(altura_total >0 and nivel >0 and raio >0 and altura_total>nivel and altura_total>2*raio):
+	f_cilindro = (pi)*(raio**2)*altura_total
+	f_calota = ((pi/3) * (altura_total**2)) *(3*raio - altura_total)
+	f_esfera = (4/3)*(pi)*(raio**3) - f_calota
+	print("calota: {}".format(f_calota))
+	print("esfera: {}".format(f_esfera))
+-- OUTPUT:
+calota: -588.3532833740919
+esfera: 639.3182937957279
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 23:40:31) 
+-- CODE:
+from math import *
+x = float(input())
+nivel = float(input())
+raio = float(input())
+
+if(altura_total >0 and nivel >0 and raio >0 and altura_total>nivel and altura_total>2*raio):
+	calota = pi/3 * x**2 * (3*raio - x)
+	print(round(calota,3))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    if(altura_total >0 and nivel >0 and raio >0 and altura_total>nivel and altura_total>2*raio):
+NameError: name 'altura_total' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 23:40:59) 
+-- CODE:
+from math import *
+altura_total = float(input())
+nivel = float(input())
+raio = float(input())
+
+if(altura_total >0 and nivel >0 and raio >0 and altura_total>nivel and altura_total>2*raio):
+	calota = pi/3 * altura_total**2 * (3*raio - altura_total)
+	print(round(calota,3))
+-- OUTPUT:
+-588.353
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 23:42:21) 
+-- CODE:
+from math import *
+altura_total = float(input())
+nivel = float(input())
+raio = float(input())
+
+if(altura_total >0 and nivel >0 and raio >0 and altura_total>nivel and altura_total>2*raio):
+	calota = pi/3 * altura_total**2 * (3*raio - altura_total)
+	volume = 4/3 * pi * raio 
+	print(round(volume,3))
+-- OUTPUT:
+9.634
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 23:42:34) 
+-- CODE:
+from math import *
+altura_total = float(input())
+nivel = float(input())
+raio = float(input())
+
+if(altura_total >0 and nivel >0 and raio >0 and altura_total>nivel and altura_total>2*raio):
+	calota = pi/3 * altura_total**2 * (3*raio - altura_total)
+	volume = 4/3 * pi * raio**3
+	print(round(volume,3))
+-- OUTPUT:
+50.965
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 23:43:15) 
+-- CODE:
+from math import *
+altura_total = float(input())
+nivel = float(input())
+raio = float(input())
+
+if(altura_total >0 and nivel >0 and raio >0 and altura_total>nivel and altura_total>2*raio):
+	calota = pi/3 * altura_total**2 * (3*raio - altura_total)
+	volume = 4/3 * pi * raio**3
+	print(round(volume,3)*1000)
+-- OUTPUT:
+50965.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 23:43:37) 
+-- CODE:
+from math import *
+altura_total = float(input())
+nivel = float(input())
+raio = float(input())
+
+if(altura_total >0 and nivel >0 and raio >0 and altura_total>nivel and altura_total>2*raio):
+	calota = pi/3 * altura_total**2 * (3*raio - altura_total)
+	volume = 4/3 * pi * raio**3
+	print(round(volume,3)-calota*1000)
+-- OUTPUT:
+588404.2483740919
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 23:43:56) 
+-- CODE:
+from math import *
+altura_total = float(input())
+nivel = float(input())
+raio = float(input())
+
+if(altura_total >0 and nivel >0 and raio >0 and altura_total>nivel and altura_total>2*raio):
+	calota = pi/3 * altura_total**2 * (3*raio - altura_total)
+	volume = 4/3 * pi * raio**3 - calota
+	print(round(volume,3)*1000)
+-- OUTPUT:
+639318.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 23:47:16) 
+-- CODE:
+from math import *
+altura_total = float(input())
+nivel = float(input())
+raio = float(input())
+
+if(altura_total >0 and nivel >0 and raio >0 and altura_total>nivel and altura_total>2*raio):
+	calota = pi/3 * altura_total**2 * (3*raio - altura_total) *1000
+	volume = 4/3 * pi * raio**3 *1000 - calota
+	print(round(volume,3))
+-- OUTPUT:
+639318.294
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 23:53:16) 
+-- CODE:
+from math import *
+altura_total = float(input())
+nivel = float(input())
+raio = float(input())
+
+if(altura_total >0 and nivel >0 and raio >0 and altura_total>nivel and altura_total>2*raio):
+	calota = pi/3 * altura_total**2 * (3*raio - altura_total) *1000
+	volume = 4/3 * pi * raio**3 *1000 - calota
+	a = (pi*r**2) * altura_total
+	print(round(a,3))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    a = (pi*r**2) * altura_total
+NameError: name 'r' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 23:53:33) 
+-- CODE:
+from math import *
+altura_total = float(input())
+nivel = float(input())
+raio = float(input())
+
+if(altura_total >0 and nivel >0 and raio >0 and altura_total>nivel and altura_total>2*raio):
+	calota = pi/3 * altura_total**2 * (3*raio - altura_total) *1000
+	volume = 4/3 * pi * raio**3 *1000 - calota
+	a = (pi*raio**2) * altura_total
+	print(round(a,3))
+-- OUTPUT:
+187.795
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 23:53:57) 
+-- CODE:
+from math import *
+altura_total = float(input())
+nivel = float(input())
+raio = float(input())
+
+if(altura_total >0 and nivel >0 and raio >0 and altura_total>nivel and altura_total>2*raio):
+	calota = pi/3 * altura_total**2 * (3*raio - altura_total) *1000
+	volume = 4/3 * pi * raio**3 *1000 - calota
+	a = (pi*raio**2) * altura_total - calota
+	print(round(a,3))
+-- OUTPUT:
+588541.078
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

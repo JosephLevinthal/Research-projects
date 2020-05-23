@@ -1,0 +1,779 @@
+== TEST (2019-06-25 15:41:47) 
+-- CODE:
+
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+
+# Vetor de constantes (informado no enunciado)
+compras = array(input([23.6, 52.6, 27.7]))
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot( , )
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[0] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- ERROR:
+File "XXXX", line 13
+    preco = dot( , )
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 15:42:29) 
+-- CODE:
+
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+
+# Vetor de constantes (informado no enunciado)
+compras = array(input([23.6, 52.6, 27.7]))
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot( compras.T)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[0] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 15:42:45) 
+-- CODE:
+
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+
+# Vetor de constantes (informado no enunciado)
+compras = array(input([23.6, 52.6, 27.7]))
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot( compras.T)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[0] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 15:46:17) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+
+# Vetor de constantes (informado no enunciado)
+compras = array(input([23.6, 52.6, 27.7]))
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(compras), compras.T)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[0] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 15:46:26) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+
+# Vetor de constantes (informado no enunciado)
+compras = array(input([23.6, 52.6, 27.7]))
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(compras), compras.T)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[1] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- EXECUTION TIME:
+1.21982
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/2601/main.py", line 5, in <module>
+    frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+  File "<string>", line 1, in <module>
+NameError: name 'nada' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 15:47:27) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+
+# Vetor de constantes (informado no enunciado)
+compras = array(input([23.6, 52.6, 27.7]))
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(frutas),compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[1] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- EXECUTION TIME:
+1.29107
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/2601/main.py", line 5, in <module>
+    frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+  File "<string>", line 1, in <module>
+NameError: name 'nada' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 15:47:29) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+
+# Vetor de constantes (informado no enunciado)
+compras = array(input([23.6, 52.6, 27.7]))
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(frutas),compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[1] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- EXECUTION TIME:
+1.55018
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/2601/main.py", line 5, in <module>
+    frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+  File "<string>", line 1, in <module>
+NameError: name 'nada' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 15:47:31) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+
+# Vetor de constantes (informado no enunciado)
+compras = array(input([23.6, 52.6, 27.7]))
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(frutas),compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[1] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- EXECUTION TIME:
+2.98556
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/2601/main.py", line 5, in <module>
+    frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+  File "<string>", line 1, in <module>
+NameError: name 'nada' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 15:47:32) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+
+# Vetor de constantes (informado no enunciado)
+compras = array(input([23.6, 52.6, 27.7]))
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(frutas),compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[1] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- EXECUTION TIME:
+3.26299
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/2601/main.py", line 5, in <module>
+    frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+  File "<string>", line 1, in <module>
+NameError: name 'nada' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 15:47:32) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+
+# Vetor de constantes (informado no enunciado)
+compras = array(input([23.6, 52.6, 27.7]))
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(frutas),compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[1] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- EXECUTION TIME:
+3.69281
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/2601/main.py", line 5, in <module>
+    frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+  File "<string>", line 1, in <module>
+NameError: name 'nada' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 15:47:32) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+
+# Vetor de constantes (informado no enunciado)
+compras = array(input([23.6, 52.6, 27.7]))
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(frutas),compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[1] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- EXECUTION TIME:
+2.97129
+-- ERROR:
+sh: 1: cannot open /home/codebench/codes/1834/2601/cbtemp.txt: No such file
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 15:47:35) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+
+# Vetor de constantes (informado no enunciado)
+compras = array(input([23.6, 52.6, 27.7]))
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(frutas),compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[1] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- EXECUTION TIME:
+1.13516
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/2601/main.py", line 5, in <module>
+    frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+  File "<string>", line 1, in <module>
+NameError: name 'nada' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 15:49:01) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+
+# Vetor de constantes (informado no enunciado)
+compras = array(input([23.6, 52.6, 27.7]))
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(frutas),compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[1] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 15:49:04) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+
+# Vetor de constantes (informado no enunciado)
+compras = array(input([23.6, 52.6, 27.7]))
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(frutas),compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[1] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- EXECUTION TIME:
+1.18614
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/2601/main.py", line 5, in <module>
+    frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+  File "<string>", line 1, in <module>
+NameError: name 'nada' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 15:50:09) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+
+# Vetor de constantes (informado no enunciado)
+compras = array(input([23.6, 52.6, 27.7]))
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(frutas),compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[1] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 15:50:50) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+
+# Vetor de constantes (informado no enunciado)
+compras = array([23.6, 52.6, 27.7])
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(frutas),compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[1] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- EXECUTION TIME:
+1.13701
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/2601/main.py", line 5, in <module>
+    frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+  File "<string>", line 1, in <module>
+NameError: name 'nada' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 15:50:52) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array(eval(input([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])))
+
+# Vetor de constantes (informado no enunciado)
+compras = array([23.6, 52.6, 27.7])
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(frutas),compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[1] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 15:51:28) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])
+
+# Vetor de constantes (informado no enunciado)
+compras = array([23.6, 52.6, 27.7])
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(frutas),compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[1] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 15:51:38) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])
+
+# Vetor de constantes (informado no enunciado)
+compras = array([23.6, 52.6, 27.7])
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(frutas),compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[1] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- EXECUTION TIME:
+1.1286
+-- TEST CASE 1:
+---- input:
+nada
+---- correct output:
+abacate:  2.9
+banana:  0.5
+caqui:  8.9
+caqui
+
+---- user output:
+abacate:  2.9
+banana:  0.5
+caqui:  8.9
+caqui
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 13:22:00) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])
+
+# Vetor de constantes (informado no enunciado)
+compras = array([23.6, 52.6, 27.7])
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = solve((frutas),compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[1] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- EXECUTION TIME:
+1.28951
+-- TEST CASE 1:
+---- input:
+nada
+---- correct output:
+abacate:  2.9
+banana:  0.5
+caqui:  8.9
+caqui
+
+---- user output:
+abacate:  2.9
+banana:  0.5
+caqui:  8.9
+caqui
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 13:23:34) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+# Matriz do sistema linear (informado no enunciado)
+frutas = array([[ 3, 12, 1 ], [12, 0, 2], [ 0, 2 , 3 ]])
+
+# Vetor de constantes (informado no enunciado)
+compras = array([23.6, 52.6, 27.7])
+compras = compras.T
+
+# Resolucao do sistema de equacoes lineares
+preco = solve((frutas),compras)
+
+# Imprime o preco de cada fruta
+print("abacate: ", round(preco[0], 1))
+print("banana: ", round(preco[1], 1))
+print("caqui: ", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == max(preco):
+    print("abacate")
+elif preco[1] == max(preco):
+    print("banana")
+else:
+    print("caqui")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

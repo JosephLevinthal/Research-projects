@@ -1,0 +1,142 @@
+== TEST (2019-06-22 17:51:09) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+mat=array(eval(input()))
+a=zeros(7,dtyp=int)
+for i in range(7):
+	a[i]=sum(mat[,i:])
+for j in range(7):
+	if(sum(mat[,i:])==max(a)):
+		print(j+1)
+-- ERROR:
+File "XXXX", line 6
+    a[i]=sum(mat[,i:])
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 17:54:49) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+mat=array(eval(input()))
+a=zeros(7,dtyp=int)
+for i in range(7):
+	a[i]=sum(mat[0:,i])
+for j in range(7):
+	if(sum(mat[,j:])==max(a)):
+		print(j+1)
+-- ERROR:
+File "XXXX", line 8
+    if(sum(mat[,j:])==max(a)):
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 17:55:14) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+mat=array(eval(input()))
+a=zeros(7,dtyp=int)
+for i in range(7):
+	a[i]=sum(mat[0:,i])
+for j in range(7):
+	if(sum(mat[0:,j])==max(a)):
+		print(j+1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-22 17:55:22) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+mat=array(eval(input()))
+a=zeros(7,dtyp=int)
+for i in range(7):
+	a[i]=sum(mat[0:,i])
+for j in range(7):
+	if(sum(mat[0:,j])==max(a)):
+		print(j+1)
+-- EXECUTION TIME:
+0.968821
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1836/1276/main.py", line 4, in <module>
+    a=zeros(7,dtyp=int)
+TypeError: 'dtyp' is an invalid keyword argument for this function
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 17:55:26) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+mat=array(eval(input()))
+a=zeros(7,dtyp=int)
+for i in range(7):
+	a[i]=sum(mat[0:,i])
+for j in range(7):
+	if(sum(mat[0:,j])==max(a)):
+		print(j+1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 17:57:06) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+mat=array(eval(input()))
+a=zeros(7,dtyp=int)
+for i in range(7):
+	a[i]=sum(mat[0:,i])
+for j in range(7):
+	if(sum(mat[0:,j])==max(a)):
+		print(j+1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-22 17:59:10) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+mat=array(eval(input()))
+a=zeros(7,dtype=int)
+for i in range(7):
+	a[i]=sum(mat[0:,i])
+for j in range(7):
+	if(sum(mat[0:,j])==max(a)):
+		print(j+1)
+-- EXECUTION TIME:
+0.77899
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+7
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,7 @@
+d = int(input("domuts:"))
+o = float((2 / 12) * d)
+l = float((150 / 12) * d)
+f = float((120 / 12) * d)
+print(o)
+print(l)
+print(f)

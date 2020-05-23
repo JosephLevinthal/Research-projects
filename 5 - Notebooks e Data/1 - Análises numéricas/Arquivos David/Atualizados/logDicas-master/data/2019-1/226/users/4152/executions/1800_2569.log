@@ -1,0 +1,57 @@
+== TEST (2019-06-11 11:57:16) 
+-- CODE:
+from numpy import *
+x = array(eval(input("Vetor: ")))
+n = size(x)
+m = sum(x)/size(x)
+aux = 0
+for i in range(size(x)):
+	aux = aux + (x[i] - m) ** 2
+d = (aux / (n - 1)) ** (1/2)
+print(round(d, 3))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 11:57:35) 
+-- CODE:
+from numpy import *
+x = array(eval(input("Vetor: ")))
+n = size(x)
+m = sum(x)/size(x)
+aux = 0
+for i in range(size(x)):
+	aux = aux + (x[i] - m) ** 2
+d = (aux / (n - 1)) ** (1/2)
+print(round(d, 3))
+
+-- EXECUTION TIME:
+1.21553
+-- TEST CASE 1:
+---- input:
+[-4,250,-1,30,12]
+---- correct output:
+108.498
+---- user output:
+108.498
+-- TEST CASE 2:
+---- input:
+[12.5,25.2,50.39,47.3,0.9]
+---- correct output:
+21.526
+---- user output:
+21.526
+-- TEST CASE 3:
+---- input:
+[1.5,1.9,1.2,1.3,1.4,1.1,1.75]
+
+---- correct output:
+0.29
+---- user output:
+0.29
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

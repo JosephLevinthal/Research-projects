@@ -1,0 +1,308 @@
+== TEST (2019-04-14 22:56:16) 
+-- CODE:
+opcao input("Escolha a escala: C- Celsius | F- Fahrenheit: ")
+temperatura ("Informe a temperatura: ")
+
+c = (5 / 9) * (temperatura - 32)
+
+print (c)
+-- ERROR:
+File "XXXX", line 1
+    opcao input()
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 22:57:05) 
+-- CODE:
+opcao input("Escolha a escala: C- Celsius | F- Fahrenheit: ")
+temperatura float(input("Informe a temperatura: "))
+
+c = (5 / 9) * (temperatura - 32)
+
+print (c)
+-- ERROR:
+File "XXXX", line 1
+    opcao input()
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 22:57:27) 
+-- CODE:
+opcao = input("Escolha a escala: C- Celsius | F- Fahrenheit: ")
+temperatura = float(input("Informe a temperatura: "))
+
+c = (5 / 9) * (temperatura - 32)
+
+print (c)
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:10:48) 
+-- CODE:
+opcao = input("Escolha a escala: C- Celsius | F- Fahrenheit: ")
+temperatura = float(input("Informe a temperatura: "))
+
+if opcao == "C":
+	c = (5 / 9) * (temperatura - 32)
+	print (round(c,2))
+else:
+	f = ((9 * temperatura) / 5) + 32
+	print (roud(f,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 23:11:11) 
+-- CODE:
+opcao = input("Escolha a escala: C- Celsius | F- Fahrenheit: ")
+temperatura = float(input("Informe a temperatura: "))
+
+if opcao == "C":
+	c = (5 / 9) * (temperatura - 32)
+	print (round(c,2))
+else:
+	f = ((9 * temperatura) / 5) + 32
+	print (roud(f,2))
+-- EXECUTION TIME:
+0.251255
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:12:44) 
+-- CODE:
+opcao = input("Escolha a escala: C- Celsius | F- Fahrenheit: ")
+temperatura = float(input("Informe a temperatura: "))
+
+if opcao == "C":
+	c = (5 / 9) * (temperatura - 32)
+	print (round(c,2))
+else:
+	f = ((9 * temperatura) / 5) + 32
+	print (roud(f,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:13:10) 
+-- CODE:
+opcao = input("Escolha a escala: C- Celsius | F- Fahrenheit: ")
+temperatura = float(input("Informe a temperatura: "))
+
+if opcao == "C":
+	c = (5 / 9) * (temperatura - 32)
+	print (round(c,2))
+else:
+	f = ((9 * temperatura) / 5) + 32
+	print (round(f,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:14:22) 
+-- CODE:
+opcao = input("Escolha a escala: C- Celsius | F- Fahrenheit: ")
+temperatura = float(input("Informe a temperatura: "))
+
+if opcao == "C":
+	c = 5 / 9 * temperatura - 32
+	print (round(c,2))
+else:
+	f = 9 * temperatura / 5 + 32
+	print (round(f,2))
+-- OUTPUT:
+145.78
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 23:14:43) 
+-- CODE:
+opcao = input("Escolha a escala: C- Celsius | F- Fahrenheit: ")
+temperatura = float(input("Informe a temperatura: "))
+
+if opcao == "C":
+	c = 5 / 9 * temperatura - 32
+	print (round(c,2))
+else:
+	f = 9 * temperatura / 5 + 32
+	print (round(f,2))
+-- EXECUTION TIME:
+0.178654
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+145.78
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+608.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-32.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:17:17) 
+-- CODE:
+#opcao = input("Escolha a escala: C- Celsius | F- Fahrenheit: ")
+#temperatura = float(input("Informe a temperatura: "))
+
+#if opcao == "C":
+#	c = 5 / 9 * (temperatura - 32)
+#	print (round(c,2))
+#else:
+#	f = 9 * (temperatura / 5) + 32
+#	print (round(f,2))
+	
+c = input("Digite a temperatua em Celsius: ")
+f = 9*c/5 + 32
+
+print (f)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 12, in <module>
+    f = 9*c/5 + 32
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:17:59) 
+-- CODE:
+#opcao = input("Escolha a escala: C- Celsius | F- Fahrenheit: ")
+#temperatura = float(input("Informe a temperatura: "))
+
+#if opcao == "C":
+#	c = 5 / 9 * (temperatura - 32)
+#	print (round(c,2))
+#else:
+#	f = 9 * (temperatura / 5) + 32
+#	print (round(f,2))
+	
+c = float(input("Digite a temperatua em Celsius: "))
+f = 9*c/5 + 32
+
+print (f)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 11, in <module>
+    c = float(input())
+ValueError: could not convert string to float: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:20:02) 
+-- CODE:
+opcao = input("Escolha a escala: C- Celsius | F- Fahrenheit: ")
+temperatura = float(input("Informe a temperatura: "))
+
+if opcao == "C":
+	f = (9 * temperatura) / 5 + 32
+	print (round(f,2))
+else:
+		c = (5 / 9) * (temperatura - 32)
+	print (round(c,2))
+
+-- ERROR:
+File "XXXX", line 9
+    print (round(c,2))
+                     ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:20:15) 
+-- CODE:
+opcao = input("Escolha a escala: C- Celsius | F- Fahrenheit: ")
+temperatura = float(input("Informe a temperatura: "))
+
+if opcao == "C":
+	f = (9 * temperatura) / 5 + 32
+	print (round(f,2))
+else:
+	c = (5 / 9) * (temperatura - 32)
+	print (round(c,2))
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:20:31) 
+-- CODE:
+opcao = input("Escolha a escala: C- Celsius | F- Fahrenheit: ")
+temperatura = float(input("Informe a temperatura: "))
+
+if opcao == "C":
+	f = (9 * temperatura) / 5 + 32
+	print (round(f,2))
+else:
+	c = (5 / 9) * (temperatura - 32)
+	print (round(c,2))
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 23:20:41) 
+-- CODE:
+opcao = input("Escolha a escala: C- Celsius | F- Fahrenheit: ")
+temperatura = float(input("Informe a temperatura: "))
+
+if opcao == "C":
+	f = (9 * temperatura) / 5 + 32
+	print (round(f,2))
+else:
+	c = (5 / 9) * (temperatura - 32)
+	print (round(c,2))
+
+-- EXECUTION TIME:
+0.208338
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

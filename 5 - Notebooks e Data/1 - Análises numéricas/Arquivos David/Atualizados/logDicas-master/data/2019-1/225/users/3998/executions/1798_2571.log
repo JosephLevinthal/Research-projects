@@ -1,0 +1,82 @@
+== TEST (2019-06-12 12:32:32) 
+-- CODE:
+from numpy import*
+s= input(": ")
+j= ''
+for i in range(len(s)):
+	if(s[i].upper()= "A"):
+		j= j + s[i]
+	elif(s[i].upper()== "A"):
+		j=j
+print(j)
+-- ERROR:
+File "XXXX", line 5
+    if(s[i].upper()= "A"):
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 12:33:17) 
+-- CODE:
+s= input(": ")
+j= ''
+for i in range(len(s)):
+	if(s[i].upper()= "A"):
+		j= j + s[i]
+	elif(s[i].upper()== "A"):
+		j=j
+print(j)
+-- ERROR:
+File "XXXX", line 4
+    if(s[i].upper()= "A"):
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 12:33:35) 
+-- CODE:
+s= input(": ")
+j= ''
+for i in range(len(s)):
+	if(s[i].upper()!= "A"):
+		j= j + s[i]
+	elif(s[i].upper()== "A"):
+		j=j
+print(j)
+-- OUTPUT:
+Instituto_de_Computco-ICOMP-UFM
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 12:34:03) 
+-- CODE:
+s= input(": ")
+j= ''
+for i in range(len(s)):
+	if(s[i].upper()!= "A"):
+		j= j + s[i]
+	elif(s[i].upper()== "A"):
+		j=j
+print(j)
+-- EXECUTION TIME:
+0.555027
+-- TEST CASE 1:
+---- input:
+Instituto_de_Computacao-ICOMP-UFAM
+---- correct output:
+Instituto_de_Computco-ICOMP-UFM
+---- user output:
+Instituto_de_Computco-ICOMP-UFM
+-- TEST CASE 2:
+---- input:
+a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-aa-a-a-a-a-a-a-a-a-a-a
+---- correct output:
+-----------------------------
+---- user output:
+-----------------------------
+-- TEST CASE 3:
+---- input:
+.aaaaaaaaaaaaaaaaaaaaa.bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb.aaaaaaaaaaaaaaaaa.
+---- correct output:
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb..
+---- user output:
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb..
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

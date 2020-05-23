@@ -1,0 +1,5 @@
+a = float(input())
+b = float(input())
+c = float(input())
+out = (a*a+b*b+c*c)/(a+b+c)
+print(round(out,7))

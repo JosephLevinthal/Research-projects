@@ -1,0 +1,6 @@
+t = float (input("Digite o tempo gasto na viagem:"))
+v = float (input("Digite a velociade media:"))
+d = (t*v)
+qtd_comb = (d/12)
+print (d)
+print (qtd_comb)

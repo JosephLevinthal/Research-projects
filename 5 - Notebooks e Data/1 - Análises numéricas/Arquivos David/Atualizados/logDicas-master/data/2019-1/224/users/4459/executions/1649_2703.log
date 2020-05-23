@@ -1,0 +1,92 @@
+== TEST (2019-04-16 14:45:04) 
+-- CODE:
+idade = int(input("qual a idade, man:"))
+if idade >= 18:
+	mensagem: "eleitor"
+else:
+	mensagem: "nao_eleitor"
+-- OUTPUT:
+190.09
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 14:45:14) 
+-- CODE:
+idade = int(input("qual a idade, man:"))
+if idade > 18:
+	mensagem: "eleitor"
+else:
+	mensagem: "nao_eleitor"
+-- OUTPUT:
+190.09
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 14:45:29) 
+-- CODE:
+idade = int(input("qual a idade, man:"))
+if (idade > 18):
+	mensagem: "eleitor"
+else:
+	mensagem: "nao_eleitor"
+-- OUTPUT:
+190.09
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 14:46:15) 
+-- CODE:
+idade = int(input("qual a idade, man:"))
+if (idade > 18):
+	mensagem: "eleitor"
+else:
+	mensagem: "nao_eleitor"
+print(mensagem)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print(mensagem)
+NameError: name 'mensagem' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 14:46:20) 
+-- CODE:
+idade = int(input("qual a idade, man:"))
+if (idade > 18):
+mensagem: "eleitor"
+else:
+	mensagem: "nao_eleitor"
+print(mensagem)
+-- ERROR:
+File "XXXX", line 3
+    mensagem: "eleitor"
+           ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 14:46:37) 
+-- CODE:
+idade = int(input("qual a idade, man:"))
+if (idade > 18):
+   mensagem = "eleitor"
+else:
+	mensagem = "nao_eleitor"
+print(mensagem)
+-- EXECUTION TIME:
+0.1748
+-- TEST CASE 1:
+---- input:
+15
+---- correct output:
+nao_eleitor
+---- user output:
+nao_eleitor
+-- TEST CASE 2:
+---- input:
+21
+---- correct output:
+eleitor
+---- user output:
+eleitor
+-- TEST CASE 3:
+---- input:
+60
+---- correct output:
+eleitor
+---- user output:
+eleitor
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

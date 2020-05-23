@@ -1,0 +1,313 @@
+== TEST (2019-04-08 13:07:19) 
+-- CODE:
+temperatura=float(input("quantos graus?"))
+opcao=input("em c/f?")
+if(opcao==c):
+	((9*c)/5)+32=f
+	print(round(f, 2))
+else:
+	c=(5/9)*(f-32)
+	print(round(c, 2))
+-- ERROR:
+File "XXXX", line 4
+    ((9*c)/5)+32=f
+    ^
+SyntaxError: can't assign to operator
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 13:07:31) 
+-- CODE:
+temperatura=float(input("quantos graus?"))
+opcao=input("em c/f?")
+if(opcao==c):
+	f=((9*c)/5)+32
+	print(round(f, 2))
+else:
+	c=(5/9)*(f-32)
+	print(round(c, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    temperatura=float(input())
+ValueError: could not convert string to float: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 13:11:13) 
+-- CODE:
+opcao=input("em c/f?")
+temperatura=float(input("quantos graus?"))
+c=(5/9)*(f-32)
+f=(9*c/5)+32
+if(opcao==c):
+	print(round(f, 2))
+else:
+	print(round(c, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    c=(5/9)*(f-32)
+NameError: name 'f' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 13:14:37) 
+-- CODE:
+opcao=input("em c/f?")
+if(opcao==f):
+	f=float(input("quantos graus?"))
+	c=(5/9)*(f-32)
+	print(round(c, 2))
+else:
+	c=float(input("quantos graus?"))
+	f=(9*c/5)+32
+	print(round(f, 2))
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    if(opcao==f):
+NameError: name 'f' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 13:15:01) 
+-- CODE:
+opcao=input("em c/f?")
+if(opcao=="f"):
+	f=float(input("quantos graus?"))
+	c=(5/9)*(f-32)
+	print(round(c, 2))
+else:
+	c=float(input("quantos graus?"))
+	f=(9*c/5)+32
+	print(round(f, 2))
+	
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 13:15:10) 
+-- CODE:
+opcao=input("em c/f?")
+if(opcao=="f"):
+	f=float(input("quantos graus?"))
+	c=(5/9)*(f-32)
+	print(round(c, 2))
+else:
+	c=float(input("quantos graus?"))
+	f=(9*c/5)+32
+	print(round(f, 2))
+	
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-08 13:15:21) 
+-- CODE:
+opcao=input("em c/f?")
+if(opcao=="f"):
+	f=float(input("quantos graus?"))
+	c=(5/9)*(f-32)
+	print(round(c, 2))
+else:
+	c=float(input("quantos graus?"))
+	f=(9*c/5)+32
+	print(round(f, 2))
+	
+-- EXECUTION TIME:
+0.183413
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+608.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-08 13:17:12) 
+-- CODE:
+opcao=input("em c/f?")
+if(opcao=="c"):
+	c=float(input("quantos graus?"))
+	f=(9*c/5)+32
+	print(round(f, 2))
+else:
+	f=float(input("quantos graus?"))
+	c=(5/9)*(f-32)
+	print(round(c, 2))
+-- EXECUTION TIME:
+0.14412
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 13:17:15) 
+-- CODE:
+opcao=input("em c/f?")
+if(opcao=="c"):
+	c=float(input("quantos graus?"))
+	f=(9*c/5)+32
+	print(round(f, 2))
+else:
+	f=float(input("quantos graus?"))
+	c=(5/9)*(f-32)
+	print(round(c, 2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 13:18:16) 
+-- CODE:
+opcao=input("em c/f?")
+if(opcao=="c"):
+	c=float(input("quantos graus?"))
+	f=(9*c/5)+32
+	print(round(f, 2))
+else:
+	f=float(input("quantos graus?"))
+	c=(5/9)*(f-32)
+	print(round(c, 2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 13:18:31) 
+-- CODE:
+opcao=input("em c/f?")
+if(opcao=="c"):
+	c=float(input("quantos graus?"))
+	f=(9*c/5)+32
+	print(round(f, 2))
+else:
+	f=float(input("quantos graus?"))
+	c=(5/9)*(f-32)
+	print(round(c, 2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-08 13:18:56) 
+-- CODE:
+opcao=input("em C/F?")
+if(opcao=="C"):
+	c=float(input("quantos graus?"))
+	f=(9*c/5)+32
+	print(round(f, 2))
+else:
+	f=float(input("quantos graus?"))
+	c=(5/9)*(f-32)
+	print(round(c, 2))
+-- EXECUTION TIME:
+0.177046
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-10 12:46:58) 
+-- CODE:
+opcao=input("em C/F?")
+if(opcao=="C"):
+	c=float(input("quantos graus?"))
+	f=(9*c/5)+32
+	print(round(f, 2))
+else:
+	f=float(input("quantos graus?"))
+	c=(5/9)*(f-32)
+	print(round(c, 2))
+-- EXECUTION TIME:
+0.165609
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 19:41:18) 
+-- CODE:
+opcao=input("em C/F?")
+if(opcao=="C"):
+	c=float(input("quantos graus?"))
+	f=(9*c/5)+32
+	print(round(f, 2))
+else:
+	f=float(input("quantos graus?"))
+	c=(5/9)*(f-32)
+	print(round(c, 2))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

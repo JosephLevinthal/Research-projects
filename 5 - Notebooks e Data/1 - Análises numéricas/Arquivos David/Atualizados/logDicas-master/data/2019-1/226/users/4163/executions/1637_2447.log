@@ -1,0 +1,173 @@
+== TEST (2019-04-09 10:47:34) 
+-- CODE:
+x = float(input("preco"))
+y = float(input("pagamento"))
+
+if (x > y):
+	c = x-y
+else:
+	c = y-x
+	
+print(c)	
+-- OUTPUT:
+26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:49:45) 
+-- CODE:
+x = float(input("preco"))
+y = float(input("pagamento"))
+
+if (x > y):
+	c = x-y
+else:
+	c = y-x
+	
+print("troco de"+(round(c ,2)))	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    print("troco de"+(round(c ,2)))	
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:50:22) 
+-- CODE:
+x = float(input("preco"))
+y = float(input("pagamento"))
+
+if (x > y):
+	c = x-y
+else:
+	c = y-x
+	
+print(troco de+(round(c ,2)))	
+-- ERROR:
+File "XXXX", line 9
+    print(troco de+(round(c ,2)))	
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:52:16) 
+-- CODE:
+x = float(input("preco"))
+y = float(input("pagamento"))
+msg = "troco de"
+if (x > y):
+	c = msg+(x-y)
+else:
+	c = msg+(y-x)
+	
+print(round(c ,2))	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    c = msg+(x-y)
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:55:27) 
+-- CODE:
+x = float(input("preco"))
+y = float(input("pagamento"))
+
+if (x > y):
+	c = (x-y)
+	print("falta",round(c, 2))
+else:
+	c = (y-x)
+	print("troco de",round(c ,2))	
+-- OUTPUT:
+falta 26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 10:56:15) 
+-- CODE:
+x = float(input("preco: "))
+y = float(input("pagamento: "))
+
+if (x > y):
+	c = (x-y)
+	print("Falta",round(c, 2))
+else:
+	c = (y-x)
+	print("troco de",round(c ,2))	
+-- EXECUTION TIME:
+0.188951
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+Falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+troco de 28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+troco de 0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:56:32) 
+-- CODE:
+x = float(input("preco: "))
+y = float(input("pagamento: "))
+
+if (x > y):
+	c = (x-y)
+	print("Falta",round(c, 2))
+else:
+	c = (y-x)
+	print("Troco de",round(c ,2))	
+-- OUTPUT:
+Falta 26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 10:56:44) 
+-- CODE:
+x = float(input("preco: "))
+y = float(input("pagamento: "))
+
+if (x > y):
+	c = (x-y)
+	print("Falta",round(c, 2))
+else:
+	c = (y-x)
+	print("Troco de",round(c ,2))	
+-- EXECUTION TIME:
+0.136283
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+Falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+Troco de 28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+Troco de 0.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

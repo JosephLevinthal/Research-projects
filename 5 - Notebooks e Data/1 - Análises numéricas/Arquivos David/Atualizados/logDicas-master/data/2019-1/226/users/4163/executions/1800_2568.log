@@ -1,0 +1,226 @@
+== TEST (2019-06-11 10:55:31) 
+-- CODE:
+n = int(input("tamanho:  "))
+x = "o"
+c = ""
+for i in range(a + 1):
+	print(a *"*")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    for i in range(a + 1):
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 10:56:01) 
+-- CODE:
+n = int(input("tamanho:  "))
+x = "o"
+c = ""
+for i in range(n + 1):
+	print(n *"*")
+-- OUTPUT:
+***********
+***********
+***********
+***********
+***********
+***********
+***********
+***********
+***********
+***********
+***********
+***********
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 10:57:02) 
+-- CODE:
+n = int(input("tamanho:  "))
+x = "o"
+c = ""
+for i in range(n + 1):
+	print(i *"*")
+-- OUTPUT:
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 10:57:31) 
+-- CODE:
+n = int(input("tamanho:  "))
+x = "o"
+c = ""
+for i in range(n + 1):
+	print(i*"*")
+-- OUTPUT:
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 11:03:25) 
+-- CODE:
+a = int(input("tamanho:  "))
+x = "o"
+c = ""
+for i in range(a):
+	print((a-i) *"*" + 2*i*"o"+(a-i) *"*")
+-- OUTPUT:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 11:03:37) 
+-- CODE:
+a = int(input("tamanho:  "))
+x = "o"
+c = ""
+for i in range(a):
+	print((a-i) *"*" + 2*i*"o"+(a-i) *"*")
+-- EXECUTION TIME:
+0.800924
+-- TEST CASE 1:
+---- input:
+11
+---- correct output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+---- user output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+-- TEST CASE 2:
+---- input:
+19
+---- correct output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+---- user output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+-- TEST CASE 3:
+---- input:
+26
+---- correct output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo********
+*******oooooooooooooooooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooooooooooooooooo*
+---- user output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo**
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

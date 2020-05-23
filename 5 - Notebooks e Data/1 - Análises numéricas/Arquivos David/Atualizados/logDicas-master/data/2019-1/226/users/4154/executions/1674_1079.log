@@ -1,0 +1,643 @@
+== TEST (2019-04-25 10:14:08) 
+-- CODE:
+a = float(input("qual a medida do A"))
+b = float(input("qual a medida do B"))
+c = float(input("qual a medida do C"))
+
+if a or b or c > 0:
+	print(a", ",b ", ",c", ")
+-- ERROR:
+File "XXXX", line 6
+    print(a", ",b ", ",c", ")
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 10:14:53) 
+-- CODE:
+a = float(input("qual a medida do A"))
+b = float(input("qual a medida do B"))
+c = float(input("qual a medida do C"))
+
+if a or b or c > 0:
+	print(a, ", ",b, ", ", c, ", ")
+-- OUTPUT:
+-11.0 ,  22.0 ,  33.0 ,
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 10:15:10) 
+-- CODE:
+a = float(input("qual a medida do A: "))
+b = float(input("qual a medida do B: "))
+c = float(input("qual a medida do C: "))
+
+if a or b or c > 0:
+	print(a, ", ",b, ", ", c, ", ")
+-- OUTPUT:
+-11.0 ,  22.0 ,  33.0 ,
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 11:41:11) 
+-- CODE:
+from math import *
+a = float(input("asasd "))
+b = float(input("asasd "))
+c = float(input("asasd "))
+s = (a+b+c)/2
+if a>0 and b>0 and c>0:
+	if (a+b+c-max(a,b,c))>0:
+		print('Entradas: ',a,", ",b,", ",c)
+		print("Area: ",sqrt(s*(s-a)*(s-b)*(s-c)))
+	else:
+		print('Entradas: ',a,", ",b,", ",c)
+		print("Area: invalida")
+else:
+		print('Entradas: ',a,", ",b,", ",c)
+		print("Area: invalida")
+-- EXECUTION TIME:
+0.147784
+-- TEST CASE 1:
+---- input:
+-11.0
+22.0
+33.0
+---- correct output:
+Entradas: -11.0 , 22.0 , 33.0
+Area: invalida
+---- user output:
+Entradas:  -11.0 ,  22.0 ,  33.0
+Area: invalida
+-- TEST CASE 2:
+---- input:
+1.61
+2.40
+2.89
+---- correct output:
+Entradas: 1.61 , 2.4 , 2.89
+Area: 1.932
+---- user output:
+Entradas:  1.61 ,  2.4 ,  2.89
+Area:  1.9320000000000004
+-- TEST CASE 3:
+---- input:
+11.0
+22.0
+33.0
+---- correct output:
+Entradas: 11.0 , 22.0 , 33.0
+Area: invalida
+---- user output:
+Entradas:  11.0 ,  22.0 ,  33.0
+Area:  0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:42:09) 
+-- CODE:
+from math import *
+a = float(input("asasd "))
+b = float(input("asasd "))
+c = float(input("asasd "))
+s = (a+b+c)/2
+if a>0 and b>0 and c>0:
+	if (a+b+c-max(a,b,c))>0:
+		print('Entradas: ',a,", ",b,", ",c)
+		print("Area: ",round(sqrt(s*(s-a)*(s-b)*(s-c)),2))
+	else:
+		print('Entradas: ',a,", ",b,", ",c)
+		print("Area: invalida")
+else:
+		print('Entradas: ',a,", ",b,", ",c)
+		print("Area: invalida")
+-- OUTPUT:
+Entradas:  -11.0 ,  22.0 ,  33.0
+Area: invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:46:25) 
+-- CODE:
+from math import *
+a = float(input("asasd "))
+b = float(input("asasd "))
+c = float(input("asasd "))
+s = (a+b+c)/2
+if a>0 and b>0 and c>0:
+	if (a+b+c-max(a,b,c))>0:
+		print('Entradas: ',a,", ",b,", ",c)
+		print("Area: ",round(sqrt(s*(s-a)*(s-b)*(s-c)),2))
+	else:
+		print('Entradas: ',a,", ",b,", ",c)
+		print("Area: invalida")
+else:
+		print('Entradas: ',a,", ",b,", ",c)
+		print("Area: invalida")
+-- OUTPUT:
+Entradas:  -11.0 ,  22.0 ,  33.0
+Area: invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 11:47:42) 
+-- CODE:
+from math import *
+a = float(input("asasd "))
+b = float(input("asasd "))
+c = float(input("asasd "))
+s = (a+b+c)/2
+if a>0 and b>0 and c>0:
+	if (a+b+c-2*max(a,b,c))>0:
+		print('Entradas: ',a,", ",b,", ",c)
+		print("Area: ",round(sqrt(s*(s-a)*(s-b)*(s-c)),2))
+	else:
+		print('Entradas: ',a,", ",b,", ",c)
+		print("Area: invalida")
+else:
+		print('Entradas: ',a,", ",b,", ",c)
+		print("Area: invalida")
+-- EXECUTION TIME:
+0.160263
+-- TEST CASE 1:
+---- input:
+-11.0
+22.0
+33.0
+---- correct output:
+Entradas: -11.0 , 22.0 , 33.0
+Area: invalida
+---- user output:
+Entradas:  -11.0 ,  22.0 ,  33.0
+Area: invalida
+-- TEST CASE 2:
+---- input:
+1.61
+2.40
+2.89
+---- correct output:
+Entradas: 1.61 , 2.4 , 2.89
+Area: 1.932
+---- user output:
+Entradas:  1.61 ,  2.4 ,  2.89
+Area:  1.93
+-- TEST CASE 3:
+---- input:
+11.0
+22.0
+33.0
+---- correct output:
+Entradas: 11.0 , 22.0 , 33.0
+Area: invalida
+---- user output:
+Entradas:  11.0 ,  22.0 ,  33.0
+Area: invalida
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:47:42) 
+-- CODE:
+from math import *
+a = float(input("asasd "))
+b = float(input("asasd "))
+c = float(input("asasd "))
+s = (a+b+c)/2
+if a>0 and b>0 and c>0:
+	if (a+b+c-2*max(a,b,c))>0:
+		print('Entradas: ',a,", ",b,", ",c)
+		print("Area: ",round(sqrt(s*(s-a)*(s-b)*(s-c)),2))
+	else:
+		print('Entradas: ',a,", ",b,", ",c)
+		print("Area: invalida")
+else:
+		print('Entradas: ',a,", ",b,", ",c)
+		print("Area: invalida")
+-- OUTPUT:
+Entradas:  -11.0 ,  22.0 ,  33.0
+Area: invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 11:48:07) 
+-- CODE:
+from math import *
+a = float(input("asasd "))
+b = float(input("asasd "))
+c = float(input("asasd "))
+s = (a+b+c)/2
+if a>0 and b>0 and c>0:
+	if (a+b+c-2*max(a,b,c))>0:
+		print('Entradas: ',a,", ",b,", ",c)
+		print("Area: ",round(sqrt(s*(s-a)*(s-b)*(s-c)),2))
+	else:
+		print('Entradas: ',a,", ",b,", ",c)
+		print("Area: invalida")
+else:
+		print('Entradas: ',a,", ",b,", ",c)
+		print("Area: invalida")
+-- EXECUTION TIME:
+0.154783
+-- TEST CASE 1:
+---- input:
+-11.0
+22.0
+33.0
+---- correct output:
+Entradas: -11.0 , 22.0 , 33.0
+Area: invalida
+---- user output:
+Entradas:  -11.0 ,  22.0 ,  33.0
+Area: invalida
+-- TEST CASE 2:
+---- input:
+1.61
+2.40
+2.89
+---- correct output:
+Entradas: 1.61 , 2.4 , 2.89
+Area: 1.932
+---- user output:
+Entradas:  1.61 ,  2.4 ,  2.89
+Area:  1.93
+-- TEST CASE 3:
+---- input:
+11.0
+22.0
+33.0
+---- correct output:
+Entradas: 11.0 , 22.0 , 33.0
+Area: invalida
+---- user output:
+Entradas:  11.0 ,  22.0 ,  33.0
+Area: invalida
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 11:50:57) 
+-- CODE:
+from math import *
+a = float(input("asasd "))
+b = float(input("asasd "))
+c = float(input("asasd "))
+s = (a+b+c)/2
+print('Entradas: ',a,", ",b,", ",c)
+if((a>0) and (b>0) and (c>0)):
+	if (a+b+c-2*max(a,b,c))>0:
+		print("Area: ",round(sqrt(s*(s-a)*(s-b)*(s-c)),2))
+	else:
+		print("Area: invalida")
+else:
+		print("Area: invalida")
+-- EXECUTION TIME:
+0.16875
+-- TEST CASE 1:
+---- input:
+-11.0
+22.0
+33.0
+---- correct output:
+Entradas: -11.0 , 22.0 , 33.0
+Area: invalida
+---- user output:
+Entradas:  -11.0 ,  22.0 ,  33.0
+Area: invalida
+-- TEST CASE 2:
+---- input:
+1.61
+2.40
+2.89
+---- correct output:
+Entradas: 1.61 , 2.4 , 2.89
+Area: 1.932
+---- user output:
+Entradas:  1.61 ,  2.4 ,  2.89
+Area:  1.93
+-- TEST CASE 3:
+---- input:
+11.0
+22.0
+33.0
+---- correct output:
+Entradas: 11.0 , 22.0 , 33.0
+Area: invalida
+---- user output:
+Entradas:  11.0 ,  22.0 ,  33.0
+Area: invalida
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:50:57) 
+-- CODE:
+from math import *
+a = float(input("asasd "))
+b = float(input("asasd "))
+c = float(input("asasd "))
+s = (a+b+c)/2
+print('Entradas: ',a,", ",b,", ",c)
+if((a>0) and (b>0) and (c>0)):
+	if (a+b+c-2*max(a,b,c))>0:
+		print("Area: ",round(sqrt(s*(s-a)*(s-b)*(s-c)),2))
+	else:
+		print("Area: invalida")
+else:
+		print("Area: invalida")
+-- OUTPUT:
+Entradas:  -11.0 ,  22.0 ,  33.0
+Area: invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:50:58) 
+-- CODE:
+from math import *
+a = float(input("asasd "))
+b = float(input("asasd "))
+c = float(input("asasd "))
+s = (a+b+c)/2
+print('Entradas: ',a,", ",b,", ",c)
+if((a>0) and (b>0) and (c>0)):
+	if (a+b+c-2*max(a,b,c))>0:
+		print("Area: ",round(sqrt(s*(s-a)*(s-b)*(s-c)),2))
+	else:
+		print("Area: invalida")
+else:
+		print("Area: invalida")
+-- OUTPUT:
+Entradas:  -11.0 ,  22.0 ,  33.0
+Area: invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 11:51:49) 
+-- CODE:
+from math import *
+a = float(input("asasd "))
+b = float(input("asasd "))
+c = float(input("asasd "))
+s = (a+b+c)/2
+print('Entradas: ',a,", ",b,", ",c)
+if((a>b+c) and (b>c+a) and (c>b+a)):
+	if (a+b+c-2*max(a,b,c))>0:
+		print("Area: ",round(sqrt(s*(s-a)*(s-b)*(s-c)),2))
+	else:
+		print("Area: invalida")
+else:
+		print("Area: invalida")
+-- EXECUTION TIME:
+0.197368
+-- TEST CASE 1:
+---- input:
+-11.0
+22.0
+33.0
+---- correct output:
+Entradas: -11.0 , 22.0 , 33.0
+Area: invalida
+---- user output:
+Entradas:  -11.0 ,  22.0 ,  33.0
+Area: invalida
+-- TEST CASE 2:
+---- input:
+1.61
+2.40
+2.89
+---- correct output:
+Entradas: 1.61 , 2.4 , 2.89
+Area: 1.932
+---- user output:
+Entradas:  1.61 ,  2.4 ,  2.89
+Area: invalida
+-- TEST CASE 3:
+---- input:
+11.0
+22.0
+33.0
+---- correct output:
+Entradas: 11.0 , 22.0 , 33.0
+Area: invalida
+---- user output:
+Entradas:  11.0 ,  22.0 ,  33.0
+Area: invalida
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 11:53:41) 
+-- CODE:
+from math import *
+a = float(input("asasd "))
+b = float(input("asasd "))
+c = float(input("asasd "))
+s = (a+b+c)/2
+print('Entradas: ',a,", ",b,", ",c)
+if((a>0) and (b>0) and (c>0)):
+	if (a>b+c)and(b>c+a)and(c>a+b):
+		print("Area: ",round(sqrt(s*(s-a)*(s-b)*(s-c)),2))
+	else:
+		print("Area: invalida")
+else:
+		print("Area: invalida")
+-- EXECUTION TIME:
+0.239268
+-- TEST CASE 1:
+---- input:
+-11.0
+22.0
+33.0
+---- correct output:
+Entradas: -11.0 , 22.0 , 33.0
+Area: invalida
+---- user output:
+Entradas:  -11.0 ,  22.0 ,  33.0
+Area: invalida
+-- TEST CASE 2:
+---- input:
+1.61
+2.40
+2.89
+---- correct output:
+Entradas: 1.61 , 2.4 , 2.89
+Area: 1.932
+---- user output:
+Entradas:  1.61 ,  2.4 ,  2.89
+Area: invalida
+-- TEST CASE 3:
+---- input:
+11.0
+22.0
+33.0
+---- correct output:
+Entradas: 11.0 , 22.0 , 33.0
+Area: invalida
+---- user output:
+Entradas:  11.0 ,  22.0 ,  33.0
+Area: invalida
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:53:42) 
+-- CODE:
+from math import *
+a = float(input("asasd "))
+b = float(input("asasd "))
+c = float(input("asasd "))
+s = (a+b+c)/2
+print('Entradas: ',a,", ",b,", ",c)
+if((a>0) and (b>0) and (c>0)):
+	if (a>b+c)and(b>c+a)and(c>a+b):
+		print("Area: ",round(sqrt(s*(s-a)*(s-b)*(s-c)),2))
+	else:
+		print("Area: invalida")
+else:
+		print("Area: invalida")
+-- OUTPUT:
+Entradas:  -11.0 ,  22.0 ,  33.0
+Area: invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-01 15:01:29) 
+-- CODE:
+from math import *
+a = float(input("asasd "))
+b = float(input("asasd "))
+c = float(input("asasd "))
+s = (a+b+c)/2
+print('Entradas: ',a,", ",b,", ",c)
+if((a>0) and (b>0) and (c>0)):
+	if (a>b+c)and(b>c+a)and(c>a+b):
+		print("Area: ",round(sqrt(s*(s-a)*(s-b)*(s-c)),3))
+	else:
+		print("Area: invalida")
+else:
+		print("Area: invalida")
+-- EXECUTION TIME:
+0.217308
+-- TEST CASE 1:
+---- input:
+-11.0
+22.0
+33.0
+---- correct output:
+Entradas: -11.0 , 22.0 , 33.0
+Area: invalida
+---- user output:
+Entradas:  -11.0 ,  22.0 ,  33.0
+Area: invalida
+-- TEST CASE 2:
+---- input:
+1.61
+2.40
+2.89
+---- correct output:
+Entradas: 1.61 , 2.4 , 2.89
+Area: 1.932
+---- user output:
+Entradas:  1.61 ,  2.4 ,  2.89
+Area: invalida
+-- TEST CASE 3:
+---- input:
+11.0
+22.0
+33.0
+---- correct output:
+Entradas: 11.0 , 22.0 , 33.0
+Area: invalida
+---- user output:
+Entradas:  11.0 ,  22.0 ,  33.0
+Area: invalida
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 15:01:30) 
+-- CODE:
+from math import *
+a = float(input("asasd "))
+b = float(input("asasd "))
+c = float(input("asasd "))
+s = (a+b+c)/2
+print('Entradas: ',a,", ",b,", ",c)
+if((a>0) and (b>0) and (c>0)):
+	if (a>b+c)and(b>c+a)and(c>a+b):
+		print("Area: ",round(sqrt(s*(s-a)*(s-b)*(s-c)),3))
+	else:
+		print("Area: invalida")
+else:
+		print("Area: invalida")
+-- OUTPUT:
+Entradas:  -11.0 ,  22.0 ,  33.0
+Area: invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 15:02:06) 
+-- CODE:
+from math import *
+a = float(input("asasd "))
+b = float(input("asasd "))
+c = float(input("asasd "))
+s = (a+b+c)/2
+print('Entradas: ',a,", ",b,", ",c)
+if((a>0) and (b>0) and (c>0)):
+	if (a>b+c)and(b>c+a)and(c>a+b):
+		print("Area: ",round(sqrt(s*(s-a)*(s-b)*(s-c)),3))
+	else:
+		print("Area: invalida")
+else:
+		print("Area: invalida")
+-- OUTPUT:
+Entradas:  -11.0 ,  22.0 ,  33.0
+Area: invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 15:02:25) 
+-- CODE:
+from math import *
+a = float(input("asasd "))
+b = float(input("asasd "))
+c = float(input("asasd "))
+s = (a+b+c)/2
+print('Entradas: ',a,", ",b,", ",c)
+if((a>0) and (b>0) and (c>0)):
+	if (a>b+c)and(b>c+a)and(c>a+b):
+		print("Area: ",round(sqrt(s*(s-a)*(s-b)*(s-c)),3))
+	else:
+		print("Area: invalida")
+else:
+		print("Area: invalida")
+-- OUTPUT:
+Entradas:  -11.0 ,  22.0 ,  33.0
+Area: invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-01 15:03:59) 
+-- CODE:
+from math import *
+a = float(input("asasd "))
+b = float(input("asasd "))
+c = float(input("asasd "))
+s = (a+b+c)/2
+print('Entradas: ',a,", ",b,", ",c)
+if((a>0) and (b>0) and (c>0)):
+	if (a<b+c)and(b<c+a)and(c<a+b):
+		print("Area: ",round(sqrt(s*(s-a)*(s-b)*(s-c)),3))
+	else:
+		print("Area: invalida")
+else:
+		print("Area: invalida")
+-- EXECUTION TIME:
+0.229385
+-- TEST CASE 1:
+---- input:
+-11.0
+22.0
+33.0
+---- correct output:
+Entradas: -11.0 , 22.0 , 33.0
+Area: invalida
+---- user output:
+Entradas:  -11.0 ,  22.0 ,  33.0
+Area: invalida
+-- TEST CASE 2:
+---- input:
+1.61
+2.40
+2.89
+---- correct output:
+Entradas: 1.61 , 2.4 , 2.89
+Area: 1.932
+---- user output:
+Entradas:  1.61 ,  2.4 ,  2.89
+Area:  1.932
+-- TEST CASE 3:
+---- input:
+11.0
+22.0
+33.0
+---- correct output:
+Entradas: 11.0 , 22.0 , 33.0
+Area: invalida
+---- user output:
+Entradas:  11.0 ,  22.0 ,  33.0
+Area: invalida
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

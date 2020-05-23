@@ -1,0 +1,115 @@
+== TEST (2019-06-04 23:42:06) 
+-- CODE:
+from numpy import*
+x=array(eval(input("Digite as plataformas: ")))
+j=0
+y=0
+u=0
+for i in x:
+	if(i.upper()=="TV"):
+		j=j+1
+	elif(i.upper()=="NETFLIX"):
+		y=y+1
+	elif(i.upper()=="YOUTUBE"):
+		u=u+1
+m=zeros(3,dtype(int))
+m[0]=m[0]+j
+m[1]=m[1]+y
+m[2]=m[2]+u
+print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-04 23:42:22) 
+-- CODE:
+from numpy import*
+x=array(eval(input("Digite as plataformas: ")))
+j=0
+y=0
+u=0
+for i in x:
+	if(i.upper()=="TV"):
+		j=j+1
+	elif(i.upper()=="NETFLIX"):
+		y=y+1
+	elif(i.upper()=="YOUTUBE"):
+		u=u+1
+m=zeros(3,dtype(int))
+m[0]=m[0]+j
+m[1]=m[1]+y
+m[2]=m[2]+u
+print(m)
+-- EXECUTION TIME:
+1.07373
+-- TEST CASE 1:
+---- input:
+['NETFLIX','TV','NETFLIX','NETFLIX']
+---- correct output:
+[1 3 0]
+---- user output:
+[1 3 0]
+-- TEST CASE 2:
+---- input:
+['NETFLIX','TV','YOUTUBE']
+---- correct output:
+[1 1 1]
+---- user output:
+[1 1 1]
+-- TEST CASE 3:
+---- input:
+['NETFLIX','TV','YOUTUBE','NETFLIX','TV','YOUTUBE']
+---- correct output:
+[2 2 2]
+---- user output:
+[2 2 2]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-20 23:01:26) 
+-- CODE:
+from numpy import*
+x=array(eval(input("Digite as plataformas: ")))
+j=0
+y=0
+u=0
+for i in x:
+	if(i.upper()=="TV"):
+		j=j+1
+	elif(i.upper()=="NETFLIX"):
+		y=y+1
+	elif(i.upper()=="YOUTUBE"):
+		u=u+1
+m=zeros(3,dtype(int))
+m[0]=m[0]+j
+m[1]=m[1]+y
+m[2]=m[2]+u
+print(m)
+-- EXECUTION TIME:
+1.14015
+-- TEST CASE 1:
+---- input:
+['NETFLIX','TV','NETFLIX','NETFLIX']
+---- correct output:
+[1 3 0]
+---- user output:
+[1 3 0]
+-- TEST CASE 2:
+---- input:
+['NETFLIX','TV','YOUTUBE']
+---- correct output:
+[1 1 1]
+---- user output:
+[1 1 1]
+-- TEST CASE 3:
+---- input:
+['NETFLIX','TV','YOUTUBE','NETFLIX','TV','YOUTUBE']
+---- correct output:
+[2 2 2]
+---- user output:
+[2 2 2]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

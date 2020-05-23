@@ -1,0 +1,128 @@
+== TEST (2019-05-11 17:22:08) 
+-- CODE:
+qiv = int(input("quantidade inicial de virus: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+percv = float(input("percentual de crescimento do virus: "))
+percl = float(input("percentual de crescimento do leucocito: "))
+percv, percl = percv/100, percl/1000
+print(percv)
+-- OUTPUT:
+0.02
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 17:25:57) 
+-- CODE:
+qiv = int(input("quantidade inicial de virus: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+percv = float(input("percentual de crescimento do virus: "))
+percl = float(input("percentual de crescimento do leucocito: "))
+percv, percl = percv/100, percl/100
+while(qiv < qil):
+	qiv = qiv + qiv * percv
+	qil = qil + qil * percl
+	t = t + 1
+print(t)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 10, in <module>
+    print(t)
+NameError: name 't' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 17:26:23) 
+-- CODE:
+qiv = int(input("quantidade inicial de virus: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+percv = float(input("percentual de crescimento do virus: "))
+percl = float(input("percentual de crescimento do leucocito: "))
+percv, percl = percv/100, percl/100
+t = 0
+while(qiv < qil):
+	qiv = qiv + qiv * percv
+	qil = qil + qil * percl
+	t = t + 1
+print(t)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 10, in <module>
+    print(t)
+NameError: name 't' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 17:26:50) 
+-- CODE:
+qiv = int(input("quantidade inicial de virus: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+percv = float(input("percentual de crescimento do virus: "))
+percl = float(input("percentual de crescimento do leucocito: "))
+percv, percl = percv/100, percl/100
+t = 0
+while(qiv > qil):
+	qiv = qiv + qiv * percv
+	qil = qil + qil * percl
+	t = t + 1
+print(t)
+-- OUTPUT:
+8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 17:27:56) 
+-- CODE:
+qiv = int(input("quantidade inicial de virus: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+percv = float(input("percentual de crescimento do virus: "))
+percl = float(input("percentual de crescimento do leucocito: "))
+percv, percl = percv/100, percl/100
+t = 0
+while(2 * qiv > qil):
+	qiv = qiv + qiv * percv
+	qil = qil + qil * percl
+	t = t + 1
+print(t)
+-- OUTPUT:
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-11 17:28:08) 
+-- CODE:
+qiv = int(input("quantidade inicial de virus: "))
+qil = int(input("quantidade inicial de leucocitos: "))
+percv = float(input("percentual de crescimento do virus: "))
+percl = float(input("percentual de crescimento do leucocito: "))
+percv, percl = percv/100, percl/100
+t = 0
+while(2 * qiv > qil):
+	qiv = qiv + qiv * percv
+	qil = qil + qil * percl
+	t = t + 1
+print(t)
+-- EXECUTION TIME:
+0.129441
+-- TEST CASE 1:
+---- input:
+350625
+5500
+2
+75
+---- correct output:
+9
+---- user output:
+9
+-- TEST CASE 2:
+---- input:
+650090
+90045
+4
+90
+---- correct output:
+5
+---- user output:
+5
+-- TEST CASE 3:
+---- input:
+419250
+1725
+9
+59
+---- correct output:
+17
+---- user output:
+17
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

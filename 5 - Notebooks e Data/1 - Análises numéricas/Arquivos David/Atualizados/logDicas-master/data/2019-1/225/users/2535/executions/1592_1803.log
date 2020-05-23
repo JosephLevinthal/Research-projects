@@ -1,0 +1,88 @@
+== TEST (2019-03-21 09:52:42) 
+-- CODE:
+x = input('conta: ')
+
+s = sum(int(x[3])*2, int(x[2])*3, int(x[1])*4, int(x[0])*5)
+s = s%11
+
+print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    s = sum(int(x[3])*2, int(x[2])*3, int(x[1])*4, int(x[0])*5)
+TypeError: sum expected at most 2 arguments, got 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 09:53:39) 
+-- CODE:
+x = input('conta: ')
+
+a = int(x[3])*2
+b = int(x[2])*3
+c = int(x[1])*4
+d = int(x[0])*5
+
+s = sum(a, b, c, d)
+s = s%11
+
+print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    s = sum(a, b, c, d)
+TypeError: sum expected at most 2 arguments, got 4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 09:54:04) 
+-- CODE:
+x = input('conta: ')
+
+a = int(x[3])*2
+b = int(x[2])*3
+c = int(x[1])*4
+d = int(x[0])*5
+
+s = a + b + c + d
+s = s%11
+
+print(s)
+-- OUTPUT:
+10
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-21 09:54:09) 
+-- CODE:
+x = input('conta: ')
+
+a = int(x[3])*2
+b = int(x[2])*3
+c = int(x[1])*4
+d = int(x[0])*5
+
+s = a + b + c + d
+s = s%11
+
+print(s)
+-- EXECUTION TIME:
+0.189213
+-- TEST CASE 1:
+---- input:
+2000
+---- correct output:
+10
+---- user output:
+10
+-- TEST CASE 2:
+---- input:
+3550
+---- correct output:
+6
+---- user output:
+6
+-- TEST CASE 3:
+---- input:
+0007
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

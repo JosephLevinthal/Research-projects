@@ -1,0 +1,5 @@
+a= float(input("Digite um numero Inteiro: "))
+b= float(input("Digite outro numero: "))
+c= float(input("Digite mais um numero: "))
+eq= (((a ** 2)+(b ** 2)+(c ** 2))/(a + b + c))
+print(round(eq, 7))

@@ -1,0 +1,801 @@
+== TEST (2019-04-07 17:20:32) 
+-- CODE:
+escala=input("escala")
+temp=int(input("temp"))
+C=5/9*(F-32)
+F=(C*9/5)+32
+if(escala==C) 
+	print(round(C,2))
+else :
+	print(round(F,2))
+
+-- ERROR:
+File "XXXX", line 5
+    if(escala==C) 
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-07 17:21:06) 
+-- CODE:
+escala=input("escala")
+temp=int(input("temp"))
+C=5/9*(F-32)
+F=(C*9/5)+32
+if(escala==c.upper()) 
+	print(round(C,2))
+else :
+	print(round(F,2))
+
+-- ERROR:
+File "XXXX", line 5
+    if(escala==c.upper()) 
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:06:57) 
+-- CODE:
+escala=input("escala")
+temp=int(input("temp"))
+C=5/9*(F-32)
+F=(C*9/5)+32
+if(escala==c.upper()) 
+	print(round(C,2))
+else :
+	print(round(F,2))
+
+-- ERROR:
+File "XXXX", line 5
+    if(escala==c.upper()) 
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:15:00) 
+-- CODE:
+escala=input("escala")
+temp=int(input("temp"))
+
+-- ERROR:
+File "XXXX", line 5
+    if(escala==c.upper()) 
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:36:32) 
+-- CODE:
+escala=input("escala")
+temp=int(input("temp"))
+C=5/9*(F-32)
+print(C)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    C=5/9*(F-32)
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:37:14) 
+-- CODE:
+escala=input("escala")
+temp=int(input("temp"))
+C=5/9*(F-32)
+print(round(C,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    C=5/9*(F-32)
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:37:33) 
+-- CODE:
+escala=input("escala")
+temp=float(input("temp"))
+C=5/9*(F-32)
+print(round(C,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    C=5/9*(F-32)
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:38:15) 
+-- CODE:
+escala=input("escala")
+temp=float(input("temp"))
+if(escala==C) :
+	C=5/9*(F-32)
+print(round(C,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if(escala==C) :
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:38:41) 
+-- CODE:
+escala=input("escala")
+temp=float(input("temp"))
+if(escala==c.upper()) :
+	C=5/9*(F-32)
+print(round(C,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if(escala==c.upper()) :
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:39:15) 
+-- CODE:
+escala=input("escala")
+temp=float(input("temp"))
+if(escala==upper().c :
+	C=5/9*(F-32)
+print(round(C,2))
+-- ERROR:
+File "XXXX", line 3
+    if(escala==upper().c :
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:39:36) 
+-- CODE:
+escala=input("escala")
+temp=float(input("temp"))
+if(escala==C) :
+	C=5/9*(F-32)
+print(round(C,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if(escala==C) :
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:40:19) 
+-- CODE:
+escala=input("escala")
+temp=float(input("temp"))
+C=5/9*(F-32)
+if(escala==C) :
+	print(round(C,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    C=5/9*(F-32)
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 14:22:17) 
+-- CODE:
+escala1=input("escala1")
+escala2=input("escala2")
+valor1=float(input("valor1"))
+valor2=float(input("valor2"))
+if ( escala1 == c.upper() ) :
+	C = 5/9 * ( valor2 - 32 )
+	print(round(C,2))
+if (escala2 == f.upper () ) :
+	valor1 = 5/9 * (F - 32)
+	print(round(valor1,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    valor1=float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 14:29:22) 
+-- CODE:
+escala1=input("escala1")
+
+valor1=float(input("valor1"))
+
+if ( escala1 == c.upper() ) :
+	F =  (5/9 * C) + 32
+	print(round(F,2))
+
+if (escala2 == f.upper () ) :
+	C = 5/9 * ( valor2 - 32 )
+	print(round(C,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    if ( escala1 == c.upper() ) :
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 14:29:43) 
+-- CODE:
+escala1=input("escala1")
+
+valor1=float(input("valor1"))
+
+if ( escala1 == c.upper() ) :
+	F =  (5/9 * C) + 32
+	print(round(F,2))
+
+if (escala1 == f.upper () ) :
+	C = 5/9 * ( valor2 - 32 )
+	print(round(C,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    if ( escala1 == c.upper() ) :
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 14:29:54) 
+-- CODE:
+escala1=input("escala1")
+
+valor1=float(input("valor1"))
+
+if (escala1 == c.upper() ) :
+	F =  (5/9 * C) + 32
+	print(round(F,2))
+
+if (escala1 == f.upper () ) :
+	C = 5/9 * ( valor2 - 32 )
+	print(round(C,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    if (escala1 == c.upper() ) :
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 14:30:43) 
+-- CODE:
+escala1=input("escala1")
+valor1=float(input("valor1"))
+
+if (escala1 == c.upper() ) :
+	F = (5/9 * valor1) + 32
+	print(round(F,2))
+
+if (escala1 == f.upper () ) :
+	C = 5/9 * ( valor1 - 32 )
+	print(round(C,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (escala1 == c.upper() ) :
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 14:32:06) 
+-- CODE:
+escala1=input("escala1")
+valor1=float(input("valor1"))
+escala1= escala.upper()
+if (escala1 == C ) :
+	F = (5/9 * valor1) + 32
+	print(round(F,2))
+
+if (escala1 == F ) :
+	C = 5/9 * ( valor1 - 32 )
+	print(round(C,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    escala1= escala.upper()
+NameError: name 'escala' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 14:32:09) 
+-- CODE:
+escala1=input("escala1")
+valor1=float(input("valor1"))
+escala1= escala.upper()
+if (escala1 == C ) :
+	F = (5/9 * valor1) + 32
+	print(round(F,2))
+
+if (escala1 == F ) :
+	C = 5/9 * ( valor1 - 32 )
+	print(round(C,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    escala1= escala.upper()
+NameError: name 'escala' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 14:32:27) 
+-- CODE:
+escala1=input("escala1")
+valor1=float(input("valor1"))
+escala1= escala1.upper()
+if (escala1 == C ) :
+	F = (5/9 * valor1) + 32
+	print(round(F,2))
+
+if (escala1 == F ) :
+	C = 5/9 * ( valor1 - 32 )
+	print(round(C,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (escala1 == C ) :
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 14:32:29) 
+-- CODE:
+escala1=input("escala1")
+valor1=float(input("valor1"))
+escala1= escala1.upper()
+if (escala1 == C ) :
+	F = (5/9 * valor1) + 32
+	print(round(F,2))
+
+if (escala1 == F ) :
+	C = 5/9 * ( valor1 - 32 )
+	print(round(C,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (escala1 == C ) :
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 14:33:04) 
+-- CODE:
+escala1=input("escala1")
+valor1=float(input("valor1"))
+escala1= escala1.upper()
+if (escala1 == "C" ) :
+	F = (5/9 * valor1) + 32
+	print(round(F,2))
+
+if (escala1 == "F" ) :
+	C = 5/9 * ( valor1 - 32 )
+	print(round(C,2))
+-- OUTPUT:
+209.78
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 14:33:05) 
+-- CODE:
+escala1=input("escala1")
+valor1=float(input("valor1"))
+escala1= escala1.upper()
+if (escala1 == "C" ) :
+	F = (5/9 * valor1) + 32
+	print(round(F,2))
+
+if (escala1 == "F" ) :
+	C = 5/9 * ( valor1 - 32 )
+	print(round(C,2))
+-- OUTPUT:
+209.78
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 14:33:06) 
+-- CODE:
+escala1=input("escala1")
+valor1=float(input("valor1"))
+escala1= escala1.upper()
+if (escala1 == "C" ) :
+	F = (5/9 * valor1) + 32
+	print(round(F,2))
+
+if (escala1 == "F" ) :
+	C = 5/9 * ( valor1 - 32 )
+	print(round(C,2))
+-- OUTPUT:
+209.78
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 14:34:48) 
+-- CODE:
+escala1=input("escala1")
+valor1=float(input("valor1"))
+escala1= escala1.upper()
+if (escala1 == "C" ) :
+	F = (9*valor1/5) + 32
+	print(round(F,2))
+
+if (escala1 == "F" ) :
+	C = 5/9 * ( valor1 - 32 )
+	print(round(C,2))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 14:34:55) 
+-- CODE:
+escala1=input("escala1")
+valor1=float(input("valor1"))
+escala1= escala1.upper()
+if (escala1 == "C" ) :
+	F = (9*valor1/5) + 32
+	print(round(F,2))
+
+if (escala1 == "F" ) :
+	C = 5/9 * ( valor1 - 32 )
+	print(round(C,2))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 14:34:59) 
+-- CODE:
+escala1=input("escala1")
+valor1=float(input("valor1"))
+escala1= escala1.upper()
+if (escala1 == "C" ) :
+	F = (9*valor1/5) + 32
+	print(round(F,2))
+
+if (escala1 == "F" ) :
+	C = 5/9 * ( valor1 - 32 )
+	print(round(C,2))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 14:35:15) 
+-- CODE:
+escala1=input("escala1")
+valor1=float(input("valor1"))
+escala1= escala1.upper()
+if (escala1 == "C" ) :
+	F = (5/9 * valor1) + 32
+	print(round(F,2))
+
+if (escala1 == "F" ) :
+	C = 5/9 * ( valor1 - 32 )
+	print(round(C,2))
+-- EXECUTION TIME:
+0.159209
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+escala1valor1608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+escala1valor1160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+escala1valor132.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 14:35:16) 
+-- CODE:
+escala1=input("escala1")
+valor1=float(input("valor1"))
+escala1= escala1.upper()
+if (escala1 == "C" ) :
+	F = (9*valor1/5) + 32
+	print(round(F,2))
+
+if (escala1 == "F" ) :
+	C = 5/9 * ( valor1 - 32 )
+	print(round(C,2))
+-- EXECUTION TIME:
+0.169582
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 14:35:17) 
+-- CODE:
+escala1=input("escala1")
+valor1=float(input("valor1"))
+escala1= escala1.upper()
+if (escala1 == "C" ) :
+	F = (9*valor1/5) + 32
+	print(round(F,2))
+
+if (escala1 == "F" ) :
+	C = 5/9 * ( valor1 - 32 )
+	print(round(C,2))
+-- EXECUTION TIME:
+0.173802
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 14:35:17) 
+-- CODE:
+escala1=input("escala1")
+valor1=float(input("valor1"))
+escala1= escala1.upper()
+if (escala1 == "C" ) :
+	F = (9*valor1/5) + 32
+	print(round(F,2))
+
+if (escala1 == "F" ) :
+	C = 5/9 * ( valor1 - 32 )
+	print(round(C,2))
+-- EXECUTION TIME:
+0.193736
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 14:35:18) 
+-- CODE:
+escala1=input("escala1")
+valor1=float(input("valor1"))
+escala1= escala1.upper()
+if (escala1 == "C" ) :
+	F = (9*valor1/5) + 32
+	print(round(F,2))
+
+if (escala1 == "F" ) :
+	C = 5/9 * ( valor1 - 32 )
+	print(round(C,2))
+-- EXECUTION TIME:
+0.193938
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 14:35:31) 
+-- CODE:
+escala1=input("escala1")
+valor1=float(input("valor1"))
+escala1= escala1.upper()
+if (escala1 == "C" ) :
+	F = (9*valor1/5) + 32
+	print(round(F,2))
+
+if (escala1 == "F" ) :
+	C = 5/9 * ( valor1 - 32 )
+	print(round(C,2))
+-- EXECUTION TIME:
+0.174149
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 14:35:36) 
+-- CODE:
+escala1=input("escala1")
+valor1=float(input("valor1"))
+escala1= escala1.upper()
+if (escala1 == "C" ) :
+	F = (9*valor1/5) + 32
+	print(round(F,2))
+
+if (escala1 == "F" ) :
+	C = 5/9 * ( valor1 - 32 )
+	print(round(C,2))
+-- EXECUTION TIME:
+0.165075
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 14:35:37) 
+-- CODE:
+escala1=input("escala1")
+valor1=float(input("valor1"))
+escala1= escala1.upper()
+if (escala1 == "C" ) :
+	F = (9*valor1/5) + 32
+	print(round(F,2))
+
+if (escala1 == "F" ) :
+	C = 5/9 * ( valor1 - 32 )
+	print(round(C,2))
+-- EXECUTION TIME:
+0.132382
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 07:23:23) 
+-- CODE:
+escala=input("escala")
+temp=float(input("tempe"))
+if(escala.upper()=="F"):
+	w=5/9*(temp-32)
+	print(w)
+if(escala.upper()=="C"):
+	h=((9*temp)/5) + 32
+	print(h)
+	
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 07:23:38) 
+-- CODE:
+escala=input("escala")
+temp=float(input("tempe"))
+if(escala.upper()=="F"):
+	w=5/9*(temp-32)
+	print(w)
+if(escala.upper()=="C"):
+	h=((9*temp)/5) + 32
+	print(h)
+	
+-- EXECUTION TIME:
+0.145549
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

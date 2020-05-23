@@ -1,0 +1,109 @@
+== SUBMITION (2019-06-26 15:00:08) 
+-- CODE:
+from numpy import*
+
+s = array(eval(input()), dtype = int)
+t = size(s)
+i = 0
+m = zeros((t,2), dtype = int)
+for c in range(t):
+	p = int(input())
+	m[c, 0] = s[i]
+	m[c, 1] = p
+	i += 1
+
+print(m)
+maior = max(m[:,1])
+for i in range(t):
+	if(maior == m[i,1]):
+		print("O departamento que possui maior salario gerencial e o", m[i,0])
+-- EXECUTION TIME:
+0.952994
+-- TEST CASE 1:
+---- input:
+1,2,3,4
+1350
+3560
+4519
+3265
+---- correct output:
+[[   1 1350]
+ [   2 3560]
+ [   3 4519]
+ [   4 3265]]
+O departamento que possui maior salario gerencial e o 3
+---- user output:
+[[   1 1350]
+ [   2 3560]
+ [   3 4519]
+ [   4 3265]]
+O departamento que possui maior salario gerencial e o 3
+-- TEST CASE 2:
+---- input:
+11,12,13,14
+9805
+6532
+3214
+4565
+---- correct output:
+[[  11 9805]
+ [  12 6532]
+ [  13 3214]
+ [  14 4565]]
+O departamento que possui maior salario gerencial e o 11
+---- user output:
+[[  11 9805]
+ [  12 6532]
+ [  13 3214]
+ [  14 4565]]
+O departamento que possui maior salario gerencial e o 11
+-- TEST CASE 3:
+---- input:
+1,2,3,4,5
+4500
+4600
+4700
+4800
+4900
+---- correct output:
+[[   1 4500]
+ [   2 4600]
+ [   3 4700]
+ [   4 4800]
+ [   5 4900]]
+O departamento que possui maior salario gerencial e o 5
+---- user output:
+[[   1 4500]
+ [   2 4600]
+ [   3 4700]
+ [   4 4800]
+ [   5 4900]]
+O departamento que possui maior salario gerencial e o 5
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 15:03:59) 
+-- CODE:
+from numpy import*
+
+s = array(eval(input()), dtype = int)
+t = size(s)
+i = 0
+m = zeros((t,2), dtype = int)
+for c in range(t):
+	p = int(input())
+	m[c, 0] = s[i]
+	m[c, 1] = p
+	i += 1
+
+print(m)
+maior = max(m[:,1])
+for i in range(t):
+	if(maior == m[i,1]):
+		print("O departamento que possui maior salario gerencial e ", m[i,0])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

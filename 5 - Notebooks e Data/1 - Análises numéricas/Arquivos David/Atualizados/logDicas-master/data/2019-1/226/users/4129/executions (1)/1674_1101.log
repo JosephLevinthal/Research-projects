@@ -1,0 +1,1056 @@
+== TEST (2019-04-25 11:24:33) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:", cons"kWh e tipo", ins)
+
+
+
+
+-- ERROR:
+File "XXXX", line 4
+    print("Entradas:", cons"kWh e tipo", ins)
+                                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:24:45) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:", cons"kWh e tipo ", ins)
+
+
+
+
+-- ERROR:
+File "XXXX", line 4
+    print("Entradas:", cons"kWh e tipo ", ins)
+                                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:24:52) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:", cons"kWh e tipo " , ins)
+
+
+
+
+-- ERROR:
+File "XXXX", line 4
+    print("Entradas:", cons"kWh e tipo " , ins)
+                                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:24:59) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:", cons"kWh e tipo" , ins)
+
+
+
+
+-- ERROR:
+File "XXXX", line 4
+    print("Entradas:", cons"kWh e tipo" , ins)
+                                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:25:10) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons)
+
+
+
+
+-- OUTPUT:
+Entradas: -56.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:25:39) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons"kWh")
+
+
+
+
+-- ERROR:
+File "XXXX", line 4
+    print("Entradas:",cons"kWh")
+                              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:25:46) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh")
+
+
+
+
+-- OUTPUT:
+Entradas: -56.0 kWh
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:25:59) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+
+
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:28:19) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+
+
+
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:28:29) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+
+
+
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:34:58) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <== 500):
+		x = cons*0.44
+	else:
+		x = cons*0.65
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+	else:
+		x =(cons*0.60)
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+	else:
+		x = cons*0.6
+
+print("Valor total: R$",x)
+	
+	
+		
+
+
+
+
+-- ERROR:
+File "XXXX", line 9
+    if(cons <== 500):
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:35:07) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <== 500):
+		x = cons*0.44
+	else:
+		x = cons*0.65
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+	else:
+		x =(cons*0.60)
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+	else:
+		x = cons*0.6
+
+print("Valor total: R$",x)
+	
+	
+		
+
+
+
+
+-- ERROR:
+File "XXXX", line 9
+    if(cons <== 500):
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:35:18) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <= 500):
+		x = cons*0.44
+	else:
+		x = cons*0.65
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+	else:
+		x =(cons*0.60)
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+	else:
+		x = cons*0.6
+
+print("Valor total: R$",x)
+	
+	
+		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 24, in <module>
+    print("Valor total: R$",x)
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:35:42) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <= 500):
+		x = cons*0.44
+	else:
+		x = cons*0.65
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+	else:
+		x =(cons*0.60)
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+	else:
+		x = cons*0.6
+
+round(x, 2)
+print("Valor total: R$",x)
+	
+	
+		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 24, in <module>
+    round(x, 2)
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:37:04) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <= 500):
+		x = cons*0.44
+	else:
+		x = cons*0.65
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+	else:
+		x =(cons*0.60)
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+	else:
+		x = cons*0.6
+
+
+print(round("Valor total: R$",x), 2)
+	
+	
+		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 25, in <module>
+    print(round("Valor total: R$",x), 2)
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:37:39) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <= 500):
+		x = cons*0.44
+	else:
+		x = cons*0.65
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+	else:
+		x =(cons*0.60)
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+	else:
+		x = cons*0.6
+
+round(x, 2)
+print("Valor total: R$",x)
+	
+	
+		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 24, in <module>
+    round(x, 2)
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:38:06) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <= 500):
+		x = cons*0.44
+	else:
+		x = cons*0.65
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+	else:
+		x =(cons*0.60)
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+	else:
+		x = cons*0.6
+
+x = round(x, 2)
+print("Valor total: R$",x)
+	
+	
+		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 24, in <module>
+    x = round(x, 2)
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 11:38:12) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <= 500):
+		x = cons*0.44
+	else:
+		x = cons*0.65
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+	else:
+		x =(cons*0.60)
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+	else:
+		x = cons*0.6
+
+x = round(x, 2)
+print("Valor total: R$",x)
+	
+	
+		
+
+
+
+
+-- EXECUTION TIME:
+0.144496
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1674/1101/main.py", line 24, in <module>
+    x = round(x, 2)
+NameError: name 'x' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:38:54) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <= 500):
+		x = cons*0.44
+	else:
+		x = cons*0.65
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+	else:
+		x =(cons*0.60)
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+	else:
+		x = cons*0.6
+
+x = round(x, 2)
+print("Valor total: R$",x)
+	
+	
+		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 24, in <module>
+    x = round(x, 2)
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:40:04) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <= 500):
+		x = cons*0.44
+	else:
+		x = cons*0.65
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+	else:
+		x =(cons*0.60)
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+	else:
+		x = cons*0.6
+
+x = round(x, 2)
+print("Valor total: R$",x)
+	
+	
+		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 24, in <module>
+    x = round(x, 2)
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:40:21) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <= 500):
+		x = cons*0.44
+	else:
+		x = cons*0.65
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+	else:
+		x =(cons*0.60)
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+	else:
+		x = cons*0.6
+
+x = round(x, 2)
+print("Valor total: R$",x)
+	
+	
+		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 24, in <module>
+    x = round(x, 2)
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:40:49) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <= 500):
+		x = cons*0.44
+	else:
+		x = cons*0.65
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+	else:
+		x =(cons*0.60)
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+	else:
+		x = cons*0.6
+
+
+print("Valor total: R$",round(x, 2)
+	
+	
+		
+
+
+
+
+-- ERROR:
+File "XXXX", line 32
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:40:58) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <= 500):
+		x = cons*0.44
+	else:
+		x = cons*0.65
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+	else:
+		x =(cons*0.60)
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+	else:
+		x = cons*0.6
+
+
+print("Valor total: R$",round(x, 2))
+	
+	
+		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 25, in <module>
+    print("Valor total: R$",round(x, 2))
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 11:41:08) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <= 500):
+		x = cons*0.44
+	else:
+		x = cons*0.65
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+	else:
+		x =(cons*0.60)
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+	else:
+		x = cons*0.6
+
+
+print("Valor total: R$",round(x, 2))
+	
+	
+		
+
+
+
+
+-- EXECUTION TIME:
+0.203017
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1674/1101/main.py", line 25, in <module>
+    print("Valor total: R$",round(x, 2))
+NameError: name 'x' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:41:12) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <= 500):
+		x = cons*0.44
+	else:
+		x = cons*0.65
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+	else:
+		x =(cons*0.60)
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+	else:
+		x = cons*0.6
+
+
+print("Valor total: R$",round(x, 2))
+	
+	
+		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 25, in <module>
+    print("Valor total: R$",round(x, 2))
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:41:57) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <= 500):
+		x = cons*0.44
+		print("Valor total: R$",round(x, 2))
+	else:
+		x = cons*0.65
+		print("Valor total: R$",round(x, 2))
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+		print("Valor total: R$",round(x, 2))
+	else:
+		x =(cons*0.60)
+		print("Valor total: R$",round(x, 2))
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+		print("Valor total: R$",round(x, 2))
+	else:
+		x = cons*0.6
+		print("Valor total: R$",round(x, 2))
+
+
+	
+	
+		
+
+
+
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:42:02) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <= 500):
+		x = cons*0.44
+		print("Valor total: R$",round(x, 2))
+	else:
+		x = cons*0.65
+		print("Valor total: R$",round(x, 2))
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+		print("Valor total: R$",round(x, 2))
+	else:
+		x =(cons*0.60)
+		print("Valor total: R$",round(x, 2))
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+		print("Valor total: R$",round(x, 2))
+	else:
+		x = cons*0.6
+		print("Valor total: R$",round(x, 2))
+
+
+	
+	
+		
+
+
+
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 11:42:09) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <= 500):
+		x = cons*0.44
+		print("Valor total: R$",round(x, 2))
+	else:
+		x = cons*0.65
+		print("Valor total: R$",round(x, 2))
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+		print("Valor total: R$",round(x, 2))
+	else:
+		x =(cons*0.60)
+		print("Valor total: R$",round(x, 2))
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+		print("Valor total: R$",round(x, 2))
+	else:
+		x = cons*0.6
+		print("Valor total: R$",round(x, 2))
+
+
+	
+	
+		
+
+
+
+
+-- EXECUTION TIME:
+0.190387
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:45:39) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <= 500):
+		x = cons*0.44
+		print("Valor total: R$",round(x, 2))
+	else:
+		x = cons*0.65
+		print("Valor total: R$",round(x, 2))
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+		print("Valor total: R$",round(x, 2))
+	else:
+		x =(cons*0.60)
+		print("Valor total: R$",round(x, 2))
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+		print("Valor total: R$",round(x, 2))
+	else:
+		x = cons*0.6
+		print("Valor total: R$",round(x, 2))
+
+
+	
+	
+		
+
+
+
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 11:46:22) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <= 500):
+		x = cons*0.44
+		print("Valor total: R$",round(x, 2))
+	else:
+		x = cons*0.65
+		print("Valor total: R$",round(x, 2))
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+		print("Valor total: R$",round(x, 2))
+	else:
+		x =(cons*0.60)
+		print("Valor total: R$",round(x, 2))
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+		print("Valor total: R$",round(x, 2))
+	else:
+		x = cons*0.6
+		print("Valor total: R$",round(x, 2))
+
+
+	
+	
+		
+
+
+
+
+-- EXECUTION TIME:
+0.144679
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 11:46:25) 
+-- CODE:
+cons = float(input("Consumo de energia em kWh: "))
+ins = input("Tipo de instalacao: ").upper()
+
+print("Entradas:",cons,"kWh e tipo", ins)
+
+if((ins != "R" and ins != "I" and ins !="C") or (cons < 0)):
+	print("Dados invalidos")
+elif(ins == "R"):
+	if(cons <= 500):
+		x = cons*0.44
+		print("Valor total: R$",round(x, 2))
+	else:
+		x = cons*0.65
+		print("Valor total: R$",round(x, 2))
+elif(ins=="C"):
+	if(cons<=1000):
+		x = cons*0.55
+		print("Valor total: R$",round(x, 2))
+	else:
+		x =(cons*0.60)
+		print("Valor total: R$",round(x, 2))
+elif(ins=="I"):
+	if(cons<=5000):
+		x = cons*0.55
+		print("Valor total: R$",round(x, 2))
+	else:
+		x = cons*0.6
+		print("Valor total: R$",round(x, 2))
+
+
+	
+	
+		
+
+
+
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,5 @@
+x=("Idade")
+y=("IMC")
+z=("Risco")
+print("Entrada:",x, ",", y)
+if()

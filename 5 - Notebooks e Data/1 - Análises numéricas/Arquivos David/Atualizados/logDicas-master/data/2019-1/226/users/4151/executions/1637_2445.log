@@ -1,0 +1,71 @@
+== TEST (2019-04-11 11:34:34) 
+-- CODE:
+e=input("escala: (C/F) ")
+t=float(input("valor da temperatura: "))
+celsius=5/9*(f-32)
+fa= (c * (9/5))+32
+
+if(e.upper()=="F"):
+	print(round(celsius,2))
+else:
+	print(round(fa,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    celsius=5/9*(f-32)
+NameError: name 'f' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:35:36) 
+-- CODE:
+e=input("escala: (C/F) ")
+t=float(input("valor da temperatura: "))
+celsius=(5/9)*(t-32)
+fa= (t * (9/5))+32
+
+if(e.upper()=="F"):
+	print(round(celsius,2))
+else:
+	print(round(fa,2))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 11:35:53) 
+-- CODE:
+e=input("escala: (C/F) ")
+t=float(input("valor da temperatura: "))
+celsius=(5/9)*(t-32)
+fa= (t * (9/5))+32
+
+if(e.upper()=="F"):
+	print(round(celsius,2))
+else:
+	print(round(fa,2))
+-- EXECUTION TIME:
+0.194817
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

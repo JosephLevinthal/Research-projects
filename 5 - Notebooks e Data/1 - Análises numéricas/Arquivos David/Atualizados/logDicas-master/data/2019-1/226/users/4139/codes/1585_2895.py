@@ -1,0 +1,5 @@
+qj=float(input("quantidade de jogos:"))
+vu=float(input("valor unitario:"))
+vf=float(input("valor do frete:"))
+total=(qj*vu+vf)
+print(total)

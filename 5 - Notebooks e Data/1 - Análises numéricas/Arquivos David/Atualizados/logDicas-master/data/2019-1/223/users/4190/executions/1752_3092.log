@@ -1,0 +1,555 @@
+== TEST (2019-05-16 16:24:53) 
+-- CODE:
+pv = 3
+pe = 2
+pd = 1
+while (p!="x" or p!="X"):
+	p = input('C: ')
+	if (p=='V' or p=='v'):
+		y = y+pv
+	elif (p=='E' or p=='e'):
+		y = y+pe
+	elif (p=='D' or p=='d'):
+		y = y+pd
+	else:
+		y = y
+y = y/100
+print(round(y, 2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    while (p!="x" or p!="X"):
+NameError: name 'p' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:25:43) 
+-- CODE:
+pv = 3
+pe = 2
+pd = 1
+while (p!="X"):
+	p = input('C: ')
+	if (p=='V' or p=='v'):
+		y = y+pv
+	elif (p=='E' or p=='e'):
+		y = y+pe
+	elif (p=='D' or p=='d'):
+		y = y+pd
+	else:
+		y = y
+y = y/100
+print(round(y, 2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    while (p!="X"):
+NameError: name 'p' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:26:10) 
+-- CODE:
+pv = 3
+pe = 2
+pd = 1
+while (p=!"X"):
+	p = input('C: ')
+	if (p=='V' or p=='v'):
+		y = y+pv
+	elif (p=='E' or p=='e'):
+		y = y+pe
+	elif (p=='D' or p=='d'):
+		y = y+pd
+	else:
+		y = y
+y = y/100
+print(round(y, 2))
+
+-- ERROR:
+File "XXXX", line 4
+    while (p=!"X"):
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:29:47) 
+-- CODE:
+pv = 3
+pe = 2
+pd = 1
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ')
+	if (p=='V' or p=='v'):
+		y = y+pv
+	elif (p=='E' or p=='e'):
+		y = y+pe
+	elif (p=='D' or p=='d'):
+		y = y+pd
+	else:
+		y = y
+y = y/100
+print(round(y, 2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    y = y+pv
+NameError: name 'y' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:30:44) 
+-- CODE:
+pv = 3
+pe = 2
+pd = 1
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ')
+	if (p=='V'):
+		y = y+pv
+	elif (p=='E'):
+		y = y+pe
+	elif (p=='D'):
+		y = y+pd
+	else:
+		y = y
+y = y/100
+print(round(y, 2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    y = y+pv
+NameError: name 'y' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:31:11) 
+-- CODE:
+pv = 3
+pe = 2
+pd = 1
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ')
+	if (p=='V'):
+		y = y+pv
+	elif (p=='E'):
+		y = y+pe
+	elif (p=='D'):
+		y = y+pd
+	else:
+y = y/100
+print(round(y, 2))
+
+-- ERROR:
+File "XXXX", line 14
+    y = y/100
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:31:35) 
+-- CODE:
+pv = 3
+pe = 2
+pd = 1
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ')
+	if (p=='V'):
+		y = y+pv
+	elif (p=='E'):
+		y = y+pe
+	elif (p=='D'):
+		y = y+pd
+	else:
+z = y/100
+print(round(z, 2))
+
+-- ERROR:
+File "XXXX", line 14
+    z = y/100
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:32:03) 
+-- CODE:
+pv = 3
+pe = 2
+pd = 1
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ')
+	if (p=='V'):
+		y = y+pv
+	elif (p=='E'):
+		y = y+pe
+	elif (p=='D'):
+		y = y+pd
+	else:
+z = y/100
+print(round(z, 2))
+
+-- ERROR:
+File "XXXX", line 14
+    z = y/100
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:33:43) 
+-- CODE:
+pv = 3
+pe = 2
+pd = 1
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ').upper()
+	if (p=='V'):
+		y = y+pv
+	elif (p=='E'):
+		y = y+pe
+	elif (p=='D'):
+		y = y+pd
+	else:
+		
+z = y/100
+print(round(z, 2))
+
+-- ERROR:
+File "XXXX", line 15
+    z = y/100
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:35:58) 
+-- CODE:
+pv = 3
+pe = 2
+pd = 1
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ').upper()
+	if (p=='V'):
+		y = y+pv
+	elif (p=='E'):
+		y = y+pe
+	elif (p=='D'):
+		y = y+pd
+	else:
+	y = y+(y/100)
+print(round(y, 2))
+
+-- ERROR:
+File "XXXX", line 14
+    y = y+(y/100)
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:36:45) 
+-- CODE:
+pv = 3
+pe = 2
+pd = 1
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ').upper()
+	if (p=='V'):
+		y = y+pv
+	elif (p=='E'):
+		y = y+pe
+	elif (p=='D'):
+		y = y+pd
+	else:
+	y+=y
+z = y/100
+print(round(y, 2))
+
+-- ERROR:
+File "XXXX", line 14
+    y+=y
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:37:15) 
+-- CODE:
+pv = 3
+pe = 2
+pd = 1
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ').upper()
+	if (p=='V'):
+		y = y+pv
+	elif (p=='E'):
+		y = y+pe
+	elif (p=='D'):
+		y = y+pd
+	else:
+		y+=y
+z = y/100
+print(round(y, 2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    y = y+pv
+NameError: name 'y' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:38:14) 
+-- CODE:
+pv = 3
+pe = 2
+pd = 1
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ').upper()
+	if (p=='V'):
+		y = y+3
+	elif (p=='E'):
+		y = y+2
+	elif (p=='D'):
+		y = y+1
+	else:
+		y+=y
+z = y/100
+print(round(y, 2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    y = y+3
+NameError: name 'y' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:38:53) 
+-- CODE:
+y = 0
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ').upper()
+	if (p=='V'):
+		y = y+3
+	elif (p=='E'):
+		y = y+2
+	elif (p=='D'):
+		y = y+1
+	else:
+		y+=y
+z = y/100
+print(round(y, 2))
+
+-- OUTPUT:
+146
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:40:55) 
+-- CODE:
+y = 0
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ').upper()
+	if (p=='V'):
+		y = y+3
+	elif (p=='E'):
+		y = y+2
+	elif (p=='D'):
+		y = y+1
+	else:
+		z=y+y
+z = y/100
+print(round(z, 2))
+
+-- OUTPUT:
+0.1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:42:36) 
+-- CODE:
+y = 0
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ').upper()
+	if (p=='V'):
+		y = y+3
+	elif (p=='E'):
+		y = y+2
+	elif (p=='D'):
+		y = y+1
+	else:
+		y = y
+	
+z = y/100
+print(round(z, 2))
+
+-- OUTPUT:
+0.1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:43:27) 
+-- CODE:
+y = 0
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ').upper()
+	if (p=='V'):
+		y = y+3
+	elif (p=='E'):
+		y = y+2
+	elif (p=='D'):
+		y = y+1
+	else:
+		y = y
+	y+=y
+z = y/100
+print(round(z, 2))
+
+-- OUTPUT:
+48.04
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:48:38) 
+-- CODE:
+y = 0
+z = 0
+k = 0
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ').upper()
+	if (p=='V'):
+		y = y+3
+	elif (p=='E'):
+		z = z+2
+	elif (p=='D'):
+		k = k+1
+	else:
+		
+n = (k+y+z)/100
+print(round(y, 2))
+
+-- ERROR:
+File "XXXX", line 15
+    n = (k+y+z)/100
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:48:55) 
+-- CODE:
+y = 0
+z = 0
+k = 0
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ').upper()
+	if (p=='V'):
+		y = y+3
+	elif (p=='E'):
+		z = z+2
+	elif (p=='D'):
+		k = k+1
+	else:
+		n = (k+y+z)/100
+print(round(y, 2))
+
+-- OUTPUT:
+3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:49:27) 
+-- CODE:
+y = 0
+z = 0
+k = 0
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ').upper()
+	if (p=='V'):
+		y = y+3
+	elif (p=='E'):
+		z = z+2
+	elif (p=='D'):
+		k = k+1
+	else:
+	n = (k+y+z)/100
+print(round(n, 2))
+
+-- ERROR:
+File "XXXX", line 14
+    n = (k+y+z)/100
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:51:00) 
+-- CODE:
+y = 0
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ').upper()
+	if (p=='V'):
+		y = y+3
+	elif (p=='E'):
+		y = y+2
+	elif (p=='D'):
+		y = y+1
+	else:
+		y = y+0
+y = (y+y)/100
+print(round(y, 2))
+
+-- OUTPUT:
+0.2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:51:11) 
+-- CODE:
+y = 0
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ').upper()
+	if (p=='V'):
+		y = y+3
+	elif (p=='E'):
+		y = y+2
+	elif (p=='D'):
+		y = y+1
+	else:
+		y = y+0
+y = y/100
+print(round(y, 2))
+
+-- OUTPUT:
+0.1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:52:36) 
+-- CODE:
+y = 0
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ').upper()
+	if (p=='V'):
+		y = y+3
+	elif (p=='E'):
+		y = y+2
+	elif (p=='D'):
+		y = y+1
+	else:
+		y = y+0
+	y+=y
+y = y/100
+print(round(y, 2))
+
+-- OUTPUT:
+48.04
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 16:55:21) 
+-- CODE:
+y = 0
+z = 0
+k = 0
+n = 0
+p = input('c: ').upper()
+while (p!="X"):
+	p = input('c: ').upper()
+	if (p=='V'):
+		y = y+3
+	elif (p=='E'):
+		z = z+2
+	elif (p=='D'):
+		k = k+1
+	else:
+		n = n+0
+	n = y+z+k
+n = n/100
+print(round(n, 2))
+
+-- OUTPUT:
+0.1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

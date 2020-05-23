@@ -1,0 +1,32 @@
+== TEST (2019-04-02 18:20:59) 
+-- CODE:
+a2=b2+c2-2bc cos
+roun(cos)
+-- ERROR:
+File "XXXX", line 1
+    a2=b2+c2-2bc cos
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 18:23:26) 
+-- CODE:
+b2
+c2
+roun(cos, match)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    b2
+NameError: name 'b2' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 18:23:48) 
+-- CODE:
+b2
+c2
+round(cos, match)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    b2
+NameError: name 'b2' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

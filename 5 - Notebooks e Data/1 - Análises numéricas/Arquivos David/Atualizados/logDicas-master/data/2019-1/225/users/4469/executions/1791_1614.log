@@ -1,0 +1,53 @@
+== SUBMITION (2019-05-29 14:20:21) 
+-- CODE:
+from numpy import*
+
+a = array(eval(input()), dtype = str)
+b = array(eval(input()), dtype = int)
+
+s = 0.0
+i = 0
+while(i < size(a)):
+	if(a[i].upper() == "BANANA"):
+		s = s + (0.97 * b[i])
+	elif(a[i].upper() == "BIFE"):
+		s = s + (2.95 * b[i])
+	elif(a[i].upper() == "FEIJOADA"):
+		s = s + (1.27 * b[i])
+	elif(a[i].upper() == "OMELETE"):
+		s = s + (1.04 * b[i])
+	elif(a[i].upper() == "TOMATE"):
+		s = s + (0.2 * b[i])
+	
+	i = i + 1
+
+print(round(s, 2))
+-- EXECUTION TIME:
+0.357418
+-- TEST CASE 1:
+---- input:
+["BANANA","FEIJOADA","TOMATE"]
+[300,50,60]
+---- correct output:
+366.5
+---- user output:
+366.5
+-- TEST CASE 2:
+---- input:
+["BANANA","FEIJOADA","OMELETE"]
+[150,100,60]
+---- correct output:
+334.9
+---- user output:
+334.9
+-- TEST CASE 3:
+---- input:
+["OMELETE","FEIJOADA","BIFE"]
+[100,130,140]
+---- correct output:
+682.1
+---- user output:
+682.1
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

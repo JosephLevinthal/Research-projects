@@ -1,0 +1,6 @@
+Mg = float(input(" insira a massa do peixe grande "))
+Vg = float(input(" insira a velocidade do peixe grande "))
+Mp = float(input(" insira a massa do peixe pequeno "))
+Vp = float(input(" insira a velocidade do peixe pequeno "))
+Vf = ((Mg * Vg) - (Mp * Vp))/(Mg + Mp)
+print( Vf )

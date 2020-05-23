@@ -1,0 +1,1 @@
+x = int(input("qual o valor? "))

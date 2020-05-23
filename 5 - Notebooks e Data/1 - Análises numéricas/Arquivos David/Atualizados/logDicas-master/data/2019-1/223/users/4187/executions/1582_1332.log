@@ -1,0 +1,1151 @@
+== TEST (2019-03-21 17:46:58) 
+-- CODE:
+aresta =
+area = 
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 1
+    aresta =
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:25:13) 
+-- CODE:
+aresta = a
+area = 3/2()
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    aresta = a
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:25:26) 
+-- CODE:
+aresta =a
+area = 3/2()
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    aresta =a
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:25:37) 
+-- CODE:
+aresta=a
+area = 3/2()
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    aresta=a
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:28:17) 
+-- CODE:
+aresta = a
+area = 3/2((3*a**1/2))
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    aresta = a
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:28:45) 
+-- CODE:
+aresta = 1
+area = 3/2((3*a**1/2))
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2((3*a**1/2))
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:29:13) 
+-- CODE:
+aresta = 5
+area = 3/2((3*5**1/2))
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2((3*5**1/2))
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:29:18) 
+-- CODE:
+aresta = 5
+area = 3/2((3*5**1/2))
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2((3*5**1/2))
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:29:54) 
+-- CODE:
+aresta = 5
+area = 3/2(3*5**1/2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2(3*5**1/2)
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:30:35) 
+-- CODE:
+aresta = 5
+area = A = 3/2(3*5**1/2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = A = 3/2(3*5**1/2)
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:30:54) 
+-- CODE:
+aresta = a = 5
+area = A = 3/2(3*5**1/2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = A = 3/2(3*5**1/2)
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:31:06) 
+-- CODE:
+aresta = a = 5
+area = A = 3/2(3*a**1/2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = A = 3/2(3*a**1/2)
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:31:44) 
+-- CODE:
+aresta = a = 5
+area = A = 3/2(3*(a)**1/2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = A = 3/2(3*(a)**1/2)
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:32:03) 
+-- CODE:
+aresta = a = 5
+area = A = 3/2*(3*(a)**1/2)
+ 
+print(round(area, 4))
+-- OUTPUT:
+11.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 16:32:12) 
+-- CODE:
+aresta = a = 5
+area = A = 3/2*(3*(a)**1/2)
+ 
+print(round(area, 4))
+-- EXECUTION TIME:
+0.175216
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+11.25
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:32:18) 
+-- CODE:
+aresta = a = 5
+area = A = 3/2*(3*(a)**1/2)
+ 
+print(round(area, 4))
+-- OUTPUT:
+11.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:32:44) 
+-- CODE:
+aresta = a = 5
+area = A = 3/2*(3*(a)**1/2)
+ 
+print(round(print(A), 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(print(A), 4))
+TypeError: type NoneType doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:32:56) 
+-- CODE:
+aresta = a = 5
+area = A = 3/2*(3*(a)**1/2)
+ 
+print(round(, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(, 4))
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:33:01) 
+-- CODE:
+aresta = a = 5
+area = A = 3/2*(3*(a)**1/2)
+ 
+print(round( , 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round( , 4))
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:33:08) 
+-- CODE:
+aresta = a = 5
+area = A = 3/2*(3*(a)**1/2)
+ 
+print(round( , 4)
+-- ERROR:
+File "XXXX", line 4
+    print(round( , 4)
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:33:30) 
+-- CODE:
+aresta = a = 5
+area = A = 3/2*(3*(a)**1/2)
+ 
+print(round(area , 4))
+-- OUTPUT:
+11.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:33:59) 
+-- CODE:
+aresta = a = 5
+area = A = 3/2*(3*(a)**1/2)
+ 
+print(round(11.25 , 4))
+-- OUTPUT:
+11.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 16:34:03) 
+-- CODE:
+aresta = a = 5
+area = A = 3/2*(3*(a)**1/2)
+ 
+print(round(11.25 , 4))
+-- EXECUTION TIME:
+0.178281
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+11.25
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:34:23) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*(a)**1/2)
+ 
+print(round(11.25 , 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2*(3*(a)**1/2)
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:34:28) 
+-- CODE:
+aresta = 5
+area =  3/2*(3*(a)**1/2)
+ 
+print(round(11.25 , 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area =  3/2*(3*(a)**1/2)
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:34:33) 
+-- CODE:
+aresta = 5
+area =3/2*(3*(a)**1/2)
+ 
+print(round(11.25 , 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area =3/2*(3*(a)**1/2)
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:34:36) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*(a)**1/2)
+ 
+print(round(11.25 , 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2*(3*(a)**1/2)
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:34:53) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*(a)**1/2)
+ 
+print(round(area , 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2*(3*(a)**1/2)
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:35:40) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*(a)**0.5)
+ 
+print(round(area , 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2*(3*(a)**0.5)
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:35:56) 
+-- CODE:
+aresta = 5
+area= 3/2*(3*(a)**0.5)
+ 
+print(round(area , 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area= 3/2*(3*(a)**0.5)
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:36:02) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*(a)**0.5)
+ 
+print(round(area , 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2*(3*(a)**0.5)
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:36:30) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*(aresta)**0.5)
+ 
+print(round(area , 4))
+-- OUTPUT:
+10.0623
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 16:36:43) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*(aresta)**0.5)
+ 
+print(round(area , 4))
+-- EXECUTION TIME:
+0.166218
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+10.0623
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:36:58) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*(aresta)**0.5)
+ 
+
+-- OUTPUT:
+10.0623
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:37:04) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*(aresta)**0.5)
+-- OUTPUT:
+10.0623
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:37:13) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*(aresta)**0.5)
+
+print(round(area , 4))
+-- OUTPUT:
+10.0623
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:37:56) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*(aresta)**0.5)
+
+print(round(area , 4))
+-- OUTPUT:
+10.0623
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 16:38:13) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*(aresta)**0.5)
+
+print(round(area , 4))
+-- EXECUTION TIME:
+0.200361
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+10.0623
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:38:25) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*(aresta)**0.5)
+
+print(round(area , 4))
+-- OUTPUT:
+10.0623
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:38:29) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*(aresta)**0.5)
+
+print(round(area, 4))
+-- OUTPUT:
+10.0623
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 16:38:32) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*(aresta)**0.5)
+
+print(round(area, 4))
+-- EXECUTION TIME:
+0.187079
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+10.0623
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:38:35) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*(aresta)**0.5)
+
+print(round(area, 4))
+-- OUTPUT:
+10.0623
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:39:02) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*(aresta)**1/2)
+
+print(round(area, 4))
+-- OUTPUT:
+11.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 16:39:08) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*(aresta)**1/2)
+
+print(round(area, 4))
+-- EXECUTION TIME:
+0.149125
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+11.25
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:39:52) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*(aresta)**1/2)
+
+print(round(area, 4))
+-- OUTPUT:
+11.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:44:40) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2)**1/2
+
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:45:04) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2)**1/2
+
+printround(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    printround(area, 4))
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:45:09) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2)**1/2
+
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:45:17) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2)**1/2
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 3
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:45:23) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2)**1/2
+
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:45:36) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2)**1/2
+
+print (round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    print (round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:45:40) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2)**1/2
+
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:45:51) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2)**1/2
+
+				
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 5
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:46:16) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2)**1/2
+				
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:46:43) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2)**1/2
+				
+-- ERROR:
+File "XXXX", line 4
+    
+        ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:46:50) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2)**1/2
+
+-- ERROR:
+File "XXXX", line 3
+    
+                                    ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:46:54) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2)**1/2
+
+				
+-- ERROR:
+File "XXXX", line 5
+    
+        ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:47:25) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2)**1/2
+
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:47:36) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2)**1/2
+
+ print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:47:43) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2)**1/2print(round(area, 4))
+-- ERROR:
+File "XXXX", line 2
+    area = 3/2*(3*((aresta)**2)**1/2print(round(area, 4))
+                                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:47:46) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2)**1/2
+				print(round(area, 4))
+-- ERROR:
+File "XXXX", line 3
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:47:51) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2)**1/2
+				
+				print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:47:58) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2)**1/2
+				
+				print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:50:36) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**1/2
+				
+print(round(area, 4))
+-- OUTPUT:
+56.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 16:50:43) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**1/2
+				
+print(round(area, 4))
+-- EXECUTION TIME:
+0.213709
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+56.25
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:50:57) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**1/2
+				
+print(round(area, 4))
+-- OUTPUT:
+56.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:50:57) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**1/2
+				
+print(round(area, 4))
+-- OUTPUT:
+56.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:50:57) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**1/2
+				
+print(round(area, 4))
+-- OUTPUT:
+56.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:52:05) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 16:52:11) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- EXECUTION TIME:
+0.140513
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.9904
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:52:20) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:52:31) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 16:52:34) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- EXECUTION TIME:
+0.124498
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.9904
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:52:40) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:52:58) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 3))
+-- OUTPUT:
+12.99
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:53:06) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 2))
+-- OUTPUT:
+12.99
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:53:12) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 1))
+-- OUTPUT:
+13.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:53:19) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 0))
+-- OUTPUT:
+13.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:53:23) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 3))
+-- OUTPUT:
+12.99
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:53:29) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 16:53:32) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- EXECUTION TIME:
+0.127133
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.9904
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:53:35) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 16:56:11) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- EXECUTION TIME:
+0.135278
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.9904
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:56:14) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:56:31) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:58:50) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2)))**0.5
+				
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 2
+    area = 3/2*(3*((aresta)**2)))**0.5
+                                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 16:59:01) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 17:01:19) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 17:04:38) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 17:04:43) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 17:04:50) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 17:05:45) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 17:05:48) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- EXECUTION TIME:
+0.150155
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.9904
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 17:19:07) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 17:19:09) 
+-- CODE:
+aresta = 5
+area = 3/2*(3*((aresta)**2))**0.5
+				
+print(round(area, 4))
+-- EXECUTION TIME:
+0.196319
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.9904
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 17:21:12) 
+-- CODE:
+aresta = 5
+area = 3/2*(3**0.5*(aresta)**2)
+				
+print(round(area, 4))
+-- OUTPUT:
+64.9519
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 17:21:16) 
+-- CODE:
+aresta = 5
+area = 3/2*(3**0.5*(aresta)**2)
+				
+print(round(area, 4))
+-- EXECUTION TIME:
+0.190991
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+64.9519
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 17:23:15) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3**0.5)*(aresta**2)
+				
+print(round(area, 4))
+-- OUTPUT:
+64.9519
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 17:23:17) 
+-- CODE:
+aresta = 5
+area = (3/2)*(3**0.5)*(aresta**2)
+				
+print(round(area, 4))
+-- EXECUTION TIME:
+0.115859
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+64.9519
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

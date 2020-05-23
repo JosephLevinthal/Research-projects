@@ -1,0 +1,318 @@
+== TEST (2019-06-19 21:04:13) 
+-- CODE:
+from math impor *
+print(27.6*-6)
+
+-- ERROR:
+File "XXXX", line 1
+    from math impor *
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-19 21:04:28) 
+-- CODE:
+from math import *
+print(27.6*-6)
+
+-- OUTPUT:
+-165.60000000000002
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-19 21:04:48) 
+-- CODE:
+from math import *
+print(27.7*-6)
+
+-- OUTPUT:
+-166.2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-19 21:05:45) 
+-- CODE:
+from math import *
+print(-166.2+23.6)
+
+-- OUTPUT:
+-142.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-19 21:06:10) 
+-- CODE:
+from math import *
+print(-142.6*4)
+
+-- OUTPUT:
+-570.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-19 21:08:18) 
+-- CODE:
+from math import *
+print(570.4+52.6)
+
+-- OUTPUT:
+623.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-19 21:09:15) 
+-- CODE:
+from math import *
+print(17*4)
+
+-- OUTPUT:
+68
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-19 21:09:40) 
+-- CODE:
+from math import *
+print(623*70)
+
+-- OUTPUT:
+43610
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-19 21:09:51) 
+-- CODE:
+from math import *
+print(623/70)
+
+-- OUTPUT:
+8.9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-19 21:11:25) 
+-- CODE:
+from math import *
+print((27.7-3*8.9)/2)
+
+-- OUTPUT:
+0.4999999999999982
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-19 21:12:15) 
+-- CODE:
+from math import *
+print((52.6-2*8.9)/12)
+
+-- OUTPUT:
+2.9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 10:12:44) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ve = array(eval(input("Digite a quantidade dos alimentos [A, B, C,]: ")))
+alimento = array([[2, 1, 4], [1, 2, 0], [2, 3, 2]])
+ve = ve.T
+
+# Resolucao do sistema de equacoes lineares
+bacteria = array(alimento, ve)
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(bacteria[0], 1))
+print("salmonela: ", round(bacteria[1], 1))
+print("coli: ", round(bacteria[2], 1))
+
+# Imprime nome da fruta mais cara
+if bacteria[0] == min(bacteria):
+    print("estafilococo")
+elif bacteria[1] == min(bacteria):
+    print("salmonela")
+else:
+    print("coli")
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 10:13:52) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ve = array(eval(input("Digite a quantidade dos alimentos [A, B, C,]: ")))
+alimento = array([[2, 1, 4], [1, 2, 0], [2, 3, 2]])
+ve = ve.T
+
+# Resolucao do sistema de equacoes lineares
+bacteria = array([alimento, ve])
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(bacteria[0], 1))
+print("salmonela: ", round(bacteria[1], 1))
+print("coli: ", round(bacteria[2], 1))
+
+# Imprime nome da fruta mais cara
+if bacteria[0] == min(bacteria):
+    print("estafilococo")
+elif bacteria[1] == min(bacteria):
+    print("salmonela")
+else:
+    print("coli")
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-20 10:15:52) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ve = array(eval(input("Digite a quantidade dos alimentos [A, B, C,]: ")))
+alimento = array([[2, 1, 4], [1, 2, 0], [2, 3, 2]])
+ve = ve.T
+
+# Resolucao do sistema de equacoes lineares
+bacteria = solve(alimento, ve)
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(bacteria[0], 1))
+print("salmonela: ", round(bacteria[1], 1))
+print("coli: ", round(bacteria[2], 1))
+
+# Imprime nome da fruta mais cara
+if bacteria[0] == min(bacteria):
+    print("estafilococo")
+elif bacteria[1] == min(bacteria):
+    print("salmonela")
+else:
+    print("coli")
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-20 10:16:20) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ve = array(eval(input("Digite a quantidade dos alimentos [A, B, C,]: ")))
+alimento = array([[2, 1, 4], [1, 2, 0], [2, 3, 2]])
+ve = ve.T
+
+# Resolucao do sistema de equacoes lineares
+bacteria = solve(alimento, ve)
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(bacteria[0], 1))
+print("salmonela: ", round(bacteria[1], 1))
+print("coli: ", round(bacteria[2], 1))
+
+# Imprime nome da fruta mais cara
+if bacteria[0] == min(bacteria):
+    print("estafilococo")
+elif bacteria[1] == min(bacteria):
+    print("salmonela")
+else:
+    print("coli")
+
+
+-- EXECUTION TIME:
+0.778865
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 12:03:43) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ve = array(eval(input("Digite a quantidade dos alimentos [A, B, C,]: ")))
+alimento = array([[2, 1, 4], [1, 2, 0], [2, 3, 2]])
+ve = ve.T
+
+# Resolucao do sistema de equacoes lineares
+bacteria = solve(alimento, ve)
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(bacteria[0], 1))
+print("salmonela: ", round(bacteria[1], 1))
+print("coli: ", round(bacteria[2], 1))
+
+# Imprime nome da fruta mais cara
+if bacteria[0] == min(bacteria):
+    print("estafilococo")
+elif bacteria[1] == min(bacteria):
+    print("salmonela")
+else:
+    print("coli")
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 12:03:59) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+ve = array(eval(input("Digite a quantidade dos alimentos [A, B, C,]: ")))
+alimento = array([[2, 1, 4], [1, 2, 0], [2, 3, 2]])
+ve = ve.T
+
+# Resolucao do sistema de equacoes lineares
+bacteria = solve(alimento, ve)
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(bacteria[0], 1))
+print("salmonela: ", round(bacteria[1], 1))
+print("coli: ", round(bacteria[2], 1))
+
+# Imprime nome da fruta mais cara
+if bacteria[0] == min(bacteria):
+    print("estafilococo")
+elif bacteria[1] == min(bacteria):
+    print("salmonela")
+else:
+    print("coli")
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

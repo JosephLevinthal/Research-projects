@@ -1,0 +1,155 @@
+== TEST (2019-06-26 17:33:58) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+diaria = array(eval("Digite o valor da diaria: "))
+n = shape(diaria)[0]
+print(n)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 17:34:30) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+diaria = array(eval(input("Digite o valor da diaria: ")))
+n = shape(diaria)[0]
+print(n)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 17:38:30) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+diaria = array(eval(input("Digite o valor da diaria: ")))
+n = shape(diaria)[0]
+print(n)
+for i in range(n):
+	diaria[i,:] = sorted(diaria([i,:], reverse=True)
+	print(i,0)
+-- ERROR:
+File "XXXX", line 7
+    diaria[i,:] = sorted(diaria([i,:], reverse=True)
+                                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 17:39:02) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+diaria = array(eval(input("Digite o valor da diaria: ")))
+n = shape(diaria)[0]
+print(n)
+for i in range(n):
+	diaria[i,:] = sorted(diaria[i,:], reverse=True)
+	print(i,0)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 17:39:54) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+diaria = array(eval(input("Digite o valor da diaria: ")))
+n = shape(diaria)[0]
+for i in range(n):
+	diaria[i,:] = sorted(diaria[i,:], reverse=True)
+	print(diaria[i,0])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 17:40:09) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+diaria = array(eval(input("Digite o valor da diaria: ")))
+n = shape(diaria)[0]
+for i in range(n):
+	diaria[i,:] = sorted(diaria[i,:], reverse=True)
+	print(diaria[i,0])
+-- EXECUTION TIME:
+0.913784
+-- TEST CASE 1:
+---- input:
+[[34.5,67.8,89.7,56.4,65.7,78.9,81.2],[99.9,67.8,87.6,45.4,12.3,45.5,23.7],[27.5,93.1,45.9,47.3,19.2,76.5,49.3]]
+---- correct output:
+89.7
+99.9
+93.1
+---- user output:
+89.7
+99.9
+93.1
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:06:48) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+rs = array(eval(input("Digite o salario semanal: ")))
+for i in range(shape(rs)[0]):
+	print(max(rs))
+			  
+			  
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:07:22) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+rs = array(eval(input("Digite o salario semanal: ")))
+for i in range(shape(rs)[0]):
+	print(max(rs[i,:]))
+			  
+			  
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 12:07:53) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+rs = array(eval(input("Digite o salario semanal: ")))
+for i in range(shape(rs)[0]):
+	print(max(rs[i,:]))
+			  
+			  
+-- EXECUTION TIME:
+1.11837
+-- TEST CASE 1:
+---- input:
+[[34.5,67.8,89.7,56.4,65.7,78.9,81.2],[99.9,67.8,87.6,45.4,12.3,45.5,23.7],[27.5,93.1,45.9,47.3,19.2,76.5,49.3]]
+---- correct output:
+89.7
+99.9
+93.1
+---- user output:
+89.7
+99.9
+93.1
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

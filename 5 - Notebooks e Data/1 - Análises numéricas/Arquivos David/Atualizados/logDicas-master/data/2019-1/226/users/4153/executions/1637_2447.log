@@ -1,0 +1,566 @@
+== TEST (2019-04-09 10:53:13) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o preco: "))
+
+if(preco > pagamento):
+	val = pagamento - preco
+	msg = "Falta " + round(val,2)
+else:
+	val = pagamento - preco
+	msg = "Troco de " + round(val,2)
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    msg = "Falta " + round(val,2)
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:54:20) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o preco: "))
+
+if(preco > pagamento):
+	val = pagamento - preco
+	msg = "Falta " + (round(val,2))
+else:
+	val = pagamento - preco
+	msg = "Troco de " + (round(val,2))
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    msg = "Falta " + (round(val,2))
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:56:55) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o preco: "))
+
+if(preco > pagamento):
+	val = pagamento - preco
+	num = round(val,2)
+	msg = "Falta " + num
+else:
+	val = pagamento - preco
+	num = round(val,2)
+	msg = "Troco de " + num
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    msg = "Falta " + num
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:59:16) 
+-- CODE:
+preco = input("Insira o preco: "))
+pagamento =input("Insira o preco: "))
+
+if(preco > pagamento):
+	preco = float(preco)
+	pagamento = float(pagamento)
+	val = pagamento - preco
+	num = round(val,2)
+	msg = "Falta " + num
+else:
+	preco = float(preco)
+	pagamento = float(pagamento)
+	val = pagamento - preco
+	num = round(val,2)
+	msg = "Troco de " + num
+print(msg)
+-- ERROR:
+File "XXXX", line 1
+    preco = input())
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:59:22) 
+-- CODE:
+preco = input("Insira o preco: ")
+pagamento =input("Insira o preco: ")
+
+if(preco > pagamento):
+	preco = float(preco)
+	pagamento = float(pagamento)
+	val = pagamento - preco
+	num = round(val,2)
+	msg = "Falta " + num
+else:
+	preco = float(preco)
+	pagamento = float(pagamento)
+	val = pagamento - preco
+	num = round(val,2)
+	msg = "Troco de " + num
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    msg = "Falta " + num
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:00:43) 
+-- CODE:
+preco = input("Insira o preco: ")
+pagamento =input("Insira o preco: ")
+
+if(preco > pagamento):
+	preco = float(preco)
+	pagamento = float(pagamento)
+	val = pagamento - preco
+	num = round(val,2)
+	print("Falta " + num)
+else:
+	preco = float(preco)
+	pagamento = float(pagamento)
+	val = pagamento - preco
+	num = round(val,2)
+	print("Troco de " + num)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    print("Falta " + num)
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:02:52) 
+-- CODE:
+preco = input("Insira o preco: ")
+pagamento = input("Insira o preco: ")
+
+if(preco > pagamento):
+	preco = float(preco)
+	pagamento = float(pagamento)
+	val = pagamento - preco
+	num = round(val,2)
+	print("Falta " + num)
+else:
+	preco = float(preco)
+	pagamento = float(pagamento)
+	val = pagamento - preco
+	num = round(val,2)
+	print("Troco de " + num)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    print("Falta " + num)
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:09:15) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o valor do pagamento: "))
+
+if(preco >= pagamento):
+	operacao = pagamento - preco
+	operacao = round(operacao,2)
+	msg = "Falta ", operacao
+else:
+	operacao = pagamento - preco
+	operacao = round(operacao,2)
+	msg = "Troco de ", operacao
+
+print(msg)
+-- OUTPUT:
+('Falta ', -26.0)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:09:39) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o valor do pagamento: "))
+
+if(preco >= pagamento):
+	operacao = pagamento - preco
+	operacao = round(operacao,2)
+	msg = "Falta "+ operacao
+else:
+	operacao = pagamento - preco
+	operacao = round(operacao,2)
+	msg = "Troco de "+ operacao
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    msg = "Falta "+ operacao
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:09:54) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o valor do pagamento: "))
+
+if(preco >= pagamento):
+	operacao = pagamento - preco
+	operacao = round(operacao,2)
+	msg = "Falta ", operacao
+else:
+	operacao = pagamento - preco
+	operacao = round(operacao,2)
+	msg = "Troco de ", operacao
+
+print(msg)
+-- OUTPUT:
+('Falta ', -26.0)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:10:32) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o valor do pagamento: "))
+
+if(preco >= pagamento):
+	operacao = pagamento - preco
+	val = round(operacao,2)
+	msg = "Falta ", val
+else:
+	operacao = pagamento - preco
+	val = round(operacao,2)
+	msg = "Troco de ", val
+
+print(msg)
+-- OUTPUT:
+('Falta ', -26.0)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:11:06) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o valor do pagamento: "))
+
+if(preco >= pagamento):
+	operacao = pagamento - preco
+	val = round(operacao,2)
+	msg = "Falta ", val
+else:
+	operacao = pagamento - preco
+	val = round(operacao,2)
+	msg = "Troco de ",val
+
+print(msg)
+-- OUTPUT:
+('Falta ', -26.0)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:11:33) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o valor do pagamento: "))
+
+if(preco >= pagamento):
+	operacao = pagamento - preco
+	val = round(operacao,2)
+	msg = "Falta ", val
+	print(msg)
+else:
+	operacao = pagamento - preco
+	val = round(operacao,2)
+	msg = "Troco de ",val
+   print(msg)
+
+-- ERROR:
+File "XXXX", line 13
+    print(msg)
+             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:11:57) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o valor do pagamento: "))
+
+if(preco >= pagamento):
+	operacao = pagamento - preco
+	val = round(operacao,2)
+	msg = "Falta ", val
+	print(msg)
+else:
+	operacao = pagamento - preco
+	val = round(operacao,2)
+	msg = "Troco de ",val
+   print(msg)
+-- ERROR:
+File "XXXX", line 13
+    print(msg)
+             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:12:12) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o valor do pagamento: "))
+
+if(preco >= pagamento):
+	operacao = pagamento - preco
+	val = round(operacao,2)
+	msg = "Falta ", val
+else:
+	operacao = pagamento - preco
+	val = round(operacao,2)
+	msg = "Troco de ",val
+print(msg)
+-- OUTPUT:
+('Falta ', -26.0)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:15:09) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o valor do pagamento: "))
+
+if(preco >= pagamento):
+	operacao = preco - pagamento
+	val = round(operacao,2)
+	msg = "Falta ", val
+else:
+	operacao =  pagamento - preco
+	val = round(operacao,2)
+	msg = "Troco de ", val
+print(msg)
+-- OUTPUT:
+('Falta ', 26.0)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:16:50) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o valor do pagamento: "))
+
+x = preco - pagamento
+y = pagamento - preco
+
+if(preco >= pagamento):
+	msg = "Falta ", x
+else:
+	msg = "Troco de ", y
+print(msg)
+-- OUTPUT:
+('Falta ', 26.0)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:17:57) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o valor do pagamento: "))
+
+x = preco - pagamento
+y = pagamento - preco
+
+if(preco >= pagamento):
+	print = ("Falta ", round(x,2)
+else:
+	print = ("Troco de ", round(y,2)
+
+-- ERROR:
+File "XXXX", line 9
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:18:11) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o valor do pagamento: "))
+
+x = preco - pagamento
+y = pagamento - preco
+
+if(preco >= pagamento):
+	print = ("Falta ", round(x,2)
+else:
+	print = ("Troco de ", round(y,2)
+
+-- ERROR:
+File "XXXX", line 9
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:18:30) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o valor do pagamento: "))
+
+x = preco - pagamento
+y = pagamento - preco
+
+if(preco >= pagamento):
+	print ("Falta ", round(x,2)
+else:
+	print ("Troco de ", round(y,2)
+
+-- ERROR:
+File "XXXX", line 9
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:18:46) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o valor do pagamento: "))
+
+x = preco - pagamento
+y = pagamento - preco
+
+if(preco >= pagamento):
+	print("Falta ", round(x,2))
+else:
+	print("Troco de ", round(y,2))
+
+-- OUTPUT:
+Falta  26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 11:18:52) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o valor do pagamento: "))
+
+x = preco - pagamento
+y = pagamento - preco
+
+if(preco >= pagamento):
+	print("Falta ", round(x,2))
+else:
+	print("Troco de ", round(y,2))
+
+-- EXECUTION TIME:
+0.175825
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+Falta  26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+Troco de  28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+Falta  0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:19:04) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o valor do pagamento: "))
+
+x = preco - pagamento
+y = pagamento - preco
+
+if(preco >= pagamento):
+	print("Falta ", round(x,2))
+else:
+	print("Troco de ", round(y,2))
+
+-- OUTPUT:
+Falta  26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:19:15) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o valor do pagamento: "))
+
+x = preco - pagamento
+y = pagamento - preco
+
+if(preco >= pagamento):
+	print("Falta ", round(x,2))
+else:
+	print("Troco de ", round(y,2))
+
+-- OUTPUT:
+Falta  26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:20:20) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o valor do pagamento: "))
+
+x = preco - pagamento
+y = pagamento - preco
+
+if(X > Y):
+	msg = x
+	print("Falta ", round(x,2))
+else:
+	msg = y
+	print("Troco de ", round(y,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    if(X > Y):
+NameError: name 'X' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:20:45) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o valor do pagamento: "))
+
+x = preco - pagamento
+y = pagamento - preco
+
+if(preco > pagamento):
+	msg = x
+	print("Falta ", round(x,2))
+else:
+	msg = y
+	print("Troco de ", round(y,2))
+
+-- OUTPUT:
+Falta  26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 11:20:53) 
+-- CODE:
+preco = float(input("Insira o preco: "))
+pagamento = float(input("Insira o valor do pagamento: "))
+
+x = preco - pagamento
+y = pagamento - preco
+
+if(preco > pagamento):
+	msg = x
+	print("Falta ", round(x,2))
+else:
+	msg = y
+	print("Troco de ", round(y,2))
+
+-- EXECUTION TIME:
+0.156907
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+Falta  26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+Troco de  28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+Troco de  0.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

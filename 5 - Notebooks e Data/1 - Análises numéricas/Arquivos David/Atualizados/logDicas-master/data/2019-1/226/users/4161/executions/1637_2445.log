@@ -1,0 +1,308 @@
+== TEST (2019-04-04 13:44:46) 
+-- CODE:
+e = input("escala (c/f) : ")
+t = float(input("temperatura: "))
+if (e.upper == "F"):
+	f = 9*c/5 +32
+	print(round(f ,2))
+else (e.upper == "C"):
+	c = 5*(e - 32)/9
+	print(round(c ,2))
+
+-- ERROR:
+File "XXXX", line 6
+    else (e.upper == "C"):
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 13:44:58) 
+-- CODE:
+e = input("escala (c/f) : ")
+t = float(input("temperatura: "))
+if (e.upper == "F"):
+	f = 9*c/5 +32
+	print(round(f ,2))
+else:
+	c = 5*(e - 32)/9
+	print(round(c ,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    c = 5*(e - 32)/9
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 13:46:32) 
+-- CODE:
+e = input("escala (c/f) : ")
+t = float(input("temperatura: "))
+if (e.upper == "C"):
+	f = 9*t/5 +32
+	print(round(f ,2))
+else:
+	c = 5*(t - 32)/9
+	print(round(c ,2))
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 13:46:59) 
+-- CODE:
+e = input("escala (c/f) : ")
+t = float(input("temperatura: "))
+if (e.upper == "F"):
+	f = 9*t/5 + 32
+	print(round(f ,2))
+else:
+	c = 5*(t - 32)/9
+	print(round(c ,2))
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 13:49:19) 
+-- CODE:
+e = input("escala (c/f) : ")
+t = float(input("temperatura: "))
+if (e.upper == "c"):
+	f = (9/5)*t + 32
+	print(round(f ,2))
+else:
+	c = (5/9)*(t - 32)
+	print(round(c ,2))
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 13:49:37) 
+-- CODE:
+e = input("escala (c/f) : ")
+t = float(input("temperatura: "))
+if (e.upper == "c"):
+	f = (9/5)*t + 32
+	print(round(f ,2))
+else:
+	c = (5/9)*(t - 32)
+	print(round(c ,2))
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 13:50:46) 
+-- CODE:
+e = input("escala (c/f) : ")
+t = float(input("temperatura: "))
+if (e.upper == "c"):
+	f = (9/5)*t + 32
+	print(round(f ,2))
+else:
+	c = (5/9)*(t - 32)
+	print(round(c ,2))
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-04 13:50:54) 
+-- CODE:
+e = input("escala (c/f) : ")
+t = float(input("temperatura: "))
+if (e.upper == "c"):
+	f = (9/5)*t + 32
+	print(round(f ,2))
+else:
+	c = (5/9)*(t - 32)
+	print(round(c ,2))
+
+-- EXECUTION TIME:
+0.216448
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 13:56:15) 
+-- CODE:
+e = input("escala (c/f) : ")
+t = float(input("temperatura: "))
+if (e.upper == "c"):
+	f = (9*t)/5 +32
+	print(round(f ,2))
+else:
+	c = (5/9)*(t - 32)
+	print(round(c ,2))
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 13:56:26) 
+-- CODE:
+e = input("escala (c/f) : ")
+t = float(input("temperatura: "))
+if (e.upper == "c"):
+	f = (9*t)/5 +32
+	print(round(f ,2))
+else:
+	c = (5/9)*(t - 32)
+	print(round(c ,2))
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 13:56:43) 
+-- CODE:
+e = input("escala (c/f) : ")
+t = float(input("temperatura: "))
+if (e.upper == "C"):
+	f = (9*t)/5 +32
+	print(round(f ,2))
+else:
+	c = (5/9)*(t - 32)
+	print(round(c ,2))
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 13:57:10) 
+-- CODE:
+e = input("escala (c/f) : ")
+t = float(input("temperatura: "))
+if (e.upper == "C"):
+	f = (9*t)/5 +32
+	print(round(f ,2))
+else:
+	c = (5/9)*(t - 32)
+	print(round(c ,2))
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 13:57:18) 
+-- CODE:
+e = input("escala (c/f) : ")
+t = float(input("temperatura: "))
+if (e.upper == "C"):
+	f = (9*t)/5 +32
+	print(round(f ,2))
+else:
+	c = (5/9)*(t - 32)
+	print(round(c ,2))
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 13:57:38) 
+-- CODE:
+e = input("escala (c/f) : ")
+t = float(input("temperatura: "))
+if (e.lower() == "c"):
+	f = (9*t)/5 +32
+	print(round(f ,2))
+else:
+	c = (5/9)*(t - 32)
+	print(round(c ,2))
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-04 13:57:45) 
+-- CODE:
+e = input("escala (c/f) : ")
+t = float(input("temperatura: "))
+if (e.lower() == "c"):
+	f = (9*t)/5 +32
+	print(round(f ,2))
+else:
+	c = (5/9)*(t - 32)
+	print(round(c ,2))
+
+-- EXECUTION TIME:
+0.159505
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 10:11:53) 
+-- CODE:
+e = input("escala (c/f) : ")
+t = float(input("temperatura: "))
+if (e.lower() == "c"):
+	f = (9*t)/5 +32
+	print(round(f ,2))
+else:
+	c = (5/9)*(t - 32)
+	print(round(c ,2))
+
+-- EXECUTION TIME:
+0.200933
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

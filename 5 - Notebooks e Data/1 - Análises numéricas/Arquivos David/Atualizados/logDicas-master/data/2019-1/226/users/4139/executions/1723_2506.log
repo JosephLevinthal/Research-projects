@@ -1,0 +1,261 @@
+== TEST (2019-05-13 13:51:28) 
+-- CODE:
+C = 'C'
+
+if(C>'A'):
+	print("fdstgfdsgfdsg")
+-- OUTPUT:
+fdstgfdsgfdsg
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:51:44) 
+-- CODE:
+C = 'C'
+
+if(C>'D'):
+	print("fdstgfdsgfdsg")
+-- OUTPUT:
+fdstgfdsgfdsg
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 14:27:10) 
+-- CODE:
+qi = int(input("quantidade inicial de tambaquis no tanque: "))
+pc = int(input("percentua de crescimento anual: "))
+qv = int(input("quantidade de tambaquis retirados para venda: "))
+
+p = pc / 100
+
+ano = 0
+
+while(qi < 12000 and qi > 0):
+	qi = (qi*p)-qv
+	ano = ano + 1
+
+if(qi == 12000):
+	print("LIMITE")
+else:
+	print("EXTINCAO")
+print(ano)
+-- OUTPUT:
+EXTINCAO
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 14:27:53) 
+-- CODE:
+qi = int(input("quantidade inicial de tambaquis no tanque: "))
+pc = int(input("percentua de crescimento anual: "))
+qv = int(input("quantidade de tambaquis retirados para venda: "))
+
+p = pc / 100
+
+ano = 0
+
+while(qi < 12000 and qi > 0):
+	qi += (qi*p)-qv
+	ano = ano + 1
+
+if(qi == 12000):
+	print("LIMITE")
+else:
+	print("EXTINCAO")
+print(ano)
+-- OUTPUT:
+EXTINCAO
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 14:28:50) 
+-- CODE:
+qi = int(input("quantidade inicial de tambaquis no tanque: "))
+pc = int(input("percentua de crescimento anual: "))
+qv = int(input("quantidade de tambaquis retirados para venda: "))
+
+p = pc / 100
+
+ano = 0
+
+while(qi < 12000 and qi > 0):
+	qi += (qi*p)-qv
+	ano = ano + 1
+	print(qi,ano)
+
+if(qi == 12000):
+	print("LIMITE")
+else:
+	print("EXTINCAO")
+print(ano)
+-- OUTPUT:
+1173.04 1
+1108.4224 2
+1039.9277439999998 3
+967.3234086399998 4
+890.3628131583998 5
+808.7845819479038 6
+722.311656864778 7
+630.6503562766646 8
+533.4893776532645 9
+430.4987403124603 10
+321.32866473120794 11
+205.6083846150804 12
+82.94488769198523 13
+-47.07841904649567 14
+EXTINCAO
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 14:29:42) 
+-- CODE:
+qi = int(input("quantidade inicial de tambaquis no tanque: "))
+pc = int(input("percentua de crescimento anual: "))
+qv = int(input("quantidade de tambaquis retirados para venda: "))
+
+p = pc / 100
+
+ano = 0
+
+while(qi < 12000 and qi > 0):
+	qi += (qi*p)-qv
+	ano = ano + 1
+	print(qi,ano)
+
+if(qi =< 12000):
+	print("LIMITE")
+else:
+	print("EXTINCAO")
+print(ano)
+-- ERROR:
+File "XXXX", line 14
+    if(qi =< 12000):
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 14:29:51) 
+-- CODE:
+qi = int(input("quantidade inicial de tambaquis no tanque: "))
+pc = int(input("percentua de crescimento anual: "))
+qv = int(input("quantidade de tambaquis retirados para venda: "))
+
+p = pc / 100
+
+ano = 0
+
+while(qi < 12000 and qi > 0):
+	qi += (qi*p)-qv
+	ano = ano + 1
+	print(qi,ano)
+
+if(qi <= 12000):
+	print("LIMITE")
+else:
+	print("EXTINCAO")
+print(ano)
+-- OUTPUT:
+1173.04 1
+1108.4224 2
+1039.9277439999998 3
+967.3234086399998 4
+890.3628131583998 5
+808.7845819479038 6
+722.311656864778 7
+630.6503562766646 8
+533.4893776532645 9
+430.4987403124603 10
+321.32866473120794 11
+205.6083846150804 12
+82.94488769198523 13
+-47.07841904649567 14
+LIMITE
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 14:30:30) 
+-- CODE:
+qi = int(input("quantidade inicial de tambaquis no tanque: "))
+pc = int(input("percentua de crescimento anual: "))
+qv = int(input("quantidade de tambaquis retirados para venda: "))
+
+p = pc / 100
+
+ano = 0
+
+while(qi < 12000 and qi > 0):
+	qi += (qi*p)-qv
+	ano = ano + 1
+	print(qi,ano)
+
+if(qi >= 12000):
+	print("LIMITE")
+else:
+	print("EXTINCAO")
+print(ano)
+-- OUTPUT:
+1173.04 1
+1108.4224 2
+1039.9277439999998 3
+967.3234086399998 4
+890.3628131583998 5
+808.7845819479038 6
+722.311656864778 7
+630.6503562766646 8
+533.4893776532645 9
+430.4987403124603 10
+321.32866473120794 11
+205.6083846150804 12
+82.94488769198523 13
+-47.07841904649567 14
+EXTINCAO
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-13 14:30:56) 
+-- CODE:
+qi = int(input("quantidade inicial de tambaquis no tanque: "))
+pc = int(input("percentua de crescimento anual: "))
+qv = int(input("quantidade de tambaquis retirados para venda: "))
+
+p = pc / 100
+
+ano = 0
+
+while(qi < 12000 and qi > 0):
+	qi += (qi*p)-qv
+	ano = ano + 1
+
+if(qi >= 12000):
+	print("LIMITE")
+else:
+	print("EXTINCAO")
+print(ano)
+-- EXECUTION TIME:
+0.164184
+-- TEST CASE 1:
+---- input:
+1234
+6
+135
+---- correct output:
+EXTINCAO
+14
+---- user output:
+EXTINCAO
+14
+-- TEST CASE 2:
+---- input:
+579
+37
+26
+---- correct output:
+LIMITE
+11
+---- user output:
+LIMITE
+11
+-- TEST CASE 3:
+---- input:
+6789
+45
+2345
+---- correct output:
+LIMITE
+4
+---- user output:
+LIMITE
+4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,111 @@
+== TEST (2019-06-06 10:49:28) 
+-- CODE:
+from numpy import*
+gol= array(eval(input("qual o numero de gols? ")))
+gola= array(eval(input("qual o numero de gols do time adversarios? ")))
+
+vn= zeros(3, dtype=int)
+
+for i in range(gol):
+	if (v1[i]>v2[i]):
+		vn[0]= vn[0]+1
+	elif (v1[i]==v2[i]):
+		vn[1]=vn[1]+1
+	elif (v1[i]<v2[i]):
+		vn[2]=vn[2]+1
+print(vn)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 10:50:25) 
+-- CODE:
+from numpy import*
+gol= array(eval(input("qual o numero de gols? ")))
+gola= array(eval(input("qual o numero de gols do time adversarios? ")))
+
+vn= zeros(3, dtype=int)
+
+for i in range(size(gol)):
+	if (v1[i]>v2[i]):
+		vn[0]= vn[0]+1
+	elif (v1[i]==v2[i]):
+		vn[1]=vn[1]+1
+	elif (v1[i]<v2[i]):
+		vn[2]=vn[2]+1
+print(vn)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 10:50:52) 
+-- CODE:
+from numpy import*
+v1= array(eval(input("qual o numero de gols? ")))
+v2= array(eval(input("qual o numero de gols do time adversarios? ")))
+
+vn= zeros(3, dtype=int)
+
+for i in range(size(gol)):
+	if (v1[i]>v2[i]):
+		vn[0]= vn[0]+1
+	elif (v1[i]==v2[i]):
+		vn[1]=vn[1]+1
+	elif (v1[i]<v2[i]):
+		vn[2]=vn[2]+1
+print(vn)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 10:51:16) 
+-- CODE:
+from numpy import*
+v1= array(eval(input("qual o numero de gols? ")))
+v2= array(eval(input("qual o numero de gols do time adversarios? ")))
+
+vn= zeros(3, dtype=int)
+
+for i in range(size(v1)):
+	if (v1[i]>v2[i]):
+		vn[0]= vn[0]+1
+	elif (v1[i]==v2[i]):
+		vn[1]=vn[1]+1
+	elif (v1[i]<v2[i]):
+		vn[2]=vn[2]+1
+print(vn)
+-- EXECUTION TIME:
+1.09431
+-- TEST CASE 1:
+---- input:
+[2,3,2,4,3,5,3,4,2,3,1,0]
+[3,3,1,0,2,3,3,0,1,2,1,1]
+---- correct output:
+[7 3 2]
+---- user output:
+[7 3 2]
+-- TEST CASE 2:
+---- input:
+[1,2,1,2,1,2,1,2,0]
+[3,5,3,3,3,3,3,3,3]
+---- correct output:
+[0 0 9]
+---- user output:
+[0 0 9]
+-- TEST CASE 3:
+---- input:
+[1,2,2,2,2,1,1,2,2,1,1,2,2]
+[0,1,1,1,0,0,0,0,0,0,1,1,1]
+---- correct output:
+[12 1 0]
+---- user output:
+[12  1  0]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

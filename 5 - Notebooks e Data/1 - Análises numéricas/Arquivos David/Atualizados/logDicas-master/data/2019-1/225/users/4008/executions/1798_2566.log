@@ -1,0 +1,1059 @@
+== TEST (2019-06-05 15:11:41) 
+-- CODE:
+for i in range(5)
+	prin(i)
+-- ERROR:
+File "XXXX", line 1
+    for i in range(5)
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 15:11:48) 
+-- CODE:
+for i in range(5):
+	prin(i)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    prin(i)
+NameError: name 'prin' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 15:11:54) 
+-- CODE:
+for i in range(5):
+	print(i)
+-- OUTPUT:
+0
+1
+2
+3
+4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 15:12:05) 
+-- CODE:
+for i in range(10):
+	print(i)
+-- OUTPUT:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 15:12:24) 
+-- CODE:
+for i in range(3):
+	print(i)
+-- OUTPUT:
+0
+1
+2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 15:12:29) 
+-- CODE:
+for i in range(1):
+	print(i)
+-- OUTPUT:
+0
+1
+2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 19:14:20) 
+-- CODE:
+from numpy import*
+cont = zeros(6,dtype=int)
+vet = array(eval(input("Vetor: ")))
+segunda = 2
+terca = 3
+quarta = 4
+quinta = 5
+sexta = 6
+sabado = 7
+for i in vet:
+	if(vet[i] == 2):
+		cont[0] = 1 + cont[0]
+	elif(vet[i] == 3):
+		cont[1] = 1 + cont[1]
+	elif(vet[i] == 4):
+		cont[2] = 1 + cont[2]
+	elif(vet[i] == 5):
+		cont[3] = 1 + cont[3]
+	elif(vet[i] == 6):
+		cont[4] = 1 + cont[4]
+	elif(vet[i] == 7):
+		cont[5] = 1 + cont[5]
+	print(cont)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 19:16:42) 
+-- CODE:
+from numpy import*
+cont = zeros(6,dtype=int)
+vet = array(eval(input("Vetor: ")))
+segunda = 2
+terca = 3
+quarta = 4
+quinta = 5
+sexta = 6
+sabado = 7
+for i in range(size(vet)):
+	if(vet[i] == 2):
+		cont[0] = 1 + cont[0]
+	elif(vet[i] == 3):
+		cont[1] = 1 + cont[1]
+	elif(vet[i] == 4):
+		cont[2] = 1 + cont[2]
+	elif(vet[i] == 5):
+		cont[3] = 1 + cont[3]
+	elif(vet[i] == 6):
+		cont[4] = 1 + cont[4]
+	elif(vet[i] == 7):
+		cont[5] = 1 + cont[5]
+for 
+-- ERROR:
+File "XXXX", line 23
+    for 
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 19:16:57) 
+-- CODE:
+from numpy import*
+cont = zeros(6,dtype=int)
+vet = array(eval(input("Vetor: ")))
+segunda = 2
+terca = 3
+quarta = 4
+quinta = 5
+sexta = 6
+sabado = 7
+for i in range(size(vet)):
+	if(vet[i] == 2):
+		cont[0] = 1 + cont[0]
+	elif(vet[i] == 3):
+		cont[1] = 1 + cont[1]
+	elif(vet[i] == 4):
+		cont[2] = 1 + cont[2]
+	elif(vet[i] == 5):
+		cont[3] = 1 + cont[3]
+	elif(vet[i] == 6):
+		cont[4] = 1 + cont[4]
+	elif(vet[i] == 7):
+		cont[5] = 1 + cont[5]
+for 
+-- ERROR:
+File "XXXX", line 23
+    for 
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 19:17:10) 
+-- CODE:
+from numpy import*
+cont = zeros(6,dtype=int)
+vet = array(eval(input("Vetor: ")))
+segunda = 2
+terca = 3
+quarta = 4
+quinta = 5
+sexta = 6
+sabado = 7
+for i in range(size(vet)):
+	if(vet[i] == 2):
+		cont[0] = 1 + cont[0]
+	elif(vet[i] == 3):
+		cont[1] = 1 + cont[1]
+	elif(vet[i] == 4):
+		cont[2] = 1 + cont[2]
+	elif(vet[i] == 5):
+		cont[3] = 1 + cont[3]
+	elif(vet[i] == 6):
+		cont[4] = 1 + cont[4]
+	elif(vet[i] == 7):
+		cont[5] = 1 + cont[5]
+	print(cont)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 19:22:11) 
+-- CODE:
+from numpy import*
+cont = zeros(6,dtype=int)
+vet = array(eval(input("Vetor: ")))
+segunda = 2
+terca = 3
+quarta = 4
+quinta = 5
+sexta = 6
+sabado = 7
+for i in range(size(vet)):
+	if(vet[i] == 2):
+		cont[0] = 1 + cont[0]
+	elif(vet[i] == 3):
+		cont[1] = 1 + cont[1]
+	elif(vet[i] == 4):
+		cont[2] = 1 + cont[2]
+	elif(vet[i] == 5):
+		cont[3] = 1 + cont[3]
+	elif(vet[i] == 6):
+		cont[4] = 1 + cont[4]
+	elif(vet[i] == 7):
+		cont[5] = 1 + cont[5]
+	print(cont)
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 19:41:55) 
+-- CODE:
+from numpy import*
+cont = zeros(6,dtype=int)
+vet = array(eval(input("Vetor: ")))
+for i in range(size(vet)):
+	if(vet[i] == 2):
+		cont[0] = 1 + cont[0]
+	elif(vet[i] == 3):
+		cont[1] = 1 + cont[1]
+	elif(vet[i] == 4):
+		cont[2] = 1 + cont[2]
+	elif(vet[i] == 5):
+		cont[3] = 1 + cont[3]
+	elif(vet[i] == 6):
+		cont[4] = 1 + cont[4]
+	elif(vet[i] == 7):
+		cont[5] = 1 + cont[5]
+	print(cont)
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 19:43:31) 
+-- CODE:
+from numpy import*
+vet = array(eval(input("Vetor: ")))
+cont = zeros(6, dtype=int)
+for i in range(size(vet)):
+	if(vet[i] == 2):
+		cont[0] = 1 + cont[0]
+	elif(vet[i] == 3):
+		cont[1] = 1 + cont[1]
+	elif(vet[i] == 4):
+		cont[2] = 1 + cont[2]
+	elif(vet[i] == 5):
+		cont[3] = 1 + cont[3]
+	elif(vet[i] == 6):
+		cont[4] = 1 + cont[4]
+	elif(vet[i] == 7):
+		cont[5] = 1 + cont[5]
+	print(cont)
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 19:44:06) 
+-- CODE:
+from numpy import*
+vet = array(eval(input("Vetor: ")))
+cont = zeros(6, dtype=int)
+for i in range(size(vet)):
+	if(vet[i] == 2):
+		cont[0] = 1 + cont[0]
+	if(vet[i] == 3):
+		cont[1] = 1 + cont[1]
+	if(vet[i] == 4):
+		cont[2] = 1 + cont[2]
+	if(vet[i] == 5):
+		cont[3] = 1 + cont[3]
+	if(vet[i] == 6):
+		cont[4] = 1 + cont[4]
+	if(vet[i] == 7):
+		cont[5] = 1 + cont[5]
+	print(cont)
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 19:45:49) 
+-- CODE:
+from numpy import*
+vet = array(eval(input("Vetor: "))
+cont = zeros(6, dtype=int)
+for i in vet:
+	if(vet[i] == 2):
+		cont[0] = 1 + cont[0]
+	elif(vet[i] == 3):
+		cont[1] = 1 + cont[1]
+	elif(vet[i] == 4):
+		cont[2] = 1 + cont[2]
+	elif(vet[i] == 5):
+		cont[3] = 1 + cont[3]
+	elif(vet[i] == 6):
+		cont[4] = 1 + cont[4]
+	elif(vet[i] == 7):
+		cont[5] = 1 + cont[5]
+	print(cont)
+
+	
+-- ERROR:
+File "XXXX", line 3
+    cont = zeros(6, dtype=int)
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 19:45:57) 
+-- CODE:
+from numpy import*
+vet = array(eval(input("Vetor: "))
+cont = zeros(6, dtype=int)
+for i in vet:
+	if(vet[i] == 2):
+		cont[0] = 1 + cont[0]
+	elif(vet[i] == 3):
+		cont[1] = 1 + cont[1]
+	elif(vet[i] == 4):
+		cont[2] = 1 + cont[2]
+	elif(vet[i] == 5):
+		cont[3] = 1 + cont[3]
+	elif(vet[i] == 6):
+		cont[4] = 1 + cont[4]
+	elif(vet[i] == 7):
+		cont[5] = 1 + cont[5]
+	print(cont)
+
+	
+-- ERROR:
+File "XXXX", line 3
+    cont = zeros(6, dtype=int)
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 13:05:04) 
+-- CODE:
+numpy from import * 
+v = array(eval(input("faltas: ")))
+for i in range(size(v))
+j = zeros(6, dtype=int)
+s = 0
+t = 0
+qu = 0
+qui = 0
+sex = 0
+sab = 0
+	if(v[i] == 2):
+		s = s + 1
+	elif(v[i] == 3):
+		t = t + 1
+	elif(v[i] == 4):
+		qu = qu + 1
+	elif(v[i] == 5):
+		qui = qui + 1
+	elif(v[i] == 6):
+		sex = sex + 1
+	elif(v[i] == 7):
+		sab = sab + 1
+h = s + t + qu + qui + sex + sab
+for i in range(size(v)):
+	j[0] = round(((s/h)*100), 1)
+	j[1] = round(((t/h)*100), 1)	
+	j[2] = round(((qua/h)*100),1)
+	j[3] = round(((qui/h)*100),1)
+	j[4] = round(((sex/h)*100),1)
+	j[5] = round(((sab/h)*100),1)
+print(j)
+-- ERROR:
+File "XXXX", line 1
+    numpy from import * 
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 13:05:32) 
+-- CODE:
+from numpy import * 
+v = array(eval(input("faltas: ")))
+for i in range(size(v))
+j = zeros(6, dtype=int)
+s = 0
+t = 0
+qu = 0
+qui = 0
+sex = 0
+sab = 0
+	if(v[i] == 2):
+		s = s + 1
+	elif(v[i] == 3):
+		t = t + 1
+	elif(v[i] == 4):
+		qu = qu + 1
+	elif(v[i] == 5):
+		qui = qui + 1
+	elif(v[i] == 6):
+		sex = sex + 1
+	elif(v[i] == 7):
+		sab = sab + 1
+h = s + t + qu + qui + sex + sab
+for i in range(size(v)):
+	j[0] = round(((s/h)*100), 1)
+	j[1] = round(((t/h)*100), 1)	
+	j[2] = round(((qua/h)*100),1)
+	j[3] = round(((qui/h)*100),1)
+	j[4] = round(((sex/h)*100),1)
+	j[5] = round(((sab/h)*100),1)
+print(j)
+-- ERROR:
+File "XXXX", line 3
+    for i in range(size(v))
+                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 13:05:44) 
+-- CODE:
+from numpy import * 
+v = array(eval(input("faltas: ")))
+for i in range(size(v)):
+j = zeros(6, dtype=int)
+s = 0
+t = 0
+qu = 0
+qui = 0
+sex = 0
+sab = 0
+	if(v[i] == 2):
+		s = s + 1
+	elif(v[i] == 3):
+		t = t + 1
+	elif(v[i] == 4):
+		qu = qu + 1
+	elif(v[i] == 5):
+		qui = qui + 1
+	elif(v[i] == 6):
+		sex = sex + 1
+	elif(v[i] == 7):
+		sab = sab + 1
+h = s + t + qu + qui + sex + sab
+for i in range(size(v)):
+	j[0] = round(((s/h)*100), 1)
+	j[1] = round(((t/h)*100), 1)	
+	j[2] = round(((qua/h)*100),1)
+	j[3] = round(((qui/h)*100),1)
+	j[4] = round(((sex/h)*100),1)
+	j[5] = round(((sab/h)*100),1)
+print(j)
+-- ERROR:
+File "XXXX", line 4
+    j = zeros(6, dtype=int)
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 13:06:10) 
+-- CODE:
+from numpy import * 
+v = array(eval(input("faltas: ")))
+for i in range(size(v)):
+	j = zeros(6, dtype=int)
+s = 0
+t = 0
+qu = 0
+qui = 0
+sex = 0
+sab = 0
+	if(v[i] == 2):
+		s = s + 1
+	elif(v[i] == 3):
+		t = t + 1
+	elif(v[i] == 4):
+		qu = qu + 1
+	elif(v[i] == 5):
+		qui = qui + 1
+	elif(v[i] == 6):
+		sex = sex + 1
+	elif(v[i] == 7):
+		sab = sab + 1
+h = s + t + qu + qui + sex + sab
+for i in range(size(v)):
+	j[0] = round(((s/h)*100), 1)
+	j[1] = round(((t/h)*100), 1)	
+	j[2] = round(((qua/h)*100),1)
+	j[3] = round(((qui/h)*100),1)
+	j[4] = round(((sex/h)*100),1)
+	j[5] = round(((sab/h)*100),1)
+print(j)
+-- ERROR:
+File "XXXX", line 11
+    if(v[i] == 2):
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 13:06:33) 
+-- CODE:
+from numpy import * 
+v = array(eval(input("faltas: ")))
+for i in range(size(v)):
+	j = zeros(6, dtype=int)
+s = 0
+t = 0
+qu = 0
+qui = 0
+sex = 0
+sab = 0
+if(v[i] == 2):
+		s = s + 1
+elif(v[i] == 3):
+		t = t + 1
+elif(v[i] == 4):
+		qu = qu + 1
+elif(v[i] == 5):
+		qui = qui + 1
+elif(v[i] == 6):
+		sex = sex + 1
+elif(v[i] == 7):
+		sab = sab + 1
+h = s + t + qu + qui + sex + sab
+for i in range(size(v)):
+	j[0] = round(((s/h)*100), 1)
+	j[1] = round(((t/h)*100), 1)	
+	j[2] = round(((qua/h)*100),1)
+	j[3] = round(((qui/h)*100),1)
+	j[4] = round(((sex/h)*100),1)
+	j[5] = round(((sab/h)*100),1)
+print(j)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-10 13:06:52) 
+-- CODE:
+from numpy import * 
+v = array(eval(input("faltas: ")))
+for i in range(size(v)):
+	j = zeros(6, dtype=int)
+s = 0
+t = 0
+qu = 0
+qui = 0
+sex = 0
+sab = 0
+if(v[i] == 2):
+		s = s + 1
+elif(v[i] == 3):
+		t = t + 1
+elif(v[i] == 4):
+		qu = qu + 1
+elif(v[i] == 5):
+		qui = qui + 1
+elif(v[i] == 6):
+		sex = sex + 1
+elif(v[i] == 7):
+		sab = sab + 1
+h = s + t + qu + qui + sex + sab
+for i in range(size(v)):
+	j[0] = round(((s/h)*100), 1)
+	j[1] = round(((t/h)*100), 1)	
+	j[2] = round(((qua/h)*100),1)
+	j[3] = round(((qui/h)*100),1)
+	j[4] = round(((sex/h)*100),1)
+	j[5] = round(((sab/h)*100),1)
+print(j)
+-- EXECUTION TIME:
+1.08142
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1798/2566/main.py", line 27, in <module>
+    j[2] = round(((qua/h)*100),1)
+NameError: name 'qua' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-10 13:07:08) 
+-- CODE:
+from numpy import * 
+v = array(eval(input("faltas: ")))
+for i in range(size(v)):
+	j = zeros(6, dtype=int)
+s = 0
+t = 0
+qu = 0
+qui = 0
+sex = 0
+sab = 0
+if(v[i] == 2):
+		s = s + 1
+elif(v[i] == 3):
+		t = t + 1
+elif(v[i] == 4):
+		qu = qu + 1
+elif(v[i] == 5):
+		qui = qui + 1
+elif(v[i] == 6):
+		sex = sex + 1
+elif(v[i] == 7):
+		sab = sab + 1
+h = s + t + qu + qui + sex + sab
+for i in range(size(v)):
+	j[0] = round(((s/h)*100), 1)
+	j[1] = round(((t/h)*100), 1)	
+	j[2] = round(((qua/h)*100),1)
+	j[3] = round(((qui/h)*100),1)
+	j[4] = round(((sex/h)*100),1)
+	j[5] = round(((sab/h)*100),1)
+print(j)
+-- EXECUTION TIME:
+0.800853
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1798/2566/main.py", line 27, in <module>
+    j[2] = round(((qua/h)*100),1)
+NameError: name 'qua' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 13:07:46) 
+-- CODE:
+from numpy import * 
+v = array(eval(input("faltas: ")))
+for i in range(size(v)):
+	j = zeros(6, dtype=int)
+s = 0
+t = 0
+qu = 0
+qui = 0
+sex = 0
+sab = 0
+if(v[i] == 2):
+		s = s + 1
+elif(v[i] == 3):
+		t = t + 1
+elif(v[i] == 4):
+		qu = qu + 1
+elif(v[i] == 5):
+		qui = qui + 1
+elif(v[i] == 6):
+		sex = sex + 1
+elif(v[i] == 7):
+		sab = sab + 1
+h = s + t + qu + qui + sex + sab
+for i in range(size(v)):
+	j[0] = round(((s/h)*100), 1)
+	j[1] = round(((t/h)*100), 1)	
+	j[2] = round(((qua/h)*100),1)
+	j[3] = round(((qui/h)*100),1)
+	j[4] = round(((sex/h)*100),1)
+	j[5] = round(((sab/h)*100),1)
+print(j)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-10 13:09:07) 
+-- CODE:
+from numpy import * 
+v = array(eval(input("faltas: ")))
+for i in range(size(v)):
+	j = zeros(6, dtype=float)
+s = 0
+t = 0
+qu = 0
+qui = 0
+sex = 0
+sab = 0
+if(v[i] == 2):
+		s = s + 1
+elif(v[i] == 3):
+		t = t + 1
+elif(v[i] == 4):
+		qu = qu + 1
+elif(v[i] == 5):
+		qui = qui + 1
+elif(v[i] == 6):
+		sex = sex + 1
+elif(v[i] == 7):
+		sab = sab + 1
+h = s + t + qu + qui + sex + sab
+for i in range(size(v)):
+	j[0] = round(((s/h)*100), 1)
+	j[1] = round(((t/h)*100), 1)	
+	j[2] = round(((qua/h)*100),1)
+	j[3] = round(((qui/h)*100),1)
+	j[4] = round(((sex/h)*100),1)
+	j[5] = round(((sab/h)*100),1)
+print(j)
+-- EXECUTION TIME:
+1.14906
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1798/2566/main.py", line 27, in <module>
+    j[2] = round(((qua/h)*100),1)
+NameError: name 'qua' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-10 13:09:27) 
+-- CODE:
+from numpy import * 
+v = array(eval(input("faltas: ")))
+for i in range(size(v)):
+j = zeros(6, dtype=float)
+s = 0
+t = 0
+qu = 0
+qui = 0
+sex = 0
+sab = 0
+if(v[i] == 2):
+		s = s + 1
+elif(v[i] == 3):
+		t = t + 1
+elif(v[i] == 4):
+		qu = qu + 1
+elif(v[i] == 5):
+		qui = qui + 1
+elif(v[i] == 6):
+		sex = sex + 1
+elif(v[i] == 7):
+		sab = sab + 1
+h = s + t + qu + qui + sex + sab
+for i in range(size(v)):
+	j[0] = round(((s/h)*100), 1)
+	j[1] = round(((t/h)*100), 1)	
+	j[2] = round(((qua/h)*100),1)
+	j[3] = round(((qui/h)*100),1)
+	j[4] = round(((sex/h)*100),1)
+	j[5] = round(((sab/h)*100),1)
+print(j)
+-- EXECUTION TIME:
+0.901129
+-- ERROR:
+  File "/home/codebench/codes/1798/2566/main.py", line 4
+    j = zeros(6, dtype=float)
+    ^
+IndentationError: expected an indented block
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-10 13:24:00) 
+-- CODE:
+from numpy  import * 
+v = array(eval(input("faltas: ")))
+s = 0
+t = 0
+qu = 0
+qui = 0
+sex = 0
+sab = 0
+for i in range(size(v)):
+	if(v[i] == 2):
+		s = s + 1
+	elif(v[i] == 3):
+		t = t + 1
+	elif(v[i] == 4):
+		qu = qu + 1
+	elif(v[i] == 5):
+		qui = qui + 1
+	elif(v[i] == 6):
+		sex = sex + 1
+	elif(v[i] == 7):
+		sab = sab + 1
+h = s + t + qu + qui + sex + sab
+j = zeros(6, dtype=float)
+for i in range(size(v)):
+	j[0] = round(((s/h)*100), 1)
+	j[1] = round(((t/h)*100), 1)	
+	j[2] = round(((qua/h)*100),1)
+	j[3] = round(((qui/h)*100),1)
+	j[4] = round(((sex/h)*100),1)
+	j[5] = round(((sab/h)*100),1)
+print(j)
+-- EXECUTION TIME:
+1.04302
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1798/2566/main.py", line 27, in <module>
+    j[2] = round(((qua/h)*100),1)
+NameError: name 'qua' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 13:24:15) 
+-- CODE:
+from numpy  import * 
+v = array(eval(input("faltas: ")))
+s = 0
+t = 0
+qu = 0
+qui = 0
+sex = 0
+sab = 0
+for i in range(size(v)):
+	if(v[i] == 2):
+		s = s + 1
+	elif(v[i] == 3):
+		t = t + 1
+	elif(v[i] == 4):
+		qu = qu + 1
+	elif(v[i] == 5):
+		qui = qui + 1
+	elif(v[i] == 6):
+		sex = sex + 1
+	elif(v[i] == 7):
+		sab = sab + 1
+h = s + t + qu + qui + sex + sab
+j = zeros(6, dtype=float)
+for i in range(size(v)):
+	j[0] = round(((s/h)*100), 1)
+	j[1] = round(((t/h)*100), 1)	
+	j[2] = round(((qua/h)*100),1)
+	j[3] = round(((qui/h)*100),1)
+	j[4] = round(((sex/h)*100),1)
+	j[5] = round(((sab/h)*100),1)
+print(j)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy  import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-10 13:24:28) 
+-- CODE:
+from numpy  import * 
+v = array(eval(input("faltas: ")))
+s = 0
+t = 0
+qu = 0
+qui = 0
+sex = 0
+sab = 0
+for i in range(size(v)):
+	if(v[i] == 2):
+		s = s + 1
+	elif(v[i] == 3):
+		t = t + 1
+	elif(v[i] == 4):
+		qu = qu + 1
+	elif(v[i] == 5):
+		qui = qui + 1
+	elif(v[i] == 6):
+		sex = sex + 1
+	elif(v[i] == 7):
+		sab = sab + 1
+h = s + t + qu + qui + sex + sab
+j = zeros(6, dtype=float)
+for i in range(size(j)):
+	j[0] = round(((s/h)*100), 1)
+	j[1] = round(((t/h)*100), 1)	
+	j[2] = round(((qua/h)*100),1)
+	j[3] = round(((qui/h)*100),1)
+	j[4] = round(((sex/h)*100),1)
+	j[5] = round(((sab/h)*100),1)
+print(j)
+-- EXECUTION TIME:
+1.07071
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1798/2566/main.py", line 27, in <module>
+    j[2] = round(((qua/h)*100),1)
+NameError: name 'qua' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-10 13:24:39) 
+-- CODE:
+from numpy  import * 
+v = array(eval(input("faltas: ")))
+s = 0
+t = 0
+qu = 0
+qui = 0
+sex = 0
+sab = 0
+for i in range(size(v)):
+	if(v[i] == 2):
+		s = s + 1
+	elif(v[i] == 3):
+		t = t + 1
+	elif(v[i] == 4):
+		qu = qu + 1
+	elif(v[i] == 5):
+		qui = qui + 1
+	elif(v[i] == 6):
+		sex = sex + 1
+	elif(v[i] == 7):
+		sab = sab + 1
+h = s + t + qu + qui + sex + sab
+j = zeros(6, dtype=float)
+for i in range(size(j)):
+	j[0] = round(((s/h)*100), 1)
+	j[1] = round(((t/h)*100), 1)	
+	j[2] = round(((qu/h)*100),1)
+	j[3] = round(((qui/h)*100),1)
+	j[4] = round(((sex/h)*100),1)
+	j[5] = round(((sab/h)*100),1)
+print(j)
+-- EXECUTION TIME:
+1.12888
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.  18.8 25.  37.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 4.  8. 16. 20. 20. 32.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[15.4  7.7 23.1  7.7 15.4 30.8]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-10 15:00:14) 
+-- CODE:
+from numpy import * 
+v = array(eval(input("faltas: ")))
+s = 0
+t = 0
+qu = 0
+qui = 0
+sex = 0
+sab = 0
+for i in range(size(v)):
+	if(v[i] == 2):
+		s = s + 1
+	elif(v[i] == 3):
+		t = t + 1
+	elif(v[i] == 4):
+		qu = qu + 1
+	elif(v[i] == 5):
+		qui = qui + 1
+	elif(v[i] == 6):
+		sex = sex + 1
+	elif(v[i] == 7):
+		sab = sab + 1
+h = s + t + qu + qui + sex + sab
+j = zeros(6, dtype=float)
+for i in range(size(j)):
+	j[0] = round(((s/h)*100), 1)
+	j[1] = round(((t/h)*100), 1)	
+	j[2] = round(((qu/h)*100),1)
+	j[3] = round(((qui/h)*100),1)
+	j[4] = round(((sex/h)*100),1)
+	j[5] = round(((sab/h)*100),1)
+print(j)
+-- EXECUTION TIME:
+1.18829
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.  18.8 25.  37.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 4.  8. 16. 20. 20. 32.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[15.4  7.7 23.1  7.7 15.4 30.8]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-10 15:10:46) 
+-- CODE:
+from numpy import * 
+v = array(eval(input("faltas: ")))
+s = 0
+t = 0
+qu = 0
+qui = 0
+sex = 0
+sab = 0
+for i in range(size(v)):
+	if(v[i] == 2):
+		s = s + 1
+	elif(v[i] == 3):
+		t = t + 1
+	elif(v[i] == 4):
+		qu = qu + 1
+	elif(v[i] == 5):
+		qui = qui + 1
+	elif(v[i] == 6):
+		sex = sex + 1
+	elif(v[i] == 7):
+		sab = sab + 1
+h = s + t + qu + qui + sex + sab
+j = zeros(6, dtype=float)
+for i in range(size(j)):
+	j[0] = round(((s/h)*100), 1)
+	j[1] = round(((t/h)*100), 1)	
+	j[2] = round(((qu/h)*100),1)
+	j[3] = round(((qui/h)*100),1)
+	j[4] = round(((sex/h)*100),1)
+	j[5] = round(((sab/h)*100),1)
+print(j)
+-- EXECUTION TIME:
+0.944394
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.  18.8 25.  37.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 4.  8. 16. 20. 20. 32.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[15.4  7.7 23.1  7.7 15.4 30.8]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

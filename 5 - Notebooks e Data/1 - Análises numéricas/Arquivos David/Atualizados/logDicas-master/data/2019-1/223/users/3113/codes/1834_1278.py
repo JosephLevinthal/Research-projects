@@ -1,0 +1,25 @@
+from numpy import*
+from numpy.linalg import*
+
+matris=array([[0,2,11,6,15,11,1]
+				  ,[2,0,7,12,4,2,15]
+				  ,[11,7,0,11,8,3,13]
+				  ,[6,12,11,0,10,2,1]
+				  ,[15,4,8,10,0,5,13]
+				  ,[11,2,3,2,5,0,14]
+				  ,[1,15,13,1,13,14,0]])
+
+d=int(input(""))
+s=int(input(""))
+i=(d//111) -1
+j=(s//111) -1
+x=0
+
+while(d!=-1):
+	b=matris[i,j]
+	x=x+b
+	d=int(input(""))
+	s=int(input(""))
+	i=(d//111) -1
+	j=(s//111) -1
+	print(x)

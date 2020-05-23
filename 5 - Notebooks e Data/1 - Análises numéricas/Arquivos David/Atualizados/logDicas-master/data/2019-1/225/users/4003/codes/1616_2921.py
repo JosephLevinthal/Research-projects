@@ -1,0 +1,5 @@
+#totaljogo2 = precojogo2 - (precojogo2 * (desconto25 / 100))
+a = print(50 - (25/100))
+x = float(input("valor do jogo1:"))
+y = int(input("valor do jogo2:"))
+round(y,2)

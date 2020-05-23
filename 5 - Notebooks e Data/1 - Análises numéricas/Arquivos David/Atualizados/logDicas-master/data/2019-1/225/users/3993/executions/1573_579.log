@@ -1,0 +1,48 @@
+== TEST (2019-03-13 14:12:14) 
+-- CODE:
+print("A UFAM tem" 2019 - 1909, "anos de fundacao. ")
+-- ERROR:
+File "XXXX", line 1
+    print("A UFAM tem" 2019 - 1909, "anos de fundacao. ")
+                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 14:12:27) 
+-- CODE:
+print("A UFAM tem" (2019 - 1909), "anos de fundacao. ")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    print("A UFAM tem" (2019 - 1909), "anos de fundacao. ")
+TypeError: 'str' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 14:13:09) 
+-- CODE:
+print("A UFAM tem" 100"anos de fundacao. ")
+-- ERROR:
+File "XXXX", line 1
+    print("A UFAM tem" 100"anos de fundacao. ")
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 14:13:33) 
+-- CODE:
+print("A UFAM tem", 2016 - 1909, "anos de fundacao. ")
+-- OUTPUT:
+A UFAM tem 107 anos de fundacao.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-13 14:13:40) 
+-- CODE:
+print("A UFAM tem", 2016 - 1909, "anos de fundacao. ")
+-- EXECUTION TIME:
+0.209059
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+A UFAM tem 107 anos de fundacao.
+---- user output:
+A UFAM tem 107 anos de fundacao.
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

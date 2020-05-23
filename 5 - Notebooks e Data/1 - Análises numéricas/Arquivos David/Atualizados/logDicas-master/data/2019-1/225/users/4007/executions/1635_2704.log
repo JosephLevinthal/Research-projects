@@ -1,0 +1,775 @@
+== TEST (2019-04-13 00:09:19) 
+-- CODE:
+nota do aluno = int(input("nota do aluno"))
+-- ERROR:
+File "XXXX", line 1
+    nota do aluno = int(input())
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 00:09:40) 
+-- CODE:
+nota do aluno = int(input("nota do aluno: "))
+-- ERROR:
+File "XXXX", line 1
+    nota do aluno = int(input())
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 00:09:55) 
+-- CODE:
+nota_do_aluno = int(input("nota do aluno: "))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    nota_do_aluno = int(input())
+ValueError: invalid literal for int() with base 10: '5.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 00:22:35) 
+-- CODE:
+nota_do_aluno = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+if (opcao == "S"):
+	nota_do_aluno = nota_do_aluno + 10%
+	
+else:
+	nota_do_aluno = nota_do_aluno
+
+print(nota_do_aluno)
+-- ERROR:
+File "XXXX", line 4
+    nota_do_aluno = nota_do_aluno + 10%
+                                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 00:23:22) 
+-- CODE:
+nota_do_aluno = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+if (opcao == "S"):
+	msg = nota_do_aluno + 10%
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+File "XXXX", line 4
+    msg = nota_do_aluno + 10%
+                            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:02:11) 
+-- CODE:
+nota_do_aluno = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+S = nota_do_aluno + (10%)
+if (opcao == "S"):
+	msg = nota_do_aluno 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+File "XXXX", line 3
+    S = nota_do_aluno + (10%)
+                            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:46:41) 
+-- CODE:
+nota_do_aluno = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+S = nota_do_aluno + (nota_do_aluno * 10/100)
+if (opcao == "S"):
+	msg = nota_do_aluno 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:47:09) 
+-- CODE:
+nota_do_aluno = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+S = nota_do_aluno + (nota_do_aluno * 10/100)
+if (opcao == "S"):
+	msg = nota_do_aluno 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:48:15) 
+-- CODE:
+nota_do_aluno = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+ 
+if (opcao == "S"):
+	msg = nota_do_aluno + (nota_do_aluno * 10/100)  
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:50:34) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+ bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+File "XXXX", line 3
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:50:44) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:09) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:09) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:09) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:09) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:09) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:22) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:22) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:22) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:22) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:22) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:22) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:22) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:22) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:22) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:22) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:22) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:22) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:23) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:23) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:23) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:23) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:23) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:23) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:51:57) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:52:16) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+bonificacao = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonificacao = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:52:54) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+S = nota + (nota_do_aluno * 10/100)  
+if (opcao == "S"):
+	msg = nota_do_aluno 
+ 
+	
+else:
+	msg = nota_do_aluno
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    S = nota + (nota_do_aluno * 10/100)  
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:54:27) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N) ")
+
+if (opcao == "S"):
+	print(nota_do_aluno + (nota_do_aluno * 10/100))
+ 
+	
+else:
+   print(nota)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(nota_do_aluno + (nota_do_aluno * 10/100))
+NameError: name 'nota_do_aluno' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 21:56:45) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N): ")
+
+if (opcao == "S"):
+	print(nota_do_aluno + (nota_do_aluno * 10/100))
+ 
+
+ else:
+   print(nota)
+
+
+-- ERROR:
+File "XXXX", line 8
+    else:
+        ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 22:01:05) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N): ")
+
+if (opcao.upper() == "S"):
+	nota = nota + nota * 10/100
+	
+	
+print(nota)
+	
+	
+
+
+
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-14 22:01:16) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N): ")
+
+if (opcao.upper() == "S"):
+	nota = nota + nota * 10/100
+	
+	
+print(nota)
+	
+	
+
+
+
+-- EXECUTION TIME:
+0.197866
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-14 23:39:42) 
+-- CODE:
+nota = float(input("nota do aluno: "))
+opcao = input("bonificacao? (S/N): ")
+
+if (opcao.upper() == "S"):
+	nota = nota + nota * 10/100
+	
+	
+print(nota)
+	
+	
+
+
+
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

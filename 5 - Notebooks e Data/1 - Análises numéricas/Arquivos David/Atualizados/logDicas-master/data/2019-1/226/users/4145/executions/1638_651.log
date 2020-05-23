@@ -1,0 +1,567 @@
+== TEST (2019-04-13 17:07:55) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+
+if(s=="")
+print(s)
+-- ERROR:
+File "XXXX", line 4
+    if(s=="")
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 17:08:02) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+
+#if(s=="")
+print(s)
+-- OUTPUT:
+F
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 17:09:47) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+
+if(s=="M")
+	print( (72.7*h)- 58 )
+else:
+	print((62.1*h)-44.7)
+-- ERROR:
+File "XXXX", line 4
+    if(s=="M")
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 17:10:38) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+
+if(s ==  M )
+	print( (72.7*h)- 58 )
+else:
+	print((62.1*h)-44.7)
+-- ERROR:
+File "XXXX", line 4
+    if(s ==  M )
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 17:11:09) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+
+if(s ==  " M" ):
+	print( (72.7*h)- 58 )
+else:
+	print((62.1*h)-44.7)
+-- OUTPUT:
+17.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-13 17:11:35) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+
+if(s ==  " M" ):
+	print( (72.7*h)- 58 )
+else:
+	print((62.1*h)-44.7)
+-- EXECUTION TIME:
+0.13969
+-- TEST CASE 1:
+---- input:
+1.0
+F
+---- correct output:
+17.4
+---- user output:
+17.4
+-- TEST CASE 2:
+---- input:
+1.234
+M
+---- correct output:
+31.71
+---- user output:
+31.931399999999996
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 17:11:42) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+
+if(s ==  " M" ):
+	print( (72.7*h)- 58 )
+else:
+	print((62.1*h)-44.7)
+-- OUTPUT:
+17.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 17:13:14) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+
+if(s ==  " M" ):
+	print(round( (72.7*h)- 58 ),2)
+else:
+	print(round((62.1*h)-44.7),2)
+-- OUTPUT:
+17 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 17:15:36) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm1 = (72.7*h)- 58
+pm2 = (62.1*h)-44.7
+if(s ==  " M" ):
+	
+	print(round(pm1,2))
+else:
+	print(round(pm2,2))
+-- OUTPUT:
+17.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 17:18:49) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm1 = (72.7 * h) - 58
+pm2 = (62.1*h)-44.7
+if(s ==  " M" ):
+	
+	print(round(pm1,2))
+else:
+	print(round(pm2,2))
+-- OUTPUT:
+17.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-13 17:19:20) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm1 = (72.7 * h) - 58
+pm2 = (62.1*h)-44.7
+if(s ==  " M" ):
+	
+	print(round(pm1,2))
+else:
+	print(round(pm2,2))
+-- EXECUTION TIME:
+0.168783
+-- TEST CASE 1:
+---- input:
+1.0
+F
+---- correct output:
+17.4
+---- user output:
+17.4
+-- TEST CASE 2:
+---- input:
+1.234
+M
+---- correct output:
+31.71
+---- user output:
+31.93
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 17:21:29) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm1 = (72.7 * h) - 58
+pm2 = (62.1*h)-44.7
+if(s ==  " M" ):
+	
+	print(round(pm1,2))
+else:
+	print(round(pm2,2))
+-- OUTPUT:
+17.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 17:21:46) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm1 = (72.7 * h) - 58
+pm2 = (62.1*h)-44.7
+if(s ==  " M" ):
+	
+	print(round(pm1,2))
+else:
+	print(round(pm2,2))
+-- OUTPUT:
+17.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 17:22:32) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm1 = (72.7 * h) - 58
+pm2 = (62.1*h)-44.7
+#if(s ==  " M" ):
+	
+	#print(round(pm1,2))
+#else:
+	#print(round(pm2,2))
+print(pm1)
+-- OUTPUT:
+14.700000000000003
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 17:23:15) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm1 = (72.7 * h) - 58
+pm2 = (62.1*h)-44.7
+if(s ==  " M" ):
+	
+	print(round(pm1,2))
+else:
+	print(round(pm2,2))
+print(pm1)
+-- OUTPUT:
+17.4
+14.700000000000003
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 17:24:12) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm1 = round((72.7 * h) - 58,2)
+pm2 = (62.1*h)-44.7
+if(s ==  " M" ):
+	
+	print(pm1,2)
+else:
+	print(round(pm2,2))
+print(pm1)
+-- OUTPUT:
+17.4
+14.7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 17:25:20) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm1 = round((72.7 * h) - 58,2)
+pm2 = round((62.1*h)-44.7,2)
+if(s ==  " M" ):
+	
+	print(pm1)
+else:
+	print(pm2)
+#print(pm1)
+-- OUTPUT:
+17.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 17:25:43) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+
+pm1 = round((72.7 * h) - 58,2)
+
+pm2 = round((62.1*h)-44.7,2)
+
+if(s ==  " M" ):
+	
+	
+	print(pm1)
+else:
+	print(pm2)
+#print(pm1)
+-- OUTPUT:
+17.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 17:26:48) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm1 = round((72.7 * h) - 58,2)
+pm2 = round((62.1*h)-44.7,2)
+#if(s ==  " M" ):
+	#print(pm1)
+#else:
+	#print(pm2)
+print(pm1)
+-- OUTPUT:
+14.7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 17:27:51) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm1 = round((72.7 * h) - 58,2)
+pm2 = round((62.1*h)-44.7,2)
+if(s ==  " M " ):
+	print(pm1)
+else:
+	print(pm2)
+#print(pm1)
+-- OUTPUT:
+17.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 17:29:02) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm = round((72.7 * h) - 58,2)
+pf = round((62.1*h)-44.7,2)
+if(s ==  " M " ):
+	print(pm)
+else:
+	print(pf)
+#print(pm)
+-- OUTPUT:
+17.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 17:29:22) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm = round((72.7 * h) - 58,2)
+pf = round((62.1*h)-44.7,2)
+if(s ==  " M " ):
+	print(pm)
+else:
+	print(pf)
+print(pm)
+-- OUTPUT:
+17.4
+14.7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 17:34:14) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm = round((72.7 * h) - 58,2)
+pf = round((62.1*h)-44.7,2)
+if(s ==  " M " ):
+	print(pm)
+else:
+	print(pf)
+print(pm)
+-- OUTPUT:
+17.4
+14.7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:22:30) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm = round((72.7 * h) - 58,2)
+pf = round((62.1*h)-44.7,2)
+if(s ==  " M " ):
+	print(pm)
+else:
+	print(pf)
+
+-- OUTPUT:
+17.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:22:51) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm = round((72.7 * h) - 58,2)
+pf = round((62.1*h)-44.7,2)
+if(s ==  " M " ):
+	print(pm)
+else:
+	print(pf)
+
+
+-- OUTPUT:
+17.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:23:17) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm = round((72.7 * h) - 58,2)
+pf = round((62.1*h)-44.7,2)
+#if(s ==  " M " ):
+	#print(pm)
+#else:
+print(pf)
+
+
+-- OUTPUT:
+17.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:23:47) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm = round((72.7 * h) - 58,2)
+pf = round((62.1*h)-44.7,2)
+#if(s ==  " M " ):
+	#print(pm)
+#else:
+print(pm)
+
+
+-- OUTPUT:
+14.7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:24:06) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm = round((72.7 * h) - 58,2)
+pf = round((62.1*h)-44.7,2)
+if(s ==  " M " ):
+	#print(pm)
+else:
+#print(pm)
+
+
+-- ERROR:
+File "XXXX", line 7
+    else:
+       ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:24:32) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm = round((72.7 * h) - 58,2)
+pf = round((62.1*h)-44.7,2)
+if(s ==  " M " ):
+	print(pm)
+else:
+	print(pf)
+
+-- OUTPUT:
+17.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:24:53) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm = round((72.7 * h) - 58,2)
+pf = round((62.1*h)-44.7,2)
+if(s ==  " M " ):
+	print(pm)
+else:
+	print(pf)
+
+-- OUTPUT:
+17.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:26:21) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm = round((72.7 * h) - 58,2)
+pf = round((62.1*h)-44.7,2)
+#if(s ==  " M " ):
+	#print(pm)
+#else:
+	#print(pf)
+print(pf)
+-- OUTPUT:
+17.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:26:45) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ").upper()
+pm = round((72.7 * h) - 58,2)
+pf = round((62.1*h)-44.7,2)
+#if(s ==  " M " ):
+	#print(pm)
+#else:
+	#print(pf)
+print(s)
+-- OUTPUT:
+F
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:36:33) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ")
+pm = round((72.7 * h) - 58,2)
+pf = round((62.1*h)-44.7,2)
+#if(s ==  " M " ):
+	#print(pm)
+#else:
+	#print(pf)
+print(s)
+-- OUTPUT:
+F
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:36:57) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ")
+pm = round((72.7 * h) - 58,2)
+pf = round((62.1*h)-44.7,2)
+if(s ==  " M " ):
+	print(pm)
+else:
+	print(pf)
+
+-- OUTPUT:
+17.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:43:29) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ")
+pm = round((72.7 * h) - 58,2)
+pf = round((62.1*h)-44.7,2)
+if(s ==  "M" ):
+	print(pm)
+else:
+	print(pf)
+
+-- OUTPUT:
+17.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:43:39) 
+-- CODE:
+h = float(input("altura do individuo: "))
+s = input("sexo do individuo: ")
+pm = round((72.7 * h) - 58,2)
+pf = round((62.1*h)-44.7,2)
+if(s ==  "M" ):
+	print(pm)
+else:
+	print(pf)
+
+-- EXECUTION TIME:
+0.15087
+-- TEST CASE 1:
+---- input:
+1.0
+F
+---- correct output:
+17.4
+---- user output:
+17.4
+-- TEST CASE 2:
+---- input:
+1.234
+M
+---- correct output:
+31.71
+---- user output:
+31.71
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

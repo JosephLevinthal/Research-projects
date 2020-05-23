@@ -1,0 +1,705 @@
+== TEST (2019-04-08 15:11:14) 
+-- CODE:
+temperatura= input("Escala? (S/N)")
+
+
+-- OUTPUT:
+190.09
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:38:34) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (F = temp * 9/5) + 32
+else:
+	print (C = temperatura - 32) * 5/9
+print(temperatura)
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print (F = temp * 9/5) + 32
+TypeError: 'F' is an invalid keyword argument for this function
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:39:18) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (temp * 9/5) + 32
+else:
+	print (C = temperatura - 32) * 5/9
+print(temperatura)
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print (temp * 9/5) + 32
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:39:49) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (temp * 9/5) + 32
+else:
+	print  (temperatura - 32) * 5/9
+print(temperatura)
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print (temp * 9/5) + 32
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:40:15) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print temp * 9/5 + 32
+else:
+	print  temp - 32 * 5/9
+print(temperatura)
+
+
+
+-- ERROR:
+File "XXXX", line 5
+    print temp * 9/5 + 32
+             ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(temp * 9/5 + 32)?
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:40:32) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (temp * 9/5) + 32
+else:
+	print  (temp - 32) * 5/9
+print(temperatura)
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print (temp * 9/5) + 32
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:41:22) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (temp * 9/5) + 32
+else:
+	print  (temp - 32) * 5/9
+	
+print(temp)
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print (temp * 9/5) + 32
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:44:29) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print temp = (9/5) * 32
+else:
+	print  (temp - 32) * 5/9
+	
+print(temp)
+
+
+
+-- ERROR:
+File "XXXX", line 5
+    print temp = (9/5) * 32
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:46:08) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9/5 * temperatura + 32)
+else:
+	print  
+print(temp)
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print (9/5 * temperatura + 32)
+NameError: name 'temperatura' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:46:22) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9/5 * temp + 32)
+else:
+	print  
+print(temp)
+
+
+
+-- OUTPUT:
+608.0
+320.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:47:38) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (temp - 32)* 5/9
+else:
+	print (9/5 * temp + 32)
+print(temp)
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print (temp - 32)* 5/9
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:47:48) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (temp - 32)* 5/9
+else:
+	print (9/5 * temp + 32)
+print(temp)
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print (temp - 32)* 5/9
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:48:04) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (temp - 32) * 5/9
+else:
+	print (9/5 * temp + 32)
+print(temp)
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print (temp - 32) * 5/9
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:48:16) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (temp - 32) * 5/9
+else:
+	print (9/5 * temp + 32)
+print(temp)
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print (temp - 32) * 5/9
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:48:20) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (temp - 32) * 5/9
+else:
+	print (9/5 * temp + 32)
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print (temp - 32) * 5/9
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:49:02) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (temp - 32) * 5/9
+else:
+	print (9/5 * temp + 32)
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print (temp - 32) * 5/9
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:49:37) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9/5 * temp + 32)
+else:
+	print 
+
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:50:03) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9/5 * temp + 32)
+else:
+	print 
+
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:53:22) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print ((9*temp)/5)+32
+else:
+	print 
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print ((9*temp)/5)+32
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:54:00) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9*temp/5) + 32
+else:
+	print 
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print (9*temp/5) + 32
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:54:11) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9*temp/5) + 32
+else:
+	print 
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print (9*temp/5) + 32
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:54:30) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9 * temp/5) + 32
+else:
+	print 
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print (9 * temp/5) + 32
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:54:42) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print 9 * temp/5 + 32
+else:
+	print 
+
+
+
+-- ERROR:
+File "XXXX", line 5
+    print 9 * temp/5 + 32
+          ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(9 * temp/5 + 32)?
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:54:53) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9 * temp/5 + 32)
+else:
+	print 
+
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:54:58) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9 * temp/5 + 32)
+else:
+	print 
+
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:56:04) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9 * temp/5 + 32)
+else:
+	print (temperatura * 9/5) + 32
+
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:56:16) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9 * temp/5 + 32)
+else:
+	print (temperatura * 9/5) + 32
+
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:56:37) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9 * temp/5 + 32)
+else:
+	print (temperatura * 9/5 + 32)
+
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:56:53) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9 * temp/5 + 32)
+else:
+	print (temp * 9/5 + 32)
+
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:58:02) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9 * temp/5 + 32)
+else:
+	print (temp - 32 x 5/9)
+
+
+
+-- ERROR:
+File "XXXX", line 7
+    print (temp - 32 x 5/9)
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:58:10) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9 * temp/5 + 32)
+else:
+	print (temp - 32 * 5/9)
+
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:59:09) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9 * temp/5 + 32)
+else:
+	print (temp - 32 * 5/9)
+
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 22:59:58) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9 * temp/5 + 32)
+else:
+	print (temp - 32 ) * 5/9
+
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 23:00:22) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9 * temp/5 + 32)
+else:
+	print (5/9 * temp - 32)
+
+
+
+-- EXECUTION TIME:
+0.255436
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+145.77777777777777
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 23:00:24) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9 * temp/5 + 32)
+else:
+	print (5/9 * temp - 32)
+
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 23:00:48) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9 * temp/5 + 32)
+else:
+	print (5/9 * (temp - 32))
+
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 23:01:17) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9 * temp/5 + 32)
+else:
+	print (5/9 * (temp - 32))
+print(round(temp, 2))
+
+
+-- OUTPUT:
+608.0
+320.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 23:01:34) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9 * temp/5 + 32)
+else:
+	print (5/9 * (temp - 32))
+
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 23:01:46) 
+-- CODE:
+escala = input("Escala? (C/F)")
+temp = float(input(""))
+
+if (escala == "C"):
+	print (9 * temp/5 + 32)
+else:
+	print (5/9 * (temp - 32))
+
+
+-- EXECUTION TIME:
+0.181667
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

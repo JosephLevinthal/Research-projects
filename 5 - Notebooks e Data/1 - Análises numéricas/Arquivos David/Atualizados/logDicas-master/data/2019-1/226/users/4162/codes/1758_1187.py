@@ -1,0 +1,7 @@
+st= input("insira uma str: ")
+print(st[0])
+print(st[-1])
+print(len(st))
+print(st.lower())
+print(st.upper())
+print(st*500)

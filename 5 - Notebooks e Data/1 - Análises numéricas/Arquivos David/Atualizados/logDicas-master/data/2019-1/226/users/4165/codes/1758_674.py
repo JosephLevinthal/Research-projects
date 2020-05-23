@@ -1,0 +1,10 @@
+from numpy import*
+vet = array(eval(input("Vetor: ")))
+print(size(vet))
+print(vet[0])
+print(vet[-1])
+print(max(vet))
+print(min(vet))
+print(sum(vet))
+m = sum (vet)/ size(vet)
+print(round(m, 2))

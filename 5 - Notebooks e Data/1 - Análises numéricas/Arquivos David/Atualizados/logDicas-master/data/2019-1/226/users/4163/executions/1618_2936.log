@@ -1,0 +1,188 @@
+== TEST (2019-04-02 10:21:59) 
+-- CODE:
+p=float(input("pressao"))
+n=float(input("numero de mols"))
+t=float(input("temperatura"))
+x= p*v=n*r*t
+print=(x)
+
+-- ERROR:
+File "XXXX", line 4
+    x= p*v=n*r*t
+      ^
+SyntaxError: can't assign to operator
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:22:52) 
+-- CODE:
+p=float(input("pressao"))
+n=float(input("numero de mols"))
+t=float(input("temperatura"))
+x= p*v
+y= n*r*t
+print=(x)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    x= p*v
+NameError: name 'v' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:25:50) 
+-- CODE:
+p=float(input("pressao"))
+n=float(input("numero de mols"))
+t=float(input("temperatura"))
+v= (n*r*t)/p
+print=(v)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    v= (n*r*t)/p
+NameError: name 'r' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:27:05) 
+-- CODE:
+p=float(input("pressao"))
+n=float(input("numero de mols"))
+t=float(input("temperatura"))
+r= float(0,082)
+v= (n*r*t)/p
+print=(v)
+
+-- ERROR:
+File "XXXX", line 4
+    r= float(0,082)
+                 ^
+SyntaxError: invalid token
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:27:23) 
+-- CODE:
+p=float(input("pressao"))
+n=float(input("numero de mols"))
+t=float(input("temperatura"))
+r= float(0.082)
+v= (n*r*t)/p
+print=(v)
+
+-- ERROR:
+File "XXXX", line 4
+    r= float(0,082)
+                 ^
+SyntaxError: invalid token
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:29:26) 
+-- CODE:
+p=float(input("pressao"))
+n=float(input("numero de mols"))
+t=float(input("temperatura"))
+r= 0.082
+v= (n*r*t)/p
+print=(v)
+
+-- ERROR:
+File "XXXX", line 4
+    r= float(0,082)
+                 ^
+SyntaxError: invalid token
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:30:06) 
+-- CODE:
+p=float(input("pressao"))
+n=float(input("numero de mols"))
+t=float(input("temperatura"))
+r= 0.082
+v= ( n * r * t) / p
+print=(v)
+
+-- ERROR:
+File "XXXX", line 4
+    r= float(0,082)
+                 ^
+SyntaxError: invalid token
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:30:42) 
+-- CODE:
+p=float(input("pressao"))
+n=float(input("numero de mols"))
+t=float(input("temperatura"))
+r= 0.082
+v=n * r * t / p
+print=(v)
+
+-- ERROR:
+File "XXXX", line 4
+    r= float(0,082)
+                 ^
+SyntaxError: invalid token
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:31:43) 
+-- CODE:
+
+p=float(input("pressao"))
+n=float(input("numero de mols"))
+t=float(input("temperatura"))
+r= 0.082
+v=n * r * t / p
+print(v)
+
+-- OUTPUT:
+2509.2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:34:24) 
+-- CODE:
+
+p=float(input("pressao"))
+n=float(input("numero de mols"))
+t=float(input("temperatura"))
+r= 0.082
+s= 273.15+t
+v=n * r * s / p
+print(v)
+
+-- OUTPUT:
+29387.16
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 10:34:47) 
+-- CODE:
+
+p=float(input("pressao"))
+n=float(input("numero de mols"))
+t=float(input("temperatura"))
+r= 0.082
+s= 273.15+t
+v=n * r * s / p
+print(v)
+
+-- EXECUTION TIME:
+0.158769
+-- TEST CASE 1:
+---- input:
+0.01
+12
+25.5
+---- correct output:
+29387.16
+---- user output:
+29387.16
+-- TEST CASE 2:
+---- input:
+0.25
+2
+35.5
+---- correct output:
+202.4744
+---- user output:
+202.4744
+-- TEST CASE 3:
+---- input:
+0.28
+28
+288.8
+---- correct output:
+4607.990000000001
+---- user output:
+4607.990000000001
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

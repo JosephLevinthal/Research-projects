@@ -1,0 +1,636 @@
+== TEST (2019-06-30 11:24:04) 
+-- CODE:
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x3 = float(input())
+y3 = float(input())
+
+f1 = x1/y1
+f2 = x2/y2
+f3 = x3/y3
+-- OUTPUT:
+Entradas:  0 anos e IMC  0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 11:24:25) 
+-- CODE:
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x3 = float(input())
+y3 = float(input())
+
+f1 = x1/y1
+f2 = x2/y2
+f3 = x3/y3
+
+print(f1,f2,f3)
+-- OUTPUT:
+1.0634920634920635 1.75 1.0606060606060606
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 11:25:22) 
+-- CODE:
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x3 = float(input())
+y3 = float(input())
+
+f1 = round(x1/y1,2)
+f2 = round(x2/y2,2)
+f3 = round(x3/y3,2)
+
+print(f1,f2,f3)
+-- OUTPUT:
+1.06 1.75 1.06
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 11:27:34) 
+-- CODE:
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x3 = float(input())
+y3 = float(input())
+
+f1 = round(x1/y1,2)
+f2 = round(x2/y2,2)
+f3 = round(x3/y3,2)
+
+a = f1 - f2
+b = f1 - f3
+c = f2 - f1
+d = f2 - f3
+e = f3 - f1
+f = f3 - f2
+
+print(a,b,c,d,e,f)
+-- OUTPUT:
+-0.69 0.0 0.69 0.69 0.0 -0.69
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 11:28:17) 
+-- CODE:
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x3 = float(input())
+y3 = float(input())
+
+f1 = round(x1/y1,2)
+f2 = round(x2/y2,2)
+f3 = round(x3/y3,2)
+
+a = round(f1 - f2,2)
+b = round(f1 - f3,2)
+c = round(f2 - f1,2)
+d = round(f2 - f3,2)
+e = round(f3 - f1,2)
+f = round(f3 - f2,2)
+
+print(a,b,c,d,e,f)
+-- OUTPUT:
+-0.69 0.0 0.69 0.69 0.0 -0.69
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 11:31:59) 
+-- CODE:
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x3 = float(input())
+y3 = float(input())
+
+f1 = round(x1/y1,2)
+f2 = round(x2/y2,2)
+f3 = round(x3/y3,2)
+
+if f1 < f2:
+	a = f2 - f1
+	a = round(a,2)
+else:
+	a = f1 - f2
+	a = round(a,2)
+if f1 < f3:
+	b = f3 - f1
+	b = round(b,2)
+if f2 < f3:
+	c = f3 - f2
+	c = round(c,2)
+print(a,b,c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 24, in <module>
+    print(a,b,c)
+NameError: name 'b' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 11:32:49) 
+-- CODE:
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x3 = float(input())
+y3 = float(input())
+
+f1 = round(x1/y1,2)
+f2 = round(x2/y2,2)
+f3 = round(x3/y3,2)
+
+if f1 < f2:
+	a = f2 - f1
+	a = round(a,2)
+else:
+	a = f1 - f2
+	a = round(a,2)
+if f1 < f3:
+	b = f3 - f1
+	b = round(b,2)
+else:
+	b = f1 - f3
+	b = round(b,2)
+if f2 < f3:
+	c = f3 - f2
+	c = round(c,2)
+else:
+	c = f2 - f3
+	c = round(c,2)
+print(a,b,c)
+-- OUTPUT:
+0.69 0.0 0.69
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 11:32:54) 
+-- CODE:
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x3 = float(input())
+y3 = float(input())
+
+f1 = round(x1/y1,2)
+f2 = round(x2/y2,2)
+f3 = round(x3/y3,2)
+
+if f1 < f2:
+	a = f2 - f1
+	a = round(a,2)
+else:
+	a = f1 - f2
+	a = round(a,2)
+if f1 < f3:
+	b = f3 - f1
+	b = round(b,2)
+else:
+	b = f1 - f3
+	b = round(b,2)
+if f2 < f3:
+	c = f3 - f2
+	c = round(c,2)
+else:
+	c = f2 - f3
+	c = round(c,2)
+print(a,b,c)
+-- OUTPUT:
+0.69 0.0 0.69
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 11:35:04) 
+-- CODE:
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x3 = float(input())
+y3 = float(input())
+
+f1 = round(x1/y1,2)
+f2 = round(x2/y2,2)
+f3 = round(x3/y3,2)
+
+if f1 < f2:
+	a = f2 - f1
+	a = round(a,2)
+else:
+	a = f1 - f2
+	a = round(a,2)
+if f1 < f3:
+	b = f3 - f1
+	b = round(b,2)
+else:
+	b = f1 - f3
+	b = round(b,2)
+if f2 < f3:
+	c = f3 - f2
+	c = round(c,2)
+else:
+	c = f2 - f3
+	c = round(c,2)
+
+
+if a < b < c:
+	print(1,"e",2)
+	
+-- OUTPUT:
+0.69 0.0 0.69
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 11:36:10) 
+-- CODE:
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x3 = float(input())
+y3 = float(input())
+
+f1 = round(x1/y1,2)
+f2 = round(x2/y2,2)
+f3 = round(x3/y3,2)
+
+if f1 < f2:
+	a = f2 - f1
+	a = round(a,2)
+else:
+	a = f1 - f2
+	a = round(a,2)
+if f1 < f3:
+	b = f3 - f1
+	b = round(b,2)
+else:
+	b = f1 - f3
+	b = round(b,2)
+if f2 < f3:
+	c = f3 - f2
+	c = round(c,2)
+else:
+	c = f2 - f3
+	c = round(c,2)
+
+
+if a < b < c:
+	print(1,"e",2)
+if a < b and a < c and b > c:
+	print(1,"e",3)
+	
+-- OUTPUT:
+0.69 0.0 0.69
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 11:36:44) 
+-- CODE:
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x3 = float(input())
+y3 = float(input())
+
+f1 = round(x1/y1,2)
+f2 = round(x2/y2,2)
+f3 = round(x3/y3,2)
+
+if f1 < f2:
+	a = f2 - f1
+	a = round(a,2)
+else:
+	a = f1 - f2
+	a = round(a,2)
+if f1 < f3:
+	b = f3 - f1
+	b = round(b,2)
+else:
+	b = f1 - f3
+	b = round(b,2)
+if f2 < f3:
+	c = f3 - f2
+	c = round(c,2)
+else:
+	c = f2 - f3
+	c = round(c,2)
+
+
+if a < b < c:
+	print(1,"e",2)
+if a < b and a < c and b > c:
+print(1,"e",3)
+	
+-- ERROR:
+File "XXXX", line 35
+    print(1,"e",3)
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 11:36:53) 
+-- CODE:
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x3 = float(input())
+y3 = float(input())
+
+f1 = round(x1/y1,2)
+f2 = round(x2/y2,2)
+f3 = round(x3/y3,2)
+
+if f1 < f2:
+	a = f2 - f1
+	a = round(a,2)
+else:
+	a = f1 - f2
+	a = round(a,2)
+if f1 < f3:
+	b = f3 - f1
+	b = round(b,2)
+else:
+	b = f1 - f3
+	b = round(b,2)
+if f2 < f3:
+	c = f3 - f2
+	c = round(c,2)
+else:
+	c = f2 - f3
+	c = round(c,2)
+
+
+if a < b < c:
+	print(1,"e",2)
+if a < b and a < c and b > c:
+	h = 0
+print(1,"e",3)
+	
+-- OUTPUT:
+1 e 3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 11:36:57) 
+-- CODE:
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x3 = float(input())
+y3 = float(input())
+
+f1 = round(x1/y1,2)
+f2 = round(x2/y2,2)
+f3 = round(x3/y3,2)
+
+if f1 < f2:
+	a = f2 - f1
+	a = round(a,2)
+else:
+	a = f1 - f2
+	a = round(a,2)
+if f1 < f3:
+	b = f3 - f1
+	b = round(b,2)
+else:
+	b = f1 - f3
+	b = round(b,2)
+if f2 < f3:
+	c = f3 - f2
+	c = round(c,2)
+else:
+	c = f2 - f3
+	c = round(c,2)
+
+
+if a < b < c:
+	print(1,"e",2)
+if a < b and a < c and b > c:
+	h = 0
+print(1,"e",3)
+-- OUTPUT:
+1 e 3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 11:37:01) 
+-- CODE:
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x3 = float(input())
+y3 = float(input())
+
+f1 = round(x1/y1,2)
+f2 = round(x2/y2,2)
+f3 = round(x3/y3,2)
+
+if f1 < f2:
+	a = f2 - f1
+	a = round(a,2)
+else:
+	a = f1 - f2
+	a = round(a,2)
+if f1 < f3:
+	b = f3 - f1
+	b = round(b,2)
+else:
+	b = f1 - f3
+	b = round(b,2)
+if f2 < f3:
+	c = f3 - f2
+	c = round(c,2)
+else:
+	c = f2 - f3
+	c = round(c,2)
+
+
+if a < b < c:
+	print(1,"e",2)
+if a < b and a < c and b > c:
+	h = 0
+print(1,"e",3)
+-- OUTPUT:
+1 e 3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 11:37:26) 
+-- CODE:
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x3 = float(input())
+y3 = float(input())
+
+f1 = round(x1/y1,2)
+f2 = round(x2/y2,2)
+f3 = round(x3/y3,2)
+
+if f1 < f2:
+	a = f2 - f1
+	a = round(a,2)
+else:
+	a = f1 - f2
+	a = round(a,2)
+if f1 < f3:
+	b = f3 - f1
+	b = round(b,2)
+else:
+	b = f1 - f3
+	b = round(b,2)
+if f2 < f3:
+	c = f3 - f2
+	c = round(c,2)
+else:
+	c = f2 - f3
+	c = round(c,2)
+
+print(a,b,c)
+if a < b < c:
+	print(1,"e",2)
+if a < b and a < c and b > c:
+	print(1,"e",3)
+-- OUTPUT:
+0.69 0.0 0.69
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 11:58:07) 
+-- CODE:
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x3 = float(input())
+y3 = float(input())
+
+f1 = round(x1/y1,2)
+f2 = round(x2/y2,2)
+f3 = round(x3/y3,2)
+
+a = round(abs(f1-f2),2)
+b = round(abs(f1-f3),2)
+c = round(abs(f2-f3),2)
+# a = 0,12
+# b = 0,01
+# c = 0,13
+print(a,b,c)
+-- OUTPUT:
+0.69 0.0 0.69
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 12:21:34) 
+-- CODE:
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x3 = float(input())
+y3 = float(input())
+
+f1 = round(x1/y1,2)
+f2 = round(x2/y2,2)
+f3 = round(x3/y3,2)
+
+a = round(abs(f1-f2),2)
+b = round(abs(f1-f3),2)
+c = round(abs(f2-f3),2)
+# a = 0,12 | 1,08 - 1,2
+# b = 0,01 | 1,08 - 1,07
+# c = 0,13 | 1,20 - 1,07
+
+if a < b and a < c:
+	print(1,"e",2)
+if b < a and b < c:
+	print(1,"e",3)
+if c < a and c < b:
+	print(2,"e",3)
+-- OUTPUT:
+1 e 3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-30 12:21:41) 
+-- CODE:
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x3 = float(input())
+y3 = float(input())
+
+f1 = round(x1/y1,2)
+f2 = round(x2/y2,2)
+f3 = round(x3/y3,2)
+
+a = round(abs(f1-f2),2)
+b = round(abs(f1-f3),2)
+c = round(abs(f2-f3),2)
+# a = 0,12 | 1,08 - 1,2
+# b = 0,01 | 1,08 - 1,07
+# c = 0,13 | 1,20 - 1,07
+
+if a < b and a < c:
+	print(1,"e",2)
+if b < a and b < c:
+	print(1,"e",3)
+if c < a and c < b:
+	print(2,"e",3)
+-- EXECUTION TIME:
+0.811029
+-- TEST CASE 1:
+---- input:
+6.7
+6.3
+7.0
+4.0
+7.0
+6.6
+---- correct output:
+1 e 3
+---- user output:
+1 e 3
+-- TEST CASE 2:
+---- input:
+1.0
+2.0
+3.0
+6.0
+8.0
+10.0
+---- correct output:
+1 e 2
+---- user output:
+1 e 2
+-- TEST CASE 3:
+---- input:
+20.0
+30.0
+5.0
+10.0
+5.0
+10.0
+---- correct output:
+2 e 3
+---- user output:
+2 e 3
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 17:37:35) 
+-- CODE:
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+x3 = float(input())
+y3 = float(input())
+
+f1 = round(x1/y1,2)
+f2 = round(x2/y2,2)
+f3 = round(x3/y3,2)
+
+a = round(abs(f1-f2),2)
+b = round(abs(f1-f3),2)
+c = round(abs(f2-f3),2)
+# a = 0,12 | 1,08 - 1,2
+# b = 0,01 | 1,08 - 1,07
+# c = 0,13 | 1,20 - 1,07
+
+if a < b and a < c:
+	print(1,"e",2)
+if b < a and b < c:
+	print(1,"e",3)
+if c < a and c < b:
+	print(2,"e",3)
+-- OUTPUT:
+1 e 3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

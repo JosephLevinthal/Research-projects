@@ -1,0 +1,222 @@
+== TEST (2019-05-11 16:48:11) 
+-- CODE:
+from math import *
+ang = eval(input("valor do angulo: "))
+k = int(input("digite k: "))
+i = 0
+x = 0
+while(k>i):
+	x = x + (x**(2*i)+1)/factorial((2*i)+1)
+	i = i + 1
+print(round(x,10))
+-- OUTPUT:
+3.7655843381
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:49:24) 
+-- CODE:
+from math import *
+ang = eval(input("valor do angulo: "))
+k = int(input("digite k: "))
+i = 0
+x = 0
+while(k>i):
+	x = x + ((x**(2*i)+1)/factorial((2*i)+1))*(-1**i)
+	i = i + 1
+print(round(x,10))
+-- OUTPUT:
+-3.7655843381
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:53:32) 
+-- CODE:
+from math import *
+x = eval(input("valor do angulo: "))
+k = int(input("digite k: "))
+i = 0
+soma = 0
+final = k-1
+while(k>i):
+	x = x + ((x**(2*i+1))/factorial((2*i+1)))*(-1**i)
+	i = i + 1
+print(round(x,10))
+-- OUTPUT:
+0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:55:55) 
+-- CODE:
+from math import *
+x = eval(input("valor do angulo: "))
+k = int(input("digite k: "))
+i = 0
+soma = 0
+final = k-1
+while(k>i):
+	tg = x**(2*i+1)
+	tg1= factorial(2*i+1)
+	soma = soma + (-1)**i * tg/tg1
+	i = i + 1
+print(round(x,10))
+-- OUTPUT:
+1.5707963268
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:56:17) 
+-- CODE:
+from math import *
+x = eval(input("valor do angulo: "))
+k = int(input("digite k: "))
+i = 0
+soma = 0
+final = k-1
+while(k>i):
+	tg = x**(2*i+1)
+	tg1= factorial(2*i+1)
+	soma = soma + (-1)**i * tg/tg1
+	i = i + 1
+print(round(x,10))
+-- OUTPUT:
+1.5707963268
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 16:56:25) 
+-- CODE:
+from math import *
+x = eval(input("valor do angulo: "))
+k = int(input("digite k: "))
+i = 0
+soma = 0
+final = k-1
+while(k>i):
+	tg = x**(2*i+1)
+	tg1= factorial(2*i+1)
+	soma = soma + (-1)**i * tg/tg1
+	i = i + 1
+print(round(x,10))
+-- OUTPUT:
+1.5707963268
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-11 16:56:34) 
+-- CODE:
+from math import *
+x = eval(input("valor do angulo: "))
+k = int(input("digite k: "))
+i = 0
+soma = 0
+final = k-1
+while(k>i):
+	tg = x**(2*i+1)
+	tg1= factorial(2*i+1)
+	soma = soma + (-1)**i * tg/tg1
+	i = i + 1
+print(round(x,10))
+-- EXECUTION TIME:
+0.126114
+-- TEST CASE 1:
+---- input:
+pi/2
+5
+---- correct output:
+1.0000035426
+---- user output:
+1.5707963268
+-- TEST CASE 2:
+---- input:
+-pi/2
+4
+---- correct output:
+-0.9998431014
+---- user output:
+-1.5707963268
+-- TEST CASE 3:
+---- input:
+pi/3
+3
+---- correct output:
+0.8662952838
+---- user output:
+1.0471975512
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 10:14:47) 
+-- CODE:
+from math import *
+ang = eval(input("digite o angulo!: "))
+k = int(input("digite o valor de k: "))
+i = 0
+soma = 0
+while(k>i):
+	soma = soma + (ang**(2*ang+1))/factorial(2*ang+1)
+	i = i+1
+print(round(soma,10))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    soma = soma + (ang**(2*ang+1))/factorial(2*ang+1)
+ValueError: factorial() only accepts integral values
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 10:15:19) 
+-- CODE:
+from math import *
+ang = eval(input("digite o angulo!: "))
+k = int(input("digite o valor de k: "))
+i = 0
+soma = 0
+while(k>i):
+	soma = soma + (ang**(2*i+1))/factorial(2*i+1)
+	i = i+1
+print(round(soma,10))
+-- OUTPUT:
+2.3012952459
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 10:16:46) 
+-- CODE:
+from math import *
+ang = eval(input("digite o angulo!: "))
+k = int(input("digite o valor de k: "))
+i = 0
+soma = 0
+while(k>i):
+	soma = soma + ((ang**(2*i+1))/factorial(2*i+1)) * (-1)**i
+	i = i+1
+print(round(soma,10))
+-- OUTPUT:
+1.0000035426
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 10:16:55) 
+-- CODE:
+from math import *
+ang = eval(input("digite o angulo!: "))
+k = int(input("digite o valor de k: "))
+i = 0
+soma = 0
+while(k>i):
+	soma = soma + ((ang**(2*i+1))/factorial(2*i+1)) * (-1)**i
+	i = i+1
+print(round(soma,10))
+-- EXECUTION TIME:
+0.154321
+-- TEST CASE 1:
+---- input:
+pi/2
+5
+---- correct output:
+1.0000035426
+---- user output:
+1.0000035426
+-- TEST CASE 2:
+---- input:
+-pi/2
+4
+---- correct output:
+-0.9998431014
+---- user output:
+-0.9998431014
+-- TEST CASE 3:
+---- input:
+pi/3
+3
+---- correct output:
+0.8662952838
+---- user output:
+0.8662952838
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

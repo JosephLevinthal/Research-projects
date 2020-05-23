@@ -1,0 +1,316 @@
+== TEST (2019-07-02 07:27:40) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = int(input("Numero de funcionarios:"))
+z = zeros(x,7)
+
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:27:54) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = int(input("Numero de funcionarios:"))
+z = zeros(x,7 dtype= INT)
+
+print(x)
+-- ERROR:
+File "XXXX", line 5
+    z = zeros(x,7 dtype= INT)
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:28:01) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = int(input("Numero de funcionarios:"))
+z = zeros(x,7 dtype= int)
+
+print(x)
+-- ERROR:
+File "XXXX", line 5
+    z = zeros(x,7 dtype= int)
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:28:04) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = int(input("Numero de funcionarios:"))
+z = zeros(x,7 dtype = int)
+
+print(x)
+-- ERROR:
+File "XXXX", line 5
+    z = zeros(x,7 dtype = int)
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:28:10) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = int(input("Numero de funcionarios:"))
+z = zeros(x,7 dtype == int)
+
+print(x)
+-- ERROR:
+File "XXXX", line 5
+    z = zeros(x,7 dtype == int)
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:28:15) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = int(input("Numero de funcionarios:"))
+z = zeros(x,7, dtype = int)
+
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:28:23) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = int(input("Numero de funcionarios:"))
+z = zeros(n,7, dtype = int)
+
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:29:34) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = int(input("Numero de funcionarios:"))
+z = zeros(shape(n)[0],7, dtype = int)
+
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 07:31:53) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(input("Pagamentos:")))
+
+for i in shape(n)[0]:
+	print(max(n[i]))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 07:32:09) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(input("Pagamentos:")))
+
+for i in shape(n)[0]:
+	print(max(n[i]))
+
+-- EXECUTION TIME:
+1.0776
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1836/2604/main.py", line 6, in <module>
+    for i in shape(n)[0]:
+TypeError: 'int' object is not iterable
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 07:32:41) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(input("Pagamentos:")))
+
+for i in (shape(n)[0]):
+	print(max(n[i]))
+
+-- EXECUTION TIME:
+1.20659
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1836/2604/main.py", line 6, in <module>
+    for i in (shape(n)[0]):
+TypeError: 'int' object is not iterable
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 07:32:43) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(input("Pagamentos:")))
+
+for i in (shape(n)[0]):
+	print(max(n[i]))
+
+-- EXECUTION TIME:
+0.946953
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1836/2604/main.py", line 6, in <module>
+    for i in (shape(n)[0]):
+TypeError: 'int' object is not iterable
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 07:33:22) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(input("Pagamentos:")))
+
+for i in (shape(n)[0]):
+	print(max(n[i]))
+
+-- EXECUTION TIME:
+1.12288
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1836/2604/main.py", line 6, in <module>
+    for i in (shape(n)[0]):
+TypeError: 'int' object is not iterable
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 07:34:09) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(input("Pagamentos:")))
+
+for i in range(shape(n)[0]):
+	print(max(n[i]))
+
+-- EXECUTION TIME:
+1.14767
+-- TEST CASE 1:
+---- input:
+[[34.5,67.8,89.7,56.4,65.7,78.9,81.2],[99.9,67.8,87.6,45.4,12.3,45.5,23.7],[27.5,93.1,45.9,47.3,19.2,76.5,49.3]]
+---- correct output:
+89.7
+99.9
+93.1
+---- user output:
+Pagamentos:89.7
+99.9
+93.1
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 07:34:12) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(input("Pagamentos:")))
+
+for i in range(shape(n)[0]):
+	print(max(n[i]))
+
+-- EXECUTION TIME:
+1.16482
+-- TEST CASE 1:
+---- input:
+[[34.5,67.8,89.7,56.4,65.7,78.9,81.2],[99.9,67.8,87.6,45.4,12.3,45.5,23.7],[27.5,93.1,45.9,47.3,19.2,76.5,49.3]]
+---- correct output:
+89.7
+99.9
+93.1
+---- user output:
+89.7
+99.9
+93.1
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 07:34:25) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(input("Pagamentos:")))
+
+for i in range(shape(n)[0]):
+	print(max(n[i]))
+
+-- EXECUTION TIME:
+1.03808
+-- TEST CASE 1:
+---- input:
+[[34.5,67.8,89.7,56.4,65.7,78.9,81.2],[99.9,67.8,87.6,45.4,12.3,45.5,23.7],[27.5,93.1,45.9,47.3,19.2,76.5,49.3]]
+---- correct output:
+89.7
+99.9
+93.1
+---- user output:
+89.7
+99.9
+93.1
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 07:38:56) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(input("Pagamentos:")))
+
+for i in range(shape(n)[0]):
+	print(max(n[i]))
+
+-- EXECUTION TIME:
+1.22817
+-- TEST CASE 1:
+---- input:
+[[34.5,67.8,89.7,56.4,65.7,78.9,81.2],[99.9,67.8,87.6,45.4,12.3,45.5,23.7],[27.5,93.1,45.9,47.3,19.2,76.5,49.3]]
+---- correct output:
+89.7
+99.9
+93.1
+---- user output:
+89.7
+99.9
+93.1
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

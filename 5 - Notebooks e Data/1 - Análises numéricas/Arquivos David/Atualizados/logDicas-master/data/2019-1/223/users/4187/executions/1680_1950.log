@@ -1,0 +1,189 @@
+== TEST (2019-05-01 17:15:24) 
+-- CODE:
+Temp = float(input("digite a temperatura(entre -50C e 10C):"))
+velVento = float(input("digite a velocidade (acima de 4,8KM/h):"))
+
+#alfa é a sensacao de frio
+alfa = (13.12) + (0.6215 * Temp) - ((11.37) * (velVento**0.16)) + (0.3965)
+print(alfa)
+-- OUTPUT:
+9.786577777193258
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 17:17:14) 
+-- CODE:
+Temp = float(input("digite a temperatura(entre -50C e 10C):"))
+velVento = float(input("digite a velocidade (acima de 4,8KM/h):"))
+
+#alfa é a sensacao de frio
+alfa = (13.12) + (0.6215 * Temp) - ((11.37) * (velVento**0.16)) + (0.3965)
+
+if(temp < -50):
+	print("jkkjk")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    if(temp < -50):
+NameError: name 'temp' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 17:17:34) 
+-- CODE:
+Temp = float(input("digite a temperatura(entre -50C e 10C):"))
+velVento = float(input("digite a velocidade (acima de 4,8KM/h):"))
+
+#alfa é a sensacao de frio
+alfa = (13.12) + (0.6215 * Temp) - ((11.37) * (velVento**0.16)) + (0.3965)
+
+if(Temp < -50):
+	print("jkkjk")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    if(temp < -50):
+NameError: name 'temp' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 17:20:33) 
+-- CODE:
+Temp = float(input("digite a temperatura(entre -50C e 10C):"))
+velVento = float(input("digite a velocidade (acima de 4,8KM/h):"))
+
+#alfa é a sensacao de frio
+alfa = (13.12) + (0.6215 * Temp) - ((11.37) * (velVento**0.16)) + (0.3965)
+
+if(Temp < -50 and Temp > 10):
+	print("767666")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    if(temp < -50):
+NameError: name 'temp' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 17:21:18) 
+-- CODE:
+Temp = float(input("digite a temperatura(entre -50C e 10C):"))
+velVento = float(input("digite a velocidade (acima de 4,8KM/h):"))
+
+#alfa é a sensacao de frio
+alfa = (13.12) + (0.6215 * Temp) - ((11.37) * (velVento**0.16)) + (0.3965)
+
+if(Temp < -50 or Temp > 10):
+	print("767666")
+-- OUTPUT:
+767666
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 17:24:40) 
+-- CODE:
+Temp = float(input("digite a temperatura(entre -50C e 10C):"))
+velVento = float(input("digite a velocidade (acima de 4,8KM/h):"))
+
+#alfa é a sensacao de frio
+alfa = (13.12) + (0.6215 * Temp) - ((11.37) * (velVento**0.16)) + (0.3965)
+
+if(Temp < -50 or Temp > 10):
+	print("Temperatura invalida")
+elif(velVento < 4.8):
+	print("Velocidade invalida")
+else:
+	print(round(alfa,4))
+-- OUTPUT:
+Temperatura invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 17:29:05) 
+-- CODE:
+Temp = float(input("digite a temperatura(entre -50C e 10C):"))
+velVento = float(input("digite a velocidade (acima de 4,8KM/h):"))
+
+#alfa é a sensacao de frio
+alfa = ((13.12) + (0.6215 * Temp) - ((11.37) * (velVento**0.16)) + ((0.3965 *  Temp) * (velVent**0.16)))
+
+if(Temp < -50 or Temp > 10):
+	print("Temperatura invalida")
+elif(velVento < 4.8):
+	print("Velocidade invalida")
+else:
+	print(round(alfa,4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    alfa = ((13.12) + (0.6215 * Temp) - ((11.37) * (velVento**0.16)) + ((0.3965 *  Temp) * (velVent**0.16)))
+NameError: name 'velVent' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 17:30:43) 
+-- CODE:
+Temp = float(input("digite a temperatura(entre -50C e 10C):"))
+velVento = float(input("digite a velocidade (acima de 4,8KM/h):"))
+
+#alfa é a sensacao de frio
+alfa = ((13.12) + (0.6215 * Temp) - ((11.37) * (velVento**0.16)) + ((0.3965 *  Temp) * (velVent**0.16)))
+
+if(Temp < -50 or Temp > 10):
+	print("Temperatura invalida")
+elif(velVento < 4.8):
+	print("Velocidade invalida")
+else:
+	print(round(alfa,4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    alfa = ((13.12) + (0.6215 * Temp) - ((11.37) * (velVento**0.16)) + ((0.3965 *  Temp) * (velVent**0.16)))
+NameError: name 'velVent' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-01 17:31:13) 
+-- CODE:
+Temp = float(input("digite a temperatura(entre -50C e 10C):"))
+velVento = float(input("digite a velocidade (acima de 4,8KM/h):"))
+
+#alfa é a sensacao de frio
+alfa = ((13.12) + (0.6215 * Temp) - ((11.37) * (velVento**0.16)) + ((0.3965 *  Temp) * (velVento**0.16)))
+
+if(Temp < -50 or Temp > 10):
+	print("Temperatura invalida")
+elif(velVento < 4.8):
+	print("Velocidade invalida")
+else:
+	print(round(alfa,4))
+-- OUTPUT:
+Temperatura invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-01 17:31:38) 
+-- CODE:
+Temp = float(input("digite a temperatura(entre -50C e 10C):"))
+velVento = float(input("digite a velocidade (acima de 4,8KM/h):"))
+
+#alfa é a sensacao de frio
+alfa = ((13.12) + (0.6215 * Temp) - ((11.37) * (velVento**0.16)) + ((0.3965 *  Temp) * (velVento**0.16)))
+
+if(Temp < -50 or Temp > 10):
+	print("Temperatura invalida")
+elif(velVento < 4.8):
+	print("Velocidade invalida")
+else:
+	print(round(alfa,4))
+-- EXECUTION TIME:
+0.135575
+-- TEST CASE 1:
+---- input:
+20
+9
+---- correct output:
+Temperatura invalida
+---- user output:
+Temperatura invalida
+-- TEST CASE 2:
+---- input:
+-5
+4
+---- correct output:
+Velocidade invalida
+---- user output:
+Velocidade invalida
+-- TEST CASE 3:
+---- input:
+-5
+50
+---- correct output:
+-14.9563
+---- user output:
+-14.9563
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

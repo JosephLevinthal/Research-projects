@@ -1,0 +1,570 @@
+== TEST (2019-03-22 01:55:46) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+t1 = radians(float(input("Latitude de P1: ")))
+
+t1 = degrees(float(input("Latitude de P1: ")))
+t2 = degrees(float(input("Latitude de P2: ")))
+g1 = degrees(float(input("Longitude de P1: ")))
+g2 = degrees(float(input("Longitude de P2: ")))
+
+R = float(6371,01)
+
+d = R*arccos(sin(t1)*sin(t2)+cos(t1)*cos(t2))
+
+print(round(d, 2))
+
+
+-- ERROR:
+File "XXXX", line 12
+    R = float(6371,01)
+                    ^
+SyntaxError: invalid token
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 01:55:54) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+t1 = radians(float(input("Latitude de P1: ")))
+
+t1 = degrees(float(input("Latitude de P1: ")))
+t2 = degrees(float(input("Latitude de P2: ")))
+g1 = degrees(float(input("Longitude de P1: ")))
+g2 = degrees(float(input("Longitude de P2: ")))
+
+R = 6371,01
+
+d = R*arccos(sin(t1)*sin(t2)+cos(t1)*cos(t2))
+
+print(round(d, 2))
+
+
+-- ERROR:
+File "XXXX", line 12
+    R = 6371,01
+              ^
+SyntaxError: invalid token
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 01:56:02) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+
+t1 = radians(float(input("Latitude de P1: ")))
+
+t1 = degrees(float(input("Latitude de P1: ")))
+t2 = degrees(float(input("Latitude de P2: ")))
+g1 = degrees(float(input("Longitude de P1: ")))
+g2 = degrees(float(input("Longitude de P2: ")))
+
+R = 6371.01
+
+d = R*arccos(sin(t1)*sin(t2)+cos(t1)*cos(t2))
+
+print(round(d, 2))
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    t1 = radians(float(input()))
+NameError: name 'radians' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 01:56:21) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+import math
+
+t1 = degrees(float(input("Latitude de P1: ")))
+t2 = degrees(float(input("Latitude de P2: ")))
+g1 = degrees(float(input("Longitude de P1: ")))
+g2 = degrees(float(input("Longitude de P2: ")))
+
+R = 6371.01
+
+d = R*arccos(sin(t1)*sin(t2)+cos(t1)*cos(t2))
+
+print(round(d, 2))
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    t1 = degrees(float(input()))
+NameError: name 'degrees' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 01:56:57) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+from math import *
+
+t1 = degrees(float(input("Latitude de P1: ")))
+t2 = degrees(float(input("Latitude de P2: ")))
+g1 = degrees(float(input("Longitude de P1: ")))
+g2 = degrees(float(input("Longitude de P2: ")))
+
+R = 6371.01
+
+d = R*arccos(sin(t1)*sin(t2)+cos(t1)*cos(t2))
+
+print(round(d, 2))
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 13, in <module>
+    d = R*arccos(sin(t1)*sin(t2)+cos(t1)*cos(t2))
+NameError: name 'arccos' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 01:58:22) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+from math import *
+
+t1 = degrees(float(input("Latitude de P1: ")))
+t2 = degrees(float(input("Latitude de P2: ")))
+g1 = degrees(float(input("Longitude de P1: ")))
+g2 = degrees(float(input("Longitude de P2: ")))
+
+R = 6371.01
+
+d = R*acos(sin(t1)*sin(t2)+cos(t1)*cos(t2))
+
+print(round(d, 2))
+
+
+-- OUTPUT:
+5352.09
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 02:00:00) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+from math import *
+
+t1 = radians(float(input("Latitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R = 6371.01
+
+d = R*acos(sin(t1)*sin(t2)+cos(t1)*cos(t2))
+
+print(round(d, 2))
+
+
+-- OUTPUT:
+6339.2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 02:01:56) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+# Nao se intimide com as mensagens de erro. Elas ajudam a corrigir seu codigo.
+from math import *
+
+t1 = radians(float(input("Latitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R = 6371.01
+
+d = R*math.acos(math.sin(t1)*math.sin(t2)+math.cos(t1)*math.cos(t2))
+
+print(round(d, 2))
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 13, in <module>
+    d = R*math.acos(math.sin(t1)*math.sin(t2)+math.cos(t1)*math.cos(t2))
+NameError: name 'math' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 02:02:45) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+import math
+
+t1 = radians(float(input("Latitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R = 6371.01
+
+d = R*math.acos(math.sin(t1)*math.sin(t2) + math.cos(t1)*math.cos(t2))
+
+print(round(d, 2))
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    t1 = radians(float(input()))
+NameError: name 'radians' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 02:03:24) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+import math
+math import *
+
+t1 = radians(float(input("Latitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R = 6371.01
+
+d = R*math.acos(math.sin(t1)*math.sin(t2) + math.cos(t1)*math.cos(t2))
+
+print(round(d, 2))
+
+
+-- ERROR:
+File "XXXX", line 4
+    math import *
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 02:04:09) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+import math
+from math import *
+
+t1 = radians(float(input("Latitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R = 6371.01
+
+d = R*math.acos(math.sin(t1)*math.sin(t2) + math.cos(t1)*math.cos(t2))
+
+print(round(d, 2))
+
+
+-- OUTPUT:
+6339.2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-22 02:04:22) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+import math
+from math import *
+
+t1 = radians(float(input("Latitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R = 6371.01
+
+d = R*math.acos(math.sin(t1)*math.sin(t2) + math.cos(t1)*math.cos(t2))
+
+print(round(d, 2))
+
+
+-- EXECUTION TIME:
+0.130754
+-- TEST CASE 1:
+---- input:
+-3.036131
+-60.04585
+-3.088496
+-59.59464
+---- correct output:
+50.44
+---- user output:
+6339.2
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-22 02:08:07) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+import math
+from math import *
+
+t1 = radians(float(input("Latitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R = 6371.01
+
+d = R*math.acos(math.sin(t1)*math.sin(t2) + math.cos(g1)*math.cos(g2))
+
+print(round(d, 2))
+
+
+-- EXECUTION TIME:
+0.139514
+-- TEST CASE 1:
+---- input:
+-3.036131
+-60.04585
+-3.088496
+-59.59464
+---- correct output:
+50.44
+---- user output:
+6287.62
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 02:08:36) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+import math
+from math import *
+
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R = 6371.01
+
+d = R*math.acos(math.sin(t1)*math.sin(t2) + math.cos(g1)*math.cos(g2))
+
+print(round(d, 2))
+
+
+-- OUTPUT:
+8361.12
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 02:08:42) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+import math
+from math import *
+
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R = 6371.01
+
+d = R*math.acos(math.sin(t1)*math.sin(t2) + math.cos(g1)*math.cos(g2))
+
+print(round(d, 2))
+
+
+-- OUTPUT:
+8361.12
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 02:08:59) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+import math
+from math import *
+
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R = 6371.01
+
+d = R*math.acos(math.sin(t1)*math.sin(t2) + math.cos(t1)*math.cos(t2))
+
+print(round(d, 2))
+
+
+-- OUTPUT:
+5.82
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-22 02:09:06) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+import math
+from math import *
+
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R = 6371.01
+
+d = R*math.acos(math.sin(t1)*math.sin(t2) + math.cos(t1)*math.cos(t2))
+
+print(round(d, 2))
+
+
+-- EXECUTION TIME:
+0.108133
+-- TEST CASE 1:
+---- input:
+-3.036131
+-60.04585
+-3.088496
+-59.59464
+---- correct output:
+50.44
+---- user output:
+5.82
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 02:10:13) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+import math
+from math import *
+
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R = 6371.01
+
+d = R*(math.acos(math.sin(t1)*math.sin(t2) + math.cos(t1)*math.cos(t2)))
+
+print(round(d, 2))
+
+
+-- OUTPUT:
+5.82
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-22 08:33:30) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+import math
+from math import *
+
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R = 6371.01
+
+d = R*(math.acos(math.sin(t1)*math.sin(t2) + math.cos(t1)*math.cos(t2)*math.cos(g1-g2)))
+
+print(round(d, 2))
+
+
+-- EXECUTION TIME:
+0.201546
+-- TEST CASE 1:
+---- input:
+-3.036131
+-60.04585
+-3.088496
+-59.59464
+---- correct output:
+50.44
+---- user output:
+50.44
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 20:39:30) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+import math
+
+t1 = radians(float(input("Latitude de P1: ")))
+g1 = radians(float(input("Longitude de P1: ")))
+t2 = radians(float(input("Latitude de P2: ")))
+g2 = radians(float(input("Longitude de P2: ")))
+
+R = 6371.01
+
+d = R*(math.acos(math.sin(t1)*math.sin(t2) + math.cos(t1)*math.cos(t2)*math.cos(g1-g2)))
+
+print(round(d, 2))
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    t1 = radians(float(input()))
+NameError: name 'radians' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 20:40:32) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+import math
+
+t1 = math.radians(float(input("Latitude de P1: ")))
+g1 = math.radians(float(input("Longitude de P1: ")))
+t2 = math.radians(float(input("Latitude de P2: ")))
+g2 = math.radians(float(input("Longitude de P2: ")))
+
+R = 6371.01
+
+d = R*(math.acos(math.sin(t1)*math.sin(t2) + math.cos(t1)*math.cos(t2)*math.cos(g1-g2)))
+
+print(round(d, 2))
+
+
+-- OUTPUT:
+50.44
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-22 20:41:22) 
+-- CODE:
+# Teste seu codigo aos poucos.
+# Nao teste tudo no final, pois fica mais dificil de identificar erros.
+import math
+
+t1 = math.radians(float(input("Latitude de P1: ")))
+g1 = math.radians(float(input("Longitude de P1: ")))
+t2 = math.radians(float(input("Latitude de P2: ")))
+g2 = math.radians(float(input("Longitude de P2: ")))
+
+R = 6371.01
+
+d = R*(math.acos(math.sin(t1)*math.sin(t2) + math.cos(t1)*math.cos(t2)*math.cos(g1-g2)))
+
+print(round(d, 2))
+
+
+-- EXECUTION TIME:
+0.240525
+-- TEST CASE 1:
+---- input:
+-3.036131
+-60.04585
+-3.088496
+-59.59464
+---- correct output:
+50.44
+---- user output:
+50.44
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

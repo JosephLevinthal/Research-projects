@@ -1,0 +1,158 @@
+== SUBMITION (2019-06-26 13:21:48) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+# Entrada das quantidades de alimentos
+quantidade = array(eval(input("Digite as quantidades de alimentos: ")))
+
+# Transpor o vetor quantidade para poder multiplicar
+quantidadet = quantidade.T
+
+matriz = array([[2, 1, 4],
+					 [1, 2, 0],
+					 [2, 3, 2]])
+
+# Resolução do sitema AX = B
+# Onde A = Matriz, X = Quantidade de bactérias e B = Quantidade de alimentos
+
+X = dot(inv(matriz), quantidadet)
+
+print("estafilococo:", round(X[0], 1))
+print("salmonela:", round(X[1], 1))
+print("coli:", round(X[2], 1))
+
+# Verificando qual bactéria tem a menor população
+
+if X[0] == min(X):
+	print("estafilococo")
+if X[1] == min(X):
+	print("salmonela")
+if X[2] == min(X):
+	print("coli")
+-- EXECUTION TIME:
+0.937205
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo: 1923.4
+salmonela: 1864.5
+coli: -439.0
+coli
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+Digite as quantidades de alimentos: estafilococo: -31711.0
+salmonela: 16783.4
+coli: 12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+Digite as quantidades de alimentos: estafilococo: 22647.2
+salmonela: -9717.3
+coli: -6745.3
+salmonela
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 13:22:24) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+# Entrada das quantidades de alimentos
+quantidade = array(eval(input("Digite as quantidades de alimentos: ")))
+
+# Transpor o vetor quantidade para poder multiplicar
+quantidadet = quantidade.T
+
+matriz = array([[2, 1, 4],
+					 [1, 2, 0],
+					 [2, 3, 2]])
+
+# Resolução do sitema AX = B
+# Onde A = Matriz, X = Quantidade de bactérias e B = Quantidade de alimentos
+
+X = dot(inv(matriz), quantidadet)
+
+print("estafilococo:", round(X[0], 1))
+print("salmonela:", round(X[1], 1))
+print("coli:", round(X[2], 1))
+
+# Verificando qual bactéria tem a menor população
+
+if X[0] == min(X):
+	print("estafilococo")
+if X[1] == min(X):
+	print("salmonela")
+if X[2] == min(X):
+	print("coli")
+-- EXECUTION TIME:
+0.974291
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo: 1923.4
+salmonela: 1864.5
+coli: -439.0
+coli
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo: -31711.0
+salmonela: 16783.4
+coli: 12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo: 22647.2
+salmonela: -9717.3
+coli: -6745.3
+salmonela
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

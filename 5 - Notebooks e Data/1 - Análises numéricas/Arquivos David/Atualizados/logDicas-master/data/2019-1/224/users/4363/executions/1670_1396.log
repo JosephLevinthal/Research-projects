@@ -1,0 +1,172 @@
+== TEST (2019-04-16 18:59:51) 
+-- CODE:
+float(input("valor consumido:"))
+-- OUTPUT:
+320.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 19:03:47) 
+-- CODE:
+a = float(input("valor consumido:"))
+if (a<=300):
+ gorjeta = a+a*(30/100)
+else (a>300):
+ gorjeta = a+a*(6/100)
+print(a)
+-- ERROR:
+File "XXXX", line 4
+    else (a>300):
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 19:04:03) 
+-- CODE:
+a = float(input("valor consumido:"))
+if(a<=300):
+ gorjeta = a+a*(30/100)
+else(a>300):
+ gorjeta = a+a*(6/100)
+print(a)
+-- ERROR:
+File "XXXX", line 4
+    else(a>300):
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 19:04:14) 
+-- CODE:
+a = float(input("valor consumido:"))
+if(a<=300):
+ a = a+a*(30/100)
+else(a>300):
+ a = a+a*(6/100)
+print(a)
+-- ERROR:
+File "XXXX", line 4
+    else(a>300):
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 19:06:00) 
+-- CODE:
+a = float(input("valor consumido:"))
+if (a<=300):
+ b = a+a*(30/100)
+else:
+ b = 0
+if (a>300):
+	b = a+a*(6/100)
+print(a)
+-- OUTPUT:
+224.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 19:06:11) 
+-- CODE:
+a = float(input("valor consumido:"))
+if (a<=300):
+ b = a+a*(30/100)
+else:
+ b = 0
+if (a>300):
+	b = a+a*(6/100)
+print(b)
+-- OUTPUT:
+291.85
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 19:06:17) 
+-- CODE:
+a = float(input("valor consumido:"))
+if (a<=300):
+ b = a+a*(30/100)
+else:
+ b = 0
+if (a>300):
+	b = a+a*(6/100)
+print(b)
+-- OUTPUT:
+291.85
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 19:06:37) 
+-- CODE:
+a = float(input("valor consumido:"))
+if (a<=300):
+ b = a+a*(30/100)
+else:
+ b = 0
+if (a>300):
+	b = a+a*(6/100)
+print(round(b,2))
+-- EXECUTION TIME:
+0.165466
+-- TEST CASE 1:
+---- input:
+224.5
+---- correct output:
+246.95
+---- user output:
+291.85
+-- TEST CASE 2:
+---- input:
+365.15
+---- correct output:
+387.06
+---- user output:
+387.06
+-- TEST CASE 3:
+---- input:
+500
+---- correct output:
+530.0
+---- user output:
+530.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 19:06:43) 
+-- CODE:
+a = float(input("valor consumido:"))
+if (a<=300):
+ b = a+a*(30/100)
+else:
+ b = 0
+if (a>300):
+	b = a+a*(6/100)
+print(round(b,2))
+-- OUTPUT:
+291.85
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 19:06:54) 
+-- CODE:
+a = float(input("valor consumido:"))
+if (a<=300):
+ b = a+a*(10/100)
+else:
+ b = 0
+if (a>300):
+	b = a+a*(6/100)
+print(round(b,2))
+-- EXECUTION TIME:
+0.172548
+-- TEST CASE 1:
+---- input:
+224.5
+---- correct output:
+246.95
+---- user output:
+246.95
+-- TEST CASE 2:
+---- input:
+365.15
+---- correct output:
+387.06
+---- user output:
+387.06
+-- TEST CASE 3:
+---- input:
+500
+---- correct output:
+530.0
+---- user output:
+530.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

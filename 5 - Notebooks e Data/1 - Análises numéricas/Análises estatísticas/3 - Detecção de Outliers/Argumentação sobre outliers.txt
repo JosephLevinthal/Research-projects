@@ -1,0 +1,35 @@
+Fiz a identificação de outliers através do z-score, que é uma das principais técnicas utilizadas.
+
+Estou estudado a questão dos outliers e tirei algumas conclusões:
+
+Existe, de forma geral, 3 causas de outliers:
+1 - Erros na entrada de dados ou erros de medição;
+2 - Problemas de amostragem e condições incomuns;
+3 - Variação natural.
+
+A decisão de manter os outliers, mesmo quando eles reduzem a significância estatística, pode ser justificada, caso os seus dados sejam de uma variação natural. Pelas nossas análises até hoje, eu considero a nossa área, e os nossos dados, como bastante variáveis, com uma quantidade muito grande de outliers.
+
+Excluir valores extremos apenas devido à sua extremidade pode distorcer os resultados do estudo removendo as informações sobre a variabilidade inerente à área de estudo, mesmo que a nossa significância estatística seja reduzida. Você pode estar forçando a área de assunto a parecer menos variável do que é de verdade.
+
+Quando você está estudando um aspecto natural da população, você não deve remover o outlier.
+
+Então, baseado nessas informações, podemos analisar os nossos "5 grandes grupos de dados" e decidir o que fazer:
+
+1 - Tps
+- Considero que seja de variação natural. Eu decidiria não remover os outliers.
+
+2 - Nro. de testes
+- Considero que seja de variação natural. Eu decidiria não remover os outliers.
+
+3 - Nro. de submissoes
+- Considero que seja de variação natural. Eu decidiria não remover os outliers.
+
+4 - Nro. de acertos
+- Considero que seja de variação natural. Eu decidiria não remover os outliers.
+
+5 - Tempo total de IDE
+- Atributo propenso a ter sido alterado por conta de erros de medição (perda de pacotes no Codebench). Podemos tentar definir um threshold para o valor máximo que podemos considerar de tempo de IDE, e remover os outliers.
+
+----------------------------------------------------------------
+considero que o nosso grupo de estudo, ainda mais por se tratar de um número pequeno de alunos, tenha EXTREMA variação nos valores coletados, mas considero que os 4 primeiros aspectos são uma boa representação dos alunos do nosso grupo de estudo. 
+Então, acredito que os outliers dos 4 primeiros grupos de dados não devem ser removidos.

@@ -1,0 +1,1658 @@
+== TEST (2019-05-29 10:58:56) 
+-- CODE:
+v = array(eval(int(input("N: ")))
+
+
+-- ERROR:
+File "XXXX", line 3
+    
+    ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 10:59:37) 
+-- CODE:
+v = array(eval(int(input("N: ")))
+
+-- ERROR:
+File "XXXX", line 2
+    
+                                ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 10:59:45) 
+-- CODE:
+v = array(eval(int(input("N: ")))
+print(v)
+-- ERROR:
+File "XXXX", line 2
+    print(v)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:02:01) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:04:17) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] => 0):
+		p = p + 1
+		
+print(p)
+
+-- ERROR:
+File "XXXX", line 8
+    if (v[i] => 0):
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:04:31) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+		
+print(p)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:04:44) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 11:08:35) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+i2 = 0
+i3 = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+
+d = zeros (p)
+
+while (i2 < size(v)):
+	if (v[i2] > 0):
+		d[i3] = d[i3] + v[i2]
+	
+	i2 = i2 + 1
+	i3 = i3 + 1
+		
+	
+
+-- EXECUTION TIME:
+0.519398
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1760/1183/main.py", line 19, in <module>
+    d[i3] = d[i3] + v[i2]
+IndexError: index 10 is out of bounds for axis 0 with size 1
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:08:37) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+i2 = 0
+i3 = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+
+d = zeros (p)
+
+while (i2 < size(v)):
+	if (v[i2] > 0):
+		d[i3] = d[i3] + v[i2]
+	
+	i2 = i2 + 1
+	i3 = i3 + 1
+		
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:08:53) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+i2 = 0
+i3 = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+
+d = zeros (p)
+
+while (i2 < size(v)):
+	if (v[i2] > 0):
+		d[i3] = d[i3] + v[i2]
+	
+	i2 = i2 + 1
+	i3 = i3 + 1
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:09:54) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+i2 = 0
+i3 = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = zeros (p)
+
+while (i2 < size(v)):
+	if (v[i2] > 0):
+		d[i3] = d[i3] + v[i2]
+	print(d[i3])
+	i2 = i2 + 1
+	i3 = i3 + 1
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:11:11) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = zeros (p)
+
+while (j < size(v)):
+	if (v[j] > 0):
+		d[k] = d[k] + v[j]
+	print(d[k])
+	j = j + 1
+	k = k + 1
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:11:15) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = zeros (p)
+
+while (j < size(v)):
+	if (v[j] > 0):
+		d[k] = d[k] + v[j]
+	print(d[k])
+	j = j + 1
+	k = k + 1
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:11:20) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = zeros (p)
+
+while (j < size(v)):
+	if (v[j] > 0):
+		d[k] = d[k] + v[j]
+	print(d[k])
+	j = j + 1
+	k = k + 1
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:11:27) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = zeros (p)
+
+while (j < size(v)):
+	if (v[j] > 0):
+		d[k] = d[k] + v[j]
+	print(d[k])
+	j = j + 1
+	k = k + 1
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:12:32) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = zeros (p)
+
+while (j < size(v)):
+	if (v[j] => 0):
+		d[k] = d[k] + v[j]
+	elif(v[j] < 0)
+	print(d[k])
+	j = j + 1
+	k = k + 1
+		
+print(d)
+
+-- ERROR:
+File "XXXX", line 18
+    if (v[j] => 0):
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:14:22) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = zeros (p)
+
+while (j < size(v)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+	elif(v[j] < 0)
+		j = j + 1
+	print(d[k])
+	k = k + 1
+		
+print(d)
+
+-- ERROR:
+File "XXXX", line 21
+    elif(v[j] < 0)
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:14:32) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = zeros (p)
+
+while (j < size(v)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+	elif(v[j] < 0):
+		j = j + 1
+	print(d[k])
+	k = k + 1
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:15:51) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = zeros (p)
+
+while (j < size(v)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+	print(d[k])
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:16:33) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = zeros (p)
+
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+	print(d[k])
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:16:59) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = zeros (p)
+
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 11:17:09) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = zeros (p)
+
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- EXECUTION TIME:
+0.445706
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+1
+[1.]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+3
+[2. 3. 5.]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+4
+[18. 32. 14. 25.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:17:13) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = zeros (p)
+
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 11:17:44) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+
+d = zeros (p)
+
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- EXECUTION TIME:
+0.501194
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1.]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2. 3. 5.]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+[18. 32. 14. 25.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:17:58) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+
+d = zeros (p)
+
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:18:44) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+
+d = zeros (p)
+
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 11:19:06) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+
+d = zeros (p)
+
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- EXECUTION TIME:
+0.483896
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1.]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2. 3. 5.]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+[18. 32. 14. 25.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:19:14) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+
+d = zeros (p)
+
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:22:46) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+
+d = zeros (p)
+
+
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:22:54) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+
+d = zeros (p)
+
+
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:24:29) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+
+d = (zeros (p) dtype=int)
+
+
+print(d)
+
+-- ERROR:
+File "XXXX", line 15
+    d = (zeros (p) dtype=int)
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:24:59) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")))
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+
+d = zeros (p)
+
+
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:25:26) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")) dtype=int)
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+
+d = zeros (p)
+
+
+print(d)
+
+-- ERROR:
+File "XXXX", line 2
+    v = array(eval(input()) dtype=int)
+                                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:25:38) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")), dtype=int)
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+
+d = zeros (p)
+
+
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:25:44) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")), dtype=int)
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+
+d = zeros (p)
+
+
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 11:30:49) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")), dtype=int)
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = zeros (p)
+
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- EXECUTION TIME:
+0.452872
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+1
+[1.]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+3
+[2. 3. 5.]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+4
+[18. 32. 14. 25.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:30:51) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")), dtype=int)
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = zeros (p)
+
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:31:03) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")), dtype=int)
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = zeros (p)
+
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:31:18) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")), dtype=int)
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = zeros (p)
+
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:31:55) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")), dtype=int)
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = array(zeros (p))
+
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:32:05) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")), dtype=int)
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = array(zeros (p))
+
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:32:16) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")), dtype=int)
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = array(zeros (p))
+print(d)
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:32:40) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")), dtype=int)
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = array(zeros (p), dtype=int)
+print(d)
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 11:32:48) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")), dtype=int)
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = array(zeros (p), dtype=int)
+print(d)
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- EXECUTION TIME:
+0.410132
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+1
+[0]
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+3
+[0 0 0]
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+4
+[0 0 0 0]
+[18 32 14 25]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:32:57) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")), dtype=int)
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = array(zeros (p), dtype=int)
+
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 11:33:01) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")), dtype=int)
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = array(zeros (p), dtype=int)
+
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- EXECUTION TIME:
+0.363492
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+1
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+3
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+4
+[18 32 14 25]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:33:03) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")), dtype=int)
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+print(p)
+d = array(zeros (p), dtype=int)
+
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 11:33:22) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")), dtype=int)
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+
+d = array(zeros (p), dtype=int)
+
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 11:33:25) 
+-- CODE:
+from numpy import *
+v = array(eval(input("v: ")), dtype=int)
+
+i = 0
+j = 0
+k = 0
+p = 0
+
+while(i < size(v)):
+	if (v[i] > 0):
+		p = p + 1
+	i = i + 1
+		
+
+d = array(zeros (p), dtype=int)
+
+while (j < size(v) and k < size(d)):
+	if (v[j] >= 0):
+		d[k] = d[k] + v[j]
+		j = j + 1
+		k = k + 1
+	elif(v[j] < 0):
+		j = j + 1
+
+		
+print(d)
+
+-- EXECUTION TIME:
+0.551658
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+[18 32 14 25]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

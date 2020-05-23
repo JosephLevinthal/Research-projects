@@ -1,0 +1,575 @@
+== TEST (2019-05-02 11:12:25) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if (1 <= b <= 10) and (1 <= c <= 10) and ((a = "AAMEUL") or (a = "HETHRADIAH") or (a = "RAKSHASA")):
+	if (a == "AAMEUL"):
+	dano = 8 + a + b
+	print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (a + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + a + b
+		print(dano)
+else:
+	print("Entradas invalidas")
+-- ERROR:
+File "XXXX", line 5
+    if (1 <= b <= 10) and (1 <= c <= 10) and ((a = "AAMEUL") or (a = "HETHRADIAH") or (a = "RAKSHASA")):
+                                                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:12:46) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if ((1 <= b <= 10) and (1 <= c <= 10) and ((a = "AAMEUL") or (a = "HETHRADIAH") or (a = "RAKSHASA"))):
+	if (a == "AAMEUL"):
+	dano = 8 + a + b
+	print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (a + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + a + b
+		print(dano)
+else:
+	print("Entradas invalidas")
+-- ERROR:
+File "XXXX", line 5
+    if ((1 <= b <= 10) and (1 <= c <= 10) and ((a = "AAMEUL") or (a = "HETHRADIAH") or (a = "RAKSHASA"))):
+                                                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:13:05) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if (1 <= b <= 10) and (1 <= c <= 10) and (a = "AAMEUL") or (a = "HETHRADIAH") or (a = "RAKSHASA"):
+	if (a == "AAMEUL"):
+	dano = 8 + a + b
+	print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (a + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + a + b
+		print(dano)
+else:
+	print("Entradas invalidas")
+-- ERROR:
+File "XXXX", line 5
+    if (1 <= b <= 10) and (1 <= c <= 10) and (a = "AAMEUL") or (a = "HETHRADIAH") or (a = "RAKSHASA"):
+                                                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:13:51) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if (1 <= b <= 10) and (1 <= c <= 10) and ((a == "AAMEUL") or (a == "HETHRADIAH") or (a == "RAKSHASA")):
+	if (a == "AAMEUL"):
+	dano = 8 + a + b
+	print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (a + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + a + b
+		print(dano)
+else:
+	print("Entradas invalidas")
+-- ERROR:
+File "XXXX", line 7
+    dano = 8 + a + b
+       ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:14:18) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if (1 <= b <= 10) and (1 <= c <= 10) and ((a == "AAMEUL") or (a == "HETHRADIAH") or (a == "RAKSHASA")):
+	if (a == "AAMEUL"):
+	dano = 8 + c + b
+	print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (c + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + c + b
+		print(dano)
+else:
+	print("Entradas invalidas")
+-- ERROR:
+File "XXXX", line 7
+    dano = 8 + c + b
+       ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:14:43) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if (1 <= b <= 10) and (1 <= c <= 10) and ((a == "AAMEUL") or (a == "HETHRADIAH") or (a == "RAKSHASA")):
+	if (a == "AAMEUL"):
+	dano = 8 + (c + b)
+	print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (c + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + (c + b)
+		print(dano)
+else:
+	print("Entradas invalidas")
+-- ERROR:
+File "XXXX", line 7
+    dano = 8 + (c + b)
+       ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:14:57) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if (1 <= b <= 10) and (1 <= c <= 10) and ((a == "AAMEUL") or (a == "HETHRADIAH") or (a == "RAKSHASA")):
+	if (a == "AAMEUL"):
+		dano = 8 + (c + b)
+		print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (c + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + (c + b)
+		print(dano)
+else:
+	print("Entradas invalidas")
+-- OUTPUT:
+Entradas invalidas
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:15:07) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if (1 <= b <= 10) and (1 <= c <= 10) and ((a == "AAMEUL") or (a == "HETHRADIAH") or (a == "RAKSHASA")):
+	if (a == "AAMEUL"):
+		dano = 8 + (c + b)
+		print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (c + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + (c + b)
+		print(dano)
+else:
+	print("Entradas invalidas")
+-- OUTPUT:
+Entradas invalidas
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:15:22) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if (1 <= b <= 10) and (1 <= c <= 10) and ((a == "AAMEUL") or (a == "HETHRADIAH") or (a == "RAKSHASA")):
+	if (a == "AAMEUL"):
+		dano = 8 + (c + b)
+		print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (c + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + (c + b)
+		print(dano)
+else:
+	print("Entradas invalidas")
+-- OUTPUT:
+Entradas invalidas
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 11:15:34) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if (1 <= b <= 10) and (1 <= c <= 10) and ((a == "AAMEUL") or (a == "HETHRADIAH") or (a == "RAKSHASA")):
+	if (a == "AAMEUL"):
+		dano = 8 + (c + b)
+		print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (c + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + (c + b)
+		print(dano)
+else:
+	print("Entradas invalidas")
+-- EXECUTION TIME:
+0.23838
+-- TEST CASE 1:
+---- input:
+AAMEUL
+23
+1
+---- correct output:
+Entrada invalida
+---- user output:
+Entradas invalidas
+-- TEST CASE 2:
+---- input:
+RAKSHASA
+1
+2
+---- correct output:
+13
+---- user output:
+13
+-- TEST CASE 3:
+---- input:
+AAMEUL
+2
+3
+---- correct output:
+13
+---- user output:
+13
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:15:46) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if (1 <= b <= 10) and (1 <= c <= 10) and ((a == "AAMEUL") or (a == "HETHRADIAH") or (a == "RAKSHASA")):
+	if (a == "AAMEUL"):
+		dano = 8 + (c + b)
+		print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (c + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + (c + b)
+		print(dano)
+else:
+	print("Entradas invalidas")
+-- OUTPUT:
+Entradas invalidas
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:16:12) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if (1 <= b <= 10) and (1 <= c <= 10) and ((a == "AAMEUL") or (a == "HETHRADIAH") or (a == "RAKSHASA")):
+	if (a == "AAMEUL"):
+		dano = 8 + (c + b)
+		print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (c + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + (c + b)
+		print(dano)
+else:
+	print("Entradas invalidas")
+-- OUTPUT:
+Entradas invalidas
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:16:22) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if (1 <= b <= 10) and (1 <= c <= 10) and ((a == "AAMEUL") or (a == "HETHRADIAH") or (a == "RAKSHASA")):
+	if (a == "AAMEUL"):
+		dano = 8 + (c + b)
+		print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (c + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + (c + b)
+		print(dano)
+else:
+	print("Entradas invalidas")
+-- OUTPUT:
+Entradas invalidas
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:16:29) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if (1 <= b <= 10) and (1 <= c <= 10) and ((a == "AAMEUL") or (a == "HETHRADIAH") or (a == "RAKSHASA")):
+	if (a == "AAMEUL"):
+		dano = 8 + (c + b)
+		print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (c + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + (c + b)
+		print(dano)
+else:
+	print("Entradas invalidas")
+-- OUTPUT:
+Entradas invalidas
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:16:53) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if (1 <= b <= 10) and (1 <= c <= 10) and ((a == "AAMEUL") or (a == "HETHRADIAH") or (a == "RAKSHASA")):
+	if (a == "AAMEUL"):
+		dano = 8 + (c + b)
+		print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (c + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + (c + b)
+		print(dano)
+else:
+	print("Entradas invalidas")
+-- OUTPUT:
+Entradas invalidas
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 11:17:01) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if (1 <= b <= 10) and (1 <= c <= 10) and ((a == "AAMEUL") or (a == "HETHRADIAH") or (a == "RAKSHASA")):
+	if (a == "AAMEUL"):
+		dano = 8 + (c + b)
+		print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (c + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + (c + b)
+		print(dano)
+else:
+	print("Entradas invalidas")
+-- EXECUTION TIME:
+0.200485
+-- TEST CASE 1:
+---- input:
+AAMEUL
+23
+1
+---- correct output:
+Entrada invalida
+---- user output:
+Entradas invalidas
+-- TEST CASE 2:
+---- input:
+RAKSHASA
+1
+2
+---- correct output:
+13
+---- user output:
+13
+-- TEST CASE 3:
+---- input:
+AAMEUL
+2
+3
+---- correct output:
+13
+---- user output:
+13
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:17:05) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if (1 <= b <= 10) and (1 <= c <= 10) and ((a == "AAMEUL") or (a == "HETHRADIAH") or (a == "RAKSHASA")):
+	if (a == "AAMEUL"):
+		dano = 8 + (c + b)
+		print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (c + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + (c + b)
+		print(dano)
+else:
+	print("Entradas invalidas")
+-- OUTPUT:
+Entradas invalidas
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:18:00) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if (1 <= b <= 10) and (1 <= c <= 10) and ((a == "AAMEUL") or (a == "HETHRADIAH") or (a == "RAKSHASA")):
+	if (a == "AAMEUL"):
+		dano = 8 + (c + b)
+		print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (c + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + (c + b)
+		print(dano)
+else:
+	print("Entradas invalidas")
+-- OUTPUT:
+Entradas invalidas
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 11:18:14) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if (1 <= b <= 10) and (1 <= c <= 10) and ((a == "AAMEUL") or (a == "HETHRADIAH") or (a == "RAKSHASA")):
+	if (a == "AAMEUL"):
+		dano = 8 + (c + b)
+		print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (c + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + (c + b)
+		print(dano)
+else:
+	print("Entradas invalidas")
+-- EXECUTION TIME:
+0.148807
+-- TEST CASE 1:
+---- input:
+AAMEUL
+23
+1
+---- correct output:
+Entrada invalida
+---- user output:
+Entradas invalidas
+-- TEST CASE 2:
+---- input:
+RAKSHASA
+1
+2
+---- correct output:
+13
+---- user output:
+13
+-- TEST CASE 3:
+---- input:
+AAMEUL
+2
+3
+---- correct output:
+13
+---- user output:
+13
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 11:18:36) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if (1 <= b <= 10) and (1 <= c <= 10) and ((a == "AAMEUL") or (a == "HETHRADIAH") or (a == "RAKSHASA")):
+	if (a == "AAMEUL"):
+		dano = 8 + (c + b)
+		print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (c + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + (c + b)
+		print(dano)
+else:
+	print("Entrada invalida")
+-- OUTPUT:
+Entrada invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 11:18:48) 
+-- CODE:
+a = input("Ataque: ").upper()
+b = int(input("Dado 1: "))
+c = int(input("Dado 2: "))
+
+if (1 <= b <= 10) and (1 <= c <= 10) and ((a == "AAMEUL") or (a == "HETHRADIAH") or (a == "RAKSHASA")):
+	if (a == "AAMEUL"):
+		dano = 8 + (c + b)
+		print(dano)
+	elif (a == "HETHRADIAH"):
+		dano = 2 * (c + b)
+		print(dano)
+	elif (a == "RAKSHASA"):
+		dano = 10 + (c + b)
+		print(dano)
+else:
+	print("Entrada invalida")
+-- EXECUTION TIME:
+0.19552
+-- TEST CASE 1:
+---- input:
+AAMEUL
+23
+1
+---- correct output:
+Entrada invalida
+---- user output:
+Entrada invalida
+-- TEST CASE 2:
+---- input:
+RAKSHASA
+1
+2
+---- correct output:
+13
+---- user output:
+13
+-- TEST CASE 3:
+---- input:
+AAMEUL
+2
+3
+---- correct output:
+13
+---- user output:
+13
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

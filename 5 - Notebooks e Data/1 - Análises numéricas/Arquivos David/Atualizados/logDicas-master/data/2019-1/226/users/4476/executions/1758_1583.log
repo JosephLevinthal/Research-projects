@@ -1,0 +1,113 @@
+== TEST (2019-05-30 00:29:59) 
+-- CODE:
+n = input("digite: ")
+
+a = n[1] + n[3]
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    a = n[1] + n[3]
+IndexError: string index out of range
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 00:32:46) 
+-- CODE:
+n = input("digite: ")
+
+a = n[0] + n[2]
+print(a)
+-- OUTPUT:
+13
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 00:38:57) 
+-- CODE:
+n = input("digite: ")
+
+i = 0
+k = 3
+m = ""
+
+while (i<len(n)):
+	if (i==(len(v)-3)):
+		m = m + v[i:k]
+		i = i + 3
+		k = k + 3
+	else:
+		m = m + v[i:k] + "."
+		i = i + 3
+		k = k + 3
+print(m)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    if (i==(len(v)-3)):
+NameError: name 'v' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 00:39:35) 
+-- CODE:
+n = input("digite: ")
+
+i = 0
+k = 3
+m = ""
+
+while (i<len(n)):
+	if (i==(len(n)-3)):
+		m = m + n[i:k]
+		i = i + 3
+		k = k + 3
+	else:
+		m = m + n[i:k] + "."
+		i = i + 3
+		k = k + 3
+print(m)
+
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 00:39:48) 
+-- CODE:
+n = input("digite: ")
+
+i = 0
+k = 3
+m = ""
+
+while (i<len(n)):
+	if (i==(len(n)-3)):
+		m = m + n[i:k]
+		i = i + 3
+		k = k + 3
+	else:
+		m = m + n[i:k] + "."
+		i = i + 3
+		k = k + 3
+print(m)
+
+-- EXECUTION TIME:
+0.125967
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789.000.987.654.321
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

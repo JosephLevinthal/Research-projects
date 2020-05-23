@@ -1,0 +1,409 @@
+== TEST (2019-04-29 22:30:09) 
+-- CODE:
+s = float(input("Salario Bruto:"))
+
+if(s<=1659,38):
+	a = s-(s*0,08)
+print(a)
+-- ERROR:
+File "XXXX", line 4
+    a = s-(s*0,08)
+                ^
+SyntaxError: invalid token
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 22:30:29) 
+-- CODE:
+s = float(input("Salario Bruto:"))
+
+if(s<=1659,38):
+	a = s-(s*0,08)
+
+print(a)
+-- ERROR:
+File "XXXX", line 4
+    a = s-(s*0,08)
+                ^
+SyntaxError: invalid token
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 22:31:08) 
+-- CODE:
+s = float(input("Salario Bruto:"))
+
+if(s<=1659,38):
+	a = s-(s*0,08)
+else:
+	a = "burro"
+
+print(a)
+-- ERROR:
+File "XXXX", line 4
+    a = s-(s*0,08)
+                ^
+SyntaxError: invalid token
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 22:32:35) 
+-- CODE:
+s = float(input("Salario Bruto:"))
+
+if(s <= 1659,38):
+	a = s-(s*0.08)
+else:
+	a = "burro"
+
+print(a)
+-- OUTPUT:
+1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 22:54:02) 
+-- CODE:
+s = float(input("Salario Bruto:"))
+
+if(s <= 1659.38):
+	a = s-(s*0.08)
+elif(s > 1659.38) and (s <= 2765.66):
+	a = s-(s*0.09)
+elif(s > 2765.66) and (s <= 5531.31):
+	a = s-(s*0.11)
+elif(s >5531.31)
+	a = s-608.44
+
+if(a<=1903.98):
+	print("Salario liquido = R$",a)
+elif(a > 1903.98) and (a <= 2826.65):
+	b = a-(a*0.075)
+	print("Salario liquido = R$",b)
+elif(a > 2826.65) and (a <= 3751.05):
+	b = a-(a*0.15)
+	print("Salario liquido = R$",b)
+elif(a > 3751.05) and (a <= 4664.68):
+	b = a-(a*0.225)
+	print("Salario liquido = R$",b)
+elif(a > 4664.68):
+	b = a-(a*0.275)
+	print("Salario liquido = R$",b)
+-- ERROR:
+File "XXXX", line 9
+    elif(s >5531.31)
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 22:55:16) 
+-- CODE:
+s = float(input("Salario Bruto:"))
+
+if(s <= 1659.38):
+	a = s-(s*0.08)
+elif(s > 1659.38) and (s <= 2765.66):
+	a = s-(s*0.09)
+elif(s > 2765.66) and (s <= 5531.31):
+	a = s-(s*0.11)
+elif(s > 5531.31)
+	a = s-608.44
+
+
+if(a<=1903.98):
+	print("Salario liquido = R$",a)
+elif(a > 1903.98) and (a <= 2826.65):
+	b = a-(a*0.075)
+	print("Salario liquido = R$",b)
+elif(a > 2826.65) and (a <= 3751.05):
+	b = a-(a*0.15)
+	print("Salario liquido = R$",b)
+elif(a > 3751.05) and (a <= 4664.68):
+	b = a-(a*0.225)
+	print("Salario liquido = R$",b)
+elif(a > 4664.68):
+	b = a-(a*0.275)
+	print("Salario liquido = R$",b)
+-- ERROR:
+File "XXXX", line 9
+    elif(s > 5531.31)
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 22:55:57) 
+-- CODE:
+s = float(input("Salario Bruto:"))
+
+if(s <= 1659.38):
+	a = s-(s*0.08)
+elif(s > 1659.38) and (s <= 2765.66):
+	a = s-(s*0.09)
+elif(s > 2765.66) and (s <= 5531.31):
+	a = s-(s*0.11)
+elif(s > 5531.31):
+	a = s-608.44
+
+
+if(a<=1903.98):
+	print("Salario liquido = R$",a)
+elif(a > 1903.98) and (a <= 2826.65):
+	b = a-(a*0.075)
+	print("Salario liquido = R$",b)
+elif(a > 2826.65) and (a <= 3751.05):
+	b = a-(a*0.15)
+	print("Salario liquido = R$",b)
+elif(a > 3751.05) and (a <= 4664.68):
+	b = a-(a*0.225)
+	print("Salario liquido = R$",b)
+elif(a > 4664.68):
+	b = a-(a*0.275)
+	print("Salario liquido = R$",b)
+-- OUTPUT:
+Salario liquido = R$ 1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 22:56:22) 
+-- CODE:
+s = float(input("Salario Bruto:"))
+
+if(s <= 1659.38):
+	a = s-(s*0.08)
+elif(s > 1659.38) and (s <= 2765.66):
+	a = s-(s*0.09)
+elif(s > 2765.66) and (s <= 5531.31):
+	a = s-(s*0.11)
+elif(s > 5531.31):
+	a = s-608.44
+
+
+if(a<=1903.98):
+	print("Salario liquido = R$",a)
+elif(a > 1903.98) and (a <= 2826.65):
+	b = a-(a*0.075)
+	print("Salario liquido = R$",b)
+elif(a > 2826.65) and (a <= 3751.05):
+	b = a-(a*0.15)
+	print("Salario liquido = R$",b)
+elif(a > 3751.05) and (a <= 4664.68):
+	b = a-(a*0.225)
+	print("Salario liquido = R$",b)
+elif(a > 4664.68):
+	b = a-(a*0.275)
+	print("Salario liquido = R$",b)
+-- EXECUTION TIME:
+0.143406
+-- TEST CASE 1:
+---- input:
+1234.56
+---- correct output:
+Salario liquido = R$  1135.8
+---- user output:
+Salario liquido = R$ 1135.7952
+-- TEST CASE 2:
+---- input:
+2000
+---- correct output:
+Salario liquido = R$  1820.0
+---- user output:
+Salario liquido = R$ 1820.0
+-- TEST CASE 3:
+---- input:
+5535
+---- correct output:
+Salario liquido = R$  3571.76
+---- user output:
+Salario liquido = R$ 3571.7559999999994
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 22:56:32) 
+-- CODE:
+s = float(input("Salario Bruto:"))
+
+if(s <= 1659.38):
+	a = s-(s*0.08)
+elif(s > 1659.38) and (s <= 2765.66):
+	a = s-(s*0.09)
+elif(s > 2765.66) and (s <= 5531.31):
+	a = s-(s*0.11)
+elif(s > 5531.31):
+	a = s-608.44
+
+
+if(a<=1903.98):
+	print("Salario liquido = R$",a)
+elif(a > 1903.98) and (a <= 2826.65):
+	b = a-(a*0.075)
+	print("Salario liquido = R$",b)
+elif(a > 2826.65) and (a <= 3751.05):
+	b = a-(a*0.15)
+	print("Salario liquido = R$",b)
+elif(a > 3751.05) and (a <= 4664.68):
+	b = a-(a*0.225)
+	print("Salario liquido = R$",b)
+elif(a > 4664.68):
+	b = a-(a*0.275)
+	print("Salario liquido = R$",b)
+-- OUTPUT:
+Salario liquido = R$ 1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 23:01:29) 
+-- CODE:
+s = float(input("Salario Bruto:"))
+
+if(s <= 1659.38):
+	a = s-(s*0.08)
+elif(s > 1659.38) and (s <= 2765.66):
+	a = s-(s*0.09)
+elif(s > 2765.66) and (s <= 5531.31):
+	a = s-(s*0.11)
+elif(s > 5531.31):
+	a = s-608.44
+
+
+if(a<=1903.98):
+	print("Salario liquido = R$",a)
+elif(a > 1903.98) and (a <= 2826.65):
+	b = a-(a*0.075)
+	print("Salario liquido = R$",b)
+elif(a > 2826.65) and (a <= 3751.05):
+	b = a-(a*0.15)
+	print("Salario liquido = R$",b)
+elif(a > 3751.05) and (a <= 4664.68):
+	b = a-(a*0.225)
+	print("Salario liquido = R$",b)
+elif(a > 4664.68):
+	b = a-(a*0.275)
+	print("Salario liquido = R$",b)
+-- OUTPUT:
+Salario liquido = R$ 1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 23:01:42) 
+-- CODE:
+s = float(input("Salario Bruto:"))
+
+if(s <= 1659.38):
+	a = s-(s*0.08)
+elif(s > 1659.38) and (s <= 2765.66):
+	a = s-(s*0.09)
+elif(s > 2765.66) and (s <= 5531.31):
+	a = s-(s*0.11)
+elif(s > 5531.31):
+	a = s-608.44
+
+
+if(a<=1903.98):
+	print("Salario liquido = R$",a)
+elif(a > 1903.98) and (a <= 2826.65):
+	b = a-(a*0.075)
+	print("Salario liquido = R$",b)
+elif(a > 2826.65) and (a <= 3751.05):
+	b = a-(a*0.15)
+	print("Salario liquido = R$",b)
+elif(a > 3751.05) and (a <= 4664.68):
+	b = a-(a*0.225)
+	print("Salario liquido = R$",b)
+elif(a > 4664.68):
+	b = a-(a*0.275)
+	print("Salario liquido = R$",b)
+-- OUTPUT:
+Salario liquido = R$ 1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 23:04:04) 
+-- CODE:
+s = float(input("Salario Bruto:"))
+
+if(s <= 1659.38):
+	a = s-(s*0.08)
+elif(s > 1659.38) and (s <= 2765.66):
+	a = s-(s*0.09)
+elif(s > 2765.66) and (s <= 5531.31):
+	a = s-(s*0.11)
+elif(s > 5531.31):
+	a = s-608.44
+
+
+if(a<=1903.98):
+	print("Salario liquido = R$",round(a,2))
+elif(a > 1903.98) and (a <= 2826.65):
+	b = a-(a*0.075)
+	print("Salario liquido = R$",round(b,2))
+elif(a > 2826.65) and (a <= 3751.05):
+	b = a-(a*0.15)
+	print("Salario liquido = R$",round(b,2))
+elif(a > 3751.05) and (a <= 4664.68):
+	b = a-(a*0.225)
+	print("Salario liquido = R$",round(b,2))
+elif(a > 4664.68):
+	b = a-(a*0.275)
+	print("Salario liquido = R$",round(b,2))
+-- EXECUTION TIME:
+0.152704
+-- TEST CASE 1:
+---- input:
+1234.56
+---- correct output:
+Salario liquido = R$  1135.8
+---- user output:
+Salario liquido = R$ 1135.8
+-- TEST CASE 2:
+---- input:
+2000
+---- correct output:
+Salario liquido = R$  1820.0
+---- user output:
+Salario liquido = R$ 1820.0
+-- TEST CASE 3:
+---- input:
+5535
+---- correct output:
+Salario liquido = R$  3571.76
+---- user output:
+Salario liquido = R$ 3571.76
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 23:06:11) 
+-- CODE:
+s = float(input("Salario Bruto:"))
+
+if(s <= 1659.38):
+	a = s-(s*0.08)
+elif(s > 1659.38) and (s <= 2765.66):
+	a = s-(s*0.09)
+elif(s > 2765.66) and (s <= 5531.31):
+	a = s-(s*0.11)
+elif(s > 5531.31):
+	a = s-608.44
+
+
+if(a<=1903.98):
+	print("Salario liquido = R$",round(a,2))
+elif(a > 1903.98) and (a <= 2826.65):
+	b = a-(a*0.075)
+	print("Salario liquido = R$",round(b,2))
+elif(a > 2826.65) and (a <= 3751.05):
+	b = a-(a*0.15)
+	print("Salario liquido = R$",round(b,2))
+elif(a > 3751.05) and (a <= 4664.68):
+	b = a-(a*0.225)
+	print("Salario liquido = R$",round(b,2))
+elif(a > 4664.68):
+	b = a-(a*0.275)
+	print("Salario liquido = R$",round(b,2))
+-- EXECUTION TIME:
+0.169535
+-- TEST CASE 1:
+---- input:
+1234.56
+---- correct output:
+Salario liquido = R$  1135.8
+---- user output:
+Salario liquido = R$ 1135.8
+-- TEST CASE 2:
+---- input:
+2000
+---- correct output:
+Salario liquido = R$  1820.0
+---- user output:
+Salario liquido = R$ 1820.0
+-- TEST CASE 3:
+---- input:
+5535
+---- correct output:
+Salario liquido = R$  3571.76
+---- user output:
+Salario liquido = R$ 3571.76
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

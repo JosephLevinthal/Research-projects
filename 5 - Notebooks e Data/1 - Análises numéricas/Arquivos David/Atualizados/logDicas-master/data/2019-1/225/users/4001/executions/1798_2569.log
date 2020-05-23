@@ -1,0 +1,392 @@
+== TEST (2019-06-08 15:25:14) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+
+for i in range(size(x)):
+	m = sum(x/size(x))
+	d = ((x[i] - m)**2) / (n - 1)
+print(round(d**0.5, 3))	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 15:25:57) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+
+for i in range(size(x)):
+	m = sum(x/size(x))
+	d = ((x[i] - m)**2) / (size(x) - 1)
+print(round(d**0.5, 3))	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 15:27:02) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+
+for i in range(size(x)):
+	m = sum(x/size(x))
+	d1 = ((x[i] - m)**2)
+d2 = (d1 ** 0.5)/ (size(x) - 1)
+print(round(, 3))	
+
+-- ERROR:
+File "XXXX", line 8
+    print(round(, 3))	
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 15:27:09) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+
+for i in range(size(x)):
+	m = sum(x/size(x))
+	d1 = ((x[i] - m)**2)
+d2 = (d1 ** 0.5)/ (size(x) - 1)
+print(round(d2, 3))	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 15:28:22) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+n = 1
+for i in range(size(x)):
+	n = n + 1
+	m = sum(x/size(x))
+	d1 = ((x[i] - m)**2)
+d2 = (d1 ** 0.5)/ (n - 1)
+print(round(d2, 3))	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 15:28:56) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+n = 1
+for i in range(size(x)):
+	n = n + 1
+	m = sum(x)/size(x)
+	d1 = ((x[i] - m)**2)
+d2 = (d1 ** 0.5)/ (n - 1)
+print(round(d2, 3))	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 15:30:15) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+
+for i in range(size(x)):
+	m = sum(x)/size(x)
+	d1 = ((x[i] - m)**2)
+   d2 = sqrt((d1)/ size(x) - 1)
+print(round(d2, 3))	
+
+-- ERROR:
+File "XXXX", line 7
+    d2 = sqrt((d1)/ size(x) - 1)
+                               ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 15:30:40) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+
+for i in range(size(x)):
+	m = sum(x)/size(x)
+	d1 = ((x[i] - m)**2)
+   d2 = sqrt((d1)/ size(x) - 1)
+print(round(d2, 3))	
+
+-- ERROR:
+File "XXXX", line 7
+    d2 = sqrt((d1)/ size(x) - 1)
+                               ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 15:30:49) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+
+for i in range(size(x)):
+	m = sum(x)/size(x)
+	d1 = ((x[i] - m)**2)
+   d2 = sqrt((d1)/ size(x)-1)
+print(round(d2, 3))	
+
+-- ERROR:
+File "XXXX", line 7
+    d2 = sqrt((d1)/ size(x)-1)
+                             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 15:31:10) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+
+for i in range(size(x)):
+	m = sum(x)/size(x)
+	d1 = ((x[i] - m)**2)
+d2 = sqrt((d1)/ size(x) - 1)
+print(round(d2, 3))	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 15:31:53) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+d1 = 0
+for i in range(size(x)):
+	m = sum(x)/size(x)
+	d1 = d1 + ((x[i] - m)**2)
+d2 = sqrt((d1)/ size(x) - 1)
+print(round(d2, 3))	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 15:33:23) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+d1 = 0
+n = 1
+for i in range(size(x)):
+	m = sum(x)/size(x)
+	d1 = d1 + (x[i] - m)**2
+	n = n + 1
+d2 = sqrt((d1)/ (n - 1)
+print(round(d2, 3))	
+
+-- ERROR:
+File "XXXX", line 10
+    print(round(d2, 3))	
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 15:33:35) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+d1 = 0
+n = 1
+for i in range(size(x)):
+	m = sum(x)/size(x)
+	d1 = d1 + (x[i] - m)**2
+	n = n + 1
+d2 = sqrt((d1)/ (n - 1)
+print(round(d2, 3))	
+
+-- ERROR:
+File "XXXX", line 10
+    print(round(d2, 3))	
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 15:33:45) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+d1 = 0
+n = 1
+for i in range(size(x)):
+	m = sum(x)/size(x)
+	d1 = d1 + (x[i] - m)**2
+	n = n + 1
+d2 = (d1)/ (n - 1)
+print(round(d2, 3))	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 15:33:54) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+d1 = 0
+n = 1
+for i in range(size(x)):
+	m = sum(x)/size(x)
+	d1 = d1 + (x[i] - m)**2
+	n = n + 1
+d2 = sqrt((d1)/ (n - 1))
+print(round(d2, 3))	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 13:29:26) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+n = 1
+d1 = 0
+for i in range(size(x)):
+	m = sum(x)/size(x)
+	d1 = d1 + (x[i] - m)**2
+d2 = sqrt(d1/size(x) - 1)
+print(round(d2, 3))
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 13:30:19) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+
+n = 1
+d1 = 0
+
+m = sum(x)/size(x)
+for i in range(size(x)):
+	d1 = d1 + (x[i] - m)**2
+d2 = sqrt(d1/size(x) - 1)
+print(round(d2, 3))
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 13:30:26) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+
+n = 1
+d1 = 0
+m = sum(x)/size(x)
+
+for i in range(size(x)):
+	d1 = d1 + (x[i] - m)**2
+d2 = sqrt(d1/size(x) - 1)
+print(round(d2, 3))
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 13:31:42) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+
+n = 1
+d1 = 0
+m = sum(x)/size(x)
+
+for i in range(size(x)):
+	d1 = d1 + (x[i] - m)**2
+d2 = sqrt(d1/(size(x) - 1))
+print(round(d2, 3))
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-10 13:31:57) 
+-- CODE:
+from numpy import*
+x = array(eval(input("x: ")))
+
+n = 1
+d1 = 0
+m = sum(x)/size(x)
+
+for i in range(size(x)):
+	d1 = d1 + (x[i] - m)**2
+d2 = sqrt(d1/(size(x) - 1))
+print(round(d2, 3))
+
+
+
+-- EXECUTION TIME:
+1.06019
+-- TEST CASE 1:
+---- input:
+[-4,250,-1,30,12]
+---- correct output:
+108.498
+---- user output:
+108.498
+-- TEST CASE 2:
+---- input:
+[12.5,25.2,50.39,47.3,0.9]
+---- correct output:
+21.526
+---- user output:
+21.526
+-- TEST CASE 3:
+---- input:
+[1.5,1.9,1.2,1.3,1.4,1.1,1.75]
+
+---- correct output:
+0.29
+---- user output:
+0.29
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

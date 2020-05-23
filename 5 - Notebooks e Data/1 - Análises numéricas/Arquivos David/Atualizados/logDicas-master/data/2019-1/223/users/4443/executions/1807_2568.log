@@ -1,0 +1,419 @@
+== TEST (2019-06-11 16:34:22) 
+-- CODE:
+n = int(input("Digite um numero: "))
+
+b = 0
+
+for i in range(z):
+	print(n*"*" + 2b*i("o") + n*"*")
+-- ERROR:
+File "XXXX", line 6
+    print(n*"*" + 2b*i("o") + n*"*")
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:34:31) 
+-- CODE:
+n = int(input("Digite um numero: "))
+
+b = 0
+
+for i in range(z):
+	print(n*"*" + 2*b*i("o") + n*"*")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    for i in range(z):
+NameError: name 'z' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:34:47) 
+-- CODE:
+n = int(input("Digite um numero: "))
+
+b = 0
+
+for i in range(n):
+	print(n*"*" + 2*b*i("o") + n*"*")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print(n*"*" + 2*b*i("o") + n*"*")
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:35:21) 
+-- CODE:
+n = int(input("Digite um numero: "))
+
+b = 0
+
+for i in range(n):
+	print(n*"*" + 2*b*i*("o") + n*"*")
+-- OUTPUT:
+**********************
+**********************
+**********************
+**********************
+**********************
+**********************
+**********************
+**********************
+**********************
+**********************
+**********************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:36:38) 
+-- CODE:
+n = int(input("Digite um numero: "))
+
+b = 0
+
+for i in range(n):
+	print(n*"*", 2*b*i*("o"), n*"*")
+-- OUTPUT:
+***********  ***********
+***********  ***********
+***********  ***********
+***********  ***********
+***********  ***********
+***********  ***********
+***********  ***********
+***********  ***********
+***********  ***********
+***********  ***********
+***********  ***********
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 17:03:30) 
+-- CODE:
+n = int(input("Digite um numero: "))
+a = "*"
+b = "o"
+c = "*"
+for i in range(n):
+	l = a*(n-i)
+	o = b*(2*i)
+	print(l+o+l)
+-- OUTPUT:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 17:03:47) 
+-- CODE:
+n = int(input("Digite um numero: "))
+a = "*"
+b = "o"
+c = "*"
+for i in range(n):
+	l = a*(n-i)
+	o = b*(2*i)
+	print(l+o+l)
+-- OUTPUT:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 17:04:06) 
+-- CODE:
+n = int(input("Digite um numero: "))
+a = "*"
+b = "o"
+c = "*"
+for i in range(n):
+	l = a*(n-i)
+	o = b*(2*i)
+	print(l+o+l)
+-- EXECUTION TIME:
+0.728774
+-- TEST CASE 1:
+---- input:
+11
+---- correct output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+---- user output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+-- TEST CASE 2:
+---- input:
+19
+---- correct output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+---- user output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+-- TEST CASE 3:
+---- input:
+26
+---- correct output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo********
+*******oooooooooooooooooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooooooooooooooooo*
+---- user output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo**
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 17:10:26) 
+-- CODE:
+n = int(input("Digite um numero: "))
+a = "*"
+b = "o"
+
+for i in range(n):
+	print(a*(n-i)+b*(2*i)+a*(n-i))
+-- OUTPUT:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 17:10:43) 
+-- CODE:
+n = int(input("Digite um numero: "))
+a = "*"
+b = "o"
+
+for i in range(n):
+	print(a*(n-i)+b*(2*i)+a*(n-i))
+-- EXECUTION TIME:
+0.865928
+-- TEST CASE 1:
+---- input:
+11
+---- correct output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+---- user output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+-- TEST CASE 2:
+---- input:
+19
+---- correct output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+---- user output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+-- TEST CASE 3:
+---- input:
+26
+---- correct output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo********
+*******oooooooooooooooooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooooooooooooooooo*
+---- user output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo**
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

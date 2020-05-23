@@ -1,0 +1,110 @@
+== TEST (2019-06-06 17:14:05) 
+-- CODE:
+from numpy import*
+f = array(eval(input("Historico de faltas: ")))
+x = zeros(6, dtype = int)
+for i in range(size(f)):
+	if(f[i] == 2):
+		x[0] = x[0] + 1
+	elif(f[i] == 3):
+		x[1] = x[1] + 1
+	elif(f[i] == 4):
+		x[2] = x[2] + 1
+	elif(f[i] == 5):	
+		x[3] = x[3] + 1
+	elif(f[i] == 6):
+		x[4] = x[4] + 1
+	elif(f[i] == 7):
+		x[5] = x[5] + 1
+y = sum(x)		
+for i in range(size(x)):
+	x[i] = (x[i]/y)*100
+	x[i] = round(x[i],1)
+print(x)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 17:14:43) 
+-- CODE:
+from numpy import*
+f = array(eval(input("Historico de faltas: ")))
+x = zeros(6, dtype = float)
+for i in range(size(f)):
+	if(f[i] == 2):
+		x[0] = x[0] + 1
+	elif(f[i] == 3):
+		x[1] = x[1] + 1
+	elif(f[i] == 4):
+		x[2] = x[2] + 1
+	elif(f[i] == 5):	
+		x[3] = x[3] + 1
+	elif(f[i] == 6):
+		x[4] = x[4] + 1
+	elif(f[i] == 7):
+		x[5] = x[5] + 1
+y = sum(x)		
+for i in range(size(x)):
+	x[i] = (x[i]/y)*100
+	x[i] = round(x[i],1)
+print(x)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 17:14:53) 
+-- CODE:
+from numpy import*
+f = array(eval(input("Historico de faltas: ")))
+x = zeros(6, dtype = float)
+for i in range(size(f)):
+	if(f[i] == 2):
+		x[0] = x[0] + 1
+	elif(f[i] == 3):
+		x[1] = x[1] + 1
+	elif(f[i] == 4):
+		x[2] = x[2] + 1
+	elif(f[i] == 5):	
+		x[3] = x[3] + 1
+	elif(f[i] == 6):
+		x[4] = x[4] + 1
+	elif(f[i] == 7):
+		x[5] = x[5] + 1
+y = sum(x)		
+for i in range(size(x)):
+	x[i] = (x[i]/y)*100
+	x[i] = round(x[i],1)
+print(x)
+	
+-- EXECUTION TIME:
+1.12262
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.  18.8 25.  37.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 4.  8. 16. 20. 20. 32.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[15.4  7.7 23.1  7.7 15.4 30.8]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

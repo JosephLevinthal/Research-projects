@@ -1,0 +1,5 @@
+a = float(input("preco do primeiro jogo: "))
+b = float(input("preco do segundo jogo: "))
+totaljogo2 = b - (b * (25/100))
+print(round(totaljogo2, 2))
+print(round(a + totaljogo2, 2))

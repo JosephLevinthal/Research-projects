@@ -1,0 +1,141 @@
+== TEST (2019-05-28 10:42:40) 
+-- CODE:
+x = input()
+i = 0
+j = ""
+while i+3<len(x):
+	j+= x[i]
+	j+= x[i+1]
+	j+= x[i+2]
+	j+= "." if i+3<len(x) else j
+	i+=3
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(sum(s))
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 10:43:01) 
+-- CODE:
+x = input()
+i = 0
+j = ""
+while i+3<len(x):
+	j+= x[i]
+	j+= x[i+1]
+	j+= x[i+2]
+	j+= "." if i+3<len(x) else j
+	i+=3
+print(j)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(sum(s))
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 10:43:13) 
+-- CODE:
+x = input()
+i = 0
+j = ""
+while i+3<=len(x):
+	j+= x[i]
+	j+= x[i+1]
+	j+= x[i+2]
+	j+= "." if i+3<len(x) else j
+	i+=3
+print(j)
+-- OUTPUT:
+123123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 10:44:18) 
+-- CODE:
+x = input()
+i = 0
+j = ""
+while i+3<=len(x):
+	j+= x[i]
+	j+= x[i+1]
+	j+= x[i+2]
+	j+= "." if i+3<len(x) else 
+	i+=3
+print(j)
+-- ERROR:
+File "XXXX", line 8
+    j+= "." if i+3<len(x) else 
+                              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 10:44:26) 
+-- CODE:
+x = input()
+i = 0
+j = ""
+while i+3<=len(x):
+	j+= x[i]
+	j+= x[i+1]
+	j+= x[i+2]
+	j+= "." if i+3<len(x) else 1
+	i+=3
+print(j)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    j+= "." if i+3<len(x) else 1
+TypeError: must be str, not int
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 10:45:16) 
+-- CODE:
+x = input()
+i = 0
+j = ""
+while i+3<=len(x):
+	j+= x[i]
+	j+= x[i+1]
+	j+= x[i+2]
+	if i+3<len(x):
+		j+= "."
+	i+=3
+print(j)
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 10:45:23) 
+-- CODE:
+x = input()
+i = 0
+j = ""
+while i+3<=len(x):
+	j+= x[i]
+	j+= x[i+1]
+	j+= x[i+2]
+	if i+3<len(x):
+		j+= "."
+	i+=3
+print(j)
+-- EXECUTION TIME:
+0.177766
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789.000.987.654.321
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

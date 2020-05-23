@@ -1,0 +1,95 @@
+== TEST (2019-04-09 10:32:54) 
+-- CODE:
+n = float(input("nota do aluno:"))
+b =input("vai receber bonificacao?", (s, n))
+a = n*0.10
+if(opcao == "s"):
+	print(a)
+else:
+	print(n)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    b =input("vai receber bonificacao?", (s, n))
+NameError: name 's' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:33:26) 
+-- CODE:
+n = float(input("nota do aluno:"))
+b =input("vai receber bonificacao?")7
+a = n*0.10
+if(opcao == "s"):
+	print(a)
+else:
+	print(n)
+-- ERROR:
+File "XXXX", line 2
+    b =input()7
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:33:30) 
+-- CODE:
+n = float(input("nota do aluno:"))
+b =input("vai receber bonificacao?")
+a = n*0.10
+if(opcao == "s"):
+	print(a)
+else:
+	print(n)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if(opcao == "s"):
+NameError: name 'opcao' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:37:06) 
+-- CODE:
+n = float(input("nota do aluno:"))
+b =input("vai receber bonificacao? (S/N)")
+a = n*0.10
+if(b.upper() == "S"):
+	print(a + n)
+else:
+	print(n)
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 10:37:53) 
+-- CODE:
+n = float(input("nota do aluno:"))
+b =input("vai receber bonificacao? (S/N)")
+a = n*0.10
+if(b.upper() == "S"):
+	print(a + n)
+else:
+	print(n)
+-- EXECUTION TIME:
+0.142241
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

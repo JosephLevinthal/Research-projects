@@ -1,0 +1,6 @@
+temp=float(input("t:"))
+velo=float(input("v:"))
+distPER= (temp*velo)
+combULTILI=(distPER/12.0)
+print(distPER)
+print(combULTILI)

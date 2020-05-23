@@ -1,0 +1,123 @@
+== TEST (2019-03-31 18:02:09) 
+-- CODE:
+a= 1
+b= 2
+c= 3
+abc= float(round((((a ** 2)+(b ** 2)+(c ** 2))/(a + b + c)), 7)
+-- ERROR:
+File "XXXX", line 5
+    
+                                                                   ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 18:03:50) 
+-- CODE:
+a= 1
+b= 2
+c= 3
+abc= float((((a ** 2)+(b ** 2)+(c ** 2))/(a + b + c))
+print(abc{:.7}.format(abc))		 
+-- ERROR:
+File "XXXX", line 5
+    print(abc{:.7}.format(abc))		 
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 18:04:17) 
+-- CODE:
+a= 1
+b= 2
+c= 3
+abc= float((((a ** 2)+(b ** 2)+(c ** 2))/(a + b + c))
+print(round(abc, 7))		 
+-- ERROR:
+File "XXXX", line 5
+    print(round(abc, 7))		 
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 18:04:53) 
+-- CODE:
+a= 1
+b= 2
+c= 3
+abc= float((((a ** 2)+(b ** 2)+(c ** 2))/(a + b + c))
+print(abc)		 
+-- ERROR:
+File "XXXX", line 5
+    print(abc)		 
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 18:05:06) 
+-- CODE:
+a= 1
+b= 2
+c= 3
+abc= float((((a ** 2)+(b ** 2)+(c ** 2))/(a + b + c))
+print("abc")		 
+-- ERROR:
+File "XXXX", line 5
+    print("abc")		 
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 18:12:05) 
+-- CODE:
+a= float(input("Digite um numero Inteiro: "))
+b= float(input("Digite outro numero: "))
+c= float(input("Digite mais um numero: "))
+eq= (((a ** 2)+(b ** 2)+(c ** 2))/(a + b + c))
+print(round(eq, 2))
+-- OUTPUT:
+25.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 18:12:26) 
+-- CODE:
+a= float(input("Digite um numero Inteiro: "))
+b= float(input("Digite outro numero: "))
+c= float(input("Digite mais um numero: "))
+eq= (((a ** 2)+(b ** 2)+(c ** 2))/(a + b + c))
+print(round(eq, 7))
+-- OUTPUT:
+25.6666667
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-31 18:12:44) 
+-- CODE:
+a= float(input("Digite um numero Inteiro: "))
+b= float(input("Digite outro numero: "))
+c= float(input("Digite mais um numero: "))
+eq= (((a ** 2)+(b ** 2)+(c ** 2))/(a + b + c))
+print(round(eq, 7))
+-- EXECUTION TIME:
+0.125133
+-- TEST CASE 1:
+---- input:
+20
+25
+30
+---- correct output:
+25.6666667
+---- user output:
+25.6666667
+-- TEST CASE 2:
+---- input:
+235
+400
+350
+---- correct output:
+342.8680203
+---- user output:
+342.8680203
+-- TEST CASE 3:
+---- input:
+90
+120
+2
+---- correct output:
+106.1509434
+---- user output:
+106.1509434
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

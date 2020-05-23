@@ -1,0 +1,188 @@
+== TEST (2019-04-09 11:48:15) 
+-- CODE:
+tmp = int(input("Temperatura proposta: "))
+esc = input("Qual escala? (C/F) ")
+
+if (esc == c): 
+	msg = ((9*tmp)/5) + 32
+else:
+	msg = 5/9*(tmp - 32)
+	
+	print(msg)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    tmp = int(input())
+ValueError: invalid literal for int() with base 10: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:48:23) 
+-- CODE:
+tmp = int(input("Temperatura proposta: "))
+esc = input("Qual escala? (C/F) ")
+
+if (esc == c): 
+	msg = ((9*tmp)/5) + 32
+else:
+	msg = 5/9*(tmp - 32)
+	
+print(msg)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    tmp = int(input())
+ValueError: invalid literal for int() with base 10: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:48:42) 
+-- CODE:
+tmp = int(input("Temperatura proposta: "))
+esc = input("Qual escala? (C/F) ")
+
+if (esc.upper() == c): 
+	msg = ((9*tmp)/5) + 32
+else:
+	msg = 5/9*(tmp - 32)
+	
+print(msg)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    tmp = int(input())
+ValueError: invalid literal for int() with base 10: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:49:11) 
+-- CODE:
+tmp = int(input("Temperatura proposta: "))
+esc = input("Qual escala? (C/F) ")
+
+if (esc.upper() == "c"): 
+	msg = ((9*tmp)/5) + 32
+else:
+	msg = 5/9*(tmp - 32)
+	
+print(msg)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    tmp = int(input())
+ValueError: invalid literal for int() with base 10: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 11:49:18) 
+-- CODE:
+tmp = int(input("Temperatura proposta: "))
+esc = input("Qual escala? (C/F) ")
+
+if (esc.upper() == "c"): 
+	msg = ((9*tmp)/5) + 32
+else:
+	msg = 5/9*(tmp - 32)
+	
+print(msg)
+	
+
+-- EXECUTION TIME:
+0.186628
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1637/2445/main.py", line 1, in <module>
+    tmp = int(input())
+ValueError: invalid literal for int() with base 10: 'C'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:49:29) 
+-- CODE:
+tmp = int(input("Temperatura proposta: "))
+esc = input("Qual escala? (C/F) ")
+
+if (esc.upper() == "c"): 
+	msg = ((9*tmp)/5) + 32
+else:
+	msg = 5/9*(tmp - 32)
+	
+print(msg)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    tmp = int(input())
+ValueError: invalid literal for int() with base 10: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:49:48) 
+-- CODE:
+esc = input("Qual escala? (C/F) ")
+tmp = int(input("Temperatura proposta: "))
+
+if (esc.upper() == "c"): 
+	msg = ((9*tmp)/5) + 32
+else:
+	msg = 5/9*(tmp - 32)
+	
+print(msg)
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:50:43) 
+-- CODE:
+esc = input("Qual escala? (C/F) ")
+tmp = int(input("Temperatura proposta: "))
+
+if (esc.upper() == "c"): 
+	msg = tmp*(5/9) + 32
+else:
+	msg = (tmp - 32)*(5/9)
+	
+print(msg)
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 11:50:52) 
+-- CODE:
+esc = input("Qual escala? (C/F) ")
+tmp = int(input("Temperatura proposta: "))
+
+if (esc.upper() == "c"): 
+	msg = tmp*(5/9) + 32
+else:
+	msg = (tmp - 32)*(5/9)
+	
+print(msg)
+
+-- EXECUTION TIME:
+0.191051
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.77777777777778
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

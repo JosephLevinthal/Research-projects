@@ -1,0 +1,612 @@
+== TEST (2019-05-13 15:13:29) 
+-- CODE:
+qi = int(input("quantidade inicial:"))
+p = float(input("percentual de crescimento:"))
+qo = int(input("quantidade retirada:1"))
+
+w = 0
+
+while(qi < 12000 and qi > 0):
+	qi = qi + ((qi + p)100) - qo
+	w = w +1
+	if(qi >= 12000):
+		print("LIMITE")
+	else:
+		print("EXTINCAO")
+print(w)
+-- ERROR:
+File "XXXX", line 8
+    qi = qi + ((qi + p)100) - qo
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 15:14:31) 
+-- CODE:
+qi = int(input("quantidade inicial:"))
+p = float(input("percentual de crescimento:"))
+qo = int(input("quantidade retirada:1"))
+
+w = 0
+
+while(qi < 12000 and qi > 0):
+	qi = qi + ((qi * p)100) - qo
+	w = w + 1
+	if(qi >= 12000):
+		print("LIMITE")
+	else:
+		print("EXTINCAO")
+print(w)
+-- ERROR:
+File "XXXX", line 8
+    qi = qi + ((qi * p)100) - qo
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 15:14:56) 
+-- CODE:
+qi = int(input("quantidade inicial:"))
+p = float(input("percentual de crescimento:"))
+qo = int(input("quantidade retirada:1"))
+
+w = 0
+
+while(qi < 12000 and qi > 0):
+	qi = qi + ((qi * p)100) - qo
+	w = w + 1
+if(qi >= 12000):
+	print("LIMITE")
+else:
+	print("EXTINCAO")
+print(w)
+-- ERROR:
+File "XXXX", line 8
+    qi = qi + ((qi * p)100) - qo
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 15:15:31) 
+-- CODE:
+qi = int(input("quantidade inicial:"))
+p = float(input("percentual de crescimento:"))
+qo = int(input("quantidade retirada:1"))
+
+w = 0
+
+while(qi < 12000 and qi > 0):
+	qi = qi + ((qi * p)/100) - qo
+	w = w + 1
+if(qi >= 12000):
+	print("LIMITE")
+else:
+	print("EXTINCAO")
+print(w)
+-- OUTPUT:
+EXTINCAO
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-13 15:15:50) 
+-- CODE:
+qi = int(input("quantidade inicial:"))
+p = float(input("percentual de crescimento:"))
+qo = int(input("quantidade retirada:1"))
+
+w = 0
+
+while(qi < 12000 and qi > 0):
+	qi = qi + ((qi * p)/100) - qo
+	w = w + 1
+if(qi >= 12000):
+	print("LIMITE")
+else:
+	print("EXTINCAO")
+print(w)
+-- EXECUTION TIME:
+0.136929
+-- TEST CASE 1:
+---- input:
+1234
+6
+135
+---- correct output:
+EXTINCAO
+14
+---- user output:
+EXTINCAO
+14
+-- TEST CASE 2:
+---- input:
+579
+37
+26
+---- correct output:
+LIMITE
+11
+---- user output:
+LIMITE
+11
+-- TEST CASE 3:
+---- input:
+6789
+45
+2345
+---- correct output:
+LIMITE
+4
+---- user output:
+LIMITE
+4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 12:56:43) 
+-- CODE:
+qi = int(input(":"))
+p = float(input(":"))
+qf = int(input(":"))
+
+soma = 0
+i = 0
+
+while(qi > 0 and qi < 12000):
+	soma = soma + ((qi * p)/100)-qf
+	i = i + 1
+	if(soma >= 12000):
+		print("LIMITE")
+	else:
+		print("EXTINCAO")
+print(i)
+	
+-- OUTPUT:
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+E
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 12:56:44) 
+-- CODE:
+qi = int(input(":"))
+p = float(input(":"))
+qf = int(input(":"))
+
+soma = 0
+i = 0
+
+while(qi > 0 and qi < 12000):
+	soma = soma + ((qi * p)/100)-qf
+	i = i + 1
+	if(soma >= 12000):
+		print("LIMITE")
+	else:
+		print("EXTINCAO")
+print(i)
+	
+-- OUTPUT:
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+E
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 12:58:09) 
+-- CODE:
+qi = int(input(":"))
+p = float(input(":"))
+qf = int(input(":"))
+
+soma = 0
+i = 0
+
+while(qi > 0 and qi < 12000):
+	soma = soma + ((qi * p)/100)-qf
+	i = i + 1
+if(soma >= 12000):
+	print("LIMITE")
+else:
+	print("EXTINCAO")
+print(i)
+	
+-- OUTPUT:
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+EXTINCAO
+E
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 12:59:06) 
+-- CODE:
+qi = int(input(":"))
+p = float(input(":"))
+qf = int(input(":"))
+
+i = 0
+
+while(qi > 0 and qi < 12000):
+	qi = qi + ((qi * p)/100)-qf
+	i = i + 1
+if(qi >= 12000):
+	print("LIMITE")
+else:
+	print("EXTINCAO")
+print(i)
+	
+-- OUTPUT:
+EXTINCAO
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 12:59:17) 
+-- CODE:
+qi = int(input(":"))
+p = float(input(":"))
+qf = int(input(":"))
+
+i = 0
+
+while(qi > 0 and qi < 12000):
+	qi = qi + ((qi * p)/100)-qf
+	i = i + 1
+if(qi >= 12000):
+	print("LIMITE")
+else:
+	print("EXTINCAO")
+print(i)
+	
+-- EXECUTION TIME:
+0.225889
+-- TEST CASE 1:
+---- input:
+1234
+6
+135
+---- correct output:
+EXTINCAO
+14
+---- user output:
+EXTINCAO
+14
+-- TEST CASE 2:
+---- input:
+579
+37
+26
+---- correct output:
+LIMITE
+11
+---- user output:
+LIMITE
+11
+-- TEST CASE 3:
+---- input:
+6789
+45
+2345
+---- correct output:
+LIMITE
+4
+---- user output:
+LIMITE
+4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,2 @@
+qi = int(input(":"))
+p = 

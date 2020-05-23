@@ -1,0 +1,387 @@
+== TEST (2019-06-08 23:04:14) 
+-- CODE:
+a = int(input("N: "))
+x = str(num(a))
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    x = str(num(a))
+NameError: name 'num' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 23:04:29) 
+-- CODE:
+a = int(input("N: "))
+num = *
+x = str(num(a))
+print(x)
+-- ERROR:
+File "XXXX", line 2
+    num = *
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 23:04:42) 
+-- CODE:
+a = int(input("N: "))
+num = "*"
+x = str(num(a))
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    x = str(num(a))
+TypeError: 'str' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 22:49:04) 
+-- CODE:
+from numpy import *
+a = int(input("N: "))
+st = "*"
+for i in range(a):
+	b = st*(a-i)
+	print(b)
+for i in range(a + 1):
+	b = st*(a-(a-i))
+	print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 22:50:09) 
+-- CODE:
+from numpy import *
+a = int(input("N: "))
+st = "*"
+for i in range(a):
+	b = st*(a-i)
+	print(b)
+for i in range(a):
+	b = st*(a + i)
+	print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 22:50:57) 
+-- CODE:
+from numpy import *
+a = int(input("N: "))
+st = "*"
+for i in range(a):
+	b = st*(a-i)
+	print(b)
+for i in range(a):
+	b = st*(a + i)
+	print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 22:52:16) 
+-- CODE:
+from numpy import *
+a = int(input("N: "))
+st = "*"
+for i in range(a):
+	b = st*(a-i)
+	print(b)
+for i in range(a):
+	b = st*(a - 1 + i)
+	print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 22:55:34) 
+-- CODE:
+from numpy import *
+a = int(input("N: "))
+st = "*"
+for i in range(a):
+	b = st*(a-i)
+	print(b)
+for i in range(a + 1):
+	b = st*(a + i)
+	print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 22:56:59) 
+-- CODE:
+from numpy import *
+a = int(input("N: "))
+st = "*"
+for i in range(a):
+	b = st*(a-i)
+	print(b)
+for i in range(a + 1):
+	b = st*(a - (a - i))
+	print(b)
+-- EXECUTION TIME:
+1.17776
+-- TEST CASE 1:
+---- input:
+8
+---- correct output:
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+**
+***
+****
+*****
+******
+*******
+********
+
+---- user output:
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+*
+**
+***
+****
+*****
+******
+*******
+********
+-- TEST CASE 2:
+---- input:
+11
+---- correct output:
+***********
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+
+---- user output:
+***********
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+-- TEST CASE 3:
+---- input:
+25
+---- correct output:
+*************************
+************************
+***********************
+**********************
+*********************
+********************
+*******************
+******************
+*****************
+****************
+***************
+**************
+*************
+************
+***********
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+************
+*************
+**************
+***************
+****************
+*****************
+******************
+*******************
+********************
+*********************
+**********************
+***********************
+************************
+*************************
+
+---- user output:
+*************************
+************************
+***********************
+**********************
+*********************
+********************
+*******************
+******************
+*****************
+****************
+***************
+**************
+*************
+************
+***********
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+************
+*************
+**************
+***************
+****************
+*****************
+******************
+*******************
+********************
+*********************
+**********************
+***********************
+************************
+*************************
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 23:20:48) 
+-- CODE:
+from numpy import *
+a = int(input("N: "))
+st = "*"
+for i in range(a):
+	print(a - i)
+	b = st*(a-i)
+	print(b)
+for i in range(a + 1):
+	b = st*(a - (a - i))
+	print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 23:21:29) 
+-- CODE:
+from numpy import *
+a = int(input("N: "))
+st = "*"
+for i in range(a):
+	print(a)
+	b = st*(a-i)
+	print(b)
+for i in range(a + 1):
+	b = st*(a - (a - i))
+	print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 23:21:45) 
+-- CODE:
+from numpy import *
+a = int(input("N: "))
+st = "*"
+for i in range(a):
+	print(i)
+	b = st*(a-i)
+	print(b)
+for i in range(a + 1):
+	b = st*(a - (a - i))
+	print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

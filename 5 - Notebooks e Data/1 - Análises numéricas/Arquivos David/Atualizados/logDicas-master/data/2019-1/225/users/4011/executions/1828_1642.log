@@ -1,0 +1,1676 @@
+== TEST (2019-06-12 14:10:45) 
+-- CODE:
+qt = array(eval(input("Alunos por sala: ")))
+
+tp = 0 
+
+for x in qt:
+	if(x%5 = 0):
+		tp = tp + 1
+-- ERROR:
+File "XXXX", line 6
+    if(x%5 = 0):
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:10:50) 
+-- CODE:
+qt = array(eval(input("Alunos por sala: ")))
+
+tp = 0 
+
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    qt = array(eval(input()))
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:11:17) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+
+tp = 0 
+
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:11:41) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+
+tp = 0 
+
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+		
+print(tp1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:12:03) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+
+tp = 0 
+
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+		
+print(tp)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:12:09) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+
+tp = 0 
+
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+		
+print(tp)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:22:46) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+
+#Segunda parte
+u = zeros(size(qt), dtype=int)
+i = 0
+
+while(i < size(qt)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+		
+print(u)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:24:58) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+
+#Segunda parte
+u = zeros(size(qt), dtype=int)
+i = 0
+print =
+while(i < size(qt)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+	else:
+		u[i] = u[i] + 0
+		
+print(u)
+-- ERROR:
+File "XXXX", line 15
+    print =
+          ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(=)?
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:25:06) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+
+#Segunda parte
+u = zeros(size(qt), dtype=int)
+i = 0
+
+while(i < size(qt)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+	else:
+		u[i] = u[i] + 0
+		
+print(u)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:27:22) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+
+#Segunda parte
+u = zeros(size(qt), dtype=int)
+i = 0
+
+while(i < size(qt)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+	else:
+		u[i] = u[i] + 0
+		
+print(u)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:28:47) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+
+#Segunda parte
+u = zeros(size(qt), dtype=int)
+i = 0
+
+while(i < size(qt)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+	else:
+		u[i] = u[i] + 0
+		
+print(u)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:43:13) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+
+#Segunda parte
+u = zeros(size(qt), dtype=int)
+i = 0
+
+while(i < size(qt)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+	else:
+		u[i] = u[i] + 0
+		
+print(u)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:44:50) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+
+#Segunda parte
+u = zeros(size(qt), dtype=int)
+i = 0
+t = []
+
+while(i < size(qt)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+	else:
+		u[i] = u[i] + t
+		
+print(u)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:47:47) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+
+while(i < size(tp)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+	else:
+		u[i] = u[i] - t
+		
+print(u)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:48:34) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+
+while(i < size(tp)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+		
+print(u)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:49:05) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+
+while(i < size(tp)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+		
+print(u)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:56:06) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+
+while(i < size(tp)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+		i = i + 1
+		
+print(u)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:56:13) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+
+while(i < size(tp)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+		i = i + 1
+		
+print(u)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:56:51) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+
+while(i < size(tp)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+		i = i + 1
+		
+print(u)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:56:59) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+
+while(i < size(tp)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+		i = i + 1
+		
+print(u)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:59:43) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+
+while(i < size(tp)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+	else:
+		u[i] = u[i] + []
+	i = i + 1
+print(u)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:00:38) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+
+while(i < size(tp)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+	else:
+		u[i] = u[i] + array[]
+	i = i + 1
+print(u)
+-- ERROR:
+File "XXXX", line 20
+    u[i] = u[i] + array[]
+                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:00:49) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+
+while(i < size(tp)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+	else:
+		u[i] = u[i] + []
+	i = i + 1
+print(u)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:01:16) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+
+while(i < size(tp)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+	i = i + 1
+	
+print(u)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:02:13) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+
+while(i < size(tp)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+		i = i + 1
+	
+print(u)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 15:03:25) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+
+#Segunda parte
+u = zeros(size(qt), dtype=int)
+i = 0
+
+while(i < size(qt)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+	else:
+		u[i] = u[i] + 0
+		
+print(u)
+-- EXECUTION TIME:
+2136.56
+-- ERROR:
+Killed
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:07:34) 
+-- CODE:
+
+#Segunda parte
+u = zeros(tp, dtype=int)
+
+print(u)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    u = zeros(tp, dtype=int)
+NameError: name 'zeros' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:07:41) 
+-- CODE:
+
+#Segunda parte
+u = zeros(3, dtype=int)
+
+print(u)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    u = zeros(3, dtype=int)
+NameError: name 'zeros' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:08:02) 
+-- CODE:
+from numpy import*
+#Segunda parte
+u = zeros(3, dtype=int)
+
+print(u)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 15:11:30) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+
+#Segunda parte
+u = zeros(size(qt), dtype=int)
+i = 0
+
+while(i < size(qt)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+	else:
+		u[i] = u[i] + 0
+		
+print(u)
+-- EXECUTION TIME:
+2533.02
+-- ERROR:
+Killed
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 15:11:31) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+
+#Segunda parte
+u = zeros(size(qt), dtype=int)
+i = 0
+
+while(i < size(qt)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+	else:
+		u[i] = u[i] + 0
+		
+print(u)
+-- EXECUTION TIME:
+2530.12
+-- ERROR:
+Killed
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 15:12:16) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+
+#Segunda parte
+u = zeros(size(qt), dtype=int)
+i = 0
+
+while(i < size(qt)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+	else:
+		u[i] = u[i] + 0
+		
+print(u)
+-- EXECUTION TIME:
+2580.38
+-- ERROR:
+Killed
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 15:12:16) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+
+#Segunda parte
+u = zeros(size(qt), dtype=int)
+i = 0
+
+while(i < size(qt)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+	else:
+		u[i] = u[i] + 0
+		
+print(u)
+-- EXECUTION TIME:
+2586.97
+-- ERROR:
+Killed
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:12:46) 
+-- CODE:
+from numpy import*
+tp = 3
+u = (tp, dtype=int)
+i = 0
+
+while(i < size(tp)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+	i = i + 1
+	
+print(u)
+-- ERROR:
+File "XXXX", line 3
+    u = (tp, dtype=int)
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 15:13:10) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+
+#Segunda parte
+u = zeros(size(qt), dtype=int)
+i = 0
+
+while(i < size(qt)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+	else:
+		u[i] = u[i] + 0
+		
+print(u)
+-- EXECUTION TIME:
+2650.73
+-- ERROR:
+Killed
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 15:18:04) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+
+#Segunda parte
+u = zeros(size(qt), dtype=int)
+i = 0
+
+while(i < size(qt)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+	else:
+		u[i] = u[i] + 0
+		
+print(u)
+-- EXECUTION TIME:
+2086.35
+-- ERROR:
+Killed
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 15:18:04) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+
+#Segunda parte
+u = zeros(size(qt), dtype=int)
+i = 0
+t = []
+
+while(i < size(qt)):
+	if( qt[i]%5 == 0 ):
+		u[i] = u[i] + 1
+	else:
+		u[i] = u[i] - t
+		
+print(u)
+-- EXECUTION TIME:
+1949.38
+-- ERROR:
+Killed
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:34:16) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(6, dtype=int):
+i = 0
+while(i < size(u)):
+	if(v[i]%5 == 0):
+		u[i] = u[i] + 1
+	
+	
+-- ERROR:
+File "XXXX", line 13
+    u = zeros(6, dtype=int):
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:34:21) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(6, dtype=int)
+i = 0
+while(i < size(u)):
+	if(v[i]%5 == 0):
+		u[i] = u[i] + 1
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:35:03) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(6, dtype=int):
+i = 0
+while(i < size(u)):
+	if(qt[i]%5 == 0):
+		u[i] = u[i] + 1
+	
+	
+-- ERROR:
+File "XXXX", line 13
+    u = zeros(6, dtype=int):
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:35:08) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(6, dtype=int)
+i = 0
+while(i < size(u)):
+	if(qt[i]%5 == 0):
+		u[i] = u[i] + 1
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:35:50) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(6, dtype=int)
+i = 0
+while(i < size(u)):
+	if(qt[i]%5 == 0):
+		u[i] = u[i] + 1
+		i = i + 1
+		
+print(u)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:36:06) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(6, dtype=int)
+i = 0
+while(i < size(u)):
+	if(qt[i]%5 == 0):
+		u[i] = u[i] + 1
+		i = i + 1
+		
+print(u)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:36:23) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(6, dtype=int)
+i = 0
+while(i < size(u)):
+	if(qt[i]%5 == 0):
+		u[i] = u[i] + 1
+		i = i + 1
+		
+print(u)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:37:04) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(6, dtype=int)
+i = 0
+
+while(i < size(u)):
+	if(qt[i]%5 == 0):
+		u[i] = u[i] + 1
+	i = i + 1
+		
+print(u)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:37:49) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(6, dtype=int)
+i = 0
+
+while(i < size(qt)):
+	if(qt[i]%5 == 0):
+		u[i] = u[i] + 1
+	i = i + 1
+		
+print(u)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:37:50) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(6, dtype=int)
+i = 0
+
+while(i < size(qt)):
+	if(qt[i]%5 == 0):
+		u[i] = u[i] + 1
+	i = i + 1
+		
+print(u)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:40:31) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+t = 0
+while(i < size(qt)):
+	if(qt[i]%5 == 0):
+		u[t] = u[t] + 1
+	i = i + 1
+		
+print(u)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:42:28) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+t = 0
+
+while(i < size(qt)):
+	if(qt[i]%5 == 0):
+		u[t] = i
+	i = i + 1
+		
+print(u)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:42:50) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+t = 0
+
+while(i < size(qt)):
+	if(qt[i]%5 == 0):
+		u[t] = i
+	i = i + 1
+		
+print(u)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 15:43:09) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+t = 0
+
+while(i < size(qt)):
+	if(qt[i]%5 == 0):
+		u[t] = i
+	i = i + 1
+		
+print(u)
+	
+-- EXECUTION TIME:
+1.16732
+-- TEST CASE 1:
+---- input:
+[10,20,31,1,13,15,20,33,36,63,25,10,2]
+---- correct output:
+6
+[ 0  1  5  6 10 11]
+---- user output:
+6
+[11  0  0  0  0  0]
+-- TEST CASE 2:
+---- input:
+[10,20,31,15,36,63,25,10,2]
+---- correct output:
+5
+[0 1 3 6 7]
+
+---- user output:
+5
+[7 0 0 0 0]
+-- TEST CASE 3:
+---- input:
+[10,20,31,15,36,63,26,10,2]
+---- correct output:
+4
+[0 1 3 7]
+---- user output:
+4
+[7 0 0 0]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:43:33) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+t = 0
+
+while(i < size(qt)):
+	if(qt[i]%5 == 0):
+		u[t] = i
+	i = i + 1
+		
+print(u)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:43:57) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+t = 0
+
+while(i < size(qt)):
+	if(qt[i]%5 == 0):
+		u[t] = i
+	i = i + 1
+		
+print(u)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:44:52) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+t = 0
+
+while(i < size(qt)):
+	if(qt[i]%5 == 0):
+		u[t] = i
+	i = i + 1
+		
+print(u)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:45:01) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+t = 0
+
+while(i < size(qt)):
+	if(qt[i]%5 == 0):
+		u[t] = i
+	i = i + 1
+		
+print(u)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:45:16) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+t = 0
+
+while(i < size(qt)):
+	if(qt[i]%5 == 0):
+		u[t] = i
+	i = i + 1
+		
+print(u)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:45:34) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+t = 0
+
+while(i < size(qt)):
+	if(qt[i]%5 == 0):
+		u[t] = i
+	i = i + 1
+		
+print(u)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:49:46) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+t = 0
+
+while(i < size(qt)):
+	if(qt[i]%5 == 0):
+		u[t] = u[t] + i
+	i = i + 1
+		
+print(u)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 17:36:00) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+t = 0
+
+while(i < size(qt)):
+	if(qt[i]%5 == 0):
+		u[t] = u[t] + i
+	i = i + 1
+		
+print(u)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-03 13:23:28) 
+-- CODE:
+from numpy import*
+
+qt = array(eval(input("Alunos por sala: ")))
+tp = 0 
+
+#Primeira parte - ok
+for x in qt:
+	if(x%5 == 0):
+		tp = tp + 1
+print(tp)
+	
+#Segunda parte
+u = zeros(tp, dtype=int)
+i = 0
+t = 0
+
+while(i < size(qt)):
+	if(qt[i]%5 == 0):
+		u[t] = u[t] + i
+	i = i + 1
+		
+print(u)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

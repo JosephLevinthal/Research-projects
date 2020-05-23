@@ -1,0 +1,186 @@
+== TEST (2019-05-23 19:22:52) 
+-- CODE:
+e=array(eval(input("v: ")))
+b=array(eval(input("v: ")))
+i=0
+ve=0
+vb=0
+while(i<e and i<b):
+	if(e>b):
+		ve=ve+1
+	elif(b>e):
+		vb=vb+1
+	elif(b==e):
+		vb=vb
+		ve=ve
+	i=i+1
+	e=array(eval(input("v: ")))
+	b=array(eval(input("v: ")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    e=array(eval(input()))
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 19:24:23) 
+-- CODE:
+from numpy import*
+e=array(eval(input("digite um vetor: ")))
+b=array(eval(input("digite um vetor: ")))
+i=0
+ve=0
+vb=0
+while(i<e and i<b):
+	if(e>b):
+		ve=ve+1
+	elif(b>e):
+		vb=vb+1
+	elif(b==e):
+		vb=vb
+		ve=ve
+	i=i+1
+	e=array(eval(input("digite um vetor: ")))
+	b=array(eval(input("digite um vetor: ")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 09:16:57) 
+-- CODE:
+from numpy import*
+e=array(eval(input("digite um vetor: ")))
+b=array(eval(input("digite um vetor: ")))
+i=0
+se=0
+sb=0
+ve=0
+vb=0
+while(i<size(e)):
+	if(e[i]==11 and b[i]==11):
+		ve=0
+		vb=0
+	elif(e[i]==22 and b[i]==22):
+		ve=0
+		vb=0
+	elif(e[i]==33 and b[i]==33):
+		ve=0
+		vb=0
+	elif(e[i]==11 and b[i]==22):
+		ve=0
+		vb=1
+	elif(e[i]==11 and b[i]==33):
+		ve=1
+		vb=0
+	elif(e[i]==22 and b[i]==11):
+		ve=1
+		vb=0
+	elif(e[i]==22 and b[i]==33):
+		ve=0
+		vb=1
+	elif(e[i]==33 and b[i]==11):
+		ve=0
+		vb=1
+	elif(e[i]==33 and b[i]==22):
+		ve=1
+		vb=0
+	se=se+ve
+	sb=sb+vb
+	i=i+1
+print(size(e))
+if(se==sb):
+	print("EMPATE")
+elif(se>sb):
+	print("EUSAPIA")
+elif(se<sb):
+	print("BARSANULFO")
+-- EXECUTION TIME:
+0.370397
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+EUSAPIA
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+EMPATE
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+BARSANULFO
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 09:17:20) 
+-- CODE:
+from numpy import*
+e=array(eval(input("digite um vetor: ")))
+b=array(eval(input("digite um vetor: ")))
+i=0
+se=0
+sb=0
+ve=0
+vb=0
+while(i<size(e)):
+	if(e[i]==11 and b[i]==11):
+		ve=0
+		vb=0
+	elif(e[i]==22 and b[i]==22):
+		ve=0
+		vb=0
+	elif(e[i]==33 and b[i]==33):
+		ve=0
+		vb=0
+	elif(e[i]==11 and b[i]==22):
+		ve=0
+		vb=1
+	elif(e[i]==11 and b[i]==33):
+		ve=1
+		vb=0
+	elif(e[i]==22 and b[i]==11):
+		ve=1
+		vb=0
+	elif(e[i]==22 and b[i]==33):
+		ve=0
+		vb=1
+	elif(e[i]==33 and b[i]==11):
+		ve=0
+		vb=1
+	elif(e[i]==33 and b[i]==22):
+		ve=1
+		vb=0
+	se=se+ve
+	sb=sb+vb
+	i=i+1
+print(size(e))
+if(se==sb):
+	print("EMPATE")
+elif(se>sb):
+	print("EUSAPIA")
+elif(se<sb):
+	print("BARSANULFO")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

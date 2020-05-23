@@ -1,0 +1,98 @@
+== TEST (2019-03-31 13:27:20) 
+-- CODE:
+A = input("a:")
+B = input("b:")
+C = input("c:")
+W = (A ** 2 + B ** 2 + C ** 2) / (A + B + C)
+print(round(W, 7))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    W = (A ** 2 + B ** 2 + C ** 2) / (A + B + C)
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 13:28:18) 
+-- CODE:
+A = input("a:")
+B = input("b:")
+C = input("c:")
+W = float((A ** 2 + B ** 2 + C ** 2) / (A + B + C))
+print(round(W, 7))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    W = float((A ** 2 + B ** 2 + C ** 2) / (A + B + C))
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 13:28:58) 
+-- CODE:
+A = input("a:")
+B = input("b:")
+C = input("c:")
+W = A ** 2 + B ** 2 + C ** 2 / A + B + C
+print(round(W, 7))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    W = A ** 2 + B ** 2 + C ** 2 / A + B + C
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 21:14:34) 
+-- CODE:
+A = int(input("a:"))
+B = int(input("b:"))
+C = int(input("c:"))
+W = A ** 2 + B ** 2 + C ** 2 / A + B + C
+print(round(W, 7))
+-- OUTPUT:
+1125.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 21:15:14) 
+-- CODE:
+A = int(input("a:"))
+B = int(input("b:"))
+C = int(input("c:"))
+W = (A ** 2 + B ** 2 + C ** 2) / (A + B + C)
+print(round(W, 7))
+-- OUTPUT:
+25.6666667
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 21:15:21) 
+-- CODE:
+A = int(input("a:"))
+B = int(input("b:"))
+C = int(input("c:"))
+W = (A ** 2 + B ** 2 + C ** 2) / (A + B + C)
+print(round(W, 7))
+-- EXECUTION TIME:
+0.164441
+-- TEST CASE 1:
+---- input:
+20
+25
+30
+---- correct output:
+25.6666667
+---- user output:
+25.6666667
+-- TEST CASE 2:
+---- input:
+235
+400
+350
+---- correct output:
+342.8680203
+---- user output:
+342.8680203
+-- TEST CASE 3:
+---- input:
+90
+120
+2
+---- correct output:
+106.1509434
+---- user output:
+106.1509434
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

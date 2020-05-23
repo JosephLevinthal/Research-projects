@@ -1,0 +1,8 @@
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+hj = int(input(""))
+futuro = int(input(""))
+print("Hoje eh", hj, "e o dia do futuro eh", futuro)
+if(hj == 0):
+	print()

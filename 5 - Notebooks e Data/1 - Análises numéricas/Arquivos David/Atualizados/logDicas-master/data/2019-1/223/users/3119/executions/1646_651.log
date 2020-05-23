@@ -1,0 +1,79 @@
+== TEST (2019-04-09 17:02:43) 
+-- CODE:
+altura = float(input("Altura da pessoa: "))
+sexo = input("M ou F: ")
+
+if(sexo == M):
+	msg = (72.7 * altura) - 58
+if(sexo == F):
+	msg = (62.1 * altura) - 44.7
+
+print(round(msg, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if(sexo == M):
+NameError: name 'M' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 17:03:18) 
+-- CODE:
+altura = float(input("Altura da pessoa: "))
+sexo = input("M ou F: ")
+M = M
+F = F
+if(sexo == M):
+	msg = (72.7 * altura) - 58
+if(sexo == F):
+	msg = (62.1 * altura) - 44.7
+
+print(round(msg, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    M = M
+NameError: name 'M' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 17:03:39) 
+-- CODE:
+altura = float(input("Altura da pessoa: "))
+sexo = input("M ou F: ")
+if(sexo == "M"):
+	msg = (72.7 * altura) - 58
+if(sexo == "F"):
+	msg = (62.1 * altura) - 44.7
+
+print(round(msg, 2))
+-- OUTPUT:
+17.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 17:03:45) 
+-- CODE:
+altura = float(input("Altura da pessoa: "))
+sexo = input("M ou F: ")
+if(sexo == "M"):
+	msg = (72.7 * altura) - 58
+if(sexo == "F"):
+	msg = (62.1 * altura) - 44.7
+
+print(round(msg, 2))
+-- EXECUTION TIME:
+0.123873
+-- TEST CASE 1:
+---- input:
+1.0
+F
+---- correct output:
+17.4
+---- user output:
+17.4
+-- TEST CASE 2:
+---- input:
+1.234
+M
+---- correct output:
+31.71
+---- user output:
+31.71
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

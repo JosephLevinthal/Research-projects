@@ -1,0 +1,165 @@
+== TEST (2019-07-01 23:40:42) 
+-- CODE:
+from numpy import *
+mat = array(eval(input("digite: ")))
+for i in range(shape(mat)[0]):
+	mat[i,:]=min(mat[i,:])
+	k = sum(min(mat[i,:]))//size(mat)
+	print(round(k,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 23:41:54) 
+-- CODE:
+from numpy import *
+mat = array(eval(input("digite: ")))
+for i in range(shape(mat)[0]):
+	mat[i,:]=min(mat[i,:])
+	print(min(mat[i,:]))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 23:43:28) 
+-- CODE:
+from numpy import *
+mat = array(eval(input("digite: ")))
+k = zeros(4, dtype=int)
+for i in range(shape(mat)[0]):
+	mat[i,:]=min(mat[i,:])
+	min(mat[i,:])=k[i]
+	print(k)
+-- ERROR:
+File "XXXX", line 6
+    min(mat[i,:])=k[i]
+    ^
+SyntaxError: can't assign to function call
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 23:45:12) 
+-- CODE:
+from numpy import *
+mat = array(eval(input("digite: ")))
+k = zeros(4, dtype=int)
+for i in range(shape(mat)[0]):
+	mat[i,:]=min(mat[i,:])
+	sum(min(mat[i,:]))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 23:45:56) 
+-- CODE:
+from numpy import *
+mat = array(eval(input("digite: ")))
+k = zeros(4, dtype=int)
+for i in range(shape(mat)[0]):
+	mat[i,:]=min(mat[i,:])
+	print(sum(min(mat[i,:])))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 23:47:31) 
+-- CODE:
+from numpy import *
+mat = array(eval(input("digite: ")))
+k = zeros(4, dtype=int)
+for i in range(shape(mat)[0]):
+	mat[i,:]=min(mat[i,:])
+	k[i]=min(mat[i,:])
+	print(k)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 23:52:57) 
+-- CODE:
+from numpy import *
+mat = array(eval(input("digite: ")))
+k = shape(mat)[0]
+m = zeros(k,dtype=int)
+for i in range(k):
+	mat[i,:]=min(mat[i,:])
+	m[i]=min(mat[i,:])
+	print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 23:53:19) 
+-- CODE:
+from numpy import *
+mat = array(eval(input("digite: ")))
+k = shape(mat)[0]
+m = zeros(k)
+for i in range(k):
+	mat[i,:]=min(mat[i,:])
+	m[i]=min(mat[i,:])
+	print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 23:54:31) 
+-- CODE:
+from numpy import *
+mat = array(eval(input("digite: ")))
+k = shape(mat)[0]
+m = zeros(k)
+for i in range(k):
+	mat[i,:]=min(mat[i,:])
+	m[i]=min(mat[i,k])
+	print(m)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 23:55:24) 
+-- CODE:
+from numpy import *
+mat = array(eval(input("digite: ")))
+k = shape(mat)[0]
+m = zeros(k)
+for i in range(k):
+	mat[i,:]=min(mat[i,:])
+	m[i]=min(mat[i,:])
+	print(sum(m))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 23:55:52) 
+-- CODE:
+from numpy import *
+mat = array(eval(input("digite: ")))
+k = shape(mat)[0]
+m = zeros(k)
+for i in range(k):
+	mat[i,:]=min(mat[i,:])
+	m[i]=min(mat[i,:])
+	print(sum(m)//size(mat))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

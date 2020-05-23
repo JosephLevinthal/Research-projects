@@ -1,0 +1,1928 @@
+== TEST (2019-06-07 10:31:53) 
+-- CODE:
+ = int(input("metade dos asteriscos na primeira linha")) * 2
+ast = "*"
+ast_linha_1 = ast * metade_ast
+print(ast_linha_1)
+-- ERROR:
+File "XXXX", line 1
+    = int(input()) * 2
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 10:32:09) 
+-- CODE:
+metade_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+ast = "*"
+ast_linha_1 = ast * metade_ast
+print(ast_linha_1)
+-- OUTPUT:
+**********************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 10:40:56) 
+-- CODE:
+metade_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+
+ast = "*"
+ast_linha_1 = ast * metade_ast
+QA2 = (len(ast_linha_1)- 2)/2
+print(QA2)
+oo = "oo"
+
+print(ast_linha_1)
+-- OUTPUT:
+10.0
+**********************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 10:46:04) 
+-- CODE:
+metade_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+
+ast = "*"
+ast_linha_1 = ast * metade_ast
+
+QA2 = (len(ast_linha_1)- 2)/2
+
+oo = "oo"
+
+print(ast_linha_1)
+for ch in range(0,len(ast_linha_1)):
+	ll = (ast * QA2 ) + oo + (ast * QA2 ) 
+	print(ll)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 12, in <module>
+    ll = (ast * QA2 ) + oo + (ast * QA2 ) 
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 10:46:41) 
+-- CODE:
+metade_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+
+ast = "*"
+ast_linha_1 = ast * metade_ast
+
+QA2 = (len(ast_linha_1)- 2)//2
+
+oo = "oo"
+
+print(ast_linha_1)
+for ch in range(0,len(ast_linha_1)):
+	ll = (ast * QA2 ) + oo + (ast * QA2 ) 
+	print(ll)
+-- OUTPUT:
+**********************
+**********oo**********
+**********oo**********
+**********oo**********
+**********oo**********
+**********oo**********
+**********oo**********
+**********oo**********
+**********oo**********
+**********oo**********
+**********oo**********
+**********oo**********
+**********oo**********
+**********oo**********
+**********oo**********
+**********oo**********
+**********oo**********
+**********oo**********
+**********oo**********
+**********oo**********
+**********oo**********
+**********oo**********
+**********oo**********
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 21:44:10) 
+-- CODE:
+metade_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+
+ast = "*"
+ast_linha_1 = ast * metade_ast
+
+QA2 = (len(ast_linha_1)- 2)//2
+
+
+oo = "oo"
+mult = 1
+print(ast_linha_1)
+for ch in range(0,len(ast_linha_1)):
+	ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+	print(ll)
+	QA2 = QA2 - 1
+	mult = mult + 1
+-- OUTPUT:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+oooooooooooooooooooooo
+oooooooooooooooooooooooo
+oooooooooooooooooooooooooo
+oooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 21:47:36) 
+-- CODE:
+metade_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+
+ast = "*"
+ast_linha_1 = ast * metade_ast
+
+QA2 = (len(ast_linha_1)- 2)//2
+
+
+oo = "oo"
+mult = 1
+print(ast_linha_1)
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 == (len(ast_linha_1)-1))
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1
+		mult = mult + 1
+-- ERROR:
+File "XXXX", line 13
+    if (QA2 == (len(ast_linha_1)-1))
+                                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 21:49:55) 
+-- CODE:
+metade_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+
+ast = "*"
+ast_linha_1 = ast * metade_ast
+
+QA2 = (len(ast_linha_1)- 2)//2
+
+
+oo = "oo"
+mult = 1
+print(ast_linha_1)
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 == (len(ast_linha_1)-1)):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1
+		mult = mult + 1
+-- OUTPUT:
+**********************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 21:52:53) 
+-- CODE:
+metade_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+
+ast = "*"
+ast_linha_1 = ast * metade_ast
+
+QA2 = (len(ast_linha_1)- 2)//2
+
+
+oo = "oo"
+mult = 1
+print(ast_linha_1)
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 == (len(ast_linha_1)-1)):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1
+		mult = mult + 1
+-- OUTPUT:
+**********************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 21:53:11) 
+-- CODE:
+metade_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+
+ast = "*"
+ast_linha_1 = ast * metade_ast
+
+QA2 = (len(ast_linha_1)- 2)//2
+
+
+oo = "oo"
+mult = 1
+print(ast_linha_1)
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 <= (len(ast_linha_1)-1)):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1
+		mult = mult + 1
+-- OUTPUT:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+oooooooooooooooooooooo
+oooooooooooooooooooooooo
+oooooooooooooooooooooooooo
+oooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 22:06:04) 
+-- CODE:
+metade_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+
+ast = "*"
+ast_linha_1 = ast * metade_ast
+
+QA2 = (len(ast_linha_1)- 2)//2
+
+
+oo = "oo"
+mult = 1
+print(ast_linha_1)
+ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 )
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 <= size(ll)-1):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1
+		mult = mult + 1
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 14, in <module>
+    if (QA2 <= size(ll)-1):
+NameError: name 'size' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 22:07:39) 
+-- CODE:
+metade_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+
+ast = "*"
+ast_linha_1 = ast * metade_ast
+
+QA2 = (len(ast_linha_1)- 2)//2
+
+
+oo = "oo"
+mult = 1
+print(ast_linha_1)
+ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 )
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 <= len(ll)-1):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1
+		mult = mult + 1
+-- OUTPUT:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+oooooooooooooooooooooo
+oooooooooooooooooooooooo
+oooooooooooooooooooooooooo
+oooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooo
+oooooooooooooooooooooooooooooooooooooooooooo
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 22:15:34) 
+-- CODE:
+metade_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+
+ast = "*"
+ast_linha_1 = ast * metade_ast
+
+QA2 = (len(ast_linha_1)- 2)//2
+
+
+oo = "oo"
+mult = 1
+print(ast_linha_1)
+ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 )
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 <= len(ll)-1 and (mult < (len(ast_linha_1) - 2)/2)):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1
+		mult = mult + 1
+-- OUTPUT:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 22:15:54) 
+-- CODE:
+metade_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+
+ast = "*"
+ast_linha_1 = ast * metade_ast
+
+QA2 = (len(ast_linha_1)- 2)//2
+
+
+oo = "oo"
+mult = 1
+print(ast_linha_1)
+ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 )
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 <= len(ll)-1 and (mult <= (len(ast_linha_1) - 2)/2)):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1
+		mult = mult + 1
+-- OUTPUT:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 22:16:43) 
+-- CODE:
+metade_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+
+ast = "*"
+ast_linha_1 = ast * metade_ast
+
+QA2 = (len(ast_linha_1)- 2)//2
+
+
+oo = "oo"
+mult = 1
+print(ast_linha_1)
+ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 )
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 <= len(ll)-1 and (mult <= (len(ast_linha_1) - 2)/2)):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1
+		mult = mult + 1
+-- OUTPUT:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-07 22:17:06) 
+-- CODE:
+metade_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+
+ast = "*"
+ast_linha_1 = ast * metade_ast
+
+QA2 = (len(ast_linha_1)- 2)//2
+
+
+oo = "oo"
+mult = 1
+print(ast_linha_1)
+ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 )
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 <= len(ll)-1 and (mult <= (len(ast_linha_1) - 2)/2)):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1
+		mult = mult + 1
+-- EXECUTION TIME:
+0.805856
+-- TEST CASE 1:
+---- input:
+11
+---- correct output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+---- user output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+-- TEST CASE 2:
+---- input:
+19
+---- correct output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+---- user output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+-- TEST CASE 3:
+---- input:
+26
+---- correct output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo********
+*******oooooooooooooooooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooooooooooooooooo*
+---- user output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo**
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 07:55:55) 
+-- CODE:
+total_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+
+ast = "*"
+ast_linha_1 = ast * total_ast
+
+QA2 = (len(ast_linha_1)- 2)//2
+
+oo = "oo"
+mult = 1
+print(ast_linha_1)
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 <= len(ll)-1 and (mult <= (len(ast_linha_1) - 2)/2)):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1
+		mult = mult + 1
+-- EXECUTION TIME:
+0.811459
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1807/2568/main.py", line 12, in <module>
+    if (QA2 <= len(ll)-1 and (mult <= (len(ast_linha_1) - 2)/2)):
+NameError: name 'll' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 07:56:13) 
+-- CODE:
+total_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+
+ast = "*"
+ast_linha_1 = ast * total_ast
+
+QA2 = (len(ast_linha_1)- 2)//2
+
+oo = "oo"
+mult = 1
+print(ast_linha_1)
+ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 )
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 <= len(ll)-1 and (mult <= (len(ast_linha_1) - 2)/2)):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1
+		mult = mult + 1
+-- EXECUTION TIME:
+0.545543
+-- TEST CASE 1:
+---- input:
+11
+---- correct output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+---- user output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+-- TEST CASE 2:
+---- input:
+19
+---- correct output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+---- user output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+-- TEST CASE 3:
+---- input:
+26
+---- correct output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo********
+*******oooooooooooooooooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooooooooooooooooo*
+---- user output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo**
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 07:57:35) 
+-- CODE:
+total_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+
+ast = "*"
+ast_linha_1 = ast * total_ast
+
+QA2 = (len(ast_linha_1)- 2)//2
+
+oo = "oo"
+mult = 1
+print(ast_linha_1)
+
+for ch in range(0,len(ast_linha_1)):
+	ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 )
+	if (QA2 <= len(ll)-1 and (mult <= (len(ast_linha_1) - 2)/2)):
+		 
+		print(ll)
+		QA2 = QA2 - 1
+		mult = mult + 1
+-- EXECUTION TIME:
+0.91941
+-- TEST CASE 1:
+---- input:
+11
+---- correct output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+---- user output:
+metade dos asteriscos na primeira linha**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+-- TEST CASE 2:
+---- input:
+19
+---- correct output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+---- user output:
+metade dos asteriscos na primeira linha**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+-- TEST CASE 3:
+---- input:
+26
+---- correct output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo********
+*******oooooooooooooooooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooooooooooooooooo*
+---- user output:
+metade dos asteriscos na primeira linha****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+*******
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 07:57:51) 
+-- CODE:
+total_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+
+ast = "*"
+ast_linha_1 = ast * total_ast
+
+QA2 = (len(ast_linha_1)- 2)//2
+
+oo = "oo"
+mult = 1
+print(ast_linha_1)
+ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 )
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 <= len(ll)-1 and (mult <= (len(ast_linha_1) - 2)/2)):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1
+		mult = mult + 1
+-- EXECUTION TIME:
+0.865341
+-- TEST CASE 1:
+---- input:
+11
+---- correct output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+---- user output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+-- TEST CASE 2:
+---- input:
+19
+---- correct output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+---- user output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+-- TEST CASE 3:
+---- input:
+26
+---- correct output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo********
+*******oooooooooooooooooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooooooooooooooooo*
+---- user output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo**
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 08:11:46) 
+-- CODE:
+metade_ast = int(input("metade dos asteriscos na primeira linha"))
+ast = "*"
+
+# Primeira linha de asteriscos
+ast_linha_1 = ast * (metade_ast * 2)
+
+# Quantidade de asteriscos nas proximas linhas  linha  
+metade_ast = metade_ast - 1
+QA = metade_ast
+
+oo = "oo"
+mult = 1
+print(ast_linha_1)
+ll = (ast * QA ) + (oo * mult ) + (ast * QA )
+
+for ch in range(0,len(ast_linha_1)):
+	if (QA <= len(ll)-1 and (mult <= metade_ast):
+		ll = (ast * QA ) + (oo * mult ) + (ast * QA ) 
+		print(ll)
+		QA = QA - 1 #diminui a quantidade de asteriscos 
+		mult = mult + 1
+-- EXECUTION TIME:
+0.607777
+-- ERROR:
+  File "/home/codebench/codes/1807/2568/main.py", line 17
+    if (QA <= len(ll)-1 and (mult <= metade_ast):
+                                                ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 08:13:33) 
+-- CODE:
+total_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+
+
+ast = "*"
+# Primeira linha de asteriscos
+ast_linha_1 = ast * total_ast
+
+# Quantidade de asteriscos (de cada lado) nas proximas  linha  
+QA2 = (len(ast_linha_1)- 2)//2
+
+oo = "oo"
+mult = 1
+print(ast_linha_1)
+ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 )
+
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 <= len(ll)-1 and (mult <= (len(ast_linha_1) - 2)/2)):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1 #diminui a quantidade de asteriscos 
+		mult = mult + 1
+-- EXECUTION TIME:
+0.802966
+-- TEST CASE 1:
+---- input:
+11
+---- correct output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+---- user output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+-- TEST CASE 2:
+---- input:
+19
+---- correct output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+---- user output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+-- TEST CASE 3:
+---- input:
+26
+---- correct output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo********
+*******oooooooooooooooooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooooooooooooooooo*
+---- user output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 08:13:34) 
+-- CODE:
+total_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+
+
+ast = "*"
+# Primeira linha de asteriscos
+ast_linha_1 = ast * total_ast
+
+# Quantidade de asteriscos (de cada lado) nas proximas  linha  
+QA2 = (len(ast_linha_1)- 2)//2
+
+oo = "oo"
+mult = 1
+print(ast_linha_1)
+ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 )
+
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 <= len(ll)-1 and (mult <= (len(ast_linha_1) - 2)/2)):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1 #diminui a quantidade de asteriscos 
+		mult = mult + 1
+-- EXECUTION TIME:
+1.38858
+-- TEST CASE 1:
+---- input:
+11
+---- correct output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+---- user output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+-- TEST CASE 2:
+---- input:
+19
+---- correct output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+---- user output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+-- TEST CASE 3:
+---- input:
+26
+---- correct output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo********
+*******oooooooooooooooooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooooooooooooooooo*
+---- user output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo**
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 08:17:01) 
+-- CODE:
+total_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+ast = "*"
+
+# Primeira linha de asteriscos
+ast_linha_1 = ast * total_ast
+print(ast_linha_1)
+
+# Quantidade de asteriscos (de cada lado) nas proximas  linha  
+QA2 = (len(ast_linha_1)- 2)//2
+
+oo = "oo"
+mult = 1 #multiplica os "oo"
+ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 )
+
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 <= len(ll)-1 and (mult <= (len(ast_linha_1) - 2)/2)):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1 #diminui a quantidade de asteriscos 
+		mult = mult + 1
+-- EXECUTION TIME:
+0.656331
+-- TEST CASE 1:
+---- input:
+11
+---- correct output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+---- user output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+-- TEST CASE 2:
+---- input:
+19
+---- correct output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+---- user output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+-- TEST CASE 3:
+---- input:
+26
+---- correct output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo********
+*******oooooooooooooooooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooooooooooooooooo*
+---- user output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo**
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 08:17:52) 
+-- CODE:
+total_ast = int(input("metade dos asteriscos na primeira linha")) * 2
+ast = "*"
+
+# Primeira linha de asteriscos
+ast_linha_1 = ast * total_ast
+print(ast_linha_1)
+
+# Quantidade de asteriscos (de cada lado) nas proximas  linha  
+QA2 = (len(ast_linha_1)- 2)//2
+
+oo = "oo"
+mult = 1 #multiplica os "oo"
+ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 )
+
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 <= len(ll)-1 and (mult <= (len(ast_linha_1) - 2)/2)):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1 #diminui a quantidade de asteriscos(de cada lado) nas proximas linhas 
+		mult = mult + 1
+-- OUTPUT:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 08:18:49) 
+-- CODE:
+total_ast = int(input("metade dos asteriscos na primeira linha: ")) * 2
+ast = "*"
+
+# Primeira linha de asteriscos
+ast_linha_1 = ast * total_ast
+print(ast_linha_1)
+
+# Quantidade de asteriscos (de cada lado) nas proximas  linha  
+QA2 = (len(ast_linha_1)- 2)//2
+
+oo = "oo"
+mult = 1 #multiplica os "oo"
+ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 )
+
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 <= len(ll)-1 and (mult <= (len(ast_linha_1) - 2)/2)):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1 #diminui a quantidade de asteriscos(de cada lado) nas proximas linhas 
+		mult = mult + 1
+-- OUTPUT:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 08:19:11) 
+-- CODE:
+total_ast = int(input("metade dos asteriscos na primeira linha: ")) * 2
+ast = "*"
+
+# Primeira linha de asteriscos
+ast_linha_1 = ast * total_ast
+print(ast_linha_1)
+
+# Quantidade de asteriscos (de cada lado) nas proximas  linha  
+QA2 = (len(ast_linha_1)- 2)//2
+
+oo = "oo"
+mult = 1 #multiplica os "oo"
+ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 )
+
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 <= len(ll)-1 and (mult <= (len(ast_linha_1) - 2)/2)):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1 #diminui a quantidade de asteriscos(de cada lado) nas proximas linhas 
+		mult = mult + 1
+-- EXECUTION TIME:
+0.905153
+-- TEST CASE 1:
+---- input:
+11
+---- correct output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+---- user output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+-- TEST CASE 2:
+---- input:
+19
+---- correct output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+---- user output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+-- TEST CASE 3:
+---- input:
+26
+---- correct output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo********
+*******oooooooooooooooooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooooooooooooooooo*
+---- user output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo**
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 08:19:13) 
+-- CODE:
+total_ast = int(input("metade dos asteriscos na primeira linha: ")) * 2
+ast = "*"
+
+# Primeira linha de asteriscos
+ast_linha_1 = ast * total_ast
+print(ast_linha_1)
+
+# Quantidade de asteriscos (de cada lado) nas proximas  linha  
+QA2 = (len(ast_linha_1)- 2)//2
+
+oo = "oo"
+mult = 1 #multiplica os "oo"
+ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 )
+
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 <= len(ll)-1 and (mult <= (len(ast_linha_1) - 2)/2)):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1 #diminui a quantidade de asteriscos(de cada lado) nas proximas linhas 
+		mult = mult + 1
+-- OUTPUT:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 08:19:17) 
+-- CODE:
+total_ast = int(input("metade dos asteriscos na primeira linha: ")) * 2
+ast = "*"
+
+# Primeira linha de asteriscos
+ast_linha_1 = ast * total_ast
+print(ast_linha_1)
+
+# Quantidade de asteriscos (de cada lado) nas proximas  linha  
+QA2 = (len(ast_linha_1)- 2)//2
+
+oo = "oo"
+mult = 1 #multiplica os "oo"
+ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 )
+
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 <= len(ll)-1 and (mult <= (len(ast_linha_1) - 2)/2)):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1 #diminui a quantidade de asteriscos(de cada lado) nas proximas linhas 
+		mult = mult + 1
+-- OUTPUT:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 08:33:13) 
+-- CODE:
+total_ast = int(input("metade dos asteriscos na primeira linha: ")) * 2
+ast = "*"
+
+# Primeira linha de asteriscos
+ast_linha_1 = ast * total_ast
+print(ast_linha_1)
+
+# Quantidade de asteriscos (de cada lado) nas proximas  linha  
+QA2 = (len(ast_linha_1)- 2)//2
+
+oo = "oo"
+mult = 1 #multiplica os "oo"
+ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 )
+
+for ch in range(0,len(ast_linha_1)):
+	if (QA2 <= len(ll)-1 and (mult <= (len(ast_linha_1) - 2)/2)):
+		ll = (ast * QA2 ) + (oo * mult ) + (ast * QA2 ) 
+		print(ll)
+		QA2 = QA2 - 1 #diminui a quantidade de asteriscos(de cada lado) nas proximas linhas 
+		mult = mult + 1 
+-- EXECUTION TIME:
+0.674546
+-- TEST CASE 1:
+---- input:
+11
+---- correct output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+---- user output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+-- TEST CASE 2:
+---- input:
+19
+---- correct output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+---- user output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+-- TEST CASE 3:
+---- input:
+26
+---- correct output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo********
+*******oooooooooooooooooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooooooooooooooooo*
+---- user output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo**
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

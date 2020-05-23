@@ -1,0 +1,515 @@
+== SUBMITION (2019-05-14 11:52:42) 
+-- CODE:
+qp = int(input("quantidade de peixes: "))
+pc = int(input("percentual de cescimento: "))
+qr = int(input("quantidades de pirarucus retirados: "))
+
+cap = 8000
+
+mes = 0 #variavel contadora 
+
+while (qp >0) and (qp<cap):
+	qp = qp (qp * (pc/100)) - qr # acumula o n. de peixes
+	mes = mes + 1 # atuailiza n. de peixes
+	
+	if (qp >= cap):
+		print("MAXIMO")
+	elif (qp <= 0):
+		print("ZERO")
+	else:
+		qr = int(input("no. mensal de peixes retirados: "))
+print(mes)
+-- EXECUTION TIME:
+0.125067
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1723/2507/main.py", line 10, in <module>
+    qp = qp (qp * (pc/100)) - qr # acumula o n. de peixes
+TypeError: 'int' object is not callable
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:52:44) 
+-- CODE:
+qp = int(input("quantidade de peixes: "))
+pc = int(input("percentual de cescimento: "))
+qr = int(input("quantidades de pirarucus retirados: "))
+
+cap = 8000
+
+mes = 0 #variavel contadora 
+
+while (qp >0) and (qp<cap):
+	qp = qp (qp * (pc/100)) - qr # acumula o n. de peixes
+	mes = mes + 1 # atuailiza n. de peixes
+	
+	if (qp >= cap):
+		print("MAXIMO")
+	elif (qp <= 0):
+		print("ZERO")
+	else:
+		qr = int(input("no. mensal de peixes retirados: "))
+print(mes)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 10, in <module>
+    qp = qp (qp * (pc/100)) - qr # acumula o n. de peixes
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 11:53:32) 
+-- CODE:
+qp = int(input("quantidade de peixes: "))
+pc = int(input("percentual de cescimento: "))
+qr = int(input("quantidades de pirarucus retirados: "))
+
+cap = 8000
+
+mes = 0 #variavel contadora 
+
+while (qp >0) and (qp<cap):
+	qp = qp (qp * (pc/100)) - qr # acumula o n. de peixes
+	mes = mes + 1 # atuailiza n. de peixes
+	
+	if (qp >= cap):
+		print("MAXIMO")
+	elif (qp <= 0):
+		print("ZERO")
+	else:
+		qr = int(input("no. mensal de peixes retirados: "))
+print(mes)
+-- EXECUTION TIME:
+0.136438
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1723/2507/main.py", line 10, in <module>
+    qp = qp (qp * (pc/100)) - qr # acumula o n. de peixes
+TypeError: 'int' object is not callable
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:53:36) 
+-- CODE:
+qp = int(input("quantidade de peixes: "))
+pc = int(input("percentual de cescimento: "))
+qr = int(input("quantidades de pirarucus retirados: "))
+
+cap = 8000
+
+mes = 0 #variavel contadora 
+
+while (qp >0) and (qp<cap):
+	qp = qp (qp * (pc/100)) - qr # acumula o n. de peixes
+	mes = mes + 1 # atuailiza n. de peixes
+	
+	if (qp >= cap):
+		print("MAXIMO")
+	elif (qp <= 0):
+		print("ZERO")
+	else:
+		qr = int(input("no. mensal de peixes retirados: "))
+print(mes)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 10, in <module>
+    qp = qp (qp * (pc/100)) - qr # acumula o n. de peixes
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 11:54:08) 
+-- CODE:
+qp = int(input("quantidade de peixes: "))
+pc = int(input("percentual de cescimento: "))
+qr = int(input("quantidades de pirarucus retirados: "))
+
+cap = 8000
+
+mes = 0 #variavel contadora 
+
+while (qp >0) and (qp<cap):
+	qp = qp + (qp * (pc/100)) - qr # acumula o n. de peixes
+	mes = mes + 1 # atuailiza n. de peixes
+	
+	if (qp >= cap):
+		print("MAXIMO")
+	elif (qp <= 0):
+		print("ZERO")
+	else:
+		qr = int(input("no. mensal de peixes retirados: "))
+print(mes)
+-- EXECUTION TIME:
+0.206822
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+ZERO
+3
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+MAXIMO
+7
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 01:01:02) 
+-- CODE:
+qp = int(input("quantidade de peixes: "))
+pc = int(input("percentual de cescimento: "))
+qr = int(input("quantidades de pirarucus retirados: "))
+
+cap = 8000
+
+mes = 0 #variavel contadora 
+
+while (qp >0) and (qp<cap):
+	qp = qp + (qp * (pc/100)) - qr # acumula o n. de peixes
+	mes = mes + 1 # atuailiza n. de peixes
+	
+	if (qp >= cap):
+		print("MAXIMO")
+	elif (qp <= 0):
+		print("ZERO")
+	else:
+		qr = int(input("no. mensal de peixes retirados: "))
+print(mes)
+-- OUTPUT:
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 01:06:52) 
+-- CODE:
+qp = int(input("quantidade de peixes: "))
+pc = int(input("percentual de cescimento: "))
+qr = int(input("quantidades de pirarucus retirados: "))
+
+cap = 8000
+
+mes = 0 #variavel contadora 
+
+while (qp >0) and (qp<cap):
+	qp = qp + (qp * (pc/100)) - qr # acumula o n. de peixes
+	mes = mes + 1 # atuailiza n. de peixes
+	
+	if (qp >= cap):
+		print("MAXIMO")
+	elif (qp <= 0):
+		print("ZERO")
+	else:
+		qr = int(input("no. mensal de peixes retirados: "))
+print(mes)
+-- OUTPUT:
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-16 01:07:54) 
+-- CODE:
+qp = int(input("quantidade de peixes: "))
+pc = int(input("percentual de cescimento: "))
+qr = int(input("quantidades de pirarucus retirados: "))
+
+cap = 8000
+
+mes = 0 #variavel contadora 
+
+while (qp >0) and (qp<cap):
+	qp = qp + (qp * (pc/100)) - qr # acumula o n. de peixes
+	mes = mes + 1 # atuailiza n. de peixes
+	
+	if (qp >= cap):
+		print("MAXIMO")
+	elif (qp <= 0):
+		print("ZERO")
+	else:
+		qr = int(input("no. mensal de peixes retirados: "))
+print(mes)
+-- EXECUTION TIME:
+0.183239
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+ZERO
+3
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+MAXIMO
+7
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 01:08:08) 
+-- CODE:
+qp = int(input("quantidade de peixes: "))
+pc = int(input("percentual de cescimento: "))
+qr = int(input("quantidades de pirarucus retirados: "))
+
+cap = 8000
+
+mes = 0 #variavel contadora 
+
+while (qp >0) and (qp<cap):
+	qp = qp + (qp * (pc/100)) - qr # acumula o n. de peixes
+	mes = mes + 1 # atuailiza n. de peixes
+	
+	if (qp >= cap):
+		print("MAXIMO")
+	elif (qp <= 0):
+		print("ZERO")
+	else:
+		qr = int(input("no. mensal de peixes retirados: "))
+print(mes)
+-- OUTPUT:
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-16 01:11:01) 
+-- CODE:
+qp = int(input("quantidade de peixes: "))
+pc = int(input("percentual de cescimento: "))
+qr = int(input("quantidades de pirarucus retirados: "))
+
+cap = 8000
+
+mes = 0 #variavel contadora 
+
+while (qp >0) and (qp<cap):
+	qp = qp + (qp * (pc/100)) - qr # acumula o n. de peixes
+	mes = mes + 1 # atuailiza n. de peixes
+	
+	if (qp >= cap):
+		print("MAXIMO")
+	else:
+		print("ZERO")
+print(mes)
+-- EXECUTION TIME:
+0.214436
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+ZERO
+ZERO
+ZERO
+ZERO
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+ZERO
+ZERO
+ZERO
+ZERO
+ZERO
+ZERO
+6
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+ZERO
+ZERO
+ZERO
+ZERO
+ZERO
+5
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 01:11:02) 
+-- CODE:
+qp = int(input("quantidade de peixes: "))
+pc = int(input("percentual de cescimento: "))
+qr = int(input("quantidades de pirarucus retirados: "))
+
+cap = 8000
+
+mes = 0 #variavel contadora 
+
+while (qp >0) and (qp<cap):
+	qp = qp + (qp * (pc/100)) - qr # acumula o n. de peixes
+	mes = mes + 1 # atuailiza n. de peixes
+	
+	if (qp >= cap):
+		print("MAXIMO")
+	else:
+		print("ZERO")
+print(mes)
+-- OUTPUT:
+ZERO
+ZERO
+ZERO
+ZERO
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 01:11:16) 
+-- CODE:
+qp = int(input("quantidade de peixes: "))
+pc = int(input("percentual de cescimento: "))
+qr = int(input("quantidades de pirarucus retirados: "))
+
+cap = 8000
+
+mes = 0 #variavel contadora 
+
+while (qp >0) and (qp<cap):
+	qp = qp + (qp * (pc/100)) - qr # acumula o n. de peixes
+	mes = mes + 1 # atuailiza n. de peixes
+	
+	if (qp >= cap):
+		print("MAXIMO")
+	elif (qp <= 0):
+		print("ZERO")
+	else:
+		qr = int(input("no. mensal de peixes retirados: "))
+print(mes)
+-- OUTPUT:
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 01:13:00) 
+-- CODE:
+qp = int(input("quantidade de peixes: "))
+pc = int(input("percentual de cescimento: "))
+qr = int(input("quantidades de pirarucus retirados: "))
+
+cap = 8000
+
+mes = 0 #variavel contadora 
+
+while (qp >0) and (qp<cap):
+	qp = qp + (qp * (pc/100)) - qr # acumula o n. de peixes
+	mes = mes + 1 # atuailiza n. de peixes
+	
+	if (qp >= cap):
+		print("MAXIMO")
+	elif (qp <= 0):
+		print("ZERO")
+	else:
+		qr = int(input("no. mensal de peixes retirados: "))
+print(mes)
+-- OUTPUT:
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 10:25:02) 
+-- CODE:
+qp = int(input("quantidade de peixes: "))
+pc = int(input("percentual de cescimento: "))
+qr = int(input("quantidades de pirarucus retirados: "))
+
+cap = 8000
+
+mes = 0 #variavel contadora 
+
+while (qp >0) and (qp<cap):
+	qp = qp + (qp * (pc/100)) - qr # acumula o n. de peixes
+	mes = mes + 1 # atuailiza n. de peixes
+	
+	if (qp >= cap):
+		print("MAXIMO")
+	elif (qp <= 0):
+		print("ZERO")
+	else:
+		qr = int(input("no. mensal de peixes retirados: "))
+print(mes)
+-- OUTPUT:
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

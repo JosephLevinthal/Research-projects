@@ -1,0 +1,5 @@
+a = float(input("qual o valor de a?"))
+b = float(input("qual o valor de b?"))
+c = float(input("qual o valor de c?"))
+P = (a**2 + b**2 + c**2)/(a+b+c)
+print(float(round(P, 6)))

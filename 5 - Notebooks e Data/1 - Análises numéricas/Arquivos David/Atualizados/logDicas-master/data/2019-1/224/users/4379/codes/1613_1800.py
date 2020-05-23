@@ -1,0 +1,5 @@
+a=input("a")
+b=input("b")
+c=input("c")
+fm=(a**2 + b**2 + c**2)/(a+b+c)
+print(round(fm, 7))

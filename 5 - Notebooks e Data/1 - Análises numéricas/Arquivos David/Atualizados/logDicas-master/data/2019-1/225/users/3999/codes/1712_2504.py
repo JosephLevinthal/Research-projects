@@ -1,0 +1,10 @@
+Qic=int(input())
+Qil=int(input())
+Pv=int(input())/100
+Pl=int(input())/100
+i=0
+while(Qil/Qic<=2):
+	Qic=Qic+(Qic*Pv)
+	Qil=Qil+(Qil*Pl)
+	i=i+1
+print(i)

@@ -1,0 +1,95 @@
+== TEST (2019-03-25 13:49:44) 
+-- CODE:
+from math import sqrt()
+a = float(input"digite o valor do lado a : ")
+b = float(input("digite o valor do lado b: "))
+c = float(input("digite o valor do lado c: "))
+s = (a + b + c)/2
+area = sqrt( s * (s - a) * (s - b) * (s - c) )
+print(area)
+-- ERROR:
+File "XXXX", line 1
+    from math import sqrt()
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 13:53:03) 
+-- CODE:
+from math import *
+a = float(input"digite o valor do lado a : ")
+b = float(input("digite o valor do lado b: "))
+c = float(input("digite o valor do lado c: "))
+s = (a + b + c)/2
+area = ( s * (s - a) * (s - b) * (s - c) )**0.5
+print(area)
+-- ERROR:
+File "XXXX", line 2
+    a = float(input"digite o valor do lado a : ")
+                                               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 13:53:27) 
+-- CODE:
+from math import *
+a = float(input("digite o valor do lado a : "))
+b = float(input("digite o valor do lado b: "))
+c = float(input("digite o valor do lado c: "))
+s = (a + b + c)/2
+area = ( s * (s - a) * (s - b) * (s - c) )**0.5
+print(area)
+-- OUTPUT:
+69.41967475975385
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:00:52) 
+-- CODE:
+from math import *
+a = float(input("digite o valor do lado a : "))
+b = float(input("digite o valor do lado b: "))
+c = float(input("digite o valor do lado c: "))
+s = (a + b + c)/2
+area = ( s * (s - a) * (s - b) * (s - c) )**0.5
+print(round(area,5))
+-- OUTPUT:
+69.41967
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 10:01:04) 
+-- CODE:
+from math import *
+a = float(input("digite o valor do lado a : "))
+b = float(input("digite o valor do lado b: "))
+c = float(input("digite o valor do lado c: "))
+s = (a + b + c)/2
+area = ( s * (s - a) * (s - b) * (s - c) )**0.5
+print(round(area,5))
+-- EXECUTION TIME:
+0.114793
+-- TEST CASE 1:
+---- input:
+11.0
+19.5
+13.2
+---- correct output:
+69.41967
+---- user output:
+69.41967
+-- TEST CASE 2:
+---- input:
+30.0
+40.0
+50.0
+---- correct output:
+600.0
+---- user output:
+600.0
+-- TEST CASE 3:
+---- input:
+33.0
+43.0
+55.0
+---- correct output:
+709.16654
+---- user output:
+709.16654
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

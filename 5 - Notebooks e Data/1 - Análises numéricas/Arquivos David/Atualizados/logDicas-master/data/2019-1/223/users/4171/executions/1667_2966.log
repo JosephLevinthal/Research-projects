@@ -1,0 +1,185 @@
+== TEST (2019-04-16 16:04:06) 
+-- CODE:
+genero = int(input("Mulher? : "))
+preco = float(input("valor ingresso: "))
+qt = int(input("quantidade ingressos: "))
+
+if genero == "S":
+	preco = preco - preco*100/20
+	print(preco)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    genero = int(input())
+ValueError: invalid literal for int() with base 10: 'S'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:04:19) 
+-- CODE:
+genero = input("Mulher? : ")
+preco = float(input("valor ingresso: "))
+qt = int(input("quantidade ingressos: "))
+
+if genero == "S":
+	preco = preco - preco*100/20
+	print(preco)
+-- OUTPUT:
+-150.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:04:28) 
+-- CODE:
+genero = input("Mulher? : ")
+preco = float(input("valor ingresso: "))
+qt = int(input("quantidade ingressos: "))
+
+if genero == "S":
+	preco = preco - preco*20/100
+	print(preco)
+-- OUTPUT:
+30.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:04:48) 
+-- CODE:
+genero = input("Mulher? : ")
+preco = float(input("valor ingresso: "))
+qt = int(input("quantidade ingressos: "))
+
+if genero == "S":
+	preco = preco - preco*(1/5)
+-- OUTPUT:
+30.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:05:13) 
+-- CODE:
+genero = input("Mulher? : ")
+preco = float(input("valor ingresso: "))
+qt = int(input("quantidade ingressos: "))
+
+if genero == "S":
+	preco2 = preco - preco * (1 / 5)
+-- OUTPUT:
+30.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:05:18) 
+-- CODE:
+genero = input("Mulher? : ")
+preco = float(input("valor ingresso: "))
+qt = int(input("quantidade ingressos: "))
+
+if genero == "S":
+	preco2 = preco - preco * (1 / 5)
+	print(preco2)
+-- OUTPUT:
+30.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:06:06) 
+-- CODE:
+genero = input("Mulher? : ")
+preco = float(input("valor ingresso: "))
+qt = int(input("quantidade ingressos: "))
+
+if genero == "S":
+	preco2 = preco*qt - preco * (1 / 5)
+	print(preco2)
+-- OUTPUT:
+217.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:06:46) 
+-- CODE:
+genero = input("Mulher? : ")
+preco = float(input("valor ingresso: "))
+qt = int(input("quantidade ingressos: "))
+
+if genero == "S":
+	preco2 = preco - preco * (1 / 5)
+	preco3 = preco * qt
+	print(preco2)
+-- OUTPUT:
+30.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:06:56) 
+-- CODE:
+genero = input("Mulher? : ")
+preco = float(input("valor ingresso: "))
+qt = int(input("quantidade ingressos: "))
+
+if genero == "S":
+	preco2 = preco - preco * (1 / 5)
+	preco3 = preco * qt
+	print(preco3)
+-- OUTPUT:
+225.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:07:43) 
+-- CODE:
+genero = input("Mulher? : ")
+preco = float(input("valor ingresso: "))
+qt = int(input("quantidade ingressos: "))
+
+if genero == "S":
+	preco2 = preco - preco * (1 / 5)
+	preco3 = preco * qt
+	print(round(preco3,2))
+else:
+	print(round(preco*qt,2))
+-- OUTPUT:
+225.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:08:04) 
+-- CODE:
+genero = input("Mulher? : ")
+preco = float(input("valor ingresso: "))
+qt = int(input("quantidade ingressos: "))
+
+if genero == "S":
+	preco2 = preco - preco * (1 / 5)
+	preco3 = preco2 * qt
+	print(round(preco3,2))
+else:
+	print(round(preco*qt,2))
+-- OUTPUT:
+180.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 16:08:10) 
+-- CODE:
+genero = input("Mulher? : ")
+preco = float(input("valor ingresso: "))
+qt = int(input("quantidade ingressos: "))
+
+if genero == "S":
+	preco2 = preco - preco * (1 / 5)
+	preco3 = preco2 * qt
+	print(round(preco3,2))
+else:
+	print(round(preco*qt,2))
+-- EXECUTION TIME:
+0.137536
+-- TEST CASE 1:
+---- input:
+S
+37.50
+6
+---- correct output:
+180
+---- user output:
+180.0
+-- TEST CASE 2:
+---- input:
+S
+26.95
+8
+---- correct output:
+172.48
+---- user output:
+172.48
+-- TEST CASE 3:
+---- input:
+N
+42.45
+3
+---- correct output:
+127.35
+---- user output:
+127.35
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

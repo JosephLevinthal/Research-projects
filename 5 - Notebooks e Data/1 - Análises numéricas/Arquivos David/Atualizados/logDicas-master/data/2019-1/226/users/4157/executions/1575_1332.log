@@ -1,0 +1,210 @@
+== TEST (2019-03-12 20:26:42) 
+-- CODE:
+aresta = 5 
+area = (3 / 2)(X)**3*5**2
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3 / 2)(X)**3*5**2
+NameError: name 'X' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 20:27:10) 
+-- CODE:
+aresta = 5 
+area = (3 / 2)(3*5**2)**
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 2
+    area = (3 / 2)(3*5**2)**
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 20:27:45) 
+-- CODE:
+aresta = 5 
+area = 3 / 2 * (3*5**2)**
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 2
+    area = 3 / 2 * (3*5**2)**
+                            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 20:28:01) 
+-- CODE:
+aresta = 5 
+area = (3 / 2 * (3*5**2)**)
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 2
+    area = (3 / 2 * (3*5**2)**)
+                              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 20:28:27) 
+-- CODE:
+aresta = 5 
+area = 
+ 
+print(round((3 / 2 * (3*5**2)**), 4))
+-- ERROR:
+File "XXXX", line 2
+    area = 
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 20:29:33) 
+-- CODE:
+aresta = 5 
+area = print(3 / 2 * (3*5**2)**)
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 2
+    area = print(3 / 2 * (3*5**2)**)
+                                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 20:30:19) 
+-- CODE:
+aresta = 5 
+area = print(3 / 2 * (3*5**2)**0.5)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(area, 4))
+TypeError: type NoneType doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 20:30:40) 
+-- CODE:
+aresta = (5)
+area = (3 / 2 * (3*5**2)**0.5)
+ 
+print(round(area, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-12 20:31:25) 
+-- CODE:
+aresta = (5)
+area = (3 / 2 * (3*5**2)**0.5)
+ 
+print(round(area, 4))
+-- EXECUTION TIME:
+0.221467
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.9904
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 20:31:40) 
+-- CODE:
+aresta = (5)
+area = (3 / 2 * (3*5**2)**0.5)
+ 
+print(round(area, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-12 20:32:42) 
+-- CODE:
+aresta = (5)
+area = (3 / 2*(3*5**2)**0.5)
+ 
+print(round(area, 4))
+-- EXECUTION TIME:
+0.195121
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.9904
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 20:49:35) 
+-- CODE:
+aresta = (5**2)
+area = (3 / 2*(3*aresta)**0.5)
+ 
+print(round(area, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-12 20:49:38) 
+-- CODE:
+aresta = (5**2)
+area = (3 / 2*(3*aresta)**0.5)
+ 
+print(round(area, 4))
+-- EXECUTION TIME:
+0.162784
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.9904
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-12 20:55:53) 
+-- CODE:
+aresta = (5**2)
+area = (3 / 2*(3)**0.5)*(aresta)
+ 
+print(round(area, 4))
+-- EXECUTION TIME:
+0.153567
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+64.9519
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 21:01:36) 
+-- CODE:
+aresta = (5**2)
+area = (3 / 2*(3)**0.5)*(aresta)
+ 
+print(round(area, 4))
+-- OUTPUT:
+64.9519
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-12 21:10:34) 
+-- CODE:
+aresta = (5**2)
+area = (3 / 2*(3)**0.5)*(aresta)
+ 
+print(round(area, 4))
+-- EXECUTION TIME:
+0.149967
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+64.9519
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

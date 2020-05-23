@@ -1,0 +1,712 @@
+== TEST (2019-03-21 21:14:06) 
+-- CODE:
+num = int(input("Digite um numero: "))
+soma = 
+
+-- ERROR:
+File "XXXX", line 2
+    soma = 
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 21:14:14) 
+-- CODE:
+num = int(input("Digite um numero: "))
+
+
+-- ERROR:
+File "XXXX", line 2
+    soma = 
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 21:23:14) 
+-- CODE:
+num = int(input("Digite um numero: "))
+
+soma = " " + " " + " " + " "
+
+print(soma)
+-- ERROR:
+File "XXXX", line 2
+    soma = 
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 21:27:05) 
+-- CODE:
+num = int(input("Digite um numero: "))
+
+dig1 = % num
+dig2 = %% num
+dig3 = %%% num
+dig4 = %%%% num
+
+soma = dig1 + dig2 + dig3 + dig4
+
+print(soma)
+-- ERROR:
+File "XXXX", line 3
+    dig1 = % num
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 21:28:08) 
+-- CODE:
+num = int(input("Digite um numero: "))
+
+dig1 = num %
+dig2 = num %%
+dig3 = num %%%
+dig4 = num %%%% 
+
+soma = dig1 + dig2 + dig3 + dig4
+
+print(soma)
+-- ERROR:
+File "XXXX", line 3
+    dig1 = num %
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 21:32:19) 
+-- CODE:
+num = int(input("Digite um numero: "))
+
+dig[0]
+dig[1]
+dig[2] 
+dig[3] 
+
+soma = dig[0] + dig[1] + dig[2] + dig[3]
+
+print(soma)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    dig[0]
+NameError: name 'dig' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 21:34:43) 
+-- CODE:
+num = int(input("Digite um numero: "))
+
+num[0]
+num[1]
+num[2] 
+num[3] 
+
+soma = num[0] + num[1] + num[2] + num[3]
+
+print(soma)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    num[0]
+TypeError: 'int' object is not subscriptable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 21:38:09) 
+-- CODE:
+num = int(input("Digite um numero: "))
+
+num[0:1]
+num[1:2]
+num[2:3] 
+num[3:4] 
+
+soma = num[0] + num[1] + num[2] + num[3]
+
+print(soma)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    num[0:1]
+TypeError: 'int' object is not subscriptable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 21:42:37) 
+-- CODE:
+num = int(input("Digite um numero: "))
+n = str(num)
+
+
+
+soma = n[0] + n[1] + n[2] + n[3]
+
+print(soma)
+-- OUTPUT:
+9173
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 21:43:47) 
+-- CODE:
+num = int(input("Digite um numero: "))
+n = str(num)
+
+
+
+soma = n[0] // + // n[1] // + // n[2] // + // n[3]
+
+print(soma)
+-- ERROR:
+File "XXXX", line 6
+    soma = n[0] // + // n[1] // + // n[2] // + // n[3]
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 14:51:47) 
+-- CODE:
+num = int(input("Digite um numero: "))
+
+a // 1000
+a % 1000
+
+b // 100
+b % 100
+
+c // 10
+c % 10
+
+d // 1
+d % 1
+ 
+print(a + b + c +d)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    a // 1000
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 14:52:30) 
+-- CODE:
+num = int(input("Digite um numero: "))
+
+abcd // 1000
+abcd % 1000
+
+bcd // 100
+bcd % 100
+
+cd // 10
+cd % 10
+
+d // 1
+d % 1
+ 
+print(a + b + c +d)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    abcd // 1000
+NameError: name 'abcd' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 14:52:45) 
+-- CODE:
+num = int(input("Digite um numero: "))
+
+abcd // 1000
+abcd % 1000
+
+bcd // 100
+bcd % 100
+
+cd // 10
+cd % 10
+
+d // 1
+d % 1
+ 
+print(a + b + c +d)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    abcd // 1000
+NameError: name 'abcd' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 14:59:54) 
+-- CODE:
+a = int(input("Digite um numero: "))
+
+b = a // 1000
+c = a % 1000
+d = c // 100
+e = c % 100
+f = e // 10
+g = e % 10
+h = g // 1
+h = g % 1
+
+soma = b + d + f + h 
+
+print(soma)
+-- OUTPUT:
+17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-25 15:00:03) 
+-- CODE:
+a = int(input("Digite um numero: "))
+
+b = a // 1000
+c = a % 1000
+d = c // 100
+e = c % 100
+f = e // 10
+g = e % 10
+h = g // 1
+h = g % 1
+
+soma = b + d + f + h 
+
+print(soma)
+-- EXECUTION TIME:
+0.128811
+-- TEST CASE 1:
+---- input:
+9173
+---- correct output:
+20
+---- user output:
+17
+-- TEST CASE 2:
+---- input:
+1010
+---- correct output:
+2
+---- user output:
+2
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 15:00:10) 
+-- CODE:
+a = int(input("Digite um numero: "))
+
+b = a // 1000
+c = a % 1000
+d = c // 100
+e = c % 100
+f = e // 10
+g = e % 10
+h = g // 1
+h = g % 1
+
+soma = b + d + f + h 
+
+print(soma)
+-- OUTPUT:
+17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-25 15:00:22) 
+-- CODE:
+a = int(input("Digite um numero: "))
+
+b = a // 1000
+c = a % 1000
+d = c // 100
+e = c % 100
+f = e // 10
+g = e % 10
+h = g // 1
+h = g % 1
+
+soma = b + d + f + h 
+
+print(soma)
+-- EXECUTION TIME:
+0.197723
+-- TEST CASE 1:
+---- input:
+9173
+---- correct output:
+20
+---- user output:
+17
+-- TEST CASE 2:
+---- input:
+1010
+---- correct output:
+2
+---- user output:
+2
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 15:00:37) 
+-- CODE:
+a = int(input("Digite um numero: "))
+
+b = a // 1000
+c = a % 1000
+d = c // 100
+e = c % 100
+f = e // 10
+g = e % 10
+h = g // 1
+h = g % 1
+
+soma = b + d + f + h 
+
+print(soma)
+-- OUTPUT:
+17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 15:00:44) 
+-- CODE:
+a = int(input("Digite um numero: "))
+
+b = a // 1000
+c = a % 1000
+d = c // 100
+e = c % 100
+f = e // 10
+g = e % 10
+h = g // 1
+h = g % 1
+
+soma = b + d + f + h 
+
+print(soma)
+-- OUTPUT:
+17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 15:00:48) 
+-- CODE:
+a = int(input("Digite um numero: "))
+
+b = a // 1000
+c = a % 1000
+d = c // 100
+e = c % 100
+f = e // 10
+g = e % 10
+h = g // 1
+h = g % 1
+
+soma = b + d + f + h 
+
+print(soma)
+-- OUTPUT:
+17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 15:01:10) 
+-- CODE:
+a = int(input("Digite um numero: "))
+
+b = a // 1000
+c = a % 1000
+d = c // 100
+e = c % 100
+f = e // 10
+g = e % 10
+h = g // 1
+h = g % 1
+
+soma = b + d + f + h 
+
+print(soma)
+-- OUTPUT:
+17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-25 15:01:10) 
+-- CODE:
+a = int(input("Digite um numero: "))
+
+b = a // 1000
+c = a % 1000
+d = c // 100
+e = c % 100
+f = e // 10
+g = e % 10
+h = g // 1
+h = g % 1
+
+soma = b + d + f + h 
+
+print(soma)
+-- EXECUTION TIME:
+0.114438
+-- TEST CASE 1:
+---- input:
+9173
+---- correct output:
+20
+---- user output:
+17
+-- TEST CASE 2:
+---- input:
+1010
+---- correct output:
+2
+---- user output:
+2
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 15:04:22) 
+-- CODE:
+a = int(input("Digite um numero: "))
+
+b = a // 1000
+c = a % 1000
+d = c // 100
+e = c % 100
+f = e // 10
+g = e % 10
+h = g // 1
+h = g % 1
+
+soma = b+d+f+h
+
+print(soma)
+-- OUTPUT:
+17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-25 15:04:42) 
+-- CODE:
+a = int(input("Digite um numero: "))
+
+b = a // 1000
+c = a % 1000
+d = c // 100
+e = c % 100
+f = e // 10
+g = e % 10
+h = g // 1
+h = g % 1
+
+soma = b+d+f+h
+
+print(soma)
+-- EXECUTION TIME:
+0.135001
+-- TEST CASE 1:
+---- input:
+9173
+---- correct output:
+20
+---- user output:
+17
+-- TEST CASE 2:
+---- input:
+1010
+---- correct output:
+2
+---- user output:
+2
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 15:04:48) 
+-- CODE:
+a = int(input("Digite um numero: "))
+
+b = a // 1000
+c = a % 1000
+d = c // 100
+e = c % 100
+f = e // 10
+g = e % 10
+h = g // 1
+h = g % 1
+
+soma = b+d+f+h
+
+print(soma)
+-- OUTPUT:
+17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-25 15:05:11) 
+-- CODE:
+a = int(input("Digite um numero: "))
+
+b = a // 1000
+c = a % 1000
+d = c // 100
+e = c % 100
+f = e // 10
+g = e % 10
+h = g // 1
+h = g % 1
+
+soma = b+d+f+h
+
+print(soma)
+-- EXECUTION TIME:
+0.192212
+-- TEST CASE 1:
+---- input:
+9173
+---- correct output:
+20
+---- user output:
+17
+-- TEST CASE 2:
+---- input:
+1010
+---- correct output:
+2
+---- user output:
+2
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 15:05:33) 
+-- CODE:
+a = int(input("Digite um numero: "))
+
+b = a // 1000
+c = a % 1000
+d = c // 100
+e = c % 100
+f = e // 10
+g = e % 10
+h = g // 1
+h = g % 1
+
+soma = b+d+f+h
+
+print(soma)
+-- OUTPUT:
+17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 15:05:48) 
+-- CODE:
+a = int(input("Digite um numero: "))
+
+b = a // 1000
+c = a % 1000
+d = c // 100
+e = c % 100
+f = e // 10
+g = e % 10
+h = g // 1
+h = g % 1
+
+soma = b+d+f+h
+
+print(soma)
+-- OUTPUT:
+17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 15:06:40) 
+-- CODE:
+a = int(input("Digite um numero: "))
+
+b = a // 1000
+c = a % 1000
+
+d = c // 100
+e = c % 100
+
+f = e // 10
+g = e % 10
+
+h = g // 1
+h = g % 1
+
+soma = a+c+e+g
+
+print(soma)
+-- OUTPUT:
+9422
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 15:06:59) 
+-- CODE:
+a = int(input("Digite um numero: "))
+
+b = a // 1000
+c = a % 1000
+
+d = c // 100
+e = c % 100
+
+f = e // 10
+g = e % 10
+
+h = g // 1
+h = g % 1
+
+soma = a+c+e+g
+
+print(soma)
+-- OUTPUT:
+9422
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 15:09:26) 
+-- CODE:
+a = int(input("Digite um numero: "))
+
+b = a // 1000
+c = a % 1000
+
+d = c // 100
+e = c % 100
+
+f = e // 10
+g = e % 10
+
+h = g // 1
+h = g % 1
+
+soma = b + d + f + h
+
+print(soma)
+-- OUTPUT:
+17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-25 15:09:58) 
+-- CODE:
+a = int(input("Digite um numero: "))
+
+b = a // 1000
+c = a % 1000
+
+d = c // 100
+e = c % 100
+
+f = e // 10
+g = e % 10
+
+h = g // 1
+
+soma = b + d + f + h
+
+print(soma)
+-- OUTPUT:
+20
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-25 15:10:06) 
+-- CODE:
+a = int(input("Digite um numero: "))
+
+b = a // 1000
+c = a % 1000
+
+d = c // 100
+e = c % 100
+
+f = e // 10
+g = e % 10
+
+h = g // 1
+
+soma = b + d + f + h
+
+print(soma)
+-- EXECUTION TIME:
+0.112943
+-- TEST CASE 1:
+---- input:
+9173
+---- correct output:
+20
+---- user output:
+20
+-- TEST CASE 2:
+---- input:
+1010
+---- correct output:
+2
+---- user output:
+2
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

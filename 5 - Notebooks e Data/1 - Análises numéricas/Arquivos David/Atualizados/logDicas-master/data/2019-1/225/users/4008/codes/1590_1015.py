@@ -1,0 +1,8 @@
+x = int(input("qual o primeiro?"))
+y = int(input("qual o segundo?"))
+z = int(input("qual o terceiro?"))
+a= min(x, y, z)
+b= max(x, y, z)
+print (a)
+print(x+y+z-a-b)
+print (b)

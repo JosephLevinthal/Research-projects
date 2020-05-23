@@ -1,0 +1,6 @@
+refrigerantes float(input "3,50")
+salgados int(input"1,50")
+valor da bebida(vb) int(input"3,5")
+quantidade de esfirras(qe) int(input"2")
+print(vb+qe)
+round (x , 2)

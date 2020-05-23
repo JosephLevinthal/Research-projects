@@ -1,0 +1,946 @@
+== TEST (2019-06-06 16:39:40) 
+-- CODE:
+from array import*
+n= input("Insira o numero:")
+
+for i in n:
+	n[i]="*"*n
+	n[i]="*"-1
+	print(n)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    n[i]="*"*n
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 22:33:37) 
+-- CODE:
+from array import*
+n= input("Insira o numero:")
+r="*"*n
+for i in len(n):
+	a=r-1
+	print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    r="*"*n
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 22:34:12) 
+-- CODE:
+from array import*
+n= input("Insira o numero:")
+a=0
+r="*"*n
+for i in len(n):
+	a=r-1
+	print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    r="*"*n
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 15:59:37) 
+-- CODE:
+from array import*
+n= input("Insira o numero:")
+a=0
+r="*"*n
+for i in len(n):
+	a=r-i
+	print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    r="*"*n
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:00:46) 
+-- CODE:
+from array import*
+n= input("Insira o numero:")
+a=0
+r="*"*n
+print(r)
+for i in len(n):
+	a=r-i
+	print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    r="*"*n
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:01:00) 
+-- CODE:
+from array import*
+n= input("Insira o numero:")
+a=0
+r="*"*n
+print(r)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    r="*"*n
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:08:57) 
+-- CODE:
+from array import*
+n= input("Insira o numero:")
+
+for i in range(n):
+	for j in range(n-i):
+		print("*",)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    for i in range(n):
+TypeError: 'str' object cannot be interpreted as an integer
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:09:25) 
+-- CODE:
+from array import*
+n= int(input("Insira o numero:"))
+
+for i in range(n):
+	for j in range(n-i):
+		print("*",)
+-- OUTPUT:
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:09:39) 
+-- CODE:
+from array import*
+n= int(input("Insira o numero:"))
+
+for i in range(n):
+	for j in range(n-i):
+		print("*"),
+-- OUTPUT:
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:10:31) 
+-- CODE:
+from array import*
+n= int(input("Insira o numero:"))
+
+for i in range(n):
+	for j in range(n-i):
+		print("*", end='')
+-- OUTPUT:
+************************************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:11:14) 
+-- CODE:
+from array import*
+n= int(input("Insira o numero:"))
+
+for i in range(n):
+	for j in range(n-i):
+		print("*", end='')
+	print('')
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+***
+**
+*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:20:25) 
+-- CODE:
+from array import*
+n= int(input("Insira o numero:"))
+
+for i in range(n):
+	for j in range(n-i):
+		print("*", end='')
+	print('')
+for i in range(n):
+	for j in range(n-n+i):
+		print("*", end(''))
+	print('')
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 10, in <module>
+    print("*", end(''))
+NameError: name 'end' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:20:37) 
+-- CODE:
+from array import*
+n= int(input("Insira o numero:"))
+
+for i in range(n):
+	for j in range(n-i):
+		print("*", end='')
+	print('')
+for i in range(n):
+	for j in range(n-n+i):
+		print("*", end='')
+	print('')
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+*
+**
+***
+****
+*****
+******
+*******
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 16:20:48) 
+-- CODE:
+from array import*
+n= int(input("Insira o numero:"))
+
+for i in range(n):
+	for j in range(n-i):
+		print("*", end='')
+	print('')
+for i in range(n):
+	for j in range(n-n+i):
+		print("*", end='')
+	print('')
+-- EXECUTION TIME:
+0.868615
+-- TEST CASE 1:
+---- input:
+8
+---- correct output:
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+**
+***
+****
+*****
+******
+*******
+********
+
+---- user output:
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+*
+**
+***
+****
+*****
+******
+*******
+-- TEST CASE 2:
+---- input:
+11
+---- correct output:
+***********
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+
+---- user output:
+***********
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+-- TEST CASE 3:
+---- input:
+25
+---- correct output:
+*************************
+************************
+***********************
+**********************
+*********************
+********************
+*******************
+******************
+*****************
+****************
+***************
+**************
+*************
+************
+***********
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+************
+*************
+**************
+***************
+****************
+*****************
+******************
+*******************
+********************
+*********************
+**********************
+***********************
+************************
+*************************
+
+---- user output:
+*************************
+************************
+***********************
+**********************
+*********************
+********************
+*******************
+******************
+*****************
+****************
+***************
+**************
+*************
+************
+***********
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+************
+*************
+**************
+***************
+****************
+*****************
+******************
+*******************
+********************
+*********************
+**********************
+***********************
+************************
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:20:55) 
+-- CODE:
+from array import*
+n= int(input("Insira o numero:"))
+
+for i in range(n):
+	for j in range(n-i):
+		print("*", end='')
+	print('')
+for i in range(n):
+	for j in range(n-n+i):
+		print("*", end='')
+	print('')
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+*
+**
+***
+****
+*****
+******
+*******
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:20:55) 
+-- CODE:
+from array import*
+n= int(input("Insira o numero:"))
+
+for i in range(n):
+	for j in range(n-i):
+		print("*", end='')
+	print('')
+for i in range(n):
+	for j in range(n-n+i):
+		print("*", end='')
+	print('')
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+*
+**
+***
+****
+*****
+******
+*******
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:20:55) 
+-- CODE:
+from array import*
+n= int(input("Insira o numero:"))
+
+for i in range(n):
+	for j in range(n-i):
+		print("*", end='')
+	print('')
+for i in range(n):
+	for j in range(n-n+i):
+		print("*", end='')
+	print('')
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+*
+**
+***
+****
+*****
+******
+*******
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:21:25) 
+-- CODE:
+from array import*
+n= int(input("Insira o numero:"))
+
+for i in range(n):
+	for j in range(n-i):
+		print("*", end='')
+	print('')
+for i in range(n):
+	for j in range(n+n-i):
+		print("*", end='')
+	print('')
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+***
+**
+*
+****************
+***************
+**************
+*************
+************
+***********
+**********
+*********
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:21:40) 
+-- CODE:
+from array import*
+n= int(input("Insira o numero:"))
+
+for i in range(n):
+	for j in range(n-i):
+		print("*", end='')
+	print('')
+for i in range(n):
+	for j in range(n-n-i):
+		print("*", end='')
+	print('')
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+***
+**
+*
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:23:49) 
+-- CODE:
+from array import*
+n= int(input("Insira o numero:"))
+
+for i in range(n):
+	for j in range(n-i):
+		print("*", end='')
+	print('')
+for i in range(n):
+	for j in range(n-n+i):
+		print("*", end='')
+	print('')
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+*
+**
+***
+****
+*****
+******
+*******
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:32:55) 
+-- CODE:
+from array import*
+n= int(input("Insira o numero:"))
+
+for i in range(n):
+	for j in range(n-i):
+		print("*", end='')
+	print('')
+for i in range(n):
+	for j in range(1+i):
+		print("*", end='')
+	print('')
+-- OUTPUT:
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+**
+***
+****
+*****
+******
+*******
+********
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 16:33:08) 
+-- CODE:
+from array import*
+n= int(input("Insira o numero:"))
+
+for i in range(n):
+	for j in range(n-i):
+		print("*", end='')
+	print('')
+for i in range(n):
+	for j in range(1+i):
+		print("*", end='')
+	print('')
+-- EXECUTION TIME:
+0.767123
+-- TEST CASE 1:
+---- input:
+8
+---- correct output:
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+**
+***
+****
+*****
+******
+*******
+********
+
+---- user output:
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+**
+***
+****
+*****
+******
+*******
+********
+-- TEST CASE 2:
+---- input:
+11
+---- correct output:
+***********
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+
+---- user output:
+***********
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+-- TEST CASE 3:
+---- input:
+25
+---- correct output:
+*************************
+************************
+***********************
+**********************
+*********************
+********************
+*******************
+******************
+*****************
+****************
+***************
+**************
+*************
+************
+***********
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+************
+*************
+**************
+***************
+****************
+*****************
+******************
+*******************
+********************
+*********************
+**********************
+***********************
+************************
+*************************
+
+---- user output:
+*************************
+************************
+***********************
+**********************
+*********************
+********************
+*******************
+******************
+*****************
+****************
+***************
+**************
+*************
+************
+***********
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+***********
+************
+*************
+**************
+***************
+****************
+*****************
+******************
+*******************
+********************
+*********************
+**********************
+***********************
+************************
+*************************
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 13:34:00) 
+-- CODE:
+from array import*
+n= int(input("Insira o numero:"))
+
+for i in range(n):
+	for j in range(n-i):
+		print("*", \n)
+	print('')
+for i in range(n):
+	for j in range(1+i):
+		print("*", \n)
+	print('')
+-- ERROR:
+File "XXXX", line 6
+    print("*", \n)
+                 ^
+SyntaxError: unexpected character after line continuation character
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 13:34:23) 
+-- CODE:
+from array import*
+n= int(input("Insira o numero:"))
+
+for i in range(n):
+	for j in range(n-i):
+		print("*", /n)
+	print('')
+for i in range(n):
+	for j in range(1+i):
+		print("*", /n)
+	print('')
+-- ERROR:
+File "XXXX", line 6
+    print("*", /n)
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

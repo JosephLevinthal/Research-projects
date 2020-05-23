@@ -1,0 +1,125 @@
+== SUBMITION (2019-06-26 14:45:19) 
+-- CODE:
+from numpy import *
+matriz = array(eval(input("matriz: ")))
+linhas = shape(matriz)[0]
+colunas = shape(matriz)[1]
+matriz_nula = zeros((linhas, colunas), dtype=int)
+vetor_nulo = zeros(colunas, dtype=int)
+
+
+for i in range(colunas):
+	for j in range(colunas):
+		vetor_nulo[j] = matriz[j, i]
+
+	vetor_nulo = sorted(vetor_nulo, reverse=True)
+	
+	matriz_nula[:, i] = vetor_nulo
+	
+print(matriz_nula)
+-- EXECUTION TIME:
+0.871077
+-- TEST CASE 1:
+---- input:
+[[1,1,1,1],[2,2,2,2],[3,3,3,3],[4,4,4,4]]
+---- correct output:
+[[4 4 4 4]
+[3 3 3 3]
+[2 2 2 2]
+[1 1 1 1]]
+---- user output:
+[[4 4 4 4]
+ [3 3 3 3]
+ [2 2 2 2]
+ [1 1 1 1]]
+-- TEST CASE 2:
+---- input:
+[[4,1,1,3],[3,2,2,3],[2,3,3,3],[1,4,4,3]]
+---- correct output:
+[[4 4 4 3]
+[3 3 3 3]
+[2 2 2 3]
+[1 1 1 3]]
+---- user output:
+matriz: [[4 4 4 3]
+ [3 3 3 3]
+ [2 2 2 3]
+ [1 1 1 3]]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:45:35) 
+-- CODE:
+from numpy import *
+matriz = array(eval(input("matriz: ")))
+linhas = shape(matriz)[0]
+colunas = shape(matriz)[1]
+matriz_nula = zeros((linhas, colunas), dtype=int)
+vetor_nulo = zeros(colunas, dtype=int)
+
+
+for i in range(colunas):
+	for j in range(colunas):
+		vetor_nulo[j] = matriz[j, i]
+
+	vetor_nulo = sorted(vetor_nulo, reverse=True)
+	
+	matriz_nula[:, i] = vetor_nulo
+	
+print(matriz_nula)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 14:45:53) 
+-- CODE:
+from numpy import *
+matriz = array(eval(input("matriz: ")))
+linhas = shape(matriz)[0]
+colunas = shape(matriz)[1]
+matriz_nula = zeros((linhas, colunas), dtype=int)
+vetor_nulo = zeros(colunas, dtype=int)
+
+
+for i in range(colunas):
+	for j in range(colunas):
+		vetor_nulo[j] = matriz[j, i]
+
+	vetor_nulo = sorted(vetor_nulo, reverse=True)
+	
+	matriz_nula[:, i] = vetor_nulo
+	
+print(matriz_nula)
+-- EXECUTION TIME:
+1.10752
+-- TEST CASE 1:
+---- input:
+[[1,1,1,1],[2,2,2,2],[3,3,3,3],[4,4,4,4]]
+---- correct output:
+[[4 4 4 4]
+[3 3 3 3]
+[2 2 2 2]
+[1 1 1 1]]
+---- user output:
+[[4 4 4 4]
+ [3 3 3 3]
+ [2 2 2 2]
+ [1 1 1 1]]
+-- TEST CASE 2:
+---- input:
+[[4,1,1,3],[3,2,2,3],[2,3,3,3],[1,4,4,3]]
+---- correct output:
+[[4 4 4 3]
+[3 3 3 3]
+[2 2 2 3]
+[1 1 1 3]]
+---- user output:
+[[4 4 4 3]
+ [3 3 3 3]
+ [2 2 2 3]
+ [1 1 1 3]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,60 @@
+== TEST (2019-05-28 23:01:22) 
+-- CODE:
+n = int(input("digite o valor: "))
+a, b = 0, 1
+if(n > 2):
+	while (b < n):
+		print (b, end=" ")
+		a,b = b, a + b
+-- OUTPUT:
+1 1 2 3 5 8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 23:03:26) 
+-- CODE:
+n = int(input("digite o valor: "))
+a, b = 0, 1
+if(n > 2):
+	while (b < n):
+		print (b, end=" ")
+		a, b = b, a + b
+-- OUTPUT:
+1 1 2 3 5 8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-03 13:12:12) 
+-- CODE:
+n = int(input("Que termo deseja encontrar: "))
+ultimo=1
+penultimo=1
+
+
+if (n==1) or (n==2):
+    print("1")
+else:
+    count=3
+    while count <= n:
+        termo = ultimo + penultimo
+        penultimo = ultimo
+        ultimo = termo
+        count += 1
+    print(termo)
+-- OUTPUT:
+55
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-03 13:12:58) 
+-- CODE:
+n = int(input("Que termo deseja encontrar: "))
+ultimo=1
+penultimo=1
+
+if (n==1) or (n==2):
+    print("1")
+else:
+    for count in range(2,n):
+        termo = ultimo + penultimo
+        penultimo = ultimo
+        ultimo = termo
+        count += 1
+    print(termo)
+-- OUTPUT:
+55
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

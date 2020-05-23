@@ -1,0 +1,96 @@
+== TEST (2019-04-26 17:15:58) 
+-- CODE:
+E = float(input("digite hora extra: "))
+F = float(input("digite faltas: "))
+print(E "extras e", F, "de falta")
+
+H = E - (1 / 4) * F
+
+if (H > 400):
+	G = 500.00
+	print("R$ ", round(G, 2))
+elif (H <= 400):
+	G = 100.00
+	print("R$ ", round(G, 2))
+
+
+
+-- ERROR:
+File "XXXX", line 3
+    print(E "extras e", F, "de falta")
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-26 17:16:22) 
+-- CODE:
+E = float(input("digite hora extra: "))
+F = float(input("digite faltas: "))
+print(E, "extras e", F, "de falta")
+
+H = E - (1 / 4) * F
+
+if (H > 400):
+	G = 500.00
+	print("R$ ", round(G, 2))
+elif (H <= 400):
+	G = 100.00
+	print("R$ ", round(G, 2))
+
+
+
+-- OUTPUT:
+420.0 extras e 20.0 de falta
+R$  500.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-26 17:16:39) 
+-- CODE:
+E = float(input("digite hora extra: "))
+F = float(input("digite faltas: "))
+print(E, "extras e", F, "de falta")
+
+H = E - (1 / 4) * F
+
+if (H > 400):
+	G = 500.00
+	print("R$ ", round(G, 2))
+elif (H <= 400):
+	G = 100.00
+	print("R$ ", round(G, 2))
+
+
+
+-- EXECUTION TIME:
+0.253986
+-- TEST CASE 1:
+---- input:
+420
+20
+---- correct output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+---- user output:
+420.0 extras e 20.0 de falta
+R$  500.0
+-- TEST CASE 2:
+---- input:
+400.5
+100
+---- correct output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+---- user output:
+400.5 extras e 100.0 de falta
+R$  100.0
+-- TEST CASE 3:
+---- input:
+300
+44
+---- correct output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+---- user output:
+300.0 extras e 44.0 de falta
+R$  100.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

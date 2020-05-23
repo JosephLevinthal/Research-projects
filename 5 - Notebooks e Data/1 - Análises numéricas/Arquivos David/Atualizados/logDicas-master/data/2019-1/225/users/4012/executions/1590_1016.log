@@ -1,0 +1,80 @@
+== TEST (2019-03-21 20:44:18) 
+-- CODE:
+l1 = float(input("Digite lado 1: "))
+l2 = float(input("Digite lado 2: "))
+l3 = float(input("Digite lado 3: "))
+
+s = (l1 + l2 + l3) / 2
+
+from math import *
+
+A = sqrt(s(s - l1)(s - l2)(s - l3))
+
+print("%.5f" % A)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    A = sqrt(s(s - l1)(s - l2)(s - l3))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 20:45:10) 
+-- CODE:
+l1 = float(input("Digite lado 1: "))
+l2 = float(input("Digite lado 2: "))
+l3 = float(input("Digite lado 3: "))
+
+s = (l1 + l2 + l3) / 2
+
+from math import *
+
+A = sqrt(s * (s - l1) * (s - l2) * (s - l3))
+
+print("%.5f" % A)
+-- OUTPUT:
+69.41967
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-21 20:45:19) 
+-- CODE:
+l1 = float(input("Digite lado 1: "))
+l2 = float(input("Digite lado 2: "))
+l3 = float(input("Digite lado 3: "))
+
+s = (l1 + l2 + l3) / 2
+
+from math import *
+
+A = sqrt(s * (s - l1) * (s - l2) * (s - l3))
+
+print("%.5f" % A)
+-- EXECUTION TIME:
+0.219047
+-- TEST CASE 1:
+---- input:
+11.0
+19.5
+13.2
+---- correct output:
+69.41967
+---- user output:
+69.41967
+-- TEST CASE 2:
+---- input:
+30.0
+40.0
+50.0
+---- correct output:
+600.0
+---- user output:
+600.00000
+-- TEST CASE 3:
+---- input:
+33.0
+43.0
+55.0
+---- correct output:
+709.16654
+---- user output:
+709.16654
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

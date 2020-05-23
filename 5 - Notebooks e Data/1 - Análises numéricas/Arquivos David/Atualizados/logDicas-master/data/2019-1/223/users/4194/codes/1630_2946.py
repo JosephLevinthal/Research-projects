@@ -1,0 +1,8 @@
+ml=float(input("Media dos laboratorios: "))
+mt=float(input("Media dos trabalhos: "))
+mp=float(input("Media das provas: "))
+var1=round(ml/100, 2)
+var2=round(mt/100, 2)
+var3=round(mp/100, 2)
+notafinal=round((var1*25+var2*30+var3*45),2)
+print(notafinal)

@@ -1,0 +1,5 @@
+a = int(input("a:"))
+b = int(input("b:"))
+c = int(input("c:"))
+r = (a**2 + b**2 + c**2)/(a + b +c)
+print(round(r,7))

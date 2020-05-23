@@ -1,0 +1,130 @@
+== TEST (2019-07-01 16:51:45) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+M = ([[2, 1, 4],[1, 2, 0],[2, 3, 2]])
+VC = input(array("digite um vetor [X, Y, Z]: "))
+VC = VC.T
+QUANT = dot(inv(M),VC)
+print("estafilococo: ", round(QUANT[0], 1))
+print("salmonela: ", round(QUANT[1], 1))
+print("coli: ", round(QUANT[2], 1))
+if QUANT[0] == min(QUANT):
+	print("estafilococo")
+elif QUANT[0] == min(QUANT):
+	print("salmonela")
+else:
+	print("coli")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 16:52:05) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+M = ([[2, 1, 4],[1, 2, 0],[2, 3, 2]])
+VC = input(array("digite um vetor [X, Y, Z]: "))
+QUANT = dot(inv(M),VC)
+print("estafilococo: ", round(QUANT[0], 1))
+print("salmonela: ", round(QUANT[1], 1))
+print("coli: ", round(QUANT[2], 1))
+if QUANT[0] == min(QUANT):
+	print("estafilococo")
+elif QUANT[0] == min(QUANT):
+	print("salmonela")
+else:
+	print("coli")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 16:55:43) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+VC = array(eval(input("digite um vetor [X, Y, Z]: ")))
+M = ([[2, 1, 4],[1, 2, 0],[2, 3, 2]])
+QUANT = dot(inv(M),VC.T)
+print("estafilococo: ", round(QUANT[0], 1))
+print("salmonela: ", round(QUANT[1], 1))
+print("coli: ", round(QUANT[2], 1))
+if QUANT[0] == min(QUANT):
+	print("estafilococo")
+elif QUANT[1] == min(QUANT):
+	print("salmonela")
+else:
+	print("coli")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 16:55:57) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+VC = array(eval(input("digite um vetor [X, Y, Z]: ")))
+M = ([[2, 1, 4],[1, 2, 0],[2, 3, 2]])
+QUANT = dot(inv(M),VC.T)
+print("estafilococo: ", round(QUANT[0], 1))
+print("salmonela: ", round(QUANT[1], 1))
+print("coli: ", round(QUANT[2], 1))
+if QUANT[0] == min(QUANT):
+	print("estafilococo")
+elif QUANT[1] == min(QUANT):
+	print("salmonela")
+else:
+	print("coli")
+-- EXECUTION TIME:
+0.941645
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

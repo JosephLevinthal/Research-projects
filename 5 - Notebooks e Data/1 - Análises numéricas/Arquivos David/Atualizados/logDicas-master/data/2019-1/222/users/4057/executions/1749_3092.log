@@ -1,0 +1,353 @@
+== TEST (2019-05-15 19:10:51) 
+-- CODE:
+a = input("digite uma letra: ")
+
+V = 3
+E = 2
+D = 1
+soma = 0
+
+while (a.upper() != "X"):
+	soma = soma + a
+	a = input("digite uma letra: ")
+	print(soma)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    soma = soma + a
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 19:11:35) 
+-- CODE:
+a = input("digite uma letra: ")
+a = (V, E, D)
+V = 3
+E = 2
+D = 1
+soma = 0
+
+while (a.upper() != "X"):
+	soma = soma + a
+	a = input("digite uma letra: ")
+	print(soma)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    a = (V, E, D)
+NameError: name 'V' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 19:12:15) 
+-- CODE:
+a.upper() = input("digite uma letra: ")
+V = 3
+E = 2
+D = 1
+soma = 0
+
+while (a.upper() != "X"):
+	soma = soma + a
+	a = input("digite uma letra: ")
+	print(soma)
+
+
+-- ERROR:
+File "XXXX", line 1
+    a.upper() = input()
+    ^
+SyntaxError: can't assign to function call
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 19:13:34) 
+-- CODE:
+a = input("digite uma letra: ")
+soma = 0
+
+while (a.upper() != "X"):
+	a = a.upper()
+	V = 3
+	E = 2
+	D = 1
+	soma = soma + a
+	a = input("digite uma letra: ")
+	print(soma)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    soma = soma + a
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 19:18:44) 
+-- CODE:
+a = input("digite uma letra: ")
+somaV = 0
+somaE = 0
+somaD = 0
+while (a.upper() != "X"):
+	if a.upper() == "V":
+		somaV = somaV + 3
+	elif(a.upper() == "E"):
+		somaE = somaE + 2
+	elif (a.upper() == "D"):
+		somaD = somaD + 1
+	a = input("digite uma letra: ")
+	soma = somaV + somaE + somaD
+print(soma)
+
+
+-- OUTPUT:
+13
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 19:27:23) 
+-- CODE:
+a = input("digite uma letra: ")
+somaV = 0
+somV = 0
+somaE = 0
+somE = 0
+somaD = 0
+somD = 0
+while (a.upper() != "X"):
+	if a.upper() == "V":
+		somaV = somaV + 3
+		somV = somV + 1
+	elif(a.upper() == "E"):
+		somaE = somaE + 2
+		somE = somE + 1
+	elif (a.upper() == "D"):
+		somaD = somaD + 1
+		somD = somD + 1
+	a = input("digite uma letra: ")
+	soma = somaV + somaE + somaD
+	s = somV + somE + somD
+a = ((s*3)/100)*soma
+print(round(a,2))
+
+
+-- OUTPUT:
+2.73
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 19:28:45) 
+-- CODE:
+a = input("digite uma letra: ")
+somaV = 0
+somV = 0
+somaE = 0
+somE = 0
+somaD = 0
+somD = 0
+while (a.upper() != "X"):
+	if a.upper() == "V":
+		somaV = somaV + 3
+		somV = somV + 1
+	elif(a.upper() == "E"):
+		somaE = somaE + 2
+		somE = somE + 1
+	elif (a.upper() == "D"):
+		somaD = somaD + 1
+		somD = somD + 1
+	a = input("digite uma letra: ")
+	soma = somaV + somaE + somaD
+	s = somV + somE + somD
+a = ((s*3)*(s/100))*soma
+print(round(a,2))
+
+
+-- OUTPUT:
+19.11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 19:30:20) 
+-- CODE:
+a = input("digite uma letra: ")
+somaV = 0
+somV = 0
+somaE = 0
+somE = 0
+somaD = 0
+somD = 0
+while (a.upper() != "X"):
+	if a.upper() == "V":
+		somaV = somaV + 3
+		somV = somV + 1
+	elif(a.upper() == "E"):
+		somaE = somaE + 2
+		somE = somE + 1
+	elif (a.upper() == "D"):
+		somaD = somaD + 1
+		somD = somD + 1
+	a = input("digite uma letra: ")
+	soma = somaV + somaE + somaD
+	s = somV + somE + somD
+a = (s*3)*((s/100)*soma)
+print(round(a,2))
+
+
+-- OUTPUT:
+19.11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 19:34:06) 
+-- CODE:
+a = input("digite uma letra: ")
+somaV = 0
+somV = 0
+somaE = 0
+somE = 0
+somaD = 0
+somD = 0
+while (a.upper() != "X"):
+	if a.upper() == "V":
+		somaV = somaV + 3
+		somV = somV + 1
+	elif(a.upper() == "E"):
+		somaE = somaE + 2
+		somE = somE + 1
+	elif (a.upper() == "D"):
+		somaD = somaD + 1
+		somD = somD + 1
+	a = input("digite uma letra: ")
+	soma = somaV + somaE + somaD
+	s = somV + somE + somD
+a = ((s*100)/soma)
+print(round(a,2))
+
+
+-- OUTPUT:
+53.85
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 19:34:12) 
+-- CODE:
+a = input("digite uma letra: ")
+somaV = 0
+somV = 0
+somaE = 0
+somE = 0
+somaD = 0
+somD = 0
+while (a.upper() != "X"):
+	if a.upper() == "V":
+		somaV = somaV + 3
+		somV = somV + 1
+	elif(a.upper() == "E"):
+		somaE = somaE + 2
+		somE = somE + 1
+	elif (a.upper() == "D"):
+		somaD = somaD + 1
+		somD = somD + 1
+	a = input("digite uma letra: ")
+	soma = somaV + somaE + somaD
+	s = somV + somE + somD
+a = ((s*100)/soma)
+print(round(a,2))
+
+
+-- OUTPUT:
+53.85
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 19:35:19) 
+-- CODE:
+a = input("digite uma letra: ")
+somaV = 0
+somV = 0
+somaE = 0
+somE = 0
+somaD = 0
+somD = 0
+while (a.upper() != "X"):
+	if a.upper() == "V":
+		somaV = somaV + 3
+		somV = somV + 1
+	elif(a.upper() == "E"):
+		somaE = somaE + 2
+		somE = somE + 1
+	elif (a.upper() == "D"):
+		somaD = somaD + 1
+		somD = somD + 1
+	a = input("digite uma letra: ")
+	soma = somaV + somaE + somaD
+	s = somV + somE + somD
+a =(100*soma)/(s*3)
+print(round(a,2))
+
+
+-- OUTPUT:
+61.9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 19:35:37) 
+-- CODE:
+a = input("digite uma letra: ")
+somaV = 0
+somV = 0
+somaE = 0
+somE = 0
+somaD = 0
+somD = 0
+while (a.upper() != "X"):
+	if a.upper() == "V":
+		somaV = somaV + 3
+		somV = somV + 1
+	elif(a.upper() == "E"):
+		somaE = somaE + 2
+		somE = somE + 1
+	elif (a.upper() == "D"):
+		somaD = somaD + 1
+		somD = somD + 1
+	a = input("digite uma letra: ")
+	soma = somaV + somaE + somaD
+	s = somV + somE + somD
+a =(100*soma)/(s*3)
+print(round(a,2))
+
+
+-- EXECUTION TIME:
+0.210999
+-- TEST CASE 1:
+---- input:
+v
+V
+e
+E
+D
+D
+a
+b
+c
+d
+X
+---- correct output:
+61.9
+---- user output:
+61.9
+-- TEST CASE 2:
+---- input:
+V
+E
+D
+C
+B
+A
+X
+---- correct output:
+66.67
+---- user output:
+66.67
+-- TEST CASE 3:
+---- input:
+A
+A
+A
+v
+v
+V
+V
+X
+---- correct output:
+100.0
+---- user output:
+100.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

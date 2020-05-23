@@ -1,0 +1,213 @@
+== TEST (2019-05-16 11:35:45) 
+-- CODE:
+a = str(input('valor do jogo'))
+b = 0
+while a.lower() != x:
+	if a.lower() == 'v':
+		b += 3
+	elif a.lower() == 'e':
+		b += 1
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    while a.lower() != x:
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 11:36:00) 
+-- CODE:
+a = str(input('valor do jogo'))
+b = 0
+while a.lower() != 'x':
+	if a.lower() == 'v':
+		b += 3
+	elif a.lower() == 'e':
+		b += 1
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    while a.lower() != x:
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 11:37:01) 
+-- CODE:
+a = str(input('valor do jogo'))
+b = 0
+while a.lower() != 'x':
+	a = str (input('valor do jogo'))
+	if a.lower() == 'v':
+		b += 3
+	elif a.lower() == 'e':
+		b += 1
+print(b)
+-- OUTPUT:
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 11:37:57) 
+-- CODE:
+a = str(input('valor do jogo'))
+b = 0
+while a.lower() != 'x':
+	a = str (input('valor do jogo'))
+	if a.lower() == 'v':
+		b += 3
+	elif a.lower() == 'e':
+		b += 1
+print(b)
+-- OUTPUT:
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 11:37:59) 
+-- CODE:
+a = str(input('valor do jogo'))
+b = 0
+while a.lower() != 'x':
+	a = str (input('valor do jogo'))
+	if a.lower() == 'v':
+		b += 3
+	elif a.lower() == 'e':
+		b += 1
+print(b)
+-- OUTPUT:
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 11:40:22) 
+-- CODE:
+a = str(input('valor do jogo'))
+b = 0
+c = 0
+while a.lower() != 'x':
+	a = str (input('valor do jogo'))
+	if a.lower() == 'v':
+		b += 3
+	elif a.lower() == 'e':
+		c += 1
+print(b)
+print(c)
+-- OUTPUT:
+3
+2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 11:41:40) 
+-- CODE:
+a = str(input('valor do jogo'))
+b = 0
+c = 0
+while a.lower() != 'x':
+	a = str (input('valor do jogo'))
+	if a.lower() == 'v':
+		b += 3
+	elif a.lower() == 'e':
+		c += 1
+print(b)
+print(c)
+-- OUTPUT:
+3
+2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 11:42:01) 
+-- CODE:
+a = 0
+b = 0
+c = 0
+while a.lower() != 'x':
+	a = str (input('valor do jogo'))
+	if a.lower() == 'v':
+		b += 3
+	elif a.lower() == 'e':
+		c += 1
+print(b)
+print(c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    while a.lower() != 'x':
+AttributeError: 'int' object has no attribute 'lower'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 11:42:16) 
+-- CODE:
+a = 'a'
+b = 0
+c = 0
+while a.lower() != 'x':
+	a = str (input('valor do jogo'))
+	if a.lower() == 'v':
+		b += 3
+	elif a.lower() == 'e':
+		c += 1
+print(b)
+print(c)
+-- OUTPUT:
+6
+2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-16 11:42:26) 
+-- CODE:
+a = 'a'
+b = 0
+c = 0
+while a.lower() != 'x':
+	a = str (input('valor do jogo'))
+	if a.lower() == 'v':
+		b += 3
+	elif a.lower() == 'e':
+		c += 1
+print(b)
+print(c)
+-- EXECUTION TIME:
+0.145534
+-- TEST CASE 1:
+---- input:
+v
+V
+e
+E
+D
+D
+a
+b
+c
+d
+X
+---- correct output:
+6
+2
+---- user output:
+6
+2
+-- TEST CASE 2:
+---- input:
+V
+E
+D
+C
+B
+A
+C
+X
+---- correct output:
+3
+1
+---- user output:
+3
+1
+-- TEST CASE 3:
+---- input:
+A
+A
+A
+v
+v
+V
+V
+X
+---- correct output:
+12
+0
+---- user output:
+12
+0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

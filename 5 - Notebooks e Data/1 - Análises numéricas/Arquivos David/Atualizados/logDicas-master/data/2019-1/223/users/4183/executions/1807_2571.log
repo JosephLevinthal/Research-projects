@@ -1,0 +1,77 @@
+== TEST (2019-06-13 00:04:35) 
+-- CODE:
+from numpy import *
+a = input("SAY SAY SAY: ")
+for i in range(len(a)):
+	if (a[i] != "A"):
+		a[i] = a[i] + (a[i] + 1)
+print(a[i])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 00:06:56) 
+-- CODE:
+from numpy import *
+a = input("SAY SAY SAY: ")
+for i in range(len(a)):
+	if (a[i] != "A"):
+		a[i] = a[i] + a[i+1]
+print(a[i])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 00:07:26) 
+-- CODE:
+from numpy import *
+a = input("SAY SAY SAY: ")
+for i in range(len(a)):
+	if (a[i] != "A"):
+		a[i] = a[i] , a[i+1]
+print(a[i])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 01:20:31) 
+-- CODE:
+from numpy import *
+a = input("SAY SAY SAY: ")
+b = ""
+for i in range(len(a)):
+	if (a[i].upper() != "A"):
+		b = b + a[i] 
+print(b)
+-- EXECUTION TIME:
+1.12592
+-- TEST CASE 1:
+---- input:
+Instituto_de_Computacao-ICOMP-UFAM
+---- correct output:
+Instituto_de_Computco-ICOMP-UFM
+---- user output:
+Instituto_de_Computco-ICOMP-UFM
+-- TEST CASE 2:
+---- input:
+a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-aa-a-a-a-a-a-a-a-a-a-a
+---- correct output:
+-----------------------------
+---- user output:
+-----------------------------
+-- TEST CASE 3:
+---- input:
+.aaaaaaaaaaaaaaaaaaaaa.bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb.aaaaaaaaaaaaaaaaa.
+---- correct output:
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb..
+---- user output:
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb..
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

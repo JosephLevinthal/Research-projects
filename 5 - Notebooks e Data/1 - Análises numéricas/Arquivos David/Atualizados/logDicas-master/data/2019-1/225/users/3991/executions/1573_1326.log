@@ -1,0 +1,698 @@
+== TEST (2019-03-11 15:03:24) 
+-- CODE:
+print(40 + 35 = 75)
+-- ERROR:
+File "XXXX", line 1
+    print(40 + 35 = 75)
+         ^
+SyntaxError: keyword can't be an expression
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:03:38) 
+-- CODE:
+print(75)
+-- OUTPUT:
+75
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:03:42) 
+-- CODE:
+print(75)
+-- OUTPUT:
+75
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:04:27) 
+-- CODE:
+print(40+35=75)
+-- ERROR:
+File "XXXX", line 1
+    print(40+35=75)
+         ^
+SyntaxError: keyword can't be an expression
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:06:16) 
+-- CODE:
+print(r$40+r$35=r$75)
+-- ERROR:
+File "XXXX", line 1
+    print(r$40+r$35=r$75)
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:16:44) 
+-- CODE:
+if ('' x == 40 '')
+for ('' y == 35'')
+print( x + y = 75)
+-- ERROR:
+File "XXXX", line 1
+    if ('' x == 40 '')
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:17:26) 
+-- CODE:
+if ('' x == 40 '')
+for ('' y == 35'')
+print( x ++ y == 75)
+-- ERROR:
+File "XXXX", line 1
+    if ('' x == 40 '')
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:17:47) 
+-- CODE:
+if ('' x == 40 ''):
+for ('' y == 35''):
+print( x ++ y == 75)
+-- ERROR:
+File "XXXX", line 1
+    if ('' x == 40 ''):
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:18:30) 
+-- CODE:
+if ( x == 40 ):
+for ( y == 35 ):
+print( x + y = 75)
+-- ERROR:
+File "XXXX", line 2
+    for ( y == 35 ):
+      ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:22:35) 
+-- CODE:
+print( 40 + 35 == 75)
+
+-- OUTPUT:
+True
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-11 15:22:45) 
+-- CODE:
+print( 40 + 35 == 75)
+
+-- EXECUTION TIME:
+0.145083
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+75
+---- user output:
+True
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:22:58) 
+-- CODE:
+print( 40 ++ 35 == 75)
+
+-- OUTPUT:
+True
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-11 15:23:01) 
+-- CODE:
+print( 40 ++ 35 == 75)
+
+-- EXECUTION TIME:
+0.176007
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+75
+---- user output:
+True
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:23:22) 
+-- CODE:
+print(40 ++ 35== 75)
+
+-- OUTPUT:
+True
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:23:37) 
+-- CODE:
+print(40++35==75)
+
+-- OUTPUT:
+True
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:23:47) 
+-- CODE:
+print( 40 ++ 35 == 75)
+
+-- OUTPUT:
+True
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:24:27) 
+-- CODE:
+print( 40 ++ 35 == ''75'')
+
+-- ERROR:
+File "XXXX", line 1
+    print( 40 ++ 35 == ''75'')
+                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:24:54) 
+-- CODE:
+print( 40 ++ 35 == ''75''):
+
+-- ERROR:
+File "XXXX", line 1
+    print( 40 ++ 35 == ''75''):
+                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:25:09) 
+-- CODE:
+print( 40 ++ 35 == '75')
+
+-- OUTPUT:
+False
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:26:59) 
+-- CODE:
+print( 40 + 35 == 75):
+
+-- ERROR:
+File "XXXX", line 1
+    print( 40 + 35 == 75):
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:27:20) 
+-- CODE:
+print('' 40 + 35 == 75''):
+
+-- ERROR:
+File "XXXX", line 1
+    print('' 40 + 35 == 75''):
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:27:32) 
+-- CODE:
+print(40 + 35 == 75)
+
+-- OUTPUT:
+True
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:27:38) 
+-- CODE:
+print(40 + 35 = 75)
+
+-- ERROR:
+File "XXXX", line 1
+    print(40 + 35 = 75)
+         ^
+SyntaxError: keyword can't be an expression
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:29:09) 
+-- CODE:
+print(40 + 35 = x)
+print( x == 75 )
+-- ERROR:
+File "XXXX", line 1
+    print(40 + 35 = x)
+         ^
+SyntaxError: keyword can't be an expression
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:29:30) 
+-- CODE:
+print(40 ++ 35 == x )
+print( x == 75 )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    print(40 ++ 35 == x )
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:31:17) 
+-- CODE:
+print(40 + 35 = x)
+print( x == 75)
+-- ERROR:
+File "XXXX", line 1
+    print(40 + 35 = x)
+         ^
+SyntaxError: keyword can't be an expression
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:31:25) 
+-- CODE:
+print(40 + 35 = x)
+print( x == 75 )
+-- ERROR:
+File "XXXX", line 1
+    print(40 + 35 = x)
+         ^
+SyntaxError: keyword can't be an expression
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:31:51) 
+-- CODE:
+print(40 + 35 = x)
+print('' x == 75 '')
+-- ERROR:
+File "XXXX", line 2
+    print('' x == 75 '')
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:33:15) 
+-- CODE:
+print(40 + 35 = x)
+print(x == 75)
+-- ERROR:
+File "XXXX", line 1
+    print(40 + 35 = x)
+         ^
+SyntaxError: keyword can't be an expression
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:34:20) 
+-- CODE:
+	if( 40 + 35 = x):
+		print( x == 75):
+-- ERROR:
+File "XXXX", line 1
+    if( 40 + 35 = x):
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:34:36) 
+-- CODE:
+if( 40 + 35 = x):
+print( x == 75):
+-- ERROR:
+File "XXXX", line 1
+    if( 40 + 35 = x):
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:35:30) 
+-- CODE:
+if ( 40 + 35 = x )
+print( x == 75 )
+-- ERROR:
+File "XXXX", line 1
+    if ( 40 + 35 = x )
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:36:03) 
+-- CODE:
+if ( 40 ++ 35 == x )
+print( x == ''75'' )
+-- ERROR:
+File "XXXX", line 1
+    if ( 40 ++ 35 == x )
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:38:36) 
+-- CODE:
+print(R$40 ++ R$35 == 75 ) 
+-- ERROR:
+File "XXXX", line 1
+    print(R$40 ++ R$35 == 75 ) 
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:38:51) 
+-- CODE:
+print(R40 ++ R35 == 75 ) 
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    print(R40 ++ R35 == 75 ) 
+NameError: name 'R40' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:39:10) 
+-- CODE:
+print(40 ++ 35 == 75 ) 
+-- OUTPUT:
+True
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-11 15:39:17) 
+-- CODE:
+print(40 ++ 35 == 75 ) 
+-- EXECUTION TIME:
+0.265911
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+75
+---- user output:
+True
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:39:44) 
+-- CODE:
+print(40 ++ 35 == 75 ) 
+print( 75 )
+-- OUTPUT:
+True
+75
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-11 15:39:51) 
+-- CODE:
+print(40 ++ 35 == 75 ) 
+print( 75 )
+-- EXECUTION TIME:
+0.125815
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+75
+---- user output:
+True
+75
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:40:15) 
+-- CODE:
+print(40 ++ 35 == 75 ) 
+print(75)
+-- OUTPUT:
+True
+75
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-11 15:40:22) 
+-- CODE:
+print(40 ++ 35 == 75 ) 
+print(75)
+-- EXECUTION TIME:
+0.145477
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+75
+---- user output:
+True
+75
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:40:35) 
+-- CODE:
+print(40 ++ 35 ==75) 
+print(75)
+-- OUTPUT:
+True
+75
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:42:40) 
+-- CODE:
+if (40 ++ 35 == 75)
+print(75)
+-- ERROR:
+File "XXXX", line 1
+    if (40 ++ 35 == 75)
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:43:23) 
+-- CODE:
+if (40 ++ 35 == 75)
+print(''75'')
+-- ERROR:
+File "XXXX", line 1
+    if (40 ++ 35 == 75)
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:44:21) 
+-- CODE:
+print(40 ++ 35 == 75):
+	print(75)
+	
+-- ERROR:
+File "XXXX", line 1
+    print(40 ++ 35 == 75):
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:44:30) 
+-- CODE:
+print(40 ++ 35 == 75)
+	print(75)
+	
+-- ERROR:
+File "XXXX", line 2
+    print(75)
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:44:41) 
+-- CODE:
+print(40 ++ 35 == 75) 
+print(75)
+	
+-- OUTPUT:
+True
+75
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:45:22) 
+-- CODE:
+print($40 ++ $35 == $75) 
+print($75)
+	
+-- ERROR:
+File "XXXX", line 1
+    print($40 ++ $35 == $75) 
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:47:27) 
+-- CODE:
+print(40 ++ 35 == 75) 
+print(75)
+	
+-- OUTPUT:
+True
+75
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-11 15:49:02) 
+-- CODE:
+print(40 ++ 35 == 75) 
+print(75)
+	
+-- EXECUTION TIME:
+0.126639
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+75
+---- user output:
+True
+75
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:51:00) 
+-- CODE:
+print(40)
+print(35)	
+print( 40 ++ 35 == 75)
+print(75)
+	
+-- OUTPUT:
+40
+35
+True
+75
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:51:06) 
+-- CODE:
+print(40)
+print(35)	
+print( 40 ++ 35 == 75)
+print(75)
+	
+-- OUTPUT:
+40
+35
+True
+75
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-11 15:51:12) 
+-- CODE:
+print(40)
+print(35)	
+print( 40 ++ 35 == 75)
+print(75)
+	
+-- EXECUTION TIME:
+0.147657
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+75
+---- user output:
+40
+35
+True
+75
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-11 15:51:37) 
+-- CODE:
+print(40)
+print(35)	
+print( 40 ++ 35 == 75)
+print(''75'')
+	
+-- ERROR:
+File "XXXX", line 4
+    print(''75'')
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 15:56:32) 
+-- CODE:
+ var1 = 40
+    print( var1: , var1) 
+   var2 = 35
+	print( var2: , var2)
+	var3 = var1 + var2 
+	print( var3: , var3)
+
+-- ERROR:
+File "XXXX", line 1
+    var1 = 40
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 15:57:07) 
+-- CODE:
+ var1 = 40
+   print( var1: , var1) 
+   var2 = 35
+	print( var2: , var2)
+	var3 = var1 + var2 
+	print( var3: , var3)
+
+-- ERROR:
+File "XXXX", line 1
+    var1 = 40
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 15:57:49) 
+-- CODE:
+ var1 = 40
+print( var1: , var1) 
+ var2 = 35
+print( var2: , var2)
+ var3 = var1 + var2 
+print( var3: , var3)
+
+-- ERROR:
+File "XXXX", line 1
+    var1 = 40
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 15:58:16) 
+-- CODE:
+var1 = 40
+
+-- ERROR:
+File "XXXX", line 1
+    var1 = 40
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 15:59:27) 
+-- CODE:
+ var1 = 40
+	print(''var1: , var1'')
+
+-- ERROR:
+File "XXXX", line 1
+    var1 = 40
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 15:59:45) 
+-- CODE:
+ var1 = 40
+print(''var1: , var1'')
+
+-- ERROR:
+File "XXXX", line 1
+    var1 = 40
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 15:59:55) 
+-- CODE:
+var1 = 40
+print(''var1: , var1'')
+
+-- ERROR:
+File "XXXX", line 2
+    print(''var1: , var1'')
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 16:00:36) 
+-- CODE:
+var1 = 40
+print(var1: , var1):
+
+-- ERROR:
+File "XXXX", line 2
+    print(var1: , var1):
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 16:00:57) 
+-- CODE:
+var1 = 40
+print(var1: , var1)
+
+-- ERROR:
+File "XXXX", line 2
+    print(var1: , var1)
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 16:16:42) 
+-- CODE:
+var1 = 40
+var2 = 35
+print(var1 + var2)
+
+-- OUTPUT:
+75
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-12 16:16:54) 
+-- CODE:
+var1 = 40
+var2 = 35
+print(var1 + var2)
+
+-- EXECUTION TIME:
+0.272001
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+75
+---- user output:
+75
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

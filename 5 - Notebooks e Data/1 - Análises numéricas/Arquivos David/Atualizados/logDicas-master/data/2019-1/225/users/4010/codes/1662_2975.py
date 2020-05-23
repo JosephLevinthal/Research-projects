@@ -1,0 +1,8 @@
+n = int(input("Qtd suco"))
+n2 = int(input("Qtd salgado"))
+n3 = float(input("Valor disponivel"))
+n4 = float(input("Valor total do lanche"))
+print(round(n,2))
+print(round(n2,3))
+print(round(n3,20))
+print(round(n4,16.50))

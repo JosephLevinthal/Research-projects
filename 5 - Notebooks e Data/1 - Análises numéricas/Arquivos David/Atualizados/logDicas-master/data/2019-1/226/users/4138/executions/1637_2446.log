@@ -1,0 +1,379 @@
+== TEST (2019-04-06 22:56:44) 
+-- CODE:
+s = int(float("insira a senha: "))
+
+a = s // 1.000.000
+b = s //100.000 - (a * 10)
+c = s // 10.000 - (a *100) + (b * 10)
+print(a)
+print(b)
+print(c)
+-- ERROR:
+File "XXXX", line 3
+    a = s // 1.000.000
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:57:35) 
+-- CODE:
+s = int(float("insira a senha: "))
+
+a = s // 100.000
+b = s //100.000 - (a * 10)
+c = s // 10.000 - (a *100) + (b * 10)
+print(a)
+print(b)
+print(c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    s = int(float("insira a senha: "))
+ValueError: could not convert string to float: 'insira a senha: '
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:57:52) 
+-- CODE:
+s = int(float(" insira a senha: "))
+
+a = s // 100.000
+b = s //100.000 - (a * 10)
+c = s // 10.000 - (a *100) + (b * 10)
+print(a)
+print(b)
+print(c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    s = int(float(" insira a senha: "))
+ValueError: could not convert string to float: ' insira a senha: '
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:58:09) 
+-- CODE:
+s = int(input(" insira a senha: "))
+
+a = s // 100.000
+b = s //100.000 - (a * 10)
+c = s // 10.000 - (a *100) + (b * 10)
+print(a)
+print(b)
+print(c)
+-- OUTPUT:
+876.0
+-7884.0
+-157679.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:58:40) 
+-- CODE:
+s = int(input(" insira a senha: "))
+
+a = s // 1.000.000
+b = s //100.000 - (a * 10)
+c = s // 10.000 - (a *100) + (b * 10)
+print(a)
+print(b)
+print(c)
+-- ERROR:
+File "XXXX", line 3
+    a = s // 1.000.000
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:59:02) 
+-- CODE:
+s = int(input(" insira a senha: "))
+
+a = s // 1.000.000
+b = s //100.000 - (a * 10)
+c = s // 10.000 - (a *100) + (b * 10)
+print(a)
+print(b)
+print(c)
+-- ERROR:
+File "XXXX", line 3
+    a = s // 1.000.000
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 22:59:57) 
+-- CODE:
+s = int(input(" insira a senha: "))
+
+a = s // 1.000000
+b = s //100.000 - (a * 10)
+c = s // 10.000 - (a *100) + (b * 10)
+print(a)
+print(b)
+print(c)
+-- OUTPUT:
+87612.0
+-875244.0
+-17504879.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 23:00:41) 
+-- CODE:
+s = int(input(" insira a senha: "))
+
+a = s // 1.0000000
+b = s //100.000 - (a * 10)
+c = s // 10.000 - (a *100) + (b * 10)
+print(a)
+print(b)
+print(c)
+-- OUTPUT:
+87612.0
+-875244.0
+-17504879.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 23:01:15) 
+-- CODE:
+s = int(input(" insira a senha: "))
+
+a = s // 100000
+b = s //100.000 - (a * 10)
+c = s // 10.000 - (a *100) + (b * 10)
+print(a)
+
+-- OUTPUT:
+87612.0
+-875244.0
+-17504879.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 23:01:41) 
+-- CODE:
+s = int(input(" insira a senha: "))
+
+a = s // 100000
+b = s //10000 - (a * 10)
+c = s // 10.000 - (a *100) + (b * 10)
+print(a)
+print(b)
+
+-- OUTPUT:
+0
+8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 23:04:17) 
+-- CODE:
+s = int(input(" insira a senha: "))
+
+a = s // 100000
+b = s //10000 - (a * 10)
+c = s // 1000 - (a * 100) + (b * 10)
+d = s // 100 - (a * 1000) + (b *100) + (c * 10)
+e = s // 10 - (a * 10000) + (b *1000) + (c * 100) + (d * 10)
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+
+-- OUTPUT:
+0
+8
+167
+3346
+66921
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 23:04:57) 
+-- CODE:
+s = int(input(" insira a senha: "))
+
+a = s // 100000
+b = s //10000 - (a * 10)
+c = s // 1000 - ((a * 100) + (b * 10))
+d = s // 100 - ((a * 1000) + (b *100) + (c * 10))
+e = s // 10 - ((a * 10000) + (b *1000) + (c * 100) + (d * 10))
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+
+-- OUTPUT:
+0
+8
+7
+6
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 23:05:39) 
+-- CODE:
+s = int(input(" insira a senha: "))
+
+a = s // 100000
+b = s //10000 - (a * 10)
+c = s // 1000 - ((a * 100) + (b * 10))
+d = s // 100 - ((a * 1000) + (b *100) + (c * 10))
+e = s // 10 - ((a * 10000) + (b *1000) + (c * 100) + (d * 10))
+f = s % a
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    f = s % a
+ZeroDivisionError: integer division or modulo by zero
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 23:07:00) 
+-- CODE:
+s = int(input(" insira a senha: "))
+
+a = s // 100000
+b = s //10000 - (a * 10)
+c = s // 1000 - ((a * 100) + (b * 10))
+d = s // 100 - ((a * 1000) + (b *100) + (c * 10))
+e = s // 10 - ((a * 10000) + (b *1000) + (c * 100) + (d * 10))
+f = s % a
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    f = s % a
+ZeroDivisionError: integer division or modulo by zero
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 23:10:48) 
+-- CODE:
+s = int(input(" insira a senha: "))
+
+a = s // 100000
+b = s //10000 - (a * 10)
+c = s // 1000 - ((a * 100) + (b * 10))
+d = s // 100 - ((a * 1000) + (b *100) + (c * 10))
+e = s // 10 - ((a * 10000) + (b *1000) + (c * 100) + (d * 10))
+f = s % 10
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+
+-- OUTPUT:
+0
+8
+7
+6
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 23:11:15) 
+-- CODE:
+s = int(input(" insira a senha: "))
+
+a = s // 100000
+b = s //10000 - (a * 10)
+c = s // 1000 - ((a * 100) + (b * 10))
+d = s // 100 - ((a * 1000) + (b *100) + (c * 10))
+e = s // 10 - ((a * 10000) + (b *1000) + (c * 100) + (d * 10))
+f = s % 10
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+print(f)
+
+-- OUTPUT:
+0
+8
+7
+6
+1
+2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 23:11:30) 
+-- CODE:
+s = int(input(" insira a senha: "))
+
+a = s // 100000
+b = s //10000 - (a * 10)
+c = s // 1000 - ((a * 100) + (b * 10))
+d = s // 100 - ((a * 1000) + (b *100) + (c * 10))
+e = s // 10 - ((a * 10000) + (b *1000) + (c * 100) + (d * 10))
+f = s % a
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+print(f)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    f = s % a
+ZeroDivisionError: integer division or modulo by zero
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 23:18:39) 
+-- CODE:
+s = int(input(" insira a senha: "))
+
+a = s // 100000
+b = s //10000 - (a * 10)
+c = s // 1000 - ((a * 100) + (b * 10))
+d = s // 100 - ((a * 1000) + (b *100) + (c * 10))
+e = s // 10 - ((a * 10000) + (b *1000) + (c * 100) + (d * 10))
+f = s % 10
+
+sp = b + d + f
+si = a + c + e
+if (sp % si != 0):
+	mensagem = "senha invalida"
+else:
+	mensagem = "acesso liberado"
+
+print(mensagem)
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-06 23:18:51) 
+-- CODE:
+s = int(input(" insira a senha: "))
+
+a = s // 100000
+b = s //10000 - (a * 10)
+c = s // 1000 - ((a * 100) + (b * 10))
+d = s // 100 - ((a * 1000) + (b *100) + (c * 10))
+e = s // 10 - ((a * 10000) + (b *1000) + (c * 100) + (d * 10))
+f = s % 10
+
+sp = b + d + f
+si = a + c + e
+if (sp % si != 0):
+	mensagem = "senha invalida"
+else:
+	mensagem = "acesso liberado"
+
+print(mensagem)
+-- EXECUTION TIME:
+0.195281
+-- TEST CASE 1:
+---- input:
+087612
+---- correct output:
+acesso liberado
+---- user output:
+acesso liberado
+-- TEST CASE 2:
+---- input:
+760834
+---- correct output:
+senha invalida
+---- user output:
+senha invalida
+-- TEST CASE 3:
+---- input:
+122967
+---- correct output:
+acesso liberado
+---- user output:
+acesso liberado
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

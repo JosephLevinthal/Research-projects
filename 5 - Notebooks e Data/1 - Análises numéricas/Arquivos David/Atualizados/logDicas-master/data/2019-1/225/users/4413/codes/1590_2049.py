@@ -1,0 +1,6 @@
+x = int(input("numero: "))
+y = int(input("numero: "))
+print(x)
+print(y)
+print(x // y)
+print(x % y)

@@ -1,0 +1,336 @@
+== TEST (2019-07-02 11:04:13) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+v = array(eval(input("Insira o vetor: ")))
+
+m = ([[50,60,40],
+		[30,40,20],
+		[10,15,8]])
+
+r = dot(inv(m),v.T)
+print(r)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:06:07) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+v = array(eval(input("Insira o vetor: ")))
+
+m = ([[50,60,40],
+		[30,40,20],
+		[10,15,8]])
+
+r = dot(inv(m),v.T)
+
+print("regular:",round(r[0],0))
+print("ortopedico:",round(r[1]),0)
+print("infantil:",round(r[2],0))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:06:36) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+v = array(eval(input("Insira o vetor: ")))
+
+m = ([[50,60,40],
+		[30,40,20],
+		[10,15,8]])
+
+r = dot(inv(m),v.T)
+
+print("regular:",round(r[0],0))
+print("ortopedico:",round(r[1]),0)
+print("infantil:",round(r[2]0),0)
+-- ERROR:
+File "XXXX", line 14
+    print("infantil:",round(r[2]0),0)
+                                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:06:43) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+v = array(eval(input("Insira o vetor: ")))
+
+m = ([[50,60,40],
+		[30,40,20],
+		[10,15,8]])
+
+r = dot(inv(m),v.T)
+
+print("regular:",round(r[0],0))
+print("ortopedico:",round(r[1]),0)
+print("infantil:",round(r[2]),0)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:09:42) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+v = array(eval(input("Insira o vetor: ")))
+
+m = ([[50,60,40],
+		[30,40,20],
+		[10,15,8]])
+
+r = dot(inv(m),v.T)
+
+print("regular:",round(r[0],0))
+print("ortopedico:",round(r[1]),0)
+print("infantil:",round(r[2]),0)
+
+mi = min(r)
+c = 0
+for i in range(size(r)):
+	if(r[i] == mi):
+		c = i
+if(c == 0):
+	print("regular")
+elif(c == 1):
+	print("ortopedico")
+elif(c == 2):
+	print("Infantil")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:10:18) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+v = array(eval(input("Insira o vetor: ")))
+
+m = ([[50,60,40],
+		[30,40,20],
+		[10,15,8]])
+
+r = dot(inv(m),v.T)
+
+print("regular:",round(r[0],0))
+print("ortopedico:",round((r[1]),0))
+print("infantil:",round((r[2]),0))
+
+mi = min(r)
+c = 0
+for i in range(size(r)):
+	if(r[i] == mi):
+		c = i
+if(c == 0):
+	print("regular")
+elif(c == 1):
+	print("ortopedico")
+elif(c == 2):
+	print("Infantil")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 11:10:30) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+v = array(eval(input("Insira o vetor: ")))
+
+m = ([[50,60,40],
+		[30,40,20],
+		[10,15,8]])
+
+r = dot(inv(m),v.T)
+
+print("regular:",round(r[0],0))
+print("ortopedico:",round((r[1]),0))
+print("infantil:",round((r[2]),0))
+
+mi = min(r)
+c = 0
+for i in range(size(r)):
+	if(r[i] == mi):
+		c = i
+if(c == 0):
+	print("regular")
+elif(c == 1):
+	print("ortopedico")
+elif(c == 2):
+	print("Infantil")
+
+-- EXECUTION TIME:
+0.895369
+-- TEST CASE 1:
+---- input:
+[623980,350700,134591]
+---- correct output:
+regular: 1212.0
+ortopedico: 3265.0
+infantil: 9187.0
+regular
+---- user output:
+regular: 1212.0
+ortopedico: 3265.0
+infantil: 9187.0
+regular
+-- TEST CASE 2:
+---- input:
+[375920,219120,80734]
+---- correct output:
+regular: 2532.0
+ortopedico: 1850.0
+infantil: 3458.0
+ortopedico
+---- user output:
+regular: 2532.0
+ortopedico: 1850.0
+infantil: 3458.0
+ortopedico
+-- TEST CASE 3:
+---- input:
+[994800,620500,221415]
+---- correct output:
+regular: 9650.0
+ortopedico: 7485.0
+infantil: 1580.0
+infantil
+---- user output:
+regular: 9650.0
+ortopedico: 7485.0
+infantil: 1580.0
+Infantil
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:10:51) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+v = array(eval(input("Insira o vetor: ")))
+
+m = ([[50,60,40],
+		[30,40,20],
+		[10,15,8]])
+
+r = dot(inv(m),v.T)
+
+print("regular:",round(r[0],0))
+print("ortopedico:",round((r[1]),0))
+print("infantil:",round((r[2]),0))
+
+mi = min(r)
+c = 0
+for i in range(size(r)):
+	if(r[i] == mi):
+		c = i
+if(c == 0):
+	print("regular")
+elif(c == 1):
+	print("ortopedico")
+elif(c == 2):
+	print("Infantil")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 11:11:31) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+v = array(eval(input("Insira o vetor: ")))
+
+m = ([[50,60,40],
+		[30,40,20],
+		[10,15,8]])
+
+r = dot(inv(m),v.T)
+
+print("regular:",round(r[0],0))
+print("ortopedico:",round((r[1]),0))
+print("infantil:",round((r[2]),0))
+
+mi = min(r)
+c = 0
+for i in range(size(r)):
+	if(r[i] == mi):
+		c = i
+if(c == 0):
+	print("regular")
+elif(c == 1):
+	print("ortopedico")
+elif(c == 2):
+	print("infantil")
+
+-- EXECUTION TIME:
+1.10508
+-- TEST CASE 1:
+---- input:
+[623980,350700,134591]
+---- correct output:
+regular: 1212.0
+ortopedico: 3265.0
+infantil: 9187.0
+regular
+---- user output:
+regular: 1212.0
+ortopedico: 3265.0
+infantil: 9187.0
+regular
+-- TEST CASE 2:
+---- input:
+[375920,219120,80734]
+---- correct output:
+regular: 2532.0
+ortopedico: 1850.0
+infantil: 3458.0
+ortopedico
+---- user output:
+regular: 2532.0
+ortopedico: 1850.0
+infantil: 3458.0
+ortopedico
+-- TEST CASE 3:
+---- input:
+[994800,620500,221415]
+---- correct output:
+regular: 9650.0
+ortopedico: 7485.0
+infantil: 1580.0
+infantil
+---- user output:
+regular: 9650.0
+ortopedico: 7485.0
+infantil: 1580.0
+infantil
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

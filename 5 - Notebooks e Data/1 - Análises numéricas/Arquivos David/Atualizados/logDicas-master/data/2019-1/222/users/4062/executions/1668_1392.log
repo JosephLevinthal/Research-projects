@@ -1,0 +1,446 @@
+== TEST (2019-04-15 18:20:59) 
+-- CODE:
+consumo= float(input("consumo: "))
+if(consumo<=0.0):
+	print(consumo+30.0)
+else:
+	print(3.0*consumo)
+-- OUTPUT:
+24.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:21:37) 
+-- CODE:
+consumo= float(input("consumo: "))
+if(consumo<=0.0):
+	print(consumo+30.0)
+else:
+	print(3.0*consumo/10)
+-- OUTPUT:
+2.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:39:05) 
+-- CODE:
+consumo= float(input("consumo: "))
+if(consumo==0.0):
+	print(round(consumo+30.0, 2))
+if(consumo<10)
+	print(round(3*consumo, 2)):
+	if(consumo>10)
+	print(round(consumo*3.50, 2))
+-- ERROR:
+File "XXXX", line 4
+    if(consumo<10)
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:39:17) 
+-- CODE:
+consumo= float(input("consumo: "))
+if(consumo==0.0):
+	print(round(consumo+30.0, 2))
+if(consumo<10):
+	print(round(3*consumo, 2)):
+	if(consumo>10)
+	print(round(consumo*3.50, 2))
+-- ERROR:
+File "XXXX", line 5
+    print(round(3*consumo, 2)):
+                              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:39:44) 
+-- CODE:
+consumo= float(input("consumo: "))
+if(consumo==0.0):
+	print(round(consumo+30.0, 2))
+if(consumo<10):
+	print(round(3.00*consumo, 2)):
+	if(consumo>10)
+	print(round(consumo*3.50, 2))
+-- ERROR:
+File "XXXX", line 5
+    print(round(3.00*consumo, 2)):
+                                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:40:05) 
+-- CODE:
+consumo= float(input("consumo: "))
+if(consumo==0.0):
+	print(round(consumo+30.0, 2))
+if(consumo<10):
+	print(round(3.0*consumo, 2)):
+	if(consumo>10):
+	print(round(consumo*3.50, 2))
+-- ERROR:
+File "XXXX", line 5
+    print(round(3.0*consumo, 2)):
+                                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:40:14) 
+-- CODE:
+consumo= float(input("consumo: "))
+if(consumo==0.0):
+	print(round(consumo+30.0, 2))
+if(consumo<10):
+	print(round(3.0*consumo, 2)):
+if(consumo>10):
+	print(round(consumo*3.50, 2))
+-- ERROR:
+File "XXXX", line 5
+    print(round(3.0*consumo, 2)):
+                                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:40:40) 
+-- CODE:
+consumo= float(input("consumo: "))
+if(consumo==0.0):
+	print(round(consumo+30.00, 2))
+if(consumo<10):
+	print(round(3.00*consumo, 2)):
+if(consumo>10):
+	print(round(consumo*3.50, 2))
+-- ERROR:
+File "XXXX", line 5
+    print(round(3.00*consumo, 2)):
+                                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:41:24) 
+-- CODE:
+consumo= float(input("consumo: "))
+if(consumo==0.0):
+	print(round(consumo+30.00, 2))
+else:(consumo<10):
+	print(round(3.00*consumo, 2)):
+else:(consumo>10):
+	print(round(consumo*3.50, 2))
+-- ERROR:
+File "XXXX", line 4
+    else:(consumo<10):
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:41:32) 
+-- CODE:
+consumo= float(input("consumo: "))
+if(consumo==0.0):
+	print(round(consumo+30.00, 2))
+else:(consumo<10)
+	print(round(3.00*consumo, 2)):
+else:(consumo>10)
+	print(round(consumo*3.50, 2))
+-- ERROR:
+File "XXXX", line 5
+    print(round(3.00*consumo, 2)):
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:42:25) 
+-- CODE:
+consumo= float(input("consumo: "))
+if(consumo==0.0):
+	print(round(consumo+30.00, 2))
+else:(consumo<10)
+	print(round(3.00*consumo, 2)):
+
+-- ERROR:
+File "XXXX", line 5
+    print(round(3.00*consumo, 2)):
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:42:34) 
+-- CODE:
+consumo= float(input("consumo: "))
+if(consumo==0.0):
+	print(round(consumo+30.00, 2))
+else:
+	(consumo<10)
+	print(round(3.00*consumo, 2)):
+
+-- ERROR:
+File "XXXX", line 6
+    print(round(3.00*consumo, 2)):
+                                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:42:44) 
+-- CODE:
+consumo= float(input("consumo: "))
+if(consumo==0.0):
+	print(round(consumo+30.00, 2))
+else:
+	print(round(3.00*consumo, 2)):
+
+-- ERROR:
+File "XXXX", line 5
+    print(round(3.00*consumo, 2)):
+                                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:43:20) 
+-- CODE:
+c= float(input("consumo: "))
+if(c==0.0):
+	print(round(c+30.00, 2))
+else:
+	print(round(3.00*c, 2))
+
+-- OUTPUT:
+24.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:50:08) 
+-- CODE:
+c= float(input("consumo: "))
+if(c==0.0):
+	print(round(c+30.00, 2))
+else:
+	if	(c<=10):
+	print(round(c*3.00, 2))
+else:
+	(print(round(c*3.50, 2))
+
+-- ERROR:
+File "XXXX", line 6
+    print(round(c*3.00, 2))
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:50:13) 
+-- CODE:
+c= float(input("consumo: "))
+if(c==0.0):
+	print(round(c+30.00, 2))
+else:
+	if	(c<=10):
+		print(round(c*3.00, 2))
+else:
+	(print(round(c*3.50, 2))
+
+-- ERROR:
+File "XXXX", line 7
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:50:22) 
+-- CODE:
+c= float(input("consumo: "))
+if(c==0.0):
+	print(round(c+30.00, 2))
+else:
+	if	(c<=10):
+		print(round(c*3.00, 2))
+else:
+	print(round(c*3.50, 2))
+
+-- ERROR:
+File "XXXX", line 7
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:50:33) 
+-- CODE:
+c= float(input("consumo: "))
+if(c==0.0):
+	print(round(c+30.00, 2))
+else:
+	if	(c<=10):
+		print(round(c*3.00, 2))
+else:
+		print(round(c*3.50, 2))
+
+-- ERROR:
+File "XXXX", line 7
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:50:48) 
+-- CODE:
+c= float(input("consumo: "))
+if(c==0.0):
+	print(round(c+30.00, 2))
+else:
+	if	(c<=10):
+		print(round(c*3.00, 2))
+	else:
+		print(round(c*3.50, 2))
+
+-- OUTPUT:
+24.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 18:51:07) 
+-- CODE:
+c= float(input("consumo: "))
+if(c==0.0):
+	print(round(c+30.00, 2))
+else:
+	if	(c<=10):
+		print(round(c*3.00, 2))
+	else:
+		print(round(c*3.50, 2))
+
+-- EXECUTION TIME:
+0.140251
+-- TEST CASE 1:
+---- input:
+8.0
+---- correct output:
+54.0
+---- user output:
+24.0
+-- TEST CASE 2:
+---- input:
+32.0
+---- correct output:
+142.0
+---- user output:
+112.0
+-- TEST CASE 3:
+---- input:
+150.4
+
+---- correct output:
+556.4
+---- user output:
+526.4
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:51:29) 
+-- CODE:
+c= float(input("consumo: "))
+if(c==0.0):
+	print(round(c+30.00, 2))
+else:
+	if	(c<10):
+		print(round(c*3.00, 2))
+	else:
+		print(round(c*3.50, 2))
+
+-- OUTPUT:
+24.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 18:51:38) 
+-- CODE:
+c= float(input("consumo: "))
+if(c==0.0):
+	print(round(c+30.00, 2))
+else:
+	if	(c<10):
+		print(round(c*3.00, 2))
+	else:
+		print(round(c*3.50, 2))
+
+-- EXECUTION TIME:
+0.205545
+-- TEST CASE 1:
+---- input:
+8.0
+---- correct output:
+54.0
+---- user output:
+24.0
+-- TEST CASE 2:
+---- input:
+32.0
+---- correct output:
+142.0
+---- user output:
+112.0
+-- TEST CASE 3:
+---- input:
+150.4
+
+---- correct output:
+556.4
+---- user output:
+526.4
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:52:20) 
+-- CODE:
+c= float(input("consumo: "))
+if(c==0.0):
+	print(round(c+30.00, 2))
+else:
+	if	(c<10):
+		print(round(c*3.00, 2))
+	else:
+		print(round(c*3.50, 2))
+
+-- OUTPUT:
+24.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:52:24) 
+-- CODE:
+c= float(input("consumo: "))
+if(c==0.0):
+	print(round(c+30.00, 2))
+else:
+	if	(c<10):
+		print(round(c*3.00, 2))
+	else:
+		print(round(c*3.50, 2))
+
+-- OUTPUT:
+24.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:54:07) 
+-- CODE:
+c= float(input("consumo: "))
+if(c==0.0):
+	print(round(c+30.00, 2))
+else:
+	if	(c<10):
+		print(round(c*3.00+30.0, 2))
+	else:
+		print(round(c*3.50+30.0, 2))
+
+-- OUTPUT:
+54.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 18:54:16) 
+-- CODE:
+c= float(input("consumo: "))
+if(c==0.0):
+	print(round(c+30.00, 2))
+else:
+	if	(c<10):
+		print(round(c*3.00+30.0, 2))
+	else:
+		print(round(c*3.50+30.0, 2))
+
+-- EXECUTION TIME:
+0.204922
+-- TEST CASE 1:
+---- input:
+8.0
+---- correct output:
+54.0
+---- user output:
+54.0
+-- TEST CASE 2:
+---- input:
+32.0
+---- correct output:
+142.0
+---- user output:
+142.0
+-- TEST CASE 3:
+---- input:
+150.4
+
+---- correct output:
+556.4
+---- user output:
+556.4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

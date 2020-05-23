@@ -1,0 +1,197 @@
+== TEST (2019-04-04 23:29:36) 
+-- CODE:
+a = print(float("nota do aluno:"))
+b = print("bonificacao? ")
+
+if b = "S":
+	print(a+a*0.1)
+else:
+	print(a)
+-- ERROR:
+File "XXXX", line 4
+    if b = "S":
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 23:30:08) 
+-- CODE:
+a = print(float("nota do aluno:"))
+b = print("bonificacao? ")
+
+if b == "S":
+	print(a+a*0.1)
+else:
+	print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a = print(float("nota do aluno:"))
+ValueError: could not convert string to float: 'nota do aluno:'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 23:31:40) 
+-- CODE:
+a = print(float("nota do aluno:"))
+b = print("bonificacao? ")
+
+if b == "S":
+	print(float(a + a * 0.1))
+else:
+	print(float(a))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a = print(float("nota do aluno:"))
+ValueError: could not convert string to float: 'nota do aluno:'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-04 23:31:42) 
+-- CODE:
+a = print(float("nota do aluno:"))
+b = print("bonificacao? ")
+
+if b == "S":
+	print(float(a + a * 0.1))
+else:
+	print(float(a))
+-- EXECUTION TIME:
+0.214443
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1644/2704/main.py", line 1, in <module>
+    a = print(float("nota do aluno:"))
+ValueError: could not convert string to float: 'nota do aluno:'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 23:31:43) 
+-- CODE:
+a = print(float("nota do aluno:"))
+b = print("bonificacao? ")
+
+if b == "S":
+	print(float(a + a * 0.1))
+else:
+	print(float(a))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a = print(float("nota do aluno:"))
+ValueError: could not convert string to float: 'nota do aluno:'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 23:33:01) 
+-- CODE:
+a = print(float("nota do aluno:"))
+b = print("bonificacao? (S/N) ")
+
+if (b.upper() == "S":
+	print(float(a + a * 0.1))
+else:
+	print(float(a))
+-- ERROR:
+File "XXXX", line 4
+    if (b.upper() == "S":
+                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 23:33:17) 
+-- CODE:
+a = input(float("nota do aluno:"))
+b = input("bonificacao? (S/N) ")
+
+if (b.upper() == "S":
+	print(float(a + a * 0.1))
+else:
+	print(float(a))
+-- ERROR:
+File "XXXX", line 4
+    if (b.upper() == "S":
+                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 23:33:24) 
+-- CODE:
+a = input(float("nota do aluno:"))
+b = input("bonificacao? (S/N) ")
+
+if (b.upper() == "S"):
+	print(float(a + a * 0.1))
+else:
+	print(float(a))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a = input(float("nota do aluno:"))
+ValueError: could not convert string to float: 'nota do aluno:'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 23:38:07) 
+-- CODE:
+a = float(input("nota do aluno: "))
+b = input("bonificacao? (S/N) ")
+
+if (b.upper() == "S"):
+	print(float(a + a * 0.1))
+else:
+	print(float(a))
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-04 23:38:13) 
+-- CODE:
+a = float(input("nota do aluno: "))
+b = input("bonificacao? (S/N) ")
+
+if (b.upper() == "S"):
+	print(float(a + a * 0.1))
+else:
+	print(float(a))
+-- EXECUTION TIME:
+0.152755
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 02:39:00) 
+-- CODE:
+a = float(input("nota do aluno: "))
+b = input("bonificacao? (S/N) ")
+
+if (b.upper() == "S"):
+	print(float(a + a * 0.1))
+else:
+	print(float(a))
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-06 02:39:06) 
+-- CODE:
+a = float(input("nota do aluno: "))
+b = input("bonificacao? (S/N) ")
+
+if (b.upper() == "S"):
+	print(float(a + a * 0.1))
+else:
+	print(float(a))
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

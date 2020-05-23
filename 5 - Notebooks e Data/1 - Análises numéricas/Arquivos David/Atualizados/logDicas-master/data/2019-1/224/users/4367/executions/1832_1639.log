@@ -1,0 +1,114 @@
+== TEST (2019-06-13 18:07:23) 
+-- CODE:
+from numpy import*
+a=array(eval(input("digite o numero de alunos por turma: ")))
+p=0
+for i in a:
+	if(i%2==0):
+	p=p+1
+print(p)
+par=zeros(p, dtype=int)
+b=0
+for i in range (size(a)):
+	if(a[i]%2==0):
+		par[b]=par[b]+i
+		b=b+1
+print(par)
+-- ERROR:
+File "XXXX", line 6
+    p=p+1
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 18:07:49) 
+-- CODE:
+from numpy import*
+a=array(eval(input("digite o numero de alunos por turma: ")))
+p=0
+for i in a:
+	if(i%2==0):
+		p=p+1
+print(p)
+par=zeros(p, dtype=int)
+b=0
+for i in range (size(a)):
+	if(a[i]%2==0):
+		par[b]=par[b]+i
+		b=b+1
+print(par)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 18:07:59) 
+-- CODE:
+from numpy import*
+a=array(eval(input("digite o numero de alunos por turma: ")))
+p=0
+for i in a:
+	if(i%2==0):
+		p=p+1
+print(p)
+par=zeros(p, dtype=int)
+b=0
+for i in range (size(a)):
+	if(a[i]%2==0):
+		par[b]=par[b]+i
+		b=b+1
+print(par)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 18:08:36) 
+-- CODE:
+from numpy import*
+a=array(eval(input("digite o numero de alunos por turma: ")))
+p=0
+for i in a:
+	if(i%2==0):
+		p=p+1
+print(p)
+par=zeros(p, dtype=int)
+b=0
+for i in range (size(a)):
+	if(a[i]%2==0):
+		par[b]=par[b]+i
+		b=b+1
+print(par)
+-- EXECUTION TIME:
+0.79519
+-- TEST CASE 1:
+---- input:
+[10,20,31,1,13,15,20,33,36,63,25,10,2]
+---- correct output:
+6
+[ 0 1 6 8 11 12]
+---- user output:
+6
+[ 0  1  6  8 11 12]
+-- TEST CASE 2:
+---- input:
+[10,20,31,15,36,63,25,10,2]
+---- correct output:
+5
+[0 1 4 7 8]
+---- user output:
+5
+[0 1 4 7 8]
+-- TEST CASE 3:
+---- input:
+[10,20,31,15,36,63,26,10,2]
+---- correct output:
+6
+[0 1 4 6 7 8]
+---- user output:
+6
+[0 1 4 6 7 8]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

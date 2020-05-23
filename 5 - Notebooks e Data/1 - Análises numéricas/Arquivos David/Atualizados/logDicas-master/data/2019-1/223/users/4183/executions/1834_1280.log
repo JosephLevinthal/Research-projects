@@ -1,0 +1,320 @@
+== TEST (2019-07-01 21:57:46) 
+-- CODE:
+from numpy import *
+t = array(eval(input("Digite o tabuleiro: ")))
+m = input("Digite os movimentos: ")
+ct = 0
+lt = 0
+moeda = 0
+life = 100
+for x in m:
+	if (x == "A"):
+		ct = ct - 1
+	elif (x == "D"):
+		ct = ct + 1
+	elif (x == "W"):
+		lt = lt - 1
+	elif (x == "S"):
+		lt = lt + 1
+	if (t[lt,ct] == 11):
+		moeda = moeda + 1
+		t[lt,ct] == 0
+	elif (t[lt,ct] == 22):
+		life = life - 5
+	elif (t[lt,ct] == 33):
+		ct = ct
+		lt = lt
+print("posicao x: ", ct)
+print("posicao y: ", lt)
+print("moedas: ", moeda)
+print("life: ", life)
+		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 01:10:38) 
+-- CODE:
+from numpy import *
+t = array(eval(input("Digite o tabuleiro: ")))
+m = input("Digite os movimentos: ")
+ct = 0
+lt = 0
+moeda = 0
+life = 100
+for x in m:
+	if (x == "A"):
+		ct = ct - 1
+		if (ct < 0 or ct >= shape(t)[1]):
+			ct = ct + 1
+	elif (x == "D"):
+		ct = ct + 1
+		if (ct < 0 or ct >= shape(t)[1]):
+			ct = ct - 1
+	elif (x == "W"):
+		lt = lt - 1
+		if (lt < 0 or lt >= shape(t)[1]):
+			lt = lt + 1
+	elif (x == "S"):
+		lt = lt + 1
+		if (lt < 0 or lt >= shape(t)[1]):
+			lt = lt - 1
+	if(t[lt,ct] == 33):
+		if (x == "A"):
+			ct = ct + 1
+		elif (x == "D"):
+			ct = ct - 1
+		elif (x == "W"):
+			lt = lt + 1
+		elif (x == "S"):
+			lt = lt - 1		
+	if (t[lt,ct] == 11):
+		moeda = moeda + 1
+		t[lt,ct] = 0
+		t[lt,ct] == 0
+	elif (t[lt,ct] == 22):
+		life = life - 5
+	
+print("posicao x: ", ct)
+print("posicao y: ", lt)
+print("moedas: ", moeda)
+print("life: ", life)
+		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 01:12:35) 
+-- CODE:
+from numpy import *
+t = array(eval(input("Digite o tabuleiro: ")))
+m = input("Digite os movimentos: ")
+ct = 0
+lt = 0
+moeda = 0
+life = 100
+for x in m:
+	if (x == "A"):
+		ct = ct - 1
+		if (ct < 0 or ct >= shape(t)[1]):
+			ct = ct + 1
+	elif (x == "D"):
+		ct = ct + 1
+		if (ct < 0 or ct >= shape(t)[1]):
+			ct = ct - 1
+	elif (x == "W"):
+		lt = lt - 1
+		if (lt < 0 or lt >= shape(t)[1]):
+			lt = lt + 1
+	elif (x == "S"):
+		lt = lt + 1
+		if (lt < 0 or lt >= shape(t)[1]):
+			lt = lt - 1
+	if(t[lt,ct] == 33):
+		if (x == "A"):
+			ct = ct + 1
+		elif (x == "D"):
+			ct = ct - 1
+		elif (x == "W"):
+			lt = lt + 1
+		elif (x == "S"):
+			lt = lt - 1		
+	if (t[lt,ct] == 11):
+		moeda = moeda + 1
+		t[lt,ct] = 0
+		t[lt,ct] == 0
+	elif (t[lt,ct] == 22):
+		life = life - 5
+	
+print("posicao x: ", ct)
+print("posicao y: ", lt)
+print("moedas: ", moeda)
+print("life: ", life)
+		
+
+-- EXECUTION TIME:
+0.924676
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/1280/main.py", line 25, in <module>
+    if(t[lt,ct] == 33):
+IndexError: index 11 is out of bounds for axis 0 with size 11
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 01:13:12) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+t = array(eval(input("Digite o tabuleiro: ")))
+m = input("Digite os movimentos: ")
+ct = 0
+lt = 0
+moeda = 0
+life = 100
+for x in m:
+	if (x == "A"):
+		ct = ct - 1
+		if (ct < 0 or ct >= shape(t)[1]):
+			ct = ct + 1
+	elif (x == "D"):
+		ct = ct + 1
+		if (ct < 0 or ct >= shape(t)[1]):
+			ct = ct - 1
+	elif (x == "W"):
+		lt = lt - 1
+		if (lt < 0 or lt >= shape(t)[1]):
+			lt = lt + 1
+	elif (x == "S"):
+		lt = lt + 1
+		if (lt < 0 or lt >= shape(t)[1]):
+			lt = lt - 1
+	if(t[lt,ct] == 33):
+		if (x == "A"):
+			ct = ct + 1
+		elif (x == "D"):
+			ct = ct - 1
+		elif (x == "W"):
+			lt = lt + 1
+		elif (x == "S"):
+			lt = lt - 1		
+	if (t[lt,ct] == 11):
+		moeda = moeda + 1
+		t[lt,ct] = 0
+		t[lt,ct] == 0
+	elif (t[lt,ct] == 22):
+		life = life - 5
+	
+print("posicao x: ", ct)
+print("posicao y: ", lt)
+print("moedas: ", moeda)
+print("life: ", life)
+		
+
+-- EXECUTION TIME:
+1.09286
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/1280/main.py", line 26, in <module>
+    if(t[lt,ct] == 33):
+IndexError: index 11 is out of bounds for axis 0 with size 11
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 01:13:36) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+t = array(eval(input("Digite o tabuleiro: ")))
+m = input("Digite os movimentos: ").upper()
+ct = 0
+lt = 0
+moeda = 0
+life = 100
+for x in m:
+	if (x == "A"):
+		ct = ct - 1
+		if (ct < 0 or ct >= shape(t)[1]):
+			ct = ct + 1
+	elif (x == "D"):
+		ct = ct + 1
+		if (ct < 0 or ct >= shape(t)[1]):
+			ct = ct - 1
+	elif (x == "W"):
+		lt = lt - 1
+		if (lt < 0 or lt >= shape(t)[1]):
+			lt = lt + 1
+	elif (x == "S"):
+		lt = lt + 1
+		if (lt < 0 or lt >= shape(t)[1]):
+			lt = lt - 1
+	if(t[lt,ct] == 33):
+		if (x == "A"):
+			ct = ct + 1
+		elif (x == "D"):
+			ct = ct - 1
+		elif (x == "W"):
+			lt = lt + 1
+		elif (x == "S"):
+			lt = lt - 1		
+	if (t[lt,ct] == 11):
+		moeda = moeda + 1
+		t[lt,ct] = 0
+		t[lt,ct] == 0
+	elif (t[lt,ct] == 22):
+		life = life - 5
+	
+print("posicao x: ", ct)
+print("posicao y: ", lt)
+print("moedas: ", moeda)
+print("life: ", life)
+		
+
+-- EXECUTION TIME:
+1.11419
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/1280/main.py", line 26, in <module>
+    if(t[lt,ct] == 33):
+IndexError: index 11 is out of bounds for axis 0 with size 11
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 01:14:00) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+t = array(eval(input("Digite o tabuleiro: ")))
+m = input("Digite os movimentos: ").upper()
+ct = 0
+lt = 0
+moeda = 0
+life = 100
+for x in m:
+	if (x == "A"):
+		ct = ct - 1
+		if (ct < 0 or ct >= shape(t)[1]):
+			ct = ct + 1
+	elif (x == "D"):
+		ct = ct + 1
+		if (ct < 0 or ct >= shape(t)[1]):
+			ct = ct - 1
+	elif (x == "W"):
+		lt = lt - 1
+		if (lt < 0 or lt >= shape(t)[1]):
+			lt = lt + 1
+	elif (x == "S"):
+		lt = lt + 1
+		if (lt < 0 or lt >= shape(t)[1]):
+			lt = lt - 1
+	if(t[lt,ct] == 33):
+		if (x == "A"):
+			ct = ct + 1
+		elif (x == "D"):
+			ct = ct - 1
+		elif (x == "W"):
+			lt = lt + 1
+		elif (x == "S"):
+			lt = lt - 1		
+	if (t[lt,ct] == 11):
+		moeda = moeda + 1
+		t[lt,ct] = 0
+		t[lt,ct] == 0
+	elif (t[lt,ct] == 22):
+		life = life - 5
+	
+print("posicao x: ", ct)
+print("posicao y: ", lt)
+print("moedas: ", moeda)
+print("life: ", life)
+		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

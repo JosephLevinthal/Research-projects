@@ -1,0 +1,185 @@
+== TEST (2019-06-11 16:32:36) 
+-- CODE:
+s=input("string desejada: ")
+
+for i in s:
+	if(i==a or i==A):
+		s[i]=s[i]-s[i]
+		
+print(s)		
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if(i==a or i==A):
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:32:58) 
+-- CODE:
+s=input("string desejada: ")
+
+for i in s:
+	if(i=="a" or i=="A"):
+		s[i]=s[i]-s[i]
+		
+print(s)		
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    s[i]=s[i]-s[i]
+TypeError: string indices must be integers
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:34:29) 
+-- CODE:
+s=input("string desejada: ")
+ss=0
+for i in s:
+	if(i=="a" or i=="A"):
+		
+	else:
+		ss=ss+s[i]
+print(s)		
+		
+-- ERROR:
+File "XXXX", line 6
+    else:
+       ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:35:07) 
+-- CODE:
+s=input("string desejada: ")
+ss=0
+for i in s:
+	if(i=="a" or i=="A"):
+		i=i
+	else:
+		ss=ss+s[i]
+print(ss)		
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    ss=ss+s[i]
+TypeError: string indices must be integers
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:36:06) 
+-- CODE:
+s=input("string desejada: ")
+ss=""
+for i in s:
+	if(i=="a" or i=="A"):
+		i=i
+	else:
+		ss=ss+s[i]
+print(ss)		
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    ss=ss+s[i]
+TypeError: string indices must be integers
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:36:29) 
+-- CODE:
+s=input("string desejada: ")
+ss=""
+for i in s:
+	if(i=="a" or i=="A"):
+		i=i
+	else:
+		ss="ss"+s[i]
+print(ss)		
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    ss="ss"+s[i]
+TypeError: string indices must be integers
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:41:11) 
+-- CODE:
+s=input("string desejada: ")
+ss=""
+for i in range(size(s)):
+	if(s[i]=="a" or s[i]=="A"):
+		i=i
+	else:
+		ss=ss+s[i]
+print(ss)		
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    for i in range(size(s)):
+NameError: name 'size' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:41:29) 
+-- CODE:
+s=input("string desejada: ")
+ss=""
+for i in range(lens(s)):
+	if(s[i]=="a" or s[i]=="A"):
+		i=i
+	else:
+		ss=ss+s[i]
+print(ss)		
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    for i in range(lens(s)):
+NameError: name 'lens' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:43:37) 
+-- CODE:
+s=input("string desejada: ")
+ss=""
+for i in range(len(s)):
+	if(s[i]=="a" or s[i]=="A"):
+		i=i
+	else:
+		ss=ss+s[i]
+print(ss)		
+		
+-- OUTPUT:
+Instituto_de_Computco-ICOMP-UFM
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 16:43:48) 
+-- CODE:
+s=input("string desejada: ")
+ss=""
+for i in range(len(s)):
+	if(s[i]=="a" or s[i]=="A"):
+		i=i
+	else:
+		ss=ss+s[i]
+print(ss)		
+		
+-- EXECUTION TIME:
+0.635325
+-- TEST CASE 1:
+---- input:
+Instituto_de_Computacao-ICOMP-UFAM
+---- correct output:
+Instituto_de_Computco-ICOMP-UFM
+---- user output:
+Instituto_de_Computco-ICOMP-UFM
+-- TEST CASE 2:
+---- input:
+a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-aa-a-a-a-a-a-a-a-a-a-a
+---- correct output:
+-----------------------------
+---- user output:
+-----------------------------
+-- TEST CASE 3:
+---- input:
+.aaaaaaaaaaaaaaaaaaaaa.bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb.aaaaaaaaaaaaaaaaa.
+---- correct output:
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb..
+---- user output:
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb..
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

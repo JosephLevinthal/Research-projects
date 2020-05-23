@@ -1,0 +1,40 @@
+== TEST (2019-07-01 21:48:34) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+m = ([[ 1 , -1 , 0 , 0],
+			  [ 0 , 1 , -1 , 0],
+			  [ 0 , 0 , 1 , 0 ],
+			  [ 1 , 0 , 0 , 1 ]])
+i = array([50, -120, 350, 870])
+result = dot(inv(m), i.T)
+print(result)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 21:48:55) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+m = ([[ 1 , -1 , 0 , 0],
+			  [ 0 , 1 , -1 , 0],
+			  [ 0 , 0 , 1 , 0 ],
+			  [ 1 , 0 , 0 , 1 ]])
+i = array([50, -120, 350, 870])
+result = dot(inv(m), i.T)
+print(result)
+-- EXECUTION TIME:
+1.12095
+-- TEST CASE 1:
+---- input:
+Não_há
+---- correct output:
+[280. 230. 350. 590.]
+---- user output:
+[280. 230. 350. 590.]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

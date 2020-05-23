@@ -1,0 +1,176 @@
+== TEST (2019-04-04 23:59:46) 
+-- CODE:
+nota = input("Digite sua nota: ")
+boni = input("Bonificacao? (S/N): ")
+10 >= nota >= 0
+if (boni.upper() == "S"):
+	print(nota + (nota*10/100))
+else:
+	print(nota)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    10 >= nota >= 0
+TypeError: '>=' not supported between instances of 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:00:11) 
+-- CODE:
+nota = input("Digite sua nota: ")
+boni = input("Bonificacao? (S/N): ")
+if (boni.upper() == "S"):
+	print(nota + (nota*10/100))
+else:
+	print(nota)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(nota + (nota*10/100))
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:01:36) 
+-- CODE:
+nota = input("Digite sua nota: ")
+boni = input("Bonificacao? (S/N): ")
+sboni = ((nota*10)/100)
+if (boni.upper() == "S"):
+	print(nota + sboni)
+else:
+	print(nota)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    sboni = ((nota*10)/100)
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:01:54) 
+-- CODE:
+nota = input("Digite sua nota: ")
+boni = input("Bonificacao? (S/N): ")
+sboni = (nota*10)/100
+if (boni.upper() == "S"):
+	print(nota + sboni)
+else:
+	print(nota)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    sboni = (nota*10)/100
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:02:59) 
+-- CODE:
+nota = input("Digite sua nota: ")
+boni = input("Bonificacao? (S/N): ")
+Boni = (nota * 10)/100
+if (boni.upper() == "S"):
+	print(nota + sboni)
+else:
+	print(nota)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    Boni = (nota * 10)/100
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:03:19) 
+-- CODE:
+nota = input("Digite sua nota: ")
+boni = input("Bonificacao? (S/N): ")
+Boni = nota * 10/100
+if (boni.upper() == "S"):
+	print(nota + sboni)
+else:
+	print(nota)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    Boni = nota * 10/100
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:04:05) 
+-- CODE:
+nota = float(input("Digite sua nota: "))
+boni = input("Bonificacao? (S/N): ")
+Boni = (nota * 10)/100
+if (boni.upper() == "S"):
+	print(nota + sboni)
+else:
+	print(nota)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(nota + sboni)
+NameError: name 'sboni' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:04:21) 
+-- CODE:
+nota = float(input("Digite sua nota: "))
+boni = input("Bonificacao? (S/N): ")
+Boni = (nota * 10)/100
+if (boni.upper() == "S"):
+	print(nota + Boni)
+else:
+	print(nota)
+
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 00:04:28) 
+-- CODE:
+nota = float(input("Digite sua nota: "))
+boni = input("Bonificacao? (S/N): ")
+Boni = (nota * 10)/100
+if (boni.upper() == "S"):
+	print(nota + Boni)
+else:
+	print(nota)
+
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-05 00:04:43) 
+-- CODE:
+nota = float(input("Digite sua nota: "))
+boni = input("Bonificacao? (S/N): ")
+Boni = (nota * 10)/100
+if (boni.upper() == "S"):
+	print(nota + Boni)
+else:
+	print(nota)
+
+-- EXECUTION TIME:
+0.187105
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

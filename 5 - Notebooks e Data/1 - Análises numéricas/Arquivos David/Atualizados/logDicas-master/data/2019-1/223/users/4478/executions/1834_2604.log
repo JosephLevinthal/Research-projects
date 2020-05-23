@@ -1,0 +1,66 @@
+== SUBMITION (2019-07-02 15:47:12) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+func = array(eval(input("horas trabalhadas")))
+vetor = zeros(func.shape[0], dtype=int)
+for i in range(func.shape[0]):
+	vetor[i]=max(func[i,:])
+	print(vetor)
+-- EXECUTION TIME:
+1.12814
+-- TEST CASE 1:
+---- input:
+[[34.5,67.8,89.7,56.4,65.7,78.9,81.2],[99.9,67.8,87.6,45.4,12.3,45.5,23.7],[27.5,93.1,45.9,47.3,19.2,76.5,49.3]]
+---- correct output:
+89.7
+99.9
+93.1
+---- user output:
+horas trabalhadas[89  0  0]
+[89 99  0]
+[89 99 93]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 15:57:15) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+func = array(eval(input("horas trabalhadas")))
+
+for i in range(shape(func)[0]):
+	print(max(func[i,:]))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 15:57:18) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+func = array(eval(input("horas trabalhadas")))
+
+for i in range(shape(func)[0]):
+	print(max(func[i,:]))
+-- EXECUTION TIME:
+0.872539
+-- TEST CASE 1:
+---- input:
+[[34.5,67.8,89.7,56.4,65.7,78.9,81.2],[99.9,67.8,87.6,45.4,12.3,45.5,23.7],[27.5,93.1,45.9,47.3,19.2,76.5,49.3]]
+---- correct output:
+89.7
+99.9
+93.1
+---- user output:
+89.7
+99.9
+93.1
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

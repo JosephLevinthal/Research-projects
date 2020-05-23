@@ -1,0 +1,1102 @@
+== TEST (2019-05-11 11:57:14) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+novoQtd = 0
+meses = 0
+
+while(novoQtd > 0 && novoQtd <= 8000):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	novoQtd = (qtdAtual-venda) * percent / 100
+	meses = meses + 1
+	
+if(novoQtd <= 0):
+	print("ZERO")
+else:
+	print("MAXIMO")
+
+print(meses)
+-- ERROR:
+File "XXXX", line 7
+    while(novoQtd > 0 && novoQtd <= 8000):
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 11:57:33) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+novoQtd = 0
+meses = 0
+
+while(novoQtd > 0 and novoQtd <= 8000):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	novoQtd = (qtdAtual-venda) * percent / 100
+	meses = meses + 1
+	
+if(novoQtd <= 0):
+	print("ZERO")
+else:
+	print("MAXIMO")
+
+print(meses)
+-- OUTPUT:
+ZERO
+0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 11:58:08) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+novoQtd = 1
+meses = 0
+
+while(novoQtd > 0 and novoQtd <= 8000):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	novoQtd = (qtdAtual-venda) * percent / 100
+	meses = meses + 1
+	
+if(novoQtd <= 0):
+	print("ZERO")
+else:
+	print("MAXIMO")
+
+print(meses)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    venda = int(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 11:58:57) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+novoQtd = 1
+meses = 0
+
+while(novoQtd > 0 and novoQtd <= 8000):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	novoQtd = (qtdAtual-venda) * percent / 100
+	meses = meses + 1
+	print(novoQtd)
+	
+if(novoQtd <= 0):
+	print("ZERO")
+else:
+	print("MAXIMO")
+
+print(meses)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    venda = int(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 12:00:37) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+meses = 0
+
+while(qtdAtual > 0 and qtdAtual <= 8000):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	qtdAtual = (qtdAtual-venda) * percent / 100
+	meses = meses + 1
+	print(qtdAtual)
+	
+if(qtdAtual <= 0):
+	print("ZERO")
+else:
+	print("MAXIMO")
+
+print(meses)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    venda = int(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 12:01:24) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+novoQtd = 1
+meses = 0
+
+while(novoQtd > 0 and novoQtd <= 8000):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	novoQtd = (novoQtd-venda) * percent
+	meses = meses + 1
+	print(novoQtd)
+	
+if(novoQtd <= 0):
+	print("ZERO")
+else:
+	print("MAXIMO")
+
+print(meses)
+-- OUTPUT:
+-336.0
+ZERO
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 12:02:01) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+novoQtd = qtdAtual
+meses = 0
+
+while(novoQtd > 0 and novoQtd <= 8000):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	novoQtd = (novoQtd-venda) * percent
+	meses = meses + 1
+	print(novoQtd)
+	
+if(novoQtd <= 0):
+	print("ZERO")
+else:
+	print("MAXIMO")
+
+print(meses)
+-- OUTPUT:
+68712.0
+MAXIMO
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 12:02:20) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+novoQtd = qtdAtual
+meses = 0
+
+while(novoQtd > 0 and novoQtd < 8000):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	novoQtd = (novoQtd-venda) * percent
+	meses = meses + 1
+	print(novoQtd)
+	
+if(novoQtd <= 0):
+	print("ZERO")
+else:
+	print("MAXIMO")
+
+print(meses)
+-- OUTPUT:
+68712.0
+MAXIMO
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 12:03:10) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+novoQtd = qtdAtual
+meses = 0
+
+while(novoQtd > 0 and novoQtd < 8000):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	novoQtd = (novoQtd-venda) * (percent / 100)
+	meses = meses + 1
+	print(novoQtd)
+	
+if(novoQtd <= 0):
+	print("ZERO")
+else:
+	print("MAXIMO")
+
+print(meses)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    venda = int(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 12:03:45) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+novoQtd = qtdAtual
+meses = 0
+
+while(novoQtd > 0 and novoQtd < 8000):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	novoQtd = novoQtd + (novoQtd-venda) * (percent / 100)
+	meses = meses + 1
+	print(novoQtd)
+	
+if(novoQtd <= 0):
+	print("ZERO")
+else:
+	print("MAXIMO")
+
+print(meses)
+-- OUTPUT:
+1921.1200000000001
+2992.4672
+4663.208832
+7269.005777920001
+11333.489013555201
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 12:05:35) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+novoQtd = qtdAtual
+meses = 0
+
+while(novoQtd > 0 and novoQtd < 8000):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	novoQtd = (novoQtd-venda) + (novoQtd-venda) * (percent / 100)
+	meses = meses + 1
+	print(novoQtd)
+	
+if(novoQtd <= 0):
+	print("ZERO")
+else:
+	print("MAXIMO")
+
+print(meses)
+-- OUTPUT:
+1914.1200000000001
+2973.5472
+4624.693632
+7198.922065920001
+11213.158422835202
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 12:06:42) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+novoQtd = qtdAtual
+meses = 0
+
+while(novoQtd > 0 and novoQtd < 8000):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	novoQtd = (novoQtd-venda) + (novoQtd) * (percent / 100)
+	meses = meses + 1
+	print(novoQtd)
+	
+if(novoQtd <= 0):
+	print("ZERO")
+else:
+	print("MAXIMO")
+
+print(meses)
+-- OUTPUT:
+1918.04
+2984.1423999999997
+4646.262144
+7238.1689446400005
+11280.543553638401
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-11 12:07:08) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+novoQtd = qtdAtual
+meses = 0
+
+while(novoQtd > 0 and novoQtd < 8000):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	novoQtd = (novoQtd-venda) + (novoQtd-venda) * (percent / 100)
+	meses = meses + 1
+	print(novoQtd)
+	
+if(novoQtd <= 0):
+	print("ZERO")
+else:
+	print("MAXIMO")
+
+print(meses)
+-- EXECUTION TIME:
+0.119801
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+1914.1200000000001
+2973.5472
+4624.693632
+7198.922065920001
+11213.158422835202
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+4489.45
+3873.8044999999997
+-451.66745500000025
+ZERO
+3
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+1665.9
+1033.9650000000001
+1394.50275
+1879.8787125000001
+2533.786261875
+3415.21145353125
+4603.7854622671875
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-11 12:07:41) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+novoQtd = qtdAtual
+meses = 0
+
+while(novoQtd > 0 and novoQtd < 8000):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	novoQtd = (novoQtd-venda) + (novoQtd-venda) * (percent / 100)
+	meses = meses + 1
+	
+if(novoQtd <= 0):
+	print("ZERO")
+else:
+	print("MAXIMO")
+
+print(meses)
+-- EXECUTION TIME:
+0.119174
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+ZERO
+3
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 12:35:22) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+cap = 8000
+meses = 0
+
+while(qtdAtual > 0 and qtdAtual < cap):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	qtdAtual = (qtdAtual-venda) + (qtdAtual-venda) * (percent / 100)
+	meses = meses + 1
+	
+if(qtdAtual <= 0):
+	print("ZERO")
+elif(qtdAtual >= cap):
+	print("MAXIMO")
+
+print(meses)
+-- OUTPUT:
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-11 12:35:43) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+cap = 8000
+meses = 0
+
+while(qtdAtual > 0 and qtdAtual < cap):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	qtdAtual = (qtdAtual-venda) + (qtdAtual-venda) * (percent / 100)
+	meses = meses + 1
+	
+if(qtdAtual <= 0):
+	print("ZERO")
+elif(qtdAtual >= cap):
+	print("MAXIMO")
+
+print(meses)
+-- EXECUTION TIME:
+0.129784
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+ZERO
+3
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-11 12:36:32) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+cap = 8000
+meses = 0
+
+while(qtdAtual > 0 and qtdAtual < cap):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	qtdAtual = qtdAtual - venda + (qtdAtual * percent / 100)
+	meses = meses + 1
+	
+if(qtdAtual <= 0):
+	print("ZERO")
+elif(qtdAtual >= cap):
+	print("MAXIMO")
+
+print(meses)
+-- EXECUTION TIME:
+0.147241
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+Insira a quantidadde inicial de pirarucus no tanque: Insira o percentual de crescimento mensal sobre os pirarucus: Insira a quantidade de pirarucus retirados para a venda: Insira a quantidade de pirarucus retirados para a venda: Insira a quantidade de pirarucus retirados para a venda: ZERO
+3
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+Insira a quantidadde inicial de pirarucus no tanque: Insira o percentual de crescimento mensal sobre os pirarucus: Insira a quantidade de pirarucus retirados para a venda: Insira a quantidade de pirarucus retirados para a venda: Insira a quantidade de pirarucus retirados para a venda: Insira a quantidade de pirarucus retirados para a venda: Insira a quantidade de pirarucus retirados para a venda: Insira a quantidade de pirarucus retirados para a venda: Insira a quantidade de pirarucus retirados para a venda: MAXIMO
+7
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-11 12:36:45) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+cap = 8000
+meses = 0
+
+while(qtdAtual > 0 and qtdAtual < cap):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	qtdAtual = (qtdAtual-venda) + (qtdAtual-venda) * (percent / 100)
+	meses = meses + 1
+	
+if(qtdAtual <= 0):
+	print("ZERO")
+elif(qtdAtual >= cap):
+	print("MAXIMO")
+
+print(meses)
+-- EXECUTION TIME:
+0.214172
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+ZERO
+3
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-11 12:37:42) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+cap = 8000
+meses = 0
+
+while(qtdAtual > 0 and qtdAtual < cap):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	qtdAtual = (qtdAtual-venda) + qtdAtual * (percent / 100)
+	meses = meses + 1
+	
+if(qtdAtual <= 0):
+	print("ZERO")
+elif(qtdAtual >= cap):
+	print("MAXIMO")
+
+print(meses)
+-- EXECUTION TIME:
+0.197497
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+Insira a quantidadde inicial de pirarucus no tanque: Insira o percentual de crescimento mensal sobre os pirarucus: Insira a quantidade de pirarucus retirados para a venda: Insira a quantidade de pirarucus retirados para a venda: Insira a quantidade de pirarucus retirados para a venda: ZERO
+3
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+Insira a quantidadde inicial de pirarucus no tanque: Insira o percentual de crescimento mensal sobre os pirarucus: Insira a quantidade de pirarucus retirados para a venda: Insira a quantidade de pirarucus retirados para a venda: Insira a quantidade de pirarucus retirados para a venda: Insira a quantidade de pirarucus retirados para a venda: Insira a quantidade de pirarucus retirados para a venda: Insira a quantidade de pirarucus retirados para a venda: Insira a quantidade de pirarucus retirados para a venda: MAXIMO
+7
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-11 12:39:36) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+cap = 8000
+meses = 0
+
+while(qtdAtual > 0 and qtdAtual < cap):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	qtdAtual = (qtdAtual) + (qtdAtual-venda) * (percent / 100)
+	meses = meses + 1
+	
+if(qtdAtual <= 0):
+	print("ZERO")
+elif(qtdAtual >= cap):
+	print("MAXIMO")
+
+print(meses)
+-- EXECUTION TIME:
+0.189415
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+MAXIMO
+5
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-11 12:39:44) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+cap = 8000
+meses = 0
+
+while(qtdAtual > 0 and qtdAtual < cap):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	qtdAtual = (qtdAtual-venda) + (qtdAtual-venda) * (percent / 100)
+	meses = meses + 1
+	
+if(qtdAtual <= 0):
+	print("ZERO")
+elif(qtdAtual >= cap):
+	print("MAXIMO")
+
+print(meses)
+-- EXECUTION TIME:
+0.133387
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+ZERO
+3
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 13:08:26) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+cap = 8000
+meses = 0
+
+while(qtdAtual > 0 and qtdAtual < cap):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	qtdAtual = qtdAtual + (qtdAtual * (percent / 100)) - venda
+	meses = meses + 1
+	
+if(qtdAtual <= 0):
+	print("ZERO")
+elif(qtdAtual >= cap):
+	print("MAXIMO")
+
+print(meses)
+-- OUTPUT:
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 13:08:51) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+cap = 8000
+meses = 0
+
+while(qtdAtual > 0 and qtdAtual < cap):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	qtdAtual = qtdAtual + (qtdAtual * (percent / 100)) - venda
+	meses = meses + 1
+	print(qtdAtual)
+	
+if(qtdAtual <= 0):
+	print("ZERO")
+elif(qtdAtual >= cap):
+	print("MAXIMO")
+
+print(meses)
+-- OUTPUT:
+1918.04
+2984.1423999999997
+4646.262144
+7238.1689446400005
+11280.543553638401
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-11 13:09:09) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+cap = 8000
+meses = 0
+
+while(qtdAtual > 0 and qtdAtual < cap):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	qtdAtual = qtdAtual + (qtdAtual * (percent / 100)) - venda
+	meses = meses + 1
+	print(qtdAtual)
+	
+if(qtdAtual <= 0):
+	print("ZERO")
+elif(qtdAtual >= cap):
+	print("MAXIMO")
+
+print(meses)
+-- EXECUTION TIME:
+0.140261
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+1918.04
+2984.1423999999997
+4646.262144
+7238.1689446400005
+11280.543553638401
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+4499.32
+3890.3131999999996
+-391.7836680000005
+ZERO
+3
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+2097.8
+1932.0300000000002
+2607.2405000000003
+3517.7746750000006
+4745.995811250001
+6403.094345187501
+8639.177366003127
+MAXIMO
+7
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-11 13:09:18) 
+-- CODE:
+qtdAtual = int(input("Insira a quantidadde inicial de pirarucus no tanque: "))
+percent = float(input("Insira o percentual de crescimento mensal sobre os pirarucus: "))
+
+cap = 8000
+meses = 0
+
+while(qtdAtual > 0 and qtdAtual < cap):
+	venda = int(input("Insira a quantidade de pirarucus retirados para a venda: "))
+	qtdAtual = qtdAtual + (qtdAtual * (percent / 100)) - venda
+	meses = meses + 1
+	
+if(qtdAtual <= 0):
+	print("ZERO")
+elif(qtdAtual >= cap):
+	print("MAXIMO")
+
+print(meses)
+-- EXECUTION TIME:
+0.160128
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+ZERO
+3
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+MAXIMO
+7
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,83 @@
+== TEST (2019-06-24 15:47:48) 
+-- CODE:
+from numpy import*
+m= array([[0,2,11,6,15,11,1], [2,0,7,12,4,2,15], [11,7,0,11,8,3,13],[6,12,11,0,10,2,1],[15,4,8,10,0,5,13],[11,2,3,2,5,0,14],[1,15,13,1,13,14,0]])
+s = 0
+a = int(input())
+i = (a % 10)-1
+j = (a % 10)-1
+while(a!= -1):
+	s = s + m[i,j]
+	
+	i=j
+	a = int(input())
+	j = (a % 10)-1
+print(s)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-24 15:47:52) 
+-- CODE:
+from numpy import*
+m= array([[0,2,11,6,15,11,1], [2,0,7,12,4,2,15], [11,7,0,11,8,3,13],[6,12,11,0,10,2,1],[15,4,8,10,0,5,13],[11,2,3,2,5,0,14],[1,15,13,1,13,14,0]])
+s = 0
+a = int(input())
+i = (a % 10)-1
+j = (a % 10)-1
+while(a!= -1):
+	s = s + m[i,j]
+	
+	i=j
+	a = int(input())
+	j = (a % 10)-1
+print(s)
+-- EXECUTION TIME:
+0.863645
+-- TEST CASE 1:
+---- input:
+333
+555
+666
+111
+-1
+
+---- correct output:
+24
+---- user output:
+24
+-- TEST CASE 2:
+---- input:
+222
+777
+555
+333
+666
+111
+-1
+
+---- correct output:
+50
+---- user output:
+50
+-- TEST CASE 3:
+---- input:
+111
+222
+111
+333
+111
+555
+111
+777
+-1
+
+---- correct output:
+57
+---- user output:
+57
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

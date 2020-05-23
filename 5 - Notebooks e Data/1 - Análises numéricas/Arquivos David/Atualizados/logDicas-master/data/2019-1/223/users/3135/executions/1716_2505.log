@@ -1,0 +1,255 @@
+== TEST (2019-05-14 16:32:38) 
+-- CODE:
+x=eval(input("Insira o angulo de X em radiano: "))
+k= int(input("Insira o valor de K termos da serie: "))
+
+cont=1
+sinal=-1
+soma=x
+exp=3
+
+while (cont<k)
+	soma=soma+(sinal*(**exp)/factorial(exp))
+	print(soma)
+-- ERROR:
+File "XXXX", line 9
+    while (cont<k)
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 16:32:45) 
+-- CODE:
+x=eval(input("Insira o angulo de X em radiano: "))
+k= int(input("Insira o valor de K termos da serie: "))
+
+cont=1
+sinal=-1
+soma=x
+exp=3
+
+while (cont<k):
+	soma=soma+(sinal*(**exp)/factorial(exp))
+	print(soma)
+-- ERROR:
+File "XXXX", line 10
+    soma=soma+(sinal*(**exp)/factorial(exp))
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 16:32:51) 
+-- CODE:
+x=eval(input("Insira o angulo de X em radiano: "))
+k= int(input("Insira o valor de K termos da serie: "))
+
+cont=1
+sinal=-1
+soma=x
+exp=3
+
+while (cont<k):
+	soma=soma+(sinal(**exp)/factorial(exp))
+	print(soma)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    x=eval(input())
+  File "<string>", line 1, in <module>
+NameError: name 'pi' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 16:33:12) 
+-- CODE:
+from math import*
+x=eval(input("Insira o angulo de X em radiano: "))
+k= int(input("Insira o valor de K termos da serie: "))
+
+cont=1
+sinal=-1
+soma=x
+exp=3
+
+while (cont<k):
+	soma=soma+(sinal(**exp)/factorial(exp))
+	print(soma)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 11, in <module>
+    soma=soma+(sinal(**exp)/factorial(exp))
+TypeError: int object argument after ** must be a mapping, not int
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 16:33:46) 
+-- CODE:
+from math import*
+x=eval(input("Insira o angulo de X em radiano: "))
+k= int(input("Insira o valor de K termos da serie: "))
+
+cont=1
+sinal=-1
+soma=x
+exp=3
+
+while (cont<k):
+	soma=soma+(sinal*(soma**exp)/factorial(exp))
+	print(soma)
+-- OUTPUT:
+0.9248322292886504
+0.7929951365122272
+0.7098837895358932
+0.65026124225607
+0.6044351993127275
+0.5676309475977577
+0.5371487028398712
+0.5113182307574922
+0.48903785134394745
+0.4695449639680293
+0.45229134072154953
+0.43687065916395895
+0.4229740967207474
+0.41036191950276474
+0.39884463997524905
+0.3882701353962451
+0.3785146089379592
+0.3694761021720743
+0.361069745558942
+0.3532242198586934
+0.3458790782438381
+0.33898269118232816
+0.3324906492048655
+0.3263645072305848
+0.32057078704688097
+0.31508017725809734
+0.3098668859513222
+0.3049081126685884
+0.3001836144572862
+0.29567534674853624
+0.2913671642313855
+0.28724457019120414
+0.28329450527100103
+0.27950516851098284
+0.2758658649787312
+0.2723668754308994
+0.268999344328125
+0.2657551832172701
+0.26262698704313253
+0.2596079613883215
+0.25669185898984975
+0.2538729241629942
+0.2511458439915229
+0.2485057053295736
+0.2459479568128934
+0.24346837520252768
+0.24106303548763303
+0.23872828426004256
+0.23646071594482523
+0.23425715153097842
+0.23211461949668075
+0.2300303386659
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 16:35:40) 
+-- CODE:
+from math import*
+x=eval(input("Insira o angulo de X em radiano: "))
+k= int(input("Insira o valor de K termos da serie: "))
+
+cont=1
+sinal=-1
+soma=x
+exp=3
+
+while (cont<k):
+	soma=soma+(sinal*(x**exp)/factorial(exp))
+	sinal= sinal*-1
+	exp=exp+2
+	cont+=1
+print(soma)
+-- OUTPUT:
+1.0000035425842861
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 16:36:07) 
+-- CODE:
+from math import*
+x=eval(input("Insira o angulo de X em radiano: "))
+k= int(input("Insira o valor de K termos da serie: "))
+
+cont=1
+sinal=-1
+soma=x
+exp=3
+
+while (cont<k):
+	soma=soma+(sinal*(x**exp)/factorial(exp))
+	sinal= sinal*-1
+	exp=exp+2
+	cont+=1
+print(round(soma,10)
+-- ERROR:
+File "XXXX", line 16
+    
+                        ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 16:36:10) 
+-- CODE:
+from math import*
+x=eval(input("Insira o angulo de X em radiano: "))
+k= int(input("Insira o valor de K termos da serie: "))
+
+cont=1
+sinal=-1
+soma=x
+exp=3
+
+while (cont<k):
+	soma=soma+(sinal*(x**exp)/factorial(exp))
+	sinal= sinal*-1
+	exp=exp+2
+	cont+=1
+print(round(soma,10))
+-- OUTPUT:
+1.0000035426
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 16:36:19) 
+-- CODE:
+from math import*
+x=eval(input("Insira o angulo de X em radiano: "))
+k= int(input("Insira o valor de K termos da serie: "))
+
+cont=1
+sinal=-1
+soma=x
+exp=3
+
+while (cont<k):
+	soma=soma+(sinal*(x**exp)/factorial(exp))
+	sinal= sinal*-1
+	exp=exp+2
+	cont+=1
+print(round(soma,10))
+-- EXECUTION TIME:
+0.196907
+-- TEST CASE 1:
+---- input:
+pi/2
+5
+---- correct output:
+1.0000035426
+---- user output:
+1.0000035426
+-- TEST CASE 2:
+---- input:
+-pi/2
+4
+---- correct output:
+-0.9998431014
+---- user output:
+-0.9998431014
+-- TEST CASE 3:
+---- input:
+pi/3
+3
+---- correct output:
+0.8662952838
+---- user output:
+0.8662952838
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

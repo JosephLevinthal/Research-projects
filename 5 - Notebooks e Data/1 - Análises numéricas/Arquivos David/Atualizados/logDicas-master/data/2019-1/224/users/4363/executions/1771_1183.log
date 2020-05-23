@@ -1,0 +1,46 @@
+== TEST (2019-05-30 00:30:40) 
+-- CODE:
+a = array(int(input("digite numeros inteiros:)))
+-- ERROR:
+File "XXXX", line 1
+    a = array(int(input("digite numeros inteiros:)))
+                                                   ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 00:32:14) 
+-- CODE:
+a = array(eval(input("digite numeros inteiros:)))
+-- ERROR:
+File "XXXX", line 1
+    a = array(eval(input("digite numeros inteiros:)))
+                                                    ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 00:32:36) 
+-- CODE:
+a = array(eval(input("digite numeros inteiros:")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a = array(eval(input()))
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 00:33:13) 
+-- CODE:
+a= array(eval(input("numeros inteiros")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a= array(eval(input()))
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 00:33:45) 
+-- CODE:
+from numpy import *
+a = array(eval(input("digite numeros inteiros:")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

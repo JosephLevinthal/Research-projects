@@ -1,0 +1,133 @@
+== TEST (2019-05-14 10:45:01) 
+-- CODE:
+t = int(input("tambaqui: "))
+p1 = float(input("percentual: "))/100
+t1 = int(input("quantidade retirada: "))
+anos = 0
+while(ano):
+	t = t + p1*t - t1
+	t = t + 1
+if(t<=0):
+	print("EXTINCAO")
+	print(t)
+elif(t >=12000):
+	print("LIMITE")
+	print(t)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    while(ano):
+NameError: name 'ano' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 10:45:21) 
+-- CODE:
+t = int(input("tambaqui: "))
+p1 = float(input("percentual: "))/100
+t1 = int(input("quantidade retirada: "))
+anos = 0
+while(ano):
+	t = t + p1*t - t1
+	anos = anos + 1
+if(t<=0):
+	print("EXTINCAO")
+	print(t)
+elif(t >=12000):
+	print("LIMITE")
+	print(t)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    while(ano):
+NameError: name 'ano' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 10:45:50) 
+-- CODE:
+t = int(input("tambaqui: "))
+p1 = float(input("percentual: "))/100
+t1 = int(input("quantidade retirada: "))
+anos = 0
+while(t>0)and(t<12000):
+	t = t + p1*t - t1
+	anos = anos + 1
+if(t<=0):
+	print("EXTINCAO")
+	print(t)
+elif(t >=12000):
+	print("LIMITE")
+	print(t)
+-- OUTPUT:
+EXTINCAO
+-47.078419046495654
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 10:46:29) 
+-- CODE:
+t = int(input("tambaqui: "))
+p1 = float(input("percentual: "))/100
+t1 = int(input("quantidade retirada: "))
+anos = 0
+while(t>0)and(t<12000):
+	t = t + p1*t - t1
+	anos = anos + 1
+if(t<=0):
+	print("EXTINCAO")
+	print(anos)
+elif(t >=12000):
+	print("LIMITE")
+	print(anos)
+-- OUTPUT:
+EXTINCAO
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 10:46:44) 
+-- CODE:
+t = int(input("tambaqui: "))
+p1 = float(input("percentual: "))/100
+t1 = int(input("quantidade retirada: "))
+anos = 0
+while(t>0)and(t<12000):
+	t = t + p1*t - t1
+	anos = anos + 1
+if(t<=0):
+	print("EXTINCAO")
+	print(anos)
+elif(t >=12000):
+	print("LIMITE")
+	print(anos)
+-- EXECUTION TIME:
+0.143013
+-- TEST CASE 1:
+---- input:
+1234
+6
+135
+---- correct output:
+EXTINCAO
+14
+---- user output:
+EXTINCAO
+14
+-- TEST CASE 2:
+---- input:
+579
+37
+26
+---- correct output:
+LIMITE
+11
+---- user output:
+LIMITE
+11
+-- TEST CASE 3:
+---- input:
+6789
+45
+2345
+---- correct output:
+LIMITE
+4
+---- user output:
+LIMITE
+4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

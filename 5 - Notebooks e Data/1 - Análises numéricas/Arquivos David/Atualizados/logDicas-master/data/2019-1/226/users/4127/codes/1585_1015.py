@@ -1,0 +1,7 @@
+numero1=int(input("Escreva um numeros: "))
+numero2=int(input("Escreva um numeros: "))
+numero3=int(input("Escreva um numeros: "))
+minimo= min(numero1,numero2,numero3)
+maximo= max(numero1,numero2,numero3)
+intermediario= (numero1+numero2+numero3-maximo-minimo)
+print(minimo,intermediario,maximo)

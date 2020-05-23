@@ -1,0 +1,850 @@
+== TEST (2019-06-25 16:57:06) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n = int(input("dimensao:"))
+
+matriz = zeros((n,n), (dtype=int))
+
+for i in range (0,n):
+	for j in range(0,n):
+		matriz[i.j] =  min(i,j) - 1
+		
+print(matriz)		
+
+
+
+
+-- ERROR:
+File "XXXX", line 6
+    matriz = zeros((n,n), (dtype=int))
+                                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 16:57:15) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n = int(input("dimensao:"))
+
+matriz = zeros(n,n), (dtype=int)
+
+for i in range (0,n):
+	for j in range(0,n):
+		matriz[i.j] =  min(i,j) - 1
+		
+print(matriz)		
+
+
+
+
+-- ERROR:
+File "XXXX", line 6
+    matriz = zeros(n,n), (dtype=int)
+                               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 16:57:33) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n = int(input("dimensao:"))
+
+matriz = zeros(n,n), dtype=int)
+
+for i in range (0,n):
+	for j in range(0,n):
+		matriz[i.j] =  min(i,j) - 1
+		
+print(matriz)		
+
+
+
+
+-- ERROR:
+File "XXXX", line 6
+    matriz = zeros(n,n), dtype=int)
+                                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 16:57:42) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n = int(input("dimensao:"))
+
+matriz = zeros((n,n), dtype=int)
+
+for i in range (0,n):
+	for j in range(0,n):
+		matriz[i.j] =  min(i,j) - 1
+		
+print(matriz)		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 16:58:13) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+n = int(input("dimensao:"))
+
+matriz = zeros((n,n), dtype=int)
+
+for i in range (0,n):
+	for j in range(0,n):
+		matriz[i.j] =  min(i,j)+ 1
+		
+print(matriz)		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 16:59:09) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("dimensao:"))
+
+matriz = zeros((N,N), dtype=int)
+
+for i in range (0,N):
+	for j in range(0,N):
+		matriz[i,j] =  min(i,j)+ 1
+		
+print(matriz)		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 16:59:19) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("dimensao:"))
+
+matriz = zeros((N,N), dtype=int)
+
+for i in range (0,N):
+	for j in range(0,N):
+		matriz[i,j] =  min(i,j)+ 1
+		
+print(matriz)		
+
+
+
+
+-- EXECUTION TIME:
+1.29685
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-27 12:50:02) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("dimensao:"))
+
+matriz = zeros((N,N), dtype=int)
+
+for i in range (0,N):
+	for j in range(0,N):
+		matriz[i,j] =  max(i,j)+ 1
+		
+print(matriz)		
+
+
+
+
+-- EXECUTION TIME:
+1.16255
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 2 3]
+ [2 2 3]
+ [3 3 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 2 3 4 5 6 7 8]
+ [2 2 3 4 5 6 7 8]
+ [3 3 3 4 5 6 7 8]
+ [4 4 4 4 5 6 7 8]
+ [5 5 5 5 5 6 7 8]
+ [6 6 6 6 6 6 7 8]
+ [7 7 7 7 7 7 7 8]
+ [8 8 8 8 8 8 8 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 12:50:07) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("dimensao:"))
+
+matriz = zeros((N,N), dtype=int)
+
+for i in range (0,N):
+	for j in range(0,N):
+		matriz[i,j] =  min(i,j)+ 1
+		
+print(matriz)		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 12:52:07) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("dimensao:"))
+
+matriz = zeros((N,N), dtype=int)
+
+for i in range (0,N):
+	for j in range(0,N):
+		matriz[i,j] =  min(i,j)+ 1
+		
+print(matriz)		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-27 12:53:48) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("dimensao:"))
+
+matriz = zeros((N,N), dtype=int)
+
+for i in range (0,N):
+	for j in range(0,N):
+		matriz[i,j] =  min(i,j)+ 1
+		
+print(matriz)		
+
+
+
+
+-- EXECUTION TIME:
+1.12254
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:11:49) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("dimensao:"))
+
+matriz = zeros((N,N), dtype=int)
+
+for i in range (0,N):
+	for j in range(0,N):
+		matriz[i,j] = matriz[i,j] + 1
+		
+print(matriz)		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:14:43) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("dimensao:"))
+
+matriz = zeros((N,N), dtype=int)
+
+for i in range (0,N):
+	for j in range(0,N):
+		matriz[i] =  min(i)+ 1
+		
+print(matriz)		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:15:09) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("dimensao:"))
+
+matriz = zeros((N,N), dtype=int)
+
+for i in range (0,N):
+	for j in range(0,N):
+		matriz[i,j] =  min(i,j)+ 1
+		
+		print(matriz)		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-27 13:15:59) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("dimensao:"))
+
+matriz = zeros((N,N), dtype=int)
+
+for i in range (0,N):
+	for j in range(0,N):
+		matriz[i,j] =  min(i,j)+ 1
+		
+		print(matriz)		
+
+
+
+
+-- EXECUTION TIME:
+0.918151
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 0 0]
+ [0 0 0]
+ [0 0 0]]
+[[1 1 0]
+ [0 0 0]
+ [0 0 0]]
+[[1 1 1]
+ [0 0 0]
+ [0 0 0]]
+[[1 1 1]
+ [1 0 0]
+ [0 0 0]]
+[[1 1 1]
+ [1 2 0]
+ [0 0 0]]
+[[1 1 1]
+ [1 2 2]
+ [0 0 0]]
+[[1 1 1]
+ [1 2 2]
+ [1 0 0]]
+[[1 1 1]
+ [1 2 2]
+ [1 2 0]]
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]]
+[[1 1 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]]
+[[1 1 1 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]]
+[[1 1 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]]
+[[1 1 1 1 1 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]]
+[[1 1 1 1 1 1 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]]
+[[1 1 1 1 1 1 1 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:16:05) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("dimensao:"))
+
+matriz = zeros((N,N), dtype=int)
+
+for i in range (0,N):
+	for j in range(0,N):
+		matriz[i,j] =  min(i,j)+ 1
+		
+print(matriz)		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:16:52) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("dimensao:"))
+
+matriz = zeros((N,N), dtype=int)
+
+for i in range (0,N):
+	for j in range(0,N):
+		matriz[i,j] =  min(i,j)+ 1
+		print(matriz)
+print(matriz)		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 13:19:39) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("dimensao:"))
+
+matriz = ones((N,N), dtype=int)
+
+for i in range (0,N):
+	for j in range(0,N):
+		matriz[i,j] =  min(i,j)+ 1
+		print(matriz)
+print(matriz)		
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-27 13:33:52) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("dimensao:"))
+
+matriz = zeros((N,N), dtype=int)
+
+for i in range (0,N):
+	for j in range(0,N):
+		matriz[i,j] =  min(i,j)+ 1
+		print(matriz)
+print(matriz)		
+
+
+
+
+-- EXECUTION TIME:
+1.27714
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 0 0]
+ [0 0 0]
+ [0 0 0]]
+[[1 1 0]
+ [0 0 0]
+ [0 0 0]]
+[[1 1 1]
+ [0 0 0]
+ [0 0 0]]
+[[1 1 1]
+ [1 0 0]
+ [0 0 0]]
+[[1 1 1]
+ [1 2 0]
+ [0 0 0]]
+[[1 1 1]
+ [1 2 2]
+ [0 0 0]]
+[[1 1 1]
+ [1 2 2]
+ [1 0 0]]
+[[1 1 1]
+ [1 2 2]
+ [1 2 0]]
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]]
+[[1 1 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]]
+[[1 1 1 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]]
+[[1 1 1 1 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]]
+[[1 1 1 1 1 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]]
+[[1 1 1 1 1 1 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]]
+[[1 1 1 1 1 1 1 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+[[1]]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-27 13:34:05) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+N = int(input("dimensao:"))
+
+matriz = zeros((N,N), dtype=int)
+
+for i in range (0,N):
+	for j in range(0,N):
+		matriz[i,j] =  min(i,j)+ 1
+		
+print(matriz)		
+
+
+
+
+-- EXECUTION TIME:
+1.16953
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

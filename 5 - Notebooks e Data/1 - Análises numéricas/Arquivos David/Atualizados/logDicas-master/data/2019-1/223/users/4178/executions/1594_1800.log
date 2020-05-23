@@ -1,0 +1,1224 @@
+== TEST (2019-03-20 10:13:17) 
+-- CODE:
+a= float('2.1')
+b=
+c=
+
+
+print(a)
+-- ERROR:
+File "XXXX", line 2
+    b=
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:14:15) 
+-- CODE:
+a= float('2.1')
+b = float('3.3')
+
+
+print(a)
+-- OUTPUT:
+2.1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:15:05) 
+-- CODE:
+a= float('2.1**2')
+b = float('3.3**2')
+c = float('4.4**2')
+
+
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a= float('2.1**2')
+ValueError: could not convert string to float: '2.1**2'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:16:15) 
+-- CODE:
+a= float('2.1')
+b = float('3.3')
+c = float('4.4')
+
+x = a**2
+
+
+print(x)
+-- OUTPUT:
+4.41
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:16:57) 
+-- CODE:
+a= float('2.1')
+b = float('3.3')
+c = float('4.4')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+print(x, xx, xxx)
+-- OUTPUT:
+4.41 10.889999999999999 19.360000000000003
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:17:31) 
+-- CODE:
+a= float('2.1')
+b = float('3.2')
+c = float('4.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+print(x, xx, xxx)
+-- OUTPUT:
+4.41 10.240000000000002 17.64
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:17:40) 
+-- CODE:
+a= float('2.1')
+b = float('3.1')
+c = float('4.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+print(x, xx, xxx)
+-- OUTPUT:
+4.41 9.610000000000001 17.64
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:17:45) 
+-- CODE:
+a= float('2.1')
+b = float('3.7')
+c = float('4.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+print(x, xx, xxx)
+-- OUTPUT:
+4.41 13.690000000000001 17.64
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:20:11) 
+-- CODE:
+a= float('2.1')
+b = float('3.7')
+c = float('4.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(test)
+-- OUTPUT:
+34.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:20:36) 
+-- CODE:
+a= float('2.1')
+b = float('3.7')
+c = float('4.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 35))
+-- OUTPUT:
+34.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:21:01) 
+-- CODE:
+a= float('2.1')
+b = float('3.7')
+c = float('4.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 38))
+-- OUTPUT:
+34.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:21:19) 
+-- CODE:
+a= float('2.1')
+b = float('3.7')
+c = float('4.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, test))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 11, in <module>
+    print(round(test, test))
+TypeError: 'float' object cannot be interpreted as an integer
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:21:28) 
+-- CODE:
+a= float('2.1')
+b = float('3.7')
+c = float('4.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(35, test))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 11, in <module>
+    print(round(35, test))
+TypeError: 'float' object cannot be interpreted as an integer
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:21:59) 
+-- CODE:
+a= float('.1')
+b = float('3.7')
+c = float('4.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 45))
+-- OUTPUT:
+197.99999999999997
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:22:12) 
+-- CODE:
+a= float('1.1')
+b = float('3.7')
+c = float('4.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 45))
+-- OUTPUT:
+38.83636363636364
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:22:19) 
+-- CODE:
+a= float('1.1')
+b = float('3.7')
+c = float('4.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test,39))
+-- OUTPUT:
+38.83636363636364
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:22:31) 
+-- CODE:
+a= float('1.1')
+b = float('1.7')
+c = float('1.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test,39))
+-- OUTPUT:
+8.309090909090909
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:22:45) 
+-- CODE:
+a= float('1.1')
+b = float('1.7')
+c = float('1.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test,9))
+-- OUTPUT:
+8.309090909
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:23:05) 
+-- CODE:
+a= float('1.1')
+b = float('1.7')
+c = float('1.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 8.3))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 11, in <module>
+    print(round(test, 8.3))
+TypeError: 'float' object cannot be interpreted as an integer
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:23:06) 
+-- CODE:
+a= float('1.1')
+b = float('1.7')
+c = float('1.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 8.4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 11, in <module>
+    print(round(test, 8.4))
+TypeError: 'float' object cannot be interpreted as an integer
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:23:15) 
+-- CODE:
+a= float('1.1')
+b = float('1.7')
+c = float('1.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 9))
+-- OUTPUT:
+8.309090909
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:23:23) 
+-- CODE:
+a= float('1.1')
+b = float('1.2')
+c = float('1.3')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 9))
+-- OUTPUT:
+6.686363636
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:24:00) 
+-- CODE:
+a= float('1')
+b = float('2')
+c = float('3')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 9))
+-- OUTPUT:
+19.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:24:09) 
+-- CODE:
+a= float('1')
+b = float('2')
+c = float('3')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 20))
+-- OUTPUT:
+19.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:25:33) 
+-- CODE:
+a= float('1.3')
+b = float('2')
+c = float('3')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 20))
+-- OUTPUT:
+17.613076923076925
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:25:34) 
+-- CODE:
+a= float('1.3')
+b = float('2')
+c = float('3')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 20))
+-- OUTPUT:
+17.613076923076925
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:25:43) 
+-- CODE:
+a= float('1.3')
+b = float('2.2')
+c = float('3.1')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 20))
+-- OUTPUT:
+19.222307692307695
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:26:27) 
+-- CODE:
+a= float('1.3')
+b = float('2.2')
+c = float('3.6')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 20))
+-- OUTPUT:
+22.29923076923077
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:26:32) 
+-- CODE:
+a= float('1.3')
+b = float('2.2')
+c = float('3.8')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 20))
+-- OUTPUT:
+23.63769230769231
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:26:40) 
+-- CODE:
+a= float('1.3')
+b = float('2.2')
+c = float('3.8')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 24))
+-- OUTPUT:
+23.63769230769231
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:27:07) 
+-- CODE:
+a= float('1.3')
+b = float('2.2')
+c = float('3.8')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(23.6376, 24))
+-- OUTPUT:
+23.6376
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-20 10:27:21) 
+-- CODE:
+a= float('1.3')
+b = float('2.2')
+c = float('3.8')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(23.6376, 24))
+-- EXECUTION TIME:
+0.196758
+-- TEST CASE 1:
+---- input:
+20
+25
+30
+---- correct output:
+25.6666667
+---- user output:
+23.6376
+-- TEST CASE 2:
+---- input:
+235
+400
+350
+---- correct output:
+342.8680203
+---- user output:
+23.6376
+-- TEST CASE 3:
+---- input:
+90
+120
+2
+---- correct output:
+106.1509434
+---- user output:
+23.6376
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:27:23) 
+-- CODE:
+a= float('1.3')
+b = float('2.2')
+c = float('3.8')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(23.6376, 24))
+-- OUTPUT:
+23.6376
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:27:46) 
+-- CODE:
+a= float('1.3')
+b = float('2.2')
+c = float('3.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(23.6376, 24))
+-- OUTPUT:
+23.6376
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:27:50) 
+-- CODE:
+a= float('1.3')
+b = float('2.2')
+c = float('3.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 24))
+-- OUTPUT:
+19.806923076923077
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 10:28:00) 
+-- CODE:
+a= float('1.3')
+b = float('2.2')
+c = float('3.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 20))
+-- OUTPUT:
+19.806923076923077
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-20 10:28:03) 
+-- CODE:
+a= float('1.3')
+b = float('2.2')
+c = float('3.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 20))
+-- EXECUTION TIME:
+0.196835
+-- TEST CASE 1:
+---- input:
+20
+25
+30
+---- correct output:
+25.6666667
+---- user output:
+19.806923076923077
+-- TEST CASE 2:
+---- input:
+235
+400
+350
+---- correct output:
+342.8680203
+---- user output:
+19.806923076923077
+-- TEST CASE 3:
+---- input:
+90
+120
+2
+---- correct output:
+106.1509434
+---- user output:
+19.806923076923077
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 17:12:10) 
+-- CODE:
+a= float('1.3')
+b = float('2.2')
+c = float('3.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 6))
+-- OUTPUT:
+19.806923
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-21 17:12:15) 
+-- CODE:
+a= float('1.3')
+b = float('2.2')
+c = float('3.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 6))
+-- EXECUTION TIME:
+0.161583
+-- TEST CASE 1:
+---- input:
+20
+25
+30
+---- correct output:
+25.6666667
+---- user output:
+19.806923
+-- TEST CASE 2:
+---- input:
+235
+400
+350
+---- correct output:
+342.8680203
+---- user output:
+19.806923
+-- TEST CASE 3:
+---- input:
+90
+120
+2
+---- correct output:
+106.1509434
+---- user output:
+19.806923
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 17:12:37) 
+-- CODE:
+a= float('1.1')
+b = float('2.1')
+c = float('3.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 6))
+-- OUTPUT:
+20.229091
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 17:12:44) 
+-- CODE:
+a= float('1.1')
+b = float('2.1')
+c = float('3.1')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 6))
+-- OUTPUT:
+19.556364
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 17:12:56) 
+-- CODE:
+a= float('1.2')
+b = float('2.2')
+c = float('3.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 6))
+-- OUTPUT:
+20.213333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-21 17:12:59) 
+-- CODE:
+a= float('1.2')
+b = float('2.2')
+c = float('3.2')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 6))
+-- EXECUTION TIME:
+0.178924
+-- TEST CASE 1:
+---- input:
+20
+25
+30
+---- correct output:
+25.6666667
+---- user output:
+20.213333
+-- TEST CASE 2:
+---- input:
+235
+400
+350
+---- correct output:
+342.8680203
+---- user output:
+20.213333
+-- TEST CASE 3:
+---- input:
+90
+120
+2
+---- correct output:
+106.1509434
+---- user output:
+20.213333
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 17:13:26) 
+-- CODE:
+a= float('1')
+b = float('2')
+c = float('3')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 6))
+-- OUTPUT:
+19.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 17:13:42) 
+-- CODE:
+a= float('1.2')
+b = float('2')
+c = float('3')
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 6))
+-- OUTPUT:
+17.94
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 17:14:24) 
+-- CODE:
+a= 2
+b = 3
+c = 4
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 6))
+-- OUTPUT:
+28.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 18:48:26) 
+-- CODE:
+a= 2
+b = 3
+c = 4
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 6))
+-- EXECUTION TIME:
+0.245579
+-- TEST CASE 1:
+---- input:
+20
+25
+30
+---- correct output:
+25.6666667
+---- user output:
+28.0
+-- TEST CASE 2:
+---- input:
+235
+400
+350
+---- correct output:
+342.8680203
+---- user output:
+28.0
+-- TEST CASE 3:
+---- input:
+90
+120
+2
+---- correct output:
+106.1509434
+---- user output:
+28.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 18:49:00) 
+-- CODE:
+a= 2
+b = 3
+c = 4
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 7))
+-- EXECUTION TIME:
+0.129082
+-- TEST CASE 1:
+---- input:
+20
+25
+30
+---- correct output:
+25.6666667
+---- user output:
+28.0
+-- TEST CASE 2:
+---- input:
+235
+400
+350
+---- correct output:
+342.8680203
+---- user output:
+28.0
+-- TEST CASE 3:
+---- input:
+90
+120
+2
+---- correct output:
+106.1509434
+---- user output:
+28.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:49:02) 
+-- CODE:
+a= 2
+b = 3
+c = 4
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 7))
+-- OUTPUT:
+28.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 18:50:29) 
+-- CODE:
+a= input("A")
+b = input("B")
+c = input("C")
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 7))
+-- EXECUTION TIME:
+0.147406
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1594/1800/main.py", line 5, in <module>
+    x = a**2
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:50:47) 
+-- CODE:
+a= input("A")
+b = input("B")
+c = input("C")
+
+x = a**2
+xx = b**2
+xxx = c**2
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 7))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    x = a**2
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:52:14) 
+-- CODE:
+a= input("A")
+b = input("B")
+c = input("C")
+
+x =float (a**2)
+xx = float(b**2)
+xxx = float(c**2)
+
+test = x + xx + xxx / a + b + c
+
+print(round(test, 7))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    x =float (a**2)
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:53:09) 
+-- CODE:
+a= input("A")
+b = input("B")
+c = input("C")
+
+
+
+test = a**2+ b**2+ c**2/ a + b + c
+
+print(round(test, 7))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    test = a**2+ b**2+ c**2/ a + b + c
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:53:46) 
+-- CODE:
+a= input("A")
+b = input("B")
+c = input("C")
+
+
+
+test = a**2+ b**2+ c**2/ a + b + c
+cc= float(test)
+
+print(round(test, 7))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    test = a**2+ b**2+ c**2/ a + b + c
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 18:54:04) 
+-- CODE:
+a= input("A")
+b = input("B")
+c = input("C")
+
+cc= float(test)
+
+test = a**2+ b**2+ c**2/ a + b + c
+
+
+print(round(test, 7))
+-- EXECUTION TIME:
+0.163263
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1594/1800/main.py", line 5, in <module>
+    cc= float(test)
+NameError: name 'test' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:54:09) 
+-- CODE:
+a= input("A")
+b = input("B")
+c = input("C")
+
+cc= float(test)
+
+test = a**2+ b**2+ c**2/ a + b + c
+
+
+print(round(test, 7))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    cc= float(test)
+NameError: name 'test' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 18:54:50) 
+-- CODE:
+a= input("A")
+b = input("B")
+c = input("C")
+
+cc= float(test)
+
+test = (a**2+ b**2+ c**2)/ (a + b + c)
+
+
+print(round(test, 7))
+-- EXECUTION TIME:
+0.12628
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1594/1800/main.py", line 5, in <module>
+    cc= float(test)
+NameError: name 'test' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:55:04) 
+-- CODE:
+a= input("A")
+b = input("B")
+c = input("C")
+
+
+test = (a**2+ b**2+ c**2)/ (a + b + c)
+
+
+print(round(test, 7))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    test = (a**2+ b**2+ c**2)/ (a + b + c)
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:56:40) 
+-- CODE:
+a= input("A")
+b = input("B")
+c = input("C")
+
+
+test = (a**2+ b**2+ c**2)/ (a + b + c)
+
+
+print(round(test, 7))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    test = (a**2+ b**2+ c**2)/ (a + b + c)
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 18:58:36) 
+-- CODE:
+a= int(input("A"))
+b = int(input("B"))
+c = int(input("C"))
+
+
+test = (a**2+ b**2+ c**2)/ (a + b + c)
+
+
+print(round(test, 7))
+-- EXECUTION TIME:
+0.151314
+-- TEST CASE 1:
+---- input:
+20
+25
+30
+---- correct output:
+25.6666667
+---- user output:
+25.6666667
+-- TEST CASE 2:
+---- input:
+235
+400
+350
+---- correct output:
+342.8680203
+---- user output:
+342.8680203
+-- TEST CASE 3:
+---- input:
+90
+120
+2
+---- correct output:
+106.1509434
+---- user output:
+106.1509434
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-17 13:02:42) 
+-- CODE:
+a= int(input("A"))
+b = int(input("B"))
+c = int(input("C"))
+
+
+test = (a**2+ b**2+ c**2)/ (a + b + c)
+
+
+print(round(test, 7))
+-- EXECUTION TIME:
+0.120278
+-- TEST CASE 1:
+---- input:
+20
+25
+30
+---- correct output:
+25.6666667
+---- user output:
+25.6666667
+-- TEST CASE 2:
+---- input:
+235
+400
+350
+---- correct output:
+342.8680203
+---- user output:
+342.8680203
+-- TEST CASE 3:
+---- input:
+90
+120
+2
+---- correct output:
+106.1509434
+---- user output:
+106.1509434
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

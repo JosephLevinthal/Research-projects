@@ -1,0 +1,474 @@
+== TEST (2019-03-21 23:13:31) 
+-- CODE:
+r = int(input("Insira um raio: "))
+areaR = 4/3 * mach.pi * r**2
+volumeR = 4/3 * mach.pi * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    r = int(input())
+ValueError: invalid literal for int() with base 10: '4.5'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 23:19:51) 
+-- CODE:
+r = int(input("Insira um raio: "))
+areaR = 4/3 * mach.pi() * r**2
+volumeR = 4/3 * mach.pi() * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    r = int(input())
+ValueError: invalid literal for int() with base 10: '4.5'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 23:43:17) 
+-- CODE:
+r = int(input("Insira um raio: "))
+areaR = 4/3 * mach.pi(3,14) * r**2
+volumeR = 4/3 * mach.pi(3,14) * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    r = int(input())
+ValueError: invalid literal for int() with base 10: '4.5'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 23:44:48) 
+-- CODE:
+r = int(input("Insira um raio: "))
+areaR = 4/3 * pi * r**2
+volumeR = 4/3 * pi * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    r = int(input())
+ValueError: invalid literal for int() with base 10: '4.5'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:19:55) 
+-- CODE:
+from import mach.pi
+r = int(input("Insira um raio: "))
+areaR = pi * r**2
+volumeR = 4/3 * pi * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+File "XXXX", line 1
+    from import mach.pi
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:20:19) 
+-- CODE:
+r = int(input("Insira um raio: "))
+from import mach.pi
+areaR = pi * r**2
+volumeR = 4/3 * pi * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+File "XXXX", line 2
+    from import mach.pi
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:20:59) 
+-- CODE:
+r = int(input("Insira um raio: ")
+import from mach.pi()
+areaR = pi * r**2
+volumeR = 4/3 * pi * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+File "XXXX", line 2
+    import from mach.pi()
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:25:16) 
+-- CODE:
+from mach import *
+r = int(input("Insira um raio: ")
+areaR = pi * r**2
+volumeR = 4/3 * pi * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+File "XXXX", line 3
+    areaR = pi * r**2
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:25:25) 
+-- CODE:
+from mach import 
+r = int(input("Insira um raio: ")
+areaR = pi * r**2
+volumeR = 4/3 * pi * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+File "XXXX", line 1
+    from mach import 
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:26:01) 
+-- CODE:
+from math import 
+r = int(input("Insira um raio: ")
+areaR = pi * r**2
+volumeR = 4/3 * pi * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+File "XXXX", line 1
+    from math import 
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:26:32) 
+-- CODE:
+from math import *
+r = int(input("Insira um raio: ")
+areaR = pi * r**2
+volumeR = 4/3 * pi * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+File "XXXX", line 3
+    areaR = pi * r**2
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:26:41) 
+-- CODE:
+from math.pi import *
+r = int(input("Insira um raio: ")
+areaR = pi * r**2
+volumeR = 4/3 * pi * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+File "XXXX", line 3
+    areaR = pi * r**2
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:27:50) 
+-- CODE:
+from math.pi import *
+r = int(input("Insira um raio: ")
+areaR = math.pi * r**2
+volumeR = 4/3 * pi * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+File "XXXX", line 3
+    areaR = math.pi * r**2
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:28:14) 
+-- CODE:
+from math.pi import *
+r = int(input("Insira um raio: ")
+areaR = (math.pi) * r**2
+volumeR = 4/3 * pi * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+File "XXXX", line 3
+    areaR = (math.pi) * r**2
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:28:38) 
+-- CODE:
+from math.pi import *
+r = int(input("Insira um raio: ")
+areaR = (pi) * r**2
+volumeR = 4/3 * pi * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+File "XXXX", line 3
+    areaR = (pi) * r**2
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:30:39) 
+-- CODE:
+from math.pi import *
+r = int(input("Insira um raio: ")
+areaR = (3,14) * r**2
+volumeR = 4/3 * (3,14) * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+File "XXXX", line 3
+    areaR = (3,14) * r**2
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:31:19) 
+-- CODE:
+from math.pi import *
+r = int(input("Insira um raio: ")
+areaR = (3.14) * r**2
+volumeR = 4/3 * (3.14) * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+File "XXXX", line 3
+    areaR = (3.14) * r**2
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:31:58) 
+-- CODE:
+from math.pi import *
+r = int(input("Insira um raio: ")
+A = (3,14) * (r**2)
+volumeR = 4/3 * (3.14) * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+File "XXXX", line 3
+    A = (3,14) * (r**2)
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:32:22) 
+-- CODE:
+from math.pi import *
+r = int(input("Insira um raio: ")
+A = (3,14) 
+volumeR = 4/3 * (3.14) * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+File "XXXX", line 3
+    A = (3,14) 
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:32:33) 
+-- CODE:
+from math.pi import *
+r = int(input("Insira um raio: ")
+A = (314) 
+volumeR = 4/3 * (3.14) * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+File "XXXX", line 3
+    A = (314) 
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:32:45) 
+-- CODE:
+from math.pi import *
+r = int(input("Insira um raio: ")
+volumeR = 4/3 * (3.14) * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+File "XXXX", line 3
+    volumeR = 4/3 * (3.14) * r**3
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:34:10) 
+-- CODE:
+from math.pi import *
+r = int(input("Insira um raio: ")
+volumeR = 4/3 * (pi) * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+File "XXXX", line 3
+    volumeR = 4/3 * (pi) * r**3
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:34:45) 
+-- CODE:
+from math.pi import *
+r = int(input("Insira um raio: ")
+volumeR == 4/3 * (pi) * r**3
+print(round(areaR, 3))
+print(round(volumeR, 3))
+-- ERROR:
+File "XXXX", line 3
+    volumeR == 4/3 * (pi) * r**3
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:35:26) 
+-- CODE:
+var = int(input("Insira um raio: "))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    var = int(input())
+ValueError: invalid literal for int() with base 10: '4.5'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:37:40) 
+-- CODE:
+var = int(input("Insira um raio: "))
+from mach.pi import *
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    var = int(input())
+ValueError: invalid literal for int() with base 10: '4.5'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:38:00) 
+-- CODE:
+var = int(input("Insira um raio: "))
+from math.pi import *
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    var = int(input())
+ValueError: invalid literal for int() with base 10: '4.5'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:38:15) 
+-- CODE:
+var = int(input("Insira um raio: "))
+from math import *
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    var = int(input())
+ValueError: invalid literal for int() with base 10: '4.5'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:40:08) 
+-- CODE:
+r = int(input("Insira um raio: "))
+from math import *
+A == pi*r**2
+V == (4/3)*pi*r***3
+print(round(A, 3))
+print(round(V, 3))
+-- ERROR:
+File "XXXX", line 4
+    V == (4/3)*pi*r***3
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:40:24) 
+-- CODE:
+r = int(input("Insira um raio: "))
+from math import *
+A == pi*r**2
+V == (4/3)*pi*r**3
+print(round(A, 3))
+print(round(V, 3))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    r = int(input())
+ValueError: invalid literal for int() with base 10: '4.5'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:40:44) 
+-- CODE:
+r = int(input("Insira um raio: "))
+from math import *
+A = pi*r**2
+V = (4/3)*pi*r**3
+print(round(A, 3))
+print(round(V, 3))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    r = int(input())
+ValueError: invalid literal for int() with base 10: '4.5'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-22 23:41:01) 
+-- CODE:
+r = int(input("Insira um raio: "))
+from math import *
+A = pi*r**2
+V = (4/3)*pi*r**3
+print(round(A, 3))
+print(round(V, 3))
+-- EXECUTION TIME:
+0.154481
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1596/825/main.py", line 1, in <module>
+    r = int(input())
+ValueError: invalid literal for int() with base 10: '4.5'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-22 23:41:09) 
+-- CODE:
+r = int(input("Insira um raio: "))
+from math import *
+A = pi*r**2
+V = (4/3)*pi*r**3
+print(round(A, 3))
+print(round(V, 3))
+-- EXECUTION TIME:
+0.143018
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1596/825/main.py", line 1, in <module>
+    r = int(input())
+ValueError: invalid literal for int() with base 10: '4.5'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 23:41:25) 
+-- CODE:
+r = float(input("Insira um raio: "))
+from math import *
+A = pi*r**2
+V = (4/3)*pi*r**3
+print(round(A, 3))
+print(round(V, 3))
+-- OUTPUT:
+63.617
+381.704
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-22 23:42:01) 
+-- CODE:
+r = float(input("Insira um raio: "))
+from math import *
+A = pi*r**2
+V = (4/3)*pi*r**3
+print(round(A, 3))
+print(round(V, 3))
+-- EXECUTION TIME:
+0.205575
+-- TEST CASE 1:
+---- input:
+4.5
+
+---- correct output:
+63.617
+381.704
+---- user output:
+63.617
+381.704
+-- TEST CASE 2:
+---- input:
+12.34
+---- correct output:
+478.388
+7871.076
+---- user output:
+478.388
+7871.076
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,90 @@
+== TEST (2019-05-02 01:55:39) 
+-- CODE:
+d1=float(input("Digite a distancia entre os olhos da imagem 1: "))
+D1=float(input("Digite a distancia entre o nariz e queixo da imagem 1: "))
+d2=float(input("Digite a distancia entre os olhos da imagem 2: "))
+D2=float(input("Digite a distancia entre o nariz e queixo da imagem 2: "))
+d3=float(input("Digite a distancia entre os olhos da imagem 3: "))
+D3=float(input("Digite a distancia entre o nariz e queixo da imagem 3: "))
+
+from math import*
+p1=d1/D1
+p2=d2/D2
+p3=d3/D3
+
+f1=abs(p1-p2)
+f2=abs(p1-p3)
+f3=abs(p2-p3)
+if(f1<f2 and f1<f3):
+	print("1 e 2")
+elif(f2<f1 and f2<f3):
+	print("1 e 3")
+elif(f3<f1 and f3<f2):
+	print("2 e 3")
+-- OUTPUT:
+1 e 3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 01:56:17) 
+-- CODE:
+d1=float(input("Digite a distancia entre os olhos da imagem 1: "))
+D1=float(input("Digite a distancia entre o nariz e queixo da imagem 1: "))
+d2=float(input("Digite a distancia entre os olhos da imagem 2: "))
+D2=float(input("Digite a distancia entre o nariz e queixo da imagem 2: "))
+d3=float(input("Digite a distancia entre os olhos da imagem 3: "))
+D3=float(input("Digite a distancia entre o nariz e queixo da imagem 3: "))
+
+from math import*
+p1=d1/D1
+p2=d2/D2
+p3=d3/D3
+
+f1=abs(p1-p2)
+f2=abs(p1-p3)
+f3=abs(p2-p3)
+if(f1<f2 and f1<f3):
+	print("1 e 2")
+elif(f2<f1 and f2<f3):
+	print("1 e 3")
+elif(f3<f1 and f3<f2):
+	print("2 e 3")
+-- EXECUTION TIME:
+0.165128
+-- TEST CASE 1:
+---- input:
+6.7
+6.3
+7.0
+4.0
+7.0
+6.6
+---- correct output:
+1 e 3
+---- user output:
+1 e 3
+-- TEST CASE 2:
+---- input:
+1.0
+2.0
+3.0
+6.0
+8.0
+10.0
+---- correct output:
+1 e 2
+---- user output:
+1 e 2
+-- TEST CASE 3:
+---- input:
+20.0
+30.0
+5.0
+10.0
+5.0
+10.0
+---- correct output:
+2 e 3
+---- user output:
+2 e 3
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

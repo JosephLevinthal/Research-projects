@@ -1,0 +1,90 @@
+== TEST (2019-03-26 10:32:41) 
+-- CODE:
+dis=float(input("qual a distancia percorrida: "))
+comb=float(input("quanto combustivel foi consumido: "))
+
+cons= dis/comb
+
+print(round(cons,3)"km/l")
+-- ERROR:
+File "XXXX", line 6
+    print(round(cons,3)"km/l")
+                            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:33:05) 
+-- CODE:
+dis=float(input("qual a distancia percorrida: "))
+comb=float(input("quanto combustivel foi consumido: "))
+
+cons= dis/comb
+
+print(round(cons,3"km/l"))
+-- ERROR:
+File "XXXX", line 6
+    print(round(cons,3"km/l"))
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:33:32) 
+-- CODE:
+dis=float(input("qual a distancia percorrida: "))
+comb=float(input("quanto combustivel foi consumido: "))
+
+cons= dis/comb
+
+print(round(cons,3)("km/l"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print(round(cons,3)("km/l"))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:35:10) 
+-- CODE:
+dis=float(input("qual a distancia percorrida: "))
+comb=float(input("quanto combustivel foi consumido: "))
+
+cons= dis/comb
+
+print(round(cons,3),"km/l")
+-- OUTPUT:
+14.286 km/l
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 10:35:25) 
+-- CODE:
+dis=float(input("qual a distancia percorrida: "))
+comb=float(input("quanto combustivel foi consumido: "))
+
+cons= dis/comb
+
+print(round(cons,3),"km/l")
+-- EXECUTION TIME:
+0.157289
+-- TEST CASE 1:
+---- input:
+28.572
+2
+---- correct output:
+14.286 km/l
+---- user output:
+14.286 km/l
+-- TEST CASE 2:
+---- input:
+2254
+124.4
+---- correct output:
+18.119 km/l
+---- user output:
+18.119 km/l
+-- TEST CASE 3:
+---- input:
+4554
+464.6
+---- correct output:
+9.802 km/l
+---- user output:
+9.802 km/l
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

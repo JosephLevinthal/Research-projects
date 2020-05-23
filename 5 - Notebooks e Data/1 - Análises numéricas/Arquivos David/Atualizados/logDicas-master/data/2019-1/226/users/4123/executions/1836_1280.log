@@ -1,0 +1,881 @@
+== TEST (2019-06-27 10:32:08) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtabo = xtab = 0
+ytabo = ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	 # Move personagem para ESQUERDA
+    if x == 'A':
+        xtab = xtab - 1
+    # Move personagem para DIREITA
+    elif x == 'D':
+        xtab = xtab + 1
+	 # Move personagem para CIMA
+    elif x == 'W':
+        ytab = ytab - 1
+    # Move personagem para BAIXO
+    elif x == 'S':
+        ytab = ytab + 1
+
+	 if xtab > shape(tabuleiro)[1] or ytab > shape(tabuleiro)[0]:
+		  xtab = xtabo
+		  ytab = ytabo
+	 elif tabuleiro[ytab,xtab] == 33:
+		  xtab = xtabo
+		  ytab = ytabo
+	 else:
+		  xtabo = xtab
+		  ytabo = ytab
+
+    # Trata evento
+    # Moeda
+    if tabuleiro[ytab,xtab] == 11:
+        moeda = moeda + 1
+        # Apaga moeda do tabuleiro
+        tabuleiro[ytab,xtab] = 0
+    # Zumbi
+    elif tabuleiro[ytab,xtab] == 22:
+        life = life - 5
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+
+-- ERROR:
+File "XXXX", line 37
+    if xtab > shape(tabuleiro)[1] or ytab > shape(tabuleiro)[0]:
+                                                               ^
+TabError: inconsistent use of tabs and spaces in indentation
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:32:39) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtabo = xtab = 0
+ytabo = ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	 # Move personagem para ESQUERDA
+    if x == 'A':
+        xtab = xtab - 1
+    # Move personagem para DIREITA
+    elif x == 'D':
+        xtab = xtab + 1
+	 # Move personagem para CIMA
+    elif x == 'W':
+        ytab = ytab - 1
+    # Move personagem para BAIXO
+    elif x == 'S':
+        ytab = ytab + 1
+
+	 if xtab > shape(tabuleiro)[1] or ytab > shape(tabuleiro)[0]:
+		xtab = xtabo
+		ytab = ytabo
+	 elif tabuleiro[ytab,xtab] == 33:
+		  xtab = xtabo
+		  ytab = ytabo
+	 else:
+		  xtabo = xtab
+		  ytabo = ytab
+
+    # Trata evento
+    # Moeda
+    if tabuleiro[ytab,xtab] == 11:
+        moeda = moeda + 1
+        # Apaga moeda do tabuleiro
+        tabuleiro[ytab,xtab] = 0
+    # Zumbi
+    elif tabuleiro[ytab,xtab] == 22:
+        life = life - 5
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+
+-- ERROR:
+File "XXXX", line 37
+    if xtab > shape(tabuleiro)[1] or ytab > shape(tabuleiro)[0]:
+                                                               ^
+TabError: inconsistent use of tabs and spaces in indentation
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:33:16) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtabo = xtab = 0
+ytabo = ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	 # Move personagem para ESQUERDA
+    if x == 'A':
+        xtab = xtab - 1
+    # Move personagem para DIREITA
+    elif x == 'D':
+        xtab = xtab + 1
+	 # Move personagem para CIMA
+    elif x == 'W':
+        ytab = ytab - 1
+    # Move personagem para BAIXO
+    elif x == 'S':
+        ytab = ytab + 1
+
+	 if xtab > shape(tabuleiro)[1] or ytab > shape(tabuleiro)[0]:
+		  xtab = xtabo
+		  ytab = ytabo
+	 elif tabuleiro[ytab,xtab] == 33:
+		  xtab = xtabo
+		  ytab = ytabo
+	 else:
+		  xtabo = xtab
+		  ytabo = ytab
+
+    # Trata evento
+    # Moeda
+    if tabuleiro[ytab,xtab] == 11:
+        moeda = moeda + 1
+        # Apaga moeda do tabuleiro
+        tabuleiro[ytab,xtab] = 0
+    # Zumbi
+    elif tabuleiro[ytab,xtab] == 22:
+        life = life - 5
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+
+-- ERROR:
+File "XXXX", line 37
+    if xtab > shape(tabuleiro)[1] or ytab > shape(tabuleiro)[0]:
+                                                               ^
+TabError: inconsistent use of tabs and spaces in indentation
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:33:36) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtabo = xtab = 0
+ytabo = ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	 # Move personagem para ESQUERDA
+    if x == 'A':
+        xtab = xtab - 1
+    # Move personagem para DIREITA
+    elif x == 'D':
+        xtab = xtab + 1
+	 # Move personagem para CIMA
+    elif x == 'W':
+        ytab = ytab - 1
+    # Move personagem para BAIXO
+    elif x == 'S':
+        ytab = ytab + 1
+
+	if xtab > shape(tabuleiro)[1] or ytab > shape(tabuleiro)[0]:
+		xtab = xtabo
+		ytab = ytabo
+	 elif tabuleiro[ytab,xtab] == 33:
+		  xtab = xtabo
+		  ytab = ytabo
+	 else:
+		  xtabo = xtab
+		  ytabo = ytab
+
+    # Trata evento
+    # Moeda
+    if tabuleiro[ytab,xtab] == 11:
+        moeda = moeda + 1
+        # Apaga moeda do tabuleiro
+        tabuleiro[ytab,xtab] = 0
+    # Zumbi
+    elif tabuleiro[ytab,xtab] == 22:
+        life = life - 5
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+
+-- ERROR:
+File "XXXX", line 37
+    if xtab > shape(tabuleiro)[1] or ytab > shape(tabuleiro)[0]:
+                                                               ^
+TabError: inconsistent use of tabs and spaces in indentation
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:33:57) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtabo = xtab = 0
+ytabo = ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	 # Move personagem para ESQUERDA
+    if x == 'A':
+        xtab = xtab - 1
+    # Move personagem para DIREITA
+    elif x == 'D':
+        xtab = xtab + 1
+	 # Move personagem para CIMA
+    elif x == 'W':
+        ytab = ytab - 1
+    # Move personagem para BAIXO
+    elif x == 'S':
+        ytab = ytab + 1
+
+	if xtab > shape(tabuleiro)[1] or ytab > shape(tabuleiro)[0]:
+		xtab = xtabo
+		ytab = ytabo
+	 elif tabuleiro[ytab,xtab] == 33:
+		  xtab = xtabo
+		  ytab = ytabo
+	 else:
+		  xtabo = xtab
+		  ytabo = ytab
+
+    # Trata evento
+    # Moeda
+    if tabuleiro[ytab,xtab] == 11:
+        moeda = moeda + 1
+        # Apaga moeda do tabuleiro
+        tabuleiro[ytab,xtab] = 0
+    # Zumbi
+    elif tabuleiro[ytab,xtab] == 22:
+        life = life - 5
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+
+-- ERROR:
+File "XXXX", line 37
+    if xtab > shape(tabuleiro)[1] or ytab > shape(tabuleiro)[0]:
+                                                               ^
+TabError: inconsistent use of tabs and spaces in indentation
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:34:09) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtabo = xtab = 0
+ytabo = ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	 # Move personagem para ESQUERDA
+    if x == 'A':
+        xtab = xtab - 1
+    # Move personagem para DIREITA
+    elif x == 'D':
+        xtab = xtab + 1
+	 # Move personagem para CIMA
+    elif x == 'W':
+        ytab = ytab - 1
+    # Move personagem para BAIXO
+    elif x == 'S':
+        ytab = ytab + 1
+
+	if xtab > shape(tabuleiro)[1] or ytab > shape(tabuleiro)[0]:
+		xtab = xtabo
+		ytab = ytabo
+	 elif tabuleiro[ytab,xtab] == 33:
+		  xtab = xtabo
+		  ytab = ytabo
+	 else:
+		  xtabo = xtab
+		  ytabo = ytab
+
+    # Trata evento
+    # Moeda
+    if tabuleiro[ytab,xtab] == 11:
+        moeda = moeda + 1
+        # Apaga moeda do tabuleiro
+        tabuleiro[ytab,xtab] = 0
+    # Zumbi
+    elif tabuleiro[ytab,xtab] == 22:
+        life = life - 5
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+
+-- ERROR:
+File "XXXX", line 37
+    if xtab > shape(tabuleiro)[1] or ytab > shape(tabuleiro)[0]:
+                                                               ^
+TabError: inconsistent use of tabs and spaces in indentation
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:34:24) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtabo = xtab = 0
+ytabo = ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	 # Move personagem para ESQUERDA
+    if x == 'A':
+        xtab = xtab - 1
+    # Move personagem para DIREITA
+    elif x == 'D':
+        xtab = xtab + 1
+	 # Move personagem para CIMA
+    elif x == 'W':
+        ytab = ytab - 1
+    # Move personagem para BAIXO
+    elif x == 'S':
+        ytab = ytab + 1
+
+	if xtab > shape(tabuleiro)[1] or ytab > shape(tabuleiro)[0]:
+			xtab = xtabo
+			ytab = ytabo
+	 elif tabuleiro[ytab,xtab] == 33:
+		  xtab = xtabo
+		  ytab = ytabo
+	 else:
+		  xtabo = xtab
+		  ytabo = ytab
+
+    # Trata evento
+    # Moeda
+    if tabuleiro[ytab,xtab] == 11:
+        moeda = moeda + 1
+        # Apaga moeda do tabuleiro
+        tabuleiro[ytab,xtab] = 0
+    # Zumbi
+    elif tabuleiro[ytab,xtab] == 22:
+        life = life - 5
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+
+-- ERROR:
+File "XXXX", line 37
+    if xtab > shape(tabuleiro)[1] or ytab > shape(tabuleiro)[0]:
+                                                               ^
+TabError: inconsistent use of tabs and spaces in indentation
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:35:55) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtabo = xtab = 0
+ytabo = ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	 # Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1
+	 # Move personagem para CIMA
+	elif x == 'W':
+		ytab = ytab - 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab + 1
+
+	if xtab > shape(tabuleiro)[1] or ytab > shape(tabuleiro)[0]:
+		xtab = xtabo
+		ytab = ytabo
+	elif tabuleiro[ytab,xtab] == 33:
+		xtab = xtabo
+		ytab = ytabo
+	else:
+		xtabo = xtab
+		ytabo = ytab
+
+    # Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+    # Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:37:13) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtabo = xtab = 0
+ytabo = ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	 # Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1
+	 # Move personagem para CIMA
+	elif x == 'W':
+		ytab = ytab - 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab + 1
+
+	if xtab > shape(tabuleiro)[0] or ytab > shape(tabuleiro)[1]:
+		xtab = xtabo
+		ytab = ytabo
+	elif tabuleiro[ytab,xtab] == 33:
+		xtab = xtabo
+		ytab = ytabo
+	else:
+		xtabo = xtab
+		ytabo = ytab
+
+    # Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+    # Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:38:27) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtabo = xtab = 0
+ytabo = ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	 # Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1
+	 # Move personagem para CIMA
+	elif x == 'W':
+		ytab = ytab - 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab + 1
+
+	if xtab > shape(tabuleiro)[1]-1 or ytab > shape(tabuleiro)[0]-1:
+		xtab = xtabo
+		ytab = ytabo
+	elif tabuleiro[ytab,xtab] == 33:
+		xtab = xtabo
+		ytab = ytabo
+	else:
+		xtabo = xtab
+		ytabo = ytab
+
+    # Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+    # Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:39:23) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtabo = xtab = 0
+ytabo = ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	 # Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1
+	 # Move personagem para CIMA
+	elif x == 'W':
+		ytab = ytab - 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab + 1
+
+	if xtab > shape(tabuleiro)[1]-1 or ytab > shape(tabuleiro)[0]-1 or xtab<0 or ytab<0:
+		xtab = xtabo
+		ytab = ytabo
+	elif tabuleiro[ytab,xtab] == 33:
+		xtab = xtabo
+		ytab = ytabo
+	else:
+		xtabo = xtab
+		ytabo = ytab
+
+    # Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+    # Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-27 10:40:11) 
+-- CODE:
+#######
+# Lab 07 – Exercicio 09
+# @author: IComp / UFAM
+# AVENTURAS COM MOEDAS E ZUMBIS
+
+from numpy import *
+
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+
+# Posicao inicial do personagem
+xtabo = xtab = 0
+ytabo = ytab = 0
+
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+
+# Analise da jogada
+for x in mov:
+	 # Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1
+	 # Move personagem para CIMA
+	elif x == 'W':
+		ytab = ytab - 1
+    # Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab + 1
+
+	if xtab > shape(tabuleiro)[1]-1 or ytab > shape(tabuleiro)[0]-1 or xtab<0 or ytab<0:
+		xtab = xtabo
+		ytab = ytabo
+	elif tabuleiro[ytab,xtab] == 33:
+		xtab = xtabo
+		ytab = ytabo
+	else:
+		xtabo = xtab
+		ytabo = ytab
+
+    # Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+    # Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+
+-- EXECUTION TIME:
+1.00714
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

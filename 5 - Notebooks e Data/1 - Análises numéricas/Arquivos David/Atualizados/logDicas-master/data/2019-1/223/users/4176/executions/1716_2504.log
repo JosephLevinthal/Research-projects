@@ -1,0 +1,140 @@
+== TEST (2019-05-13 17:28:15) 
+-- CODE:
+q= int(input('Quantidade inicial: '))
+pc= int(input("Percentual de Cres. Mensal: "))
+
+meses= 0
+
+while (0 < q < 8000):
+	qprv= int(input("Quantidade de peixes retirados: "))
+	q= q + ( q * ( pc/100))
+	q= q - qprv
+	meses= meses + 1
+	if ( q >= 0):
+		print("ZERO")
+	elif ( q >= 8000):
+		prnt("MAXIMO")
+		
+print(meses)
+-- OUTPUT:
+3.1415933
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-13 17:28:23) 
+-- CODE:
+q= int(input('Quantidade inicial: '))
+pc= int(input("Percentual de Cres. Mensal: "))
+
+meses= 0
+
+while (0 < q < 8000):
+	qprv= int(input("Quantidade de peixes retirados: "))
+	q= q + ( q * ( pc/100))
+	q= q - qprv
+	meses= meses + 1
+	if ( q >= 0):
+		print("ZERO")
+	elif ( q >= 8000):
+		prnt("MAXIMO")
+		
+print(meses)
+-- EXECUTION TIME:
+0.160591
+-- TEST CASE 1:
+---- input:
+350625
+5500
+2
+75
+---- correct output:
+9
+---- user output:
+0
+-- TEST CASE 2:
+---- input:
+650090
+90045
+4
+90
+---- correct output:
+5
+---- user output:
+0
+-- TEST CASE 3:
+---- input:
+419250
+1725
+9
+59
+---- correct output:
+17
+---- user output:
+0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 17:40:14) 
+-- CODE:
+qic = int(input("Quant. de copias: "))
+qil = int(input("Quant. de leucocitos: "))
+pmv = int(input("Percentual de mult. do virus: "))
+pml = int(input("Percentual de mult. dos Leuc.: "))
+
+d = 0
+
+while ( qic > qil/2):
+	qic = qic + ( qic * ( pmv/100 ))
+	qil = qil + ( qil * ( pml/100 ))
+	d = d + 1
+print(d)
+-- OUTPUT:
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-13 17:40:32) 
+-- CODE:
+qic = int(input("Quant. de copias: "))
+qil = int(input("Quant. de leucocitos: "))
+pmv = int(input("Percentual de mult. do virus: "))
+pml = int(input("Percentual de mult. dos Leuc.: "))
+
+d = 0
+
+while ( qic > qil/2):
+	qic = qic + ( qic * ( pmv/100 ))
+	qil = qil + ( qil * ( pml/100 ))
+	d = d + 1
+print(d)
+-- EXECUTION TIME:
+0.185947
+-- TEST CASE 1:
+---- input:
+350625
+5500
+2
+75
+---- correct output:
+9
+---- user output:
+9
+-- TEST CASE 2:
+---- input:
+650090
+90045
+4
+90
+---- correct output:
+5
+---- user output:
+5
+-- TEST CASE 3:
+---- input:
+419250
+1725
+9
+59
+---- correct output:
+17
+---- user output:
+17
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

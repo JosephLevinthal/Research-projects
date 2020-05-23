@@ -1,0 +1,7 @@
+xa= float(input("qual a coordenada xa? "))
+xb= float(input("qual a coordenada xb? "))
+ya= float(input("qual a coordenada ya? "))
+yb= float(input("qual a coordenada yb? "))
+xm= ((xa+ya)/2)
+ym= ((xb+yb)/2)
+print(round(xm,1),round(ym,1))

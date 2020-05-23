@@ -1,0 +1,385 @@
+== TEST (2019-06-22 16:02:25) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("Digite: ")))
+c = shape(m)[1]
+l = shape(m)[0]
+z = zeros(c, dtype=int)
+
+for i in range(c):
+	for j in range(l):
+		z[i] = z[i] + m[i, j]
+		
+print(max(z))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 16:03:19) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("Digite: ")))
+c = shape(m)[1]
+l = shape(m)[0]
+z = zeros(l, dtype=int)
+
+for i in range(c):
+	for j in range(l):
+		z[i] = z[i] + m[i, j]
+		
+print(max(z))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 16:05:17) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("Digite: ")))
+c = shape(m)[1]
+l = shape(m)[0]
+z = zeros(7, dtype=int)
+
+for i in range(7):
+	z[i] = sum(m[:,i])
+		
+print(z)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 16:05:30) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("Digite: ")))
+c = shape(m)[1]
+l = shape(m)[0]
+z = zeros(7, dtype=int)
+
+for i in range(6):
+	z[i] = sum(m[:,i])
+		
+print(z)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 16:06:55) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("Digite: ")))
+c = shape(m)[1]
+l = shape(m)[0]
+z = zeros(7, dtype=int)
+
+for i in range(6):
+	z[i] = sum(m[:,i])
+		
+for p in range(6):
+	if z[p] == max(z):
+		print(p+1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-22 16:08:20) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("Digite: ")))
+c = shape(m)[1]
+l = shape(m)[0]
+z = zeros(7, dtype=int)
+
+for i in range(6):
+	z[i] = sum(m[:,i])
+		
+for p in range(6):
+	if z[p] == max(z):
+		print(p+1)
+
+-- EXECUTION TIME:
+1.14822
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+6
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 16:08:57) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("Digite: ")))
+c = shape(m)[1]
+l = shape(m)[0]
+z = zeros(7, dtype=int)
+
+for i in range(6):
+	z[i] = sum(m[:,i])
+		
+for p in range(6):
+	if z[p] == max(z):
+		print(p+1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 16:10:23) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("Digite: ")), dtype=int)
+c = shape(m)[1]
+l = shape(m)[0]
+z = zeros(7, dtype=int)
+
+for i in range(6):
+	z[i] = sum(m[:,i])
+		
+for p in range(6):
+	if z[p] == max(z):
+		print(p+1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-22 16:10:33) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("Digite: ")), dtype=int)
+c = shape(m)[1]
+l = shape(m)[0]
+z = zeros(7, dtype=int)
+
+for i in range(6):
+	z[i] = sum(m[:,i])
+		
+for p in range(6):
+	if z[p] == max(z):
+		print(p+1)
+
+-- EXECUTION TIME:
+1.10505
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+6
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 16:11:08) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("Digite: ")), dtype=int)
+c = shape(m)[1]
+l = shape(m)[0]
+z = zeros(7, dtype=int)
+
+for i in range(6):
+	z[i] = sum(m[:,i])
+		
+print(z)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-22 16:11:46) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("Digite: ")), dtype=int)
+c = shape(m)[1]
+l = shape(m)[0]
+z = zeros(7, dtype=int)
+
+for i in range(c):
+	z[i] = sum(m[:,i])
+		
+for p in range(c):
+	if z[p] == max(z):
+		print(p+1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-22 16:11:57) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("Digite: ")), dtype=int)
+c = shape(m)[1]
+l = shape(m)[0]
+z = zeros(7, dtype=int)
+
+for i in range(c):
+	z[i] = sum(m[:,i])
+		
+for p in range(c):
+	if z[p] == max(z):
+		print(p+1)
+
+-- EXECUTION TIME:
+0.99996
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+7
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 17:37:45) 
+-- CODE:
+from numpy import*
+
+matriz = array(eval(input("Digite: ")), dtype=int)
+linhas = shape(matriz)[0]
+colunas = shape(matriz)[1]
+
+vetor_nulo = zeros(7, dtype=int)
+
+for i in range(c):
+	vetor_nulo[i] = sum(matriz[:,i])
+		
+for p in range(c):
+	if vetor_nulo[p] == max(vetor_nulo):
+		print(p+1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 17:38:24) 
+-- CODE:
+from numpy import*
+
+matriz = array(eval(input("Digite: ")), dtype=int)
+linhas = shape(matriz)[0]
+colunas = shape(matriz)[1]
+
+vetor_nulo = zeros(7, dtype=int)
+
+for i in range(c):
+	vetor_nulo[i] = sum(matriz[:,i])
+		
+for p in range(c):
+	if vetor_nulo[p] == max(vetor_nulo):
+		print(p+1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 17:38:42) 
+-- CODE:
+from numpy import*
+
+matriz = array(eval(input("Digite: ")), dtype=int)
+linhas = shape(matriz)[0]
+colunas = shape(matriz)[1]
+
+vetor_nulo = zeros(7, dtype=int)
+
+for i in range(colunas):
+	vetor_nulo[i] = sum(matriz[:,i])
+		
+for p in range(colunas):
+	if vetor_nulo[p] == max(vetor_nulo):
+		print(p+1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

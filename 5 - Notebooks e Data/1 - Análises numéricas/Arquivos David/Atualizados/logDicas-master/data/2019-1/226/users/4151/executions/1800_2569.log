@@ -1,0 +1,274 @@
+== TEST (2019-06-05 19:26:08) 
+-- CODE:
+n=array(eval(input("digite um vetor: ")))
+for i in range(size(n)):
+	d=(((n[i]-size(n))**2/sum(n)-1)1/2
+print(d)
+-- ERROR:
+File "XXXX", line 3
+    d=(((n[i]-size(n))**2/sum(n)-1)1/2
+                                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 01:45:04) 
+-- CODE:
+n=array(eval(input("digite um vetor: ")))
+for i in range(size(n)):
+	d=round((n[i]-(sum(n)/size(n))**2/(size(n-1))1/2),2
+print(d)
+-- ERROR:
+File "XXXX", line 3
+    d=round((n[i]-(sum(n)/size(n))**2/(size(n-1))1/2),2
+                                                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 01:45:26) 
+-- CODE:
+n=array(eval(input("digite um vetor: ")))
+for i in range(size(n)):
+	d=round((n[i]-(sum(n)/size(n))**2/(size(n-1))1/2),2)
+print(d)
+-- ERROR:
+File "XXXX", line 3
+    d=round((n[i]-(sum(n)/size(n))**2/(size(n-1))1/2),2)
+                                                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 10:52:22) 
+-- CODE:
+n=array(eval(input("digite um vetor: ")))
+for i in range(size(n)):
+	d=round((n[i]-(sum(n)/size(n))**2/(size(n-1))1/2),2)
+print(d)
+-- ERROR:
+File "XXXX", line 3
+    d=round((n[i]-(sum(n)/size(n))**2/(size(n-1))1/2),2)
+                                                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 11:04:08) 
+-- CODE:
+n=array(eval(input("digite um vetor: ")))
+for i in range(size(n)):
+	d=round((n[i]-(sum(n)/size(n))**2/(size(n-1))1/2),2)
+	i=i+1
+print(d)
+-- ERROR:
+File "XXXX", line 3
+    d=round((n[i]-(sum(n)/size(n))**2/(size(n-1))1/2),2)
+                                                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 11:06:02) 
+-- CODE:
+n=array(eval(input("digite um vetor: ")))
+m=sum(n)/size(n)
+for i in range(size(n)):
+	d=round(((n[i]-m)**2/(size(n-1))1/2),2)
+	
+print(d)
+-- ERROR:
+File "XXXX", line 4
+    d=round(((n[i]-m)**2/(size(n-1))1/2),2)
+                                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 11:55:49) 
+-- CODE:
+from numpy import*
+n=array(eval(input("digite um vetor: ")))
+m=sum(n)/size(n)
+aux=0
+for i in range(size(n)):
+	aux=aux+(n[i]-m)**2
+d=round(((aux/size(n)-1))**(1/2),3)	
+print(d)
+-- EXECUTION TIME:
+0.935822
+-- TEST CASE 1:
+---- input:
+[-4,250,-1,30,12]
+---- correct output:
+108.498
+---- user output:
+97.038
+-- TEST CASE 2:
+---- input:
+[12.5,25.2,50.39,47.3,0.9]
+---- correct output:
+21.526
+---- user output:
+19.228
+-- TEST CASE 3:
+---- input:
+[1.5,1.9,1.2,1.3,1.4,1.1,1.75]
+
+---- correct output:
+0.29
+---- user output:
+nan
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 11:55:50) 
+-- CODE:
+from numpy import*
+n=array(eval(input("digite um vetor: ")))
+m=sum(n)/size(n)
+aux=0
+for i in range(size(n)):
+	aux=aux+(n[i]-m)**2
+d=round(((aux/size(n)-1))**(1/2),3)	
+print(d)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 11:57:01) 
+-- CODE:
+from numpy import*
+n=array(eval(input("digite um vetor: ")))
+m=sum(n)/size(n)
+aux=0
+for i in range(size(n)):
+	aux=aux+(n[i]-m)**2
+d=round(((aux/size(n)-1))**(1/2),3)	
+print(d)
+-- EXECUTION TIME:
+0.950841
+-- TEST CASE 1:
+---- input:
+[-4,250,-1,30,12]
+---- correct output:
+108.498
+---- user output:
+97.038
+-- TEST CASE 2:
+---- input:
+[12.5,25.2,50.39,47.3,0.9]
+---- correct output:
+21.526
+---- user output:
+19.228
+-- TEST CASE 3:
+---- input:
+[1.5,1.9,1.2,1.3,1.4,1.1,1.75]
+
+---- correct output:
+0.29
+---- user output:
+nan
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 11:57:35) 
+-- CODE:
+from numpy import*
+n=array(eval(input("digite um vetor: ")))
+m=sum(n)/size(n)
+aux=0
+for i in range(size(n)):
+	aux=aux+(n[i]-m)**2
+d=round(((aux/size(n)-1))**(1/2),3)	
+print(d)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 19:08:33) 
+-- CODE:
+from numpy import*
+n=array(eval(input("digite um vetor: ")))
+m=sum(n)/size(n)
+aux=0
+x=size(n)
+for i in range(size(n)):
+	d=(((n[i]-m)**2)/(n-1))
+	
+print(round(d**(1/2),3))
+	
+	
+	
+d=round(((aux/size(n)-1))**(1/2),3)	
+print(d)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 19:09:40) 
+-- CODE:
+from numpy import*
+n=array(eval(input("digite um vetor: ")))
+m=sum(n)/size(n)
+aux=0
+x=size(n)
+for i in range(size(n)):
+	d=(((n[i]-m)**2)/(n-1))
+	
+print(round(d**(1/2),3))
+	
+	
+	
+d=round(((aux/size(n)-1))**(1/2),3)	
+print(d)
+-- EXECUTION TIME:
+0.994645
+-- ERROR:
+/home/codebench/codes/1800/2569/main.py:9: RuntimeWarning: invalid value encountered in sqrt
+  print(round(d**(1/2),3))
+Traceback (most recent call last):
+  File "/home/codebench/codes/1800/2569/main.py", line 9, in <module>
+    print(round(d**(1/2),3))
+TypeError: type numpy.ndarray doesn't define __round__ method
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 19:12:19) 
+-- CODE:
+from numpy import*
+x=array(eval(input("digite um vetor: ")))
+m=sum(x)/size(x)
+d=0
+n=size(x)
+for i in range(size(x)):
+	
+	
+	d=(((x[i]-m)**2)/(n-1))+d
+	
+print(round(d**(1/2),3))
+	
+	
+	
+
+-- EXECUTION TIME:
+1.11718
+-- TEST CASE 1:
+---- input:
+[-4,250,-1,30,12]
+---- correct output:
+108.498
+---- user output:
+108.498
+-- TEST CASE 2:
+---- input:
+[12.5,25.2,50.39,47.3,0.9]
+---- correct output:
+21.526
+---- user output:
+21.526
+-- TEST CASE 3:
+---- input:
+[1.5,1.9,1.2,1.3,1.4,1.1,1.75]
+
+---- correct output:
+0.29
+---- user output:
+0.29
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

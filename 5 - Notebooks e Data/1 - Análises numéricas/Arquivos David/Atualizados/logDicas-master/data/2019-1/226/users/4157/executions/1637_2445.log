@@ -1,0 +1,614 @@
+== TEST (2019-04-11 10:27:14) 
+-- CODE:
+esc = float(input("celcios ou fahrenheit? (C/F)"))
+vtemp = float(input("valor da temperatura:"))
+if(esc == C):
+	c = 5/9*(vtemp - 32)
+	print(round(c, 2))
+else:
+	f = (vtemp*9/5)+ 32
+	print(round(f, 2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    esc = float(input())
+ValueError: could not convert string to float: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:27:24) 
+-- CODE:
+esc = float(input("celcios ou fahrenheit? (C/F)"))
+vtemp = float(input("valor da temperatura:"))
+if(esc == C):
+	c = 5/9*(vtemp - 32)
+	print(round(c, 2))
+else:
+	f = (vtemp*9/5)+ 32
+	print(round(f, 2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    esc = float(input())
+ValueError: could not convert string to float: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:27:51) 
+-- CODE:
+esc = float(input("celcios ou fahrenheit? (c/f)"))
+vtemp = float(input("valor da temperatura:"))
+if(esc == c):
+	c = 5/9*(vtemp - 32)
+	print(round(c, 2))
+else:
+	f = (vtemp*9/5)+ 32
+	print(round(f, 2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    esc = float(input())
+ValueError: could not convert string to float: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:28:08) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (c/f)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == c):
+	c = 5/9*(vtemp - 32)
+	print(round(c, 2))
+else:
+	f = (vtemp*9/5)+ 32
+	print(round(f, 2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if(esc == c):
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:29:18) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (c/f)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "c"):
+	c = 5/9*(vtemp - 32)
+	print(round(c, 2))
+else:
+	f = (vtemp*9/5)+ 32
+	print(round(f, 2))
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:29:53) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (c/f)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "c"):
+	ce = 5/9*(vtemp - 32)
+	print(round(ce, 2))
+else:
+	f = (vtemp*9/5)+ 32
+	print(round(f, 2))
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:36:35) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (c/f)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "c"):
+	ce = (5/9)*(vtemp - 32)
+	print(round(ce, 2))
+else:
+	f = (vtemp*9/5)+ 32
+	print(round(f, 2))
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:39:05) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (c/f)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "c"):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:39:16) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (c/f)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "c"):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- EXECUTION TIME:
+0.158433
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:39:41) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (c/f)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "c"):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- EXECUTION TIME:
+0.24204
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:39:42) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (c/f)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "c"):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:40:41) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (c/f)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "c"):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:41:35) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (C/F)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "c".upper()):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:42:36) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (C/F)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "c".upper()):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:43:03) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (C/F)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "c".upper()):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:43:32) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (c/f)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "c"):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:44:22) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (c/f)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "c"):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:44:42) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (c/f)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "c"):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:44:44) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (c/f)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "c"):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- EXECUTION TIME:
+0.13093
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:46:18) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (C/N)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "c".upper()):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:47:13) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (C/N)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "C".upper()):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- EXECUTION TIME:
+0.159305
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:48:34) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (C/N)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "C".upper()):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:48:35) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (C/N)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "C".upper()):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- EXECUTION TIME:
+0.205111
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+celcios ou fahrenheit? (C/N)valor da temperatura:160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+celcios ou fahrenheit? (C/N)valor da temperatura:32.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:48:58) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (C/N)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "C".upper()):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:49:11) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (C/N)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "C".upper()):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:49:23) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (C/N)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "C".upper()):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:49:41) 
+-- CODE:
+esc = input("celcios ou fahrenheit? (C/N)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "C".upper()):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:50:10) 
+-- CODE:
+esc = input("celsius ou fahrenheit? (C/N)")
+vtemp = float(input("valor da temperatura:"))
+if(esc == "C".upper()):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- EXECUTION TIME:
+0.196203
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:51:35) 
+-- CODE:
+esc = input("celsius ou fahrenheit? (C/N)")
+vtemp = float(input("valor da temperatura:"))
+if(esc.upper() == "C"):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- EXECUTION TIME:
+0.156775
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:51:38) 
+-- CODE:
+esc = input("celsius ou fahrenheit? (C/N)")
+vtemp = float(input("valor da temperatura:"))
+if(esc.upper() == "C"):
+	ce = (vtemp*9/5)+ 32
+	print(round(ce, 2))
+else:
+	f = (5/9)*(vtemp - 32)
+	print(round(f, 2))
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

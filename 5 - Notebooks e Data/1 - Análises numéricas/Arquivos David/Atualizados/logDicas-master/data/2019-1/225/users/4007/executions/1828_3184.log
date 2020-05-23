@@ -1,0 +1,440 @@
+== TEST (2019-06-12 15:15:19) 
+-- CODE:
+from numpy import*
+l = array(eval(input("letras:" )))
+for i in l:
+	l[i] = l[i - 1]
+	print(l)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:16:58) 
+-- CODE:
+from numpy import*
+l = array(eval(input("letras:" )))
+z = zeros (size(l), dtype=int)
+print(z)
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:17:19) 
+-- CODE:
+from numpy import*
+l = array(eval(input("letras:" )))
+z = zeros (size(l), dtype=int)
+print(z)
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:19:03) 
+-- CODE:
+from numpy import*
+l = array(eval(input("letras:" )))
+z = zeros (size(l), dtype=int)
+for i in l:
+	l[i - 1] = z[0]
+	aux = z[0]
+	z[0] =l[i +1]
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:19:14) 
+-- CODE:
+from numpy import*
+l = array(eval(input("letras:" )))
+z = zeros (size(l), dtype=int)
+for i in l:
+	l[i - 1] = z[0]
+	aux = z[0]
+	z[0] =l[i +1]
+	print(l)
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:19:55) 
+-- CODE:
+from numpy import*
+l = array(eval(input("letras:" )))
+z = zeros (size(l), dtype=int)
+for i in l:
+	l[i]-1 = z[0]
+	aux = z[0]
+	z[0] =l[i] +1
+	print(l)
+	
+	
+
+-- ERROR:
+File "XXXX", line 5
+    l[i]-1 = z[0]
+    ^
+SyntaxError: can't assign to operator
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:20:52) 
+-- CODE:
+from numpy import*
+l = array(eval(input("letras:" )))
+z = zeros (size(l), dtype=int)
+for i in l:
+	z[0] = l[i] - 1
+	aux = l[i]
+	l[i] =l[i] +1
+	print(l)
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:25:14) 
+-- CODE:
+from numpy import*
+l = array(eval(input("letras:" )))
+z = zeros (size(l), dtype=int)
+i = 0
+while (i < size(l)//2):
+	l[i] = l(i-1)
+	aux = l[i]
+	l(i-1) = aux
+	
+	
+	
+	
+
+	
+	
+
+-- ERROR:
+File "XXXX", line 8
+    l(i-1) = aux
+    ^
+SyntaxError: can't assign to function call
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:25:43) 
+-- CODE:
+from numpy import*
+l = array(eval(input("letras:" )))
+z = zeros (size(l), dtype=int)
+i = 0
+while (i < size(l)//2):
+	l[i] = l(i-1)
+	aux = l[i]
+	l[-1] = aux
+	
+	
+	
+	
+
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:34:37) 
+-- CODE:
+from numpy import*
+l = array(eval(input("letras:" )))
+z = zeros (size(l), dtype=int)
+i = 0
+while (i < size(l)//2):
+	aux = l[i]
+	l[i] = l[-i]
+	l[-i] = aux
+	
+
+	
+	
+	
+
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:35:19) 
+-- CODE:
+from numpy import*
+l = array(eval(input("letras:" )))
+z = zeros (size(l), dtype=int)
+i = 0
+while (i < size(l)//2):
+	aux = l[i]
+	l[i] = z[-i]
+	z[-i] = aux
+	print(z)
+	
+
+	
+	
+	
+
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:37:04) 
+-- CODE:
+from numpy import*
+l = array(eval(input("letras:" )))
+z = zeros (size(l), dtype=int)
+i = 0
+while (i < size(l)//2):
+	aux = l[i]
+	l[i] = z[-i]
+	z[-i] = aux
+print(z)
+	
+
+	
+	
+	
+
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:39:15) 
+-- CODE:
+from numpy import*
+l = array(eval(input("letras:" )))
+z = zeros (size(l), dtype=int)
+i = 0
+while (i < size(l)//2):
+	aux = l[i]
+	l[i] = l[-i]
+	l[-i] = aux
+print(l)
+	
+
+	
+	
+	
+
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:39:37) 
+-- CODE:
+from numpy import*
+l = array(eval(input("letras:" )))
+z = zeros (size(l), dtype=int)
+i = 0
+while (i < size(l)//2):
+	aux = l[i]
+	l[i] = l[-i]
+	l[-i] = aux
+   print(l)
+	
+
+	
+	
+	
+
+	
+	
+
+-- ERROR:
+File "XXXX", line 9
+    print(l)
+           ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:39:46) 
+-- CODE:
+from numpy import*
+l = array(eval(input("letras:" )))
+z = zeros (size(l), dtype=int)
+i = 0
+while (i < size(l)//2):
+	aux = l[i]
+	l[i] = l[-i]
+	l[-i] = aux
+	print(l)
+	
+
+	
+	
+	
+
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:45:41) 
+-- CODE:
+from numpy import*
+l = array(eval(input("letras:" )))
+z = zeros (size(l), dtype=int)
+i = 0
+while (i < size(l)//2):
+	aux = l[i]
+	l[i] = l[-i]
+	l[-i] = aux
+print(l)
+	
+
+	
+	
+	
+
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:46:30) 
+-- CODE:
+from numpy import*
+l = array(eval(input("letras:" )))
+z = zeros (size(l), dtype=int)
+i = 0
+while (i < size(l)//2):
+	aux = l[i]
+	l[i] = l[-i]
+print(l)
+	
+
+	
+	
+	
+
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:47:16) 
+-- CODE:
+from numpy import*
+l = array(eval(input("letras:" )))
+z = zeros (size(l), dtype=int)
+i = 0
+while (i < size(l)//2):
+	aux = l[i]
+	l[i] = z[-i]
+	
+
+	
+	
+	
+
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 15:48:43) 
+-- CODE:
+from numpy import*
+l = array(eval(input("letras:" )))
+z = zeros (size(l), dtype=int)
+i = 0
+while (i < size(l)//2):
+	aux = l[i]
+	z[-i] = l[i]
+	z[i] = aux
+print(z)
+	
+	
+	
+
+	
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 19:59:16) 
+-- CODE:
+from numpy import*
+l = array(eval(input("letras:" )))
+z = zeros (size(l), dtype=int)
+for i in range(lesize(l)):
+	
+	
+	
+	
+
+	
+	
+
+-- ERROR:
+File "XXXX", line 12
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

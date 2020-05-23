@@ -1,0 +1,1294 @@
+== TEST (2019-07-02 10:12:53) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],[6,8,12],[12,12,18]])
+
+r=dot(inv(),vet.T)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:17:34) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(mat,vetm)
+print(re)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:18:29) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+print(re)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:20:59) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+if (re[0]):
+	print("cadeira:",round(re[0],1))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:21:09) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+if (re[0]):
+	print("cadeira:",round(re[0],0))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:22:43) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+if (re[0]):
+	print("cadeira:",round(re[0],0))
+elif (re[1]):
+	print("bau:",round(re[1],0))
+elif(re[2]):
+	print("mesa:",round(re[2],0))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:23:01) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+if (re[0]):
+	print("cadeira:",round(re[0],0))
+elif (re[1]):
+	print("bau:",round(re[1],0))
+elif(re[2]):
+	print("mesa:",round(re[2],0))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:26:07) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i=0):
+		print("cadeira",round(re[i],1))
+-- ERROR:
+File "XXXX", line 15
+    if(i=0):
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:26:17) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i=1):
+		print("cadeira",round(re[i],1))
+-- ERROR:
+File "XXXX", line 15
+    if(i=1):
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:26:25) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],1))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:27:21) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:28:13) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:29:50) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+for i in range(a):
+	if(max(re)==re[0]):
+		print("cadeira")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:33:13) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+for j in range(a)	:
+	if(max())
+print( max(re))
+
+-- ERROR:
+File "XXXX", line 22
+    if(max())
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:33:22) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+for j in range(a)	:
+
+print( max(re))
+
+-- ERROR:
+File "XXXX", line 23
+    print( max(re))
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:33:26) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+for j in range(a)	:
+
+	print( max(re))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:36:46) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+		
+vetorn=array([['cadeira'],
+				  ["bau"],
+				  ["mesa"]])
+for i in range(a):
+	if(max(re)==re[0]):
+		print(vetorn[0])
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:38:10) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+		
+vetorn=array([["cadeira"],
+				  ["bau"],
+				  ["mesa"]])
+for i in range(a):
+	if(max(re)==re[0]):
+	print(vetorn[0])
+
+-- ERROR:
+File "XXXX", line 27
+    print(vetorn[0])
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:39:01) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+		
+vetorn=array([["cadeira"],
+				  ["bau"],
+				  ["mesa"]])
+for i in range(a):
+	if(max(re)==re[0]):
+		vetorn[0]=u
+print(u)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:39:21) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+		
+vetorn=array([["cadeira"],
+				  ["bau"],
+				  ["mesa"]])
+for i in range(a):
+	if(max(re)==re[0]):
+		vetorn[0]=l
+	print(l)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:39:45) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+		
+vetorn=array([["cadeira"],
+				  ["bau"],
+				  ["mesa"]])
+for i in range(a):
+	if(max(re)==re[0]):
+		l=vetorn[0]
+print(l)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:40:20) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+		
+vetorn=array(["cadeira"],["bau"],["mesa"])
+for i in range(a):
+	if(max(re)==re[0]):
+		l=vetorn[0]
+print(l)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:40:40) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+		
+vetorn=array(eval(["cadeira"],["bau"],["mesa"]))
+for i in range(a):
+	if(max(re)==re[0]):
+		l=vetorn[0]
+print(l)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:40:53) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+		
+vetorn=array(eval(["cadeira"],["bau"],["mesa"]))
+for i in range(a):
+	if(max(re)==re[0]):
+		l=vetorn[1]
+print(l)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:41:23) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+		
+vetorn=array(eval("cadeira","bau","mesa"))
+for i in range(a):
+	if(max(re)==re[0]):
+		l=vetorn[0]
+print(l)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:41:48) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+		
+vetorn=array(("cadeira","bau","mesa"))
+	if(max(re)==re[0]):
+		l=vetorn[0]
+print(l)
+	
+
+-- ERROR:
+File "XXXX", line 23
+    if(max(re)==re[0]):
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:42:29) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+		
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:43:23) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+for i in range(a):
+	if(max(re)==re[0])
+	print("cadeira")
+
+
+-- ERROR:
+File "XXXX", line 22
+    if(max(re)==re[0])
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:43:28) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+for i in range(a):
+	if(max(re)==re[0])
+		print("cadeira")
+
+
+-- ERROR:
+File "XXXX", line 22
+    if(max(re)==re[0])
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:43:47) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+for i in range(a):
+	if(max(re)==re[0]):
+		print("cadeira")
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:44:23) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+if(max(re)==re[0]):
+	print("cadeira")
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:45:38) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+if(max(re)==re[0]):
+	print("cadeira")
+elif(max(re)==re[1]):
+	print("bau")
+elif(max(re)==re[2]):
+	print("mesa")
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 10:45:46) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+if(max(re)==re[0]):
+	print("cadeira")
+elif(max(re)==re[1]):
+	print("bau")
+elif(max(re)==re[2]):
+	print("mesa")
+
+
+-- EXECUTION TIME:
+1.02605
+-- TEST CASE 1:
+---- input:
+[337.95,255.26666667,392.5]
+---- correct output:
+cadeira: 192.0
+bau: 326.0
+mesa: 963.0
+mesa
+---- user output:
+cadeira 192.0
+bau: 326.0
+mesa 963.0
+mesa
+-- TEST CASE 2:
+---- input:
+[697.25,467.33333333,706.1]
+---- correct output:
+cadeira: 102.0
+bau: 3265.0
+mesa: 109.0
+bau
+---- user output:
+cadeira 102.0
+bau: 3265.0
+mesa 109.0
+bau
+-- TEST CASE 3:
+---- input:
+[3179.23333333,2196.4,3770.2]
+---- correct output:
+cadeira: 9512.0
+bau: 1122.0
+mesa: 5478.0
+cadeira
+---- user output:
+cadeira 9512.0
+bau: 1122.0
+mesa 5478.0
+cadeira
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:45:57) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+if(max(re)==re[0]):
+	print("cadeira")
+elif(max(re)==re[1]):
+	print("bau")
+elif(max(re)==re[2]):
+	print("mesa")
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:46:12) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira:",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+if(max(re)==re[0]):
+	print("cadeira")
+elif(max(re)==re[1]):
+	print("bau")
+elif(max(re)==re[2]):
+	print("mesa")
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 10:46:20) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira:",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa",round(re[i],0))
+if(max(re)==re[0]):
+	print("cadeira")
+elif(max(re)==re[1]):
+	print("bau")
+elif(max(re)==re[2]):
+	print("mesa")
+
+
+-- EXECUTION TIME:
+1.21036
+-- TEST CASE 1:
+---- input:
+[337.95,255.26666667,392.5]
+---- correct output:
+cadeira: 192.0
+bau: 326.0
+mesa: 963.0
+mesa
+---- user output:
+cadeira: 192.0
+bau: 326.0
+mesa 963.0
+mesa
+-- TEST CASE 2:
+---- input:
+[697.25,467.33333333,706.1]
+---- correct output:
+cadeira: 102.0
+bau: 3265.0
+mesa: 109.0
+bau
+---- user output:
+cadeira: 102.0
+bau: 3265.0
+mesa 109.0
+bau
+-- TEST CASE 3:
+---- input:
+[3179.23333333,2196.4,3770.2]
+---- correct output:
+cadeira: 9512.0
+bau: 1122.0
+mesa: 5478.0
+cadeira
+---- user output:
+cadeira: 9512.0
+bau: 1122.0
+mesa 5478.0
+cadeira
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 10:46:26) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira:",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa:",round(re[i],0))
+if(max(re)==re[0]):
+	print("cadeira")
+elif(max(re)==re[1]):
+	print("bau")
+elif(max(re)==re[2]):
+	print("mesa")
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 10:46:26) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+vet=array(eval(input("entre com o vetor xyz:")))
+
+vetm=vet*60
+
+mat=array([[10,12,15],
+			  [6,8,12],
+			  [12,12,18]])
+
+re=dot(inv(mat),vetm.T)
+a=shape(re)[0]
+
+for i in range(a):
+	if(i==0):
+		print("cadeira:",round(re[i],0))
+	elif(i==1):
+		print("bau:",round(re[i],0))
+	elif(i==2):
+		print("mesa:",round(re[i],0))
+if(max(re)==re[0]):
+	print("cadeira")
+elif(max(re)==re[1]):
+	print("bau")
+elif(max(re)==re[2]):
+	print("mesa")
+
+
+-- EXECUTION TIME:
+1.24543
+-- TEST CASE 1:
+---- input:
+[337.95,255.26666667,392.5]
+---- correct output:
+cadeira: 192.0
+bau: 326.0
+mesa: 963.0
+mesa
+---- user output:
+cadeira: 192.0
+bau: 326.0
+mesa: 963.0
+mesa
+-- TEST CASE 2:
+---- input:
+[697.25,467.33333333,706.1]
+---- correct output:
+cadeira: 102.0
+bau: 3265.0
+mesa: 109.0
+bau
+---- user output:
+cadeira: 102.0
+bau: 3265.0
+mesa: 109.0
+bau
+-- TEST CASE 3:
+---- input:
+[3179.23333333,2196.4,3770.2]
+---- correct output:
+cadeira: 9512.0
+bau: 1122.0
+mesa: 5478.0
+cadeira
+---- user output:
+cadeira: 9512.0
+bau: 1122.0
+mesa: 5478.0
+cadeira
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

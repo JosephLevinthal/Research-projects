@@ -1,0 +1,70 @@
+== TEST (2019-05-29 15:44:01) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+st=input("data desejada: ")
+d=st[0:2]
+m=st[2:4]
+a=st[4:8]
+print(d," de ",m," de ",a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 15:47:11) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+st=input("data desejada: ")
+d=st[0:2]
+me=st[2:4]
+a=st[4:8]
+m=vet_mes[int(me)-1]
+print(d," de ",m," de ",a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 15:47:31) 
+-- CODE:
+from numpy import *
+# Vetor contendo o nome dos meses do ano
+vet_mes = array(['janeiro', 'fevereiro', 'marco', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'])
+st=input("data desejada: ")
+d=st[0:2]
+me=st[2:4]
+a=st[4:8]
+m=vet_mes[int(me)-1]
+print(d," de ",m," de ",a)
+-- EXECUTION TIME:
+0.516777
+-- TEST CASE 1:
+---- input:
+26111982
+---- correct output:
+26 de novembro de 1982
+---- user output:
+26  de  novembro  de  1982
+-- TEST CASE 2:
+---- input:
+07071854
+---- correct output:
+07 de julho de 1854
+---- user output:
+07  de  julho  de  1854
+-- TEST CASE 3:
+---- input:
+22082000
+---- correct output:
+22 de agosto de 2000
+---- user output:
+22  de  agosto  de  2000
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

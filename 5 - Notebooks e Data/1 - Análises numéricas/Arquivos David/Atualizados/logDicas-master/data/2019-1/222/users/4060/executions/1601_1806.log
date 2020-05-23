@@ -1,0 +1,705 @@
+== TEST (2019-03-30 00:28:35) 
+-- CODE:
+from math import
+n=float(input())
+a=factorial(n)
+print(n)
+
+-- ERROR:
+File "XXXX", line 1
+    from math import
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 00:28:45) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(n)
+print(n)
+
+-- OUTPUT:
+12.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 00:29:10) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(n)
+print(a)
+
+-- OUTPUT:
+479001600
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 00:29:26) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(n)
+print(a)
+
+-- OUTPUT:
+479001600
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 00:29:55) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(n)
+print(a)
+
+-- OUTPUT:
+479001600
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 00:35:09) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=1-(a/b)*(1/(365**n))
+
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    d=1-(a/b)*(1/(365**n))
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 00:36:45) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=1-(a/b)*(1/365**n)
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    d=1-(a/b)*(1/365**n)
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 00:39:10) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=1-((a/b)*(1/365**n))
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    d=1-((a/b)*(1/365**n))
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 00:42:16) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+
+print(c)
+
+-- OUTPUT:
+5390123321132663611839830169709390802700901540502299409155144170831724510684534699508137677248623055131598638117296703158603498400610313930673453648151014429099960251831405205008293134605366015284045125262984521994476231760549815623012836030339067978538590626728130196262515716507849981195751552694049387406898755340816952993133517014025041844809440588220298088634239045104953684521052138002161108718767713272889846311454562299898752627785623976672521828121478939955822655777460641240477320760977111903156911659536243623806004544204602635691954808430668261822466970110676842032505435259953957358927790048050472573112149563557689823435680703352963668955008021299200000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 00:43:40) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=a/b
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    d=a/b
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 00:44:13) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=a/b
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    d=a/b
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 00:44:46) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(5)
+b=365-n
+c=factorial(b)
+d=a/b
+print(d)
+
+-- OUTPUT:
+0.33994334277620397
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 00:45:55) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(5)
+b=365-n
+c=factorial(b)
+d=a/b
+print(a)
+
+-- OUTPUT:
+120
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 00:46:34) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(5)
+b=365-n
+c=factorial(b)
+d=a/b
+print(b)
+
+-- OUTPUT:
+353.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 00:47:17) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(5)
+b=365-n
+c=factorial(b)
+d=a/b
+print(c)
+
+-- OUTPUT:
+5390123321132663611839830169709390802700901540502299409155144170831724510684534699508137677248623055131598638117296703158603498400610313930673453648151014429099960251831405205008293134605366015284045125262984521994476231760549815623012836030339067978538590626728130196262515716507849981195751552694049387406898755340816952993133517014025041844809440588220298088634239045104953684521052138002161108718767713272889846311454562299898752627785623976672521828121478939955822655777460641240477320760977111903156911659536243623806004544204602635691954808430668261822466970110676842032505435259953957358927790048050472573112149563557689823435680703352963668955008021299200000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 00:48:06) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(5)
+b=365-n
+c=factorial(b)
+d=a/b
+print(d)
+
+-- OUTPUT:
+0.33994334277620397
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 00:49:34) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(360)
+b=365-n
+c=factorial(b)
+d=a/b
+print(d)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    d=a/b
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 00:50:26) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(360)
+b=365-n
+c=factorial(b)
+d=a/c
+print(d)
+
+-- OUTPUT:
+7.389751003473888e+17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 00:51:20) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(360)
+b=365-n
+c=factorial(b)
+d=1-((a/c)*(1/365**n))
+print(d)
+
+-- OUTPUT:
+0.9999999999998679
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 00:53:02) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(360)
+b=365-n
+c=factorial(b)
+d=1-((a/c)*(1/365**n))
+print(round(d, 2))
+
+-- OUTPUT:
+1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 00:57:45) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(360)
+b=365-n
+c=factorial(b)
+d=1-((a/c)*(1/365**n))
+e=(d*100)/n
+print(round(e, 2))
+
+-- OUTPUT:
+8.33
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:05:20) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(360)
+b=365-n
+c=factorial(b)
+d=a/c
+e=100/5**n
+f=(d*100)/n
+print(round(e, 2))
+
+-- OUTPUT:
+0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:08:25) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=a/c
+e=1/365**n
+f=1-d*e
+=(d*100)/n
+print(round(f, 2))
+
+-- ERROR:
+File "XXXX", line 9
+    =(d*100)/n
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:08:36) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=a/c
+e=1/365**n
+f=1-d*e
+g=(d*100)/n
+print(round(f, 2))
+
+-- OUTPUT:
+0.17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:10:29) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=a/c
+e=1/365**n
+f=1-d*e
+g=(f*100)/n
+print(round(g, 2))
+
+-- OUTPUT:
+1.39
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:22:43) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=365**n
+f=c*d
+g=1-a/f
+h=(d*100)/n
+print(round(g, 2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    f=c*d
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:24:10) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=365**n
+f=c*d
+g=1-a/f
+h=(d*100)/n
+print(round(f, 2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    f=c*d
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:24:32) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=365**n
+f=c*d
+
+print(round(f, 2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    f=c*d
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:27:03) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=365**n
+f=c*d
+g=1-a/f
+
+print(round(f, 2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    f=c*d
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:27:45) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=365**n
+f=c*d
+g=1-a/f
+
+print(f0
+
+-- ERROR:
+File "XXXX", line 11
+    
+            ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:28:08) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=365**n
+f=c*d
+g=1-a/f
+
+print(f)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    f=c*d
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:31:46) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=365**n
+f=c*d
+print(f)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    f=c*d
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:31:46) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=365**n
+f=c*d
+print(f)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    f=c*d
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:32:05) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=365**n
+f=c*d
+print(f)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    f=c*d
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:32:21) 
+-- CODE:
+from math import*
+n=float(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=365**n
+f=c*d
+print(f)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    f=c*d
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:37:52) 
+-- CODE:
+from math import*
+n=int(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=365**n
+f=c*d
+print(f)
+
+-- OUTPUT:
+30137906073507789085124384271438505673846616783702409169419010100565221459256349904005902302688740426286465468342462933298838261130043878758552916351167918902399458848186701029680075340213441498960417176628593228518576719827422130673063458019389071626862542805263488539009415415595236672497668269614553965769697860270272097041004602378439166647607747159831092197973875196063274288184405898091842946017101917862108161071911819299560283640991332947728752692830160966764156071542578522814067089972924303002860583984934127244447296407733306652065479212478522637400494600054892164507820561381757177898431109265045284662465070413233704820104895451292382337388530104718817568946671268659200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:39:49) 
+-- CODE:
+from math import*
+n=int(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=365**n
+f=c*d
+g=a/f
+print(f)
+
+-- OUTPUT:
+30137906073507789085124384271438505673846616783702409169419010100565221459256349904005902302688740426286465468342462933298838261130043878758552916351167918902399458848186701029680075340213441498960417176628593228518576719827422130673063458019389071626862542805263488539009415415595236672497668269614553965769697860270272097041004602378439166647607747159831092197973875196063274288184405898091842946017101917862108161071911819299560283640991332947728752692830160966764156071542578522814067089972924303002860583984934127244447296407733306652065479212478522637400494600054892164507820561381757177898431109265045284662465070413233704820104895451292382337388530104718817568946671268659200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:40:07) 
+-- CODE:
+from math import*
+n=int(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=365**n
+f=c*d
+g=a/f
+print(g)
+
+-- OUTPUT:
+0.8329752111619356
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:40:28) 
+-- CODE:
+from math import*
+n=int(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=365**n
+f=c*d
+g=1-a/f
+print(g)
+
+-- OUTPUT:
+0.16702478883806438
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:41:29) 
+-- CODE:
+from math import*
+n=int(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=365**n
+f=c*d
+g=1-a/f
+print(g, 2)
+
+-- OUTPUT:
+0.16702478883806438 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:42:27) 
+-- CODE:
+from math import*
+n=int(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=365**n
+f=c*d
+g=1-a/f
+h=g*100/n
+print(h, 2)
+
+-- OUTPUT:
+1.3918732403172032 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:42:53) 
+-- CODE:
+from math import*
+n=int(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=365**n
+f=c*d
+g=1-a/f
+h=(g*100)/n
+print(h, 2)
+
+-- OUTPUT:
+1.3918732403172032 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:43:42) 
+-- CODE:
+from math import*
+n=int(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=365**n
+f=c*d
+g=1-a/f
+h=(g*100)
+print(h, 2)
+
+-- OUTPUT:
+16.70247888380644 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:44:23) 
+-- CODE:
+from math import*
+n=int(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=365**n
+f=c*d
+g=1-a/f
+h=(g*100)
+print(round(h, 2))
+
+-- OUTPUT:
+16.7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-30 01:44:38) 
+-- CODE:
+from math import*
+n=int(input())
+a=factorial(365)
+b=365-n
+c=factorial(b)
+d=365**n
+f=c*d
+g=1-a/f
+h=(g*100)
+print(round(h, 2))
+
+-- EXECUTION TIME:
+0.167889
+-- TEST CASE 1:
+---- input:
+12
+---- correct output:
+16.7
+---- user output:
+16.7
+-- TEST CASE 2:
+---- input:
+24
+---- correct output:
+53.83
+---- user output:
+53.83
+-- TEST CASE 3:
+---- input:
+99
+---- correct output:
+100.0
+---- user output:
+100.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

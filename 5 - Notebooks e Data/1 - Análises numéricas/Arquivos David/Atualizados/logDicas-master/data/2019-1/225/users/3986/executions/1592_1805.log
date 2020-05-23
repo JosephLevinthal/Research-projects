@@ -1,0 +1,123 @@
+== TEST (2019-04-01 13:56:58) 
+-- CODE:
+xa= float("coordenada xa: ")
+ya= float("coordenada ya: ")
+xb= float("coordenada xb: ")
+xy= float("coordenada yb: ")
+
+MX= (xb + xa) / 2
+MY= (yb + ya) / 2
+
+print(MX)
+print(MY)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    xa= float("coordenada xa: ")
+ValueError: could not convert string to float: 'coordenada xa: '
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 13:57:34) 
+-- CODE:
+xa= float(input("coordenada xa: "))
+ya= float(input("coordenada ya: "))
+xb= float(input("coordenada xb: "))
+xy= float(input("coordenada yb: "))
+
+MX= (xb + xa) / 2
+MY= (yb + ya) / 2
+
+print(MX)
+print(MY)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    MY= (yb + ya) / 2
+NameError: name 'yb' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 13:58:37) 
+-- CODE:
+xa= float(input("coordenada xa: "))
+ya= float(input("coordenada ya: "))
+xb= float(input("coordenada xb: "))
+xy= float(input("coordenada yb: "))
+
+MX= (xb + xa) / 2
+MY= (yb + ya) / 2
+
+print(round(MX, 1))
+print(round(MY, 1))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    MY= (yb + ya) / 2
+NameError: name 'yb' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 13:59:16) 
+-- CODE:
+xa= float(input("coordenada xa: "))
+ya= float(input("coordenada ya: "))
+xb= float(input("coordenada xb: "))
+yb= float(input("coordenada yb: "))
+
+MX= (xb + xa) / 2
+MY= (yb + ya) / 2
+
+print(round(MX, 1))
+print(round(MY, 1))
+-- OUTPUT:
+40.0
+36.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 13:59:42) 
+-- CODE:
+xa= float(input("coordenada xa: "))
+ya= float(input("coordenada ya: "))
+xb= float(input("coordenada xb: "))
+yb= float(input("coordenada yb: "))
+
+MX= (xb + xa) / 2
+MY= (yb + ya) / 2
+
+print(round(MX, 1))
+print(round(MY, 1))
+-- EXECUTION TIME:
+0.140678
+-- TEST CASE 1:
+---- input:
+50
+25
+30
+48
+---- correct output:
+40.0
+36.5
+---- user output:
+40.0
+36.5
+-- TEST CASE 2:
+---- input:
+2.5
+3.0
+5.0
+1.8
+---- correct output:
+3.8
+2.4
+---- user output:
+3.8
+2.4
+-- TEST CASE 3:
+---- input:
+1.22
+2.33
+3.44
+4.55
+---- correct output:
+2.3
+3.4
+---- user output:
+2.3
+3.4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,302 @@
+== TEST (2019-04-15 19:40:06) 
+-- CODE:
+p=float(input("preco:"))
+pag=float(input("pagamento:"))
+x= p - pag
+if (p > pag):
+	print("falta" x )
+-- ERROR:
+File "XXXX", line 5
+    print("falta" x )
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:40:15) 
+-- CODE:
+p=float(input("preco:"))
+pag=float(input("pagamento:"))
+x= p - pag
+if (p > pag):
+	print("falta" + x )
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print("falta" + x )
+TypeError: must be str, not float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:40:29) 
+-- CODE:
+p=float(input("preco:"))
+pag=float(input("pagamento:"))
+x= p - pag
+if (p > pag):
+	print("falta", x )
+-- OUTPUT:
+falta 26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:47:05) 
+-- CODE:
+p=float(input("preco:"))
+pag=float(input("pagamento:"))
+x= p - pag
+y= pag - p
+if (p > pag):
+	print(round("falta", x, 2 ))
+else:
+	print(round("troco"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print(round("falta", x, 2 ))
+TypeError: round() takes at most 2 arguments (3 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:47:39) 
+-- CODE:
+p=float(input("preco:"))
+pag=float(input("pagamento:"))
+x= p - pag
+y= pag - p
+if (p > pag):
+	print(round("falta", x), 2)
+else:
+	print(round("troco"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print(round("falta", x), 2)
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:48:26) 
+-- CODE:
+p=float(input("preco:"))
+pag=float(input("pagamento:"))
+x= p - pag
+y= pag - p
+if (p > pag):
+	print("falta", x)
+else:
+	print("troco", y)
+-- OUTPUT:
+falta 26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 19:48:28) 
+-- CODE:
+p=float(input("preco:"))
+pag=float(input("pagamento:"))
+x= p - pag
+y= pag - p
+if (p > pag):
+	print("falta", x)
+else:
+	print("troco", y)
+-- EXECUTION TIME:
+0.195017
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+troco 28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+troco 0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 19:49:02) 
+-- CODE:
+p=float(input("preco:"))
+pag=float(input("pagamento:"))
+x= p - pag
+y= pag - p
+if (p > pag):
+	print("falta", p -pag)
+else:
+	print("troco", y)
+-- EXECUTION TIME:
+0.138617
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+troco 28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+troco 0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:49:03) 
+-- CODE:
+p=float(input("preco:"))
+pag=float(input("pagamento:"))
+x= p - pag
+y= pag - p
+if (p > pag):
+	print("falta", p -pag)
+else:
+	print("troco", y)
+-- OUTPUT:
+falta 26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 19:49:04) 
+-- CODE:
+p=float(input("preco:"))
+pag=float(input("pagamento:"))
+x= p - pag
+y= pag - p
+if (p > pag):
+	print("falta", p -pag)
+else:
+	print("troco", y)
+-- EXECUTION TIME:
+0.142654
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+troco 28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+preco:pagamento:troco 0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 19:49:38) 
+-- CODE:
+p=float(input("preco:"))
+pag=float(input("pagamento:"))
+x= p - pag
+y= pag - p
+if (p > pag):
+	print("falta", x)
+else:
+	print("troco de", y)
+-- EXECUTION TIME:
+0.198735
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+troco de 28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+troco de 0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:50:09) 
+-- CODE:
+p=float(input("preco:"))
+pag=float(input("pagamento:"))
+x= p - pag
+y= pag - p
+if (p > pag):
+	print("Falta", x)
+else:
+	print("Troco de", y)
+-- OUTPUT:
+Falta 26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 19:50:10) 
+-- CODE:
+p=float(input("preco:"))
+pag=float(input("pagamento:"))
+x= p - pag
+y= pag - p
+if (p > pag):
+	print("Falta", x)
+else:
+	print("Troco de", y)
+-- EXECUTION TIME:
+0.140002
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+Falta 26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+Troco de 28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+Troco de 0.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

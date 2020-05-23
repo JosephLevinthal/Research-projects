@@ -1,0 +1,5 @@
+a = int(input("posicao inicial:"))
+b = int(input("velocidade:"))
+c = int(input("tempo:"))
+s = a+(b*c)
+print(s)

@@ -1,0 +1,18 @@
+x = int(input("valor cedula: "))
+
+print("Entrada:", x)
+
+if (x == 2):
+	print("Animal: Tartatura")
+elif (x == 5):
+	print("Animal: Garca")
+elif (x == 10):
+	print("Animal: Arara")
+elif (x == 20):
+	print("Animal: Mico-leao-dourado")
+elif (x == 50):
+	print("Animal: Onca-pintada")
+elif (x == 100):
+	print("Animal: Garoupa")
+else: 
+	print("Animal: Invalido")

@@ -1,0 +1,110 @@
+== TEST (2019-03-26 18:38:37) 
+-- CODE:
+#definimos a variavel de polpa que foi comprado
+polpa=input("litros de polpa comprados")
+#agora definimos a variavel que indica a quantidade polpa de michael
+qmichael=polpa%3
+#arredondamos ate a terceira casa a quantidade de michael
+qmichaelar=round(qmichael, 3)
+print(qmichaelar)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    qmichael=polpa%3
+TypeError: not all arguments converted during string formatting
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 18:39:04) 
+-- CODE:
+#definimos a variavel de polpa que foi comprado
+polpa=input("litros de polpa comprados")
+#agora definimos a variavel que indica a quantidade polpa de michael
+qmichael=polpa*1/3
+#arredondamos ate a terceira casa a quantidade de michael
+qmichaelar=round(qmichael, 3)
+print(qmichaelar)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    qmichael=polpa*1/3
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 18:39:27) 
+-- CODE:
+#definimos a variavel de polpa que foi comprado
+polpa=input("litros de polpa comprados")
+#agora definimos a variavel que indica a quantidade polpa de michael
+qmichael=1/3*polpa
+#arredondamos ate a terceira casa a quantidade de michael
+qmichaelar=round(qmichael, 3)
+print(qmichaelar)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    qmichael=1/3*polpa
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 18:40:09) 
+-- CODE:
+#definimos a variavel de polpa que foi comprado
+polpa=int(input("litros de polpa comprados"))
+#agora definimos a variavel que indica a quantidade polpa de michael
+qmichael=1/3*polpa
+#arredondamos ate a terceira casa a quantidade de michael
+qmichaelar=round(qmichael, 3)
+print(qmichaelar)
+
+-- OUTPUT:
+2.333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 18:40:29) 
+-- CODE:
+#definimos a variavel de polpa que foi comprado
+polpa=float(input("litros de polpa comprados"))
+#agora definimos a variavel que indica a quantidade polpa de michael
+qmichael=1/3*polpa
+#arredondamos ate a terceira casa a quantidade de michael
+qmichaelar=round(qmichael, 3)
+print(qmichaelar)
+
+-- OUTPUT:
+2.333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 18:40:35) 
+-- CODE:
+#definimos a variavel de polpa que foi comprado
+polpa=float(input("litros de polpa comprados"))
+#agora definimos a variavel que indica a quantidade polpa de michael
+qmichael=1/3*polpa
+#arredondamos ate a terceira casa a quantidade de michael
+qmichaelar=round(qmichael, 3)
+print(qmichaelar)
+
+-- EXECUTION TIME:
+0.152373
+-- TEST CASE 1:
+---- input:
+7
+---- correct output:
+2.333
+---- user output:
+2.333
+-- TEST CASE 2:
+---- input:
+20.0
+---- correct output:
+6.667
+---- user output:
+6.667
+-- TEST CASE 3:
+---- input:
+15
+---- correct output:
+5.0
+---- user output:
+5.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

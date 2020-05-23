@@ -1,0 +1,83 @@
+== TEST (2019-06-06 16:22:07) 
+-- CODE:
+from numpy import*
+golsA = array(eval(input("Numero de gols do time A: ")))
+golsB = array(eval(input("Numero de gols do time B: ")))
+x = zeros(3,dtype=int)
+for i in range(size(golsA)) and range(size(golsB)):
+	if(golsA > golsB):
+		x[0] = x[0] + 1
+	elif(golsA == golsB):
+		x[1] = x[1] + 1
+	elif(golsA < golsB):
+		x[2] = x[2] + 1
+print(x)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 16:28:32) 
+-- CODE:
+from numpy import*
+golsA = array(eval(input("Numero de gols do time A: ")))
+golsB = array(eval(input("Numero de gols do time B: ")))
+x = zeros(3,dtype=int)
+for i in range(size(golsA)):
+	if(golsA[i] > golsB[i]):
+		x[0] = x[0] + 1
+	elif(golsA[i] == golsB[i]):
+		x[1] = x[1] + 1
+	elif(golsA[i] < golsB[i]):
+		x[2] = x[2] + 1
+print(x)		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 16:29:26) 
+-- CODE:
+from numpy import*
+golsA = array(eval(input("Numero de gols do time A: ")))
+golsB = array(eval(input("Numero de gols do time B: ")))
+x = zeros(3,dtype=int)
+for i in range(size(golsA)):
+	if(golsA[i] > golsB[i]):
+		x[0] = x[0] + 1
+	elif(golsA[i] == golsB[i]):
+		x[1] = x[1] + 1
+	elif(golsA[i] < golsB[i]):
+		x[2] = x[2] + 1
+print(x)		
+-- EXECUTION TIME:
+1.02627
+-- TEST CASE 1:
+---- input:
+[2,3,2,4,3,5,3,4,2,3,1,0]
+[3,3,1,0,2,3,3,0,1,2,1,1]
+---- correct output:
+[7 3 2]
+---- user output:
+[7 3 2]
+-- TEST CASE 2:
+---- input:
+[1,2,1,2,1,2,1,2,0]
+[3,5,3,3,3,3,3,3,3]
+---- correct output:
+[0 0 9]
+---- user output:
+[0 0 9]
+-- TEST CASE 3:
+---- input:
+[1,2,2,2,2,1,1,2,2,1,1,2,2]
+[0,1,1,1,0,0,0,0,0,0,1,1,1]
+---- correct output:
+[12 1 0]
+---- user output:
+[12  1  0]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

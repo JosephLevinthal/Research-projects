@@ -1,0 +1,346 @@
+== TEST (2019-06-13 07:43:51) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input()))
+y = array(eval(input()))
+
+
+a = zeros(size(x))
+
+for i in range(size(x)):
+	a[i] = x[i]/y[i]*y[i]
+print(a)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 07:43:53) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input()))
+y = array(eval(input()))
+
+
+a = zeros(size(x))
+
+for i in range(size(x)):
+	a[i] = x[i]/y[i]*y[i]
+print(a)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 07:43:53) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input()))
+y = array(eval(input()))
+
+
+a = zeros(size(x))
+
+for i in range(size(x)):
+	a[i] = x[i]/y[i]*y[i]
+print(a)
+	
+-- EXECUTION TIME:
+1.22373
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[64.58 77.85 45.96 55.55]
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[34.67 45.78 55.89]
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[102.89  99.87]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 07:44:25) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input()))
+y = array(eval(input()))
+
+
+a = zeros(size(x))
+
+for i in range(size(x)):
+	a[i] = x[i]/(y[i]*y[i])
+print(a)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 07:44:55) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input()))
+y = array(eval(input()))
+
+
+a = zeros(size(x))
+
+for i in range(size(x)):
+	a[i] = round(x[i]/(y[i]*y[i]),2)
+print(a)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 07:51:28) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input()))
+y = array(eval(input()))
+
+
+a = zeros(size(x))
+
+for i in range(size(x)):
+	a[i] = round(x[i]/(y[i]*y[i]),2)
+	
+c = ""
+n = max(a)
+
+for i in range(size(a)):
+	if n < 17:
+		c = "muito abaixo do peso"
+	if 17 <= n <= 18.49:
+		c = "abaixo do peso"
+	if 18,5 <= n <= 24.99:
+		c= "peso normal"
+	if 25 <= n <= 29.99:
+		c= "acima do peso"
+	if 30 <= n <=34.99:
+		c = "obesidade"
+	if 35 <= n <= 39.99:
+		c= "obesidade severa"
+	if n > 40:
+		c = "obesidade morbida"
+print(a)
+print("O MAIOR IMC DA TURMA EH: "max(a))
+print(c.upper())
+-- ERROR:
+File "XXXX", line 20
+    if 18,5 <= n <= 24.99:
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 07:51:44) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input()))
+y = array(eval(input()))
+
+
+a = zeros(size(x))
+
+for i in range(size(x)):
+	a[i] = round(x[i]/(y[i]*y[i]),2)
+	
+c = ""
+n = max(a)
+
+for i in range(size(a)):
+	if n < 17:
+		c = "muito abaixo do peso"
+	if 17 <= n <= 18.49:
+		c = "abaixo do peso"
+	if 18.5 <= n <= 24.99:
+		c= "peso normal"
+	if 25 <= n <= 29.99:
+		c= "acima do peso"
+	if 30 <= n <=34.99:
+		c = "obesidade"
+	if 35 <= n <= 39.99:
+		c= "obesidade severa"
+	if n > 40:
+		c = "obesidade morbida"
+print(a)
+print("O MAIOR IMC DA TURMA EH: "max(a))
+print(c.upper())
+-- ERROR:
+File "XXXX", line 31
+    print("O MAIOR IMC DA TURMA EH: "max(a))
+                                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 07:52:45) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input()))
+y = array(eval(input()))
+
+
+a = zeros(size(x))
+
+for i in range(size(x)):
+	a[i] = round(x[i]/(y[i]*y[i]),2)
+	
+c = ""
+n = max(a)
+
+for i in range(size(a)):
+	if n < 17:
+		c = "muito abaixo do peso"
+	if 17 <= n <= 18.49:
+		c = "abaixo do peso"
+	if 18.5 <= n <= 24.99:
+		c= "peso normal"
+	if 25 <= n <= 29.99:
+		c= "acima do peso"
+	if 30 <= n <=34.99:
+		c = "obesidade"
+	if 35 <= n <= 39.99:
+		c= "obesidade severa"
+	if n > 40:
+		c = "obesidade morbida"
+print(a)
+print("O MAIOR IMC DA TURMA EH: ",n)
+print(c.upper())
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 07:53:03) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input()))
+y = array(eval(input()))
+
+
+a = zeros(size(x))
+
+for i in range(size(x)):
+	a[i] = round(x[i]/(y[i]*y[i]),2)
+	
+c = ""
+n = max(a)
+
+for i in range(size(a)):
+	if n < 17:
+		c = "muito abaixo do peso"
+	if 17 <= n <= 18.49:
+		c = "abaixo do peso"
+	if 18.5 <= n <= 24.99:
+		c= "peso normal"
+	if 25 <= n <= 29.99:
+		c= "acima do peso"
+	if 30 <= n <=34.99:
+		c = "obesidade"
+	if 35 <= n <= 39.99:
+		c= "obesidade severa"
+	if n > 40:
+		c = "obesidade morbida"
+print(a)
+print("O MAIOR IMC DA TURMA EH: ",n)
+print(c.upper())
+-- EXECUTION TIME:
+0.805551
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH:  24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH:  17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[37.79 31.88]
+O MAIOR IMC DA TURMA EH:  37.79
+OBESIDADE SEVERA
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 07:55:49) 
+-- CODE:
+from numpy import *
+
+print(len(array(eval(input()))))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 07:55:56) 
+-- CODE:
+from numpy import *
+
+print(len("array(eval(input()))"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

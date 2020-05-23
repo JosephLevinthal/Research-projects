@@ -1,0 +1,58 @@
+== TEST (2019-06-11 10:33:35) 
+-- CODE:
+from math import*
+x = float(input("angulo: "))
+k = int(input("serie: "))
+cos = 1
+if k == 1:
+	print(cos)
+else:
+	for n in range(1, k):
+		cos = cos + (x**(n*2))/factorial(n*2)
+	print(round(cos, 8))
+
+-- OUTPUT:
+3.76190476
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 10:33:45) 
+-- CODE:
+from math import*
+x = float(input("angulo: "))
+k = int(input("serie: "))
+cos = 1
+if k == 1:
+	print(cos)
+else:
+	for n in range(1, k):
+		cos = cos + (x**(n*2))/factorial(n*2)
+	print(round(cos, 8))
+
+-- EXECUTION TIME:
+0.671427
+-- TEST CASE 1:
+---- input:
+2
+5
+---- correct output:
+3.76190476
+---- user output:
+3.76190476
+-- TEST CASE 2:
+---- input:
+10
+2
+---- correct output:
+51.0
+---- user output:
+51.0
+-- TEST CASE 3:
+---- input:
+12
+35
+---- correct output:
+81377.39571257
+---- user output:
+81377.39571257
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

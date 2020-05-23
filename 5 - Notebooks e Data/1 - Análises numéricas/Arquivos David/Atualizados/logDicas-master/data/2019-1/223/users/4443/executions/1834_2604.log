@@ -1,0 +1,367 @@
+== TEST (2019-06-18 17:18:37) 
+-- CODE:
+# Constantes
+NALUNOS = shape(resp)[0] # No. de alunos
+NQUEST = shape(resp)[1]  # No. de questoes
+# Vetor das notas de cada aluno
+notas = zeros((NALUNOS), dtype=int)
+# Percorre cada linha (aluno)
+for i in range(NALUNOS):
+# Pontua um aluno i, verificando cada questao
+  for j in range(NQUEST):
+		if(resp[i,j] == gab[j]):
+			notas[i] = notas[i] + 1
+print(notas)
+-- ERROR:
+File "XXXX", line 10
+    if(resp[i,j] == gab[j]):
+                           ^
+TabError: inconsistent use of tabs and spaces in indentation
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-18 17:19:06) 
+-- CODE:
+# Constantes
+NALUNOS = shape(resp)[0] # No. de alunos
+NQUEST = shape(resp)[1]  # No. de questoes
+# Vetor das notas de cada aluno
+notas = zeros((NALUNOS), dtype=int)
+# Percorre cada linha (aluno)
+for i in range(NALUNOS):
+# Pontua um aluno i, verificando cada questao
+	for j in range(NQUEST):
+		if(resp[i,j] == gab[j]):
+			notas[i] = notas[i] + 1
+print(notas)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    NALUNOS = shape(resp)[0] # No. de alunos
+NameError: name 'shape' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-18 17:19:41) 
+-- CODE:
+from numpy import *
+
+# Constantes
+NALUNOS = shape(resp)[0] # No. de alunos
+NQUEST = shape(resp)[1]  # No. de questoes
+# Vetor das notas de cada aluno
+notas = zeros((NALUNOS), dtype=int)
+# Percorre cada linha (aluno)
+for i in range(NALUNOS):
+# Pontua um aluno i, verificando cada questao
+	for j in range(NQUEST):
+		if(resp[i,j] == gab[j]):
+			notas[i] = notas[i] + 1
+print(notas)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-18 17:22:46) 
+-- CODE:
+from numpy import *
+
+# Constantes
+NALUNOS = shape(resp)[0] # No. de alunos
+NQUEST = shape(resp)[1]  # No. de questoes
+# Vetor das notas de cada aluno
+notas = zeros((NALUNOS), dtype=int)
+# Percorre cada linha (aluno)
+for i in range(NALUNOS):
+# Pontua um aluno i, verificando cada questao
+	for j in range(NQUEST):
+		if(resp[i,j] == gab[j]):
+			notas[i] = notas[i] + 1
+print(notas)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 08:11:40) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+diaria = array(eval(input("Digite a diaria de cada funcionario: ")))
+pagto = zeros(shape(diaria)[0], dtype=int) 
+print(pagto)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 16:59:05) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+diaria = array(eval(input("Digite a diaria de cada funcionario: ")))
+for i in range(shape(diaria)[0]):
+	diaria[i,:] = sorted(mat[i,:], reverse=True)
+print(diaria)
+pagto = zeros(shape(diaria)[0], dtype=int) 
+#print(pagto)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 16:59:46) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+diaria = array(eval(input("Digite a diaria de cada funcionario: ")))
+n = shape(diaria)[0]
+for i in range(n):
+	diaria[i,:] = sorted(mat[i,:], reverse=True)
+print(diaria)
+pagto = zeros(shape(diaria)[0], dtype=int) 
+#print(pagto)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 17:00:39) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+diaria = array(eval(input("Digite a diaria de cada funcionario: ")))
+n = shape(diaria)[0]
+for i in range(n):
+	diaria[i,:] = sorted(diaria[i,:], reverse=True)
+print(diaria)
+pagto = zeros(shape(diaria)[0], dtype=int) 
+#print(pagto)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 17:02:46) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+diaria = array(eval(input("Digite a diaria de cada funcionario: ")))
+n = shape(diaria)[0]
+for i in range(n):
+	diaria[i,:] = sorted(diaria[i,:], reverse=True)
+	print(diaria[i,0])
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 17:03:14) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+diaria = array(eval(input("Digite a diaria de cada funcionario: ")))
+n = shape(diaria)[0]
+for i in range(n):
+	diaria[i,:] = sorted(diaria[i,:], reverse=True)
+	print(diaria[i,0])
+
+
+
+-- EXECUTION TIME:
+1.13324
+-- TEST CASE 1:
+---- input:
+[[34.5,67.8,89.7,56.4,65.7,78.9,81.2],[99.9,67.8,87.6,45.4,12.3,45.5,23.7],[27.5,93.1,45.9,47.3,19.2,76.5,49.3]]
+---- correct output:
+89.7
+99.9
+93.1
+---- user output:
+89.7
+99.9
+93.1
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:44:34) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+diaria = array(eval(input("Digite a diaria de cada funcionario: ")))
+n = shape(diaria)[0]
+for i in range(n):
+	diaria[i,:] = sorted(diaria[i,:], reverse=True)
+	print(diaria[i,0])
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 18:45:49) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+diaria = array(eval(input("Digite a diaria de cada funcionario: ")))
+n = shape(diaria)[0]
+
+for i in range(n):
+	diaria[i,:] = sorted(diaria[i,:], reverse=True)
+print(diaria)
+	
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:55:19) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+rs = array(eval(input("digite o salario diario: ")))
+for i in range(7):
+	rs[:,i] = sorted(rs[:,i], reverse=True)
+print(rs[:,0])	
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:56:09) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+rs = array(eval(input("digite o salario diario: ")))
+for i in range(7):
+	rs[:,i] = sorted(rs[:,i], reverse=True)
+print(rs)	
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:57:40) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+rs = array(eval(input("digite o salario diario: ")))
+for i in range(7):
+	rs[i,:] = sorted(rs[i,:], reverse=True)
+print(rs)	
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:59:04) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+rs = array(eval(input("digite o salario diario: ")))
+for i in range(shape(rs)[0]):
+	rs[i,:] = sorted(rs[i,:], reverse=True)
+print(rs)	
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:59:41) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+rs = array(eval(input("digite o salario diario: ")))
+for i in range(shape(rs)[0]):
+	rs[i,:] = sorted(rs[i,:], reverse=True)
+print(rs[:,0])	
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:01:40) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+rs = array(eval(input("digite o salario diario: ")))
+for i in range(shape(rs)[0]):
+	print(max(rs[i,:]))
+	#rs[i,:] = sorted(rs[i,:], reverse=True)
+	#print(rs[:,0])	
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 12:02:36) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+rs = array(eval(input("digite o salario diario: ")))
+for i in range(shape(rs)[0]):
+	print(max(rs[i,:]))
+
+
+
+-- EXECUTION TIME:
+0.972367
+-- TEST CASE 1:
+---- input:
+[[34.5,67.8,89.7,56.4,65.7,78.9,81.2],[99.9,67.8,87.6,45.4,12.3,45.5,23.7],[27.5,93.1,45.9,47.3,19.2,76.5,49.3]]
+---- correct output:
+89.7
+99.9
+93.1
+---- user output:
+89.7
+99.9
+93.1
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

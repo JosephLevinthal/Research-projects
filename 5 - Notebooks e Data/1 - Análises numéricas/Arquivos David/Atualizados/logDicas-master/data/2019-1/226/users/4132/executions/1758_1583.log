@@ -1,0 +1,783 @@
+== TEST (2019-05-28 10:55:43) 
+-- CODE:
+s = input("Digite: ")
+v=arange(size(s)+size(s)/3-1)
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    v=arange(size(s)+size(s)/3-1)
+NameError: name 'arange' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 10:56:01) 
+-- CODE:
+from numpy import *
+s = input("Digite: ")
+v=arange(size(s)+size(s)/3-1)
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 10:57:59) 
+-- CODE:
+from numpy import *
+s = input("Digite: ")
+v=arange(size(s)+size(s)/3-1)
+i =0
+k=0
+while(i<size(s)):
+	if(i%3=0):
+		v[k]="."
+	else:
+		v[k]=s[i]
+	i+=1
+	k+=1
+print(v)
+	
+-- ERROR:
+File "XXXX", line 7
+    if(i%3=0):
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 10:58:17) 
+-- CODE:
+from numpy import *
+s = input("Digite: ")
+v=arange(size(s)+size(s)/3-1)
+i =0
+k=0
+while(i<size(s)):
+	if(i%3==0):
+		v[k]="."
+	else:
+		v[k]=s[i]
+	i+=1
+	k+=1
+print(v)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 10:58:45) 
+-- CODE:
+from numpy import *
+s = input("Digite: ")
+v=arange(size(s)+size(s)/3-1,string)
+i =0
+k=0
+while(i<size(s)):
+	if(i%3==0):
+		v[k]="."
+	else:
+		v[k]=s[i]
+	i+=1
+	k+=1
+print(v)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 10:58:58) 
+-- CODE:
+from numpy import *
+s = input("Digite: ")
+v=arange(size(s)+size(s)/3-1,String)
+i =0
+k=0
+while(i<size(s)):
+	if(i%3==0):
+		v[k]="."
+	else:
+		v[k]=s[i]
+	i+=1
+	k+=1
+print(v)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:00:36) 
+-- CODE:
+from numpy import *
+s = input("Digite: ")
+v=arange(size(s)+size(s)/3-1)
+i =0
+k=0
+while(i<size(s)):
+	if(i%3==0):
+		v[k]="."
+	else:
+		v[k]=s[i]
+	i+=1
+	k+=1
+print(v)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:11:00) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+
+i = 0
+k=3
+while( i < size(s) ):
+	n = v[i:k]+"."
+	i+=3
+	k+=3
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:11:15) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+
+i = 0
+k=3
+while( i < size(s) ):
+	n = s[i:k]+"."
+	i+=3
+	k+=3
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:11:51) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+j=0
+i = 0
+k=3
+while( j < size(s) ):
+	n = s[i:k]+"."
+	i+=3
+	k+=3
+	j+=1
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:12:41) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+
+j=0
+i = 0
+k=3
+while( j < size(s) ):
+	n = s[i:k]+"."
+	i+=3
+	k+=3
+	j+=1
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:12:47) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+
+j=0
+i = 0
+k=3
+while( j < size(s) ):
+	n = s[i:k]+"."
+	i+=3
+	k+=3
+	j+=1
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:14:13) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+
+j = 0
+i = 0
+k = 3
+
+while( j < size(s) ):
+	n = s[i:k]+"."
+	i+=3
+	k+=3
+	j+=1
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:14:37) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+
+j = 0
+i = 0
+k = 3
+
+while( j < size(s) ):
+	n = n+s[i:k]+"."
+	i+=3
+	k+=3
+	j+=1
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:14:55) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+
+j = 0
+i = 0
+k = 3
+
+while( j < size(s) ):
+	n +=s[i:k]+"."
+	i+=3
+	k+=3
+	j+=1
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:15:29) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+n=0
+j = 0
+i = 0
+k = 3
+
+while( j < size(s) ):
+	n =s[i:k]+"."
+	i+=3
+	k+=3
+	j+=1
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:15:43) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+n=0
+j = 0
+i = 0
+k = 3
+
+while( j < size(s) ):
+	n +=s[i:k]+"."
+	i+=3
+	k+=3
+	j+=1
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:16:21) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+n=""
+j = 0
+i = 0
+k = 3
+
+while( j < size(s) ):
+	n +=s[i:k]+"."
+	i+=3
+	k+=3
+	j+=1
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:16:50) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+n=""
+j = 0
+i = 0
+k = 3
+
+while( j < size(s) ):
+	n += s[i:k]+"."
+	i+=3
+	k+=3
+	j+=1
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:22:15) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+
+n = ""
+j = 0
+i = 0
+k = 3
+S[0+3:3+3]
+while( j < size(s) ):
+	n += s[i:k]+"."
+	i+=3
+	k+=3
+	j+=1
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:22:27) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+
+n = ""
+j = 0
+i = 0
+k = 3
+
+while( j < size(s) ):
+	n += s[i:k]+"."
+	i+=3
+	k+=3
+	j+=1
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:22:55) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+
+n = ""
+j = 0
+i = 0
+k = 3
+
+while( j < size(s) ):
+	n = n+ s[i:k]+"."
+	i+=3
+	k+=3
+	j+=1
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:23:14) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+
+n = ""
+j = 0
+i = 0
+k = 3
+
+while( j < size(s) ):
+	n = n+ s[i:k]+"."
+	i+=3
+	k+=3
+	j+=3
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:23:53) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+
+n = ""
+j = 0
+i = 0
+k = 3
+
+while( j < len(s) ):
+	n = n+ s[i:k]+"."
+	i+=3
+	k+=3
+	j+=2
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:24:05) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+
+n = ""
+j = 0
+i = 0
+k = 3
+
+while( j < len(s) ):
+	n = n+ s[i:k]+"."
+	i+=3
+	k+=3
+	j+=1
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:24:16) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+
+n = ""
+j = 0
+i = 0
+k = 3
+
+while( j < len(s) ):
+	n = n+ s[i:k]+"."
+	i+=3
+	k+=3
+	j+=1
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:24:23) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+
+n = ""
+j = 0
+i = 0
+k = 3
+
+while( j < len(s) ):
+	n = n+ s[i:k]+"."
+	i+=3
+	k+=3
+	j+=3
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:25:50) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+
+n = s[0:3]
+j = 0
+i = 3
+k = 6
+
+while( j < len(s) ):
+	n += "."+ s[i:k]
+	i+=3
+	k+=3
+	j+=3
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:26:37) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+
+n = s[0:3]
+j = 0
+i = 3
+k = 6
+
+while( j < len(s) ):
+	n += "." + s[i:k]
+	i+=3
+	k+=3
+	j+=3
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:27:06) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+
+n = s[0:3]
+j = 3
+i = 3
+k = 6
+
+while( j < len(s) ):
+	n += "." + s[i:k]
+	i+=3
+	k+=3
+	j+=3
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:27:13) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+
+n = s[0:3]
+j = 3
+i = 3
+k = 6
+
+while( j < len(s) ):
+	n += "." + s[i:k]
+	i+=3
+	k+=3
+	j+=3
+	
+print(n)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 11:27:19) 
+-- CODE:
+from numpy import *
+
+s = input("Digite: ")
+
+n = s[0:3]
+j = 3
+i = 3
+k = 6
+
+while( j < len(s) ):
+	n += "." + s[i:k]
+	i+=3
+	k+=3
+	j+=3
+	
+print(n)
+
+
+-- EXECUTION TIME:
+0.391619
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789.000.987.654.321
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

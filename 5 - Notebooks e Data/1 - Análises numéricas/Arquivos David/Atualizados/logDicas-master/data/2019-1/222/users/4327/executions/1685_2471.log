@@ -1,0 +1,792 @@
+== TEST (2019-04-29 15:57:09) 
+-- CODE:
+ida=float(input(idade:))
+imc=float(input(imc:))
+
+if ((ida<=0 and ida>130) and imc<=0):
+	print("entradas: {} anos e IMC {}".format(ida,imc))
+	print("Dados invalidos")
+elif(ida<45 and imc<22):
+	
+-- ERROR:
+File "XXXX", line 1
+    ida=float(input(idade:))
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 15:57:34) 
+-- CODE:
+ida=float(input("idade:"))
+imc=float(input("imc:"))
+
+if ((ida<=0 and ida>130) and imc<=0):
+	print("entradas: {} anos e IMC {}".format(ida,imc))
+	print("Dados invalidos")
+elif(ida<45 and imc<22):
+	
+-- ERROR:
+File "XXXX", line 9
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 15:58:03) 
+-- CODE:
+ida=float(input("idade:"))
+imc=float(input("imc:"))
+
+if ((ida<=0 and ida>130) and imc<=0):
+	print("entradas: {} anos e IMC {}".format(ida,imc))
+	print("Dados invalidos")
+	
+elif(ida<45 and imc<22):
+	print("nada")
+	
+-- OUTPUT:
+nada
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 15:58:57) 
+-- CODE:
+ida=float(input("idade:"))
+imc=float(input("imc:"))
+
+if ((ida<=0 and ida>130) and imc<=0):
+	
+	print("entradas: {} anos e IMC {}".format(ida,imc))
+	print("Dados invalidos")
+	
+elif(ida<45 and imc<22):
+	print("nada")
+	
+-- OUTPUT:
+nada
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 16:01:01) 
+-- CODE:
+ida=float(input("idade:"))
+imc=float(input("imc:"))
+
+print("entradas: {} anos e IMC {}".format(ida,imc))
+
+if ((ida<=0 and ida>130) and imc<=0):
+	
+	print("Dados invalidos")
+	
+elif(ida<45 and imc<22):
+	print("nada")
+
+elif(ida>=45 and imc<22):
+	print("medio")
+	
+elif(ida<45 and imc<22):
+	print("nada")
+	
+elif(ida<45 and imc<22):
+	print("nada")
+-- OUTPUT:
+entradas: 0.0 anos e IMC 0.0
+nada
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 16:01:29) 
+-- CODE:
+ida=float(input("idade:"))
+imc=float(input("imc:"))
+
+print("entradas: {} anos e IMC {}".format(ida,imc))
+
+if ((ida<=0 and ida>130) and imc<=0):
+	
+	print("Dados invalidos")
+	
+elif(ida<45 and imc<22):
+	print("nada")
+
+elif(ida>=45 and imc<22):
+	print("medio")
+	
+elif(ida<45 and imc<22):
+	print("nada")
+	
+elif(ida<45 and imc<22):
+	print("nada")
+-- OUTPUT:
+entradas: 0.0 anos e IMC 0.0
+nada
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 16:02:15) 
+-- CODE:
+ida=float(input("idade:"))
+imc=float(input("imc:"))
+
+print("entradas: {} anos e IMC {}".format(ida,imc))
+
+if ((ida<=0 or ida>130) and imc<=0):
+	
+	print("Dados invalidos")
+	
+elif(ida<45 and imc<22):
+	print("nada")
+
+elif(ida>=45 and imc<22):
+	print("medio")
+	
+elif(ida<45 and imc<22):
+	print("nada")
+	
+elif(ida<45 and imc<22):
+	print("nada")
+-- OUTPUT:
+entradas: 0.0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 16:02:24) 
+-- CODE:
+ida=float(input("idade:"))
+imc=float(input("imc:"))
+
+print("entradas: {} anos e IMC {}".format(ida,imc))
+
+if ((ida<=0 or ida>130) and imc<=0):
+	
+	print("Dados invalidos")
+	
+elif(ida<45 and imc<22):
+	print("nada")
+
+elif(ida>=45 and imc<22):
+	print("medio")
+	
+elif(ida<45 and imc<22):
+	print("nada")
+	
+elif(ida<45 and imc<22):
+	print("nada")
+-- OUTPUT:
+entradas: 0.0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 16:06:01) 
+-- CODE:
+ida=float(input("idade:"))
+imc=float(input("imc:"))
+
+print("entradas: {} anos e IMC {}".format(ida,imc))
+
+if ((ida<=0 or ida>130) and imc<=0):
+	
+	print("Dados invalidos")
+	
+elif(ida<45 and imc<22):
+	print("Risco: Baixo")
+
+elif(ida>=45 and imc<22):
+	print("Risco: Medio")
+	
+elif(ida<45 and imc>=22):
+	print("Risco: Medio")
+	
+elif(ida>=45 and imc>=22):
+	print("Risco: Alto")
+-- OUTPUT:
+entradas: 0.0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 16:06:14) 
+-- CODE:
+ida=float(input("idade:"))
+imc=float(input("imc:"))
+
+print("entradas: {} anos e IMC {}".format(ida,imc))
+
+if ((ida<=0 or ida>130) and imc<=0):
+	
+	print("Dados invalidos")
+	
+elif(ida<45 and imc<22):
+	print("Risco: Baixo")
+
+elif(ida>=45 and imc<22):
+	print("Risco: Medio")
+	
+elif(ida<45 and imc>=22):
+	print("Risco: Medio")
+	
+elif(ida>=45 and imc>=22):
+	print("Risco: Alto")
+-- EXECUTION TIME:
+0.135197
+-- TEST CASE 1:
+---- input:
+0
+0
+---- correct output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+---- user output:
+entradas: 0.0 anos e IMC 0.0
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+25
+25
+---- correct output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+---- user output:
+entradas: 25.0 anos e IMC 25.0
+Risco: Medio
+-- TEST CASE 3:
+---- input:
+50
+25
+---- correct output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+---- user output:
+entradas: 50.0 anos e IMC 25.0
+Risco: Alto
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 16:07:00) 
+-- CODE:
+ida=float(input("idade:"))
+imc=float(input("imc:"))
+
+print("entradas: {} anos e IMC {}".format(ida,imc))
+
+if ((ida<=0 or ida>130) and imc<=0):
+	print("Dados invalidos")
+elif(ida<45 and imc<22):
+	print("Risco: Baixo")
+elif(ida>=45 and imc<22):
+	print("Risco: Medio")
+elif(ida<45 and imc>=22):
+	print("Risco: Medio")
+elif(ida>=45 and imc>=22):
+	print("Risco: Alto")
+-- EXECUTION TIME:
+0.149563
+-- TEST CASE 1:
+---- input:
+0
+0
+---- correct output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+---- user output:
+entradas: 0.0 anos e IMC 0.0
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+25
+25
+---- correct output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+---- user output:
+entradas: 25.0 anos e IMC 25.0
+Risco: Medio
+-- TEST CASE 3:
+---- input:
+50
+25
+---- correct output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+---- user output:
+entradas: 50.0 anos e IMC 25.0
+Risco: Alto
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 16:07:56) 
+-- CODE:
+ida=float(input("idade:"))
+imc=float(input("imc:"))
+
+print("entradas: {} anos e IMC {}".format(ida,imc))
+
+if ((ida<=0 or ida>=130) and imc<=0):
+	print("Dados invalidos")
+elif(ida<45 and imc<22):
+	print("Risco: Baixo")
+elif(ida>=45 and imc<22):
+	print("Risco: Medio")
+elif(ida<45 and imc>=22):
+	print("Risco: Medio")
+elif(ida>=45 and imc>=22):
+	print("Risco: Alto")
+-- OUTPUT:
+entradas: 0.0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 16:08:00) 
+-- CODE:
+ida=float(input("idade:"))
+imc=float(input("imc:"))
+
+print("entradas: {} anos e IMC {}".format(ida,imc))
+
+if ((ida<=0 or ida>=130) and imc<=0):
+	print("Dados invalidos")
+elif(ida<45 and imc<22):
+	print("Risco: Baixo")
+elif(ida>=45 and imc<22):
+	print("Risco: Medio")
+elif(ida<45 and imc>=22):
+	print("Risco: Medio")
+elif(ida>=45 and imc>=22):
+	print("Risco: Alto")
+-- EXECUTION TIME:
+0.166185
+-- TEST CASE 1:
+---- input:
+0
+0
+---- correct output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+---- user output:
+entradas: 0.0 anos e IMC 0.0
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+25
+25
+---- correct output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+---- user output:
+entradas: 25.0 anos e IMC 25.0
+Risco: Medio
+-- TEST CASE 3:
+---- input:
+50
+25
+---- correct output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+---- user output:
+entradas: 50.0 anos e IMC 25.0
+Risco: Alto
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 16:08:29) 
+-- CODE:
+ida=float(input("idade:"))
+imc=float(input("imc:"))
+
+print("entradas: {} anos e IMC {}".format(ida,imc))
+
+if ((ida<=0 or ida>130) and imc<=0):
+	print("Dados invalidos")
+elif(ida<45 and imc<22):
+	print("Risco: Baixo")
+elif(ida>=45 and imc<22):
+	print("Risco: Medio")
+elif(ida<45 and imc>=22):
+	print("Risco: Medio")
+elif(ida>=45 and imc>=22):
+	print("Risco: Alto")
+-- EXECUTION TIME:
+0.141137
+-- TEST CASE 1:
+---- input:
+0
+0
+---- correct output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+---- user output:
+entradas: 0.0 anos e IMC 0.0
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+25
+25
+---- correct output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+---- user output:
+entradas: 25.0 anos e IMC 25.0
+Risco: Medio
+-- TEST CASE 3:
+---- input:
+50
+25
+---- correct output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+---- user output:
+entradas: 50.0 anos e IMC 25.0
+Risco: Alto
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 16:08:32) 
+-- CODE:
+ida=float(input("idade:"))
+imc=float(input("imc:"))
+
+print("entradas: {} anos e IMC {}".format(ida,imc))
+
+if ((ida<=0 or ida>130) and imc<=0):
+	print("Dados invalidos")
+elif(ida<45 and imc<22):
+	print("Risco: Baixo")
+elif(ida>=45 and imc<22):
+	print("Risco: Medio")
+elif(ida<45 and imc>=22):
+	print("Risco: Medio")
+elif(ida>=45 and imc>=22):
+	print("Risco: Alto")
+-- OUTPUT:
+entradas: 0.0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 16:08:50) 
+-- CODE:
+ida=float(input("idade:"))
+imc=float(input("imc:"))
+
+print("Entradas: {} anos e IMC {}".format(ida,imc))
+
+if ((ida<=0 or ida>130) and imc<=0):
+	print("Dados invalidos")
+elif(ida<45 and imc<22):
+	print("Risco: Baixo")
+elif(ida>=45 and imc<22):
+	print("Risco: Medio")
+elif(ida<45 and imc>=22):
+	print("Risco: Medio")
+elif(ida>=45 and imc>=22):
+	print("Risco: Alto")
+-- EXECUTION TIME:
+0.186976
+-- TEST CASE 1:
+---- input:
+0
+0
+---- correct output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+---- user output:
+Entradas: 0.0 anos e IMC 0.0
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+25
+25
+---- correct output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+---- user output:
+Entradas: 25.0 anos e IMC 25.0
+Risco: Medio
+-- TEST CASE 3:
+---- input:
+50
+25
+---- correct output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+---- user output:
+Entradas: 50.0 anos e IMC 25.0
+Risco: Alto
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 16:08:53) 
+-- CODE:
+ida=float(input("idade:"))
+imc=float(input("imc:"))
+
+print("Entradas: {} anos e IMC {}".format(ida,imc))
+
+if ((ida<=0 or ida>130) and imc<=0):
+	print("Dados invalidos")
+elif(ida<45 and imc<22):
+	print("Risco: Baixo")
+elif(ida>=45 and imc<22):
+	print("Risco: Medio")
+elif(ida<45 and imc>=22):
+	print("Risco: Medio")
+elif(ida>=45 and imc>=22):
+	print("Risco: Alto")
+-- OUTPUT:
+Entradas: 0.0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 16:09:41) 
+-- CODE:
+ida=int(input("idade:"))
+imc=int(input("imc:"))
+
+print("Entradas: {} anos e IMC {}".format(ida,imc))
+
+if ((ida<=0 or ida>130) and imc<=0):
+	print("Dados invalidos")
+elif(ida<45 and imc<22):
+	print("Risco: Baixo")
+elif(ida>=45 and imc<22):
+	print("Risco: Medio")
+elif(ida<45 and imc>=22):
+	print("Risco: Medio")
+elif(ida>=45 and imc>=22):
+	print("Risco: Alto")
+-- OUTPUT:
+Entradas: 0 anos e IMC 0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 16:09:45) 
+-- CODE:
+ida=int(input("idade:"))
+imc=int(input("imc:"))
+
+print("Entradas: {} anos e IMC {}".format(ida,imc))
+
+if ((ida<=0 or ida>130) and imc<=0):
+	print("Dados invalidos")
+elif(ida<45 and imc<22):
+	print("Risco: Baixo")
+elif(ida>=45 and imc<22):
+	print("Risco: Medio")
+elif(ida<45 and imc>=22):
+	print("Risco: Medio")
+elif(ida>=45 and imc>=22):
+	print("Risco: Alto")
+-- EXECUTION TIME:
+0.156331
+-- TEST CASE 1:
+---- input:
+0
+0
+---- correct output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+---- user output:
+Entradas: 0 anos e IMC 0
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+25
+25
+---- correct output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+---- user output:
+Entradas: 25 anos e IMC 25
+Risco: Medio
+-- TEST CASE 3:
+---- input:
+50
+25
+---- correct output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+---- user output:
+Entradas: 50 anos e IMC 25
+Risco: Alto
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 16:09:57) 
+-- CODE:
+ida=float(input("idade:"))
+imc=float(input("imc:"))
+
+print("Entradas: {} anos e IMC {}".format(ida,imc))
+
+if ((ida<=0 or ida>130) and imc<=0):
+	print("Dados invalidos")
+elif(ida<45 and imc<22):
+	print("Risco: Baixo")
+elif(ida>=45 and imc<22):
+	print("Risco: Medio")
+elif(ida<45 and imc>=22):
+	print("Risco: Medio")
+elif(ida>=45 and imc>=22):
+	print("Risco: Alto")
+-- OUTPUT:
+Entradas: 0.0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 16:10:44) 
+-- CODE:
+ida=float(input("idade:"))
+imc=float(input("imc:"))
+
+print("Entradas: {} anos e IMC {}".format(ida,imc))
+
+if ((ida<=0 or ida>130) and imc<=0):
+	print("Dados invalidos")
+elif(ida<45 and imc<22):
+	print("Risco: Baixo")
+elif(ida>=45 and imc<22):
+	print("Risco: Medio")
+elif(ida<45 and imc>=22):
+	print("Risco: Medio")
+elif(ida>=45 and imc>=22):
+	print("Risco: Alto")
+-- EXECUTION TIME:
+0.126992
+-- TEST CASE 1:
+---- input:
+0
+0
+---- correct output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+---- user output:
+Entradas: 0.0 anos e IMC 0.0
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+25
+25
+---- correct output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+---- user output:
+Entradas: 25.0 anos e IMC 25.0
+Risco: Medio
+-- TEST CASE 3:
+---- input:
+50
+25
+---- correct output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+---- user output:
+Entradas: 50.0 anos e IMC 25.0
+Risco: Alto
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 16:12:42) 
+-- CODE:
+ida=float(input("idade:"))
+imc=float(input("imc:"))
+
+print("Entradas: {} anos e IMC {}".format(ida,imc))
+
+if ((ida<=0 or ida>130) and imc<=0):
+	print("Dados invalidos")
+elif(ida<45 and imc<22):
+	print("Risco: Baixo")
+elif(ida>=45 and imc<22):
+	print("Risco: Medio")
+elif(ida<45 and imc>=22):
+	print("Risco: Medio")
+elif(ida>=45 and imc>=22):
+	print("Risco: Alto")
+-- OUTPUT:
+Entradas: 0.0 anos e IMC 0.0
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 16:12:46) 
+-- CODE:
+ida=float(input("idade:"))
+imc=float(input("imc:"))
+
+print("Entradas: {} anos e IMC {}".format(ida,imc))
+
+if ((ida<=0 or ida>130) and imc<=0):
+	print("Dados invalidos")
+elif(ida<45 and imc<22):
+	print("Risco: Baixo")
+elif(ida>=45 and imc<22):
+	print("Risco: Medio")
+elif(ida<45 and imc>=22):
+	print("Risco: Medio")
+elif(ida>=45 and imc>=22):
+	print("Risco: Alto")
+-- EXECUTION TIME:
+0.155764
+-- TEST CASE 1:
+---- input:
+0
+0
+---- correct output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+---- user output:
+Entradas: 0.0 anos e IMC 0.0
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+25
+25
+---- correct output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+---- user output:
+Entradas: 25.0 anos e IMC 25.0
+Risco: Medio
+-- TEST CASE 3:
+---- input:
+50
+25
+---- correct output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+---- user output:
+Entradas: 50.0 anos e IMC 25.0
+Risco: Alto
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 16:13:20) 
+-- CODE:
+ida=int(input("idade:"))
+imc=float(input("imc:"))
+
+print("Entradas: {} anos e IMC {}".format(ida,imc))
+
+if ((ida<=0 or ida>130) and imc<=0):
+	print("Dados invalidos")
+elif(ida<45 and imc<22):
+	print("Risco: Baixo")
+elif(ida>=45 and imc<22):
+	print("Risco: Medio")
+elif(ida<45 and imc>=22):
+	print("Risco: Medio")
+elif(ida>=45 and imc>=22):
+	print("Risco: Alto")
+-- EXECUTION TIME:
+0.137476
+-- TEST CASE 1:
+---- input:
+0
+0
+---- correct output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+---- user output:
+Entradas: 0 anos e IMC 0.0
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+25
+25
+---- correct output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+---- user output:
+Entradas: 25 anos e IMC 25.0
+Risco: Medio
+-- TEST CASE 3:
+---- input:
+50
+25
+---- correct output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+---- user output:
+Entradas: 50 anos e IMC 25.0
+Risco: Alto
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

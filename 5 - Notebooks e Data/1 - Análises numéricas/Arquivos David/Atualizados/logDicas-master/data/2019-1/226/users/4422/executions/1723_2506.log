@@ -1,0 +1,167 @@
+== TEST (2019-05-14 11:34:53) 
+-- CODE:
+qi = int(input("Qi: "))
+perc = int(input("perc: "))
+quant = int(input("Quantidade: "))
+
+ano = 0
+cap = 12000
+while(qi < cap) and (qi > 0):
+	quant = quant + (quant * pc/100) - qi
+	ano = ano + 1
+	
+if(quant < 0):
+	print("EXTINCAO")
+if(quant > 0):
+	print("LIMITE")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    quant = quant + (quant * pc/100) - qi
+NameError: name 'pc' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:35:08) 
+-- CODE:
+qi = int(input("Qi: "))
+perc = int(input("perc: "))
+quant = int(input("Quantidade: "))
+
+ano = 0
+cap = 12000
+while(qi < cap) and (qi > 0):
+	quant = quant + (quant * perc/100) - qi
+	ano = ano + 1
+	
+if(quant < 0):
+	print("EXTINCAO")
+if(quant > 0):
+	print("LIMITE")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    quant = quant + (quant * pc/100) - qi
+NameError: name 'pc' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:35:19) 
+-- CODE:
+qi = int(input("Qi: "))
+perc = int(input("perc: "))
+quant = int(input("Quantidade: "))
+
+ano = 0
+cap = 12000
+while(qi < cap) and (qi > 0):
+	quant = quant + (quant * perc/100) - qi
+	ano = ano + 1
+	
+if(quant < 0):
+	print("EXTINCAO")
+if(quant > 0):
+	print("LIMITE")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    quant = quant + (quant * pc/100) - qi
+NameError: name 'pc' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:35:56) 
+-- CODE:
+qi = int(input("Qi: "))
+perc = int(input("perc: "))
+quant = int(input("Quantidade: "))
+
+ano = 0
+cap = 12000
+while(qi < cap) and (qi > 0):
+	quant = quant + (quant * perc/100) - qi
+	ano = ano + 1
+if(quant < 0):
+	print("EXTINCAO")
+if(quant > 0):
+	print("LIMITE")
+
+print(ano)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    quant = quant + (quant * pc/100) - qi
+NameError: name 'pc' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:36:58) 
+-- CODE:
+qi = int(input("Qi: "))
+perc = int(input("perc: "))
+quant = int(input("Quantidade: "))
+
+ano = 0
+cap = 12000
+
+while(qi < cap) and (qi > 0):
+	qi = qi + (qi * perc/100) - quant
+	ano = ano + 1
+if(qi < 0):
+	print("EXTINCAO")
+if(qi > 0):
+	print("LIMITE")
+
+print(ano)
+-- OUTPUT:
+EXTINCAO
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 11:37:12) 
+-- CODE:
+qi = int(input("Qi: "))
+perc = int(input("perc: "))
+quant = int(input("Quantidade: "))
+
+ano = 0
+cap = 12000
+
+while(qi < cap) and (qi > 0):
+	qi = qi + (qi * perc/100) - quant
+	ano = ano + 1
+if(qi < 0):
+	print("EXTINCAO")
+if(qi > 0):
+	print("LIMITE")
+
+print(ano)
+-- EXECUTION TIME:
+0.2144
+-- TEST CASE 1:
+---- input:
+1234
+6
+135
+---- correct output:
+EXTINCAO
+14
+---- user output:
+EXTINCAO
+14
+-- TEST CASE 2:
+---- input:
+579
+37
+26
+---- correct output:
+LIMITE
+11
+---- user output:
+LIMITE
+11
+-- TEST CASE 3:
+---- input:
+6789
+45
+2345
+---- correct output:
+LIMITE
+4
+---- user output:
+LIMITE
+4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

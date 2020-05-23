@@ -1,0 +1,44 @@
+== SUBMITION (2019-06-13 16:00:10) 
+-- CODE:
+from numpy import *
+from math import *
+
+vet = array(eval(input()))
+soma = 0
+d=0
+for x in range(size(vet)):
+	soma=soma+vet[x]
+media = soma/size(vet)
+
+for x in range(size(vet)):
+	d = d + (vet[x]-media)**2
+d = d / (size(vet)-1)
+
+print(round(sqrt(d),3))
+-- EXECUTION TIME:
+1.06611
+-- TEST CASE 1:
+---- input:
+[-4,250,-1,30,12]
+---- correct output:
+108.498
+---- user output:
+108.498
+-- TEST CASE 2:
+---- input:
+[12.5,25.2,50.39,47.3,0.9]
+---- correct output:
+21.526
+---- user output:
+21.526
+-- TEST CASE 3:
+---- input:
+[1.5,1.9,1.2,1.3,1.4,1.1,1.75]
+
+---- correct output:
+0.29
+---- user output:
+0.29
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

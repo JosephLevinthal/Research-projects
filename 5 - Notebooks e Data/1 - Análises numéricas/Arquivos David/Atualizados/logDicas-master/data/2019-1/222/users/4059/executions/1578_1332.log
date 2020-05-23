@@ -1,0 +1,96 @@
+== TEST (2019-03-13 01:09:18) 
+-- CODE:
+aresta =5
+area =(3/2)*((3)**(0,5))*(aresta)**2
+ 
+print(round(area, 5))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area =(3/2)*((3)**(0,5))*(aresta)**2
+TypeError: unsupported operand type(s) for ** or pow(): 'int' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 01:09:36) 
+-- CODE:
+aresta =5
+area =(3/2)*((3)**(0,5))*(int aresta)**2
+ 
+print(round(area, 5))
+-- ERROR:
+File "XXXX", line 2
+    area =(3/2)*((3)**(0,5))*(int aresta)**2
+                                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 01:09:48) 
+-- CODE:
+aresta =5
+area =(3/2)*((3)**(0,5))*(5)**2
+ 
+print(round(area, 5))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area =(3/2)*((3)**(0,5))*(5)**2
+TypeError: unsupported operand type(s) for ** or pow(): 'int' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 01:10:52) 
+-- CODE:
+aresta =5
+area =(3/2)*((3)**(0,5))*(5)**2
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area =(3/2)*((3)**(0,5))*(5)**2
+TypeError: unsupported operand type(s) for ** or pow(): 'int' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 01:11:34) 
+-- CODE:
+aresta =5
+area =(3/2)*((3)**(0.5))*(5)**2
+ 
+print(round(area, 4))
+-- OUTPUT:
+64.9519
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 01:12:03) 
+-- CODE:
+aresta =5
+area =(3/2)*((3)**(0.5))*(int aresta)**2
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 2
+    area =(3/2)*((3)**(0.5))*(int aresta)**2
+                                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-13 01:12:13) 
+-- CODE:
+aresta =5
+area =(3/2)*((3)**(0.5))*(aresta)**2
+ 
+print(round(area, 4))
+-- OUTPUT:
+64.9519
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-13 01:12:21) 
+-- CODE:
+aresta =5
+area =(3/2)*((3)**(0.5))*(aresta)**2
+ 
+print(round(area, 4))
+-- EXECUTION TIME:
+0.163864
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+64.9519
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

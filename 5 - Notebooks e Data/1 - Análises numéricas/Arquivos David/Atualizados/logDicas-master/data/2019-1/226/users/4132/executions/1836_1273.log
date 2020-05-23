@@ -1,0 +1,99 @@
+== TEST (2019-06-25 10:46:45) 
+-- CODE:
+
+from numpy import *
+from numpy.linalg import *4
+
+mat = array([1,-1,0,0],[0,1,-1,0],[0,0,1,0],[1,0,0,1])
+vet= array([50,-120,350,870])
+
+flu(inv(mat),vet.T)
+print(flu)
+
+
+-- ERROR:
+File "XXXX", line 3
+    from numpy.linalg import *4
+                              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 10:46:52) 
+-- CODE:
+
+from numpy import *
+from numpy.linalg import *
+
+mat = array([1,-1,0,0],[0,1,-1,0],[0,0,1,0],[1,0,0,1])
+vet= array([50,-120,350,870])
+
+flu(inv(mat),vet.T)
+print(flu)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 10:47:23) 
+-- CODE:
+
+from numpy import *
+from numpy.linalg import *
+
+mat = array([1,-1,0,0],[0,1,-1,0],[0,0,1,0],[1,0,0,1])
+vet= array([50,-120,350,870])
+
+flu=(inv(mat),vet.T)
+print(flu)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 10:48:01) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat = array([[1,-1,0,0],[0,1,-1,0],[0,0,1,0],[1,0,0,1]])
+vet= array([50,-120,350,870])
+
+flu=dot(inv(mat),vet.T)
+print(flu)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 10:48:06) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat = array([[1,-1,0,0],[0,1,-1,0],[0,0,1,0],[1,0,0,1]])
+vet= array([50,-120,350,870])
+
+flu=dot(inv(mat),vet.T)
+print(flu)
+
+
+-- EXECUTION TIME:
+1.04026
+-- TEST CASE 1:
+---- input:
+Não_há
+---- correct output:
+[280. 230. 350. 590.]
+---- user output:
+[280. 230. 350. 590.]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

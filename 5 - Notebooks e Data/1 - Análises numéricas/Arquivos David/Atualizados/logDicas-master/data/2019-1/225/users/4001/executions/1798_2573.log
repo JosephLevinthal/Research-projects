@@ -1,0 +1,710 @@
+== TEST (2019-06-10 15:25:08) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = P[i]/(H[i] * H[i])
+	V[i] = V[i] + IMC
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 15:26:41) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = P[i]/(H[i] * H[i])
+	V[i] = V[i] + IMC
+	print(V)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 15:27:32) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = P[i]/(H[i] * H[i])
+	V[i] = V[i] + IMC
+	print(round(V, 3))
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 15:27:58) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = P[i]/(H[i] * H[i])
+	V[i] = V[i] + IMC
+print(round(V, 3))
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 15:28:46) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = P[i]/(H[i] * H[i])
+	V[i] = V[i] + IMC
+print(V)
+print(round(V, 3))
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 15:39:18) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = P[i]/(H[i] * H[i])
+	V[i] = V[i] + IMC
+print(V)
+print(round(IMC, 3))
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 21:59:28) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = P[i]/(H[i] * H[i])
+	V[i] = V[i] + IMC
+	if (IMC < 17):
+		S = "muito abaixo do peso"
+	elif (IMC >= 17 and IMC <= 18.49):
+		S = "abaixo do peso"
+	elif (IMC >= 18.5 and IMC <= 24.99):
+		S = "peso normal"
+	elif (IMC >= 25 and IMC <= 29,99):
+		S = "acima do peso"
+	elif (IMC >= 30 and IMC <= 34.99):
+		S = "obesidade"
+	elif (IMC >= 35 and IMC <= 39.99):
+		S "obesidade severa"
+	elif (IMC >= 40):
+		S = "obesidade morbida"
+print(V)
+print(round(IMC, 2))
+print(S)
+
+	
+-- ERROR:
+File "XXXX", line 20
+    S "obesidade severa"
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 21:59:33) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = P[i]/(H[i] * H[i])
+	V[i] = V[i] + IMC
+if (IMC < 17):
+	S = "muito abaixo do peso"
+elif (IMC >= 17 and IMC <= 18.49):
+	S = "abaixo do peso"
+elif (IMC >= 18.5 and IMC <= 24.99):
+	S = "peso normal"
+elif (IMC >= 25 and IMC <= 29,99):
+	S = "acima do peso"
+elif (IMC >= 30 and IMC <= 34.99):
+	S = "obesidade"
+elif (IMC >= 35 and IMC <= 39.99):
+	S "obesidade severa"
+elif (IMC >= 40):
+	S = "obesidade morbida"
+print(V)
+print(round(IMC, 2))
+print(S)
+
+	
+-- ERROR:
+File "XXXX", line 20
+    S "obesidade severa"
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 21:59:33) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = P[i]/(H[i] * H[i])
+	V[i] = V[i] + IMC
+if (IMC < 17):
+	S = "muito abaixo do peso"
+elif (IMC >= 17 and IMC <= 18.49):
+	S = "abaixo do peso"
+elif (IMC >= 18.5 and IMC <= 24.99):
+	S = "peso normal"
+elif (IMC >= 25 and IMC <= 29,99):
+	S = "acima do peso"
+elif (IMC >= 30 and IMC <= 34.99):
+	S = "obesidade"
+elif (IMC >= 35 and IMC <= 39.99):
+	S "obesidade severa"
+elif (IMC >= 40):
+	S = "obesidade morbida"
+print(V)
+print(round(IMC, 2))
+print(S)
+
+	
+-- ERROR:
+File "XXXX", line 20
+    S "obesidade severa"
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 21:59:48) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = P[i]/(H[i] * H[i])
+	V[i] = V[i] + IMC
+if (IMC < 17):
+	S = "muito abaixo do peso"
+elif (IMC >= 17 and IMC <= 18.49):
+	S = "abaixo do peso"
+elif (IMC >= 18.5 and IMC <= 24.99):
+	S = "peso normal"
+elif (IMC >= 25 and IMC <= 29,99):
+	S = "acima do peso"
+elif (IMC >= 30 and IMC <= 34.99):
+	S = "obesidade"
+elif (IMC >= 35 and IMC <= 39.99):
+	S = "obesidade severa"
+elif (IMC >= 40):
+	S = "obesidade morbida"
+print(V)
+print(round(IMC, 2))
+print(S)
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 22:00:02) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = P[i]/(H[i] * H[i])
+	V[i] = V[i] + IMC
+if (IMC < 17):
+	S = "muito abaixo do peso"
+elif (IMC >= 17 and IMC <= 18.49):
+	S = "abaixo do peso"
+elif (IMC >= 18.5 and IMC <= 24.99):
+	S = "peso normal"
+elif (IMC >= 25 and IMC <= 29,99):
+	S = "acima do peso"
+elif (IMC >= 30 and IMC <= 34.99):
+	S = "obesidade"
+elif (IMC >= 35 and IMC <= 39.99):
+	S = "obesidade severa"
+elif (IMC >= 40):
+	S = "obesidade morbida"
+print(V)
+print(round(IMC, 2))
+print(S)
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 22:00:55) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = P[i]/(H[i] * H[i])
+	V[i] = V[i] + IMC
+if (IMC < 17):
+	S = "muito abaixo do peso"
+elif (IMC >= 17 and IMC <= 18.49):
+	S = "abaixo do peso"
+elif (IMC >= 18.5 and IMC <= 24.99):
+	S = "peso normal"
+elif (IMC >= 25 and IMC <= 29,99):
+	S = "acima do peso"
+elif (IMC >= 30 and IMC <= 34.99):
+	S = "obesidade"
+elif (IMC >= 35 and IMC <= 39.99):
+	S = "obesidade severa"
+elif (IMC >= 40):
+	S = "obesidade morbida"
+print(V)
+print(round(IMC, 2))
+print(S)
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 22:03:30) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = round((P[i]/(H[i] * H[i])), 2)
+	V[i] = V[i] + IMC
+if (IMC < 17):
+	S = "muito abaixo do peso"
+elif (IMC >= 17 and IMC <= 18.49):
+	S = "abaixo do peso"
+elif (IMC >= 18.5 and IMC <= 24.99):
+	S = "peso normal"
+elif (IMC >= 25 and IMC <= 29,99):
+	S = "acima do peso"
+elif (IMC >= 30 and IMC <= 34.99):
+	S = "obesidade"
+elif (IMC >= 35 and IMC <= 39.99):
+	S = "obesidade severa"
+elif (IMC >= 40):
+	S = "obesidade morbida"
+print(V)
+print(IMC)
+print(S)
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 22:09:28) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = round((P[i]/(H[i] * H[i])), 2)
+	V[i] = V[i] + IMC
+if (IMC < 17):
+	S = "muito abaixo do peso"
+elif (IMC >= 17 and IMC <= 18.49):
+	S = "abaixo do peso"
+elif (IMC >= 18.5 and IMC <= 24.99):
+	S = "peso normal"
+elif (IMC >= 25 and IMC <= 29,99):
+	S = "acima do peso"
+elif (IMC >= 30 and IMC <= 34.99):
+	S = "obesidade"
+elif (IMC >= 35 and IMC <= 39.99):
+	S = "obesidade severa"
+elif (IMC >= 40):
+	S = "obesidade morbida"
+print(V)
+print(max(V))
+print(S)
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 22:12:47) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = round((P[i]/(H[i] * H[i])), 2)
+	V[i] = V[i] + IMC
+if (max(V) < 17):
+	S = "MUITO ABAIXO DO PESO"
+elif (max(V) >= 17 and max(V) <= 18.49):
+	S = "ABAIXO DO PESO"
+elif (max(V) >= 18.5 and max(V) <= 24.99):
+	S = "PESO NORMAL"
+elif (max(V) >= 25 and max(V) <= 29,99):
+	S = "ACIMA DO PESO"
+elif (max(V) >= 30 and max(V) <= 34.99):
+	S = "OBESIDADE"
+elif (max(V) >= 35 and max(V) <= 39.99):
+	S = "OBESIDADE SEVERA"
+elif (max(V) >= 40):
+	S = "OBESIDADE MORBIDA"
+print(V)
+print(max(V))
+print(S)
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 22:14:07) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = round((P[i]/(H[i] * H[i])), 2)
+	V[i] = V[i] + IMC
+	if (max(V) < 17):
+		S = "MUITO ABAIXO DO PESO"
+	elif (max(V) >= 17 and max(V) <= 18.49):
+		S = "ABAIXO DO PESO"
+	elif (max(V) >= 18.5 and max(V) <= 24.99):
+		S = "PESO NORMAL"
+	elif (max(V) >= 25 and max(V) <= 29,99):
+		S = "ACIMA DO PESO"
+	elif (max(V) >= 30 and max(V) <= 34.99):
+		S = "OBESIDADE"
+	elif (max(V) >= 35 and max(V) <= 39.99):
+		S = "OBESIDADE SEVERA"
+	elif (max(V) >= 40):
+		S = "OBESIDADE MORBIDA"
+print(V)
+print(max(V))
+print(S)
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 22:18:51) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = round((P[i]/(H[i] * H[i])), 2)
+	V[i] = V[i] + IMC
+	
+if (max(V) < 17):
+	S = "MUITO ABAIXO DO PESO"
+elif (max(V) >= 17 and max(V) <= 18.49):
+	S = "ABAIXO DO PESO"
+elif (max(V) >= 18.5 and max(V) <= 24.99):
+	S = "PESO NORMAL"
+elif (max(V) >= 25 and max(V) <= 29,99):
+	S = "ACIMA DO PESO"
+elif (max(V) >= 30 and max(V) <= 34.99):
+	S = "OBESIDADE"
+elif (max(V) >= 35 and max(V) <= 39.99):
+	S = "OBESIDADE SEVERA"
+elif (max(V) >= 40):
+	S = "OBESIDADE MORBIDA"
+print(V)
+print(max(V))
+print(S)
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 22:22:37) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = round((P[i]/(H[i] * H[i])), 2)
+	V[i] = V[i] + IMC
+	
+if (max(V) < 17):
+	S = "MUITO ABAIXO DO PESO"
+elif (max(V) >= 17 and max(V) <= 18.49):
+	S = "ABAIXO DO PESO"
+elif (max(V) >= 18.5 and max(V) <= 24.99):
+	S = "PESO NORMAL"
+elif (max(V) >= 25 and max(V) <= 29,99):
+	S = "ACIMA DO PESO"
+elif (max(V) >= 30 and max(V) <= 34.99):
+	S = "OBESIDADE"
+elif (max(V) >= 35 and max(V) <= 39.99):
+	S = "OBESIDADE SEVERA"
+elif (max(V) >= 40):
+	S = "OBESIDADE MORBIDA"
+print(V)
+print(max("O MAIOR IMC DA TURMA EH: ", V))
+print(S)
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 22:23:24) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = round((P[i]/(H[i] * H[i])), 2)
+	V[i] = V[i] + IMC
+	
+if (max(V) < 17):
+	S = "MUITO ABAIXO DO PESO"
+elif (max(V) >= 17 and max(V) <= 18.49):
+	S = "ABAIXO DO PESO"
+elif (max(V) >= 18.5 and max(V) <= 24.99):
+	S = "PESO NORMAL"
+elif (max(V) >= 25 and max(V) <= 29,99):
+	S = "ACIMA DO PESO"
+elif (max(V) >= 30 and max(V) <= 34.99):
+	S = "OBESIDADE"
+elif (max(V) >= 35 and max(V) <= 39.99):
+	S = "OBESIDADE SEVERA"
+elif (max(V) >= 40):
+	S = "OBESIDADE MORBIDA"
+print(V)
+print("O MAIOR IMC DA TURMA EH: ", max(V))
+print(S)
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 22:32:26) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = round((P[i]/(H[i] * H[i])), 2)
+	V[i] = V[i] + IMC
+	
+if (max(V) < 17):
+	S = "MUITO ABAIXO DO PESO"
+elif (max(V) >= 17 and max(V) <= 18.49):
+	S = "ABAIXO DO PESO"
+elif (max(V) >= 18.5 and max(V) <= 24.99):
+	S = "PESO NORMAL"
+elif (max(V) >= 25 and max(V) <= 29.99):
+	S = "ACIMA DO PESO"
+elif (max(V) >= 30 and max(V) <= 34.99):
+	S = "OBESIDADE"
+elif (max(V) >= 35 and max(V) <= 39.99):
+	S = "OBESIDADE SEVERA"
+elif (max(V) >= 40):
+	S = "OBESIDADE MORBIDA"
+print(V)
+print("O MAIOR IMC DA TURMA EH: ", max(V))
+print(S)
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-10 22:32:26) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = round((P[i]/(H[i] * H[i])), 2)
+	V[i] = V[i] + IMC
+	
+if (max(V) < 17):
+	S = "MUITO ABAIXO DO PESO"
+elif (max(V) >= 17 and max(V) <= 18.49):
+	S = "ABAIXO DO PESO"
+elif (max(V) >= 18.5 and max(V) <= 24.99):
+	S = "PESO NORMAL"
+elif (max(V) >= 25 and max(V) <= 29.99):
+	S = "ACIMA DO PESO"
+elif (max(V) >= 30 and max(V) <= 34.99):
+	S = "OBESIDADE"
+elif (max(V) >= 35 and max(V) <= 39.99):
+	S = "OBESIDADE SEVERA"
+elif (max(V) >= 40):
+	S = "OBESIDADE MORBIDA"
+print(V)
+print("O MAIOR IMC DA TURMA EH: ", max(V))
+print(S)
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-10 22:33:07) 
+-- CODE:
+from numpy import*
+P = array(eval(input("Peso: ")))
+H = array(eval(input("Altura: ")))
+
+V = zeros(size(P), dtype=float)
+for i in range(size(P)):
+	IMC = round((P[i]/(H[i] * H[i])), 2)
+	V[i] = V[i] + IMC
+	
+if (max(V) < 17):
+	S = "MUITO ABAIXO DO PESO"
+elif (max(V) >= 17 and max(V) <= 18.49):
+	S = "ABAIXO DO PESO"
+elif (max(V) >= 18.5 and max(V) <= 24.99):
+	S = "PESO NORMAL"
+elif (max(V) >= 25 and max(V) <= 29.99):
+	S = "ACIMA DO PESO"
+elif (max(V) >= 30 and max(V) <= 34.99):
+	S = "OBESIDADE"
+elif (max(V) >= 35 and max(V) <= 39.99):
+	S = "OBESIDADE SEVERA"
+elif (max(V) >= 40):
+	S = "OBESIDADE MORBIDA"
+print(V)
+print("O MAIOR IMC DA TURMA EH: ", max(V))
+print(S)
+
+	
+-- EXECUTION TIME:
+1.17373
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH:  24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH:  17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[37.79 31.88]
+O MAIOR IMC DA TURMA EH:  37.79
+OBESIDADE SEVERA
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

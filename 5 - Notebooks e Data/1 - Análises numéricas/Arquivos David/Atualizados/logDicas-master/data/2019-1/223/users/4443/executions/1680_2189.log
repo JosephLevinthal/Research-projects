@@ -1,0 +1,310 @@
+== TEST (2019-05-02 09:37:35) 
+-- CODE:
+# Coleta do nome dos estudantes:
+nom[e].upper() = input("Digite o nome do estudante: ")
+
+if ("A" <= e <= "K"):
+	print(e, "vai para a sala 101")
+elif ("L" <= e <= "N"):	
+	print(e, "vai para a sala 102")
+else:	
+	print(e, "vai para a sala 103")
+-- ERROR:
+File "XXXX", line 2
+    nom[e].upper() = input()
+    ^
+SyntaxError: can't assign to function call
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 09:38:31) 
+-- CODE:
+# Coleta do nome dos estudantes:
+nome = input("Digite o nome do estudante: ")
+nome = nome[0].upper()
+
+if ("A" <= e <= "K"):
+	print(e, "vai para a sala 101")
+elif ("L" <= e <= "N"):	
+	print(e, "vai para a sala 102")
+else:	
+	print(e, "vai para a sala 103")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    if ("A" <= e <= "K"):
+NameError: name 'e' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 09:38:42) 
+-- CODE:
+# Coleta do nome dos estudantes:
+nome = input("Digite o nome do estudante: ")
+nome = nome[0].upper()
+
+if ("A" <= e <= "K"):
+	print(e, "vai para a sala 101")
+elif ("L" <= e <= "N"):	
+	print(e, "vai para a sala 102")
+else:	
+	print(e, "vai para a sala 103")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    if ("A" <= e <= "K"):
+NameError: name 'e' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 09:44:02) 
+-- CODE:
+# Coleta do nome dos estudantes:
+nome = input("Digite o nome do estudante: ")
+nome = nome[0].upper()
+
+if ("A" <= nome <= "K"):
+	print(nome, "vai para a sala 101")
+elif ("L" <= nome <= "N"):	
+	print(nome, "vai para a sala 102")
+else:	
+	print(nome, "vai para a sala 103")
+-- OUTPUT:
+M vai para a sala 102
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 21:44:38) 
+-- CODE:
+# Coleta do nome dos estudantes:
+nome = input("Digite o nome do estudante: ")
+nome = nome[1].upper()
+
+if ("A" <= nome <= "K"):
+	print(nome, "vai para a sala 101")
+elif ("L" <= nome <= "N"):	
+	print(nome, "vai para a sala 102")
+else:	
+	print(nome, "vai para a sala 103")
+-- OUTPUT:
+A vai para a sala 101
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 21:46:07) 
+-- CODE:
+# Coleta do nome dos estudantes:
+nome = input("Digite o nome do estudante: ")
+nome = n[0].upper()ome
+
+if ("A" <= nome <= "K"):
+	print(nome, "vai para a sala 101")
+elif ("L" <= nome <= "N"):	
+	print(nome, "vai para a sala 102")
+else:	
+	print(nome, "vai para a sala 103")
+-- ERROR:
+File "XXXX", line 3
+    nome = n[0].upper()ome
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 21:57:54) 
+-- CODE:
+# Coleta do nome dos estudantes:
+nome = input("Digite o nome do estudante: ")
+nome = nome[0:].upper()
+
+if ("A" <= nome <= "K"):
+	print(nome, "vai para a sala 101")
+elif ("L" <= nome <= "N"):	
+	print(nome, "vai para a sala 102")
+else:	
+	print(nome, "vai para a sala 103")
+-- OUTPUT:
+MARIA vai para a sala 102
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 22:00:01) 
+-- CODE:
+# Coleta do nome dos estudantes:
+nome = input("Digite o nome do estudante: ")
+pri = nome[0].upper()
+fim = nome[1:]
+
+if ("A" <= nome <= "K"):
+	print(pri,fim "vai para a sala 101")
+elif ("L" <= nome <= "N"):	
+	print(pri,fim "vai para a sala 102")
+else:	
+	print(pri,fim "vai para a sala 103")
+-- ERROR:
+File "XXXX", line 7
+    print(pri,fim "vai para a sala 101")
+                                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 22:00:20) 
+-- CODE:
+# Coleta do nome dos estudantes:
+nome = input("Digite o nome do estudante: ")
+pri = nome[0].upper()
+fim = nome[1:]
+
+if ("A" <= nome <= "K"):
+	print(pri,fim, "vai para a sala 101")
+elif ("L" <= nome <= "N"):	
+	print(pri,fim, "vai para a sala 102")
+else:	
+	print(pri,fim, "vai para a sala 103")
+-- OUTPUT:
+M aria vai para a sala 102
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 22:00:42) 
+-- CODE:
+# Coleta do nome dos estudantes:
+nome = input("Digite o nome do estudante: ")
+pri = nome[0].upper()
+fim = nome[1:]
+
+if ("A" <= nome <= "K"):
+	print(prifim, "vai para a sala 101")
+elif ("L" <= nome <= "N"):	
+	print(prifim, "vai para a sala 102")
+else:	
+	print(prifim, "vai para a sala 103")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    print(prifim, "vai para a sala 102")
+NameError: name 'prifim' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 22:01:01) 
+-- CODE:
+# Coleta do nome dos estudantes:
+nome = input("Digite o nome do estudante: ")
+pri = nome[0].upper()
+fim = nome[1:]
+
+if ("A" <= nome <= "K"):
+	print(pri fim, "vai para a sala 101")
+elif ("L" <= nome <= "N"):	
+	print(pri fim, "vai para a sala 102")
+else:	
+	print(pri fim, "vai para a sala 103")
+-- ERROR:
+File "XXXX", line 7
+    print(pri fim, "vai para a sala 101")
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 22:01:24) 
+-- CODE:
+# Coleta do nome dos estudantes:
+nome = input("Digite o nome do estudante: ")
+pri = nome[0].upper()
+fim = nome[1:]
+
+if ("A" <= nome <= "K"):
+	print(pri+fim, "vai para a sala 101")
+elif ("L" <= nome <= "N"):	
+	print(pri+fim, "vai para a sala 102")
+else:	
+	print(pri+fim, "vai para a sala 103")
+-- OUTPUT:
+Maria vai para a sala 102
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 22:01:40) 
+-- CODE:
+# Coleta do nome dos estudantes:
+nome = input("Digite o nome do estudante: ")
+pri = nome[0].upper()
+fim = nome[1:]
+
+if ("A" <= nome <= "K"):
+	print(pri+fim, "vai para a sala 101")
+elif ("L" <= nome <= "N"):	
+	print(pri+fim, "vai para a sala 102")
+else:	
+	print(pri+fim, "vai para a sala 103")
+-- OUTPUT:
+Maria vai para a sala 102
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 22:01:52) 
+-- CODE:
+# Coleta do nome dos estudantes:
+nome = input("Digite o nome do estudante: ")
+pri = nome[0].upper()
+fim = nome[1:]
+
+if ("A" <= nome <= "K"):
+	print(pri+fim, "vai para a sala 101")
+elif ("L" <= nome <= "N"):	
+	print(pri+fim, "vai para a sala 102")
+else:	
+	print(pri+fim, "vai para a sala 103")
+-- OUTPUT:
+Maria vai para a sala 102
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 22:01:59) 
+-- CODE:
+# Coleta do nome dos estudantes:
+nome = input("Digite o nome do estudante: ")
+pri = nome[0].upper()
+fim = nome[1:]
+
+if ("A" <= nome <= "K"):
+	print(pri+fim, "vai para a sala 101")
+elif ("L" <= nome <= "N"):	
+	print(pri+fim, "vai para a sala 102")
+else:	
+	print(pri+fim, "vai para a sala 103")
+-- OUTPUT:
+Maria vai para a sala 102
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 22:02:42) 
+-- CODE:
+# Coleta do nome dos estudantes:
+nome = input("Digite o nome do estudante: ")
+
+pri = nome[0].upper()
+fim = nome[1:]
+
+if ("A" <= nome <= "K"):
+	print(pri+fim, "vai para a sala 101")
+elif ("L" <= nome <= "N"):	
+	print(pri+fim, "vai para a sala 102")
+else:	
+	print(pri+fim, "vai para a sala 103")
+-- OUTPUT:
+Maria vai para a sala 102
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 22:03:21) 
+-- CODE:
+# Coleta do nome dos estudantes:
+nome = input("Digite o nome do estudante: ")
+
+pri = nome[0].upper()
+fim = nome[1:]
+
+if ("A" <= nome <= "K"):
+	print(pri+fim, "vai para a sala 101")
+elif ("L" <= nome <= "N"):	
+	print(pri+fim, "vai para a sala 102")
+else:	
+	print(pri+fim, "vai para a sala 103")
+-- EXECUTION TIME:
+0.226414
+-- TEST CASE 1:
+---- input:
+Maria
+---- correct output:
+Maria vai para a sala 102
+---- user output:
+Maria vai para a sala 102
+-- TEST CASE 2:
+---- input:
+Jose
+---- correct output:
+Jose vai para a sala 101
+---- user output:
+Jose vai para a sala 101
+-- TEST CASE 3:
+---- input:
+Zenilda
+---- correct output:
+Zenilda vai para a sala 103
+---- user output:
+Zenilda vai para a sala 103
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

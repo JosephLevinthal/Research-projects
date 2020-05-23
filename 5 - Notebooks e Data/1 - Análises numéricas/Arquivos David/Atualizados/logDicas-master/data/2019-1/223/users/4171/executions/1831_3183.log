@@ -1,0 +1,673 @@
+== TEST (2019-06-13 16:19:07) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+for -i in -x:
+	print(i)
+-- ERROR:
+File "XXXX", line 5
+    for -i in -x:
+       ^
+SyntaxError: can't assign to operator
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:19:16) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+for -i in range(size(x)):
+	print(i)
+-- ERROR:
+File "XXXX", line 5
+    for -i in range(size(x)):
+       ^
+SyntaxError: can't assign to operator
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:19:18) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+for i in range(size(x)):
+	print(i)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:19:25) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+for i in range(size(x)):
+	print(i)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:20:10) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+y = ones(size(x), dtype = int)
+
+for i in range(size(x)):
+	y[i] = x[i]
+	
+
+print(y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:20:35) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+y = ones(size(x), dtype = int)
+
+for i in range(- size(x)):
+	y[i] = x[i]
+	
+	i -= 1
+	
+
+print(y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:20:47) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+y = zeros(size(x), dtype = int)
+
+for i in range(- size(x)):
+	y[i] = x[i]
+	
+	i -= 1
+	
+
+print(y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:21:09) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+y = (size(x), dtype = int)
+
+for i in range(- size(x)):
+	y[i] = x[i]
+	
+	
+	
+
+print(y)
+-- ERROR:
+File "XXXX", line 4
+    y = (size(x), dtype = int)
+                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:21:14) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+y = (size(x), dtype = int))
+
+for i in range(- size(x)):
+	y[i] = x[i]
+	
+	
+	
+
+print(y)
+-- ERROR:
+File "XXXX", line 4
+    y = (size(x), dtype = int))
+                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 16:21:23) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+y = (size(x), dtype = int)
+
+for i in range(size(x)):
+	y[i] = x[i]
+	
+	
+	
+
+print(y)
+-- EXECUTION TIME:
+0.858672
+-- ERROR:
+  File "/home/codebench/codes/1831/3183/main.py", line 5
+    y = (size(x), dtype = int)
+                        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:21:23) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+y = (size(x), dtype = int)
+
+for i in range(size(x)):
+	y[i] = x[i]
+	
+	
+	
+
+print(y)
+-- ERROR:
+File "XXXX", line 5
+    y = (size(x), dtype = int)
+                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:21:37) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+y = (size(x), dtype=int)
+
+for i in range(size(x)):
+	y[i] = x[i]
+	
+	
+	
+
+print(y)
+-- ERROR:
+File "XXXX", line 5
+    y = (size(x), dtype=int)
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:21:48) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+y = (size(x), dtype=int)
+
+for i in range(size(x)):
+	y[i] = x[i]
+	
+	
+	
+
+print(y)
+-- ERROR:
+File "XXXX", line 5
+    y = (size(x), dtype=int)
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:21:56) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+y = size(x)
+
+for i in range(size(x)):
+	y[i] = x[i]
+	
+	
+	
+
+print(y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:22:26) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+y = (size(x), dtype = int)
+
+
+for i in range(size(x)):
+	y[i] = x[i]
+	
+	
+	
+
+print(y)
+-- ERROR:
+File "XXXX", line 4
+    y = (size(x), dtype = int)
+                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:22:39) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+y = zeros(size(x), dtype = int)
+
+for i in range(- size(x)):
+	y[i] = x[i]
+	
+	i -= 1
+	
+
+print(y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:22:46) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+y = zeros(size(x), dtype = int)
+
+for i in range(- size(x)):
+	y[i] = x[i]
+	
+	
+	
+
+print(y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:23:03) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+y = zeros(size(x), dtype = int)
+
+for i in range(size(x)):
+	y[i] = x[i]
+	
+	
+
+print(y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:23:28) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+y = zeros(size(x), dtype = int)
+
+for i in range(size(x)):
+	y[i] =  - x[i]
+	
+	
+
+print(y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 16:23:38) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+y = zeros(size(x), dtype = int)
+
+for i in range(size(x)):
+	y[i] =  - x[i]
+	
+	
+
+print(y)
+-- EXECUTION TIME:
+0.87332
+-- TEST CASE 1:
+---- input:
+[20,19,18,17,10,9,8,7]
+---- correct output:
+[ 7  8  9 10 17 18 19 20]
+---- user output:
+[-20 -19 -18 -17 -10  -9  -8  -7]
+-- TEST CASE 2:
+---- input:
+[6,6,6,5,5,5,4,4,4,3,3,3]
+---- correct output:
+[3 3 3 4 4 4 5 5 5 6 6 6]
+---- user output:
+[-6 -6 -6 -5 -5 -5 -4 -4 -4 -3 -3 -3]
+-- TEST CASE 3:
+---- input:
+[4,3,2,1,0,-1,-2,-3]
+---- correct output:
+[-3 -2 -1  0  1  2  3  4]
+---- user output:
+[-4 -3 -2 -1  0  1  2  3]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:23:40) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+y = zeros(size(x), dtype = int)
+
+for i in range(size(x)):
+	y[i] =  - x[i]
+	
+	
+
+print(y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:23:48) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+y = zeros(size(x), dtype = int)
+
+for i in range(size(x)):
+	y[i] =  - x[i]
+	
+	
+
+print(y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:23:57) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+y = zeros(size(x), dtype = int)
+
+for i in range(size(x)):
+	y[i] =  - x[i]
+	
+	
+
+print(y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:24:53) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+y = zeros(size(x), dtype = int)
+
+for i in range(size(x)):
+	y[i] = x[i]
+	
+	
+
+print(y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:25:35) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+y = zeros(size(x), dtype = int)
+
+j = 0
+for i in range(size(x)):
+	y[i] = x[j]
+	
+	j -= 1
+
+print(y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:25:56) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+y = zeros(size(x), dtype = int)
+
+j = 0
+for i in range(size(x)):
+	y[i] = x[j]
+	
+	j -= 1
+
+print(y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:26:50) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+y = zeros(size(x), dtype = int)
+
+j = 0
+for i in range(size(x)):
+	if x[j] == 0:
+		y[i] = x[-1]
+	y[i] = x[j]
+	
+	j -= 1
+
+print(y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-13 16:27:27) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+y = zeros(size(x), dtype = int)
+
+j = 0
+for i in range(size(x)):
+	j -= 1
+	y[i] = x[j]
+	
+	
+
+print(y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 16:27:35) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+
+y = zeros(size(x), dtype = int)
+
+j = 0
+for i in range(size(x)):
+	j -= 1
+	y[i] = x[j]
+	
+	
+
+print(y)
+-- EXECUTION TIME:
+0.878026
+-- TEST CASE 1:
+---- input:
+[20,19,18,17,10,9,8,7]
+---- correct output:
+[ 7  8  9 10 17 18 19 20]
+---- user output:
+[ 7  8  9 10 17 18 19 20]
+-- TEST CASE 2:
+---- input:
+[6,6,6,5,5,5,4,4,4,3,3,3]
+---- correct output:
+[3 3 3 4 4 4 5 5 5 6 6 6]
+---- user output:
+[3 3 3 4 4 4 5 5 5 6 6 6]
+-- TEST CASE 3:
+---- input:
+[4,3,2,1,0,-1,-2,-3]
+---- correct output:
+[-3 -2 -1  0  1  2  3  4]
+---- user output:
+[-3 -2 -1  0  1  2  3  4]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 16:27:56) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+y = zeros(size(x), dtype = int)
+
+j = 0
+for i in range(size(x)):
+	j -= 1
+	y[i] = x[j
+
+print(y)
+-- EXECUTION TIME:
+0.876629
+-- ERROR:
+  File "/home/codebench/codes/1831/3183/main.py", line 11
+    print(y)
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 16:39:14) 
+-- CODE:
+from numpy import *
+
+x = array(eval(input(" ")))
+y = zeros(size(x), dtype = int)
+
+j = 0
+for i in range(size(x)):
+	j -= 1
+	y[i] = x[j]
+
+print(y)
+-- EXECUTION TIME:
+1.09383
+-- TEST CASE 1:
+---- input:
+[20,19,18,17,10,9,8,7]
+---- correct output:
+[ 7  8  9 10 17 18 19 20]
+---- user output:
+[ 7  8  9 10 17 18 19 20]
+-- TEST CASE 2:
+---- input:
+[6,6,6,5,5,5,4,4,4,3,3,3]
+---- correct output:
+[3 3 3 4 4 4 5 5 5 6 6 6]
+---- user output:
+[3 3 3 4 4 4 5 5 5 6 6 6]
+-- TEST CASE 3:
+---- input:
+[4,3,2,1,0,-1,-2,-3]
+---- correct output:
+[-3 -2 -1  0  1  2  3  4]
+---- user output:
+[-3 -2 -1  0  1  2  3  4]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

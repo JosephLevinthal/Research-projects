@@ -1,0 +1,290 @@
+== TEST (2019-04-10 19:23:22) 
+-- CODE:
+for 2 or 10
+print("oi")
+
+-- ERROR:
+File "XXXX", line 1
+    for 2 or 10
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 19:23:50) 
+-- CODE:
+for 2 
+print("oi")
+
+-- ERROR:
+File "XXXX", line 1
+    for 2 
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 19:24:11) 
+-- CODE:
+for (2) 
+print("oi")
+
+-- ERROR:
+File "XXXX", line 1
+    for (2) 
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 19:27:17) 
+-- CODE:
+x  = 10
+for (x<10) 
+
+print("oi")
+
+-- ERROR:
+File "XXXX", line 2
+    for (x<10) 
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 19:30:30) 
+-- CODE:
+x  = 10
+ for x in range(10)
+print("oi")
+
+-- ERROR:
+File "XXXX", line 2
+    for x in range(10)
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 19:31:02) 
+-- CODE:
+
+ for x in range(10)
+print("oi")
+
+-- ERROR:
+File "XXXX", line 2
+    for x in range(10)
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 19:34:05) 
+-- CODE:
+
+ for x in range(10){
+print("oi")
+ }
+-- ERROR:
+File "XXXX", line 2
+    for x in range(10){
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 19:34:47) 
+-- CODE:
+
+ for (x = 1; x <10){
+print("oi")
+ }
+-- ERROR:
+File "XXXX", line 2
+    for (x = 1; x <10){
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 19:36:55) 
+-- CODE:
+x = 1
+while (x<10)
+print("oi")
+x = x + 1;
+-- ERROR:
+File "XXXX", line 2
+    while (x<10)
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 19:37:10) 
+-- CODE:
+x = 1
+while (x<10):
+print("oi")
+x = x + 1;
+-- ERROR:
+File "XXXX", line 3
+    print("oi")
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 19:37:50) 
+-- CODE:
+x = 1
+while (x<10):
+print(x)
+x = x + 1;
+-- ERROR:
+File "XXXX", line 3
+    print(x)
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 19:39:14) 
+-- CODE:
+x = 1
+while (x<10):
+	print(x)
+	x = x + 1;
+-- OUTPUT:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 19:49:18) 
+-- CODE:
+obje = input("digite objeto")
+repet = int(input("digite numero"))
+x = 1
+while (x<repet):
+	print("abra "+obje)
+	x = x + 1;
+-- OUTPUT:
+abra livro
+abra livro
+abra livro
+abra livro
+abra livro
+abra livro
+abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 19:50:17) 
+-- CODE:
+obje = input("digite objeto")
+repet = int(input("digite numero"))
+x = 1
+while (x<=repet):
+	print("abra "+obje)
+	x = x + 1;
+-- OUTPUT:
+abra livro
+abra livro
+abra livro
+abra livro
+abra livro
+abra livro
+abra livro
+abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-10 19:50:47) 
+-- CODE:
+obje = input("digite objeto")
+repet = int(input("digite numero"))
+x = 1
+while (x<=repet):
+	print("abra "+obje)
+	x = x + 1;
+-- EXECUTION TIME:
+0.174898
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+abra livro
+abra livro
+abra livro
+abra livro
+abra livro
+abra livro
+abra livro
+abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+abra carro
+abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 19:51:06) 
+-- CODE:
+obje = input("digite objeto")
+repet = int(input("digite numero"))
+x = 1
+while (x<=repet):
+	print("Abra "+obje)
+	x = x + 1;
+-- OUTPUT:
+Abra livro
+Abra livro
+Abra livro
+Abra livro
+Abra livro
+Abra livro
+Abra livro
+Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-10 19:51:19) 
+-- CODE:
+obje = input("digite objeto")
+repet = int(input("digite numero"))
+x = 1
+while (x<=repet):
+	print("Abra "+obje)
+	x = x + 1;
+-- EXECUTION TIME:
+0.131344
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro
+Abra livro
+Abra livro
+Abra livro
+Abra livro
+Abra livro
+Abra livro
+Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro
+Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

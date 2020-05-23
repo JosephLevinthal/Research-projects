@@ -1,0 +1,445 @@
+== TEST (2019-04-16 11:16:01) 
+-- CODE:
+cliente = float(input("Taxa de pagamento"))
+taxa = 30.00 + cliente
+
+if taxa > 10m³:
+	vc = taxa + 3.00					# vc = Valor Cobrado.
+-- ERROR:
+File "XXXX", line 4
+    if taxa > 10m³:
+                 ^
+SyntaxError: invalid character in identifier
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:18:21) 
+-- CODE:
+cliente = float(input("Taxa de pagamento"))
+taxa = 30.00 + cliente
+
+if taxa > 10m³:
+	vc = taxa - 3.00 		# vc = Valor Cobrado.
+if taxa >= 10m³:
+	vc = taxa = 3.50     # vc = valor cobrado.
+	
+else:
+	print (taxa)
+	
+print (vc)
+-- ERROR:
+File "XXXX", line 4
+    if taxa > 10m³:
+                 ^
+SyntaxError: invalid character in identifier
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:18:41) 
+-- CODE:
+cliente = float(input("Taxa de pagamento"))
+taxa = 30.00 + cliente
+
+if taxa > 10:
+	vc = taxa - 3.00 		# vc = Valor Cobrado.
+if taxa >= 10:
+	vc = taxa = 3.50     # vc = valor cobrado.
+	
+else:
+	print (taxa)
+	
+print (vc)
+-- OUTPUT:
+3.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:18:51) 
+-- CODE:
+cliente = float(input("Taxa de pagamento: ")
+taxa = 30.00 + cliente
+
+if taxa > 10:
+	vc = taxa - 3.00 		# vc = Valor Cobrado.
+if taxa >= 10:
+	vc = taxa = 3.50     # vc = valor cobrado.
+	
+else:
+	print (taxa)
+	
+print (vc)
+-- ERROR:
+File "XXXX", line 2
+    taxa = 30.00 + cliente
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:18:54) 
+-- CODE:
+cliente = float(input("Taxa de pagamento: ")
+taxa = 30.00 + cliente
+
+if taxa > 10:
+	vc = taxa - 3.00 		# vc = Valor Cobrado.
+if taxa >= 10:
+	vc = taxa = 3.50     # vc = valor cobrado.
+	
+else:
+	print (taxa)
+	
+print (vc)
+-- ERROR:
+File "XXXX", line 2
+    taxa = 30.00 + cliente
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:19:03) 
+-- CODE:
+cliente = float(input("Taxa de pagamento: "))
+taxa = 30.00 + cliente
+
+if taxa > 10:
+	vc = taxa - 3.00 		# vc = Valor Cobrado.
+if taxa >= 10:
+	vc = taxa = 3.50     # vc = valor cobrado.
+	
+else:
+	print (taxa)
+	
+print (vc)
+-- OUTPUT:
+3.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:19:24) 
+-- CODE:
+cliente = float(input("Taxa de pagamento: "))
+taxa = 30.00 + cliente
+
+if taxa > 10:
+	vc = taxa - 3.00 		# vc = Valor Cobrado.
+if taxa >= 10:
+	vc = taxa + 3.50     # vc = valor cobrado.
+	
+else:
+	print (taxa)
+	
+print (vc)
+-- OUTPUT:
+41.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:21:09) 
+-- CODE:
+cliente = float(input("Taxa de pagamento: "))
+
+if taxa > 10:
+	vc = taxa - 3.00 		# vc = Valor Cobrado.
+if taxa >= 10:
+	vc = taxa + (3.50 * cliente)
+	
+else:
+	print (taxa)
+	
+print (vc)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if taxa > 10:
+NameError: name 'taxa' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:22:50) 
+-- CODE:
+cliente = float(input("Taxa de pagamento: "))
+
+if cliente > 10:
+	vc = 30.00 - (3.00 * cliente)
+if cliente >= 10:
+	vc = 30.00 + (3.50 * cliente)
+	
+else:
+	print (taxa)
+	
+print (vc)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    print (taxa)
+NameError: name 'taxa' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 11:22:57) 
+-- CODE:
+cliente = float(input("Taxa de pagamento: "))
+
+if cliente > 10:
+	vc = 30.00 - (3.00 * cliente)
+if cliente >= 10:
+	vc = 30.00 + (3.50 * cliente)
+	
+else:
+	print (taxa)
+	
+print (vc)
+-- EXECUTION TIME:
+0.292249
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1664/1392/main.py", line 9, in <module>
+    print (taxa)
+NameError: name 'taxa' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:23:12) 
+-- CODE:
+cliente = float(input("Taxa de pagamento: "))
+
+if cliente > 10:
+	vc = 30.00 - (3.00 * cliente)
+if cliente >= 10:
+	vc = 30.00 + (3.50 * cliente)
+	
+else:
+	print (cliente)
+	
+print (vc)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 11, in <module>
+    print (vc)
+NameError: name 'vc' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 11:23:14) 
+-- CODE:
+cliente = float(input("Taxa de pagamento: "))
+
+if cliente > 10:
+	vc = 30.00 - (3.00 * cliente)
+if cliente >= 10:
+	vc = 30.00 + (3.50 * cliente)
+	
+else:
+	print (cliente)
+	
+print (vc)
+-- EXECUTION TIME:
+0.145985
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1664/1392/main.py", line 11, in <module>
+    print (vc)
+NameError: name 'vc' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:23:14) 
+-- CODE:
+cliente = float(input("Taxa de pagamento: "))
+
+if cliente > 10:
+	vc = 30.00 - (3.00 * cliente)
+if cliente >= 10:
+	vc = 30.00 + (3.50 * cliente)
+	
+else:
+	print (cliente)
+	
+print (vc)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 11, in <module>
+    print (vc)
+NameError: name 'vc' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:23:27) 
+-- CODE:
+cliente = float(input("Taxa de pagamento: "))
+
+if cliente > 10:
+	vc = 30.00 - (3.00 * cliente)
+if cliente >= 10:
+	vc = 30.00 + (3.50 * cliente)
+else:
+	print (cliente)
+	
+print (vc)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 10, in <module>
+    print (vc)
+NameError: name 'vc' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 11:23:29) 
+-- CODE:
+cliente = float(input("Taxa de pagamento: "))
+
+if cliente > 10:
+	vc = 30.00 - (3.00 * cliente)
+if cliente >= 10:
+	vc = 30.00 + (3.50 * cliente)
+else:
+	print (cliente)
+	
+print (vc)
+-- EXECUTION TIME:
+0.167283
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1664/1392/main.py", line 10, in <module>
+    print (vc)
+NameError: name 'vc' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:43:02) 
+-- CODE:
+cliente = float(input("Taxa de pagamento: "))
+
+if cliente > 10:
+	vc = 30.00 - (3.00 * cliente)
+if cliente >= 10:
+	vc = 30.00 + (3.50 * cliente)
+else:
+	print (cliente)
+	
+print(round(vc, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 10, in <module>
+    print(round(vc, 2))
+NameError: name 'vc' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 11:43:09) 
+-- CODE:
+cliente = float(input("Taxa de pagamento: "))
+
+if cliente > 10:
+	vc = 30.00 - (3.00 * cliente)
+if cliente >= 10:
+	vc = 30.00 + (3.50 * cliente)
+else:
+	print (cliente)
+	
+print(round(vc, 2))
+-- EXECUTION TIME:
+0.122516
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1664/1392/main.py", line 10, in <module>
+    print(round(vc, 2))
+NameError: name 'vc' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:43:26) 
+-- CODE:
+cliente = float(input("Taxa de pagamento: "))
+
+if cliente > 10:
+	vc = 30.00 - (3.00 * cliente)
+if cliente >= 10:
+	vc = 30.00 + (3.50 * cliente)
+else:
+	print(round(cliente, 2))
+	
+print(round(vc, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 10, in <module>
+    print(round(vc, 2))
+NameError: name 'vc' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 11:43:28) 
+-- CODE:
+cliente = float(input("Taxa de pagamento: "))
+
+if cliente > 10:
+	vc = 30.00 - (3.00 * cliente)
+if cliente >= 10:
+	vc = 30.00 + (3.50 * cliente)
+else:
+	print(round(cliente, 2))
+	
+print(round(vc, 2))
+-- EXECUTION TIME:
+0.19205
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1664/1392/main.py", line 10, in <module>
+    print(round(vc, 2))
+NameError: name 'vc' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:43:29) 
+-- CODE:
+cliente = float(input("Taxa de pagamento: "))
+
+if cliente > 10:
+	vc = 30.00 - (3.00 * cliente)
+if cliente >= 10:
+	vc = 30.00 + (3.50 * cliente)
+else:
+	print(round(cliente, 2))
+	
+print(round(vc, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 10, in <module>
+    print(round(vc, 2))
+NameError: name 'vc' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 11:53:30) 
+-- CODE:
+cliente = float(input("Taxa de pagamento: "))
+
+if cliente > 10:
+	vc = 30.00 + (3.00 * cliente)
+else: 
+	vc = 30.00 + (3.50 * cliente)
+	
+print(round(vc, 2))
+-- EXECUTION TIME:
+0.179487
+-- TEST CASE 1:
+---- input:
+8.0
+---- correct output:
+54.0
+---- user output:
+58.0
+-- TEST CASE 2:
+---- input:
+32.0
+---- correct output:
+142.0
+---- user output:
+126.0
+-- TEST CASE 3:
+---- input:
+150.4
+
+---- correct output:
+556.4
+---- user output:
+481.2
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:53:30) 
+-- CODE:
+cliente = float(input("Taxa de pagamento: "))
+
+if cliente > 10:
+	vc = 30.00 + (3.00 * cliente)
+else: 
+	vc = 30.00 + (3.50 * cliente)
+	
+print(round(vc, 2))
+-- OUTPUT:
+58.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:54:28) 
+-- CODE:
+cliente = float(input("Taxa de pagamento: "))
+
+if cliente >= 10
+	vc = 30.00 + (3.00 * cliente)
+else:
+	vc = 30.00 + (3.50 * cliente)
+	
+print(round(vc, 2))
+-- ERROR:
+File "XXXX", line 3
+    if cliente >= 10
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

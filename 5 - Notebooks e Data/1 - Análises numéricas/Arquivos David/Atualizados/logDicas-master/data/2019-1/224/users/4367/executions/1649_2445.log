@@ -1,0 +1,327 @@
+== TEST (2019-04-11 18:47:23) 
+-- CODE:
+x= input("escolha C ou F")
+if (C.upper()):
+	C=(F-32)*5/9
+	C=input("escolha a temperatura")
+else(F.upper()):
+	F=(C*9/5)+32
+	F= input("escolha a temperatura")
+
+-- ERROR:
+File "XXXX", line 5
+    else(F.upper()):
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:47:38) 
+-- CODE:
+x= input("escolha C ou F")
+if (C.upper()):
+	C=(F-32)*5/9
+	C=input("escolha a temperatura")
+else:
+	F=(C*9/5)+32
+	F= input("escolha a temperatura")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    if (C.upper()):
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:48:35) 
+-- CODE:
+x= input("escolha C ou F")
+if (x.upper())==C:
+	C=(F-32)*5/9
+	C=input("escolha a temperatura")
+elsec:
+	F=(C*9/5)+32
+	F= input("escolha a temperatura")
+
+-- ERROR:
+File "XXXX", line 5
+    elsec:
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:48:42) 
+-- CODE:
+x= input("escolha C ou F")
+if (x.upper())==C:
+	C=(F-32)*5/9
+	C=input("escolha a temperatura")
+else:
+	F=(C*9/5)+32
+	F= input("escolha a temperatura")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    if (x.upper())==C:
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:49:14) 
+-- CODE:
+x= input("escolha C ou F")
+if (x.upper())=="C":
+	C=(F-32)*5/9
+	C=input("escolha a temperatura")
+else:
+	F=(C*9/5)+32
+	F= input("escolha a temperatura")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    C=(F-32)*5/9
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:50:23) 
+-- CODE:
+x= input("escolha C ou F")
+if (x.upper())=="C":
+	C=input("escolha a temperatura")
+	C=(F-32)*5/9
+
+else:
+	F= input("escolha a temperatura")
+	F=(C*9/5)+32
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    C=(F-32)*5/9
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:51:05) 
+-- CODE:
+x= input("escolha C ou F")
+if (x.upper())=="C":
+	C=input("escolha a temperatura")
+	C=(C-32)*5/9
+
+else:
+	F= input("escolha a temperatura")
+	F=(F*9/5)+32
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    C=(C-32)*5/9
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:52:16) 
+-- CODE:
+x= input("escolha C ou F")
+if (x.upper())=="C":
+	C=float(input("escolha a temperatura"))
+	C=(C-32)*5/9
+
+else:
+	F= float(input("escolha a temperatura"))
+	F=(F*9/5)+32
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    C=(C-32)*5/9
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:53:36) 
+-- CODE:
+x= input("escolha C ou F")
+if (x.upper())=="C":
+	C=float(input("escolha a temperatura"))
+	C=(C-32)*5/9
+	print(C)
+
+else:
+	F= float(input("escolha a temperatura"))
+	F=(F*9/5)+32 
+	print(F)
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 18:53:47) 
+-- CODE:
+x= input("escolha C ou F")
+if (x.upper())=="C":
+	C=float(input("escolha a temperatura"))
+	C=(C-32)*5/9
+	print(C)
+
+else:
+	F= float(input("escolha a temperatura"))
+	F=(F*9/5)+32 
+	print(F)
+
+-- EXECUTION TIME:
+0.303774
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+608.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.77777777777778
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:54:40) 
+-- CODE:
+x= input("escolha C ou F")
+if (x.upper())=="C":
+	C=float(input("escolha a temperatura"))
+	C=(C-32)*5/9
+	print(round(C, 2))
+
+else:
+	F= float(input("escolha a temperatura"))
+	F=(F*9/5)+32 
+	print(round(F, 2))
+
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 18:54:50) 
+-- CODE:
+x= input("escolha C ou F")
+if (x.upper())=="C":
+	C=float(input("escolha a temperatura"))
+	C=(C-32)*5/9
+	print(round(C, 2))
+
+else:
+	F= float(input("escolha a temperatura"))
+	F=(F*9/5)+32 
+	print(round(F, 2))
+
+-- EXECUTION TIME:
+0.208886
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+608.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:55:49) 
+-- CODE:
+x= input("escolha C ou F")
+if (x.upper())=="C":
+	C=float(input("escolha a temperatura"))
+	C=(F*9/5)+32
+	print(round(C, 2))
+
+else:
+	F= float(input("escolha a temperatura"))
+	F=(C-32)*5/9
+	print(round(F, 2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    C=(F*9/5)+32
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:56:34) 
+-- CODE:
+x= input("escolha C ou F")
+if (x.upper())=="C":
+	C=float(input("escolha a temperatura"))
+	C=(C*9/5)+32
+	print(round(C, 2))
+
+else:
+	F= float(input("escolha a temperatura"))
+	F=(F-32)*5/9
+	print(round(F, 2))
+
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 18:56:44) 
+-- CODE:
+x= input("escolha C ou F")
+if (x.upper())=="C":
+	C=float(input("escolha a temperatura"))
+	C=(C*9/5)+32
+	print(round(C, 2))
+
+else:
+	F= float(input("escolha a temperatura"))
+	F=(F-32)*5/9
+	print(round(F, 2))
+
+-- EXECUTION TIME:
+0.160326
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

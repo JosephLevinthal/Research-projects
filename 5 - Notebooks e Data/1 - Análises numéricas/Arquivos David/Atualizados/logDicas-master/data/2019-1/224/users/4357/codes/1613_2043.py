@@ -1,0 +1,8 @@
+nota1=float(input("digite o numero"))
+nota2=float(input("digite o numero"))
+nota3=float(input("digite o numero"))
+nota4=float(input("digite o numero"))
+maxima=max(nota1,nota2,nota3,nota4)
+minima=min(nota1,nota2,nota3,nota4)
+madiaponderada=(nota1+nota2+nota3+nota4)-(maxima+minima)
+print(round(madiaponderada,2)

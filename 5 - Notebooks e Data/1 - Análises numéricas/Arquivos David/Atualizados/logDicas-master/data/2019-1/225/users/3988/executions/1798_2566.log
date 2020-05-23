@@ -1,0 +1,65 @@
+== SUBMITION (2019-06-12 10:25:09) 
+-- CODE:
+from numpy import*
+v = array(eval(input("faltas: ")))
+
+seg = 0
+ter = 0
+qua = 0 
+qui = 0
+sex = 0
+sab = 0
+
+for i in range (size(v)):
+	if(v[i] == 2):
+	 	seg = seg + 1
+	elif(v[i] == 3):
+		ter = ter + 1
+	elif(v[i] == 4):
+		 qua = qua + 1
+	elif(v[i] == 5):
+		qui = qui + 1
+	elif(v[i] == 6):
+		sex = sex + 1
+	elif (v[i] == 7):
+		sab = sab + 1
+s = seg + ter + qua + qui + sex + sab
+t = zeros(6, dtype=float)
+for i in v:
+	t[0] = round((seg / s) * 100 , 1)
+	t[1] = round((ter / s) * 100 , 1)
+	t[2]= round((qua / s) * 100 , 1)
+	t[3] = round((qui / s) * 100 , 1)
+	t[4] = round((sex / s) * 100 , 1)
+	t[5] = round((sab / s) * 100, 1)
+print(t)
+
+
+	
+
+-- EXECUTION TIME:
+1.12537
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.  18.8 25.  37.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 4.  8. 16. 20. 20. 32.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[15.4  7.7 23.1  7.7 15.4 30.8]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

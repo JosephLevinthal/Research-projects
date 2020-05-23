@@ -1,0 +1,302 @@
+== TEST (2019-03-26 11:21:07) 
+-- CODE:
+vm=float(input("pontos de vida de um monstro:")
+d1=float(input("valor sorteado de 1"))
+d2=float(input("valor sorteado de 2"))
+
+dano=int(sqrt(5*d1)+pi(d2/3))
+
+print=("vida restante:",dano)
+-- ERROR:
+File "XXXX", line 2
+    d1=float(input())
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 11:21:25) 
+-- CODE:
+vm=float(input("pontos de vida de um monstro:")
+d1=float(input("valor sorteado de 1:"))
+d2=float(input("valor sorteado de 2:"))
+
+dano=int(sqrt(5*d1)+pi(d2/3))
+
+print=("vida restante:",dano)
+-- ERROR:
+File "XXXX", line 2
+    d1=float(input())
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 11:21:43) 
+-- CODE:
+vm=float(input("pontos de vida de um monstro:"))
+d1=float(input("valor sorteado de 1:"))
+d2=float(input("valor sorteado de 2:"))
+
+dano=int(sqrt(5*d1)+pi(d2/3))
+
+print=("vida restante:",dano)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    dano=int(sqrt(5*d1)+pi(d2/3))
+NameError: name 'sqrt' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 11:22:59) 
+-- CODE:
+vm=float(input("pontos de vida de um monstro:"))
+d1=float(input("valor sorteado de 1:"))
+d2=float(input("valor sorteado de 2:"))
+from math import *
+dano=int(sqrt(5*d1)+pi(d2/3))
+
+print=("vida restante:",dano)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    dano=int(sqrt(5*d1)+pi(d2/3))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 11:25:55) 
+-- CODE:
+vm=float(input("pontos de vida de um monstro:"))
+d1=float(input("valor sorteado de 1:"))
+d2=float(input("valor sorteado de 2:"))
+from math import *
+dano=int(sqrt(5*d1)+pi*(d2/3))
+
+print=("vida restante:",dano)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    dano=int(sqrt(5*d1)+pi(d2/3))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 11:27:22) 
+-- CODE:
+vm=float(input("pontos de vida de um monstro:"))
+d1=float(input("valor sorteado de 1:"))
+d2=float(input("valor sorteado de 2:"))
+from math import *
+dano=int(sqrt(5*d1)+pi**(d2/3))
+
+print=("vida restante:",dano)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    dano=int(sqrt(5*d1)+pi(d2/3))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 11:28:20) 
+-- CODE:
+vm=float(input("pontos de vida de um monstro:"))
+d1=float(input("valor sorteado de 1:"))
+d2=float(input("valor sorteado de 2:"))
+from math import *
+dano=(sqrt(5*d1)+pi**(d2/3))
+print=("vida restante:",dano)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    dano=int(sqrt(5*d1)+pi(d2/3))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 11:28:56) 
+-- CODE:
+vm=float(input("pontos de vida de um monstro:"))
+d1=float(input("valor sorteado de 1:"))
+d2=float(input("valor sorteado de 2:"))
+from math import *
+dano=(sqrt(5*d1)+pi**(d2/3))
+print=(dano)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    dano=int(sqrt(5*d1)+pi(d2/3))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 11:29:59) 
+-- CODE:
+vm=float(input("pontos de vida de um monstro:"))
+d1=float(input("valor sorteado de 1:"))
+d2=float(input("valor sorteado de 2:"))
+from math import *
+dano=int(sqrt(5*d1)+pi**(d2/3))
+print=(dano)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    dano=int(sqrt(5*d1)+pi(d2/3))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 11:30:35) 
+-- CODE:
+vm=float(input("pontos de vida de um monstro:"))
+d1=float(input("valor sorteado de 1:"))
+d2=float(input("valor sorteado de 2:"))
+from math import *
+dano=int(sqrt(5*d1)+pi**(d2/3))
+print=(dano)
+-- EXECUTION TIME:
+0.189263
+-- TEST CASE 1:
+---- input:
+200
+1
+6
+---- correct output:
+188
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+300
+6
+6
+---- correct output:
+285
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+500
+1
+1
+---- correct output:
+497
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 11:32:54) 
+-- CODE:
+vm=float(input("pontos de vida de um monstro:"))
+d1=float(input("valor sorteado de 1:"))
+d2=float(input("valor sorteado de 2:"))
+from math import *
+dano=int(sqrt(5*d1)+pi**(d2/3))
+print=(dano)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    dano=int(sqrt(5*d1)+pi(d2/3))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 11:33:33) 
+-- CODE:
+vm=float(input("pontos de vida de um monstro:"))
+d1=float(input("valor sorteado de 1:"))
+d2=float(input("valor sorteado de 2:"))
+from math import *
+dano=int(sqrt(5*d1)+pi**(d2/3))
+print(dano)
+-- OUTPUT:
+12
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 11:33:50) 
+-- CODE:
+vm=float(input("pontos de vida de um monstro:"))
+d1=float(input("valor sorteado de 1:"))
+d2=float(input("valor sorteado de 2:"))
+from math import *
+dano=int(sqrt(5*d1)+pi**(d2/3))
+print(dano)
+-- OUTPUT:
+12
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 11:36:04) 
+-- CODE:
+vm=float(input("pontos de vida de um monstro:"))
+d1=float(input("valor sorteado de 1:"))
+d2=float(input("valor sorteado de 2:"))
+from math import *
+dano=int(sqrt(5*d1)+pi**(d2/3))
+vr=(vm-dano)
+print(vr)
+-- OUTPUT:
+188.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 11:36:06) 
+-- CODE:
+vm=float(input("pontos de vida de um monstro:"))
+d1=float(input("valor sorteado de 1:"))
+d2=float(input("valor sorteado de 2:"))
+from math import *
+dano=int(sqrt(5*d1)+pi**(d2/3))
+vr=(vm-dano)
+print(vr)
+-- EXECUTION TIME:
+0.138549
+-- TEST CASE 1:
+---- input:
+200
+1
+6
+---- correct output:
+188
+---- user output:
+188.0
+-- TEST CASE 2:
+---- input:
+300
+6
+6
+---- correct output:
+285
+---- user output:
+285.0
+-- TEST CASE 3:
+---- input:
+500
+1
+1
+---- correct output:
+497
+---- user output:
+497.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-10 22:32:29) 
+-- CODE:
+vm=float(input("pontos de vida de um monstro:"))
+d1=float(input("valor sorteado de 1:"))
+d2=float(input("valor sorteado de 2:"))
+from math import *
+dano=int(sqrt(5*d1)+pi**(d2/3))
+vr=(vm-dano)
+print(vr)
+-- EXECUTION TIME:
+0.20436
+-- TEST CASE 1:
+---- input:
+200
+1
+6
+---- correct output:
+188
+---- user output:
+188.0
+-- TEST CASE 2:
+---- input:
+300
+6
+6
+---- correct output:
+285
+---- user output:
+285.0
+-- TEST CASE 3:
+---- input:
+500
+1
+1
+---- correct output:
+497
+---- user output:
+497.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

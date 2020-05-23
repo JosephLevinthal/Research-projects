@@ -1,0 +1,6 @@
+a=float(input("primeira nota: "))
+b=float(input("segunda nota: "))
+c=float(input("terceira nota: "))
+d=float(input("quarta nota: "))
+media=(a*1/10+b*2/10+c*3/10+d*4/10)
+print(round(media,2))

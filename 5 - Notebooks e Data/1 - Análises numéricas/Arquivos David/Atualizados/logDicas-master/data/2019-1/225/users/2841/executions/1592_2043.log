@@ -1,0 +1,90 @@
+== TEST (2019-05-02 19:19:58) 
+-- CODE:
+a = int(input ())
+b = int(input ())
+c = int(input ())
+d = int(input ())
+
+f = (a+b*2+c*3+d*4)/10
+
+print (round (f, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    b = int(input ())
+ValueError: invalid literal for int() with base 10: '8.5'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 19:20:24) 
+-- CODE:
+a = double(input ())
+b = double(input ())
+c = double(input ())
+d = double(input ())
+
+f = (a+b*2+c*3+d*4)/10
+
+print (round (f, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a = double(input ())
+NameError: name 'double' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 19:22:14) 
+-- CODE:
+a = float(input ())
+b = float(input ())
+c = float(input ())
+d = float(input ())
+
+f = (a+b*2+c*3+d*4)/10
+
+print (round (f, 2))
+-- OUTPUT:
+8.2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 19:22:35) 
+-- CODE:
+a = float(input ())
+b = float(input ())
+c = float(input ())
+d = float(input ())
+
+f = (a+b*2+c*3+d*4)/10
+
+print (round (f, 2))
+-- EXECUTION TIME:
+0.207035
+-- TEST CASE 1:
+---- input:
+8
+8.5
+7
+9
+---- correct output:
+8.2
+---- user output:
+8.2
+-- TEST CASE 2:
+---- input:
+7
+7
+7
+7
+---- correct output:
+7.0
+---- user output:
+7.0
+-- TEST CASE 3:
+---- input:
+5.75
+6.9
+7.95
+8.99
+---- correct output:
+7.94
+---- user output:
+7.94
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

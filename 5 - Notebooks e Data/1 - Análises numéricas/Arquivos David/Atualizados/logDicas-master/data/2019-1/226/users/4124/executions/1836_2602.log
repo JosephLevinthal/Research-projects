@@ -1,0 +1,961 @@
+== TEST (2019-06-23 13:32:03) 
+-- CODE:
+from numpy import*
+from numpy.linalg import *
+vet = array(eval(input("Mg de alimento: ")))
+alim = array([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ",round(num[0,0]))
+print("salmonela")
+print("coli")
+print(num)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 13:32:49) 
+-- CODE:
+from numpy import*
+from numpy.linalg import *
+vet = array(eval(input("Mg de alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ",round(num[0,0]))
+print("salmonela")
+print("coli")
+print(num)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 13:33:51) 
+-- CODE:
+from numpy import*
+from numpy.linalg import *
+vet = array(eval(input("Mg de alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+#print("estafilococo: ",round(num[0,0]))
+#print("salmonela")
+#print("coli")
+print(num)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-23 13:36:30) 
+-- CODE:
+from numpy import*
+from numpy.linalg import *
+vet = array(eval(input("Mg de alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ",round(num[0]),1)
+print("salmonela",round(num[1]),1)
+print("coli", round(num[2]),1)
+if num[0] == max(num):
+    print("estafilococo")
+elif num[1] == max(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- EXECUTION TIME:
+1.21474
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  1923.0 1
+salmonela 1864.0 1
+coli -439.0 1
+estafilococo
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -31711.0 1
+salmonela 16783.0 1
+coli 12184.0 1
+salmonela
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.0 1
+salmonela -9717.0 1
+coli -6745.0 1
+estafilococo
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 13:36:32) 
+-- CODE:
+from numpy import*
+from numpy.linalg import *
+vet = array(eval(input("Mg de alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ",round(num[0]),1)
+print("salmonela",round(num[1]),1)
+print("coli", round(num[2]),1)
+if num[0] == max(num):
+    print("estafilococo")
+elif num[1] == max(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 13:37:04) 
+-- CODE:
+from numpy import*
+from numpy.linalg import *
+vet = array(eval(input("Mg de alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ",round(num[0]),1)
+print("salmonela",round(num[1]),1)
+print("coli", round(num[2]),1)
+if num[0] == max(num):
+    print("estafilococo")
+elif num[1] == max(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 13:37:35) 
+-- CODE:
+from numpy import*
+from numpy.linalg import *
+vet = array(eval(input("Mg de alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ",round(num[0]),1)
+print("salmonela",round(num[1]),1)
+print("coli", round(num[2]),1)
+if num[0] == max(num):
+    print("estafilococo")
+elif num[1] == max(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 13:38:18) 
+-- CODE:
+from numpy import*
+from numpy.linalg import *
+vet = array(eval(input("Mg de alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ",round(num[0]),1)
+print("salmonela",round(num[1]),1)
+print("coli", round(num[2]),1)
+if num[0] == max(num):
+    print("estafilococo")
+elif num[1] == max(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 13:39:18) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+vet = array(eval(input("Mg de alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ",round(num[0]),1)
+print("salmonela",round(num[1]),1)
+print("coli", round(num[2]),1)
+if num[0] == max(num):
+    print("estafilococo")
+elif num[1] == max(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 13:40:11) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+vet = array(eval(input("Mg de alimento: ")))
+alim = array([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ",round(num[0]),1)
+print("salmonela",round(num[1]),1)
+print("coli", round(num[2]),1)
+if num[0] == max(num):
+    print("estafilococo")
+elif num[1] == max(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 13:40:31) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+vet = array(input("Mg de alimento: "))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ",round(num[0]),1)
+print("salmonela",round(num[1]),1)
+print("coli", round(num[2]),1)
+if num[0] == max(num):
+    print("estafilococo")
+elif num[1] == max(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 13:40:44) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+vet = array(eval(input("Mg de alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ",round(num[0]),1)
+print("salmonela",round(num[1]),1)
+print("coli", round(num[2]),1)
+if num[0] == max(num):
+    print("estafilococo")
+elif num[1] == max(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 13:42:14) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+vet = array(eval(input("Alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ",round(num[0]),1)
+print("salmonela",round(num[1]),1)
+print("coli", round(num[2]),1)
+if num[0] == max(num):
+    print("estafilococo")
+elif num[1] == max(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 13:42:32) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+v = array(eval(input("Alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ",round(num[0]),1)
+print("salmonela",round(num[1]),1)
+print("coli", round(num[2]),1)
+if num[0] == max(num):
+    print("estafilococo")
+elif num[1] == max(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 13:42:44) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+
+
+vet = array(eval(input("Alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ",round(num[0]),1)
+print("salmonela",round(num[1]),1)
+print("coli", round(num[2]),1)
+if num[0] == max(num):
+    print("estafilococo")
+elif num[1] == max(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 13:49:32) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+vet = array(eval(input("Alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+#print("estafilococo: ",round(num[0]),1)
+#print("salmonela",round(num[1]),1)
+#print("coli", round(num[2]),1)
+#if num[0] == max(num):
+#    print("estafilococo")
+#elif num[1] == max(num):
+#    print("salmonela")
+#else:
+#    print("coli")
+print(num)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 13:50:50) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+vet = array(eval(input("Alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ", round(num[0]),1)
+print("salmonela", round(num[1]),1)
+print("coli", round(num[2]),1)
+if num[0] == max(num):
+    print("estafilococo")
+elif num[1] == max(num):
+    print("salmonela")
+else:
+    print("coli")
+print(num)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 13:51:13) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+vet = array(eval(input("Alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ", round(num[0]),1)
+print("salmonela", round(num[1]),1)
+print("coli", round(num[2]),1)
+if num[0] == max(num):
+    print("estafilococo")
+elif num[1] == max(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 13:51:57) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+vet = array(eval(input("Alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ", (round(num[0]),1))
+print("salmonela", (round(num[1]),1))
+print("coli", (round(num[2]),1))
+if num[0] == max(num):
+    print("estafilococo")
+elif num[1] == max(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 13:52:37) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+vet = array(eval(input("Alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ", round((num[0]),1))
+print("salmonela", round((num[1]),1))
+print("coli", round((num[2]),1))
+if num[0] == max(num):
+    print("estafilococo")
+elif num[1] == max(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-23 13:53:00) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+vet = array(eval(input("Alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ", round((num[0]),1))
+print("salmonela", round((num[1]),1))
+print("coli", round((num[2]),1))
+if num[0] == max(num):
+    print("estafilococo")
+elif num[1] == max(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- EXECUTION TIME:
+1.07672
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  1923.4
+salmonela 1864.5
+coli -439.0
+estafilococo
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  1923.4
+salmonela 1864.5
+coli -439.0
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.2
+salmonela -9717.3
+coli -6745.3
+estafilococo
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-23 13:53:01) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+vet = array(eval(input("Alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ", round((num[0]),1))
+print("salmonela", round((num[1]),1))
+print("coli", round((num[2]),1))
+if num[0] == max(num):
+    print("estafilococo")
+elif num[1] == max(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- EXECUTION TIME:
+2.60637
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  1923.4
+salmonela 1864.5
+coli -439.0
+estafilococo
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -31711.0
+salmonela 16783.4
+coli 12183.6
+salmonela
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.2
+salmonela -9717.3
+coli -6745.3
+estafilococo
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-23 13:53:32) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+vet = array(eval(input("Alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ", round((num[0]),1))
+print("salmonela", round((num[1]),1))
+print("coli", round((num[2]),1))
+if num[0] == min(num):
+    print("estafilococo")
+elif num[1] == min(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- EXECUTION TIME:
+1.13676
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  1923.4
+salmonela 1864.5
+coli -439.0
+coli
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -31711.0
+salmonela 16783.4
+coli 12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.2
+salmonela -9717.3
+coli -6745.3
+salmonela
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 13:54:17) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+vet = array(eval(input("Alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ", round((num[0]),1))
+print("salmonela", round((num[1]),1))
+print("coli", round((num[2]),1))
+if num[0] == min(num):
+    print("estafilococo")
+elif num[1] == min(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-23 13:55:07) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+vet = array(eval(input("Alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ", round((num[0]),1))
+print("salmonela", round((num[1]),1))
+print("coli", round((num[2]),1))
+if num[0] == min(num):
+    print("estafilococo")
+elif num[1] == min(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- EXECUTION TIME:
+0.847278
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  1923.4
+salmonela 1864.5
+coli -439.0
+coli
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -31711.0
+salmonela 16783.4
+coli 12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.2
+salmonela -9717.3
+coli -6745.3
+salmonela
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 13:55:16) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+vet = array(eval(input("Alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ", round((num[0]),1))
+print("salmonela", round((num[1]),1))
+print("coli", round((num[2]),1))
+if num[0] == min(num):
+    print("estafilococo")
+elif num[1] == min(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 10:20:42) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+vet = array(eval(input("Alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ", round((num[0]),1))
+print("salmonela", round((num[1]),1))
+print("coli", round((num[2]),1))
+if num[0] == min(num):
+    print("estafilococo")
+elif num[1] == min(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 10:21:19) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+vet = array(eval(input("Alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ", round((num[0]),1))
+print("salmonela", round((num[1]),1))
+print("coli", round((num[2]),1))
+if num[0] == min(num):
+    print("estafilococo")
+elif num[1] == min(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- EXECUTION TIME:
+1.12383
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  1923.4
+salmonela 1864.5
+coli -439.0
+coli
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -31711.0
+salmonela 16783.4
+coli 12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.2
+salmonela -9717.3
+coli -6745.3
+salmonela
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 10:21:31) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+vet = array(eval(input("Alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ", round((num[0]),1))
+print("salmonela", round((num[1]),1))
+print("coli", round((num[2]),1))
+if num[0] == min(num):
+    print("estafilococo")
+elif num[1] == min(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 10:22:12) 
+-- CODE:
+from numpy import * 
+from numpy.linalg import *
+vet = array(eval(input("Alimento: ")))
+alim = ([2,1,4],[1,2,0],[2,3,2])
+num = dot(inv(alim), vet.T)
+print("estafilococo: ", round((num[0]),1))
+print("salmonela: ", round((num[1]),1))
+print("coli: ", round((num[2]),1))
+if num[0] == min(num):
+    print("estafilococo")
+elif num[1] == min(num):
+    print("salmonela")
+else:
+    print("coli")
+
+-- EXECUTION TIME:
+1.01833
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

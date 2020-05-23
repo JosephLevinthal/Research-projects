@@ -1,0 +1,1 @@
+n=int(input("insira um numero de 3 digi"))

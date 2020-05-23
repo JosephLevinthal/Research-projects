@@ -1,0 +1,86 @@
+== TEST (2019-04-29 15:24:14) 
+-- CODE:
+ataque = input().upper()
+d1 = int(input())
+d2 = int(input())
+d3 = int(input())
+d4 = int(input())
+
+if((d1 < 1 or d1 > 6) or (d2 < 1 or d2 > 6) or (d3 < 1 or d3 > 6) or (d4 < 1 or d4 > 6)) or (ataque != "ESPADA" or ataque != "CAUDA"):
+	print("Entrada invalida")
+elif(ataque == "ESPADA"):
+	print((d1 + 6) + (d2 + 6) + (d3 + 6) + (d4 + 6))
+else:
+	print((d1 + d2 + d3) * d4)
+-- OUTPUT:
+Entrada invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 15:28:25) 
+-- CODE:
+ataque = input().upper()
+d1 = int(input())
+d2 = int(input())
+d3 = int(input())
+d4 = int(input())
+
+if((d1 < 1 or d1 > 6) or (d2 < 1 or d2 > 6) or (d3 < 1 or d3 > 6) or (d4 < 1 or d4 > 6)) or (ataque != "ESPADA" and ataque != "CAUDA"):
+	print("Entrada invalida")
+elif(ataque == "ESPADA"):
+	print((d1 + 6) + (d2 + 6) + (d3 + 6) + (d4 + 6))
+else:
+	print((d1 + d2 + d3) * d4)
+-- OUTPUT:
+40
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 15:28:48) 
+-- CODE:
+ataque = input().upper()
+d1 = int(input())
+d2 = int(input())
+d3 = int(input())
+d4 = int(input())
+
+if((d1 < 1 or d1 > 6) or (d2 < 1 or d2 > 6) or (d3 < 1 or d3 > 6) or (d4 < 1 or d4 > 6)) or (ataque != "ESPADA" and ataque != "CAUDA"):
+	print("Entrada invalida")
+elif(ataque == "ESPADA"):
+	print((d1 + 6) + (d2 + 6) + (d3 + 6) + (d4 + 6))
+else:
+	print((d1 + d2 + d3) * d4)
+-- EXECUTION TIME:
+0.229388
+-- TEST CASE 1:
+---- input:
+CAUDA
+3
+5
+2
+4
+---- correct output:
+40
+---- user output:
+40
+-- TEST CASE 2:
+---- input:
+ESPADA
+3
+3
+3
+3
+---- correct output:
+36
+---- user output:
+36
+-- TEST CASE 3:
+---- input:
+ESPAD
+3
+3
+3
+3
+---- correct output:
+Entrada invalida
+---- user output:
+Entrada invalida
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

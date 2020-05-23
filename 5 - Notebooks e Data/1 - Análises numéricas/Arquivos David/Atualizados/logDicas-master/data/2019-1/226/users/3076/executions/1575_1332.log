@@ -1,0 +1,63 @@
+== TEST (2019-03-12 23:10:00) 
+-- CODE:
+aresta = 5
+area = 3/2*(3**0.5)*a**2
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2*(3**0.5)*a**2
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 23:10:52) 
+-- CODE:
+aresta = 5
+area = 3/2*(3**0.5)*a**2
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = 3/2*(3**0.5)*a**2
+NameError: name 'a' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 23:13:00) 
+-- CODE:
+aresta = 5
+area = 3/2*(3**0.5)*aresta**2
+ 
+print(round(area, 4))
+-- OUTPUT:
+64.9519
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 23:14:27) 
+-- CODE:
+aresta = 5
+area = 3/2*(3**0.5*ar
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 23:15:16) 
+-- CODE:
+aresta = 5
+area = 3/2*(3**0.5*aresta**2)
+ 
+print(round(area, 4))
+-- OUTPUT:
+64.9519
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 23:16:50) 
+-- CODE:
+aresta = 5
+area = 3/2*((3**0.5)*aresta**2)
+ 
+print(round(area, 4))
+-- OUTPUT:
+64.9519
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,16 @@
+a = float(input("digite a: "))
+b = float(input("digite b: "))
+c = float(input("digite c: "))
+d = float(input("digite d: "))
+e = float(input("digite e: "))
+f = float(input("digite f: "))
+cebf = (c*e)-(b*f)
+aebd = (a*e)-(b*d)
+afcd = (a*f)-(c*d)
+if(aebd!=0):
+	x = (cebf)/(aebd)
+	y = (afcd)/(aebd)
+	print(x)
+	print(y)
+else:
+	print("Nao tem solucao")

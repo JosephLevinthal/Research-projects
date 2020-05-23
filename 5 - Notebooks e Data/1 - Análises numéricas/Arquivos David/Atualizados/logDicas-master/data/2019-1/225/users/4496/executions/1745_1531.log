@@ -1,0 +1,60 @@
+== TEST (2019-05-15 15:53:25) 
+-- CODE:
+from math import*
+
+x = eval(input("ang x: "))
+n = int(input)
+
+cont = 0
+e = 1
+d = 2
+aux = 1
+
+while(n<soma):
+	e = e + (aux * (x**2)/(d)+(x**4)/(d))
+	if(aux == 1):
+		aux = -1
+	else:
+		aux = 1
+
+cont = cont + 1
+e = e + 1
+d = d + 2
+
+print(round(n,10))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    n = int(input)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'builtin_function_or_method'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 15:54:06) 
+-- CODE:
+from math import*
+
+x = eval(float(input("ang x: ")))
+n = int(input)
+
+cont = 0
+e = 1
+d = 2
+aux = 1
+
+while(n<soma):
+	e = e + (aux * (x**2)/(d)+(x**4)/(d))
+	if(aux == 1):
+		aux = -1
+	else:
+		aux = 1
+
+cont = cont + 1
+e = e + 1
+d = d + 2
+
+print(round(n,10))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    x = eval(float(input()))
+ValueError: could not convert string to float: 'pi/9'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

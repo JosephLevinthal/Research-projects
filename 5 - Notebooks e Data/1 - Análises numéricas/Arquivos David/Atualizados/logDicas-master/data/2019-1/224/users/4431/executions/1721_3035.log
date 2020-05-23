@@ -1,0 +1,187 @@
+== TEST (2019-05-02 18:16:59) 
+-- CODE:
+x=float(input("Digite o numero em graus "))
+x=radians(x)
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    x=radians(x)
+NameError: name 'radians' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 18:17:04) 
+-- CODE:
+x=float(input("Digite o numero em graus "))
+x=radians(x)
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    x=radians(x)
+NameError: name 'radians' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 18:17:17) 
+-- CODE:
+from math import*
+x=float(input("Digite o numero em graus "))
+x=radians(x)
+print(x)
+-- OUTPUT:
+0.7853981633974483
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 18:19:19) 
+-- CODE:
+from math import*
+x=float(input("Digite o numero em graus "))
+if(x<0)or(x>360):
+	print("entrada invalida")
+elif(x<=0)and(x<90):
+	x=radians(x)
+	z=sin(x)
+	print(z)
+-- OUTPUT:
+0.7853981633974483
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 18:19:29) 
+-- CODE:
+from math import*
+x=float(input("Digite o numero em graus "))
+if(x<0)or(x>360):
+	print("entrada invalida")
+elif(x<=0)and(x<90):
+	x=radians(x)
+	z=sin(x)
+	print(z)
+-- OUTPUT:
+0.7853981633974483
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 18:19:48) 
+-- CODE:
+from math import*
+x=float(input("Digite o numero em graus "))
+if(x<0)or(x>360):
+	print("entrada invalida")
+elif(x>=0)and(x<90):
+	x=radians(x)
+	z=sin(x)
+	print(z)
+-- OUTPUT:
+0.7071067811865475
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 18:20:00) 
+-- CODE:
+from math import*
+x=float(input("Digite o numero em graus "))
+if(x<0)or(x>360):
+	print("entrada invalida")
+elif(x>=0)and(x<90):
+	x=radians(x)
+	z=sin(x)
+	print(round(z,4))
+-- OUTPUT:
+0.7071
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 18:20:39) 
+-- CODE:
+from math import*
+x=float(input("Digite o numero em graus "))
+if(x<0)or(x>360):
+	print("entrada invalida")
+elif((x>=0)and(x<90))or((x>=180)and(x<270)):
+	x=radians(x)
+	z=sin(x)
+	print(round(z,4))
+-- OUTPUT:
+0.7071
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 18:21:38) 
+-- CODE:
+from math import*
+x=float(input("Digite o numero em graus "))
+if(x<0)or(x>360):
+	print("entrada invalida")
+elif((x>=0)and(x<90))or((x>=180)and(x<270)):
+	x=radians(x)
+	z=sin(x)
+	print(round(z,4))
+elif((x>=90)and(x<180)or(x>=270)and(x<360)):
+	x=radians(x)
+	z=cos(x)
+	print(z)
+-- OUTPUT:
+0.7071
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-02 18:22:20) 
+-- CODE:
+from math import*
+x=float(input("Digite o numero em graus "))
+if(x<0)or(x>360):
+	print("entrada invalida")
+elif((x>=0)and(x<90))or((x>=180)and(x<270)):
+	x=radians(x)
+	z=sin(x)
+	print(round(z,4))
+elif((x>=90)and(x<180)or(x>=270)and(x<360)):
+	x=radians(x)
+	z=cos(x)
+	print(round(z,4))
+-- OUTPUT:
+0.7071
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 18:22:24) 
+-- CODE:
+from math import*
+x=float(input("Digite o numero em graus "))
+if(x<0)or(x>360):
+	print("entrada invalida")
+elif((x>=0)and(x<90))or((x>=180)and(x<270)):
+	x=radians(x)
+	z=sin(x)
+	print(round(z,4))
+elif((x>=90)and(x<180)or(x>=270)and(x<360)):
+	x=radians(x)
+	z=cos(x)
+	print(round(z,4))
+-- EXECUTION TIME:
+0.215906
+-- TEST CASE 1:
+---- input:
+45.0
+---- correct output:
+0.7071
+---- user output:
+0.7071
+-- TEST CASE 2:
+---- input:
+275.0
+---- correct output:
+0.0872
+---- user output:
+0.0872
+-- TEST CASE 3:
+---- input:
+358.0
+---- correct output:
+0.9994
+---- user output:
+0.9994
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-11 20:15:05) 
+-- CODE:
+from math import*
+x=float(input("Digite o numero em graus "))
+if(x<0)or(x>360):
+	print("entrada invalida")
+elif((x>=0)and(x<90))or((x>=180)and(x<270)):
+	x=radians(x)
+	z=sin(x)
+	print(round(z,4))
+elif((x>=90)and(x<180)or(x>=270)and(x<360)):
+	x=radians(x)
+	z=cos(x)
+	print(round(z,4))
+-- OUTPUT:
+0.7071
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

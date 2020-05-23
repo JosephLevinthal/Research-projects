@@ -1,0 +1,71 @@
+== TEST (2019-04-15 10:37:20) 
+-- CODE:
+e = input("Escala em que a temperatura esta presente: ")
+v = float(input("Valor da temperatura: "))
+
+if (e == "C"):
+	f = ((9*c)/5)+32
+	print(round(f,2))
+else:
+	c = 5/9*(v-32)
+	print(round(c,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    f = ((9*c)/5)+32
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 10:37:59) 
+-- CODE:
+e = input("Escala em que a temperatura esta presente: ")
+v = float(input("Valor da temperatura: "))
+
+if (e == "C"):
+	f = ((9*v)/5)+32
+	print(round(f,2))
+else:
+	c = 5/9*(v-32)
+	print(round(c,2))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 10:38:16) 
+-- CODE:
+e = input("Escala em que a temperatura esta presente: ")
+v = float(input("Valor da temperatura: "))
+
+if (e == "C"):
+	f = ((9*v)/5)+32
+	print(round(f,2))
+else:
+	c = 5/9*(v-32)
+	print(round(c,2))
+-- EXECUTION TIME:
+0.131495
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

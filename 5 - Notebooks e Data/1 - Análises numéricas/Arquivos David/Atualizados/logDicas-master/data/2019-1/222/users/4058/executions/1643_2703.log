@@ -1,0 +1,178 @@
+== TEST (2019-04-08 19:33:38) 
+-- CODE:
+cid= input('qual sua idade?')
+if (cid>18):
+	cid= eleitor
+else:
+	cid= nao_eleitor 
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    if (cid>18):
+TypeError: '>' not supported between instances of 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 19:33:52) 
+-- CODE:
+cid= input('qual sua idade?')
+if (cid>18):
+	cid= eleitor
+else:
+	cid= nao_eleitor 
+print(cid)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    if (cid>18):
+TypeError: '>' not supported between instances of 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 19:34:10) 
+-- CODE:
+cid= input('qual sua idade?')
+if (cid > 18):
+	cid= eleitor
+else:
+	cid= nao_eleitor 
+print(cid)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    if (cid > 18):
+TypeError: '>' not supported between instances of 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 19:35:21) 
+-- CODE:
+c= input('qual sua idade?')
+
+if (c > 18):
+	cid= eleitor
+else:
+	c= nao_eleitor 
+print(cid)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if (c > 18):
+TypeError: '>' not supported between instances of 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 19:35:47) 
+-- CODE:
+c= int(input('qual sua idade?'))
+
+if (c > 18):
+	cid= eleitor
+else:
+	c= nao_eleitor 
+print(cid)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    c= nao_eleitor 
+NameError: name 'nao_eleitor' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 19:36:00) 
+-- CODE:
+c= int(input('qual sua idade?'))
+
+if (c > 18):
+	c= eleitor
+else:
+	c= nao_eleitor 
+print(cid)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    c= nao_eleitor 
+NameError: name 'nao_eleitor' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 19:36:08) 
+-- CODE:
+c= int(input('qual sua idade?'))
+
+if (c > 18):
+	c= eleitor
+else:
+	c= nao eleitor 
+print(cid)
+-- ERROR:
+File "XXXX", line 6
+    c= nao eleitor 
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 19:36:09) 
+-- CODE:
+c= int(input('qual sua idade?'))
+
+if (c > 18):
+	c= eleitor
+else:
+	c= nao eleitor 
+print(cid)
+-- ERROR:
+File "XXXX", line 6
+    c= nao eleitor 
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 19:36:35) 
+-- CODE:
+c= int(input('qual sua idade?'))
+
+if (c > 18):
+	c= "eleitor"
+else:
+	c= "nao_eleitor" 
+print(cid)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    print(cid)
+NameError: name 'cid' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 19:36:46) 
+-- CODE:
+c= int(input('qual sua idade?'))
+
+if (c > 18):
+	c= "eleitor"
+else:
+	c= "nao_eleitor" 
+print(c)
+-- OUTPUT:
+nao_eleitor
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-08 19:36:52) 
+-- CODE:
+c= int(input('qual sua idade?'))
+
+if (c > 18):
+	c= "eleitor"
+else:
+	c= "nao_eleitor" 
+print(c)
+-- EXECUTION TIME:
+0.138412
+-- TEST CASE 1:
+---- input:
+15
+---- correct output:
+nao_eleitor
+---- user output:
+nao_eleitor
+-- TEST CASE 2:
+---- input:
+21
+---- correct output:
+eleitor
+---- user output:
+eleitor
+-- TEST CASE 3:
+---- input:
+60
+---- correct output:
+eleitor
+---- user output:
+eleitor
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

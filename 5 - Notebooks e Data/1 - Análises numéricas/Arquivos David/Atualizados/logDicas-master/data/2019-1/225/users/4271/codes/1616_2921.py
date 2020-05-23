@@ -1,0 +1,6 @@
+precojogo1 = int(input("jogo1: "))
+precojogo2 = int(input("jogo2: "))
+totalJogo2 = precojogo2 - (precojogo2 * (desconto25 / 100))
+compras = (totalJogo2 + precojogo1) 
+total = (totalJogos2 + compras) 
+print(float(total))

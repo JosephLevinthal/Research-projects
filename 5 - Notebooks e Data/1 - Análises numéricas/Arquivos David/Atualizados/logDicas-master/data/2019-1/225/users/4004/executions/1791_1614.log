@@ -1,0 +1,167 @@
+== TEST (2019-05-29 14:27:50) 
+-- CODE:
+from numpy import*
+
+a = array(eval(input("vetor de nomes de alimentos: ")))
+q = array(eval(input("vetor de quantidades: ")))
+k = array([0.97,2.95,1.27,1.04,0.2])
+
+i = 0
+s = size(a)
+r = arange(s)
+
+while i < s:
+	if a[i] == "BANANA":
+		r[i] = k[0] * q[i]
+		i = i + 1
+	elif a[i] == "BIFE":
+		r[i] = k[1] * q[i]
+		i = i + 1
+	elif a[i] == "FEIJOADA":
+		r[i] = k[2] * q[i]
+		i = i + 1
+	elif a[i] == "OMELETE":
+		r[i] = k[3] * q[i]
+		i = i + 1
+	else:
+		r[i] = k[4] * q[i]
+		i = i + 1
+t = sum(r)
+print(t)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 14:28:30) 
+-- CODE:
+from numpy import*
+
+a = array(eval(input("vetor de nomes de alimentos: ")))
+q = array(eval(input("vetor de quantidades: ")))
+k = array([0.97,2.95,1.27,1.04,0.2])
+
+i = 0
+s = size(a)
+r = arange(s)
+
+while i < s:
+	if a[i] == "BANANA":
+		r[i] = k[0] * q[i]
+		i = i + 1
+	elif a[i] == "BIFE":
+		r[i] = k[1] * q[i]
+		i = i + 1
+	elif a[i] == "FEIJOADA":
+		r[i] = k[2] * q[i]
+		i = i + 1
+	elif a[i] == "OMELETE":
+		r[i] = k[3] * q[i]
+		i = i + 1
+	else:
+		r[i] = k[4] * q[i]
+		i = i + 1
+t = sum(r)
+print(round(t, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 14:30:49) 
+-- CODE:
+from numpy import*
+
+a = array(eval(input("vetor de nomes de alimentos: ")))
+q = array(eval(input("vetor de quantidades: ")))
+k = array([0.97,2.95,1.27,1.04,0.2])
+
+i = 0
+s = size(a)
+r = zeros(s, dtype=float)
+
+while i < s:
+	if a[i] == "BANANA":
+		r[i] = k[0] * q[i]
+		i = i + 1
+	elif a[i] == "BIFE":
+		r[i] = k[1] * q[i]
+		i = i + 1
+	elif a[i] == "FEIJOADA":
+		r[i] = k[2] * q[i]
+		i = i + 1
+	elif a[i] == "OMELETE":
+		r[i] = k[3] * q[i]
+		i = i + 1
+	else:
+		r[i] = k[4] * q[i]
+		i = i + 1
+t = sum(r)
+print(round(t, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 14:30:52) 
+-- CODE:
+from numpy import*
+
+a = array(eval(input("vetor de nomes de alimentos: ")))
+q = array(eval(input("vetor de quantidades: ")))
+k = array([0.97,2.95,1.27,1.04,0.2])
+
+i = 0
+s = size(a)
+r = zeros(s, dtype=float)
+
+while i < s:
+	if a[i] == "BANANA":
+		r[i] = k[0] * q[i]
+		i = i + 1
+	elif a[i] == "BIFE":
+		r[i] = k[1] * q[i]
+		i = i + 1
+	elif a[i] == "FEIJOADA":
+		r[i] = k[2] * q[i]
+		i = i + 1
+	elif a[i] == "OMELETE":
+		r[i] = k[3] * q[i]
+		i = i + 1
+	else:
+		r[i] = k[4] * q[i]
+		i = i + 1
+t = sum(r)
+print(round(t, 2))
+-- EXECUTION TIME:
+0.432478
+-- TEST CASE 1:
+---- input:
+["BANANA","FEIJOADA","TOMATE"]
+[300,50,60]
+---- correct output:
+366.5
+---- user output:
+366.5
+-- TEST CASE 2:
+---- input:
+["BANANA","FEIJOADA","OMELETE"]
+[150,100,60]
+---- correct output:
+334.9
+---- user output:
+334.9
+-- TEST CASE 3:
+---- input:
+["OMELETE","FEIJOADA","BIFE"]
+[100,130,140]
+---- correct output:
+682.1
+---- user output:
+682.1
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

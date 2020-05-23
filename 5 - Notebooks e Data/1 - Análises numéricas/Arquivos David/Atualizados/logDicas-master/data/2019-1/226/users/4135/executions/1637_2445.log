@@ -1,0 +1,118 @@
+== TEST (2019-04-13 00:24:32) 
+-- CODE:
+escala = input ("Digite a escala? (C/F):")
+temp = float (input("Digite o valor da temperatura:"))
+C = 5/9*(F-32)
+if (escala == "C"):
+	F = float (input("digite o valor de F:"))
+	print (round(C,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    C = 5/9*(F-32)
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 00:30:55) 
+-- CODE:
+escala = input ("Digite a escala? (C/F):")
+temp = float (input("Digite o valor da temperatura:"))
+C = 5/9*(temp-32)
+F = (9*temp+160)/5
+if (escala == "C"):
+	print (round(C,2))
+else:
+	print (round(F,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 00:33:11) 
+-- CODE:
+escala = input ("Digite a escala? (C/F):")
+temp = float (input("Digite o valor da temperatura:"))
+F = 5/9*(temp-32)
+C = (9*temp+160)/5
+if (escala == "C"):
+	print (round(C,2))
+else:
+	print (round(F,2))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-13 00:33:23) 
+-- CODE:
+escala = input ("Digite a escala? (C/F):")
+temp = float (input("Digite o valor da temperatura:"))
+F = 5/9*(temp-32)
+C = (9*temp+160)/5
+if (escala == "C"):
+	print (round(C,2))
+else:
+	print (round(F,2))
+-- EXECUTION TIME:
+0.196264
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-13 00:34:34) 
+-- CODE:
+escala = input ("Digite a escala? (C/F):")
+temp = float (input("Digite o valor da temperatura:"))
+C = 5/9*(temp-32)
+F = (9*temp+160)/5
+if (escala == "C"):
+	print (round(F,2))
+else:
+	print (round(C,2))
+-- EXECUTION TIME:
+0.135886
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

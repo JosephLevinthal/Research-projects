@@ -1,0 +1,8673 @@
+== TEST (2019-06-06 22:00:33) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[4]=b[4]+1
+	if(a[i]==6):
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=b[i]/size(a)*100
+print(round(b, 1))	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 22:02:17) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[4]=b[4]+1
+	if(a[i]==6):
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 22:03:12) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[4]=b[4]+1
+	if(a[i]==6):
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 22:06:07) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 22:06:23) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)	
+-- EXECUTION TIME:
+1.17517
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18  0  0  0 18 62]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0  4 64  0 32  0]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0 15 38  0 15 30]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 22:06:39) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)	
+-- EXECUTION TIME:
+1.03314
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18  0  0  0 18 62]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0  4 64  0 32  0]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0 15 38  0 15 30]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 22:08:08) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=b[i]/size(a)*100
+print(round(b, 1))	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 22:09:02) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 22:09:04) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)	
+-- EXECUTION TIME:
+1.1373
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18  0  0  0 18 62]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0  4 64  0 32  0]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+vetor: [ 0 15 38  0 15 30]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 22:14:35) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+c=""
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1+"."
+	elif(a[i]==3):
+		b[1]=	b[1]+1+"."
+	elif(a[i]==4):
+		b[2]=b[2]+1+"."
+	elif(a[i]==5):
+		b[4]=b[4]+1+"."
+	else:
+		b[5]=b[5]+1+"."
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 22:21:59) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	c=a[i]-2
+	b[c]=b[c]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 22:22:41) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	c=a[i]-2
+	b[c]=b[c]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)	
+-- EXECUTION TIME:
+1.1493
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18  0  0 18 25 37]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 4  8 16 20 20 32]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[15  7 23  7 15 30]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 22:22:57) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	c=a[i]-2
+	b[c]=b[c]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b+".")	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 22:23:08) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	c=a[i]-2
+	b[c]=b[c]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b+".")	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 22:24:18) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	c=a[i]-2
+	b[c]=b[c]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b+".")	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 22:24:25) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	c=a[i]-2
+	b[c]=b[c]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b+".")	
+-- EXECUTION TIME:
+1.12984
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1807/2566/main.py", line 9, in <module>
+    print(b+".")	
+TypeError: ufunc 'add' did not contain a loop with signature matching types dtype('<U21') dtype('<U21') dtype('<U21')
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 22:24:44) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	c=a[i]-2
+	b[c]=b[c]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100+".", 1)
+print(b)	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 22:25:22) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))"."
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	c=a[i]-2
+	b[c]=b[c]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)	
+-- ERROR:
+File "XXXX", line 2
+    a=array(eval(input()))"."
+                            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 22:26:32) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 22:27:13) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+1.29461
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18  0  0  0 18 62]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0  4 64  0 32  0]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0 15 38  0 15 30]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 22:29:04) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if a[i]==2:
+		b[0]=b[0]+1
+	elif a[i]==3:
+		b[1]=	b[1]+1
+	elif a[i]==4:
+		b[2]=b[2]+1
+	elif a[i]==5:
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 10:42:27) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(".",size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 10:43:23) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)=="."):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 10:43:41) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)="."):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+File "XXXX", line 15
+    for i in range(size(b)="."):
+                  ^
+SyntaxError: keyword can't be an expression
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 10:44:08) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range("."==size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 10:44:40) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(0".",size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+File "XXXX", line 15
+    for i in range(0".",size(b)):
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 10:44:49) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(0,".",size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 10:45:43) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b+".")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 10:46:26) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+c="."
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b+c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 10:47:20) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+c="."
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1+c
+	elif(a[i]==3):
+		b[1]=	b[1]+1+c
+	elif(a[i]==4):
+		b[2]=b[2]+1+c
+	elif(a[i]==5):
+		b[4]=b[4]+1+c
+	else:
+		b[5]=b[5]+1+c
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b+c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 10:51:46) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 11:30:59) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ",".")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 11:31:21) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))"."
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+File "XXXX", line 2
+    a=array(eval(input()))"."
+                            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 11:31:37) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")"."))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+File "XXXX", line 2
+    a=array(eval(input()"."))
+                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 11:31:52) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: "))),"."
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 11:32:35) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: "))),"."
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 11:33:40) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 11:34:24) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2,"."):
+		b[0]=b[0]+1
+	elif(a[i]==3,"."):
+		b[1]=	b[1]+1
+	elif(a[i]==4,"."):
+		b[2]=b[2]+1
+	elif(a[i]==5,"."):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 11:35:05) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int),"."
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-07 11:39:04) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: "))).split(".")
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:37:43) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: "))).split(".")
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:38:17) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:38:40) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+1.13702
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:39:53) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+b=zeros(6)	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+File "XXXX", line 16
+    b=zeros(6)	
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:40:01) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b=zeros(6)	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:40:50) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b=zeros(6, dtype=int)	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:41:52) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):	
+	b[i]=b[i]/size(a)*100
+print(round(b, 1))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:44:07) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(a)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=b[i]/size(a)*100
+print(round(b, 1))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:44:56) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(a)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100< 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:45:41) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100< 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:46:08) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:46:23) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+1.19861
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:47:29) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+print(b)		
+for i in range(size(b)):
+	b=zeros(6)
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:47:53) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b=zeros(6)
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:48:44) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b=zeros(6, dtype=int)
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:49:06) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:50:59) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	elif(a[i]==6)
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+File "XXXX", line 13
+    elif(a[i]==6)
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:51:42) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	elif(a[i]==6)
+		b[5]=b[5]+1
+	else:
+		b[6]=b[6]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+File "XXXX", line 13
+    elif(a[i]==6)
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:52:08) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	elif(a[i]==6):
+		b[5]=b[5]+1
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:53:15) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	elif(a[i]==6):
+		b[5]=b[5]+1
+	else:
+		b[6]=b[6]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:53:52) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:54:26) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+1.2044
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:55:56) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=b[i]/size(a)*100
+print(round(b, 1)
+-- ERROR:
+File "XXXX", line 19
+    
+                     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:57:58) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b, 1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:58:29) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:58:56) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+0.938103
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:59:09) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+2.68187
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:59:11) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+4.02221
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:59:11) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.7252
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:59:11) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+11.7411
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:59:11) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+14.3373
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:59:11) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+13.9978
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:59:11) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+14.6489
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:59:11) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+15.7009
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:59:22) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+5.4684
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:59:29) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+3.51881
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:59:32) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.17647
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:59:33) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+8.73846
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:59:34) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+9.29088
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:59:35) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+9.45424
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:59:44) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.7918
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:59:50) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.08256
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:59:52) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.10819
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:59:53) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.08382
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:59:54) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.36489
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 11:59:55) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.59021
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 11:59:57) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*0.100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:00:04) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.67111
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+vetor: [0.  0.  0.1 0.  0.  0. ]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:00:10) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.5851
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+vetor: [0. 0. 0. 0. 0. 0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:00:13) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.37593
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+vetor: [0.  0.  0.1 0.  0.  0. ]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 12:00:13) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:00:14) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.79596
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+vetor: [0.  0.  0.1 0.  0.  0. ]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:00:15) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.07576
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+vetor: [0.  0.  0.1 0.  0.  0. ]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:00:17) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.61636
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+vetor: [0.  0.  0.1 0.  0.  0. ]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+vetor: [0. 0. 0. 0. 0. 0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:00:26) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.00612
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+vetor: [18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:00:32) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.6803
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:00:34) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.46872
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:00:35) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.41758
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:00:36) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.01923
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:00:37) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.63736
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:00:47) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.48719
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:00:52) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.50628
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:00:55) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.59928
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 12:00:55) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(a)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:00:56) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.59805
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:00:57) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.70946
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:00:58) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.6179
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:01:08) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.69674
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+vetor:
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:01:14) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.10096
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:01:16) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.28825
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:01:18) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.02508
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:01:19) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.19243
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:01:20) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.17229
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 12:01:25) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(a)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:01:29) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.86248
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:01:35) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.29787
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:01:37) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.54455
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+vetor:
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:01:38) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.50608
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+vetor:
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:01:39) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.32881
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+vetor:
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:01:41) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.34937
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+vetor:
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:01:50) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.6769
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:01:56) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.73526
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:01:58) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.718
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:01:59) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.69555
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:02:00) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.78396
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:02:01) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.90031
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:02:10) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.85842
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:02:15) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+5.99633
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:02:18) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+5.95377
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:02:19) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.14661
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:02:20) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.39733
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:02:21) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.48625
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:02:30) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.77505
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:02:36) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.6433
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:02:38) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.23077
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:02:39) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.48399
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:02:41) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.65232
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:02:41) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.78664
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:02:51) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.79427
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:02:56) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.30719
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:02:58) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.41784
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:02:59) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.60078
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:03:00) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.48082
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:03:01) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.82626
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:03:09) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.23776
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:03:15) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+5.59556
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 12:03:16) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(a)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(a)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:03:17) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+5.678
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:03:19) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+5.78428
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:03:20) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+5.96692
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:03:21) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.03066
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+vetor:
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 12:03:27) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(a)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(a)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:03:31) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.90866
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:03:39) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.66454
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1807/2566/main.py", line 3, in <module>
+    b=zeros(6)
+MemoryError
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:03:43) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.8616
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+vetor:
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:03:44) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.45378
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+vetor:
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:03:45) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.87713
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+vetor:
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:03:53) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.24035
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+vetor:
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:03:56) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+9.05027
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:04:01) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+9.41684
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:04:04) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.5071
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:04:05) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.02082
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:04:06) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.00212
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 12:04:10) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(a)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:04:17) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.79313
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+vetor:
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:04:18) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.84396
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+vetor:
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:04:26) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.7315
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+vetor:
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:04:28) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.10602
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+vetor:
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:04:29) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.16856
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:04:30) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+8.267
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 12:04:32) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(a)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:04:41) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.60343
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+vetor:
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:04:51) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.49121
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+vetor:
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:04:53) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.19098
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+vetor:
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:04:54) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+8.00137
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+vetor:
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:04:55) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+9.35725
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:04:58) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+12.785
+-- ERROR:
+Killed
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:05:03) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+8.18945
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:05:11) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.17051
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:05:13) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.02387
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:05:15) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.00518
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:05:16) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.19135
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:05:16) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+6.66127
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:05:17) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+7.26046
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+vetor:
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:05:21) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+4.33497
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:05:22) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1
+	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+2.07822
+-- ERROR:
+sh: 1: cannot open /home/codebench/codes/1807/2566/cbtemp.txt: No such file
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:05:25) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(a)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+2.28996
+-- ERROR:
+sh: 1: cannot open /home/codebench/codes/1807/2566/cbtemp.txt: No such file
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 12:06:24) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 12:06:59) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+1.13925
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.   0.  18.8 62.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64.  0. 32.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5  0.  15.4 30.8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 12:07:07) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1	
+for i in range(size(a)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 12:07:24) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1	
+for i in range(size(a)):
+	b[i]=round(b[i]/size(b)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 12:08:01) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 12:08:13) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[4]=b[4]+1
+	else:
+		b[5]=b[5]+1	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 12:16:20) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[4]=b[4]+1
+	if(a[i]==6):
+		b[5]=b[5]+1	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 12:47:08) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in range(size(a)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[4]=b[4]+1
+	if(a[i]==6):
+		b[5]=b[5]+1	
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 12:48:38) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in range(size(a)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[4]=b[4]+1
+	if(a[i]==6):
+		b[5]=b[5]+1	
+		
+c=zeros(6, dtype=int)		
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 12:48:48) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in range(size(a)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[4]=b[4]+1
+	if(a[i]==6):
+		b[5]=b[5]+1	
+		
+b=zeros(6, dtype=int)		
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 12:49:26) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[4]=b[4]+1
+	if(a[i]==6):
+		b[5]=b[5]+1	
+		
+b=zeros(6)		
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 13:08:06) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[4]=b[4]+1
+	if(a[i]==6):
+		b[5]=b[5]+1	
+		
+b=zeros(6)		
+for i in range(size(b)):
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 13:09:12) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[4]=b[4]+1
+	if(a[i]==6):
+		b[5]=b[5]+1	
+				
+for i in range(size(b)):
+b=zeros(6)	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+File "XXXX", line 17
+    b=zeros(6)	
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 13:09:22) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[4]=b[4]+1
+	if(a[i]==6):
+		b[5]=b[5]+1	
+				
+for i in range(size(b)):
+	b=zeros(6)	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 13:10:49) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[4]=b[4]+1
+	if(a[i]==6):
+		b[5]=b[5]+1	
+		
+b=zeros(6)				
+for i in range(size(a)):	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 13:50:12) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[3]=b[3]+1
+	if(a[i]==6):
+		b[4]=b[4]+1	
+	if(a[i]==7)	:
+		b[5]==b[5]+1
+for i in range(size(b)):	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 13:52:19) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[3]=b[3]+1
+	if(a[i]==6):
+		b[4]=b[4]+1	
+	if(a[i]==7)	:
+		b[5]==b[5]+1
+
+b=zeros(6)		
+for i in range(size(b)):	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 13:52:55) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[3]=b[3]+1
+	if(a[i]==6):
+		b[4]=b[4]+1	
+	if(a[i]==7)	:
+		b[5]==b[5]+1		
+for i in range(size(b)):	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 13:54:35) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[3]=b[3]+1
+	if(a[i]==6):
+		b[4]=b[4]+1	
+	if(a[i]==7)	:
+		b[5]==b[5]+1		
+for i in range(size(a)):	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 13:55:21) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[3]=b[3]+1
+	if(a[i]==6):
+		b[4]=b[4]+1	
+	if(a[i]==7)	:
+		b[5]==b[5]+1		
+for i in range(size(a)):	
+	b[i]=b[i]/size(a)*100
+print(round(b, 1)
+-- ERROR:
+File "XXXX", line 20
+    
+                     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 14:01:42) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1		
+for i in range(size(b)):	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 14:02:46) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtyper=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1		
+for i in range(size(b)):	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 14:06:27) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1		
+for i in range(size(b)):	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 14:06:43) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1		
+for i in range(size(b)):	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- EXECUTION TIME:
+0.993445
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.  18.8 62.5  0. ]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 0.  4. 64. 32.  0.  0.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[ 0.  15.4 38.5 15.4 30.8  0. ]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 14:07:01) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1		
+for i in range(size(b)):	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 21:09:40) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1
+for i in range(size(b)):	
+	b[i]=round(b[i]/size(a)*100, 1)
+	print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 21:11:47) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1
+b=zeros(6)
+print(b)
+for i in range(size(b)):	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 21:12:34) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1
+b=zeros(6)
+for i in range(size(b)):	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 21:13:27) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1
+b=zeros(6)
+for i in range(size(b)):	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 21:13:49) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1
+for i in range(size(b)):	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 21:24:44) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in range(size(b)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1
+for i in a:	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 21:25:38) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in range(size(b)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1
+for i in range(size(a)):	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 21:26:25) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in range(size(a)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1
+for i in range(size(b)):	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 21:27:39) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in range(size(a)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1
+b=zeros(6, dtype=int)		
+for i in range(size(b)):	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 21:28:19) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1		
+for i in range(size(b)):	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 21:28:47) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1		
+for i in range(size(a)):	
+	b[i]=round(b[i]/size(a)*100, 1)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 21:34:05) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1
+c=zeros(6)		
+for i in range(size(c)):	
+	c[i]=round(c[i]/size(a)*100, 1)
+print(c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 21:34:31) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1
+c=zeros(6)		
+for i in range(size(c)):	
+	c[i]=round(c[i]/size(a)*100, 1)
+		print(c)
+-- ERROR:
+File "XXXX", line 20
+    print(c)
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 21:34:36) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1
+c=zeros(6)		
+for i in range(size(c)):	
+	c[i]=round(c[i]/size(a)*100, 1)
+	print(c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-08 21:35:11) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in a:
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1
+print(b)		
+c=zeros(6)		
+for i in range(size(c)):	
+	c[i]=round(c[i]/size(a)*100, 1)
+	print(c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 21:17:41) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1
+c=zeros(6)					
+for i in range(size(c)):	
+	c[i]=round(b[i]/size(a)*100, 1)
+print(c)
+-- ERROR:
+File "XXXX", line 4
+    for i in range(size(a):
+                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 21:18:41) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1
+c=zeros(6)					
+for i in range(size(c)):	
+	c[i]=round(b[i]/size(a)*100, 1)
+print(c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 21:21:20) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	elif(a[i]==3):
+		b[1]=	b[1]+1
+	elif(a[i]==4):
+		b[2]=b[2]+1
+	elif(a[i]==5):
+		b[3]=b[3]+1
+	elif(a[i]==6):
+		b[4]=b[4]+1	
+	else:
+		b[5]==b[5]+1
+c=zeros(6)					
+for i in range(size(c)):	
+	c[i]=round((b[i]*100)/size(a), 1)
+print(c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 21:23:17) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[3]=b[3]+1
+	if(a[i]==6):
+		b[4]=b[4]+1	
+	if(a[i]==7):
+		b[5]==b[5]+1
+c=zeros(6)					
+for i in range(size(c)):	
+	c[i]=round((b[i]*100)/size(a), 1)
+print(c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 21:25:55) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[3]=b[3]+1
+	if(a[i]==6):
+		b[4]=b[4]+1	
+	if(a[i]==7):
+		b[5]==b[5]+1
+c=zeros(6)					
+for i in range(size(c)):	
+	c[i]=round((b[i]*100)/size(a),1)
+print(c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 21:28:03) 
+-- CODE:
+from numpy import*
+v=array(eval(input("vetor: ")))
+a=zeros(6, dtype=int)
+for i in range(size(v)):
+	if(v[i]==2):
+		a[0]=a[0]+1
+	if(v[i]==3):
+		a[1]=	a[1]+1
+	if(v[i]==4):
+		a[2]=a[2]+1
+	if(v[i]==5):
+		a[3]=a[3]+1
+	if(v[i]==6):
+		a[4]=a[4]+1	
+	if(v[i]==7):
+		a[5]=a[5]+1
+c=zeros(6)					
+for i in range(size(c)):	
+	c[i]=round((b[i]*100)/size(a),1)
+print(c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-09 21:30:07) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[3]=b[3]+1
+	if(a[i]==6):
+		b[4]=b[4]+1	
+	if(a[i]==7):
+		b[5]=b[5]+1
+c=zeros(6)					
+for i in range(size(c)):	
+	c[i]=round((b[i]*100)/size(a),1)
+print(c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-09 21:30:31) 
+-- CODE:
+from numpy import*
+a=array(eval(input("vetor: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=	b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[3]=b[3]+1
+	if(a[i]==6):
+		b[4]=b[4]+1	
+	if(a[i]==7):
+		b[5]=b[5]+1
+c=zeros(6)					
+for i in range(size(c)):	
+	c[i]=round((b[i]*100)/size(a),1)
+print(c)
+-- EXECUTION TIME:
+1.18411
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.  18.8 25.  37.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 4.  8. 16. 20. 20. 32.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[15.4  7.7 23.1  7.7 15.4 30.8]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:35:22) 
+-- CODE:
+from numpy import*
+a=array(eval(input("dia da semana: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[3]=b[3]+1
+	if(a[i]==6):
+		b[4]=b[4]+1
+	if(a[i]==6):
+		b[5]=b[5]+1
+c=zeros(6)	
+for i in range(size(b)):
+	c[i]=round((b[i]*100)/size(a), 1)
+print(c)	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:35:51) 
+-- CODE:
+from numpy import*
+a=array(eval(input("dia da semana: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[3]=b[3]+1
+	if(a[i]==6):
+		b[4]=b[4]+1
+	if(a[i]==6):
+		b[5]=b[5]+1
+c=zeros(6)	
+for i in range(size(c)):
+	c[i]=round((b[i]*100)/size(a), 1)
+print(c)	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:36:46) 
+-- CODE:
+from numpy import*
+a=array(eval(input("dia da semana: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[3]=b[3]+1
+	if(a[i]==6):
+		b[4]=b[4]+1
+	if(a[i]==6):
+		b[5]=b[5]+1
+c=zeros(6)	
+for i in range(size(b)):
+	c[i]=round(((b[i]*100)/size(a)), 1)
+print(c)	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:38:19) 
+-- CODE:
+from numpy import*
+a=array(eval(input("dia da semana: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[3]=b[3]+1
+	if(a[i]==6):
+		b[4]=b[4]+1
+	if(a[i]==6):
+		b[5]=b[5]+1
+	if(a[i]==7)	
+		b[6]=b[6]+1	
+c=zeros(6)	
+for i in range(size(b)):
+	c[i]=round(((b[i]*100)/size(a)), 1)
+print(c)	
+
+-- ERROR:
+File "XXXX", line 17
+    if(a[i]==7)	
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:38:58) 
+-- CODE:
+from numpy import*
+a=array(eval(input("dia da semana: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[3]=b[3]+1
+	if(a[i]==6):
+		b[4]=b[4]+1
+	if(a[i]==7):
+		b[5]=b[5]+1
+c=zeros(6)	
+for i in range(size(b)):
+	c[i]=round(((b[i]*100)/size(a)), 1)
+print(c)	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 16:39:10) 
+-- CODE:
+from numpy import*
+a=array(eval(input("dia da semana: ")))
+b=zeros(6, dtype=int)
+for i in range(size(a)):
+	if(a[i]==2):
+		b[0]=b[0]+1
+	if(a[i]==3):
+		b[1]=b[1]+1
+	if(a[i]==4):
+		b[2]=b[2]+1
+	if(a[i]==5):
+		b[3]=b[3]+1
+	if(a[i]==6):
+		b[4]=b[4]+1
+	if(a[i]==7):
+		b[5]=b[5]+1
+c=zeros(6)	
+for i in range(size(b)):
+	c[i]=round(((b[i]*100)/size(a)), 1)
+print(c)	
+
+-- EXECUTION TIME:
+1.12725
+-- TEST CASE 1:
+---- input:
+[2,2,2,5,5,5,6,6,6,6,7,7,7,7,7,7]
+---- correct output:
+[18.8 0. 0. 18.8 25. 37.5]
+---- user output:
+[18.8  0.   0.  18.8 25.  37.5]
+-- TEST CASE 2:
+---- input:
+[2,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,7,7,7,7,7,7,7,7]
+---- correct output:
+[ 4. 8. 16. 20. 20. 32.]
+---- user output:
+[ 4.  8. 16. 20. 20. 32.]
+-- TEST CASE 3:
+---- input:
+[2,2,3,4,4,4,5,6,6,7,7,7,7]
+---- correct output:
+[15.4 7.7 23.1 7.7 15.4 30.8]
+---- user output:
+[15.4  7.7 23.1  7.7 15.4 30.8]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

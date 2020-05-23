@@ -1,0 +1,194 @@
+== TEST (2019-06-12 14:08:48) 
+-- CODE:
+from numpy import*
+x = array(eval(input("turmas: ")))
+
+t = 0
+j = 0
+for i in x:
+	if i % 5 == 0:
+		t = t + 1
+	else:
+		t = t
+y = zeros(t, dtype=int)
+for i in x:
+	if i % 5 == 0:
+		z[i] = j
+		j = j + 1
+	else:
+		j = j
+print(z)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:09:11) 
+-- CODE:
+from numpy import*
+x = array(eval(input("turmas: ")))
+
+t = 0
+j = 0
+for i in x:
+	if i % 5 == 0:
+		t = t + 1
+	else:
+		t = t
+y = zeros(t, dtype=int)
+for i in x:
+	if i % 5 == 0:
+		y[i] = j
+		j = j + 1
+	else:
+		j = j
+print(z)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:10:24) 
+-- CODE:
+from numpy import*
+x = array(eval(input("turmas: ")))
+
+t = 0
+j = 0
+for i in x:
+	if i % 5 == 0:
+		t = t + 1
+	else:
+		t = t
+y = zeros(t, dtype=int)
+for i in x:
+	if i % 5 == 0:
+		y[i] = j
+		j = j + 1
+	else:
+		j = j
+print(y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:16:21) 
+-- CODE:
+from numpy import*
+x = array(eval(input("turmas: ")))
+
+t = 0
+j = 0
+k = 0
+
+for i in x:
+	if i % 5 == 0:
+		t = t + 1
+	else:
+		t = t
+y = zeros(t, dtype=int)
+for i in x:
+	if i % 5 == 0:
+		y[k] = j
+		j = j + 1
+		k = k + 1
+	else:
+		j = j + 1
+print(y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 14:16:45) 
+-- CODE:
+from numpy import*
+x = array(eval(input("turmas: ")))
+
+t = 0
+j = 0
+k = 0
+
+for i in x:
+	if i % 5 == 0:
+		t = t + 1
+	else:
+		t = t
+print(t)
+y = zeros(t, dtype=int)
+for i in x:
+	if i % 5 == 0:
+		y[k] = j
+		j = j + 1
+		k = k + 1
+	else:
+		j = j + 1
+print(y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 14:17:01) 
+-- CODE:
+from numpy import*
+x = array(eval(input("turmas: ")))
+
+t = 0
+j = 0
+k = 0
+
+for i in x:
+	if i % 5 == 0:
+		t = t + 1
+	else:
+		t = t
+print(t)
+y = zeros(t, dtype=int)
+for i in x:
+	if i % 5 == 0:
+		y[k] = j
+		j = j + 1
+		k = k + 1
+	else:
+		j = j + 1
+print(y)
+-- EXECUTION TIME:
+1.29675
+-- TEST CASE 1:
+---- input:
+[10,20,31,1,13,15,20,33,36,63,25,10,2]
+---- correct output:
+6
+[ 0  1  5  6 10 11]
+---- user output:
+6
+[ 0  1  5  6 10 11]
+-- TEST CASE 2:
+---- input:
+[10,20,31,15,36,63,25,10,2]
+---- correct output:
+5
+[0 1 3 6 7]
+
+---- user output:
+5
+[0 1 3 6 7]
+-- TEST CASE 3:
+---- input:
+[10,20,31,15,36,63,26,10,2]
+---- correct output:
+4
+[0 1 3 7]
+---- user output:
+4
+[0 1 3 7]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

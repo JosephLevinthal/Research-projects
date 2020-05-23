@@ -1,0 +1,6 @@
+a = float(input("a:"))
+b = float(input("b:"))
+c = float(input("c:"))
+d = float(input("d:"))
+x = ((a*1)+(b*2)+(c*3)+(d*4))/(10)
+print(round(x,2))

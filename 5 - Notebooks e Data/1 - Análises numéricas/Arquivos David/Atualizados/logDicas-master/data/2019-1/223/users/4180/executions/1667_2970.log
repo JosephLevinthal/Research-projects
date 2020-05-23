@@ -1,0 +1,645 @@
+== TEST (2019-04-16 16:43:01) 
+-- CODE:
+from math import*
+t = float(input( "Tempo de Investimento: " ))
+Qf = float(input("Valor final do invest: "))
+Qi = float(input("Valor inicial do ivest: "))
+i = sqrt(Qf/Qi**(1/t))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    Qf = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:43:11) 
+-- CODE:
+from math import*
+t = float(input( "Tempo de Investimento: " ))
+Qf = float(input("Valor final do invest: "))
+Qi = float(input("Valor inicial do ivest: "))
+i = sqrt(Qf/Qi**(1/t))-1
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    Qf = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:45:01) 
+-- CODE:
+from math import*
+t = float(input( "Tempo de Investimento: " ))
+Qf = float(input("Valor final do invest: "))
+Qi = float(input("Valor inicial do ivest: "))
+i = sqrt(Qf/Qi**(1/t))-1
+
+if ( i <= 0.01):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    Qf = float(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:46:02) 
+-- CODE:
+from math import*
+t = float(input( "Tempo de Investimento: " ))
+Qf = 1.042.000
+Qi =
+i = sqrt(Qf/Qi**(1/t))-1
+
+if ( i <= 0.01):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- ERROR:
+File "XXXX", line 3
+    Qf = 1.042.000
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:46:52) 
+-- CODE:
+from math import*
+t = float(input( "Tempo de Investimento: " ))
+Qf = (1500*t)
+Qi =
+i = sqrt(Qf/Qi**(1/t))-1
+
+if ( i <= 0.01):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- ERROR:
+File "XXXX", line 4
+    Qi =
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:47:06) 
+-- CODE:
+from math import*
+t = float(input( "Tempo de Investimento: " ))
+Qf = (1500*t)
+Qi = 1500
+i = sqrt(Qf/Qi**(1/t))-1
+
+if ( i <= 0.01):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- OUTPUT:
+Irreal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:47:24) 
+-- CODE:
+from math import*
+t = float(input( "Tempo de Investimento: " ))
+Qf = (1500*t)
+Qi = 1500
+i = sqrt((Qf/Qi**(1/t))-1
+
+if ( i <= 0.01):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- ERROR:
+File "XXXX", line 7
+    if ( i <= 0.01):
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:48:00) 
+-- CODE:
+
+t = float(input( "Tempo de Investimento: " ))
+Qf = (1500*t)
+Qi = 1500
+
+from math import* 
+i = sqrt(Qf/Qi**(1/t))-1
+
+if ( i <= 0.01):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- OUTPUT:
+Irreal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:49:23) 
+-- CODE:
+
+t = float(input( "Tempo de Investimento: " ))
+Qf = (1500*t)
+Qi = 1500
+
+from math import* 
+i = sqrt(Qf/Qi**(1/t))-1
+
+if ( i <= 0.01):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- OUTPUT:
+Irreal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:49:52) 
+-- CODE:
+
+t = float(input( "Tempo de Investimento: " ))
+Qf = 1500*t
+Qi = 1500
+
+from math import* 
+i = sqrt(Qf/Qi**(1/t))-1
+
+if ( i <= 0.01):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- OUTPUT:
+Irreal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 16:49:54) 
+-- CODE:
+
+t = float(input( "Tempo de Investimento: " ))
+Qf = 1500*t
+Qi = 1500
+
+from math import* 
+i = sqrt(Qf/Qi**(1/t))-1
+
+if ( i <= 0.01):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- EXECUTION TIME:
+0.196263
+-- TEST CASE 1:
+---- input:
+658
+---- correct output:
+0.00999
+Real
+---- user output:
+Irreal
+-- TEST CASE 2:
+---- input:
+565
+---- correct output:
+0.01165
+Irreal
+---- user output:
+Irreal
+-- TEST CASE 3:
+---- input:
+240
+---- correct output:
+0.02764
+Irreal
+---- user output:
+Irreal
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:49:54) 
+-- CODE:
+
+t = float(input( "Tempo de Investimento: " ))
+Qf = 1500*t
+Qi = 1500
+
+from math import* 
+i = sqrt(Qf/Qi**(1/t))-1
+
+if ( i <= 0.01):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- OUTPUT:
+Irreal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:50:10) 
+-- CODE:
+
+t = float(input( "Tempo de Investimento: " ))
+Qf = 1500*t
+Qi = 1500
+
+from math import* 
+i = sqrt(Qf/Qi**(1/t))-1
+
+if ( i <= (0.01)):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- OUTPUT:
+Irreal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:50:11) 
+-- CODE:
+
+t = float(input( "Tempo de Investimento: " ))
+Qf = 1500*t
+Qi = 1500
+
+from math import* 
+i = sqrt(Qf/Qi**(1/t))-1
+
+if ( i <= (0.01)):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- OUTPUT:
+Irreal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 16:50:11) 
+-- CODE:
+
+t = float(input( "Tempo de Investimento: " ))
+Qf = 1500*t
+Qi = 1500
+
+from math import* 
+i = sqrt(Qf/Qi**(1/t))-1
+
+if ( i <= (0.01)):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- EXECUTION TIME:
+0.1842
+-- TEST CASE 1:
+---- input:
+658
+---- correct output:
+0.00999
+Real
+---- user output:
+Irreal
+-- TEST CASE 2:
+---- input:
+565
+---- correct output:
+0.01165
+Irreal
+---- user output:
+Irreal
+-- TEST CASE 3:
+---- input:
+240
+---- correct output:
+0.02764
+Irreal
+---- user output:
+Tempo de Investimento: Irreal
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 16:50:21) 
+-- CODE:
+
+t = float(input( "Tempo de Investimento: " ))
+Qf = 1500*t
+Qi = 1500
+
+from math import* 
+
+i = sqrt(Qf/Qi**(1/t))-1
+
+if ( i <= (0.01)):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- EXECUTION TIME:
+0.135498
+-- TEST CASE 1:
+---- input:
+658
+---- correct output:
+0.00999
+Real
+---- user output:
+Irreal
+-- TEST CASE 2:
+---- input:
+565
+---- correct output:
+0.01165
+Irreal
+---- user output:
+Irreal
+-- TEST CASE 3:
+---- input:
+240
+---- correct output:
+0.02764
+Irreal
+---- user output:
+Irreal
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:50:22) 
+-- CODE:
+
+t = float(input( "Tempo de Investimento: " ))
+Qf = 1500*t
+Qi = 1500
+
+from math import* 
+
+i = sqrt(Qf/Qi**(1/t))-1
+
+if ( i <= (0.01)):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- OUTPUT:
+Irreal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:50:49) 
+-- CODE:
+
+t = float(input( "Tempo de Investimento: " ))
+Qf = 1500*t
+Qi = 1500
+
+from math import* 
+
+i = (sqrt(Qf/Qi**(1/t))-1)
+
+if ( i <= (0.01)):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- OUTPUT:
+Irreal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 16:50:51) 
+-- CODE:
+
+t = float(input( "Tempo de Investimento: " ))
+Qf = 1500*t
+Qi = 1500
+
+from math import* 
+
+i = (sqrt(Qf/Qi**(1/t))-1)
+
+if ( i <= (0.01)):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- EXECUTION TIME:
+0.130989
+-- TEST CASE 1:
+---- input:
+658
+---- correct output:
+0.00999
+Real
+---- user output:
+Irreal
+-- TEST CASE 2:
+---- input:
+565
+---- correct output:
+0.01165
+Irreal
+---- user output:
+Irreal
+-- TEST CASE 3:
+---- input:
+240
+---- correct output:
+0.02764
+Irreal
+---- user output:
+Irreal
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:50:51) 
+-- CODE:
+
+t = float(input( "Tempo de Investimento: " ))
+Qf = 1500*t
+Qi = 1500
+
+from math import* 
+
+i = (sqrt(Qf/Qi**(1/t))-1)
+
+if ( i <= (0.01)):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- OUTPUT:
+Irreal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:50:59) 
+-- CODE:
+
+t = float(input( "Tempo de Investimento: " ))
+Qf = 1500*t
+Qi = 1500
+
+from math import* 
+
+i = (sqrt(Qf/Qi**(1/t))-1)
+
+if ( i <= (0.01)):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- OUTPUT:
+Irreal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:51:43) 
+-- CODE:
+
+t = float(input( "Tempo de Investimento: " ))
+Qf = 1500*t
+Qi = 1500
+
+from math import* 
+
+i = (sqrt(Qf/Qi**(1/t))-1)
+
+if ( i <= (0.01)):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- OUTPUT:
+Irreal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 16:51:59) 
+-- CODE:
+
+t = float(input( "Tempo de Investimento: " ))
+Qf = 1500*t
+Qi = 1500
+
+from math import* 
+
+i = (sqrt(Qf/Qi**(1/t))-1)
+
+if ( i <= (0.01)):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- EXECUTION TIME:
+0.128504
+-- TEST CASE 1:
+---- input:
+658
+---- correct output:
+0.00999
+Real
+---- user output:
+Irreal
+-- TEST CASE 2:
+---- input:
+565
+---- correct output:
+0.01165
+Irreal
+---- user output:
+Irreal
+-- TEST CASE 3:
+---- input:
+240
+---- correct output:
+0.02764
+Irreal
+---- user output:
+Irreal
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:52:11) 
+-- CODE:
+
+t = float(input( "Tempo de Investimento: " ))
+Qf = 1500*t
+Qi = 1500
+
+from math import * 
+
+i = (sqrt(Qf/Qi**(1/t))-1)
+
+if ( i <= (0.01)):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- OUTPUT:
+Irreal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:55:00) 
+-- CODE:
+
+t = float(input( "Tempo de Investimento: " ))
+Qf = 1500*t
+Qi = 1500
+
+from math import * 
+
+i = (sqrt(Qf/Qi**1/t)-1)
+
+if ( i <= (0.01)):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- OUTPUT:
+Real
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 15:57:08) 
+-- CODE:
+t = float(input( "Tempo de Investimento: " ))
+Qf = 1500*t
+Qi = 1500
+
+from math import * 
+
+i = (sqrt(Qf/Qi**1/t)-1)
+
+if ( i <= (0.01)):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- OUTPUT:
+Real
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 15:23:51) 
+-- CODE:
+t = float(input( "Tempo de Investimento: " ))
+Qf = 1500*t
+Qi = 1500
+
+from math import * 
+
+i = (sqrt(Qf/Qi**1/t)-1)
+
+if ( i <= (0.01)):
+	print("Real")
+	
+else:
+	print("Irreal")
+
+-- OUTPUT:
+Real
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

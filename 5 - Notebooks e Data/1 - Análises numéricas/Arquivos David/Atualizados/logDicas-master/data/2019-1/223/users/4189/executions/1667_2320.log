@@ -1,0 +1,788 @@
+== TEST (2019-04-16 16:08:00) 
+-- CODE:
+bruxo input("HARRY,RONY:")
+V = esp/temp
+if(bruxo=="HARRY"):
+	esp=2,9994
+	temp=8,789
+	print(V)
+else:
+	esp=1,674
+	temp=10.789
+	
+	
+-- ERROR:
+File "XXXX", line 1
+    bruxo input()
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:08:12) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+V = esp/temp
+if(bruxo=="HARRY"):
+	esp=2,9994
+	temp=8,789
+	print(V)
+else:
+	esp=1,674
+	temp=10.789
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    V = esp/temp
+NameError: name 'esp' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:08:46) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+V = (esp)/temp
+if(bruxo=="HARRY"):
+	esp=2,9994
+	temp=8,789
+	print(V)
+else:
+	esp=1,674
+	temp=10.789
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    V = (esp)/temp
+NameError: name 'esp' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:09:48) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	esp=2,9994
+	temp=8,789
+	print(v=esp/temp)
+else:
+	esp=1,674
+	temp=10.789
+	print(v=esp/temp)
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(v=esp/temp)
+TypeError: unsupported operand type(s) for /: 'tuple' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:10:12) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	esp=2,9994
+	temp=8,789
+	print(esp/temp)
+else:
+	esp=1,674
+	temp=10.789
+	print(esp/temp)
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(esp/temp)
+TypeError: unsupported operand type(s) for /: 'tuple' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:10:36) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	esp=2,9994
+	temp=8,789
+	print((esp)/temp)
+else:
+	esp=1,674
+	temp=10.789
+	print((esp)/temp)
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print((esp)/temp)
+TypeError: unsupported operand type(s) for /: 'tuple' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:11:56) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	a = esp / temp
+	esp=2,9994
+	temp=8,789
+	print(a)
+else:
+	a = esp / temp
+	esp=1,674
+	temp=10.789
+	print(a)
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    a = esp / temp
+NameError: name 'esp' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:12:25) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	a = (esp / temp)
+	esp=2,9994
+	temp=8,789
+	print(a)
+else:
+	a = (esp / temp)
+	esp=1,674
+	temp=10.789
+	print(a)
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    a = (esp / temp)
+NameError: name 'esp' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:13:30) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	a =(esp/temp)
+	esp=2,9994
+	temp=8,789
+	print(a)
+else:
+	a =(esp/temp)
+	esp=1,674
+	temp=10.789
+	print(a)
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    a =(esp/temp)
+NameError: name 'esp' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:14:14) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	esp=2,9994
+	temp=8,789
+	print(esp/temp)
+else:
+	
+	esp=1,674
+	temp=10.789
+	print(esp/temp)
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(esp/temp)
+TypeError: unsupported operand type(s) for /: 'tuple' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:15:13) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	esp=2,9994
+	temp=8,789
+	print(esp/temp)
+else:
+	
+	esp=1,674
+	temp=10,789
+	print(esp/temp)
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(esp/temp)
+TypeError: unsupported operand type(s) for /: 'tuple' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:15:38) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	esp=2,9994
+	temp=8,789
+	print(esp/temp)
+else:
+	esp=1,674
+	temp=10,789
+	print(esp/temp)
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(esp/temp)
+TypeError: unsupported operand type(s) for /: 'tuple' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:15:52) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	esp=2,9994
+	temp=8,789
+print(esp/temp)
+else:
+	esp=1,674
+	temp=10,789
+print(esp/temp)
+	
+	
+-- ERROR:
+File "XXXX", line 6
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:16:59) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+v = esp / temp
+if(bruxo=="HARRY"):
+	esp=2,9994
+	temp=8,789
+   print(v)
+else:
+	esp=1,674
+	temp=10,789
+   print(v)
+	
+	
+-- ERROR:
+File "XXXX", line 6
+    print(v)
+           ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 16:17:32) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+v = esp / temp
+if(bruxo=="HARRY"):
+	esp=2,9994
+	temp=8,789
+   print(v)
+else:
+	esp=1,674
+	temp=10,789
+   print(v)
+	
+	
+-- EXECUTION TIME:
+0.17341
+-- ERROR:
+  File "/home/codebench/codes/1667/2320/main.py", line 6
+    print(v)
+           ^
+IndentationError: unindent does not match any outer indentation level
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:19:07) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	esp=2,9994
+	temp=8,789
+   calculo=esp/temp
+else:
+	esp=1,674
+	temp=10,789
+   calculo=esp/temp
+print(calculo)
+	 
+	
+-- ERROR:
+File "XXXX", line 5
+    calculo=esp/temp
+                   ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:19:28) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	esp=2,9994
+	temp=8,789
+   calculo=(esp/temp)
+else:
+	esp=1,674
+	temp=10,789
+   calculo=(esp/temp)
+print(calculo)
+	 
+	
+-- ERROR:
+File "XXXX", line 5
+    calculo=(esp/temp)
+                     ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:20:10) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	esp=2,9994
+	temp=8,789
+   calculo=(m/s)
+else:
+	m=1,674
+	s=10,789
+   calculo=(m/s)
+print(calculo)
+	 
+	
+-- ERROR:
+File "XXXX", line 5
+    calculo=(m/s)
+                ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:20:29) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	esp=2,9994
+	temp=8,789
+   v=(m/s)
+else:
+	m=1,674
+	s=10,789
+   v=(m/s)
+print(v)
+	 
+	
+-- ERROR:
+File "XXXX", line 5
+    v=(m/s)
+          ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:20:36) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	esp=2,9994
+	temp=8,789
+   v = (m/s)
+else:
+	m=1,674
+	s=10,789
+   v=(m/s)
+print(v)
+	 
+	
+-- ERROR:
+File "XXXX", line 5
+    v = (m/s)
+            ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:21:23) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	m=2,9994
+	s=8,789
+   print(m/s)
+else:
+	m=1,674
+	s=10,789
+   print(m/s)
+
+	 
+	
+-- ERROR:
+File "XXXX", line 5
+    print(m/s)
+             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:21:24) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	m=2,9994
+	s=8,789
+   print(m/s)
+else:
+	m=1,674
+	s=10,789
+   print(m/s)
+
+	 
+	
+-- ERROR:
+File "XXXX", line 5
+    print(m/s)
+             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:21:25) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	m=2,9994
+	s=8,789
+   print(m/s)
+else:
+	m=1,674
+	s=10,789
+   print(m/s)
+
+	 
+	
+-- ERROR:
+File "XXXX", line 5
+    print(m/s)
+             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:23:57) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	m = 2,9994
+	s = 8,789
+   print(m/s)
+else:
+	m=1,674
+	s=10,789
+   print(m/s)
+
+	 
+	
+-- ERROR:
+File "XXXX", line 5
+    print(m/s)
+             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:25:41) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	m = 2.9994
+	s = 8.789
+   print(m/s)
+else:
+	m=1.674
+	s=10.789
+   print(m/s)
+
+	 
+	
+-- ERROR:
+File "XXXX", line 5
+    print(m/s)
+             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:25:56) 
+-- CODE:
+bruxo=input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	m = 2.9994
+	s = 8.789
+   print (m/s)
+else:
+	m=1.674
+	s=10.789
+   print (m/s)
+
+	 
+	
+-- ERROR:
+File "XXXX", line 5
+    print (m/s)
+              ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:26:10) 
+-- CODE:
+bruxo = input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	m = 2.9994
+	s = 8.789
+   print (m/s)
+else:
+	m=1.674
+	s=10.789
+   print (m/s)
+
+	 
+	
+-- ERROR:
+File "XXXX", line 5
+    print (m/s)
+              ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:26:57) 
+-- CODE:
+bruxo = input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	m = 2.9994
+	s = 8.789
+   print(s/m)
+else:
+	m=1.674
+	s=10.789
+   print(s/m)
+
+	 
+	
+-- ERROR:
+File "XXXX", line 5
+    print(s/m)
+             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:27:41) 
+-- CODE:
+bruxo = input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	m = 2.9994
+	s = 8.789
+   print(s//m)
+else:
+	m=1.674
+	s=10.789
+   print(s//m)
+
+	 
+	
+-- ERROR:
+File "XXXX", line 5
+    print(s//m)
+              ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:28:24) 
+-- CODE:
+bruxo = input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	M = 2.9994
+	S = 8.789
+   print(M/S)
+else:
+	m=1.674
+	s=10.789
+   print(s/m)
+
+	 
+	
+-- ERROR:
+File "XXXX", line 5
+    print(M/S)
+             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:28:40) 
+-- CODE:
+bruxo = input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	M=2.9994
+	S=8.789
+   print(M/S)
+else:
+	m=1.674
+	s=10.789
+   print(s/m)
+
+	 
+	
+-- ERROR:
+File "XXXX", line 5
+    print(M/S)
+             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:39:15) 
+-- CODE:
+bruxo = input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	M=2,9994
+	S=8,789
+   print(M/S)
+else:
+	m=1,674
+	s=10,789
+   print(s/m)
+
+	 
+	
+-- ERROR:
+File "XXXX", line 5
+    print(M/S)
+             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:39:36) 
+-- CODE:
+bruxo = input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	m=2,9994
+	s=8,789
+   print(m/s)
+else:
+	m=1,674
+	s=10,789
+   print(s/m)
+
+	 
+	
+-- ERROR:
+File "XXXX", line 5
+    print(m/s)
+             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:43:56) 
+-- CODE:
+bruxo = input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	m=2,9994
+	s=8,789
+   print(m/s)
+else:
+	m=1,674
+	s=10,789
+   print(m/s)
+
+	 
+	
+-- ERROR:
+File "XXXX", line 5
+    print(m/s)
+             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:47:36) 
+-- CODE:
+bruxo = input("HARRY,RONY:")
+if(bruxo=="HARRY"):
+	m=2.9994
+	s=8.789
+   print(m/s)
+else:
+	m=1.674
+	s=10.789
+   print(m/s)
+
+	 
+	
+-- ERROR:
+File "XXXX", line 5
+    print(m/s)
+             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:48:05) 
+-- CODE:
+bruxo = input("HARRY,RONY:") 
+
+if(bruxo=="HARRY"):
+	m=2.9994
+	s=8.789
+   print(m/s)
+	
+else:
+	m=1.674
+	s=10.789
+   print(m/s)
+
+	 
+	
+-- ERROR:
+File "XXXX", line 6
+    print(m/s)
+             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:50:06) 
+-- CODE:
+bruxo = input("HARRY,RONY:") 
+
+if(bruxo=="HARRY"):
+	m=2.9994
+	s=8.789
+   print(m/s)
+	
+else:
+	m=1.674
+	s=10.789
+   print(m/s)
+
+	 
+	
+-- ERROR:
+File "XXXX", line 6
+    print(m/s)
+             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:51:02) 
+-- CODE:
+bruxo = input("HARRY,RONY:") 
+
+if(bruxo=="HARRY"):
+	m=2.9994
+	s=8.789
+	print(m/s)	
+else:
+	m=1.674
+	s=10.789
+	print(m/s)
+-- OUTPUT:
+0.3412674934577313
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 16:51:09) 
+-- CODE:
+bruxo = input("HARRY,RONY:") 
+
+if(bruxo=="HARRY"):
+	m=2.9994
+	s=8.789
+	print(m/s)	
+else:
+	m=1.674
+	s=10.789
+	print(m/s)
+-- EXECUTION TIME:
+0.159007
+-- TEST CASE 1:
+---- input:
+HARRY
+---- correct output:
+0.3412674934577313
+---- user output:
+0.3412674934577313
+-- TEST CASE 2:
+---- input:
+RONY
+---- correct output:
+0.15515803132820466
+---- user output:
+0.15515803132820466
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

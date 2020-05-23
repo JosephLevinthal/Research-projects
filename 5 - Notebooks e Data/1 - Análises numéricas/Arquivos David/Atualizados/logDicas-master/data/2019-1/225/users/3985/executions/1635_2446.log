@@ -1,0 +1,61 @@
+== TEST (2019-04-15 13:30:38) 
+-- CODE:
+senha = int(input("Senha: "))
+# Separando os digitos
+D1 = senha // 100000
+D2 = (senha % 100000) // 10000
+D3 = (senha % 10000) // 1000
+D4 = (senha % 1000) // 100
+D5 = (senha % 100) // 10
+D6 = senha % 10
+
+if ((D2 + D4 + D6) % (D1 + D3 + D5)!=0):
+	msg = "senha invalida"
+else:
+	msg = "acesso liberado"
+print(msg)
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 13:30:39) 
+-- CODE:
+senha = int(input("Senha: "))
+# Separando os digitos
+D1 = senha // 100000
+D2 = (senha % 100000) // 10000
+D3 = (senha % 10000) // 1000
+D4 = (senha % 1000) // 100
+D5 = (senha % 100) // 10
+D6 = senha % 10
+
+if ((D2 + D4 + D6) % (D1 + D3 + D5)!=0):
+	msg = "senha invalida"
+else:
+	msg = "acesso liberado"
+print(msg)
+-- EXECUTION TIME:
+0.216023
+-- TEST CASE 1:
+---- input:
+087612
+---- correct output:
+acesso liberado
+---- user output:
+acesso liberado
+-- TEST CASE 2:
+---- input:
+760834
+---- correct output:
+senha invalida
+---- user output:
+senha invalida
+-- TEST CASE 3:
+---- input:
+122967
+---- correct output:
+acesso liberado
+---- user output:
+acesso liberado
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

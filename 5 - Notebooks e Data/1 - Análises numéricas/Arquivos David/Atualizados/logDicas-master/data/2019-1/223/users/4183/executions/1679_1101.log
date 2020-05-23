@@ -1,0 +1,2338 @@
+== TEST (2019-04-20 14:09:10) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if ((c < 0) or (t != "R" or t!= "C" or t!= "I"))
+-- ERROR:
+File "XXXX", line 3
+    if ((c < 0) or (t != "R" or t!= "C" or t!= "I"))
+                                                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-20 14:10:13) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if ((c < 0) or (t != "R" or t!= "C" or t!= "I")):
+-- ERROR:
+File "XXXX", line 4
+    
+                                                     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-20 14:10:54) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if ((c < 0 or t != "R" or t!= "C" or t!= "I")):
+-- ERROR:
+File "XXXX", line 4
+    
+                                                   ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-20 14:11:23) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if ((c < 0 or t != R or t!= C or t!= I)):
+-- ERROR:
+File "XXXX", line 4
+    
+                                             ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-20 14:11:36) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if (c < 0 or t != R or t!= C or t!= I):
+-- ERROR:
+File "XXXX", line 4
+    
+                                           ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-20 14:12:28) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if (c < 0):
+-- ERROR:
+File "XXXX", line 4
+    
+               ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-20 14:12:43) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if(c < 0):
+-- ERROR:
+File "XXXX", line 4
+    
+              ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-20 14:13:52) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+C =
+-- ERROR:
+File "XXXX", line 3
+    C =
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-20 14:14:00) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+
+-- ERROR:
+File "XXXX", line 3
+    C =
+      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-20 14:20:16) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if(t == R or t == C or t == I and c > 0):
+	
+-- ERROR:
+File "XXXX", line 5
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-20 14:20:26) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if(t == R or t == C or t == I and c > 0):
+	
+-- ERROR:
+File "XXXX", line 5
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-20 14:28:34) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if(t == R or t == C or t == I and c > 0):
+	r1 = 0,44
+	r2 = 0,65
+	ci1 = 0,55
+	ci2 = 0,60
+	if(t == R and c < 500):
+		print(r1*24*30)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if(t == R or t == C or t == I and c > 0):
+NameError: name 'R' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-20 14:29:33) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if(t == 'R' or t == 'C' or t == 'I' and c > 0):
+	r1 = 0,44
+	r2 = 0,65
+	ci1 = 0,55
+	ci2 = 0,60
+	if(t == R and c < 500):
+		print(r1*24*30)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if(t == R or t == C or t == I and c > 0):
+NameError: name 'R' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-20 14:30:00) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if(t == 'R' or t == 'C' or t == 'I' and c > 0):
+	r1 = 0,44
+	r2 = 0,65
+	ci1 = 0,55
+	ci2 = 0,60
+	if(t == 'R' and c < 500):
+		print(r1*24*30)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if(t == R or t == C or t == I and c > 0):
+NameError: name 'R' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-20 14:30:57) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if(t == 'R' or t == 'C' or t == 'I' and c > 0):
+	r1 = 0,44
+	r2 = 0,65
+	ci1 = 0,55
+	ci2 = 0,60
+	if(t == 'R' and c < 500):
+		print((r1*24)*30)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if(t == R or t == C or t == I and c > 0):
+NameError: name 'R' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-20 14:31:23) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if(t == 'R' or t == 'C' or t == 'I' and c > 0):
+	r1 = 0,44
+	r2 = 0,65
+	ci1 = 0,55
+	ci2 = 0,60
+	if(t == 'R' and c <= 500):
+		print((r1*24)*30)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    if(t == R or t == C or t == I and c > 0):
+NameError: name 'R' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-20 14:44:30) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if(t == 'R' or t == 'C' or t == 'I' and c > 0):
+	r1 = 0,44
+	r2 = 0,65
+	ci1 = 0,55
+	ci2 = 0,60
+	if(t == 'R' and c <= 500):
+		print("Entradas:", c, "kWh e tipo", t)
+		print("Valor total: R$", (r1*24)*30)
+	elif (t == 'R' and c > 500):
+		print("Entradas:", c, "kWh e tipo", t)
+		print("Valor total: R$", (r2*24)*30)
+	elif (t == 'C' or t == 'I' and c <= 500):
+		print("Entradas:", c, "kWh e tipo", t)
+		print("Valor total: R$", (ci1*24)*30)
+	elif (t == 'C' or t == 'I' and c > 500):
+		print("Entradas:", c, "kWh e tipo", t)
+		print("Valor total: R$", (ci2*24)*30)
+else: 
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+	
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-20 14:46:33) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+r1 = 0,44
+r2 = 0,65
+ci1 = 0,55
+ci2 = 0,60
+if(t == 'R' and c <= 500):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Valor total: R$", (r1*24)*30)
+elif (t == 'R' and c > 500):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Valor total: R$", (r2*24)*30)
+elif (t == 'C' or t == 'I' and c <= 500):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Valor total: R$", (ci1*24)*30)
+elif (t == 'C' or t == 'I' and c > 500):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Valor total: R$", (ci2*24)*30)
+else: 
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+	
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ (0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0, 55, 0,
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-20 14:48:52) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+r1 = c * 0,44
+r2 = c * 0,65
+ci1 = c * 0,55
+ci2 = c * 0,60
+if(t == 'R' and c <= 500):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Valor total: R$", (r1*24)*30)
+elif (t == 'R' and c > 500):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Valor total: R$", (r2*24)*30)
+elif (t == 'C' or t == 'I' and c <= 500):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Valor total: R$", (ci1*24)*30)
+elif (t == 'C' or t == 'I' and c > 500):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Valor total: R$", (ci2*24)*30)
+else: 
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+	
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ (-0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0, 55, -0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 19:40:20) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if (c < 0 or t != "R" or t != "I" or t != "C"):
+	print("Entradas:", c, "kWh e tipo", t)
+	print
+if(t == 'R' and c <= 500):
+	v = c * 0,44
+elif (t == 'R' and c > 500):
+	v = c * 0,65
+elif (t == 'C' or t == 'I' and c <= 500):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Valor total: R$", (ci1*24)*30)
+elif (t == 'C' or t == 'I' and c > 500):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Valor total: R$", (ci2*24)*30)
+else: 
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 12, in <module>
+    print("Valor total: R$", (ci1*24)*30)
+NameError: name 'ci1' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 19:49:56) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if (c < 0 or t != "R" or t != "I" or t != "C"):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+elif(t == 'R'):
+	if (c <= 500):
+		v = c * 0,44
+	else:
+		v = c * 0,65
+elif (t == 'C'):
+	if (c <= 1000):
+		v = c * 0,55
+	else:
+		v = c * 0,60
+elif (t == "I"):
+	if (c <= 5000):
+		v = c * 0,55
+	else: 
+		v = c * 0,60
+print("Entradas:", c, "kWh e tipo", t)
+print("Valor total: R$", c )
+	
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -56.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 19:52:02) 
+-- CODE:
+print(790.5 * 0,55)
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if (c < 0 or t != "R" or t != "I" or t != "C"):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+elif(t == 'R'):
+	if (c <= 500):
+		v = c * 0,44
+	else:
+		v = c * 0,65
+elif (t == 'C'):
+	if (c <= 1000):
+		v = c * 0,55
+	else:
+		v = c * 0,60
+elif (t == "I"):
+	if (c <= 5000):
+		v = c * 0,55
+	else: 
+		v = c * 0,60
+print("Entradas:", c, "kWh e tipo", t)
+print("Valor total: R$", c )
+	
+
+-- OUTPUT:
+0.0 55
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -56.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 19:52:14) 
+-- CODE:
+print(790.5 * 0.55)
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if (c < 0 or t != "R" or t != "I" or t != "C"):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+elif(t == 'R'):
+	if (c <= 500):
+		v = c * 0,44
+	else:
+		v = c * 0,65
+elif (t == 'C'):
+	if (c <= 1000):
+		v = c * 0,55
+	else:
+		v = c * 0,60
+elif (t == "I"):
+	if (c <= 5000):
+		v = c * 0,55
+	else: 
+		v = c * 0,60
+print("Entradas:", c, "kWh e tipo", t)
+print("Valor total: R$", c )
+	
+
+-- OUTPUT:
+434.77500000000003
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -56.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 19:54:07) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if (c < 0 or t != "R" or t != "I" or t != "C"):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+elif(t == 'R'):
+	if (c <= 500):
+		v = c * 0.44
+	else:
+		v = c * 0.65
+elif (t == 'C'):
+	if (c <= 1000):
+		v = c * 0.55
+	else:
+		v = c * 0.60
+elif (t == "I"):
+	if (c <= 5000):
+		v = c * 0.55
+	else: 
+		v = c * 0.60
+print("Entradas:", c, "kWh e tipo", t)
+print("Valor total: R$", c )
+	
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -56.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 19:54:39) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if (c < 0 or t != "R" or t != "I" or t != "C"):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+elif(t == 'R'):
+	if (c <= 500):
+		v = c * 0.44
+	else:
+		v = c * 0.65
+elif (t == 'C'):
+	if (c <= 1000):
+		v = c * 0.55
+	else:
+		v = c * 0.60
+elif (t == "I"):
+	if (c <= 5000):
+		v = c * 0.55
+	else: 
+		v = c * 0.60
+print("Entradas:", c, "kWh e tipo", t)
+print("Valor total: R$", c )
+	
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -56.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 19:55:06) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if (c < 0 or t != "R" or t != "I" or t != "C"):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+elif(t == 'R'):
+	if (c <= 500):
+		v = c * 0.44
+	else:
+		v = c * 0.65
+elif (t == 'C'):
+	if (c <= 1000):
+		v = c * 0.55
+	else:
+		v = c * 0.60
+elif (t == "I"):
+	if (c <= 5000):
+		v = c * 0.55
+	else: 
+		v = c * 0.60
+print("Entradas:", c, "kWh e tipo", t)
+print("Valor total: R$", c )
+	
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -56.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 19:55:35) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if (c < 0 or t != "R" or t != "I" or t != "C"):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+elif(t == 'R'):
+	if (c <= 500):
+		v = c * 0.44
+	else:
+		v = c * 0.65
+elif (t == 'C'):
+	if (c <= 1000):
+		v = c * 0.55
+	else:
+		v = c * 0.60
+elif (t == "I"):
+	if (c <= 5000):
+		v = c * 0.55
+	else: 
+		v = c * 0.60
+print("Entradas:", c, "kWh e tipo", t)
+print("Valor total: R$", v )
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 22, in <module>
+    print("Valor total: R$", v )
+NameError: name 'v' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 19:56:35) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+v = float()
+if (c < 0 or t != "R" or t != "I" or t != "C"):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+elif(t == 'R'):
+	if (c <= 500):
+		v = c * 0.44
+	else:
+		v = c * 0.65
+elif (t == 'C'):
+	if (c <= 1000):
+		v = c * 0.55
+	else:
+		v = c * 0.60
+elif (t == "I"):
+	if (c <= 5000):
+		v = c * 0.55
+	else: 
+		v = c * 0.60
+print("Entradas:", c, "kWh e tipo", t)
+print("Valor total: R$", v )
+	
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ 0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 19:58:08) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if (c < 0 or t != "R" or t != "I" or t != "C"):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+elif(t == 'R'):
+	if (c <= 500):
+		v = c * 0.44
+	else:
+		v = c * 0.65
+elif (t == 'C'):
+	if (c <= 1000):
+		v = c * 0.55
+	else:
+		v = c * 0.60
+elif (t == "I"):
+	if (c <= 5000):
+		v = c * 0.55
+	else: 
+		v = c * 0.60
+print("Entradas:", c, "kWh e tipo", t)
+print("Valor total: R$", float(v))
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 22, in <module>
+    print("Valor total: R$", float(v))
+NameError: name 'v' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 19:58:50) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+v = 0
+if (c < 0 or t != "R" or t != "I" or t != "C"):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+elif(t == 'R'):
+	if (c <= 500):
+		v = c * 0.44
+	else:
+		v = c * 0.65
+elif (t == 'C'):
+	if (c <= 1000):
+		v = c * 0.55
+	else:
+		v = c * 0.60
+elif (t == "I"):
+	if (c <= 5000):
+		v = c * 0.55
+	else: 
+		v = c * 0.60
+print("Entradas:", c, "kWh e tipo", t)
+print("Valor total: R$", float(v))
+	
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ 0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 19:59:14) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if (c < 0 or t != "R" or t != "I" or t != "C"):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+elif(t == 'R'):
+	if (c <= 500):
+		v = c * 0.44
+	else:
+		v = c * 0.65
+elif (t == 'C'):
+	if (c <= 1000):
+		v = c * 0.55
+	else:
+		v = c * 0.60
+elif (t == "I"):
+	if (c <= 5000):
+		v = c * 0.55
+	else: 
+		v = c * 0.60
+print("Entradas:", c, "kWh e tipo", t)
+print("Valor total: R$", float(v))
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 22, in <module>
+    print("Valor total: R$", float(v))
+NameError: name 'v' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 19:59:34) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if (c < 0 or t != "R" or t != "I" or t != "C"):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+elif(t == 'R'):
+	if (c <= 500):
+		v = c * 0.44
+	else:
+		v = c * 0.65
+elif (t == 'C'):
+	if (c <= 1000):
+		v = c * 0.55
+	else:
+		v = c * 0.60
+elif (t == "I"):
+	if (c <= 5000):
+		v = c * 0.55
+	else: 
+		v = c * 0.60
+print("Entradas:", c, "kWh e tipo", t)
+print("Valor total: R$", float(v))
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 22, in <module>
+    print("Valor total: R$", float(v))
+NameError: name 'v' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:00:18) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if (c < 0 or t != "R" or t != "I" or t != "C"):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+elif(t == 'R'):
+	if (c <= 500):
+		v = c * 0.44
+	else:
+		v = c * 0.65
+elif (t == 'C'):
+	if (c <= 1000):
+		v = c * 0.55
+	else:
+		v = c * 0.60
+elif (t == "I"):
+	if (c <= 5000):
+		v = c * 0.55
+	else: 
+		v = c * 0.60
+print("Entradas:", c, "kWh e tipo", t)
+print("Valor total: R$", v)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 22, in <module>
+    print("Valor total: R$", v)
+NameError: name 'v' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:02:28) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if (c < 0 or t != "R" or t != "I" or t != "C"):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+elif(t == 'R'):
+	if (c <= 500):
+		v = c * 0.44
+	else:
+		v = c * 0.65
+elif (t == 'C'):
+	if (c <= 1000):
+		v = c * 0.55
+	else:
+		v = c * 0.60
+elif (t == "I"):
+	if (c <= 5000):
+		v = c * 0.55
+	else: 
+		v = c * 0.60
+print("Entradas:", c, "kWh e tipo", t)
+print("Valor total: R$", v)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 22, in <module>
+    print("Valor total: R$", v)
+NameError: name 'v' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-21 20:03:24) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if (c < 0 or t != "R" or t != "I" or t != "C"):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+elif(t == 'R'):
+	if (c <= 500):
+		v = c * 0.44
+	else:
+		v = c * 0.65
+elif (t == 'C'):
+	if (c <= 1000):
+		v = c * 0.55
+	else:
+		v = c * 0.60
+elif (t == "I"):
+	if (c <= 5000):
+		v = c * 0.55
+	else: 
+		v = c * 0.60
+print("Entradas:", c, "kWh e tipo", t)
+print("Valor total: R$", v)
+	
+
+-- EXECUTION TIME:
+0.131766
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1679/1101/main.py", line 22, in <module>
+    print("Valor total: R$", v)
+NameError: name 'v' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:04:47) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if (c < 0 or t != "R" or t != "I" or t != "C"):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+elif(t == 'R'):
+	if (c <= 500):
+		v = c * 0.44
+	else:
+		v = c * 0.65
+elif (t == 'C'):
+	if (c <= 1000):
+		v = c * 0.55
+	else:
+		v = c * 0.60
+elif (t == "I"):
+	if (c <= 5000):
+		v = c * 0.55
+	else: 
+		v = c * 0.60
+print("Entradas:", c, "kWh e tipo", t)
+print("Valor total: R$", v)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 22, in <module>
+    print("Valor total: R$", v)
+NameError: name 'v' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:06:22) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if (c < 0 or t != "R" or t != "I" or t != "C"):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+elif(t == 'R'):
+	if (c <= 500):
+		v = c * 0.44
+	else:
+		v = c * 0.65
+elif (t == 'C'):
+	if (c <= 1000):
+		v = c * 0.55
+	else:
+		v = c * 0.60
+elif (c <= 5000):
+		v = c * 0.55
+	else: 
+		v = c * 0.60
+print("Entradas:", c, "kWh e tipo", t)
+print("Valor total: R$", v)
+	
+
+-- ERROR:
+File "XXXX", line 18
+    else: 
+         ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:06:38) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if (c < 0 or t != "R" or t != "I" or t != "C"):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+elif(t == 'R'):
+	if (c <= 500):
+		v = c * 0.44
+	else:
+		v = c * 0.65
+elif (t == 'C'):
+	if (c <= 1000):
+		v = c * 0.55
+	else:
+		v = c * 0.60
+elif (c <= 5000):
+		v = c * 0.55
+else: 
+		v = c * 0.60
+print("Entradas:", c, "kWh e tipo", t)
+print("Valor total: R$", v)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 21, in <module>
+    print("Valor total: R$", v)
+NameError: name 'v' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:07:05) 
+-- CODE:
+c = float(input("Consumo: "))
+t = input("Tipo: ")
+if (c < 0 or t != "R" or t != "I" or t != "C"):
+	print("Entradas:", c, "kWh e tipo", t)
+	print("Dados invalidos")
+elif(t == 'R'):
+	if (c <= 500):
+		v = c * 0.44
+	else:
+		v = c * 0.65
+elif (t == 'C'):
+	if (c <= 1000):
+		v = c * 0.55
+	else:
+		v = c * 0.60
+elif (c <= 5000):
+		v = c * 0.55
+else: 
+		v = c * 0.60
+print("Entradas:", c, "kWh e tipo", t)
+print("Valor total: R$", c)
+	
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -56.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:13:18) 
+-- CODE:
+X = float(input("Qual o consumo?"))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+-- OUTPUT:
+Entradas:  -56.0 kWh e tipo  I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:16:52) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif (Y  != "R" or Y != "C" or Y != "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+	
+-- OUTPUT:
+Entradas:  -56.0 kWh e tipo  I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:17:14) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif (Y  != "R" or Y != "C" or Y != "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+	
+-- OUTPUT:
+Entradas:  -56.0 kWh e tipo  I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:17:56) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO")
+elif (Y  != "R" or Y != "C" or Y != "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+	
+-- OUTPUT:
+Entradas:  -56.0 kWh e tipo  I
+Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:18:13) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO")
+elif (Y  != "R" or Y != "C" or Y != "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+	
+-- OUTPUT:
+Entradas:  -56.0 kWh e tipo  I
+Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:18:36) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO")
+elif (Y  != "R" or Y != "C" or Y != "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+	
+-- OUTPUT:
+Entradas:  -56.0 kWh e tipo  I
+Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:19:16) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO")
+elif (Y  != "R" or Y != "C" or Y != "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, Tipo deve ser R, C ou I")
+	
+-- OUTPUT:
+Entradas:  -56.0 kWh e tipo  I
+Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:19:30) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO")
+elif (Y  != "R" or Y != "C" or Y != "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, Tipo deve ser R, C ou I")
+	
+-- OUTPUT:
+Entradas:  -56.0 kWh e tipo  I
+Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:23:39) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO")
+elif ((Y  != "R") or (Y != "C") or (Y != "I")):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, Tipo deve ser R, C ou I")
+	
+-- OUTPUT:
+Entradas:  -56.0 kWh e tipo  I
+Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:25:13) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO")
+elif ( not (Y  == "R") or not (Y == "C") or not (Y == "I")):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, Tipo deve ser R, C ou I")
+	
+-- OUTPUT:
+Entradas:  -56.0 kWh e tipo  I
+Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:25:50) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO")
+elif not (Y  == "R") or not (Y == "C") or not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, Tipo deve ser R, C ou I")
+	
+-- OUTPUT:
+Entradas:  -56.0 kWh e tipo  I
+Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:26:08) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, Tipo deve ser R, C ou I")
+	
+-- OUTPUT:
+Entradas:  -56.0 kWh e tipo  I
+Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:26:35) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, Tipo deve ser R, C ou I")
+	
+-- OUTPUT:
+Entradas:  -56.0 kWh e tipo  I
+Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:35:00) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, Tipo deve ser R, C ou I")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else
+		preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else
+		preco = 0.60
+print("Entradas: ", X, "kWh e tipo ", Y)
+print("Valor total: R$ ", c*preco)
+
+-- ERROR:
+File "XXXX", line 12
+    else
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:35:20) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, Tipo deve ser R, C ou I")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+		preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+print("Entradas: ", X, "kWh e tipo ", Y)
+print("Valor total: R$ ", c*preco)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 25, in <module>
+    print("Valor total: R$ ", c*preco)
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:35:40) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, Tipo deve ser R, C ou I")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+		preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+print("Entradas: ", X, "kWh e tipo ", Y)
+print("Valor total: R$ ", c*preco)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 25, in <module>
+    print("Valor total: R$ ", c*preco)
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:36:11) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, Tipo deve ser R, C ou I")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+		preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+print("Entradas: ", X, "kWh e tipo ", Y)
+print("Valor total: R$ ", X*preco)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 25, in <module>
+    print("Valor total: R$ ", X*preco)
+NameError: name 'preco' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:36:29) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, Tipo deve ser R, C ou I")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+		preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+print("Entradas: ", X, "kWh e tipo ", Y)
+print("Valor total: R$ ", X*preco)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 25, in <module>
+    print("Valor total: R$ ", X*preco)
+NameError: name 'preco' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:37:13) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, Tipo deve ser R, C ou I")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+		preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+print("Entradas: ", X, "kWh e tipo ", Y)
+print("Valor total: R$ ", round(X*preco,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 25, in <module>
+    print("Valor total: R$ ", round(X*preco,2))
+NameError: name 'preco' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-21 20:37:27) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, consumo obrigatoriamente dve ser maior que ZERO")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos, Tipo deve ser R, C ou I")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+		preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+print("Entradas: ", X, "kWh e tipo ", Y)
+print("Valor total: R$ ", round(X*preco,2))
+
+-- EXECUTION TIME:
+0.24334
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1679/1101/main.py", line 25, in <module>
+    print("Valor total: R$ ", round(X*preco,2))
+NameError: name 'preco' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-21 20:38:06) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+		preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+print("Entradas: ", X, "kWh e tipo ", Y)
+print("Valor total: R$ ", round(X*preco,2))
+
+-- EXECUTION TIME:
+0.1753
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1679/1101/main.py", line 25, in <module>
+    print("Valor total: R$ ", round(X*preco,2))
+NameError: name 'preco' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:38:10) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+		preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+print("Entradas: ", X, "kWh e tipo ", Y)
+print("Valor total: R$ ", round(X*preco,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 25, in <module>
+    print("Valor total: R$ ", round(X*preco,2))
+NameError: name 'preco' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:38:45) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+		preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+print("Entradas: ", X, "kWh e tipo ", Y)
+print("Valor total: R$ ", round(X*preco,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 25, in <module>
+    print("Valor total: R$ ", round(X*preco,2))
+NameError: name 'preco' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:40:08) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		Z = 0.44
+	else:
+		Z = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		Z = 0.55
+	else:
+		Z = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		Z = 0.55
+	else:
+		preco = 0.60
+print("Entradas: ", X, "kWh e tipo ", Y)
+print("Valor total: R$ ", round(X*Z,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 25, in <module>
+    print("Valor total: R$ ", round(X*Z,2))
+NameError: name 'Z' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-21 20:40:19) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		Z = 0.44
+	else:
+		Z = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		Z = 0.55
+	else:
+		Z = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		Z = 0.55
+	else:
+		preco = 0.60
+print("Entradas: ", X, "kWh e tipo ", Y)
+print("Valor total: R$ ", round(X*Z,2))
+
+-- EXECUTION TIME:
+0.212475
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1679/1101/main.py", line 25, in <module>
+    print("Valor total: R$ ", round(X*Z,2))
+NameError: name 'Z' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:40:51) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		Z = 0.44
+	else:
+		Z = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		Z = 0.55
+	else:
+		Z = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		Z = 0.55
+	else:
+		preco = 0.60
+print("Entradas: ", X, "kWh e tipo ", Y)
+print("Valor total: R$ ", round(X*Z,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 25, in <module>
+    print("Valor total: R$ ", round(X*Z,2))
+NameError: name 'Z' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:42:41) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+Z = preco * X
+print("Entradas: ", X, "kWh e tipo ", Y)
+print("Valor total: R$ ", round(Z,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 24, in <module>
+    Z = preco * X
+NameError: name 'preco' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-21 20:44:20) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+Z = preco * X
+print("Entradas: ", X, "kWh e tipo ", Y)
+print("Valor total: R$ ", round(Z,2))
+
+-- EXECUTION TIME:
+0.139103
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1679/1101/main.py", line 24, in <module>
+    Z = preco * X
+NameError: name 'preco' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:44:24) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+Z = preco * X
+print("Entradas: ", X, "kWh e tipo ", Y)
+print("Valor total: R$ ", round(Z,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 24, in <module>
+    Z = preco * X
+NameError: name 'preco' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:45:39) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+print("Entradas: ", X, "kWh e tipo ", Y)
+print("Valor total: R$ ", round(preco*X,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 25, in <module>
+    print("Valor total: R$ ", round(preco*X,2))
+NameError: name 'preco' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-21 20:45:58) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+print("Entradas: ", X, "kWh e tipo ", Y)
+print("Valor total: R$ ", round(preco*X,2))
+
+-- EXECUTION TIME:
+0.125718
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1679/1101/main.py", line 25, in <module>
+    print("Valor total: R$ ", round(preco*X,2))
+NameError: name 'preco' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:47:54) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+print("Entradas: ", X, "kWh e tipo ", Y)
+print("Valor total: R$ ", round(preco*X,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 25, in <module>
+    print("Valor total: R$ ", round(preco*X,2))
+NameError: name 'preco' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:49:29) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo ", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+print("Entradas: ", X, "kWh e tipo", Y)
+print("Valor total: R$ ", round(preco*X,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 25, in <module>
+    print("Valor total: R$ ", round(preco*X,2))
+NameError: name 'preco' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-21 20:50:22) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas: ", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas: ", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+print("Entradas: ", X, "kWh e tipo", Y)
+print("Valor total: R$ ", round(preco*X,2))
+
+-- EXECUTION TIME:
+0.135839
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1679/1101/main.py", line 25, in <module>
+    print("Valor total: R$ ", round(preco*X,2))
+NameError: name 'preco' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-21 20:51:16) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+print("Entradas:", X, "kWh e tipo", Y)
+print("Valor total: R$", round(preco*X,2))
+
+-- EXECUTION TIME:
+0.196616
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1679/1101/main.py", line 25, in <module>
+    print("Valor total: R$", round(preco*X,2))
+NameError: name 'preco' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:51:20) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+print("Entradas:", X, "kWh e tipo", Y)
+print("Valor total: R$", round(preco*X,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 25, in <module>
+    print("Valor total: R$", round(preco*X,2))
+NameError: name 'preco' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:51:36) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+if X <= 0:
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+print("Entradas:", X, "kWh e tipo", Y)
+print("Valor total: R$", round(preco*X,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 25, in <module>
+    print("Valor total: R$", round(preco*X,2))
+NameError: name 'preco' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:53:29) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+preco = 0
+if X <= 0:
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+print("Entradas:", X, "kWh e tipo", Y)
+print("Valor total: R$", round(preco*X,2))
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:53:51) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+preco = 0
+if X <= 0:
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+print("Entradas:", X, "kWh e tipo", Y)
+print("Valor total: R$", round(preco*X,2))
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+Entradas: -56.0 kWh e tipo I
+Valor total: R$ -0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:54:55) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+preco = 0
+if X <= 0:
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+if preco > 0:
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Valor total: R$", round(preco*X,2))
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:55:10) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+preco = 0
+if X <= 0:
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+if preco > 0:
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Valor total: R$", round(preco*X,2))
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-21 20:55:22) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+preco = 0
+if X <= 0:
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+if preco > 0:
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Valor total: R$", round(preco*X,2))
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-21 20:55:37) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+preco = 0
+if X <= 0:
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif not (Y  == "R") and not (Y == "C") and not (Y == "I"):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif Y == "R":
+	if X <= 500: 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif Y == "C":
+	if X <= 1000: 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif X <= 5000:
+	if X <= 500: 
+		preco = 0.55
+	else:
+		preco = 0.60
+if preco > 0:
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Valor total: R$", round(preco*X,2))
+
+-- EXECUTION TIME:
+0.19436
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-21 21:07:41) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+preco = 0
+if (X <= 0):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif (not (Y  == "R") and not (Y == "C") and not (Y == "I")):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif (Y == "R"):
+	if (X <= 500): 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif (Y == "C"):
+	if (X <= 1000): 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif (X <= 5000):
+	if (X <= 500): 
+		preco = 0.55
+	else:
+		preco = 0.60
+if (preco > 0):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Valor total: R$", round(preco*X,2))
+
+-- EXECUTION TIME:
+0.131395
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 17:51:29) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+preco = 0
+if (X <= 0):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif (not (Y  == "R") and not (Y == "C") and not (Y == "I")):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif (Y == "R"):
+	if (X <= 500): 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif (Y == "C"):
+	if (X <= 1000): 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif (X <= 5000):
+	if (X <= 500): 
+		preco = 0.55
+	else:
+		preco = 0.60
+if (preco > 0):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Valor total: R$", round(preco*X,2))
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-30 16:05:41) 
+-- CODE:
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+preco = 0
+if (X <= 0)or (not (Y  == "R") and not (Y == "C") and not (Y == "I")):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif (Y == "R"):
+	if (X <= 500): 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif (Y == "C"):
+	if (X <= 1000): 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif (X <= 5000):
+	if (X <= 500): 
+		preco = 0.55
+	else:
+		preco = 0.60
+if (preco > 0):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Valor total: R$", round(preco*X,2))
+
+-- EXECUTION TIME:
+0.164217
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

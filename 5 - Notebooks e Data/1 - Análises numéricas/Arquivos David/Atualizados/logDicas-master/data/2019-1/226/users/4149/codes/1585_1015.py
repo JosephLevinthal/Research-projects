@@ -1,0 +1,6 @@
+nume1=int(input("valor 1: "))
+nume2=int(input("valor 2: "))
+nume3=int(input("valor 3: "))
+print(min(nume1,nume2,nume3))
+print(((nume1+nume2+nume3)-min(nume1,nume2,nume3))-max(nume1,nume2,nume3))
+print(max(nume1,nume2,nume3))

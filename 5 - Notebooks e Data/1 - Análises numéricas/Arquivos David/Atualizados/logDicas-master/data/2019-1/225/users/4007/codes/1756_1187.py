@@ -1,0 +1,8 @@
+s = input("string: ")
+print(s[0])
+print(s[-1])
+a = len(s)
+print(a)
+print(s.lower())
+print(s.upper())
+print(s * 1000)

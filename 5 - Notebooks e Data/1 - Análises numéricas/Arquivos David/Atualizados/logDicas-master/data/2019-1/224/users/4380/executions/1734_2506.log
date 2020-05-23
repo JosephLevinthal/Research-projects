@@ -1,0 +1,151 @@
+== TEST (2019-05-16 13:54:13) 
+-- CODE:
+p=int(input("quantidade de tambaquis: "))
+c=int(input("crescimeno ao ano: "))
+v=int(input("quantidade de peixes pra venda: "))
+lim=12000
+t=0
+while (0<p) and (p<12000):
+	p=p+c*p/100-v
+	t=t+1
+if (p=0):
+	print("EXTINCAO")
+	print(t)
+elif (p>=12000):
+	print("LIMITE")
+	print(t)
+-- ERROR:
+File "XXXX", line 9
+    if (p=0):
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-16 13:54:22) 
+-- CODE:
+p=int(input("quantidade de tambaquis: "))
+c=int(input("crescimeno ao ano: "))
+v=int(input("quantidade de peixes pra venda: "))
+lim=12000
+t=0
+while (0<p) and (p<12000):
+	p=p+c*p/100-v
+	t=t+1
+if (p==0):
+	print("EXTINCAO")
+	print(t)
+elif (p>=12000):
+	print("LIMITE")
+	print(t)
+-- ERROR:
+File "XXXX", line 9
+    if (p=0):
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-16 13:54:38) 
+-- CODE:
+p=int(input("quantidade de tambaquis: "))
+c=int(input("crescimeno ao ano: "))
+v=int(input("quantidade de peixes pra venda: "))
+lim=12000
+t=0
+while (0<p) and (p<12000):
+	p=p+c*p/100-v
+	t=t+1
+if (p==0):
+	print("EXTINCAO")
+	print(t)
+elif (p>=12000):
+	print("LIMITE")
+	print(t)
+-- EXECUTION TIME:
+0.1454
+-- TEST CASE 1:
+---- input:
+1234
+6
+135
+---- correct output:
+EXTINCAO
+14
+---- user output:
+
+-- TEST CASE 2:
+---- input:
+579
+37
+26
+---- correct output:
+LIMITE
+11
+---- user output:
+LIMITE
+11
+-- TEST CASE 3:
+---- input:
+6789
+45
+2345
+---- correct output:
+LIMITE
+4
+---- user output:
+LIMITE
+4
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-16 13:55:48) 
+-- CODE:
+p=int(input("quantidade de tambaquis: "))
+c=int(input("crescimeno ao ano: "))
+v=int(input("quantidade de peixes pra venda: "))
+lim=12000
+t=0
+while (0<p) and (p<12000):
+	p=p+c*p/100-v
+	t=t+1
+if (p<=0):
+	print("EXTINCAO")
+	print(t)
+elif (p>=12000):
+	print("LIMITE")
+	print(t)
+-- EXECUTION TIME:
+0.142403
+-- TEST CASE 1:
+---- input:
+1234
+6
+135
+---- correct output:
+EXTINCAO
+14
+---- user output:
+EXTINCAO
+14
+-- TEST CASE 2:
+---- input:
+579
+37
+26
+---- correct output:
+LIMITE
+11
+---- user output:
+LIMITE
+11
+-- TEST CASE 3:
+---- input:
+6789
+45
+2345
+---- correct output:
+LIMITE
+4
+---- user output:
+LIMITE
+4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

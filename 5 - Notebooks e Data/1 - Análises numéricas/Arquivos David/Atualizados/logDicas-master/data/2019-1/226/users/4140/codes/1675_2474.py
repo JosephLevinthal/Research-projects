@@ -1,0 +1,33 @@
+dia=int(input())
+mes=int(input())
+ano=int(input())
+if(dia>=1 and dia<=31) and (mes>=1 and mes<=12):
+	q=dia
+	ano=ano
+	if(mes==1):
+		mes=13
+		ano=ano-1
+	elif(mes==2):
+		mes=14
+		ano=ano-1
+	else:
+		mes=mes
+		ano=ano
+	k=ano%100
+	j=ano//100
+	h=(q+int((13*(mes+1))/5)+k+int(k/4)+int(j/4)+5*j)%7
+	if(h==0):
+		print("sabado")
+	elif(h==1):
+		print("domingo")
+	elif(h==2):
+		print("segunda-feira")
+	elif(h==3):
+		print("terca-feira")
+	elif(h==4):
+		print("quarta-feira")
+	elif(h==5):
+		print("quinta-feira")
+	elif(h==6):
+		print("sexta-feria")
+	

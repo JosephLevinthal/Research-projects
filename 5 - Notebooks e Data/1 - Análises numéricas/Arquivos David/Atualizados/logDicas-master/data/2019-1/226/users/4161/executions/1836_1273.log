@@ -1,0 +1,226 @@
+== TEST (2019-06-25 10:22:31) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+x3 = 350
+x2 = -120 + x3
+x1 = 50 + x2
+x4 = 870 - x1
+a = x1 + 380
+b = x2 + 540
+c = x3 + 470
+d = 420 + 450
+t = a + b + c + d
+a = (a/t)*100
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 10:57:36) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+x3 = 350
+x2 = -120 + x3
+x1 = 50 + x2
+x4 = 870 - x1
+v = zeros(4)
+a = x1 + 380
+b = x2 + 540
+c = x3 + 470
+d = 420 + 450
+v[0] = round(a,1)
+v[1] = round(b,1)
+v[2] = round(c,1)
+v[3] = round(d,1)
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 10:58:53) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+x3 = 350
+x2 = -120 + x3
+x1 = 50 + x2
+x4 = 870 - x1
+v = zeros(4)
+a = x1 + 380
+b = x2 + 540
+c = x3 + 470
+d = 420 + 450
+t = a + b + c + d
+a = (a/t)*100
+b = (b/t)*100
+c = (c/t)*100
+d = (d/t)*100
+v[0] = round(a,1)
+v[1] = round(b,1)
+v[2] = round(c,1)
+v[3] = round(d,1)
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 10:58:57) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+x3 = 350
+x2 = -120 + x3
+x1 = 50 + x2
+x4 = 870 - x1
+v = zeros(4)
+a = x1 + 380
+b = x2 + 540
+c = x3 + 470
+d = 420 + 450
+t = a + b + c + d
+a = (a/t)*100
+b = (b/t)*100
+c = (c/t)*100
+d = (d/t)*100
+v[0] = round(a,1)
+v[1] = round(b,1)
+v[2] = round(c,1)
+v[3] = round(d,1)
+print(v)
+-- EXECUTION TIME:
+0.991519
+-- TEST CASE 1:
+---- input:
+Não_há
+---- correct output:
+[280. 230. 350. 590.]
+---- user output:
+[21.2 24.7 26.3 27.9]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:26:51) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+saida = arrau([50,-120,350,870])
+saida =saida.T
+eq = array([
+	[1,1,0,0],
+	[0,1,1,0],
+	[0,0,1,0],
+	[1,0,0,1]
+])
+saida = dot(inv(eq),saida)
+print(saida)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:27:02) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+saida = array([50,-120,350,870])
+saida =saida.T
+eq = array([
+	[1,1,0,0],
+	[0,1,1,0],
+	[0,0,1,0],
+	[1,0,0,1]
+])
+saida = dot(inv(eq),saida)
+print(saida)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:27:12) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+saida = array([50,-120,350,870])
+saida =saida.T
+eq = array([
+	[1,1,0,0],
+	[0,1,1,0],
+	[0,0,1,0],
+	[1,0,0,1]
+])
+saida = dot(inv(eq),saida)
+print(saida)
+-- EXECUTION TIME:
+0.993125
+-- TEST CASE 1:
+---- input:
+Não_há
+---- correct output:
+[280. 230. 350. 590.]
+---- user output:
+[ 520. -470.  350.  350.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:27:24) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+saida = array([50,-120,350,870])
+saida =saida.T
+eq = array([
+	[1,-1,0,0],
+	[0,1,-1,0],
+	[0,0,1,0],
+	[1,0,0,1]
+])
+saida = dot(inv(eq),saida)
+print(saida)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:27:28) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+saida = array([50,-120,350,870])
+saida =saida.T
+eq = array([
+	[1,-1,0,0],
+	[0,1,-1,0],
+	[0,0,1,0],
+	[1,0,0,1]
+])
+saida = dot(inv(eq),saida)
+print(saida)
+-- EXECUTION TIME:
+1.13146
+-- TEST CASE 1:
+---- input:
+Não_há
+---- correct output:
+[280. 230. 350. 590.]
+---- user output:
+[280. 230. 350. 590.]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

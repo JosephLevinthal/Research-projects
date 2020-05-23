@@ -1,0 +1,105 @@
+== TEST (2019-04-10 19:31:30) 
+-- CODE:
+escala = input("Celsius ou Fahrenheit? (c/F)")
+temp = float(input("Temperatura: "))
+
+F = temp*(9/5) + 32
+C = (5/9)*(temp - 32)
+
+if (escala.lower() == "c")
+-- ERROR:
+File "XXXX", line 7
+    if (escala.lower() == "c")
+                             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 19:32:39) 
+-- CODE:
+escala = input("Celsius ou Fahrenheit? (c/F)")
+temp = float(input("Temperatura: "))
+
+F = temp*(9/5) + 32
+C = (5/9)*(temp - 32)
+
+if (escala.lower() == "c"):
+	print(round(F,4))
+	
+if(escala.upper() == "F"):
+	print(round(C,4))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 19:32:46) 
+-- CODE:
+escala = input("Celsius ou Fahrenheit? (c/F)  ")
+temp = float(input("Temperatura: "))
+
+F = temp*(9/5) + 32
+C = (5/9)*(temp - 32)
+
+if (escala.lower() == "c"):
+	print(round(F,4))
+	
+if(escala.upper() == "F"):
+	print(round(C,4))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 19:33:04) 
+-- CODE:
+escala = input("Celsius ou Fahrenheit? (c/F)  ")
+temp = float(input("Temperatura: "))
+
+F = temp*(9/5) + 32
+C = (5/9)*(temp - 32)
+
+if (escala.lower() == "c"):
+	print(round(F,4))
+	
+if(escala.upper() == "F"):
+	print(round(C,4))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-10 19:33:16) 
+-- CODE:
+escala = input("Celsius ou Fahrenheit? (c/F)  ")
+temp = float(input("Temperatura: "))
+
+F = temp*(9/5) + 32
+C = (5/9)*(temp - 32)
+
+if (escala.lower() == "c"):
+	print(round(F,4))
+	
+if(escala.upper() == "F"):
+	print(round(C,4))
+-- EXECUTION TIME:
+0.142695
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,90 @@
+== TEST (2019-04-07 22:59:46) 
+-- CODE:
+t=float(input("valor disponivel:"))
+q=int(input("quantidade de tickets:"))
+v=float(input("preco dos tickets:"))
+p=int(input("quantidade de passes:"))
+j=float(input("preco dos passes:"))
+if(t==((q*v)+(p*j)):
+	msg=("SUFICIENTE")
+else:
+	msg=("INSUFICIENTE")
+print(msg)
+-- ERROR:
+File "XXXX", line 6
+    if(t==((q*v)+(p*j)):
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-07 23:00:49) 
+-- CODE:
+t=float(input("valor disponivel:"))
+q=int(input("quantidade de tickets:"))
+v=float(input("preco dos tickets:"))
+p=int(input("quantidade de passes:"))
+j=float(input("preco dos passes:"))
+h=float((q*v)+(p*j))
+if(t==h):
+	msg=("SUFICIENTE")
+else:
+	msg=("INSUFICIENTE")
+print(msg)
+-- OUTPUT:
+INSUFICIENTE
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-07 23:01:56) 
+-- CODE:
+t=float(input("valor disponivel:"))
+q=int(input("quantidade de tickets:"))
+v=float(input("preco dos tickets:"))
+p=int(input("quantidade de passes:"))
+j=float(input("preco dos passes:"))
+h=float((q*v)+(p*j))
+if(t>=h):
+	msg=("SUFICIENTE")
+else:
+	msg=("INSUFICIENTE")
+print(msg)
+-- OUTPUT:
+SUFICIENTE
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-07 23:02:20) 
+-- CODE:
+t=float(input("valor disponivel:"))
+q=int(input("quantidade de tickets:"))
+v=float(input("preco dos tickets:"))
+p=int(input("quantidade de passes:"))
+j=float(input("preco dos passes:"))
+h=float((q*v)+(p*j))
+if(t>=h):
+	msg=("SUFICIENTE")
+else:
+	msg=("INSUFICIENTE")
+print(msg)
+-- EXECUTION TIME:
+0.170259
+-- TEST CASE 1:
+---- input:
+400
+15
+1.20
+30
+1.50
+---- correct output:
+SUFICIENTE
+---- user output:
+SUFICIENTE
+-- TEST CASE 2:
+---- input:
+90
+22
+1.20
+44
+1.50
+---- correct output:
+INSUFICIENTE
+---- user output:
+INSUFICIENTE
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

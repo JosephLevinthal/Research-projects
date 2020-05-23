@@ -1,0 +1,814 @@
+== SUBMITION (2019-06-23 19:49:54) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+a = shape(v)[0]
+
+for i in range(a):
+	a[i] = sum(v[:,i])
+	
+print(max(a))
+-- EXECUTION TIME:
+1.09924
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1846/1276/main.py", line 9, in <module>
+    a[i] = sum(v[:,i])
+TypeError: 'int' object does not support item assignment
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 19:50:01) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+a = shape(v)[0]
+
+for i in range(a):
+	a[i] = sum(v[:,i])
+	
+print(max(a))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-23 19:51:48) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+a = shape(v)[0]
+b = zeros((a), dtype= int)
+
+for i in range(a):
+	b[i] = sum(v[:,i])
+	
+print(max(b))
+-- EXECUTION TIME:
+1.04033
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+38
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 19:52:00) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+a = shape(v)[0]
+b = zeros((a), dtype= int)
+
+for i in range(a):
+	b[i] = sum(v[:,i])
+	
+print(max(b))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 19:58:00) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+a = shape(v)[0]
+b = zeros((a), dtype= int)
+
+for i in range(a):
+	b[i] = sum(v[:,i])
+	
+	if	(b[i] == max(b)):
+			a = i + 1
+			print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-23 19:58:08) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+a = shape(v)[0]
+b = zeros((a), dtype= int)
+
+for i in range(a):
+	b[i] = sum(v[:,i])
+	
+	if	(b[i] == max(b)):
+			a = i + 1
+			print(a)
+-- EXECUTION TIME:
+1.10089
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+1
+2
+3
+6
+7
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+1
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+1
+2
+3
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-23 19:58:15) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+a = shape(v)[0]
+b = zeros((a), dtype= int)
+
+for i in range(a):
+	b[i] = sum(v[:,i])
+	
+	if	(b[i] == max(b)):
+			a = i + 1
+			print(a)
+-- EXECUTION TIME:
+1.01792
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+1
+2
+3
+6
+7
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+1
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+1
+2
+3
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-23 19:58:39) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+a = shape(v)[0]
+b = zeros((a), dtype= int)
+
+for i in range(a):
+	b[i] = sum(v[:,i])
+	
+	
+if	(b[i] == max(b)):
+	a = i + 1
+			print(a)
+-- EXECUTION TIME:
+0.866622
+-- ERROR:
+  File "/home/codebench/codes/1846/1276/main.py", line 15
+    print(a)
+    ^
+IndentationError: unexpected indent
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-23 20:03:37) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+a = shape(v)[0]
+b = zeros((a), dtype= int)
+
+for i in range(a):
+	b[i] = sum(v[:,i])
+	
+	if (b[i] == max(b)):
+		 print(i)
+-- EXECUTION TIME:
+1.18654
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+0
+1
+2
+5
+6
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+0
+1
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+0
+1
+2
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 20:03:40) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+a = shape(v)[0]
+b = zeros((a), dtype= int)
+
+for i in range(a):
+	b[i] = sum(v[:,i])
+	
+	if (b[i] == max(b)):
+		 print(i)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-23 20:06:42) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+
+b = zeros((7), dtype= int)
+
+for i in range(7):
+	b[i] = sum(v[:,i])
+	
+print(max(b))
+-- EXECUTION TIME:
+1.12774
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+38
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+71
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+56
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 20:06:44) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+
+b = zeros((7), dtype= int)
+
+for i in range(7):
+	b[i] = sum(v[:,i])
+	
+print(max(b))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 20:08:28) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+
+b = zeros((7), dtype= int)
+
+for i in range(7):
+	b[i] = sum(v[:,i])
+	
+print(max(b))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 20:10:39) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+
+b = zeros((7), dtype= int)
+
+for i in range(7):
+	b[i] = sum(v[:,i])
+	
+	if	(b[i] == max(b)):
+		print(i)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-23 20:11:42) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+
+b = zeros((7), dtype= int)
+
+for i in range(7):
+	b[i] = sum(v[:,i])
+	
+	if	(b[i] == max(b)):
+		print(i)
+-- EXECUTION TIME:
+1.12998
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+0
+1
+2
+5
+6
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+0
+1
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+0
+1
+2
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-23 20:11:54) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+
+b = zeros((7), dtype= int)
+
+for i in range(7):
+	b[i] = sum(v[:,i])
+	
+	if	(b[i] == max(b)):
+		print(i + 1)
+-- EXECUTION TIME:
+1.13372
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+1
+2
+3
+6
+7
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+Digite as horas: 1
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+Digite as horas: 1
+2
+3
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-23 20:12:36) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+
+b = zeros((7), dtype= int)
+
+for i in range(7):
+	b[i] = sum(v[:,i])
+	
+	if	(b[i] == max(b)):
+		 a = i + 1
+			print(a)
+-- EXECUTION TIME:
+0.525029
+-- ERROR:
+  File "/home/codebench/codes/1846/1276/main.py", line 14
+    print(a)
+           ^
+TabError: inconsistent use of tabs and spaces in indentation
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-23 20:12:55) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+
+b = zeros((7), dtype= int)
+
+for i in range(7):
+	b[i] = sum(v[:,i])
+	
+	if	(b[i] == max(b)):
+		 a = i + 1
+			print(a)
+-- EXECUTION TIME:
+0.743646
+-- ERROR:
+  File "/home/codebench/codes/1846/1276/main.py", line 14
+    print(a)
+           ^
+TabError: inconsistent use of tabs and spaces in indentation
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 20:12:56) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+
+b = zeros((7), dtype= int)
+
+for i in range(7):
+	b[i] = sum(v[:,i])
+	
+	if	(b[i] == max(b)):
+		 a = i + 1
+			print(a)
+-- ERROR:
+File "XXXX", line 14
+    print(a)
+           ^
+TabError: inconsistent use of tabs and spaces in indentation
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-23 20:13:18) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+
+b = zeros((7), dtype= int)
+
+for i in range(7):
+	b[i] = sum(v[:,i])
+	
+	if	(b[i] == max(b)):
+			a = i + 1
+			print(a)
+-- EXECUTION TIME:
+1.06084
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+1
+2
+3
+6
+7
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+1
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+1
+2
+3
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 20:13:20) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+
+b = zeros((7), dtype= int)
+
+for i in range(7):
+	b[i] = sum(v[:,i])
+	
+	if	(b[i] == max(b)):
+			a = i + 1
+			print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 20:13:38) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+
+b = zeros((7), dtype= int)
+
+for i in range(7):
+	b[i] = sum(v[:,i])
+	
+	if	(b[i] == max(b)):
+			a = i + 1
+			print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-23 20:20:11) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+
+b = zeros((7), dtype= int)
+
+for i in range(7):
+	b[i] = sum(v[:,i])
+	
+	if	(b[i] == max(b)):
+			a = i + 1
+			print(a)
+-- EXECUTION TIME:
+1.21644
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+1
+2
+3
+6
+7
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+1
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+1
+2
+3
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 20:20:16) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+
+b = zeros((7), dtype= int)
+
+for i in range(7):
+	b[i] = sum(v[:,i])
+	
+	if	(b[i] == max(b)):
+			a = i + 1
+			print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-23 20:21:31) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+
+b = zeros((7), dtype= int)
+
+for i in range(7):
+	b[i] = sum(v[:,i])
+	
+	if	(b[i] == max(b)):
+			a = i + 1
+			print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-23 20:23:08) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+v = array(eval(input("Digite as horas: ")))
+
+
+b = zeros((7), dtype= int)
+
+for i in range(7):
+	b[i] = sum(v[:,i])
+	
+	if	(b[i] == max(b)):
+			a = i + 1
+
+print(a)
+-- EXECUTION TIME:
+1.24841
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+7
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

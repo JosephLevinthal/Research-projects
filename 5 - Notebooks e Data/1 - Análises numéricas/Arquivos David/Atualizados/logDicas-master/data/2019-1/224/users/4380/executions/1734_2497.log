@@ -1,0 +1,592 @@
+== TEST (2019-05-14 18:55:18) 
+-- CODE:
+qi    = int(input("Quantia inicial: "))
+tempo = int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0
+
+# Atualizacao de saldo
+while (teste>1):
+	rend = saldo * juros
+	saldo = saldo + rend
+	t = ????
+
+print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- ERROR:
+File "XXXX", line 13
+    t = ????
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 18:59:58) 
+-- CODE:
+qi    = int(input("Quantia inicial: "))
+tempo = int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0
+
+# Atualizacao de saldo
+while (teste>1):
+	rend = saldo * juros
+	saldo = saldo + rend
+	t = t+1
+
+print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    qi    = int(input())
+ValueError: invalid literal for int() with base 10: '575.25'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 19:00:26) 
+-- CODE:
+qi    = float(input("Quantia inicial: "))
+tempo = int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0
+
+# Atualizacao de saldo
+while (teste>1):
+	rend = saldo * juros
+	saldo = saldo + rend
+	t = t+1
+
+print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 10, in <module>
+    while (teste>1):
+NameError: name 'teste' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 19:00:48) 
+-- CODE:
+qi    = float(input("Quantia inicial: "))
+tempo = int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0
+
+# Atualizacao de saldo
+while (t>1):
+	rend = saldo * juros
+	saldo = saldo + rend
+	t = t+1
+
+print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- OUTPUT:
+575.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 19:02:36) 
+-- CODE:
+qi    = float(input("Quantia inicial: "))
+tempo = int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0
+
+# Atualizacao de saldo
+while (t>1):
+	rend = saldo * juros/100
+	saldo = saldo + rend
+	t = t+1
+
+print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- OUTPUT:
+575.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 19:03:05) 
+-- CODE:
+qi    = float(input("Quantia inicial: "))
+tempo = int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0
+
+# Atualizacao de saldo
+while (t>=1):
+	rend = saldo * juros/100
+	saldo = saldo + rend
+	t = t+1
+
+print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- OUTPUT:
+575.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 19:04:14) 
+-- CODE:
+qi    = float(input("Quantia inicial: "))
+tempo = int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0
+
+# Atualizacao de saldo
+while (t<tempo):
+	rend = saldo * juros/100
+	saldo = saldo + rend
+	t = t+1
+
+print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- OUTPUT:
+727.87
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 19:04:37) 
+-- CODE:
+qi    = float(input("Quantia inicial: "))
+tempo = int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0
+
+# Atualizacao de saldo
+while (t<tempo):
+	rend = saldo * juros/100
+	saldo = saldo + rend
+	t = t+1
+
+print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- EXECUTION TIME:
+0.181743
+-- TEST CASE 1:
+---- input:
+575.25
+6
+---- correct output:
+598.26
+622.19
+647.08
+672.96
+699.88
+727.87
+---- user output:
+727.87
+-- TEST CASE 2:
+---- input:
+825.4
+3
+
+---- correct output:
+858.42
+892.75
+928.46
+---- user output:
+928.46
+-- TEST CASE 3:
+---- input:
+1275.65
+5
+---- correct output:
+1326.68
+1379.74
+1434.93
+1492.33
+1552.02
+---- user output:
+1552.02
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 19:04:49) 
+-- CODE:
+qi    = float(input("Quantia inicial: "))
+tempo = int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0
+
+# Atualizacao de saldo
+while (t<tempo):
+	rend = saldo * juros/100
+	saldo = saldo + rend
+	t = t+1
+
+print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- OUTPUT:
+727.87
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 19:05:53) 
+-- CODE:
+qi    = float(input("Quantia inicial: "))
+tempo = int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0
+
+# Atualizacao de saldo
+while (t>=1):
+	rend = saldo * juros/100
+	saldo = saldo + rend
+	t = t+1
+
+print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- OUTPUT:
+575.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 19:07:37) 
+-- CODE:
+qi    = float(input("Quantia inicial: "))
+tempo = int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0
+
+# Atualizacao de saldo
+while (t < tempo):
+	rend = saldo * juros/100
+	saldo = saldo + rend
+	t = t+1
+
+print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- OUTPUT:
+727.87
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 19:09:24) 
+-- CODE:
+qi    = float(input("Quantia inicial: "))
+t = int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0
+
+# Atualizacao de saldo
+while (t>=1):
+	rend = saldo * juros/100
+	saldo = saldo + rend
+	t = t+1
+
+print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- OUTPUT:
+575.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 19:09:32) 
+-- CODE:
+qi    = float(input("Quantia inicial: "))
+t = int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0
+
+# Atualizacao de saldo
+while (t>=1):
+	rend = saldo * juros/100
+	saldo = saldo + rend
+	t = t+1
+
+print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- EXECUTION TIME:
+0.14682
+-- TEST CASE 1:
+---- input:
+575.25
+6
+---- correct output:
+598.26
+622.19
+647.08
+672.96
+699.88
+727.87
+---- user output:
+575.25
+-- TEST CASE 2:
+---- input:
+825.4
+3
+
+---- correct output:
+858.42
+892.75
+928.46
+---- user output:
+825.4
+-- TEST CASE 3:
+---- input:
+1275.65
+5
+---- correct output:
+1326.68
+1379.74
+1434.93
+1492.33
+1552.02
+---- user output:
+1275.65
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 19:12:03) 
+-- CODE:
+qi    = float(input("Quantia inicial: "))
+t = int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0
+
+# Atualizacao de saldo
+while (t>=1):
+	rend = saldo * juros/100
+	saldo = saldo + rend
+	t = t+1
+	print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- OUTPUT:
+575.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 19:13:25) 
+-- CODE:
+qi    = float(input("Quantia inicial: "))
+tempo= int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0
+
+# Atualizacao de saldo
+while (t>=1):
+	rend = saldo * juros/100
+	saldo = saldo + rend
+	t = t+1
+	print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- OUTPUT:
+575.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 19:13:41) 
+-- CODE:
+qi    = float(input("Quantia inicial: "))
+tempo= int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0
+
+# Atualizacao de saldo
+while (t>=1):
+	rend = saldo * juros/100
+	saldo = saldo + rend
+	t = t+1
+print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- OUTPUT:
+575.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 19:15:28) 
+-- CODE:
+qi    = float(input("Quantia inicial: "))
+tempo = int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0
+
+# Atualizacao de saldo
+while (t>-1):
+	rend = saldo * juros/100
+	saldo = saldo + rend
+	t = t+1
+print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- OUTPUT:
+575.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 19:16:54) 
+-- CODE:
+qi    = float(input("Quantia inicial: "))
+tempo = int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0
+
+# Atualizacao de saldo
+while (t<tempo):
+	rend = saldo * juros/100
+	saldo = saldo + rend
+	t = t+1
+print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- OUTPUT:
+727.87
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 19:17:20) 
+-- CODE:
+qi    = float(input("Quantia inicial: "))
+tempo = int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0
+
+# Atualizacao de saldo
+while (t<tempo):
+	rend = saldo * juros/100
+	saldo = saldo + rend
+	t = t+1
+	print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- OUTPUT:
+598.26
+622.19
+647.08
+672.96
+699.88
+727.87
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 19:19:38) 
+-- CODE:
+qi    = float(input("Quantia inicial: "))
+tempo = int(input("Tempo de investimento: "))
+juros = 4.0
+saldo = qi      # Variavel acumuladora
+
+# Valor inicial da variavel contadora
+t = 0
+
+# Atualizacao de saldo
+while (t<tempo):
+	rend = saldo * juros/100
+	saldo = saldo + rend
+	t = t+1
+	print(round(saldo, 2)) # Exibicao de resultados
+
+	
+
+-- EXECUTION TIME:
+0.117021
+-- TEST CASE 1:
+---- input:
+575.25
+6
+---- correct output:
+598.26
+622.19
+647.08
+672.96
+699.88
+727.87
+---- user output:
+598.26
+622.19
+647.08
+672.96
+699.88
+727.87
+-- TEST CASE 2:
+---- input:
+825.4
+3
+
+---- correct output:
+858.42
+892.75
+928.46
+---- user output:
+858.42
+892.75
+928.46
+-- TEST CASE 3:
+---- input:
+1275.65
+5
+---- correct output:
+1326.68
+1379.74
+1434.93
+1492.33
+1552.02
+---- user output:
+1326.68
+1379.74
+1434.93
+1492.33
+1552.02
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

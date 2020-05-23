@@ -1,0 +1,123 @@
+== TEST (2019-04-15 18:12:54) 
+-- CODE:
+tempo = int(input("Tempo: "))
+ri = input("Real ou Irreal: ")
+
+i = (1000042/1500)**(1/tempo) - 1
+
+print(i)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    ri = input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:14:15) 
+-- CODE:
+tempo = int(input("Tempo: "))
+
+i = (1000042/1500)**(1/tempo) - 1
+
+if (i <= 0.1):
+	print(round(i,5))
+	print("Real")
+-- OUTPUT:
+0.00993
+Real
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:14:46) 
+-- CODE:
+tempo = int(input("Tempo: "))
+
+i = (1000042/1500)**(1/tempo) - 1
+
+if (i <= 0.01):
+	print(round(i,5))
+	print("Real")
+	
+else:
+	print(round(i,5))
+	print("Irreal")
+-- OUTPUT:
+0.00993
+Real
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:15:18) 
+-- CODE:
+tempo = int(input("Tempo: "))
+
+i = (1042000/1500)**(1/tempo) - 1
+
+if (i <= 0.01):
+	print(round(i,5))
+	print("Real")
+	
+else:
+	print(round(i,5))
+	print("Irreal")
+-- OUTPUT:
+0.00999
+Real
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:15:24) 
+-- CODE:
+tempo = int(input("Tempo: "))
+
+i = (1042000/1500)**(1/tempo) - 1
+
+if (i <= 0.01):
+	print(round(i,5))
+	print("Real")
+	
+else:
+	print(round(i,5))
+	print("Irreal")
+-- OUTPUT:
+0.00999
+Real
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 18:15:26) 
+-- CODE:
+tempo = int(input("Tempo: "))
+
+i = (1042000/1500)**(1/tempo) - 1
+
+if (i <= 0.01):
+	print(round(i,5))
+	print("Real")
+	
+else:
+	print(round(i,5))
+	print("Irreal")
+-- EXECUTION TIME:
+0.129315
+-- TEST CASE 1:
+---- input:
+658
+---- correct output:
+0.00999
+Real
+---- user output:
+0.00999
+Real
+-- TEST CASE 2:
+---- input:
+565
+---- correct output:
+0.01165
+Irreal
+---- user output:
+0.01165
+Irreal
+-- TEST CASE 3:
+---- input:
+240
+---- correct output:
+0.02764
+Irreal
+---- user output:
+0.02764
+Irreal
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

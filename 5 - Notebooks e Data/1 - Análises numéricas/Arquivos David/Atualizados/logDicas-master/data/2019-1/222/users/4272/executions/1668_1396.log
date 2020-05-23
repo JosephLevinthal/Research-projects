@@ -1,0 +1,130 @@
+== TEST (2019-04-15 19:10:32) 
+-- CODE:
+var = float(input("valor consumido:"))
+if(var>=0):
+-- ERROR:
+File "XXXX", line 3
+    
+               ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:10:50) 
+-- CODE:
+var = float(input("valor consumido:"))
+if(var!=0):
+-- ERROR:
+File "XXXX", line 3
+    
+               ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:15:26) 
+-- CODE:
+var = float(input("valor consumido:"))
+if(var<=300):
+	mensagem = var*10/100
+else:
+	mensagem = var*6/100
+print(round(mensagem, 2))
+-- OUTPUT:
+22.45
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 19:15:48) 
+-- CODE:
+var = float(input("valor consumido:"))
+if(var<=300):
+	mensagem = var*10/100
+else:
+	mensagem = var*6/100
+print(round(mensagem, 2))
+-- EXECUTION TIME:
+0.210595
+-- TEST CASE 1:
+---- input:
+224.5
+---- correct output:
+246.95
+---- user output:
+22.45
+-- TEST CASE 2:
+---- input:
+365.15
+---- correct output:
+387.06
+---- user output:
+21.91
+-- TEST CASE 3:
+---- input:
+500
+---- correct output:
+530.0
+---- user output:
+30.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:17:47) 
+-- CODE:
+var = float(input("valor consumido:"))
+if(var<=300):
+	mensagem = var*10/100
+	total = mesagem + var
+else:
+	mensagem = var*6/100
+	total = mensagem + var
+print(round(total, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    total = mesagem + var
+NameError: name 'mesagem' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 19:18:23) 
+-- CODE:
+var = float(input("valor consumido:"))
+if(var<=300):
+	mensagem = var*10/100
+	total = mensagem + var
+else:
+	mensagem = var*6/100
+	total = mensagem + var
+print(round(total, 2))
+-- OUTPUT:
+246.95
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 19:18:37) 
+-- CODE:
+var = float(input("valor consumido:"))
+if(var<=300):
+	mensagem = var*10/100
+	total = mensagem + var
+else:
+	mensagem = var*6/100
+	total = mensagem + var
+print(round(total, 2))
+-- EXECUTION TIME:
+0.194962
+-- TEST CASE 1:
+---- input:
+224.5
+---- correct output:
+246.95
+---- user output:
+246.95
+-- TEST CASE 2:
+---- input:
+365.15
+---- correct output:
+387.06
+---- user output:
+387.06
+-- TEST CASE 3:
+---- input:
+500
+---- correct output:
+530.0
+---- user output:
+530.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

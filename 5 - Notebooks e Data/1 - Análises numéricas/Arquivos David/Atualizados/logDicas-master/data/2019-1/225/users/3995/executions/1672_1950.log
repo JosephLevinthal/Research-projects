@@ -1,0 +1,207 @@
+== TEST (2019-04-28 13:54:41) 
+-- CODE:
+v=float(input("velocidade:"))
+t=float(input("temperatura:"))
+o=13.12+(0.6215*t)-(11.37*(v**0.16))+(0.3965*t*(v**0.16))
+if((t>=-50 and t<10):
+	if(v>=4.8)):
+		print(round(o, 4))
+	else:
+		print("Velocidade invalida")
+else:
+	print("Temperatura invalida")
+-- ERROR:
+File "XXXX", line 4
+    if((t>=-50 and t<10):
+                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 13:54:48) 
+-- CODE:
+v=float(input("velocidade:"))
+t=float(input("temperatura:"))
+o=13.12+(0.6215*t)-(11.37*(v**0.16))+(0.3965*t*(v**0.16))
+if((t>=-50 and t<10)):
+	if(v>=4.8)):
+		print(round(o, 4))
+	else:
+		print("Velocidade invalida")
+else:
+	print("Temperatura invalida")
+-- ERROR:
+File "XXXX", line 5
+    if(v>=4.8)):
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 13:54:55) 
+-- CODE:
+v=float(input("velocidade:"))
+t=float(input("temperatura:"))
+o=13.12+(0.6215*t)-(11.37*(v**0.16))+(0.3965*t*(v**0.16))
+if((t>=-50 and t<10)):
+	if(v>=4.8):
+		print(round(o, 4))
+	else:
+		print("Velocidade invalida")
+else:
+	print("Temperatura invalida")
+-- OUTPUT:
+6.1143
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 13:55:39) 
+-- CODE:
+v=float(input("velocidade:"))
+t=float(input("temperatura:"))
+o=13.12+(0.6215*t)-(11.37*(v**0.16))+(0.3965*t*(v**0.16))
+if((t>=-50 and t<10)):
+	if(v>4.8):
+		print(round(o, 4))
+	else:
+		print("Velocidade invalida")
+else:
+	print("Temperatura invalida")
+-- OUTPUT:
+6.1143
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 13:57:11) 
+-- CODE:
+v=float(input("velocidade:"))
+t=float(input("temperatura:"))
+o=13.12+(0.6215*t)-(11.37*(v**0.16))+(0.3965*t*(v**0.16))
+if((t>=-50 and t<10)and(v>=4.8)):
+	print(round(o, 4))
+elif(v<4.8):
+	print("velocidade invalida")
+else:
+	print("Temperatura invalida")
+-- OUTPUT:
+6.1143
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 13:57:47) 
+-- CODE:
+t=float(input("temperatura:"))
+v=float(input("velocidade:"))
+
+o=13.12+(0.6215*t)-(11.37*(v**0.16))+(0.3965*t*(v**0.16))
+if((t>=-50 and t<10)and(v>=4.8)):
+	print(round(o, 4))
+elif(v<4.8):
+	print("velocidade invalida")
+else:
+	print("Temperatura invalida")
+-- OUTPUT:
+Temperatura invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 13:58:04) 
+-- CODE:
+t=float(input("temperatura:"))
+v=float(input("velocidade:"))
+
+o=13.12+(0.6215*t)-(11.37*(v**0.16))+(0.3965*t*(v**0.16))
+if((t>=-50 and t<10)and(v>=4.8)):
+	print(round(o, 4))
+elif(v<4.8):
+	print("velocidade invalida")
+else:
+	print("Temperatura invalida")
+-- EXECUTION TIME:
+0.147259
+-- TEST CASE 1:
+---- input:
+20
+9
+---- correct output:
+Temperatura invalida
+---- user output:
+Temperatura invalida
+-- TEST CASE 2:
+---- input:
+-5
+4
+---- correct output:
+Velocidade invalida
+---- user output:
+velocidade invalida
+-- TEST CASE 3:
+---- input:
+-5
+50
+---- correct output:
+-14.9563
+---- user output:
+-14.9563
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 13:58:10) 
+-- CODE:
+t=float(input("temperatura:"))
+v=float(input("velocidade:"))
+
+o=13.12+(0.6215*t)-(11.37*(v**0.16))+(0.3965*t*(v**0.16))
+if((t>=-50 and t<10)and(v>=4.8)):
+	print(round(o, 4))
+elif(v<4.8):
+	print("velocidade invalida")
+else:
+	print("Temperatura invalida")
+-- OUTPUT:
+Temperatura invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 13:58:18) 
+-- CODE:
+t=float(input("temperatura:"))
+v=float(input("velocidade:"))
+
+o=13.12+(0.6215*t)-(11.37*(v**0.16))+(0.3965*t*(v**0.16))
+if((t>=-50 and t<10)and(v>=4.8)):
+	print(round(o, 4))
+elif(v<4.8):
+	print("velocidade invalida")
+else:
+	print("Temperatura invalida")
+-- OUTPUT:
+Temperatura invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 13:58:37) 
+-- CODE:
+t=float(input("temperatura:"))
+v=float(input("velocidade:"))
+
+o=13.12+(0.6215*t)-(11.37*(v**0.16))+(0.3965*t*(v**0.16))
+if((t>=-50 and t<10)and(v>=4.8)):
+	print(round(o, 4))
+elif(v<4.8):
+	print("Velocidade invalida")
+else:
+	print("Temperatura invalida")
+-- EXECUTION TIME:
+0.222662
+-- TEST CASE 1:
+---- input:
+20
+9
+---- correct output:
+Temperatura invalida
+---- user output:
+Temperatura invalida
+-- TEST CASE 2:
+---- input:
+-5
+4
+---- correct output:
+Velocidade invalida
+---- user output:
+Velocidade invalida
+-- TEST CASE 3:
+---- input:
+-5
+50
+---- correct output:
+-14.9563
+---- user output:
+-14.9563
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

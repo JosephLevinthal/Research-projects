@@ -1,0 +1,449 @@
+== TEST (2019-03-28 11:44:41) 
+-- CODE:
+expressao = 30 – (3 ** 2) + 8 // (3 ** 2) * 10
+print(expressao)
+-- ERROR:
+File "XXXX", line 1
+    expressao = 30 – (3 ** 2) + 8 // (3 ** 2) * 10
+                   ^
+SyntaxError: invalid character in identifier
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:44:49) 
+-- CODE:
+expressao = 30 – (3 ** 2) + 8 // (3 ** 2) * 10
+print(expressao)
+-- ERROR:
+File "XXXX", line 1
+    expressao = 30 – (3 ** 2) + 8 // (3 ** 2) * 10
+                   ^
+SyntaxError: invalid character in identifier
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:45:30) 
+-- CODE:
+expressao = 30 – (3 ** 2) + 8 // (3 ** 2 * 10)
+print(expressao)
+-- ERROR:
+File "XXXX", line 1
+    expressao = 30 – (3 ** 2) + 8 // (3 ** 2 * 10)
+                   ^
+SyntaxError: invalid character in identifier
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:45:53) 
+-- CODE:
+expressao = 30 – (3**2) + 8 // (3**2 * 10)
+print(expressao)
+-- ERROR:
+File "XXXX", line 1
+    expressao = 30 – (3**2) + 8 // (3**2 * 10)
+                   ^
+SyntaxError: invalid character in identifier
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:46:03) 
+-- CODE:
+expressao = 30 – (3**2) + 8 // ((3**2) * 10)
+print(expressao)
+-- ERROR:
+File "XXXX", line 1
+    expressao = 30 – (3**2) + 8 // ((3**2) * 10)
+                   ^
+SyntaxError: invalid character in identifier
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:46:22) 
+-- CODE:
+expressao = 30 – (3**2) + (8 // ((3**2) * 10))
+print(expressao)
+-- ERROR:
+File "XXXX", line 1
+    expressao = 30 – (3**2) + (8 // ((3**2) * 10))
+                   ^
+SyntaxError: invalid character in identifier
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:48:05) 
+-- CODE:
+var1 = 3**2
+print(var1)
+expressao = 
+print(expressao)
+-- ERROR:
+File "XXXX", line 3
+    expressao = 
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:48:07) 
+-- CODE:
+var1 = 3**2
+print(var1)
+expressao = 
+print(expressao)
+-- ERROR:
+File "XXXX", line 3
+    expressao = 
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:48:15) 
+-- CODE:
+var1 = 3**2
+print(var1)
+
+print(expressao)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(expressao)
+NameError: name 'expressao' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:48:18) 
+-- CODE:
+var1 = 3**2
+print(var1)
+
+
+-- OUTPUT:
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:49:16) 
+-- CODE:
+var1 = ((30 - 3**2) + 8) // 3**2 * 10
+print(var1)
+
+
+-- OUTPUT:
+30
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:49:40) 
+-- CODE:
+var1 = ((30 - 3**2) + 8) // 3**2 * 10
+print(var1)
+var2 = 3**2
+print(var2)
+
+-- OUTPUT:
+30
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:49:56) 
+-- CODE:
+var1 = ((30 - 3**2) 
+print(var1)
+var2 = 3**2
+print(var2)
+
+-- ERROR:
+File "XXXX", line 2
+    print(var1)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:50:07) 
+-- CODE:
+var1 = (30 - 3**2)
+print(var1)
+var2 = 3**2
+print(var2)
+
+-- OUTPUT:
+21
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:50:19) 
+-- CODE:
+var1 = ((30 - 3**2) + 8) 
+print(var1)
+var2 = 3**2
+print(var2)
+
+-- OUTPUT:
+29
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:50:21) 
+-- CODE:
+var1 = ((30 - 3**2) + 8) 
+print(var1)
+var2 = 3**2
+print(var2)
+
+-- OUTPUT:
+29
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:50:22) 
+-- CODE:
+var1 = ((30 - 3**2) + 8) 
+print(var1)
+var2 = 3**2
+print(var2)
+
+-- OUTPUT:
+29
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:50:23) 
+-- CODE:
+var1 = ((30 - 3**2) + 8) 
+print(var1)
+var2 = 3**2
+print(var2)
+
+-- OUTPUT:
+29
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:50:33) 
+-- CODE:
+var1 = (30 - 3**2) + 8 
+print(var1)
+var2 = 3**2
+print(var2)
+
+-- OUTPUT:
+29
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:50:35) 
+-- CODE:
+var1 = (30 - 3**2) + 8 
+print(var1)
+var2 = 3**2
+print(var2)
+
+-- OUTPUT:
+29
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:50:36) 
+-- CODE:
+var1 = (30 - 3**2) + 8 
+print(var1)
+var2 = 3**2
+print(var2)
+
+-- OUTPUT:
+29
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:50:45) 
+-- CODE:
+var1 = (30 - 3**2) 
+print(var1)
+var2 = 3**2
+print(var2)
+
+-- OUTPUT:
+21
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:51:01) 
+-- CODE:
+var1 = 3**2 * 10
+print(var1)
+var2 = 3**2
+print(var2)
+
+-- OUTPUT:
+90
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:51:08) 
+-- CODE:
+var1 = ((30 - 3**2) + 8) // 3**2 * 10
+print(var1)
+var2 = 3**2
+print(var2)
+
+-- OUTPUT:
+30
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:52:05) 
+-- CODE:
+expressao = ((30 - 3**2) + 8) // 3**2 * 10
+print(expressao)
+
+
+-- OUTPUT:
+30
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-28 11:52:10) 
+-- CODE:
+expressao = ((30 - 3**2) + 8) // 3**2 * 10
+print(expressao)
+
+
+-- EXECUTION TIME:
+0.185032
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+21
+---- user output:
+30
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:52:40) 
+-- CODE:
+expressao = ((30 - 3**2) + 8) // (3**2 * 10)
+print(expressao)
+
+
+-- OUTPUT:
+30
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-28 11:52:43) 
+-- CODE:
+expressao = ((30 - 3**2) + 8) // (3**2 * 10)
+print(expressao)
+
+
+-- EXECUTION TIME:
+0.312441
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+21
+---- user output:
+0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:52:45) 
+-- CODE:
+expressao = ((30 - 3**2) + 8) // (3**2 * 10)
+print(expressao)
+
+
+-- OUTPUT:
+30
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:52:58) 
+-- CODE:
+expressao = (((30 - 3**2) + 8) // (3**2 * 10))
+print(expressao)
+
+
+-- OUTPUT:
+30
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:53:24) 
+-- CODE:
+expressao = ((30 - 3**2) + 8) // 3**2 * 10
+print(expressao)
+
+
+-- OUTPUT:
+30
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:53:27) 
+-- CODE:
+expressao = ((30 - 3**2) + 8) // 3**2 * 10
+print(expressao)
+
+
+-- OUTPUT:
+30
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-28 11:53:37) 
+-- CODE:
+expressao = ((30 - 3**2) + 8) // 3**2 * 10
+print(expressao)
+
+
+-- EXECUTION TIME:
+0.279361
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+21
+---- user output:
+30
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:53:37) 
+-- CODE:
+expressao = ((30 - 3**2) + 8) // 3**2 * 10
+print(expressao)
+
+
+-- OUTPUT:
+30
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-28 11:54:38) 
+-- CODE:
+expressao = 30 - 3**2 + (8 // (3**2 * 10))
+print(expressao)
+-- OUTPUT:
+21
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-28 11:54:44) 
+-- CODE:
+expressao = 30 - 3**2 + (8 // (3**2 * 10))
+print(expressao)
+-- EXECUTION TIME:
+0.143924
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+21
+---- user output:
+21
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-29 01:52:11) 
+-- CODE:
+expressao = 30 - 3**2 + (8 // (3**2 * 10))
+print(expressao)
+-- OUTPUT:
+21
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-29 02:12:55) 
+-- CODE:
+expressao = 30 - 3**2 + (8 // (3**2 * 10))
+print(expressao)
+-- EXECUTION TIME:
+0.165476
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+21
+---- user output:
+21
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-27 17:12:38) 
+-- CODE:
+# Variavel
+E = 30 - (3**2) + (8 // (3**2)) * 10
+# Saida
+print(E)
+-- OUTPUT:
+21
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-27 17:12:44) 
+-- CODE:
+# Variavel
+E = 30 - (3**2) + (8 // (3**2)) * 10
+# Saida
+print(E)
+-- EXECUTION TIME:
+0.157211
+-- TEST CASE 1:
+---- input:
+xx
+---- correct output:
+21
+---- user output:
+21
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

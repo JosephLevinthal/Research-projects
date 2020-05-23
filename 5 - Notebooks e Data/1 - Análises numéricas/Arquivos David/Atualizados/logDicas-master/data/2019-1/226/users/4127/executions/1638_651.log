@@ -1,0 +1,252 @@
+== TEST (2019-04-11 11:01:25) 
+-- CODE:
+h= float(input("qual a altura? "))
+sexo= input("qual o sexo? ")
+
+if (sexo.upper()="M"):
+	print(72,7*h-58)
+if (sexo.upper()="F"):
+	print(62,1*h-44,7)
+-- ERROR:
+File "XXXX", line 4
+    if (sexo.upper()="M"):
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:01:32) 
+-- CODE:
+h= float(input("qual a altura? "))
+sexo= input("qual o sexo? ")
+
+if (sexo.upper()=="M"):
+	print(72,7*h-58)
+if (sexo.upper()=="F"):
+	print(62,1*h-44,7)
+-- OUTPUT:
+62 -43.0 7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:02:11) 
+-- CODE:
+h= float(input("qual a altura? "))
+sexo= input("qual o sexo? ")
+
+if (sexo.upper()=="M"):
+	print(round(72,7*h-58,2))
+if (sexo.upper()=="F"):
+	print(round(62,1*h-44,7,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    print(round(62,1*h-44,7,2))
+TypeError: round() takes at most 2 arguments (4 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:03:46) 
+-- CODE:
+h= float(input("qual a altura? "))
+sexo= input("qual o sexo? ")
+m= (72,7*h)-58
+f= (62,1*h)-44,7
+if (sexo.upper()=="M"):
+	print(round(m,2))
+if (sexo,upper()=="F")
+	print(round(f,2))
+-- ERROR:
+File "XXXX", line 7
+    if (sexo,upper()=="F")
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:03:49) 
+-- CODE:
+h= float(input("qual a altura? "))
+sexo= input("qual o sexo? ")
+m= (72,7*h)-58
+f= (62,1*h)-44,7
+if (sexo.upper()=="M"):
+	print(round(m,2))
+if (sexo,upper()=="F"):
+	print(round(f,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    m= (72,7*h)-58
+TypeError: unsupported operand type(s) for -: 'tuple' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:04:22) 
+-- CODE:
+h= float(input("qual a altura? "))
+sexo= input("qual o sexo? ")
+m= (72.7*h)-58
+f= (62.1*h)-44,7
+if (sexo.upper()=="M"):
+	print(round(m,2))
+if (sexo,upper()=="F"):
+	print(round(f,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    if (sexo,upper()=="F"):
+NameError: name 'upper' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 11:04:33) 
+-- CODE:
+h= float(input("qual a altura? "))
+sexo= input("qual o sexo? ")
+m= (72.7*h)-58
+f= (62.1*h)-44,7
+if (sexo.upper()=="M"):
+	print(round(m,2))
+if (sexo.upper()=="F"):
+	print(round(f,2))
+-- EXECUTION TIME:
+0.225302
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1638/651/main.py", line 8, in <module>
+    print(round(f,2))
+TypeError: type tuple doesn't define __round__ method
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:04:34) 
+-- CODE:
+h= float(input("qual a altura? "))
+sexo= input("qual o sexo? ")
+m= (72.7*h)-58
+f= (62.1*h)-44,7
+if (sexo.upper()=="M"):
+	print(round(m,2))
+if (sexo.upper()=="F"):
+	print(round(f,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(round(f,2))
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:06:44) 
+-- CODE:
+h= float(input("qual a altura? "))
+sexo= input("qual o sexo? ")
+m= (72.7*h)-58
+f= (62.1*h)-44,7
+if (sexo.upper()=="M"):
+	print(round(m,2))
+if (sexo.upper()=="F"):
+	print(round(f,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(round(f,2))
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:07:03) 
+-- CODE:
+h= float(input("qual a altura? "))
+sexo= input("qual o sexo? ")
+m= (72.7*h)-58
+f= (62.1*h)-44,7
+if (sexo.upper()=="M"):
+	print(round(m,2))
+if (sexo.upper()=="F"):
+	print(round(f,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(round(f,2))
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:07:07) 
+-- CODE:
+h= float(input("qual a altura? "))
+sexo= input("qual o sexo? ")
+m= (72.7*h)-58
+f= (62.1*h)-44,7
+if (sexo.upper()=="M"):
+	print(round(m,2))
+if (sexo.upper()=="F"):
+	print(round(f,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(round(f,2))
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:07:40) 
+-- CODE:
+h= float(input("qual a altura? "))
+sexo= input("qual o sexo? ")
+m= (72.7*h)-58
+f= (62.1*h)-44,7
+if (sexo.upper()=="M"):
+	print(round(m,2))
+if (sexo.upper()=="F"):
+	print(round(f,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(round(f,2))
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:07:53) 
+-- CODE:
+h= float(input("qual a altura? "))
+sexo= input("qual o sexo? ")
+m= (72.7*h)-58
+f= (62.1*h)-44,7
+if (sexo.upper()=="M"):
+	print(round(m,2))
+else:
+	print(round(f,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(round(f,2))
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:08:45) 
+-- CODE:
+h= float(input("qual a altura? "))
+sexo= input("qual o sexo? ")
+m= (72.7*h)-58
+f= (62.1*h)-44,7
+if (sexo.upper()=="M"):
+	print(round(m,2))
+if (sexo.upper()=="F"):
+	print(round(f,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    print(round(f,2))
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 11:09:03) 
+-- CODE:
+h= float(input("qual a altura? "))
+sexo= input("qual o sexo? ")
+m= (72.7*h)-58
+f= (62.1*h)-44.7
+if (sexo.upper()=="M"):
+	print(round(m,2))
+if (sexo.upper()=="F"):
+	print(round(f,2))
+-- EXECUTION TIME:
+0.151608
+-- TEST CASE 1:
+---- input:
+1.0
+F
+---- correct output:
+17.4
+---- user output:
+17.4
+-- TEST CASE 2:
+---- input:
+1.234
+M
+---- correct output:
+31.71
+---- user output:
+31.71
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

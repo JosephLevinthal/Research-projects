@@ -1,0 +1,210 @@
+== TEST (2019-07-04 10:31:55) 
+-- CODE:
+from numpy import*
+
+vet = array(eval(input("vetor de alunos: ")))
+a = 0
+
+for i in range(size(vet)):
+	if vet[i] // 3 == 0:
+		a = a + 1
+		
+vect = zeros(a,dtype=int)
+
+for j in range(size(vet)):
+	if vet(j) // 3 == 0:
+		vect(j) = j
+		
+print(a)
+print(vect)
+-- ERROR:
+File "XXXX", line 14
+    vect(j) = j
+    ^
+SyntaxError: can't assign to function call
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:33:41) 
+-- CODE:
+from numpy import*
+
+vet = array(eval(input("vetor de alunos: ")))
+a = 0
+
+for i in range(size(vet)):
+	if vet[i] // 3 == 0:
+		a = a + 1
+		
+vect = zeros(a,dtype=int)
+a = 0
+b = 0
+for j in range(size(vet)):
+	if vet(j) // 3 == 0:
+		a = j
+		vect(a) = a
+
+print(a)
+print(vect)
+-- ERROR:
+File "XXXX", line 16
+    vect(a) = a
+    ^
+SyntaxError: can't assign to function call
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:34:10) 
+-- CODE:
+from numpy import*
+
+vet = array(eval(input("vetor de alunos: ")))
+a = 0
+
+for i in range(size(vet)):
+	if vet[i] // 3 == 0:
+		a = a + 1
+		
+vect = zeros(a,dtype=int)
+b = 0
+for j in range(size(vet)):
+	if vet(j) // 3 == 0:
+		a = j
+		vect(b) = b
+
+print(a)
+print(vect)
+-- ERROR:
+File "XXXX", line 15
+    vect(b) = b
+    ^
+SyntaxError: can't assign to function call
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:36:27) 
+-- CODE:
+from numpy import*
+
+vet = array(eval(input("vetor de alunos: ")))
+a = 0
+
+for i in range(size(vet)):
+	if vet[i] // 3 == 0:
+		a = a + 1
+		
+vect = zeros(a,dtype=int)
+b = 0
+for j in range(size(vet)):
+	if vet[j] // 3 == 0:
+		b = j
+		vect[b] = b
+
+print(a)
+print(vect)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:37:30) 
+-- CODE:
+from numpy import*
+
+vet = array(eval(input("vetor de alunos: ")))
+a = 0
+
+for i in range(size(vet)):
+	if vet[i] // 3 == 0:
+		a = a + 1
+		print(a)
+vect = zeros(a,dtype=int)
+b = 0
+for j in range(size(vet)):
+	if vet[j] // 3 == 0:
+		b = j
+		vect[b] = b
+
+print(a)
+print(vect)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:39:30) 
+-- CODE:
+from numpy import*
+
+vet = array(eval(input("vetor de alunos: ")))
+a = 0
+
+for i in range(size(vet)):
+	if vet[i] % 3 == 0:
+		a = a + 1
+		print(a)
+vect = zeros(a,dtype=int)
+b = 0
+for j in range(size(vet)):
+	if vet[j] // 3 == 0:
+		b = j
+		vect[b] = b
+
+print(a)
+print(vect)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:51:05) 
+-- CODE:
+from numpy import*
+
+vet = array(eval(input("vetor de alunos: ")))
+a = 0
+
+for i in range(size(vet)):
+	if vet[i] % 3 == 0:
+		a = a + 1
+
+vect = zeros(a,dtype=int)
+
+for j in range(size(vet)):
+	c = c + 1
+	if vet[j] % 3 == 0:
+		x = c - 1
+		vect[x] == c - 1
+
+print(a)
+print(vect)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:51:55) 
+-- CODE:
+from numpy import*
+
+vet = array(eval(input("vetor de alunos: ")))
+a = 0
+
+for i in range(size(vet)):
+	if vet[i] % 3 == 0:
+		a = a + 1
+
+vect = zeros(a,dtype=int)
+c = 0
+for j in range(size(vet)):
+	c = c + 1
+	if vet[j] % 3 == 0:
+		x = c - 1
+		vect[x] == c - 1
+
+print(a)
+print(vect)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

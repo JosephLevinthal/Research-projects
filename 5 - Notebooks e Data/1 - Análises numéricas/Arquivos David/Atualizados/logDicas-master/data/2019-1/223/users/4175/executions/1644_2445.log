@@ -1,0 +1,421 @@
+== TEST (2019-04-13 22:40:32) 
+-- CODE:
+v =input("digite escala da temperatura: ") 
+x =input("digite a quantidade de temperatura: ")
+
+if v == "F":
+	F = (5/9)*(x-32)
+
+if v == "C":
+	C = (5/9)*(x-32)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    C = (5/9)*(x-32)
+TypeError: unsupported operand type(s) for -: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 22:41:06) 
+-- CODE:
+v =int(input("digite escala da temperatura: "))
+x =int(input("digite a quantidade de temperatura: "))
+
+if v == "F":
+	F = (5/9)*(x-32)
+
+if v == "C":
+	C = (5/9)*(x-32)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    v =int(input())
+ValueError: invalid literal for int() with base 10: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 22:41:16) 
+-- CODE:
+v =input("digite escala da temperatura: ")
+x =int(input("digite a quantidade de temperatura: "))
+
+if v == "F":
+	F = (5/9)*(x-32)
+
+if v == "C":
+	C = (5/9)*(x-32)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    v =int(input())
+ValueError: invalid literal for int() with base 10: 'C'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 22:41:33) 
+-- CODE:
+v =input("digite escala da temperatura: ")
+x =int(input("digite a quantidade de temperatura: "))
+
+if v == "F":
+	F = (5/9)*(x-32)
+	print(F)
+
+if v == "C":
+	C = (5/9)*(x-32)
+	print(C)
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 22:41:54) 
+-- CODE:
+v =input("digite escala da temperatura: ")
+x =int(input("digite a quantidade de temperatura: "))
+
+if v == "F":
+	F = (5/9)*(x-32)
+	print(round(F,2))
+
+if v == "C":
+	C = (5/9)*(x-32)
+	print(round(C,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 22:42:43) 
+-- CODE:
+v =input("digite escala da temperatura: ")
+x =int(input("digite a quantidade de temperatura: "))
+
+if .upper(v) == "F":
+	F = (5/9)*(x-32)
+	print(round(F,2))
+
+if v == "C":
+	C = (5/9)*(x-32)
+	print(round(C,2))
+-- ERROR:
+File "XXXX", line 4
+    if .upper(v) == "F":
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 22:43:07) 
+-- CODE:
+v =input("digite escala da temperatura: ")
+x =int(input("digite a quantidade de temperatura: "))
+
+y = .upper(v)
+
+if y == "F":
+	F = (5/9)*(x-32)
+	print(round(F,2))
+
+if v == "C":
+	C = (5/9)*(x-32)
+	print(round(C,2))
+-- ERROR:
+File "XXXX", line 4
+    y = .upper(v)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 22:43:43) 
+-- CODE:
+v =input("digite escala da temperatura: ")
+x =int(input("digite a quantidade de temperatura: "))
+
+
+if v.upper() == "F":
+	F = (5/9)*(x-32)
+	print(round(F,2))
+
+if v == "C":
+	C = (5/9)*(x-32)
+	print(round(C,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-13 22:43:55) 
+-- CODE:
+v =input("digite escala da temperatura: ")
+x =int(input("digite a quantidade de temperatura: "))
+
+
+if v.upper() == "F":
+	F = (5/9)*(x-32)
+	print(round(F,2))
+
+if v == "C":
+	C = (5/9)*(x-32)
+	print(round(C,2))
+-- EXECUTION TIME:
+0.209405
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 22:43:58) 
+-- CODE:
+v =input("digite escala da temperatura: ")
+x =int(input("digite a quantidade de temperatura: "))
+
+
+if v.upper() == "F":
+	F = (5/9)*(x-32)
+	print(round(F,2))
+
+if v == "C":
+	C = (5/9)*(x-32)
+	print(round(C,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 22:44:22) 
+-- CODE:
+v =input("digite escala da temperatura: ")
+x =int(input("digite a quantidade de temperatura: "))
+
+
+if v.upper() == "F":
+	F = (5/9)*(x-32)
+	print(round(F,2))
+
+if v == "C":
+	C = (5/9)*(x-32)
+	print(round(C,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-13 22:44:38) 
+-- CODE:
+v =input("digite escala da temperatura: ")
+x =int(input("digite a quantidade de temperatura: "))
+
+
+if v.upper() == "F":
+	F = (5/9)*(x-32)
+	print(round(F,2))
+
+if v.upper() == "C":
+	C = (5/9)*(x-32)
+	print(round(C,2))
+-- EXECUTION TIME:
+0.162574
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+160.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+-17.78
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 22:44:38) 
+-- CODE:
+v =input("digite escala da temperatura: ")
+x =int(input("digite a quantidade de temperatura: "))
+
+
+if v.upper() == "F":
+	F = (5/9)*(x-32)
+	print(round(F,2))
+
+if v.upper() == "C":
+	C = (5/9)*(x-32)
+	print(round(C,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 22:45:11) 
+-- CODE:
+v =input("digite escala da temperatura: ")
+x =int(input("digite a quantidade de temperatura: "))
+
+
+if v.upper() == "F":
+	F = (5/9)*(x-32)
+	print(round(F,2))
+
+if v.upper() == "C":
+	C = (5/9)*(x-32)
+	print(round(C,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 22:45:23) 
+-- CODE:
+v =input("digite escala da temperatura: ")
+x =int(input("digite a quantidade de temperatura: "))
+
+
+if v.upper() == "F":
+	F = (5/9)*(x-32)
+	print(round(F,2))
+
+if v.upper() == "C":
+	C = (5/9)*(x-32)
+	print(round(C,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 22:45:29) 
+-- CODE:
+v =input("digite escala da temperatura: ")
+x =int(input("digite a quantidade de temperatura: "))
+
+
+if v.upper() == "F":
+	F = (5/9)*(x-32)
+	print(round(F,2))
+
+if v.upper() == "C":
+	C = (5/9)*(x-32)
+	print(round(C,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 22:47:38) 
+-- CODE:
+v =input("digite escala da temperatura: ")
+x =int(input("digite a quantidade de temperatura: "))
+
+
+if v.upper() == "F":
+	F = (5/9)*(x-32)
+	print(round(F,2))
+
+if v.upper() == "C":
+	C = (x-32)/(5/9)
+	print(round(C,2))
+-- OUTPUT:
+518.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 22:49:41) 
+-- CODE:
+v =input("digite escala da temperatura: ")
+x =int(input("digite a quantidade de temperatura: "))
+
+
+if v.upper() == "F":
+	F = (5/9)*(x-32)
+	print(round(F,2))
+
+if v.upper() == "C":
+	C = ((5/9)*C) +32 
+	print(round(C,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 10, in <module>
+    C = ((5/9)*C) +32 
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 22:49:57) 
+-- CODE:
+v =input("digite escala da temperatura: ")
+x =int(input("digite a quantidade de temperatura: "))
+
+
+if v.upper() == "F":
+	F = (5/9)*(x-32)
+	print(round(F,2))
+
+if v.upper() == "C":
+	C = ((5/9)*x) +32 
+	print(round(C,2))
+-- OUTPUT:
+209.78
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 22:50:23) 
+-- CODE:
+v =input("digite escala da temperatura: ")
+x =int(input("digite a quantidade de temperatura: "))
+
+
+if v.upper() == "F":
+	F = (5/9)*(x-32)
+	print(round(F,2))
+
+if v.upper() == "C":
+	C = ((9/5)*x) +32 
+	print(round(C,2))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-13 22:50:34) 
+-- CODE:
+v =input("digite escala da temperatura: ")
+x =int(input("digite a quantidade de temperatura: "))
+
+
+if v.upper() == "F":
+	F = (5/9)*(x-32)
+	print(round(F,2))
+
+if v.upper() == "C":
+	C = ((9/5)*x) +32 
+	print(round(C,2))
+-- EXECUTION TIME:
+0.124745
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

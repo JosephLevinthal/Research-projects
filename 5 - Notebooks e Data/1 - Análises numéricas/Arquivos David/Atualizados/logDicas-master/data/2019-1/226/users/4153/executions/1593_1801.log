@@ -1,0 +1,375 @@
+== SUBMITION (2019-03-26 10:38:11) 
+-- CODE:
+Obj = input("Insira o nome do bojeto: ")
+nr = input("Insira o numero de repeticoes: ")
+
+print(Obj+nr)
+-- EXECUTION TIME:
+0.185035
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+livro8
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+carro2
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+caixa1
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:38:13) 
+-- CODE:
+Obj = input("Insira o nome do bojeto: ")
+nr = input("Insira o numero de repeticoes: ")
+
+print(Obj+nr)
+-- OUTPUT:
+livro8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:38:20) 
+-- CODE:
+Obj = input("Insira o nome do ojeto: ")
+nr = input("Insira o numero de repeticoes: ")
+
+print(Obj+nr)
+-- OUTPUT:
+livro8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:38:32) 
+-- CODE:
+Obj = input("Insira o nome do ojeto: ")
+nr = input("Insira o numero de repeticoes: ")
+
+print(Obj,+ nr)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(Obj,+ nr)
+TypeError: bad operand type for unary +: 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:39:01) 
+-- CODE:
+Obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+
+print(Obj * nr)
+-- OUTPUT:
+livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:40:12) 
+-- CODE:
+Obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+
+print("Abra ",+ Obj * nr)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print("Abra ",+ Obj * nr)
+TypeError: bad operand type for unary +: 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:41:04) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+
+frase=obj * nr
+
+print(frase)
+-- OUTPUT:
+livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:41:40) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+
+frase=obj * nr, 
+
+print(frase)
+-- OUTPUT:
+('livrolivrolivrolivrolivrolivrolivrolivro',)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:41:57) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+
+frase=obj *, nr
+
+print(frase)
+-- ERROR:
+File "XXXX", line 4
+    frase=obj *, nr
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:42:49) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+Comeco="Abra ",+obj
+frase=obj * nr
+
+print(frase)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    Comeco="Abra ",+obj
+TypeError: bad operand type for unary +: 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:43:16) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+Comeco="Abra ",obj
+frase=obj * nr
+
+print(frase)
+-- OUTPUT:
+livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:43:44) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+Comeco="Abra ",obj
+frase=obj * nr
+
+print(frase * nr)
+-- OUTPUT:
+livrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:44:19) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+Comeco="Abra ",obj
+frase=obj * nr
+
+print(Comeco)
+-- OUTPUT:
+('Abra ', 'livro')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:44:37) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+Comeco="Abra " obj
+frase=obj * nr
+
+print(Comeco)
+-- ERROR:
+File "XXXX", line 3
+    Comeco="Abra " obj
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:45:00) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+Comeco="""Abra ", obj""
+frase=obj * nr
+
+print(Comeco)
+-- ERROR:
+File "XXXX", line 7
+    print(Comeco)
+                ^
+SyntaxError: EOF while scanning triple-quoted string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:45:25) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+Comeco=""Abra ", obj""
+frase=obj * nr
+
+print(Comeco)
+-- ERROR:
+File "XXXX", line 3
+    Comeco=""Abra ", obj""
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:45:43) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+Comeco="Abra ", obj
+frase=obj * nr
+
+print(Comeco)
+-- OUTPUT:
+('Abra ', 'livro')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:46:03) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+Comeco="Abra ",obj
+frase=obj * nr
+
+print(Comeco)
+-- OUTPUT:
+('Abra ', 'livro')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:46:26) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+Comeco="Abra ",+obj
+frase=obj * nr
+
+print(Comeco)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    Comeco="Abra ",+obj
+TypeError: bad operand type for unary +: 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:46:48) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+Comeco="Abra ",+ obj
+frase=obj * nr
+
+print(Comeco)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    Comeco="Abra ",+ obj
+TypeError: bad operand type for unary +: 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:47:26) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+Comeco="Abra " + obj
+frase=obj * nr
+
+print(Comeco)
+-- OUTPUT:
+Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:47:42) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+Comeco="Abra " + obj
+frase=obj * nr
+
+print(Comeco * nr)
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:47:54) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+Comeco="Abra " + obj
+frase=obj * nr
+
+print(Comeco * nr )
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:48:12) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+Comeco="Abra " + obj
+frase=obj * nr
+
+print(Comeco * nr," " )
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:49:00) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+Comeco=" Abra " + obj
+frase=obj * nr
+
+print(Comeco * nr), " "
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:49:12) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+Comeco=" Abra " + obj
+frase=obj * nr
+
+print((Comeco * nr), " ")
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:49:23) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+Comeco="Abra " + obj
+frase=obj * nr
+
+print((Comeco * nr), " ")
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 10:49:37) 
+-- CODE:
+obj = input("Insira o nome do ojeto: ")
+nr = int(input("Insira o numero de repeticoes: "))
+Comeco=" Abra " + obj
+frase=obj * nr
+
+print(Comeco * nr)
+-- EXECUTION TIME:
+0.16455
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

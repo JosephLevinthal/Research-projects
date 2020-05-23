@@ -1,0 +1,159 @@
+== TEST (2019-03-22 17:11:30) 
+-- CODE:
+var=x/y
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    var=x/y
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 17:13:26) 
+-- CODE:
+var=float(int("quantos vale x"))
+var=float(int("quatos vale y"))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    var=float(int("quantos vale x"))
+ValueError: invalid literal for int() with base 10: 'quantos vale x'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 17:13:59) 
+-- CODE:
+var=float(int("quantos vale x:"))
+var=float(int("quatos vale y:"))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    var=float(int("quantos vale x:"))
+ValueError: invalid literal for int() with base 10: 'quantos vale x:'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 17:14:41) 
+-- CODE:
+varA=float(int("quantos vale x:"))
+varB=float(int("quatos vale y:"))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    varA=float(int("quantos vale x:"))
+ValueError: invalid literal for int() with base 10: 'quantos vale x:'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 17:15:35) 
+-- CODE:
+varA= int(input("quantos vale x:"))
+varB= int(input("quatos vale y:"))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    varA=float(int("quantos vale x:"))
+ValueError: invalid literal for int() with base 10: 'quantos vale x:'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 17:27:53) 
+-- CODE:
+varA= int(input("quantos vale x:"))
+varB= int(input("quatos vale y:"))
+print(a)= x/y
+-- ERROR:
+File "XXXX", line 3
+    print(a)= x/y
+    ^
+SyntaxError: can't assign to function call
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 17:29:04) 
+-- CODE:
+varA= int(input("quantos vale x:"))
+varB= int(input("quatos vale y:"))
+print(a)= x//y
+-- ERROR:
+File "XXXX", line 3
+    print(a)= x//y
+    ^
+SyntaxError: can't assign to function call
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-22 17:29:10) 
+-- CODE:
+varA= int(input("quantos vale x:"))
+varB= int(input("quatos vale y:"))
+print(a)= x//y
+-- EXECUTION TIME:
+0.179312
+-- ERROR:
+  File "/home/codebench/codes/1602/2049/main.py", line 3
+    print(a)= x//y
+    ^
+SyntaxError: can't assign to function call
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-22 17:33:39) 
+-- CODE:
+varA= int(input("quantos vale x:"))
+varB= int(input("quatos vale y:"))
+print(varA)
+print(varB)
+print(varA//varB)
+print(varA%varB)
+-- OUTPUT:
+8
+5
+1
+3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-22 17:34:08) 
+-- CODE:
+varA= int(input("quantos vale x:"))
+varB= int(input("quatos vale y:"))
+print(varA)
+print(varB)
+print(varA//varB)
+print(varA%varB)
+-- EXECUTION TIME:
+0.16405
+-- TEST CASE 1:
+---- input:
+8
+5
+---- correct output:
+8
+5
+1
+3
+---- user output:
+8
+5
+1
+3
+-- TEST CASE 2:
+---- input:
+14
+2
+---- correct output:
+14
+2
+7
+0
+---- user output:
+14
+2
+7
+0
+-- TEST CASE 3:
+---- input:
+347
+2
+---- correct output:
+347
+2
+173
+1
+---- user output:
+347
+2
+173
+1
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

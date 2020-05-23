@@ -1,0 +1,463 @@
+== TEST (2019-03-12 11:42:18) 
+-- CODE:
+aresta = 5
+area = Print(3/2*3*5**2**1/2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = Print(3/2*3*5**2**1/2)
+NameError: name 'Print' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:42:45) 
+-- CODE:
+aresta = 5
+area = Print(3/2*3**1/2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = Print(3/2*3**1/2)
+NameError: name 'Print' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:43:08) 
+-- CODE:
+aresta = 5
+area = 
+print(3/2*3**1/2)
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 2
+    area = 
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:43:17) 
+-- CODE:
+aresta = 5
+area = 
+print(3/2*3**1/2)
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 2
+    area = 
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:43:25) 
+-- CODE:
+aresta = 5
+area = print(3/2*3**1/2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(area, 4))
+TypeError: type NoneType doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:43:49) 
+-- CODE:
+aresta = 5
+area = print(3/2*3*5**2**1/2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(area, 4))
+TypeError: type NoneType doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:44:10) 
+-- CODE:
+aresta = 5
+area = print(round(3/2*3*5**2**1/2, 4)
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 4
+    print(round(area, 4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:44:45) 
+-- CODE:
+aresta = 5
+area = print(round(3/2*3*5**2**1/2, 4)
+print(round(3/2*3*5**2**1/2, 4)
+-- ERROR:
+File "XXXX", line 3
+    print(round(3/2*3*5**2**1/2, 4)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:45:04) 
+-- CODE:
+aresta = 5
+area = print(round(3/2*3*5**2*
+						
+print(round(3/2*3*5**2**1/2, 4))
+-- ERROR:
+File "XXXX", line 5
+    
+                                    ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:45:29) 
+-- CODE:
+aresta = 5
+area = print(3/2*3*5**2**1/2)
+						
+print(round(3/2*3*5**2**1/2, 4))
+-- OUTPUT:
+56.25
+56.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:45:47) 
+-- CODE:
+aresta = 5
+area = print(3/2*3*5**2**1/2)
+						
+print(round(3/2*3*5**2**1/2, 6))
+-- OUTPUT:
+56.25
+56.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:45:49) 
+-- CODE:
+aresta = 5
+area = print(3/2*3*5**2**1/2)
+						
+print(round(3/2*3*5**2**1/2, 6))
+-- OUTPUT:
+56.25
+56.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:45:59) 
+-- CODE:
+aresta = 5
+area = print(3/2*3*5**2**1/2)
+						
+print(round(3/2*3*5**2**1/2, 6))
+-- OUTPUT:
+56.25
+56.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-12 11:46:00) 
+-- CODE:
+aresta = 5
+area = print(3/2*3*5**2**1/2)
+						
+print(round(3/2*3*5**2**1/2, 6))
+-- EXECUTION TIME:
+0.144389
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+56.25
+56.25
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:46:04) 
+-- CODE:
+aresta = 5
+area = print(3/2*3*5**2**1/2)
+						
+print(round(3/2*3*5**2**1/2, 6))
+-- OUTPUT:
+56.25
+56.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:46:38) 
+-- CODE:
+aresta = 5
+area = print(3/2*3*5**2**1/2)
+						
+print(round(3/2*3*5**2**1/2, 6))
+-- OUTPUT:
+56.25
+56.25
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-12 11:46:40) 
+-- CODE:
+aresta = 5
+area = print(3/2*3*5**2**1/2)
+						
+print(round(3/2*3*5**2**1/2, 6))
+-- EXECUTION TIME:
+0.141795
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+56.25
+56.25
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:47:08) 
+-- CODE:
+aresta = 5
+area = print(3/2*3*5**2**1/2)
+						
+print(round(area, 6))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(area, 6))
+TypeError: type NoneType doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:47:22) 
+-- CODE:
+aresta = 5
+A = print(3/2*3*5**2**1/2)
+						
+print(round(area, 6))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(area, 6))
+NameError: name 'area' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:47:31) 
+-- CODE:
+aresta = 5
+A = print(3/2*3*5**2**1/2)
+						
+print(round(A, 6))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(A, 6))
+TypeError: type NoneType doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:47:44) 
+-- CODE:
+aresta = 5
+A = print(3/2*3*5**2**1/2)
+						
+print(round(A, 4)
+-- ERROR:
+File "XXXX", line 5
+    
+                     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:48:52) 
+-- CODE:
+aresta = 5
+A = print(3/2*3*5**2**1**0.5)
+						
+print(round(3/2*3*5**2**1/2, 4)
+-- ERROR:
+File "XXXX", line 5
+    
+                                   ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:49:07) 
+-- CODE:
+aresta = 5
+A = print(3/2*3*5**2**1**0.5)
+						
+print(round(3/2*3*5**2**1**0.5, 4)
+-- ERROR:
+File "XXXX", line 5
+    
+                                      ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:49:24) 
+-- CODE:
+aresta = 5
+A = print(3/2*3*5**2**1**1/2)
+						
+print(round(3/2*3*5**2**1**1/2, 4)
+-- ERROR:
+File "XXXX", line 5
+    
+                                      ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:50:03) 
+-- CODE:
+aresta = 5
+A = print(3/2*3*5**2**1/2)
+						
+print(round(3/2*3*5**2**1/2, 4)
+-- ERROR:
+File "XXXX", line 5
+    
+                                   ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:50:47) 
+-- CODE:
+aresta = 5
+A = print(3/2*(3*5**2)**1/2)
+						
+print(round(3/2*3*5**2**1/2, 4)
+-- ERROR:
+File "XXXX", line 5
+    
+                                   ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:50:56) 
+-- CODE:
+aresta = 5
+A = print(3/2*(3*5**2)**1/2)
+print(round(3/2*3*5**2**1/2, 4)
+-- ERROR:
+File "XXXX", line 4
+    
+                                   ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:51:15) 
+-- CODE:
+aresta = 5
+A = print(3/2*(3*5**2)**1/2)
+print(round(3/2*(3*5**2**1/2, 4))
+-- ERROR:
+File "XXXX", line 4
+    
+                                     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:51:29) 
+-- CODE:
+aresta = 5
+A = print(3/2*3*5**2**1/2)
+print(round(3/2*(3*5**2**1/2, 4))
+-- ERROR:
+File "XXXX", line 4
+    
+                                     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:52:22) 
+-- CODE:
+a = 5
+A = print(3/2*3*a**2**0.5)
+print(round(3/2*(3*5**2**0.5, 4))
+-- ERROR:
+File "XXXX", line 4
+    
+                                     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:52:47) 
+-- CODE:
+a = 5
+A = print(3/2*(3*a**2)**0.5)
+print(round(3/2*(3*5**2)**0.5, 4))
+-- OUTPUT:
+12.99038105676658
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-12 11:52:55) 
+-- CODE:
+a = 5
+A = print(3/2*(3*a**2)**0.5)
+print(round(3/2*(3*5**2)**0.5, 4))
+-- EXECUTION TIME:
+0.225196
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.99038105676658
+12.9904
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:53:12) 
+-- CODE:
+a = 5
+A = print(3/2*(3*a**2)**0.5)
+print(round(A, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print(round(A, 4))
+TypeError: type NoneType doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:53:27) 
+-- CODE:
+a = 5
+A = (3/2*(3*a**2)**0.5)
+print(round(A, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-12 11:53:30) 
+-- CODE:
+a = 5
+A = (3/2*(3*a**2)**0.5)
+print(round(A, 4))
+-- EXECUTION TIME:
+0.273937
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.9904
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:53:46) 
+-- CODE:
+a = 5
+A = (3/2*(3*a**2)**0.5)
+print(round(A, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:54:20) 
+-- CODE:
+a = 5
+A = 3/2*((3*a**2)**0.5)
+print(round(A, 4))
+-- OUTPUT:
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 11:56:05) 
+-- CODE:
+a = 5
+A = 3/2*(3**0.5)*a**2
+print(round(A, 4))
+-- OUTPUT:
+64.9519
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-12 11:56:10) 
+-- CODE:
+a = 5
+A = 3/2*(3**0.5)*a**2
+print(round(A, 4))
+-- EXECUTION TIME:
+0.155602
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+64.9519
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

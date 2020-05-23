@@ -1,0 +1,375 @@
+== TEST (2019-04-11 10:25:20) 
+-- CODE:
+a = float(input("valor x: "))
+b = float(input("valor y: "))
+
+if a < b:
+	print("passa ", a-b, " pra ca")
+else:
+	print()
+	
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:27:01) 
+-- CODE:
+a = float(input("valor x: "))
+b = float(input("valor y: "))
+
+if a > b:
+	print("passa ", a-b, " pra ca")
+else:
+	print()
+	
+-- OUTPUT:
+passa  26.0  pra ca
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:27:08) 
+-- CODE:
+a = float(input("valor x: "))
+b = float(input("valor y: "))
+
+if a > b:
+	print("passa ", a-b, " pra ca")
+else:
+	print()
+	
+-- OUTPUT:
+passa  26.0  pra ca
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:29:04) 
+-- CODE:
+a = float(input("valor x: "))
+b = float(input("valor y: "))
+
+if a > b:
+	print(round("passa ", a-b, 2)
+else:
+	print(round("pega ",a-b, 2))
+	
+-- ERROR:
+File "XXXX", line 6
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:29:12) 
+-- CODE:
+a = float(input("valor x: "))
+b = float(input("valor y: "))
+
+if a > b:
+	print(round("passa ", a-b, 2))
+else:
+	print(round("pega ",a-b, 2))
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round("passa ", a-b, 2))
+TypeError: round() takes at most 2 arguments (3 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:30:19) 
+-- CODE:
+a = float(input("valor x: "))
+b = float(input("valor y: "))
+
+if a > b:
+	print("passa"(round(a-b, 2))
+else:
+	print("pega"(round(a-b, 2))
+	
+-- ERROR:
+File "XXXX", line 6
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:32:11) 
+-- CODE:
+a = float(input("valor x: "))
+b = float(input("valor y: "))
+
+if a > b:
+	print("falta " a-b)
+else:
+	print("troco de " a-b)
+	
+-- ERROR:
+File "XXXX", line 5
+    print("falta " a-b)
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:32:23) 
+-- CODE:
+a = float(input("valor x: "))
+b = float(input("valor y: "))
+
+if a > b:
+	print("falta ", a-b)
+else:
+	print("troco de ", a-b)
+	
+-- OUTPUT:
+falta  26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:32:38) 
+-- CODE:
+a = float(input("valor x: "))
+b = float(input("valor y: "))
+
+if a > b:
+	print("falta ", a-b)
+else:
+	print("troco de ", a-b)
+	
+-- EXECUTION TIME:
+0.137807
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta  26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+troco de  -28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+troco de  0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:32:50) 
+-- CODE:
+a = float(input("valor x: "))
+b = float(input("valor y: "))
+
+if a > b:
+	print("falta ", a-b)
+else:
+	print("troco de ", b-a)
+	
+-- OUTPUT:
+falta  26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:32:58) 
+-- CODE:
+a = float(input("valor x: "))
+b = float(input("valor y: "))
+
+if a > b:
+	print("falta ", a-b)
+else:
+	print("troco de ", b-a)
+	
+-- EXECUTION TIME:
+0.140105
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta  26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+troco de  28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+troco de  0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:34:23) 
+-- CODE:
+a = float(input("valor x: "))
+b = float(input("valor y: "))
+
+if a > b:
+	print("falta ", a-b)
+else:
+	print("troco de ", b-a)
+	
+-- OUTPUT:
+falta  26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:36:24) 
+-- CODE:
+a = float(input("valor x: "))
+b = float(input("valor y: "))
+
+if a > b:
+	print("falta "(round(a-b, 2))
+else:
+	print("troco de "(round(b-a))
+	
+-- ERROR:
+File "XXXX", line 6
+    else:
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:36:42) 
+-- CODE:
+a = float(input("valor x: "))
+b = float(input("valor y: "))
+
+if a > b:
+	print("falta "(round(a-b, 2)))
+else:
+	print("troco de "(round(b-a)))
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print("falta "(round(a-b, 2)))
+TypeError: 'str' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:37:23) 
+-- CODE:
+a = float(input("valor x: "))
+b = float(input("valor y: "))
+
+if a > b:
+	print("falta "(round(a-b, 2)))
+else:
+	print("troco de "(round(b-a, 2)))
+	
+-- EXECUTION TIME:
+0.156618
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1637/2447/main.py", line 5, in <module>
+    print("falta "(round(a-b, 2)))
+TypeError: 'str' object is not callable
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:38:04) 
+-- CODE:
+a = float(input("valor x: "))
+b = float(input("valor y: "))
+
+if a > b:
+	print("falta ", round(a-b, 2))
+else:
+	print("troco de ", round(b-a, 2))
+	
+-- EXECUTION TIME:
+0.19439
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+falta  26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+troco de  28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+troco de  0.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:38:10) 
+-- CODE:
+a = float(input("valor x: "))
+b = float(input("valor y: "))
+
+if a > b:
+	print("falta ", round(a-b, 2))
+else:
+	print("troco de ", round(b-a, 2))
+	
+-- OUTPUT:
+falta  26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:38:30) 
+-- CODE:
+a = float(input("valor x: "))
+b = float(input("valor y: "))
+
+if a > b:
+	print("falta ", round(a-b, 2))
+else:
+	print("troco de ", round(b-a, 2))
+	
+-- OUTPUT:
+falta  26.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:39:02) 
+-- CODE:
+a = float(input("valor x: "))
+b = float(input("valor y: "))
+
+if a > b:
+	print("Falta ", round(a-b, 2))
+else:
+	print("Troco de ", round(b-a, 2))
+	
+-- EXECUTION TIME:
+0.240099
+-- TEST CASE 1:
+---- input:
+38.0
+12.0
+---- correct output:
+Falta 26.0
+---- user output:
+Falta  26.0
+-- TEST CASE 2:
+---- input:
+32.0
+60.0
+---- correct output:
+Troco de 28.0
+---- user output:
+Troco de  28.0
+-- TEST CASE 3:
+---- input:
+516.0
+516.0
+---- correct output:
+Troco de 0.0
+---- user output:
+Troco de  0.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

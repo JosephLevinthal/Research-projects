@@ -1,0 +1,11 @@
+n=int(input())
+i=2
+soma=0
+variavel1=1/3
+while(i<n+1):
+	calc=variavel1*((i)/((i*2)+1))
+	soma=soma+calc
+	variavel1=calc
+	i=i+1
+total=2*((1+1/3)+soma)
+print(round(total,10))

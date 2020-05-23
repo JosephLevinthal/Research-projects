@@ -1,0 +1,43 @@
+== TEST (2019-04-02 18:12:43) 
+-- CODE:
+print("vi+j=n")
+print(''=vi+j+n=vf'')
+-- ERROR:
+File "XXXX", line 2
+    print(''=vi+j+n=vf'')
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 18:12:53) 
+-- CODE:
+print("vi+j=n")
+-- OUTPUT:
+vi+j=n
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 18:14:03) 
+-- CODE:
+vf=vi(1+j)n
+-- ERROR:
+File "XXXX", line 1
+    vf=vi(1+j)n
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 18:18:01) 
+-- CODE:
+print("vi+j")
+print("vi,j=n")
+-- OUTPUT:
+vi+j
+vi,j=n
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 18:29:05) 
+-- CODE:
+altvi+j
+vi,=j
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    altvi+j
+NameError: name 'altvi' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

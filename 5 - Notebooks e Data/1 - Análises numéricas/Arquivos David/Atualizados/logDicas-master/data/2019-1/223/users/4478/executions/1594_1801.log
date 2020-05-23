@@ -1,0 +1,198 @@
+== TEST (2019-04-02 10:09:49) 
+-- CODE:
+objeto = input("nome do objeto:")
+n = int(input("repeticoes do feitiço:"))
+
+print("Abra" + " " + objeto *(n))
+-- OUTPUT:
+Abra livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 10:11:19) 
+-- CODE:
+objeto = input("nome do objeto:")
+n = float(input("repeticoes do feitiço:"))
+
+print("Abra" + " " + objeto *(n))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print("Abra" + " " + objeto *(n))
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:04:52) 
+-- CODE:
+objeto = input("nome do objeto:")
+n = float(input("repeticoes do feitiço:"))
+
+print("Abra" + " " + objeto *(n))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print("Abra" + " " + objeto *(n))
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:05:10) 
+-- CODE:
+objeto = input("nome do objeto:")
+n = int(input("repeticoes do feitiço:"))
+
+print("Abra" + " " + objeto *(n))
+-- OUTPUT:
+Abra livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:05:25) 
+-- CODE:
+objeto = input("nome do objeto:")
+n = (input("repeticoes do feitiço:"))
+
+print("Abra" + " " + objeto *(n))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print("Abra" + " " + objeto *(n))
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 12:10:20) 
+-- CODE:
+objeto = input("nome do objeto:")
+n = str(input("repeticoes do feitiço:"))
+
+print("Abra" + " " + objeto *(n))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print("Abra" + " " + objeto *(n))
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 00:58:04) 
+-- CODE:
+objeto = input("nome do objeto: ")
+n = input("repeticoes do feitico: ")
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print("Abra" + " " + objeto *(n))
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 01:01:19) 
+-- CODE:
+objeto = input("nome do objeto: ")
+n = int(input("repeticoes do feitico: "))
+feitico = ("Abra", objeto)
+print(feitico)
+
+-- OUTPUT:
+('Abra', 'livro')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 01:02:00) 
+-- CODE:
+objeto = input("nome do objeto: ")
+n = int(input("repeticoes do feitico: "))
+feitico = ("Abra" objeto)
+print(feitico)
+
+-- ERROR:
+File "XXXX", line 3
+    feitico = ("Abra" objeto)
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 01:02:13) 
+-- CODE:
+objeto = input("nome do objeto: ")
+n = int(input("repeticoes do feitico: "))
+feitico = ("Abra", objeto)
+print(feitico)
+
+-- OUTPUT:
+('Abra', 'livro')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 01:02:36) 
+-- CODE:
+objeto = input("nome do objeto: ")
+n = int(input("repeticoes do feitico: "))
+feitico = ("Abra", objeto)
+print(feitico*2)
+
+-- OUTPUT:
+('Abra', 'livro', 'Abra', 'livro')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 01:02:56) 
+-- CODE:
+objeto = input("nome do objeto: ")
+n = int(input("repeticoes do feitico: "))
+feitico = ("Abra", objeto)
+print(feitico*n)
+
+-- OUTPUT:
+('Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro', 'Abra', 'livro')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 01:03:23) 
+-- CODE:
+objeto = input("nome do objeto: ")
+n = int(input("repeticoes do feitico: "))
+feitico = ("Abra"+ objeto)
+print(feitico*n)
+
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 01:03:56) 
+-- CODE:
+objeto = input("nome do objeto: ")
+n = int(input("repeticoes do feitico: "))
+feitico = ("Abra" + objeto)
+print(feitico*n)
+
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-25 01:04:37) 
+-- CODE:
+objeto = input("nome do objeto: ")
+n = int(input("repeticoes do feitico: "))
+feitico = ("Abra"+" " + objeto+" ")
+print(feitico*n)
+
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-25 01:04:59) 
+-- CODE:
+objeto = input("nome do objeto: ")
+n = int(input("repeticoes do feitico: "))
+feitico = ("Abra"+" " + objeto+" ")
+print(feitico*n)
+
+-- EXECUTION TIME:
+0.162906
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

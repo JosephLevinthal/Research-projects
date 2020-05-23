@@ -1,0 +1,149 @@
+== TEST (2019-06-12 22:01:02) 
+-- CODE:
+a = array(eval(input("matriculas: ")))
+b = 0
+for y in a:
+	if(y%2!=0):
+		b+=1
+p = zeros(b, dtype = int)
+x = 0
+g = 0
+for r in a:
+	if(r%2==0):
+		p[x] = a[g]
+		x+=1
+	g+=1
+print(p)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a = array(eval(input()))
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 22:01:18) 
+-- CODE:
+from numpy import*
+a = array(eval(input("matriculas: ")))
+b = 0
+for y in a:
+	if(y%2!=0):
+		b+=1
+p = zeros(b, dtype = int)
+x = 0
+g = 0
+for r in a:
+	if(r%2==0):
+		p[x] = a[g]
+		x+=1
+	g+=1
+print(p)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 22:06:46) 
+-- CODE:
+from numpy import*
+a = array(eval(input("mat: ")))
+b = 0
+for y in a:
+	if(y%2!=0):
+		b = 1
+p = zeros(b, dtype=int)
+x = 0
+g = 0
+for r in a:
+	if(r%2!=0):
+		p[x] = a[g]
+		x = 1
+	g = 1
+print(p)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 09:28:54) 
+-- CODE:
+from numpy import* 
+a = array(eval(input("mat: ")))
+b = 0
+for y in a:
+	if(y%2!=0):
+		b=1
+p = zeros(b, dtype=int)
+x = 0
+g = 0
+for r in a:
+	if(r%2!=0):
+		p[x] = a[g]
+		x = 1
+	g = 1
+print(p)
+		
+-- EXECUTION TIME:
+1.03122
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1800/2572/main.py", line 12, in <module>
+    p[x] = a[g]
+IndexError: index 1 is out of bounds for axis 0 with size 1
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 09:29:06) 
+-- CODE:
+from numpy import* 
+a = array(eval(input("mat: ")))
+b = 0
+for y in a:
+	if(y%2!=0):
+		b=1
+p = zeros(b, dtype=int)
+x = 0
+g = 0
+for r in a:
+	if(r%2!=0):
+		p[x] = a[g]
+		x = 1
+	g = 1
+print(p)
+		
+-- EXECUTION TIME:
+1.19258
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1800/2572/main.py", line 12, in <module>
+    p[x] = a[g]
+IndexError: index 1 is out of bounds for axis 0 with size 1
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 09:29:38) 
+-- CODE:
+from numpy import* 
+a = array(eval(input("mat: ")))
+b = 0
+for y in a:
+	if(y%2!=0):
+		b=1
+p = zeros(b, dtype=int)
+x = 0
+g = 0
+for r in a:
+	if(r%2!=0):
+		p[x] = a[g]
+		x = 1
+	g = 1
+print(p)
+		
+-- EXECUTION TIME:
+0.947123
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1800/2572/main.py", line 12, in <module>
+    p[x] = a[g]
+IndexError: index 1 is out of bounds for axis 0 with size 1
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

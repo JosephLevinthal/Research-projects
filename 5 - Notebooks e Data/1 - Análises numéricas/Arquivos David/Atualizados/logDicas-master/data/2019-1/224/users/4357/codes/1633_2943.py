@@ -1,0 +1,5 @@
+raio=float(input("digite o numero"))
+raiodotubo=float(input("digite o numero"))
+qderosquinha=int(input("digite o numero"))
+from math(2*pi**2*raio*raiodotubo**2*qderosquinha)
+print(round(m,2))

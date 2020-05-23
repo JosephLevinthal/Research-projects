@@ -1,0 +1,61 @@
+== TEST (2019-07-08 21:58:48) 
+-- CODE:
+a = float(input('Altura: '))
+s = input('Sexo: ')
+
+if s=='M':
+	print((62,1*a)-44,7)
+else:
+	print((72,7*a)-58)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    print((72,7*a)-58)
+TypeError: unsupported operand type(s) for -: 'tuple' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-08 22:04:06) 
+-- CODE:
+a = float(input('Altura: '))
+s = input('Sexo: ')
+
+if s=='M':
+	r = ((62.1*a)-44.7)
+	print(round(r, 2))
+else:
+	r = ((72.7*a)-58)
+	print(round(r, 2))
+-- OUTPUT:
+14.7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-08 22:05:32) 
+-- CODE:
+a = float(input('Altura: '))
+s = input('Sexo: ')
+
+if s=='M' or s=='m':
+	r = ((62.1*a)-44.7)
+	print(round(r, 2))
+else:
+	r = ((72.7*a)-58)
+	print(round(r, 2))
+-- EXECUTION TIME:
+0.716044
+-- TEST CASE 1:
+---- input:
+1.0
+F
+---- correct output:
+17.4
+---- user output:
+14.7
+-- TEST CASE 2:
+---- input:
+1.234
+M
+---- correct output:
+31.71
+---- user output:
+31.93
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

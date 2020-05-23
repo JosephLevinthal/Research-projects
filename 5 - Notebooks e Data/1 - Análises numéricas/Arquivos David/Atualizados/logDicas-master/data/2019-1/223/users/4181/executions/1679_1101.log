@@ -1,0 +1,89 @@
+== TEST (2019-05-02 15:38:55) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+preco = 0
+if (X <= 0)or (not (Y  == "R") and not (Y == "C") and not (Y == "I")):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif (Y == "R"):
+	if (X <= 500): 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif (Y == "C"):
+	if (X <= 1000): 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif (X <= 5000):
+	if (X <= 500): 
+		preco = 0.55
+	else:
+		preco = 0.60
+if (preco > 0):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Valor total: R$", round(preco*X,2))
+
+-- OUTPUT:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-02 15:39:30) 
+-- CODE:
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+X = float(input("Qual o consumo? "))
+Y = input("TIPO: R-Residencial , C-Comercial , I-Industrial ")
+preco = 0
+if (X <= 0)or (not (Y  == "R") and not (Y == "C") and not (Y == "I")):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Dados invalidos")
+elif (Y == "R"):
+	if (X <= 500): 
+		preco = 0.44
+	else:
+		preco = 0.65
+elif (Y == "C"):
+	if (X <= 1000): 
+		preco = 0.55
+	else:
+	 	preco = 0.60
+elif (X <= 5000):
+	if (X <= 500): 
+		preco = 0.55
+	else:
+		preco = 0.60
+if (preco > 0):
+	print("Entradas:", X, "kWh e tipo", Y)
+	print("Valor total: R$", round(preco*X,2))
+
+-- EXECUTION TIME:
+0.217803
+-- TEST CASE 1:
+---- input:
+-56
+I
+---- correct output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+---- user output:
+Entradas: -56.0 kWh e tipo I
+Dados invalidos
+-- TEST CASE 2:
+---- input:
+955.5
+R
+---- correct output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+---- user output:
+Entradas: 955.5 kWh e tipo R
+Valor total: R$ 621.08
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,7 @@
+n=int(input("nu1"))
+n2=int(input("nu2"))
+n3=int(input("nu3"))
+interm=n+n2+n3-max(n,n2,n3)-min(n,n2,n3)
+print(min(n,n2,n3))
+print(interm)
+print(max(n,n2,n3))

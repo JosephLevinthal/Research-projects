@@ -1,0 +1,104 @@
+== TEST (2019-05-29 03:35:07) 
+-- CODE:
+from numpy import *
+pre = array(eval(input("")))
+fal = array(eval(input("")))
+i = (fal-pre).max()
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 03:35:21) 
+-- CODE:
+from numpy import *
+pre = array(eval(input("")))
+fal = array(eval(input("")))
+i = (fal-pre).max()
+print(i)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 03:35:45) 
+-- CODE:
+from numpy import *
+pre = array(eval(input("")))
+fal = array(eval(input("")))
+i = (pre-fal).max()
+print(i)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 03:38:03) 
+-- CODE:
+from numpy import *
+pre = array(eval(input("")))
+fal = array(eval(input("")))
+pre = pre - fal
+maior = 0
+for i in range(1,len(pre)):
+	if pre[maior]<pre[i]:
+		maior = i
+print
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 03:38:10) 
+-- CODE:
+from numpy import *
+pre = array(eval(input("")))
+fal = array(eval(input("")))
+pre = pre - fal
+maior = 0
+for i in range(1,len(pre)):
+	if pre[maior]<pre[i]:
+		maior = i
+print(maior)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 03:38:23) 
+-- CODE:
+from numpy import *
+pre = array(eval(input("")))
+fal = array(eval(input("")))
+pre = pre - fal
+maior = 0
+for i in range(1,len(pre)):
+	if pre[maior]<pre[i]:
+		maior = i
+print(maior+1)
+-- EXECUTION TIME:
+0.531174
+-- TEST CASE 1:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,110,12]
+[5,6,7,8,9,10,11,12,13,1,15,12]
+---- correct output:
+10
+---- user output:
+11
+-- TEST CASE 2:
+---- input:
+[10,20,30,40,50,60,70,80,90,100,11,12]
+[5,6,7,8,9,10,11,12,3,14,11,12]
+---- correct output:
+9
+---- user output:
+10
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

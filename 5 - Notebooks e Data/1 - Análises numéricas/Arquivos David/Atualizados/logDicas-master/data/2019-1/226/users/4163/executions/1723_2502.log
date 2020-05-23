@@ -1,0 +1,94 @@
+== TEST (2019-05-14 11:03:51) 
+-- CODE:
+from math import*
+a = int(input())
+
+soma= 0
+i= 0
+fim = a-1
+
+while(i<=fim):
+	soma = soma + (-1) ** i / ((2*1+1)*3**i)*sqtr(12)
+	i = i +1
+	
+print(round(soma, 8))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    soma = soma + (-1) ** i / ((2*1+1)*3**i)*sqtr(12)
+NameError: name 'sqtr' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:05:22) 
+-- CODE:
+from math import*
+a = int(input())
+
+soma= 0
+i= 0
+fim = a-1
+
+while(i<=fim):
+	soma = soma + (-1) ** i / ((2*1+1)*3**i) * sqrt(12)
+	i = i +1
+	
+print(round(soma, 8))
+-- OUTPUT:
+0.86603029
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 11:06:08) 
+-- CODE:
+from math import*
+a = int(input())
+
+soma= 0
+i= 0
+fim = a-1
+
+while(i<=fim):
+	soma = soma + (-1) ** i / ((2*i+1)*3**i) * sqrt(12)
+	i = i +1
+	
+print(round(soma, 8))
+-- OUTPUT:
+3.1415933
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 11:06:17) 
+-- CODE:
+from math import*
+a = int(input())
+
+soma= 0
+i= 0
+fim = a-1
+
+while(i<=fim):
+	soma = soma + (-1) ** i / ((2*i+1)*3**i) * sqrt(12)
+	i = i +1
+	
+print(round(soma, 8))
+-- EXECUTION TIME:
+0.132991
+-- TEST CASE 1:
+---- input:
+11
+---- correct output:
+3.1415933
+---- user output:
+3.1415933
+-- TEST CASE 2:
+---- input:
+15
+---- correct output:
+3.14159266
+---- user output:
+3.14159266
+-- TEST CASE 3:
+---- input:
+8
+---- correct output:
+3.14156872
+---- user output:
+3.14156872
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

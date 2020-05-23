@@ -1,0 +1,2 @@
+nome_do_objeto
+abra

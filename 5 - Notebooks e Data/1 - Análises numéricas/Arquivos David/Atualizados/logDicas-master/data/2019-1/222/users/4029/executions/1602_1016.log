@@ -1,0 +1,105 @@
+== TEST (2019-03-31 20:51:03) 
+-- CODE:
+import math 
+a= float(input("Digite o comprimento a do triangulo: "))
+b= float(input("Digite o comprimento b do triangulo: "))
+c= float(input("Digite o comprimento c do triangulo: "))
+s= ((a + b + c)/2)
+A= ((s*(s - a)*(s - b)*(s - c))**math.sqrt(1,2))
+print(round(A, 5))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    A= ((s*(s - a)*(s - b)*(s - c))**math.sqrt(1,2))
+TypeError: sqrt() takes exactly one argument (2 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 20:51:37) 
+-- CODE:
+import math 
+a= float(input("Digite o comprimento a do triangulo: "))
+b= float(input("Digite o comprimento b do triangulo: "))
+c= float(input("Digite o comprimento c do triangulo: "))
+s= ((a + b + c)/2)
+A= ((s*(s - a)*(s - b)*(s - c))math.sqrt(1,2))
+print(round(A, 5))
+
+-- ERROR:
+File "XXXX", line 6
+    A= ((s*(s - a)*(s - b)*(s - c))math.sqrt(1,2))
+                                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 20:52:29) 
+-- CODE:
+import math 
+a= float(input("Digite o comprimento a do triangulo: "))
+b= float(input("Digite o comprimento b do triangulo: "))
+c= float(input("Digite o comprimento c do triangulo: "))
+s= ((a + b + c)/2)
+A= ((s*(s - a)*(s - b)*(s - c))math.sqrt(A))
+print(round(A, 5))
+
+-- ERROR:
+File "XXXX", line 6
+    A= ((s*(s - a)*(s - b)*(s - c))math.sqrt(A))
+                                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 20:53:20) 
+-- CODE:
+import math 
+a= float(input("Digite o comprimento a do triangulo: "))
+b= float(input("Digite o comprimento b do triangulo: "))
+c= float(input("Digite o comprimento c do triangulo: "))
+s= ((a + b + c)/2)
+A= (s*(s - a)*(s - b)*(s - c))
+B= math.sqrt(A)
+print(round(B, 5))
+
+-- OUTPUT:
+69.41967
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-31 20:54:01) 
+-- CODE:
+import math 
+a= float(input("Digite o comprimento a do triangulo: "))
+b= float(input("Digite o comprimento b do triangulo: "))
+c= float(input("Digite o comprimento c do triangulo: "))
+s= ((a + b + c)/2)
+A= (s*(s - a)*(s - b)*(s - c))
+B= math.sqrt(A)
+print(round(B, 5))
+
+-- EXECUTION TIME:
+0.192203
+-- TEST CASE 1:
+---- input:
+11.0
+19.5
+13.2
+---- correct output:
+69.41967
+---- user output:
+69.41967
+-- TEST CASE 2:
+---- input:
+30.0
+40.0
+50.0
+---- correct output:
+600.0
+---- user output:
+600.0
+-- TEST CASE 3:
+---- input:
+33.0
+43.0
+55.0
+---- correct output:
+709.16654
+---- user output:
+709.16654
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

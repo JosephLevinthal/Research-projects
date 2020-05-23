@@ -1,0 +1,156 @@
+== TEST (2019-04-04 19:17:18) 
+-- CODE:
+frase = ("Ada Lovelace foi a primeira programadora da historia. .()¨)
+print(frase.???)
+-- ERROR:
+File "XXXX", line 1
+    frase = ("Ada Lovelace foi a primeira programadora da historia. .()¨)
+                                                                         ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:17:32) 
+-- CODE:
+frase = ("Ada Lovelace foi a primeira programadora da historia..()¨)
+print(frase.???)
+-- ERROR:
+File "XXXX", line 1
+    frase = ("Ada Lovelace foi a primeira programadora da historia..()¨)
+                                                                        ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:18:13) 
+-- CODE:
+frase = ("Ada Lovelace foi a primeira programadora da historia.. upper¨)
+print(frase.)
+-- ERROR:
+File "XXXX", line 1
+    frase = ("Ada Lovelace foi a primeira programadora da historia.. upper¨)
+                                                                            ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:18:25) 
+-- CODE:
+frase = ("Ada Lovelace foi a primeira programadora da historia. . upper¨)
+print(frase.)
+-- ERROR:
+File "XXXX", line 1
+    frase = ("Ada Lovelace foi a primeira programadora da historia. . upper¨)
+                                                                             ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:19:34) 
+-- CODE:
+frase = ("Ada Lovelace foi a primeira programadora da historia.¨)
+print(frase.. upper ())
+-- ERROR:
+File "XXXX", line 1
+    frase = ("Ada Lovelace foi a primeira programadora da historia.¨)
+                                                                     ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:19:50) 
+-- CODE:
+frase = ("Ada Lovelace foi a primeira programadora da historia.. upper () ¨)
+print(frase.)
+-- ERROR:
+File "XXXX", line 1
+    frase = ("Ada Lovelace foi a primeira programadora da historia.. upper () ¨)
+                                                                                ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:25:10) 
+-- CODE:
+frase = "Ada Lovelace foi a primeira programadora da historia. ¨
+print(frase..upper())
+-- ERROR:
+File "XXXX", line 1
+    frase = "Ada Lovelace foi a primeira programadora da historia. ¨
+                                                                    ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:25:21) 
+-- CODE:
+frase = "Ada Lovelace foi a primeira programadora da historia.¨
+print(frase..upper())
+-- ERROR:
+File "XXXX", line 1
+    frase = "Ada Lovelace foi a primeira programadora da historia.¨
+                                                                   ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:25:37) 
+-- CODE:
+frase = "Ada Lovelace foi a primeira programadora da historia.¨
+print(frase..upper())
+-- ERROR:
+File "XXXX", line 1
+    frase = "Ada Lovelace foi a primeira programadora da historia.¨
+                                                                   ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:25:55) 
+-- CODE:
+frase = "Ada Lovelace foi a primeira programadora da historia.¨
+print(frase.upper())
+-- ERROR:
+File "XXXX", line 1
+    frase = "Ada Lovelace foi a primeira programadora da historia.¨
+                                                                   ^
+SyntaxError: EOL while scanning string literal
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 18:26:38) 
+-- CODE:
+frase = "Ada Lovelace foi a primeira programadora da historia.¨
+print(frase.upper())
+-- EXECUTION TIME:
+0.1644
+-- ERROR:
+  File "/home/codebench/codes/1577/1559/main.py", line 1
+    frase = "Ada Lovelace foi a primeira programadora da historia.\xa8
+                                                                   ^
+SyntaxError: EOL while scanning string literal
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:27:09) 
+-- CODE:
+frase:"Ada Lovelace foi a primeira programadora da historia."
+print(frase.upper())
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print(frase.upper())
+NameError: name 'frase' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:27:17) 
+-- CODE:
+frase:"Ada Lovelace foi a primeira programadora da historia."
+print (frase.upper())
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print (frase.upper())
+NameError: name 'frase' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 18:27:35) 
+-- CODE:
+frase = "Ada Lovelace foi a primeira programadora da historia."
+print (frase.upper())
+-- OUTPUT:
+ADA LOVELACE FOI A PRIMEIRA PROGRAMADORA DA HISTORIA.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 18:27:40) 
+-- CODE:
+frase = "Ada Lovelace foi a primeira programadora da historia."
+print (frase.upper())
+-- EXECUTION TIME:
+0.164386
+-- TEST CASE 1:
+---- input:
+nonono
+---- correct output:
+ADA LOVELACE FOI A PRIMEIRA PROGRAMADORA DA HISTORIA.
+---- user output:
+ADA LOVELACE FOI A PRIMEIRA PROGRAMADORA DA HISTORIA.
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

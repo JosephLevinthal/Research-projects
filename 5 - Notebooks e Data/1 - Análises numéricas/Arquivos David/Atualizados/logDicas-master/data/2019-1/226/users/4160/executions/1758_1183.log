@@ -1,0 +1,2083 @@
+== TEST (2019-05-23 11:42:51) 
+-- CODE:
+v = array(eval(input("Vetos: ")))
+i = 0
+while(i < 0):
+	print(v[i]):
+-- ERROR:
+File "XXXX", line 4
+    print(v[i]):
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 11:42:53) 
+-- CODE:
+v = array(eval(input("Vetos: ")))
+i = 0
+while(i < 0):
+	print(v[i]):
+-- ERROR:
+File "XXXX", line 4
+    print(v[i]):
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 11:43:05) 
+-- CODE:
+v = array(eval(input("Vetos: ")))
+i = 0
+while(i < 0):
+	print(v):
+-- ERROR:
+File "XXXX", line 4
+    print(v):
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 11:43:27) 
+-- CODE:
+v = array(eval(input("Vetos: ")))
+i = 0
+while(i < 0):
+	print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    v = array(eval(input()))
+NameError: name 'array' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 11:44:56) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetos: ")))
+i = 0
+while(i < 0):
+	print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 11:45:02) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+while(i < 0):
+	print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 11:45:05) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+while(i < 0):
+	print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 11:46:44) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+while(i > 0):
+	i = i + 1 
+	print(v) 
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 11:46:47) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+while(i > 0):
+	i = i + 1 
+	print(v) 
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 11:48:14) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+while(v[i] > 0):
+	i = i + 1 
+	print(v) 
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 11:52:36) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+while(i < 0): 
+	if(v[i]>0): 
+		i = i + 1
+v1 = zeros(i, dtype=int)
+print(v1)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 11:54:41) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+v1 = zeros(i, dtype=int)
+print(v1)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 11:55:11) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(i, dtype=int)
+print(v1)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 11:55:17) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(i, dtype=int)
+print(v1)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 11:55:22) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+print(v1)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 12:02:08) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < n):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+print(v1)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 12:02:20) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < n):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+print(v1)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 12:02:41) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+print(v1)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-23 12:02:49) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.454598
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-23 12:03:10) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.347224
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-23 12:03:28) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.413833
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-23 21:25:23) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.391125
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-23 21:25:44) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t -i < size(v)):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.425541
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1758/1183/main.py", line 14, in <module>
+    if(v[t]>=0):
+IndexError: index 11 is out of bounds for axis 0 with size 11
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 21:25:48) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t -i < size(v)):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+print(v1)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-23 21:25:51) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t -i < size(v)):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.400973
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1758/1183/main.py", line 14, in <module>
+    if(v[t]>=0):
+IndexError: index 11 is out of bounds for axis 0 with size 11
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-23 21:25:59) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t  < size(v)):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.316363
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-25 21:45:58) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t  < size(v)):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.42895
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-25 21:46:21) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+f = 0
+while(t  < size(v)):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.483739
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1758/1183/main.py", line 15, in <module>
+    v1[i] = v[t]
+IndexError: index 12 is out of bounds for axis 0 with size 1
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-25 21:46:25) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t  < size(v)):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.361496
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-25 21:48:10) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.412018
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-25 21:48:31) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+print([v1])
+	
+
+-- EXECUTION TIME:
+0.435627
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[array([1])]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[array([2, 3, 5])]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-25 21:49:01) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.452463
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-25 21:49:10) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.496011
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-25 21:49:21) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>=0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.392527
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-25 21:49:37) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>=0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.513976
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1.]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2. 3. 5.]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-25 21:49:55) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>=0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype: int)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.217542
+-- ERROR:
+  File "/home/codebench/codes/1758/1183/main.py", line 10
+    v1 = zeros(f, dtype: int)
+                       ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-25 21:50:05) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>=0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>=0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.592249
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-25 21:50:24) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.341236
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-26 20:28:08) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+
+print(v1)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-26 20:28:36) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>0):
+		v1[i] = v[t]
+		i= i+1
+		t= t+1
+	else:
+		t = t+1
+
+print(v1)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 10:14:31) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>0):
+		v1[i] = v[t]
+		i= i+1
+	t= t+1
+	
+
+print(v1)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 10:14:49) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>0):
+		v1[i] = v[t]
+		i= i+1
+	t= t+1
+	
+
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.627741
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 10:15:02) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor nigga: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>0):
+		v1[i] = v[t]
+		i= i+1
+	t= t+1
+	
+
+print(v1)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 10:15:04) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor nigga: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		i = i + 1
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>0):
+		v1[i] = v[t]
+		i= i+1
+	t= t+1
+	
+
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.554042
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 10:15:21) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Vetor, nigga: ")))
+i = 0
+f = 0
+while(i < size(v)): 
+	if(v[i]>0): 
+		f = f + 1
+	i = i + 1
+v1 = zeros(f, dtype=int)
+t = 0
+i = 0
+while(t < size(v)):
+	if(v[t]>0):
+		v1[i] = v[t]
+		i= i+1
+	t= t+1
+	
+
+print(v1)
+	
+
+-- EXECUTION TIME:
+0.470115
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+[18 32 14 25]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:23:23) 
+-- CODE:
+from numpy import*
+v = array(eval(input("Vetor: ")))
+
+# Cortar os negativos:
+i = 0 #qnt positivos
+f = 0 #copiar os positivos pra saida
+
+while(i<size(v)):
+	if(v[i]>0):
+		print(v)
+	i = i + 1
+	if(v[i]<0):
+		print(v)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:24:00) 
+-- CODE:
+from numpy import*
+v = array(eval(input("Vetor: ")))
+
+# Cortar os negativos:
+i = 0 #qnt positivos
+f = 0 #copiar os positivos pra saida
+
+while(i<size(v)):
+	if(v[i]>0):
+		
+	i = i + 1
+	if(v[i]<0):
+print(v)
+
+-- ERROR:
+File "XXXX", line 11
+    i = i + 1
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:24:18) 
+-- CODE:
+from numpy import*
+v = array(eval(input("Vetor: ")))
+
+# Cortar os negativos:
+i = 0 #qnt positivos
+f = 0 #copiar os positivos pra saida
+
+while(i<size(v)):
+	if(v[i]>0):
+		i = i + 1
+	if(v[i]<0):
+		f = f + 1
+print(v)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:26:54) 
+-- CODE:
+from numpy import*
+v = array(eval(input("Vetor: ")))
+
+# Cortar os negativos:
+i = 0 #qnt positivos
+f = 0 #copiar os positivos pra saida
+
+while(i<size(v)):
+	if(v[i]>0):
+		i = i + 1
+		f = f + 1
+
+v1 = zeros(i,dtype=int)
+t = 0
+g = 0
+
+while(t<size(v1)):
+	t = t + 1
+	g = g + 1
+
+		
+print(v)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:27:04) 
+-- CODE:
+from numpy import*
+v = array(eval(input("Vetor: ")))
+
+# Cortar os negativos:
+i = 0 #qnt positivos
+f = 0 #copiar os positivos pra saida
+
+while(i<size(v)):
+	if(v[i]>0):
+		i = i + 1
+		f = f + 1
+
+v1 = zeros(i,dtype=int)
+t = 0
+g = 0
+
+while(t<size(v1)):
+	t = t + 1
+	g = g + 1
+
+		
+print(v1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:27:26) 
+-- CODE:
+from numpy import*
+v = array(eval(input("Vetor: ")))
+
+# Cortar os negativos:
+i = 0 #qnt positivos
+f = 0 #copiar os positivos pra saida
+
+while(i<size(v)):
+	if(v[i]>0):
+		i = i + 1
+		f = f + 1
+	else:
+		print(v)
+v1 = zeros(i,dtype=int)
+t = 0
+g = 0
+
+while(t<size(v1)):
+	t = t + 1
+	g = g + 1
+
+		
+print(v1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:43:00) 
+-- CODE:
+from numpy import*
+v = array(eval(input("Vetor: ")))
+
+# Cortar os negativos:
+i = 0 #qnt positivos
+f = 0 #copiar os positivos pra saida
+
+while(i<size(v)):
+	if(v[i]>0):
+		i = i + 1
+			f = f + 1
+
+v1 = zeros(f,dtype=int)
+t = 0
+g = 0
+
+while(t<size(v1)):
+	if(v[t]>0):
+		v1[i]=v[t]
+		g = g +1
+	t = t + 1
+		
+print(v1)
+
+-- ERROR:
+File "XXXX", line 11
+    f = f + 1
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:43:16) 
+-- CODE:
+from numpy import*
+v = array(eval(input("Vetor: ")))
+
+# Cortar os negativos:
+i = 0 #qnt positivos
+f = 0 #copiar os positivos pra saida
+
+while(i<size(v)):
+	if(v[i]>0):
+		i = i + 1
+	f = f + 1
+
+v1 = zeros(f,dtype=int)
+t = 0
+g = 0
+
+while(t<size(v1)):
+	if(v[t]>0):
+		v1[i]=v[t]
+		g = g +1
+	t = t + 1
+		
+print(v1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:43:43) 
+-- CODE:
+from numpy import*
+v = array(eval(input("Vetor: ")))
+
+# Cortar os negativos:
+i = 0 #qnt positivos
+f = 0 #copiar os positivos pra saida
+
+while(i<size(v)):
+	if(v[i]>0):
+		f = f + 1
+	i = i + 1
+
+
+v1 = zeros(f,dtype=int)
+t = 0
+g = 0
+
+while(t<size(v1)):
+	if(v[t]>0):
+		v1[i]=v[t]
+		g = g +1
+	t = t + 1
+		
+print(v1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:43:49) 
+-- CODE:
+from numpy import*
+v = array(eval(input("Vetor: ")))
+
+# Cortar os negativos:
+i = 0 #qnt positivos
+f = 0 #copiar os positivos pra saida
+
+while(i<size(v)):
+	if(v[i]>0):
+		f = f + 1
+	i = i + 1
+
+
+v1 = zeros(f,dtype=int)
+t = 0
+g = 0
+
+while(t<size(v1)):
+	if(v[t]>0):
+		v1[i]=v[t]
+		g = g +1
+	t = t + 1
+		
+print(v1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:44:20) 
+-- CODE:
+from numpy import*
+v = array(eval(input("Vetor: ")))
+
+# Cortar os negativos:
+i = 0 #qnt positivos
+f = 0 #copiar os positivos pra saida
+
+while(i<size(v)):
+	if(v[i]>0):
+		f = f + 1
+	i = i + 1
+
+
+v1 = zeros(f,dtype=int)
+t = 0
+g = 0
+
+while(t<size(v)):
+	if(v[t]>0):
+		v1[i]=v[t]
+		g = g +1
+	t = t + 1
+		
+print(v1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:44:54) 
+-- CODE:
+from numpy import*
+v = array(eval(input("Vetor: ")))
+
+# Cortar os negativos:
+i = 0 #qnt positivos
+f = 0 #copiar os positivos pra saida
+
+while(i<size(v)):
+	if(v[i]>0):
+		f = f + 1
+	i = i + 1
+
+v1 = zeros(f,dtype=int)
+t = 0
+g = 0
+
+while(t<size(v)):
+	if(v[t]>0):
+		v1[i] =v[t]
+		g = g +1
+	t = t + 1
+		
+print(v1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:45:06) 
+-- CODE:
+from numpy import*
+v = array(eval(input("Vetor: ")))
+
+# Cortar os negativos:
+i = 0 #qnt positivos
+f = 0 #copiar os positivos pra saida
+
+while(i<size(v)):
+	if(v[i]>0):
+		f = f + 1
+	i = i + 1
+
+v1 = zeros(f,dtype=int)
+t = 0
+g = 0
+
+while(t<size(v)):
+	if(v[t]>0):
+		v1[g] =v[t]
+		g = g +1
+	t = t + 1
+		
+print(v1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 23:45:13) 
+-- CODE:
+from numpy import*
+v = array(eval(input("Vetor: ")))
+
+# Cortar os negativos:
+i = 0 #qnt positivos
+f = 0 #copiar os positivos pra saida
+
+while(i<size(v)):
+	if(v[i]>0):
+		f = f + 1
+	i = i + 1
+
+v1 = zeros(f,dtype=int)
+t = 0
+g = 0
+
+while(t<size(v)):
+	if(v[t]>0):
+		v1[g] =v[t]
+		g = g +1
+	t = t + 1
+		
+print(v1)
+
+-- EXECUTION TIME:
+0.536968
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+[18 32 14 25]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:47:54) 
+-- CODE:
+from numpy import*
+v = array(eval(input("Vetor: ")))
+
+# Cortar os negativos:
+i = 0 #qnt positivos
+f = 0 #copiar os positivos pra saida
+
+while(i<size(v)):
+	if(v[i]>0):
+		f = f + 1
+	i = i + 1
+
+v1 = zeros(f,dtype=int)
+t = 0
+g = 0
+
+
+print(v1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:48:09) 
+-- CODE:
+from numpy import*
+v = array(eval(input("Vetor: ")))
+
+# Cortar os negativos:
+i = 0 #qnt positivos
+f = 0 #copiar os positivos pra saida
+
+while(i<size(v)):
+	if(v[i]>0):
+		f = f + 1
+	i = i + 1
+
+v1 = zeros(f,dtype=int)
+
+print(v1)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 23:48:31) 
+-- CODE:
+from numpy import*
+v = array(eval(input("Vetor: ")))
+
+# Cortar os negativos:
+i = 0 #qnt positivos
+f = 0 #copiar os positivos pra saida
+
+while(i<size(v)):
+	if(v[i]>0):
+		f = f + 1
+	i = i + 1
+
+v1 = zeros(f,dtype=int)
+while(t<size(v)):
+	if(v[t]>0):
+		v1[g] =v[t]
+		g = g +1
+	t = t + 1
+		
+print(v1)
+
+-- EXECUTION TIME:
+0.53794
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1758/1183/main.py", line 14, in <module>
+    while(t<size(v)):
+NameError: name 't' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 23:48:53) 
+-- CODE:
+from numpy import*
+v = array(eval(input("Vetor: ")))
+
+# Cortar os negativos:
+i = 0 #qnt positivos
+f = 0 #copiar os positivos pra saida
+
+while(i<size(v)):
+	if(v[i]>0):
+		f = f + 1
+	i = i + 1
+
+v1 = zeros(f,dtype=int)
+t=0
+g=0
+
+while(t<size(v)):
+	if(v[t]>0):
+		v1[g] =v[t]
+		g = g +1
+	t = t + 1
+		
+print(v1)
+
+-- EXECUTION TIME:
+0.512135
+-- TEST CASE 1:
+---- input:
+[-1,-2,-3,-4,-5,-6,-7,-8,-9,-10,1]
+---- correct output:
+[1]
+---- user output:
+[1]
+-- TEST CASE 2:
+---- input:
+[2,-1,3,-4,5]
+---- correct output:
+[2 3 5]
+---- user output:
+[2 3 5]
+-- TEST CASE 3:
+---- input:
+[-1,18,32,14,25,-6]
+---- correct output:
+[18 32 14 25]
+---- user output:
+[18 32 14 25]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

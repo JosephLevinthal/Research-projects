@@ -1,0 +1,881 @@
+== TEST (2019-06-04 21:39:27) 
+-- CODE:
+x=int(input("Digite um numero: "))
+x=x*2
+f="x"*x
+print(f)
+-- OUTPUT:
+xxxxxxxxxxxxxxxxxxxxxx
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 21:39:42) 
+-- CODE:
+x=int(input("Digite um numero: "))
+x=x*2
+f="*"*x
+print(f)
+-- OUTPUT:
+**********************
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 21:51:34) 
+-- CODE:
+x=int(input("Digite um numero: "))
+x=x*2
+f="*"*x
+h="oo"
+t=2
+for i in x:
+	x=x-1
+	print(x,"oo",x)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    for i in x:
+TypeError: 'int' object is not iterable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 21:52:01) 
+-- CODE:
+x=int(input("Digite um numero: "))
+x=x*2
+f="*"*x
+h="oo"
+t=2
+for i in x:
+	x=x-1
+	h=h*t
+	t=t+4
+	print(x,h,x)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    for i in x:
+TypeError: 'int' object is not iterable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 21:53:27) 
+-- CODE:
+x=int(input("Digite um numero: "))
+f="*"
+h="oo"
+t=2
+for i in x:
+	x=x-1
+	print(f*x,h,f*x)
+	h=h*t
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    for i in x:
+TypeError: 'int' object is not iterable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 21:53:54) 
+-- CODE:
+x=int(input("Digite um numero: "))
+t="*"*x
+f="*"
+h="oo"
+t=2
+for i in t:
+	x=x-1
+	print(f*x,h,f*x)
+	h=h*t
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    for i in t:
+TypeError: 'int' object is not iterable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 21:54:12) 
+-- CODE:
+x=int(input("Digite um numero: "))
+t=arange(x)
+f="*"
+h="oo"
+t=2
+for i in t:
+	x=x-1
+	print(f*x,h,f*x)
+	h=h*t
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    t=arange(x)
+NameError: name 'arange' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 21:54:27) 
+-- CODE:
+from numpy import*
+x=int(input("Digite um numero: "))
+t=arange(x)
+f="*"
+h="oo"
+t=2
+for i in t:
+	x=x-1
+	print(f*x,h,f*x)
+	h=h*t
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 21:54:44) 
+-- CODE:
+from numpy import*
+x=int(input("Digite um numero: "))
+t=arange(x)
+print(t)
+f="*"
+h="oo"
+t=2
+for i in t:
+	x=x-1
+	print(f*x,h,f*x)
+	h=h*t
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 21:57:47) 
+-- CODE:
+from numpy import*
+x=int(input("Digite um numero: "))
+t=arange(x)
+f="*"
+h="oo"
+t=2
+j=0
+while(size(t)>j):
+	print(f*(x-1),h,f*(x-1))
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 22:01:34) 
+-- CODE:
+from numpy import*
+x=int(input("Digite um numero: "))
+t=arange(x)
+f="*"
+h="oo"
+t=2
+j=0
+while(size(t)>j):
+	print(f*(x-1),h,f*(x-1))
+	j=j+1
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 22:01:54) 
+-- CODE:
+from numpy import*
+x=int(input("Digite um numero: "))
+t=arange(x)
+f="*"
+h="oo"
+t=2
+j=0
+while(x>j):
+	print(f*(x-1),h,f*(x-1))
+	j=j+1
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 22:02:29) 
+-- CODE:
+from numpy import*
+x=int(input("Digite um numero: "))
+f="*"
+h="oo"
+t=2
+j=0
+g=x
+while(x>j):
+	g=g-1
+	print(f*g,h,f*g)
+	j=j+1
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 22:02:46) 
+-- CODE:
+from numpy import*
+x=int(input("Digite um numero: "))
+f="*"
+h="oo"
+t=2
+j=1
+g=x
+while(x>j):
+	g=g-1
+	print(f*g,h,f*g)
+	j=j+1
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 22:03:14) 
+-- CODE:
+from numpy import*
+x=int(input("Digite um numero: "))
+f="*"
+h="o"
+t=2
+j=1
+g=x
+while(x>j):
+	g=g-1
+	print(f*g,h*2,f*g)
+	j=j+1
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 22:03:36) 
+-- CODE:
+from numpy import*
+x=int(input("Digite um numero: "))
+f="*"
+h="o"
+t=2
+j=1
+g=x
+while(x>j):
+	g=g-1
+	print(f*g,h*t,f*g)
+	t=t+2
+	j=j+1
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 22:04:06) 
+-- CODE:
+from numpy import*
+x=int(input("Digite um numero: "))
+print("*"*(x*2))
+f="*"
+h="o"
+t=2
+j=1
+g=x
+while(x>j):
+	g=g-1
+	print(f*g,h*t,f*g)
+	t=t+2
+	j=j+1
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-04 22:04:39) 
+-- CODE:
+from numpy import*
+x=int(input("Digite um numero: "))
+print("*"*(x*2))
+f="*"
+h="o"
+t=2
+j=1
+g=x
+while(x>j):
+	g=g-1
+	print(f*g,h*t,f*g)
+	t=t+2
+	j=j+1
+	
+-- EXECUTION TIME:
+1.07873
+-- TEST CASE 1:
+---- input:
+11
+---- correct output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+---- user output:
+**********************
+********** oo **********
+********* oooo *********
+******** oooooo ********
+******* oooooooo *******
+****** oooooooooo ******
+***** oooooooooooo *****
+**** oooooooooooooo ****
+*** oooooooooooooooo ***
+** oooooooooooooooooo **
+* oooooooooooooooooooo *
+-- TEST CASE 2:
+---- input:
+19
+---- correct output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+---- user output:
+**************************************
+****************** oo ******************
+***************** oooo *****************
+**************** oooooo ****************
+*************** oooooooo ***************
+************** oooooooooo **************
+************* oooooooooooo *************
+************ oooooooooooooo ************
+*********** oooooooooooooooo ***********
+********** oooooooooooooooooo **********
+********* oooooooooooooooooooo *********
+******** oooooooooooooooooooooo ********
+******* oooooooooooooooooooooooo *******
+****** oooooooooooooooooooooooooo ******
+***** oooooooooooooooooooooooooooo *****
+**** oooooooooooooooooooooooooooooo ****
+*** oooooooooooooooooooooooooooooooo ***
+** oooooooooooooooooooooooooooooooooo **
+* oooooooooooooooooooooooooooooooooooo *
+-- TEST CASE 3:
+---- input:
+26
+---- correct output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo********
+*******oooooooooooooooooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooooooooooooooooo*
+---- user output:
+****************************************************
+************************* oo *************************
+************************ oooo ************************
+*********************** oooooo ***********************
+********************** oooooooo **********************
+********************* oooooooooo *********************
+******************** oooooooooooo ********************
+******************* oooooooooooooo *******************
+****************** oooooooooooooooo ******************
+***************** oooooooooooooooooo *****************
+**************** oooooooooooooooooooo ****************
+*************** oooooooooooooooooooooo ***************
+************** oooooooooooooooooooooooo **************
+************* oooooooooooooooooooooooooo *************
+************ oooooooooooooooooooooooooooo ************
+*********** oooooooooooooooooooooooooooooo ***********
+********** oooooooooooooooooooooooooooooooo **********
+********* oooooooooooooooooooooooooooooooooo *********
+******** ooo
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 22:04:45) 
+-- CODE:
+from numpy import*
+x=int(input("Digite um numero: "))
+print("*"*(x*2))
+f="*"
+h="o"
+t=2
+j=1
+g=x
+while(x>j):
+	g=g-1
+	print(f*g,h*t,f*g)
+	t=t+2
+	j=j+1
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 22:05:28) 
+-- CODE:
+from numpy import*
+x=int(input("Digite um numero: "))
+print("*"*(x*2))
+f="*"
+h="o"
+t=2
+j=1
+g=x
+while(x>j):
+	g=g-1
+	n=(f*g,h*t,f*g)
+	t=t+2
+	j=j+1
+print(n)	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 22:06:34) 
+-- CODE:
+from numpy import*
+x=int(input("Digite um numero: "))
+print("*"*(x*2))
+f="*"
+h="o"
+t=2
+j=1
+g=x
+while(x>j):
+	g=g-1
+	n=(f*g,h*t,f*g)
+	n=reaplace(" ","")
+	print(n)
+	t=t+2
+	j=j+1
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 22:06:46) 
+-- CODE:
+from numpy import*
+x=int(input("Digite um numero: "))
+print("*"*(x*2))
+f="*"
+h="o"
+t=2
+j=1
+g=x
+while(x>j):
+	g=g-1
+	n=(f*g,h*t,f*g)
+	n=replace(" ","")
+	print(n)
+	t=t+2
+	j=j+1
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 22:08:29) 
+-- CODE:
+from numpy import*
+x=int(input("Digite um numero: "))
+print("*"*(x*2))
+f="*"
+h="o"
+t=2
+j=1
+g=x
+while(x>j):
+	g=g-1
+	n=(f*g,h*t,f*g)
+	n=n.replace(" ","")
+	print(n)
+	t=t+2
+	j=j+1
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-04 22:08:56) 
+-- CODE:
+from numpy import*
+x=int(input("Digite um numero: "))
+print("*"*(x*2))
+f="*"
+h="o"
+t=2
+j=1
+g=x
+while(x>j):
+	g=g-1
+	n=(f*g+h*t+f*g)
+	print(n)
+	t=t+2
+	j=j+1
+
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-04 22:09:08) 
+-- CODE:
+from numpy import*
+x=int(input("Digite um numero: "))
+print("*"*(x*2))
+f="*"
+h="o"
+t=2
+j=1
+g=x
+while(x>j):
+	g=g-1
+	n=(f*g+h*t+f*g)
+	print(n)
+	t=t+2
+	j=j+1
+
+	
+-- EXECUTION TIME:
+1.14896
+-- TEST CASE 1:
+---- input:
+11
+---- correct output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+---- user output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+-- TEST CASE 2:
+---- input:
+19
+---- correct output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+---- user output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+-- TEST CASE 3:
+---- input:
+26
+---- correct output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo********
+*******oooooooooooooooooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooooooooooooooooo*
+---- user output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo**
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 21:19:11) 
+-- CODE:
+from numpy import*
+x=int(input("Digite um numero: "))
+print("*"*(x*2))
+f="*"
+h="o"
+t=2
+j=1
+g=x
+while(x>j):
+	g=g-1
+	n=(f*g+h*t+f*g)
+	print(n)
+	t=t+2
+	j=j+1
+
+	
+-- EXECUTION TIME:
+1.0614
+-- TEST CASE 1:
+---- input:
+11
+---- correct output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+---- user output:
+**********************
+**********oo**********
+*********oooo*********
+********oooooo********
+*******oooooooo*******
+******oooooooooo******
+*****oooooooooooo*****
+****oooooooooooooo****
+***oooooooooooooooo***
+**oooooooooooooooooo**
+*oooooooooooooooooooo*
+-- TEST CASE 2:
+---- input:
+19
+---- correct output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+---- user output:
+**************************************
+******************oo******************
+*****************oooo*****************
+****************oooooo****************
+***************oooooooo***************
+**************oooooooooo**************
+*************oooooooooooo*************
+************oooooooooooooo************
+***********oooooooooooooooo***********
+**********oooooooooooooooooo**********
+*********oooooooooooooooooooo*********
+********oooooooooooooooooooooo********
+*******oooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooo*
+-- TEST CASE 3:
+---- input:
+26
+---- correct output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo********
+*******oooooooooooooooooooooooooooooooooooooo*******
+******oooooooooooooooooooooooooooooooooooooooo******
+*****oooooooooooooooooooooooooooooooooooooooooo*****
+****oooooooooooooooooooooooooooooooooooooooooooo****
+***oooooooooooooooooooooooooooooooooooooooooooooo***
+**oooooooooooooooooooooooooooooooooooooooooooooooo**
+*oooooooooooooooooooooooooooooooooooooooooooooooooo*
+---- user output:
+****************************************************
+*************************oo*************************
+************************oooo************************
+***********************oooooo***********************
+**********************oooooooo**********************
+*********************oooooooooo*********************
+********************oooooooooooo********************
+*******************oooooooooooooo*******************
+******************oooooooooooooooo******************
+*****************oooooooooooooooooo*****************
+****************oooooooooooooooooooo****************
+***************oooooooooooooooooooooo***************
+**************oooooooooooooooooooooooo**************
+*************oooooooooooooooooooooooooo*************
+************oooooooooooooooooooooooooooo************
+***********oooooooooooooooooooooooooooooo***********
+**********oooooooooooooooooooooooooooooooo**********
+*********oooooooooooooooooooooooooooooooooo*********
+********oooooooooooooooooooooooooooooooooooo**
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

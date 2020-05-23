@@ -1,0 +1,1780 @@
+== TEST (2019-07-01 20:49:28) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab - 1
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 20:50:42) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab - 1
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+0.709922
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+tabuleiro: movimentos: posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+tabuleiro: movimentos: posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+tabuleiro: movimentos: posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 20:50:54) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab - 1
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 20:51:54) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab - 1
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life+10)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 20:52:44) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab - 1
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life+10)
+-- EXECUTION TIME:
+1.20163
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  85
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  85
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  65
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 21:13:30) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab - 1
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life+)
+-- ERROR:
+File "XXXX", line 55
+    print("life: ", life+)
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 21:13:54) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab - 1
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 21:51:56) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab - 1
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 21:53:33) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab - 1
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 21:55:22) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab 
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 21:56:23) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab 
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.18394
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  14
+life:  20
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 21:59:06) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab 
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab 
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 22:01:24) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab 
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab 
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab 
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 22:02:14) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab 
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 22:36:57) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab 
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life-5)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 22:37:08) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab 
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life+5)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 22:37:38) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab 
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life+5)
+-- EXECUTION TIME:
+1.1615
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  80
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  80
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  14
+life:  25
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 22:37:52) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab 
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 22:38:16) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab 
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.23806
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  14
+life:  20
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 09:07:45) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab 
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 09:10:48) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab 
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab 
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 09:11:20) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab 
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 09:12:09) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab 
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 09:12:59) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab + 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab 
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 09:13:26) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab 
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,160 @@
+== TEST (2019-07-01 14:37:11) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+x=int(input(":"))
+mat=zeros((x,x),dtype=int)
+
+mat=ones((x,x),dtype=int)
+n=zeros((x,x),dtype=int)
+
+for i in range(x):
+	for j in range(x):
+		n=[i,j]=min(i,j)+1
+print(n)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 14:37:28) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+x=int(input(":"))
+mat=zeros((x,x),dtype=int)
+
+mat=ones((x,x),dtype=int)
+n=zeros((x,x),dtype=int)
+
+for i in range(x):
+	for j in range(x):
+		n[i,j]=min(i,j)+1
+print(n)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 14:37:36) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+x=int(input(":"))
+mat=zeros((x,x),dtype=int)
+
+mat=ones((x,x),dtype=int)
+n=zeros((x,x),dtype=int)
+
+for i in range(x):
+	for j in range(x):
+		n[i,j]=min(i,j)+1
+print(n)
+-- EXECUTION TIME:
+1.05527
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 15:23:33) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+x=int(input(":"))
+mat=zeros((x,x),dtype=int)
+
+mat=ones((x,x),dtype=int)
+n=zeros((x,x),dtype=int)
+
+for i in range(x):
+	for j in range(x):
+		n[i,j]=min(i,j)+1
+print(n)
+-- EXECUTION TIME:
+1.02525
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

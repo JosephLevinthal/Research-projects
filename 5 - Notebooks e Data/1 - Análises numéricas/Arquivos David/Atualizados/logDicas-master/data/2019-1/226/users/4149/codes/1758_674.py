@@ -1,0 +1,10 @@
+from numpy import*
+vet=array(eval(input("entre com o vetor:")))
+a=sum(vet)/size(vet)
+print(size(vet))
+print(vet[0])
+print(vet[-1])
+print(max(vet))
+print(min(vet))
+print(sum(vet))
+print(round(a,2))

@@ -1,0 +1,73 @@
+== TEST (2019-04-01 15:08:36) 
+-- CODE:
+from math import *
+
+b = float(input("lado b: "))
+c = float(input("lado c: "))
+Oa = float(input("angulo bc: "))
+
+angc = radians(cos(Oa))
+lei = 2 * b * c * angc
+k = (b ** 2) + (c ** 2) - lei
+a = sqrt(k)
+
+print(round(a, 3))
+-- OUTPUT:
+12.91
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:11:24) 
+-- CODE:
+from math import *
+
+b = float(input("lado b: "))
+c = float(input("lado c: "))
+Oa = radians(float(input("angulo bc: ")))
+
+
+ang = cos(Oa)
+lei = 2 * b * c * ang
+k = (b ** 2) + (c ** 2) - lei
+a = sqrt(k)
+
+print(round(a, 3))
+-- OUTPUT:
+9.165
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 15:12:00) 
+-- CODE:
+from math import *
+
+b = float(input("lado b: "))
+c = float(input("lado c: "))
+Oa = radians(float(input("angulo bc: ")))
+
+
+ang = cos(Oa)
+lei = 2 * b * c * ang
+k = (b ** 2) + (c ** 2) - lei
+a = sqrt(k)
+
+print(round(a, 2))
+-- EXECUTION TIME:
+0.161754
+-- TEST CASE 1:
+---- input:
+8
+10
+60
+---- correct output:
+9.17
+---- user output:
+9.17
+-- TEST CASE 2:
+---- input:
+18.8
+21.9
+49.1
+---- correct output:
+17.14
+---- user output:
+17.14
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

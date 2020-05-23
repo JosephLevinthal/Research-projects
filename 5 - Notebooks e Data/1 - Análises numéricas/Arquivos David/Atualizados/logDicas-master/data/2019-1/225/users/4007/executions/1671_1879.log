@@ -1,0 +1,176 @@
+== TEST (2019-04-27 14:15:56) 
+-- CODE:
+# Ao testar sua solução, não se limite ao caso de exemplo.
+he = float(input("numero de horas extras: "))
+nhf = float(input("numero de horas em que faltou: "))
+h = (he) - 1/4 * (nhf)
+print(h)
+
+-- OUTPUT:
+415.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-27 14:23:23) 
+-- CODE:
+# Ao testar sua solução, não se limite ao caso de exemplo.
+he = float(input("numero de horas extras: "))
+nhf = float(input("numero de horas em que faltou: "))
+h = (he) - 1/4 * (nhf)
+print(he + "extras")
+print(nhf + "faltas")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(he + "extras")
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-27 14:23:56) 
+-- CODE:
+# Ao testar sua solução, não se limite ao caso de exemplo.
+he = float(input("numero de horas extras: "))
+nhf = float(input("numero de horas em que faltou: "))
+h = (he) - 1/4 * (nhf)
+print(he,"extras")
+print(nhf + "faltas")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print(nhf + "faltas")
+TypeError: unsupported operand type(s) for +: 'float' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-27 14:24:14) 
+-- CODE:
+# Ao testar sua solução, não se limite ao caso de exemplo.
+he = float(input("numero de horas extras: "))
+nhf = float(input("numero de horas em que faltou: "))
+h = (he) - 1/4 * (nhf)
+print(he,"extras")
+print(nhf,"faltas")
+
+-- OUTPUT:
+420.0 extras
+20.0 faltas
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-27 14:25:27) 
+-- CODE:
+# Ao testar sua solução, não se limite ao caso de exemplo.
+he = float(input("numero de horas extras: "))
+nhf = float(input("numero de horas em que faltou: "))
+h = (he) - 1/4 * (nhf)
+print(he,"extras e" , nhf,"faltas")
+
+
+-- OUTPUT:
+420.0 extras e 20.0 faltas
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-27 14:35:20) 
+-- CODE:
+# Ao testar sua solução, não se limite ao caso de exemplo.
+he = float(input("numero de horas extras: "))
+nhf = float(input("numero de horas em que faltou: "))
+h = (he) - 1/4 * (nhf)
+print(he,"extras e" , nhf,"de falta")
+if (h <= 400):
+	G = "R$ 100.00"
+	print(round(G, 2))
+else: 
+	G = "R$ 500.00"
+	print(round(G, 2))
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 11, in <module>
+    print(round(G, 2))
+TypeError: type str doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-27 14:36:13) 
+-- CODE:
+# Ao testar sua solução, não se limite ao caso de exemplo.
+he = float(input("numero de horas extras: "))
+nhf = float(input("numero de horas em que faltou: "))
+h = (he) - 1/4 * (nhf)
+print(he,"extras e" , nhf,"de falta")
+if (h <= 400):
+	G = "R$ 100.00"
+	print(round G, 2)
+else: 
+	G = "R$ 500.00"
+	print(round(G, 2))
+	
+
+-- ERROR:
+File "XXXX", line 8
+    print(round G, 2)
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-27 14:37:01) 
+-- CODE:
+# Ao testar sua solução, não se limite ao caso de exemplo.
+he = float(input("numero de horas extras: "))
+nhf = float(input("numero de horas em que faltou: "))
+h = (he) - 1/4 * (nhf)
+print(he,"extras e" , nhf,"de falta")
+if (h <= 400):
+	G = "R$ 100.0"
+	print(G)
+else: 
+	G = "R$ 500.0"
+	print(G)
+	
+
+-- OUTPUT:
+420.0 extras e 20.0 de falta
+R$ 500.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-27 14:37:36) 
+-- CODE:
+# Ao testar sua solução, não se limite ao caso de exemplo.
+he = float(input("numero de horas extras: "))
+nhf = float(input("numero de horas em que faltou: "))
+h = (he) - 1/4 * (nhf)
+print(he,"extras e" , nhf,"de falta")
+if (h <= 400):
+	G = "R$ 100.0"
+	print(G)
+else: 
+	G = "R$ 500.0"
+	print(G)
+	
+
+-- EXECUTION TIME:
+0.156711
+-- TEST CASE 1:
+---- input:
+420
+20
+---- correct output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+---- user output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+-- TEST CASE 2:
+---- input:
+400.5
+100
+---- correct output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+---- user output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+-- TEST CASE 3:
+---- input:
+300
+44
+---- correct output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+---- user output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

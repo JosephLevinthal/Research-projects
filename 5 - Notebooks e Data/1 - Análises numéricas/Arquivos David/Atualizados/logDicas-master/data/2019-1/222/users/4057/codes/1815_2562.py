@@ -1,0 +1,27 @@
+from numpy import*
+
+# Leitura do primeiro vetor
+vet = array(eval(input("Primeiro vetor: ")))
+nimp = 0
+total = 0
+# Verifica se o programa vai terminar
+while (size(vet) > 1):
+   # Zera contador de elementos pares
+   npar = 0
+   # Conta quantidade de elementos pares
+   for elemento in vet:
+      if (elemento % 2 == 0):
+         npar = npar + 1
+      total = total+ 1
+   # No. de elementos pares
+   print(npar)
+
+   # No. de elementos impares
+   nimp = total - npar
+   print(nimp)
+
+   # No. total de elementos
+   print(total)
+
+   # Leitura do proximo vetor
+   vet = array(eval(input("Proximo vetor: ")))

@@ -1,0 +1,199 @@
+== TEST (2019-05-28 11:01:45) 
+-- CODE:
+from numpy import *
+a = array(eval(input('notas: ')))
+b = array(eval(input('nomes: ')))
+i = 0
+j = 0
+f = 0
+apr = 0
+
+while a[i] != max(a):
+	i += 1
+	
+while j<size(a):
+	if a[j] == -1
+		f += 1
+	elif a[j]>=6:
+		apr += 1
+	j += 1
+print(f)
+print(apr)
+print(size(a)-apr)
+j = 0
+k = 0
+med = 0
+while j <size(a):
+	if a[j] != -1:
+		med += a[j]
+		k += 1
+	j += 1
+print(round(med/k,2))
+print(b[i])
+-- ERROR:
+File "XXXX", line 13
+    if a[j] == -1
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:01:54) 
+-- CODE:
+from numpy import *
+a = array(eval(input('notas: ')))
+b = array(eval(input('nomes: ')))
+i = 0
+j = 0
+f = 0
+apr = 0
+
+while a[i] != max(a):
+	i += 1
+	
+while j<size(a):
+	if a[j] == -1:
+		f += 1
+	elif a[j]>=6:
+		apr += 1
+	j += 1
+print(f)
+print(apr)
+print(size(a)-apr)
+j = 0
+k = 0
+med = 0
+while j <size(a):
+	if a[j] != -1:
+		med += a[j]
+		k += 1
+	j += 1
+print(round(med/k,2))
+print(b[i])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:02:54) 
+-- CODE:
+from numpy import *
+a = array(eval(input('notas: ')))
+b = array(eval(input('nomes: ')))
+i = 0
+j = 0
+f = 0
+apr = 0
+
+while a[i] != max(a):
+	i += 1
+	
+while j<size(a):
+	if a[j] == -1:
+		f += 1
+	elif a[j]>=6:
+		apr += 1
+	j += 1
+print(f)
+print(apr)
+print(size(a)-(apr+f))
+j = 0
+k = 0
+med = 0
+while j <size(a):
+	if a[j] != -1:
+		med += a[j]
+		k += 1
+	j += 1
+print(round(med/k,2))
+print(b[i])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 11:03:49) 
+-- CODE:
+from numpy import *
+a = array(eval(input('notas: ')))
+b = array(eval(input('nomes: ')))
+i = 0
+j = 0
+f = 0
+apr = 0
+
+while a[i] != max(a):
+	i += 1
+	
+while j<size(a):
+	if a[j] == -1:
+		f += 1
+	elif a[j]>=6:
+		apr += 1
+	j += 1
+print(f)
+print(apr)
+print(size(a)-(apr+f))
+j = 0
+k = 0
+med = 0
+while j <size(a):
+	if a[j] != -1:
+		med += a[j]
+		k += 1
+	j += 1
+print(round(med/k,2))
+print(b[i])
+-- EXECUTION TIME:
+0.398514
+-- TEST CASE 1:
+---- input:
+[9,8,7,6,5,4,3,2,1,-1,-1,-1]
+['A','B','C','D','E','F','G','H','I','J','K','L']
+---- correct output:
+3
+4
+5
+5.0
+A
+---- user output:
+3
+4
+5
+5.0
+A
+-- TEST CASE 2:
+---- input:
+[-1,1.2,-1,2.3,-1,3.4,-1,4.5,-1,5.6,-1]
+['ALICE','BENTO','CLARA','DAVI','ELSON','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+6
+0
+5
+3.4
+JULIA
+---- user output:
+6
+0
+5
+3.4
+JULIA
+-- TEST CASE 3:
+---- input:
+[1.23,3.45,5.67,6.78,7.89,8.9,9,10,0,9.8,7.6]
+['CLARA','DAVI','ELSON','ALICE','BENTO','FLAVIO','GABI','HELOISA','IRIS','JULIA','KARLA']
+---- correct output:
+0
+7
+4
+6.39
+HELOISA
+---- user output:
+0
+7
+4
+6.39
+HELOISA
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

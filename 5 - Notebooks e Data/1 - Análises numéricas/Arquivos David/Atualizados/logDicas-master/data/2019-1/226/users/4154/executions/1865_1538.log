@@ -1,0 +1,510 @@
+== TEST (2019-07-04 10:18:00) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+c = for i in range(b,2):
+	print(i)
+-- ERROR:
+File "XXXX", line 4
+    c = for i in range(b,2):
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:18:29) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+c = for i in range(b),2:
+	print(i)
+-- ERROR:
+File "XXXX", line 4
+    c = for i in range(b),2:
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:22:33) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 1
+c = for i in range(b):
+	print i
+-- ERROR:
+File "XXXX", line 5
+    c = for i in range(b):
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:22:49) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 1
+for i in range(b):
+	print i
+-- ERROR:
+File "XXXX", line 6
+    print i
+          ^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(i)?
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:22:58) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 1
+for i in range(b):
+	print (i)
+-- OUTPUT:
+0
+1
+2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:27:36) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 0
+for i in range(b):
+	if (i//2)//2 == 0:
+		d+= a**(i*2)*(-1)
+	else:
+		d+= a**(i*2)
+print(round(d,8))
+-- OUTPUT:
+-1.41194496
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:28:13) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 0
+for i in range(b):
+	if (i//2)//2 == 0:
+		d+= a**(i*2)
+	else:
+		d+= a**(i*2)*(-1)
+print(round(d,8))
+-- OUTPUT:
+1.41194496
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:29:09) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 0
+for i in (range(b)-1):
+	if (i//2)//2 == 0:
+		d+= (-1)*a**(i*2)
+	else:
+		d+= a**(i*2)
+print(round(d,8))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    for i in (range(b)-1):
+TypeError: unsupported operand type(s) for -: 'range' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:29:40) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 0
+for i in range(b-1):
+	if (i//2)//2 == 0:
+		d+= (-1)*a**(i*2)
+	else:
+		d+= a**(i*2)
+print(round(d,8))
+-- OUTPUT:
+-1.3136
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:31:04) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 0
+for i in range(b):
+	if (i//2)//2 == 0:
+		d+= (-1)*a**(i*2)
+	else:
+		d+= a**(i*2)
+print(round(d,8))
+-- OUTPUT:
+-1.41194496
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:31:25) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 0
+for i in range(b):
+	if (i//2)//2 == 0:
+		d+= (-1)*a**(i*2)
+	else:
+		d+= a**(i*2)
+print(round(d,8))
+-- OUTPUT:
+-1.41194496
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:32:11) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 0
+for i in range(b):
+	if (i//2)//2 == 0:
+		d+= a**(i*2)
+	else:
+		d+= a**(i*2)*(-1)
+print(round(d,8))
+-- OUTPUT:
+1.41194496
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:32:26) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 0
+for i in range(b):
+	if (i//2)//2 == 0:
+		d+= a**(i*2)
+	else:
+		d+= a**(i*2)*(-1)
+print(round(d,8))
+-- OUTPUT:
+1.41194496
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:33:38) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 0
+for i in range(b):
+	if (i//2)//2 == 0:
+		d+= a**(i*(i+2))
+	else:
+		d+= a**(i*(i+2))*(-1)
+print(round(d,8))
+-- OUTPUT:
+1.18528773
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:33:57) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 0
+for i in range(b-1):
+	if (i//2)//2 == 0:
+		d+= a**(i*(i+2))
+	else:
+		d+= a**(i*(i+2))*(-1)
+print(round(d,8))
+-- OUTPUT:
+1.175616
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:34:31) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 0
+for i in range(b):
+	if (i//2)//2 == 0:
+		d+= a**(i*(i+2))*(-1)
+	else:
+		d+= a**(i*(i+2))
+print(round(d,8))
+-- OUTPUT:
+-1.18528773
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:34:40) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 0
+for i in range(b):
+	if (i//2)//2 == 0:
+		d+= a**(i*(i+2))*(-1)
+	else:
+		d+= a**(i*(i+2))
+print(round(d,8))
+-- OUTPUT:
+-1.18528773
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:34:49) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 0
+for i in range(b):
+	if (i//2)//2 == 0:
+		d+= a**(i*(i+2))*(-1)
+	else:
+		d+= a**(i*(i+2))
+print(round(d,8))
+-- OUTPUT:
+-1.18528773
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:35:09) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 0
+for i in range(b):
+	if (i//2)//2 == 0:
+		d+= a**(i*(i+2))
+	else:
+		d+= a**(i*(i+2))*(-1)
+print(round(d,8))
+-- OUTPUT:
+1.18528773
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:35:20) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 0
+for i in range(b):
+	if (i//2)//2 == 0:
+		d+= a**(i*(i+2))
+	else:
+		d+= a**(i*(i+2))*(-1)
+print(round(d,8))
+-- OUTPUT:
+1.18528773
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:40:05) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 1
+for i in range(b-1):
+	if i%0 == 0:
+		d+= a**(i*(i+2))*(-1)
+	else:
+		d+= a**(i*(i+2))
+print(round(d,8))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    if i%0 == 0:
+ZeroDivisionError: integer division or modulo by zero
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:40:44) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 1
+for i in range(b-1):
+	if i%0 == 0:
+		d+= a**(i*(i+2))*(-1)
+	else:
+		d+= a**(i*(i+2))
+print(round(d,8),dtype=float)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    if i%0 == 0:
+ZeroDivisionError: integer division or modulo by zero
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:41:19) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 1
+for i in range(b-1):
+	if i%0 == 0:
+		d+= a**(i*(i+2))*(-1)
+	else:
+		d+= a**(i*(i+2))
+print(round(d,8))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    if i%0 == 0:
+ZeroDivisionError: integer division or modulo by zero
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:41:52) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 1
+for i in range(b-1):
+	if i%2 == 0:
+		d+= a**(i*(i+2))*(-1)
+	else:
+		d+= a**(i*(i+2))
+print(round(d,8))
+-- OUTPUT:
+0.175616
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:42:10) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 1
+for i in range(b-1):
+	if i%2 == 0:
+		d+= a**(i*(i+2))*(-1)
+	else:
+		d+= a**(i*(i+2))
+print(round(d,8))
+-- OUTPUT:
+0.175616
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:42:17) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 1.0
+for i in range(b-1):
+	if i%2 == 0:
+		d+= a**(i*(i+2))*(-1)
+	else:
+		d+= a**(i*(i+2))
+print(round(d,8))
+-- OUTPUT:
+0.175616
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:42:28) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 1.0
+for i in range(b-1):
+	if i%2 == 0:
+		d+= a**(i*(i+2))*(-1)
+	else:
+		d+= a**(i*(i+2))
+print(round(d,8))
+-- OUTPUT:
+0.175616
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:42:54) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 1.0
+for i in range(b):
+	if i%2 == 0:
+		d+= a**(i*(i+2))*(-1)
+	else:
+		d+= a**(i*(i+2))
+print(round(d,8))
+-- OUTPUT:
+0.16594427
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:43:10) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 1.0
+for i in range(b):
+	if i%2 == 0:
+		d+= a**(i*(i+2))*(-1)
+	else:
+		d+= a**(i*(i+2))
+print(round(d,8))
+-- OUTPUT:
+0.16594427
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:45:36) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 0
+for i in range(b):
+	if i%2 != 0:
+		d -= a**(i*2)
+	else:
+		d += a**(i*2)
+print(round(d,8))
+-- OUTPUT:
+0.78474496
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:45:46) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 0
+for i in range(b):
+	if i%2 != 0:
+		d -= a**(i*2)
+	else:
+		d += a**(i*2)
+print(round(d,8))
+-- OUTPUT:
+0.78474496
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-04 10:45:54) 
+-- CODE:
+from math import *
+a = float(input())
+b = int(input())
+d = 0
+for i in range(b):
+	if i%2 != 0:
+		d -= a**(i*2)
+	else:
+		d += a**(i*2)
+print(round(d,8))
+-- EXECUTION TIME:
+0.67216
+-- TEST CASE 1:
+---- input:
+0.56
+3
+---- correct output:
+0.78474496
+---- user output:
+0.78474496
+-- TEST CASE 2:
+---- input:
+0.62
+4
+---- correct output:
+0.70656312
+---- user output:
+0.70656312
+-- TEST CASE 3:
+---- input:
+0.56
+2
+---- correct output:
+0.6864
+---- user output:
+0.6864
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,432 @@
+== TEST (2019-05-13 12:59:39) 
+-- CODE:
+v = int(input("quantidade do virus: "))
+l = int(input("quantidade de leucocitos: "))
+pv = float(input("percentual de crescimento do virus: "))
+pl = float(input("percentual de crescimento do leucocitos: "))
+
+iv = 0
+il = 0
+t = 0
+
+while ((il // iv) < 2):
+	if (iv == 0 and il == 0):
+		iv = v
+		il = l
+		t = 1
+	else:
+		iv = iv + (iv * pv)
+		il = il + (il * il)
+		t = t + 1
+print(t)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 10, in <module>
+    while ((il // iv) < 2):
+ZeroDivisionError: integer division or modulo by zero
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:00:16) 
+-- CODE:
+v = int(input("quantidade do virus: "))
+l = int(input("quantidade de leucocitos: "))
+pv = float(input("percentual de crescimento do virus: "))
+pl = float(input("percentual de crescimento do leucocitos: "))
+
+iv = 1
+il = 1
+t = 0
+
+while ((il // iv) < 2):
+	if (iv == 0 and il == 0):
+		iv = v
+		il = l
+		t = 1
+	else:
+		iv = iv + (iv * pv)
+		il = il + (il * il)
+		t = t + 1
+print(t)
+-- OUTPUT:
+4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:00:33) 
+-- CODE:
+v = int(input("quantidade do virus: "))
+l = int(input("quantidade de leucocitos: "))
+pv = float(input("percentual de crescimento do virus: "))
+pl = float(input("percentual de crescimento do leucocitos: "))
+
+iv = 1
+il = 1
+t = 0
+
+while ((il // iv) < 2):
+	if (iv == 1 and il == 1):
+		iv = v
+		il = l
+		t = 1
+	else:
+		iv = iv + (iv * pv)
+		il = il + (il * il)
+		t = t + 1
+print(t)
+-- OUTPUT:
+2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:01:17) 
+-- CODE:
+v = int(input("quantidade do virus: "))
+l = int(input("quantidade de leucocitos: "))
+pv = float(input("percentual de crescimento do virus: "))
+pl = float(input("percentual de crescimento do leucocitos: "))
+
+iv = 1
+il = 1
+t = 0
+
+while ((il // iv) < 2):
+	if (iv == 1 and il == 1):
+		iv = v
+		il = l
+		t = 1
+	else:
+		iv = iv * pv
+		il = il * pl
+		t = t + 1
+print(t)
+-- OUTPUT:
+3
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:03:57) 
+-- CODE:
+v = int(input("quantidade do virus: "))
+l = int(input("quantidade de leucocitos: "))
+pv = float(input("percentual de crescimento do virus: "))
+pl = float(input("percentual de crescimento do leucocitos: "))
+
+iv = 1
+il = 1
+t = 0
+
+while ((il // iv) < 2):
+	if (iv == 1 and il == 1):
+		iv = v
+		il = l
+		t = 1
+	else:
+		iv = iv + (iv * (pv/100))
+		il = il + (il * (pl/100))
+		t = t + 1
+print(t)
+-- OUTPUT:
+10
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:04:23) 
+-- CODE:
+v = int(input("quantidade do virus: "))
+l = int(input("quantidade de leucocitos: "))
+pv = float(input("percentual de crescimento do virus: "))
+pl = float(input("percentual de crescimento do leucocitos: "))
+
+iv = 1
+il = 1
+t = 0
+
+while ((il // iv) < 2):
+	if (iv == 1 and il == 1):
+		iv = v
+		il = l
+		t = 1
+	else:
+		iv = iv + (iv * (pv/100))
+		il = il + (il * (pl/100))
+		t = t + 1
+print(t)
+-- OUTPUT:
+10
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:07:43) 
+-- CODE:
+v = int(input("quantidade do virus: "))
+l = int(input("quantidade de leucocitos: "))
+pv = float(input("percentual de crescimento do virus: "))
+pl = float(input("percentual de crescimento do leucocitos: "))
+
+iv = 1
+il = 1
+t = 0
+
+while ((il // iv) <= 2):
+	if (iv == 1 and il == 1):
+		iv = v
+		il = l
+		t = 1
+	else:
+		iv = iv + (iv * (pv/100))
+		il = il + (il * (pl/100))
+		t = t + 1
+print(t)
+-- OUTPUT:
+11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:08:15) 
+-- CODE:
+v = int(input("quantidade do virus: "))
+l = int(input("quantidade de leucocitos: "))
+pv = float(input("percentual de crescimento do virus: "))
+pl = float(input("percentual de crescimento do leucocitos: "))
+
+iv = 1
+il = 1
+t = 0
+
+while ((il // iv) <= 2):
+	if (iv == 1 and il == 1):
+		iv = v
+		il = l
+		t = 1
+	else:
+		iv = iv + (iv * (pv/100))
+		il = il + (il * (pl/100))
+		t = t + 1
+print(t)
+-- OUTPUT:
+11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:09:33) 
+-- CODE:
+v = int(input("quantidade do virus: "))
+l = int(input("quantidade de leucocitos: "))
+pv = float(input("percentual de crescimento do virus: "))
+pl = float(input("percentual de crescimento do leucocitos: "))
+
+t = 1
+
+while ((l // v) <= 2):
+	iv = iv + (iv * (pv/100))
+	il = il + (il * (pl/100))
+	t = t + 1
+print(t)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    iv = iv + (iv * (pv/100))
+NameError: name 'iv' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:10:07) 
+-- CODE:
+v = int(input("quantidade do virus: "))
+l = int(input("quantidade de leucocitos: "))
+pv = float(input("percentual de crescimento do virus: "))
+pl = float(input("percentual de crescimento do leucocitos: "))
+
+t = 1
+
+while ((l // v) <= 2):
+	v = v + (v * (pv/100))
+	l = l + (l * (pl/100))
+	t = t + 1
+print(t)
+-- OUTPUT:
+11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:18:27) 
+-- CODE:
+v = int(input("quantidade do virus: "))
+l = int(input("quantidade de leucocitos: "))
+pv = float(input("percentual de crescimento do virus: "))
+pl = float(input("percentual de crescimento do leucocitos: "))
+
+t = 1
+
+while ((l // v) <= 2):
+	v = v + (v * (pv/100))
+	l = l + (l * (pl/100))
+	t = t + 1
+print(t)
+-- OUTPUT:
+11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-13 13:19:29) 
+-- CODE:
+v = int(input("quantidade do virus: "))
+l = int(input("quantidade de leucocitos: "))
+pv = float(input("percentual de crescimento do virus: "))
+pl = float(input("percentual de crescimento do leucocitos: "))
+
+t = 0
+
+while ((l // v) <= 2):
+	v = v + (v * (pv/100))
+	l = l + (l * (pl/100))
+	t = t + 1
+print(t)
+-- EXECUTION TIME:
+0.150436
+-- TEST CASE 1:
+---- input:
+350625
+5500
+2
+75
+---- correct output:
+9
+---- user output:
+10
+-- TEST CASE 2:
+---- input:
+650090
+90045
+4
+90
+---- correct output:
+5
+---- user output:
+6
+-- TEST CASE 3:
+---- input:
+419250
+1725
+9
+59
+---- correct output:
+17
+---- user output:
+18
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:19:31) 
+-- CODE:
+v = int(input("quantidade do virus: "))
+l = int(input("quantidade de leucocitos: "))
+pv = float(input("percentual de crescimento do virus: "))
+pl = float(input("percentual de crescimento do leucocitos: "))
+
+t = 0
+
+while ((l // v) <= 2):
+	v = v + (v * (pv/100))
+	l = l + (l * (pl/100))
+	t = t + 1
+print(t)
+-- OUTPUT:
+10
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:19:48) 
+-- CODE:
+v = int(input("quantidade do virus: "))
+l = int(input("quantidade de leucocitos: "))
+pv = float(input("percentual de crescimento do virus: "))
+pl = float(input("percentual de crescimento do leucocitos: "))
+
+t = -1
+
+while ((l // v) <= 2):
+	v = v + (v * (pv/100))
+	l = l + (l * (pl/100))
+	t = t + 1
+print(t)
+-- OUTPUT:
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-13 13:19:59) 
+-- CODE:
+v = int(input("quantidade do virus: "))
+l = int(input("quantidade de leucocitos: "))
+pv = float(input("percentual de crescimento do virus: "))
+pl = float(input("percentual de crescimento do leucocitos: "))
+
+t = -1
+
+while ((l // v) <= 2):
+	v = v + (v * (pv/100))
+	l = l + (l * (pl/100))
+	t = t + 1
+print(t)
+-- EXECUTION TIME:
+0.205058
+-- TEST CASE 1:
+---- input:
+350625
+5500
+2
+75
+---- correct output:
+9
+---- user output:
+9
+-- TEST CASE 2:
+---- input:
+650090
+90045
+4
+90
+---- correct output:
+5
+---- user output:
+5
+-- TEST CASE 3:
+---- input:
+419250
+1725
+9
+59
+---- correct output:
+17
+---- user output:
+17
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:21:49) 
+-- CODE:
+v = int(input("quantidade do virus: "))
+l = int(input("quantidade de leucocitos: "))
+pv = float(input("percentual de crescimento do virus: "))
+pl = float(input("percentual de crescimento do leucocitos: "))
+
+t = 1
+
+while ((l // v) <= 2):
+	v = v + (v * (pv/100))
+	l = l + (l * (pl/100))
+	t = t + 1
+print(t)
+-- OUTPUT:
+11
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:22:02) 
+-- CODE:
+v = int(input("quantidade do virus: "))
+l = int(input("quantidade de leucocitos: "))
+pv = float(input("percentual de crescimento do virus: "))
+pl = float(input("percentual de crescimento do leucocitos: "))
+
+t = 1
+
+while ((l / v) <= 2):
+	v = v + (v * (pv/100))
+	l = l + (l * (pl/100))
+	t = t + 1
+print(t)
+-- OUTPUT:
+10
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 13:22:15) 
+-- CODE:
+v = int(input("quantidade do virus: "))
+l = int(input("quantidade de leucocitos: "))
+pv = float(input("percentual de crescimento do virus: "))
+pl = float(input("percentual de crescimento do leucocitos: "))
+
+t = 0
+
+while ((l / v) <= 2):
+	v = v + (v * (pv/100))
+	l = l + (l * (pl/100))
+	t = t + 1
+print(t)
+-- OUTPUT:
+9
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

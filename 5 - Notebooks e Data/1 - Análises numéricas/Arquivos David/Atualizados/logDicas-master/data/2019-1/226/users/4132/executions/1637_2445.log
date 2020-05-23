@@ -1,0 +1,104 @@
+== TEST (2019-04-11 10:31:22) 
+-- CODE:
+escala = input("Digite escala celcius ou fahrenheit: ")
+temperatura = float("Digite a temperatura: ")
+
+if(escala.lower() == "c"):
+	x = 5/9 * ( temperatura - 32 )
+	
+if(escala.lower() == "f"):
+	x = ( 9/5 * temperatura ) + 32
+	
+print(round(x,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    temperatura = float("Digite a temperatura: ")
+ValueError: could not convert string to float: 'Digite a temperatura: '
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:31:46) 
+-- CODE:
+escala = input("Digite escala celcius ou fahrenheit: ")
+temperatura = float(input("Digite a temperatura: "))
+
+if(escala.lower() == "c"):
+	x = 5/9 * ( temperatura - 32 )
+	
+if(escala.lower() == "f"):
+	x = ( 9/5 * temperatura ) + 32
+	
+print(round(x,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:32:06) 
+-- CODE:
+escala = input("Digite escala celcius ou fahrenheit: ")
+temperatura = float(input("Digite a temperatura: "))
+
+if(escala.lower() == "c"):
+	x = 5/9 * ( temperatura - 32 )
+	
+if(escala.lower() == "f"):
+	x = ( 9/5 * temperatura ) + 32
+	
+print(round(x,2))
+-- OUTPUT:
+160.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 10:32:25) 
+-- CODE:
+escala = input("Digite escala celcius ou fahrenheit: ")
+temperatura = float(input("Digite a temperatura: "))
+
+if(escala.lower() == "f"):
+	x = 5/9 * ( temperatura - 32 )
+	
+if(escala.lower() == "c"):
+	x = ( 9/5 * temperatura ) + 32
+	
+print(round(x,2))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 10:32:52) 
+-- CODE:
+escala = input("Digite escala celcius ou fahrenheit: ")
+temperatura = float(input("Digite a temperatura: "))
+
+if(escala.lower() == "f"):
+	x = 5/9 * ( temperatura - 32 )
+	
+if(escala.lower() == "c"):
+	x = ( 9/5 * temperatura ) + 32
+	
+print(round(x,2))
+-- EXECUTION TIME:
+0.157209
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,141 @@
+== TEST (2019-07-04 18:24:15) 
+-- CODE:
+from numpy import*
+mat=array(eval(input("digite a matriz: ")))
+cont=0
+for i in range (size(mat)):
+	if(mat[i]2%==0):
+		cont=cont+1
+x=zeros(cont, dtype=int)
+p=0
+for i in range (size(mat)):
+	if(mat[i]2%==0):
+		x[p]=i
+		p=p+1
+print(cont)
+print(x)
+	
+-- ERROR:
+File "XXXX", line 5
+    if(mat[i]2%==0):
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 18:24:39) 
+-- CODE:
+from numpy import*
+mat=array(eval(input("digite a matriz: ")))
+cont=0
+for i in range (size(mat)):
+	if(mat[i]2%=!0):
+		cont=cont+1
+x=zeros(cont, dtype=int)
+p=0
+for i in range (size(mat)):
+	if(mat[i]2%=!0):
+		x[p]=i
+		p=p+1
+print(cont)
+print(x)
+	
+-- ERROR:
+File "XXXX", line 5
+    if(mat[i]2%=!0):
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 18:25:34) 
+-- CODE:
+from numpy import*
+mat=array(eval(input("digite a matriz: ")))
+cont=0
+for i in range (size(mat)):
+	if(mat[i]2%!=0):
+		cont=cont+1
+x=zeros(cont, dtype=int)
+p=0
+for i in range (size(mat)):
+	if(mat[i]2%!=0):
+		x[p]=i
+		p=p+1
+print(cont)
+print(x)
+	
+-- ERROR:
+File "XXXX", line 5
+    if(mat[i]2%!=0):
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 18:25:52) 
+-- CODE:
+from numpy import*
+mat=array(eval(input("digite a matriz: ")))
+cont=0
+for i in range (size(mat)):
+	if(mat[i]%2!=0):
+		cont=cont+1
+x=zeros(cont, dtype=int)
+p=0
+for i in range (size(mat)):
+	if(mat[i]%2!=0):
+		x[p]=i
+		p=p+1
+print(cont)
+print(x)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-04 18:26:11) 
+-- CODE:
+from numpy import*
+mat=array(eval(input("digite a matriz: ")))
+cont=0
+for i in range (size(mat)):
+	if(mat[i]%2!=0):
+		cont=cont+1
+x=zeros(cont, dtype=int)
+p=0
+for i in range (size(mat)):
+	if(mat[i]%2!=0):
+		x[p]=i
+		p=p+1
+print(cont)
+print(x)
+	
+-- EXECUTION TIME:
+1.26552
+-- TEST CASE 1:
+---- input:
+[10,20,31,1,13,15,20,33,36,63,25,10,2]
+---- correct output:
+7
+[ 2  3  4  5  7  9 10]
+---- user output:
+7
+[ 2  3  4  5  7  9 10]
+-- TEST CASE 2:
+---- input:
+[10,20,31,15,36,63,25,10,2]
+---- correct output:
+4
+[2 3 5 6]
+---- user output:
+4
+[2 3 5 6]
+-- TEST CASE 3:
+---- input:
+[10,20,31,15,36,63,26,10,2]
+---- correct output:
+3
+[2 3 5]
+---- user output:
+3
+[2 3 5]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

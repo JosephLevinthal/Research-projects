@@ -1,0 +1,107 @@
+== TEST (2019-04-27 14:08:04) 
+-- CODE:
+hext= float(input("Horas extras trabalhadas: "))
+faltas = float(input("Horas que faltou: "))
+
+h = (hext) - (1/4)*faltas
+
+if (h <= 400):
+	print(hext, "extras e", faltas, "de falta")
+	print("R$ 100.0")
+else;
+print(hext, "extras e", faltas, "de falta")
+print("R$ 500.0")
+
+-- ERROR:
+File "XXXX", line 9
+    else;
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-27 14:08:15) 
+-- CODE:
+hext= float(input("Horas extras trabalhadas: "))
+faltas = float(input("Horas que faltou: "))
+
+h = (hext) - (1/4)*faltas
+
+if (h <= 400):
+	print(hext, "extras e", faltas, "de falta")
+	print("R$ 100.0")
+else:
+print(hext, "extras e", faltas, "de falta")
+print("R$ 500.0")
+
+-- ERROR:
+File "XXXX", line 10
+    print(hext, "extras e", faltas, "de falta")
+        ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-27 14:08:32) 
+-- CODE:
+hext= float(input("Horas extras trabalhadas: "))
+faltas = float(input("Horas que faltou: "))
+
+h = (hext) - (1/4)*faltas
+
+if (h <= 400):
+	print(hext, "extras e", faltas, "de falta")
+	print("R$ 100.0")
+else:
+	print(hext, "extras e", faltas, "de falta")
+	print("R$ 500.0")
+
+-- OUTPUT:
+420.0 extras e 20.0 de falta
+R$ 500.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-27 14:08:54) 
+-- CODE:
+hext= float(input("Horas extras trabalhadas: "))
+faltas = float(input("Horas que faltou: "))
+
+h = (hext) - (1/4)*faltas
+
+if (h <= 400):
+	print(hext, "extras e", faltas, "de falta")
+	print("R$ 100.0")
+else:
+	print(hext, "extras e", faltas, "de falta")
+	print("R$ 500.0")
+
+-- EXECUTION TIME:
+0.151088
+-- TEST CASE 1:
+---- input:
+420
+20
+---- correct output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+---- user output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+-- TEST CASE 2:
+---- input:
+400.5
+100
+---- correct output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+---- user output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+-- TEST CASE 3:
+---- input:
+300
+44
+---- correct output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+---- user output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

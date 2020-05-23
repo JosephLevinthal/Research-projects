@@ -1,0 +1,132 @@
+== TEST (2019-05-30 13:52:02) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+-- ERROR:
+File "XXXX", line 8
+    
+                        ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 13:52:38) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+-- ERROR:
+File "XXXX", line 8
+    
+                        ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 13:53:52) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+	if(i < (len(num)-4)):
+		tri = tri + num[i:j]+p
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 14:00:11) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+	if(i < (len(num)-4)):
+		tri = tri + num[i:j]+p
+	else:
+		tri = tri + num[i:j]
+	i = j + 3
+	j = 
+-- ERROR:
+File "XXXX", line 13
+    j = 
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-30 14:00:40) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+	if(i < (len(num)-4)):
+		tri = tri + num[i:j]+p
+	else:
+		tri = tri + num[i:j]
+	i = i + 3
+	j = j + 3
+print(tri)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-30 14:00:46) 
+-- CODE:
+from numpy import*
+num = input("num")
+i = 0
+j = 3
+p = "."
+tri = ""
+while(i < len(num)):
+	if(i < (len(num)-4)):
+		tri = tri + num[i:j]+p
+	else:
+		tri = tri + num[i:j]
+	i = i + 3
+	j = j + 3
+print(tri)
+-- EXECUTION TIME:
+0.522308
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789.000.987.654.321
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

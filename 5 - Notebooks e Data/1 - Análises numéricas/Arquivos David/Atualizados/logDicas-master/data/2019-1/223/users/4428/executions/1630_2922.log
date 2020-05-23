@@ -1,0 +1,451 @@
+== TEST (2019-04-02 17:13:28) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+from math import*
+i = (t*(sqrt(Qf/Q0)-1))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    i = (t*(sqrt(Qf/Q0)-1))
+NameError: name 'Qf' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:15:55) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+from math import*
+i = (t*(sqrt(Qf/Q0)-1))
+
+print (round(i, 5))
+-- OUTPUT:
+2659.54542
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:16:54) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+from math import*
+i = (sqrt(t*Qf/Q0)-1)
+
+print (round(i, 5))
+-- OUTPUT:
+288.82753
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:18:06) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+from math import*
+i = (sqrt((Qf/Q0)**1/t)-1)
+
+print (round(i, 5))
+-- OUTPUT:
+2.22031
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:18:53) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+from math import*
+i = (((Qf/Q0)**1/t)-1)
+
+print (round(i, 5))
+-- OUTPUT:
+9.37037
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:20:35) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+from math import*
+i = ((Qf/Q0**(1/t))-1)
+
+print (round(i, 5))
+-- OUTPUT:
+1290737.10908
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:22:16) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+from math import*
+i = ((Qf/Q0**(1/t))-1)
+
+from math import*
+j = (sqrt(Qf/Q0)-1)
+print (round(j, 5))
+-- OUTPUT:
+29.5505
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:23:20) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+from math import*
+i = ((Qf/Q0**(1/t))-1)
+
+from math import*
+j = (sqrt(Qf/Q0)-1)
+print (round(i, 5))
+-- OUTPUT:
+1290737.10908
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:24:42) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+from math import*
+i = ((Qf/Q0**(1/t))-1)
+
+from math import*
+j = (sqrt(Qf/Q0)-1)
+print (round(j, 5))
+-- OUTPUT:
+29.5505
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:25:10) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+from math import*
+i = ((Qf/Q0**(1/t))-1)
+
+from math import*
+j = (t*sqrt(Qf/Q0)-1)
+print (round(j, 5))
+-- OUTPUT:
+2748.54542
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:25:40) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+from math import*
+i = ((Qf/Q0**(1/t))-1)
+
+from math import*
+j = (t/(sqrt(Qf/Q0)-1))
+print (round(j, 5))
+-- OUTPUT:
+3.04563
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:25:52) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+from math import*
+i = ((Qf/Q0**(1/t))-1)
+
+from math import*
+j = (t(sqrt(Qf/Q0)-1))
+print (round(j, 5))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    j = (t(sqrt(Qf/Q0)-1))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:26:27) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+from math import*
+i = ((Qf/Q0**(1/t))-1)
+
+from math import*
+j = ((sqrt(Qf/Q0)**t)-1)
+print (round(j, 5))
+-- OUTPUT:
+4.483889981322008e+133
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:26:55) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+from math import*
+i = ((Qf/Q0**(1/t))-1)
+
+from math import*
+j = ((sqrt(Qf/Q0)**(1/t))-1)
+print (round(j, 5))
+-- OUTPUT:
+0.03872
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:27:42) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+from math import*
+i = ((Qf/Q0**(1/t))-1)
+
+from math import*
+j = ((sqrt(Qf/Q0)**(1/t))-1)
+print (round(i, 5))
+-- OUTPUT:
+1290737.10908
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:28:10) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+from math import*
+i = ((Qf/Q0**(1/t))-1)
+
+from math import*
+j = (sqrt(Qf/Q0)**(1/t)-1)
+print (round(i, 5))
+-- OUTPUT:
+1290737.10908
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:28:49) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+
+i = ((Qf/Q0**(1/t))-1)
+
+from math import*
+j = (sqrt(Qf/Q0)**(1/t)-1)
+print (round(i, 5))
+-- OUTPUT:
+1290737.10908
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:29:05) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+
+i = ((Qf/Q0**(1/t))-1)
+
+from math import*
+j = (sqrt(Qf/Q0)**(1/t)-1)
+print (round(j, 5))
+-- OUTPUT:
+0.03872
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:30:56) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+
+i = (((Qf/Q0)**(1/t))-1)
+
+from math import*
+j = (sqrt(Qf/Q0)**(1/t)-1)
+print (round(i, 5))
+-- OUTPUT:
+0.07895
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:32:49) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+
+i = ((Qf/Q0)**(1/t))-1
+
+from math import*
+j = (sqrt(Qf/Q0)**(1/t)-1
+print (round(i, 5))
+-- ERROR:
+File "XXXX", line 10
+    print (round(i, 5))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:35:07) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+
+from math import*
+i = ((t**squrt(Qf/Q0))-1)
+
+print (round(i, 5))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    i = ((t**squrt(Qf/Q0))-1)
+NameError: name 'squrt' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:35:19) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+
+from math import*
+i = ((t**(squrt(Qf/Q0))-1))
+
+print (round(i, 5))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    i = ((t**(squrt(Qf/Q0))-1))
+NameError: name 'squrt' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:35:58) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+
+from math import*
+i = ((squrt(Qf/Q0)**t)-1)
+
+print (round(i, 5))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    i = ((squrt(Qf/Q0)**t)-1)
+NameError: name 'squrt' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:37:32) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1400000
+Q0 = 1500
+
+from math import*
+i = (((Qf/Q0)**(1/t)) - 1)
+
+print (round(i, 5))
+-- OUTPUT:
+0.07895
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:37:52) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1420000
+Q0 = 1500
+
+from math import*
+i = (((Qf/Q0)**(1/t)) - 1)
+
+print (round(i, 5))
+-- OUTPUT:
+0.07912
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:38:14) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1420000
+Q0 = 1500
+
+from math import*
+i = (((Qf/Q0)**(1/t)) - 1)
+
+print (round(i, 5))
+-- OUTPUT:
+0.07912
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:39:31) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 2
+Q0 = 2
+
+from math import*
+i = (((Qf/Q0)**(1/t)) - 1)
+
+print (round(i, 5))
+-- OUTPUT:
+0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:41:23) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1042000
+Q0 = 1500
+
+from math import*
+i = (((Qf/Q0)**(1/t)) - 1)
+
+print (round(i, 5))
+-- OUTPUT:
+0.07541
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-02 17:42:58) 
+-- CODE:
+t = float(input("Tempo de investimento: "))
+
+Qf = 1042000
+Q0 = 1500
+
+from math import*
+i = (((Qf/Q0)**(1/t)) - 1)
+
+print (round(i, 5))
+-- EXECUTION TIME:
+0.199939
+-- TEST CASE 1:
+---- input:
+90
+---- correct output:
+0.07541
+---- user output:
+0.07541
+-- TEST CASE 2:
+---- input:
+99
+---- correct output:
+0.06833
+---- user output:
+0.06833
+-- TEST CASE 3:
+---- input:
+121
+---- correct output:
+0.05557
+---- user output:
+0.05557
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

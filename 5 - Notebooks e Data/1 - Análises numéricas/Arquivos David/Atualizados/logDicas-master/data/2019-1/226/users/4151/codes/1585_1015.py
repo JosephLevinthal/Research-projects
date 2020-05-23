@@ -1,0 +1,8 @@
+a=int(input("numero a: "))
+b=int(input("numero b: "))
+c=int(input("numero c: "))
+minimo=min(a,b,c)
+maximo=max(a,b,c)
+print(minimo)
+print((a+b+c)-(minimo+maximo))
+print(maximo)

@@ -1,0 +1,178 @@
+== TEST (2019-05-14 20:58:40) 
+-- CODE:
+qit = int(input("inicial de tambaquis: "))
+pc = int(input("crescimento anual: "))/100
+qr = int(input("tambaquis vendidos anualmente: "))
+soma = 0
+ano = 0
+while (qit > 0 and  qit < 12000):
+	qit = qit - qr
+	soma = qit * pc
+	ano = ano + 1
+	if (qit >= 12000):
+		print("LIMITE")
+		
+	elif (qit <= 0):
+		print("EXTINCAO")
+
+print(ano)
+	
+-- OUTPUT:
+EXTINCAO
+10
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 21:00:27) 
+-- CODE:
+qit = int(input("inicial de tambaquis: "))
+pc = int(input("crescimento anual: "))/100
+qr = int(input("tambaquis vendidos anualmente: "))
+soma = 0
+ano = 0
+while (qit > 0 and  qit < 12000):
+	soma = qit * pc - qr
+	ano = ano + 1
+	if (qit >= 12000):
+		print("LIMITE")
+		
+	elif (qit <= 0):
+		print("EXTINCAO")
+
+print(ano)
+	
+-- OUTPUT:
+EXTINCAO
+10
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 21:10:50) 
+-- CODE:
+qit = int(input("inicial de tambaquis: "))
+pc = int(input("crescimento anual: "))/100
+qr = int(input("tambaquis vendidos anualmente: "))
+soma = 0
+ano = 0
+while (qit > 0 and  qit < 12000):
+	soma = qit - qr
+	qit = qit * pc
+	ano = ano + 1
+	if (qit >= 12000):
+		print("LIMITE")
+		
+	elif (qit <= 0):
+		print("EXTINCAO")
+
+print(ano)
+	
+-- OUTPUT:
+EXTINCAO
+268
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 21:13:13) 
+-- CODE:
+qit = int(input("inicial de tambaquis: "))
+pc = int(input("crescimento anual: "))/100
+qr = int(input("tambaquis vendidos anualmente: "))
+soma = 0
+ano = 0
+while (qit > 0 and  qit < 12000):
+	soma = qit - qr
+	qit = qit * pc
+	ano = ano + 1
+	
+	if (qit >= 12000):
+		print("LIMITE")
+		print(ano)
+		
+	elif (qit <= 0):
+		print("EXTINCAO")
+		print(ano)
+
+
+	
+-- OUTPUT:
+EXTINCAO
+268
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-14 21:50:33) 
+-- CODE:
+qit = int(input("inicial de tambaquis: "))
+pc = int(input("crescimento anual: "))/100
+qr = int(input("tambaquis vendidos anualmente: "))
+
+ano = 0
+while (qit > 0 and  qit < 12000):
+	qit = qit + (qit * pc) - qr
+	ano = ano + 1
+	
+if (qit <= 0):
+	print("EXTINCAO")
+	
+elif(qit >= 12000):
+	print("LIMITE")
+
+print(ano)
+
+
+	
+-- OUTPUT:
+EXTINCAO
+14
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-14 21:51:06) 
+-- CODE:
+qit = int(input("inicial de tambaquis: "))
+pc = int(input("crescimento anual: "))/100
+qr = int(input("tambaquis vendidos anualmente: "))
+
+ano = 0
+while (qit > 0 and  qit < 12000):
+	qit = qit + (qit * pc) - qr
+	ano = ano + 1
+	
+if (qit <= 0):
+	print("EXTINCAO")
+	
+elif(qit >= 12000):
+	print("LIMITE")
+
+print(ano)
+
+
+	
+-- EXECUTION TIME:
+0.146043
+-- TEST CASE 1:
+---- input:
+1234
+6
+135
+---- correct output:
+EXTINCAO
+14
+---- user output:
+EXTINCAO
+14
+-- TEST CASE 2:
+---- input:
+579
+37
+26
+---- correct output:
+LIMITE
+11
+---- user output:
+LIMITE
+11
+-- TEST CASE 3:
+---- input:
+6789
+45
+2345
+---- correct output:
+LIMITE
+4
+---- user output:
+LIMITE
+4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

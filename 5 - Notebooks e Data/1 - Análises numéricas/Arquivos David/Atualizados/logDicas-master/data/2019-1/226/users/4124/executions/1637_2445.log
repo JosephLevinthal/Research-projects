@@ -1,0 +1,122 @@
+== TEST (2019-04-09 10:55:04) 
+-- CODE:
+esc = input("Escala da temperatura(C/F): ").upper()
+val = float(input("Insira a temperatura: "))
+
+if(esc == F):
+	temp = (5/9) * (val - 32)
+else:
+	temp = (-9 * esc + 5 * 32) / 5
+print(round(temp,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if(esc == F):
+NameError: name 'F' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:55:29) 
+-- CODE:
+esc = input("Escala da temperatura(C/F): ").upper()
+val = float(input("Insira a temperatura: "))
+
+if(esc == "F"):
+	temp = (5/9) * (val - 32)
+else:
+	temp = (-9 * esc + 5 * 32) / 5
+print(round(temp,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    temp = (-9 * esc + 5 * 32) / 5
+TypeError: must be str, not int
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:56:30) 
+-- CODE:
+esc = input("Escala da temperatura(C/F): ").upper()
+val = float(input("Insira a temperatura: "))
+
+if(esc == "F"):
+	temp = (5/9) * (val - 32)
+else:
+	temp = (-9 * val + 5 * 32) / 5
+print(round(temp,2))
+
+-- OUTPUT:
+-544.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:59:01) 
+-- CODE:
+esc = input("Escala da temperatura(C/F): ").upper()
+val = float(input("Insira a temperatura: "))
+
+if(esc == "F"):
+	temp = (5/9) * (val - 32)
+else:
+	temp = (-9 * val + 5 * 32) / 5
+print(round(temp,2))
+
+-- OUTPUT:
+-544.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 11:05:40) 
+-- CODE:
+esc = input("Escala da temperatura(C/F): ").upper()
+val = float(input("Insira a temperatura: "))
+
+if(esc == "F"):
+	temp = (5/9) * (val - 32)
+else:
+	temp = (9 * c)/5 + 32
+print(round(temp,2))
+
+-- EXECUTION TIME:
+0.189103
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1637/2445/main.py", line 7, in <module>
+    temp = (9 * c)/5 + 32
+NameError: name 'c' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 11:06:24) 
+-- CODE:
+esc = input("Escala da temperatura(C/F): ").upper()
+val = float(input("Insira a temperatura: "))
+
+if(esc == "F"):
+	temp = (5/9) * (val - 32)
+else:
+	temp = (9 * val)/5 + 32
+print(round(temp,2))
+
+-- EXECUTION TIME:
+0.16384
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

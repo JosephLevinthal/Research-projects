@@ -1,0 +1,311 @@
+== TEST (2019-03-23 16:38:16) 
+-- CODE:
+objeto = input('Nome do objeto:')
+repet = objeto*6
+print(repet)
+-- OUTPUT:
+livrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 16:38:38) 
+-- CODE:
+objeto = input('Nome do objeto:')
+repet = objeto*6
+print('Abra' + repet)
+-- OUTPUT:
+Abralivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 16:39:28) 
+-- CODE:
+objeto = input('Nome do objeto:')
+repet = 'Abra + objeto'*' '6
+print('Abra' + repet)
+-- ERROR:
+File "XXXX", line 2
+    repet = 'Abra + objeto'*' '6
+                               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 16:39:52) 
+-- CODE:
+objeto = input('Nome do objeto:')
+repet = Abra + objeto' '*6
+print(repet)
+-- ERROR:
+File "XXXX", line 2
+    repet = Abra + objeto' '*6
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 16:40:23) 
+-- CODE:
+objeto = input('Nome do objeto:' ' ')
+repet = Abra + objeto*6
+print(repet)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    repet = Abra + objeto*6
+NameError: name 'Abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 16:40:39) 
+-- CODE:
+objeto = input('Nome do objeto:' ' ')
+repet = 'Abra + objeto'*6
+print(repet)
+-- OUTPUT:
+Nome do objeto: Abra + objetoAbra + objetoAbra + objetoAbra + objetoAbra + objetoAbra + objeto
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 16:41:09) 
+-- CODE:
+objeto = input('Nome do objeto:' ' ')
+repet = 'Abra objeto'*6
+print(repet)
+-- OUTPUT:
+Nome do objeto: Abra objetoAbra objetoAbra objetoAbra objetoAbra objetoAbra objeto
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 16:41:40) 
+-- CODE:
+objeto = input('Nome do objeto:' ' ')
+repet = objeto 'abra'*6
+print(repet)
+-- ERROR:
+File "XXXX", line 2
+    repet = objeto 'abra'*6
+                        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 16:42:01) 
+-- CODE:
+objeto = input('Nome do objeto:' ' ')
+repet = 'abra' + objeto*6
+print(repet)
+-- OUTPUT:
+Nome do objeto: abralivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 16:42:35) 
+-- CODE:
+objeto = input('Nome do objeto:'' ')
+repet = ('abra' + objeto)*6
+print(repet)
+-- OUTPUT:
+Nome do objeto: abralivroabralivroabralivroabralivroabralivroabralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 16:42:58) 
+-- CODE:
+objeto = input('Nome do objeto: ')
+repet = ('abra ' + objeto)*6
+print(repet)
+-- OUTPUT:
+abra livroabra livroabra livroabra livroabra livroabra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 16:43:14) 
+-- CODE:
+objeto = input('Nome do objeto: ')
+repet = ('abra ' + objeto)*6
+print(repet' ')
+-- ERROR:
+File "XXXX", line 3
+    print(repet' ')
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 16:43:31) 
+-- CODE:
+objeto = input('Nome do objeto: ')
+repet = ('abra ' + objeto)*6
+print(repet +' ')
+-- OUTPUT:
+abra livroabra livroabra livroabra livroabra livroabra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 16:43:49) 
+-- CODE:
+objeto = input('Nome do objeto: ')
+repet = ('abra ' + objeto)*6
+print(repet)
+-- OUTPUT:
+abra livroabra livroabra livroabra livroabra livroabra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 16:44:48) 
+-- CODE:
+objeto = input('Nome do objeto: ')
+repet =  'Abra'*6 + objeto*6
+print(repet)
+-- OUTPUT:
+AbraAbraAbraAbraAbraAbralivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 16:45:31) 
+-- CODE:
+objeto = input('Nome do objeto: ')
+repet = 6*('Abra '+ onbjeto' ')
+print(repet)
+-- ERROR:
+File "XXXX", line 2
+    repet = 6*('Abra '+ onbjeto' ')
+                                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 16:45:38) 
+-- CODE:
+objeto = input('Nome do objeto: ')
+repet = 6*('Abra '+ onbjeto)
+print(repet)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    repet = 6*('Abra '+ onbjeto)
+NameError: name 'onbjeto' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-23 16:45:49) 
+-- CODE:
+objeto = input('Nome do objeto: ')
+repet = 6*('Abra '+ objeto)
+print(repet)
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:22:53) 
+-- CODE:
+objeto = input('Nome do objeto: ')
+repet = Abra + objeto
+x = repet*6
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    repet = Abra + objeto
+NameError: name 'Abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:23:07) 
+-- CODE:
+objeto = input('Nome do objeto: ')
+repet = 'Abra' + objeto
+x = repet*6
+print(x)
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:23:26) 
+-- CODE:
+objeto = input('Nome do objeto: ')
+repet = ' Abra ' + objeto
+x = repet*6
+print(x)
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:23:45) 
+-- CODE:
+objeto = input('Nome do objeto: ')
+repet = ' Abra ' + objeto
+x = repet*6
+print(x)
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 10:23:54) 
+-- CODE:
+objeto = input('Nome do objeto: ')
+repet = ' Abra ' + objeto
+x = repet*6
+print(x)
+-- EXECUTION TIME:
+0.147369
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro Abra carro Abra carro Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa Abra caixa Abra caixa Abra caixa Abra caixa Abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:25:17) 
+-- CODE:
+objeto = input('Nome do objeto: ')
+repiticoes = int(input('repetir:'))
+juncao= ' Abra ' + objeto
+resultado = juncao * repeticoes
+print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    resultado = juncao * repeticoes
+NameError: name 'repeticoes' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:25:26) 
+-- CODE:
+objeto = input('Nome do objeto: ')
+repiticoes = int(input('repetir:'))
+juncao= ' Abra ' + objeto
+resultado = juncao * repeticoes
+print(resultado)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    resultado = juncao * repeticoes
+NameError: name 'repeticoes' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-26 10:25:48) 
+-- CODE:
+objeto = input('Nome do objeto: ')
+repeticoes = int(input('repetir:'))
+juncao= ' Abra ' + objeto
+resultado = juncao * repeticoes
+print(resultado)
+-- EXECUTION TIME:
+0.148779
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 10:52:56) 
+-- CODE:
+objeto = input('Nome do objeto: ')
+repeticoes = int(input('repetir:'))
+juncao= ' Abra ' + objeto
+resultado = juncao * repeticoes
+print(resultado)
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

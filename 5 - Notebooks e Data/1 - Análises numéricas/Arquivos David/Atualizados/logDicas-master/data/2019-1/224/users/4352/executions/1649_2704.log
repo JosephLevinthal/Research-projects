@@ -1,0 +1,539 @@
+== TEST (2019-04-05 18:35:34) 
+-- CODE:
+nota = float(input("digite a decepção: "))
+bonif = input(S/N: )
+
+-- ERROR:
+File "XXXX", line 2
+    bonif = input(S/N: )
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 18:35:47) 
+-- CODE:
+nota = float(input("digite a decepção: "))
+bonif = input( (S/N) )
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    bonif = input( (S/N) )
+NameError: name 'S' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 18:35:57) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input( (S/N) )
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    bonif = input( (S/N) )
+NameError: name 'S' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 18:37:24) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+
+if bonif = S:
+	print(nota + 1.0)
+else:
+	print(nota)
+	
+
+-- ERROR:
+File "XXXX", line 4
+    if bonif = S:
+             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 18:37:30) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+
+if bonif == S:
+	print(nota + 1.0)
+else:
+	print(nota)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if bonif == S:
+NameError: name 'S' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 18:37:47) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+
+if bonif == "S":
+	print(nota + 1.0)
+else:
+	print(nota)
+	
+
+-- OUTPUT:
+6.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 18:37:53) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+
+if bonif == "S":
+	print(nota + 1.0)
+else:
+	print(nota)
+	
+
+-- OUTPUT:
+6.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 18:38:03) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+
+if bonif == "S":
+	print(nota + 1.0)
+else:
+	print(nota)
+	
+
+-- OUTPUT:
+6.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-05 18:38:09) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+
+if bonif == "S":
+	print(nota + 1.0)
+else:
+	print(nota)
+	
+
+-- EXECUTION TIME:
+0.123466
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+6.0
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+10.0
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.4
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 18:38:42) 
+-- CODE:
+nota = float(input("digite a decepcao: (0 a 10)"))
+bonif = input("vai receber bonificacao? (S/N)")
+
+if bonif == "S":
+	print(nota + 1.0)
+else:
+	print(nota)
+	
+
+-- OUTPUT:
+6.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 18:38:52) 
+-- CODE:
+nota = float(input("digite a decepcao: (0/10)"))
+bonif = input("vai receber bonificacao? (S/N)")
+
+if bonif == "S":
+	print(nota + 1.0)
+else:
+	print(nota)
+	
+
+-- OUTPUT:
+6.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 18:39:26) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+
+if bonif == "S":
+	print(nota + 10*100)
+else:
+	print(nota)
+	
+
+-- OUTPUT:
+1005.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 18:39:38) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+
+if bonif == "S":
+	print(nota + 10/100)
+else:
+	print(nota)
+	
+
+-- OUTPUT:
+5.1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 18:40:08) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+
+if bonif == "S":
+	print(float(nota + 10/100))
+else:
+	print(float(nota))
+	
+
+-- OUTPUT:
+5.1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 18:40:27) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+
+if bonif == "S":
+	print(float(nota + 10/100))
+else:
+	print(float(nota))
+	
+
+-- OUTPUT:
+5.1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 18:40:33) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+
+if bonif == "S":
+	print(float(nota + 10/100))
+else:
+	print(float(nota))
+	
+
+-- OUTPUT:
+5.1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-05 18:40:34) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+
+if bonif == "S":
+	print(float(nota + 10/100))
+else:
+	print(float(nota))
+	
+
+-- EXECUTION TIME:
+0.136074
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.1
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.1
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.4
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 18:40:37) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+
+if bonif == "S":
+	print(float(nota + 10/100))
+else:
+	print(float(nota))
+	
+
+-- OUTPUT:
+5.1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 18:41:53) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+acres = 1.10
+if bonif == "S":
+	print(float(nota + acres))
+else:
+	print(float(nota))
+	
+
+-- OUTPUT:
+6.1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 18:42:05) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+acres = 1.0
+if bonif == "S":
+	print(float(nota + acres))
+else:
+	print(float(nota))
+	
+
+-- OUTPUT:
+6.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-05 18:42:08) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+acres = 1.0
+if bonif == "S":
+	print(float(nota + acres))
+else:
+	print(float(nota))
+	
+
+-- EXECUTION TIME:
+0.129491
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+6.0
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+10.0
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.4
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 18:42:10) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+acres = 1.0
+if bonif == "S":
+	print(float(nota + acres))
+else:
+	print(float(nota))
+	
+
+-- OUTPUT:
+6.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 18:42:39) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+acres = 6
+if bonif == "S":
+	print(float(nota + acres))
+else:
+	print(float(nota))
+	
+
+-- OUTPUT:
+11.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-05 18:42:49) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+acres = .6
+if bonif == "S":
+	print(float(nota + acres))
+else:
+	print(float(nota))
+	
+
+-- OUTPUT:
+5.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-05 18:42:56) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+acres = .6
+if bonif == "S":
+	print(float(nota + acres))
+else:
+	print(float(nota))
+	
+
+-- EXECUTION TIME:
+0.181759
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.6
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.6
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.4
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 21:57:47) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+acres = bonif*10/100
+if bonif == "S":
+	print(float(nota + acres))
+else:
+	print(float(nota))
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    acres = bonif*10/100
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 21:58:40) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+acres = bonif*10/100
+if bonif == "S":
+	print(float(nota + acres))
+else:
+	print(float(nota))
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    acres = bonif*10/100
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 21:59:03) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+acres = nota*10/100
+if bonif == "S":
+	print(float(nota + acres))
+else:
+	print(float(nota))
+	
+
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-08 21:59:09) 
+-- CODE:
+nota = float(input("digite a decepcao: "))
+bonif = input("vai receber bonificacao? (S/N)")
+acres = nota*10/100
+if bonif == "S":
+	print(float(nota + acres))
+else:
+	print(float(nota))
+	
+
+-- EXECUTION TIME:
+0.20535
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

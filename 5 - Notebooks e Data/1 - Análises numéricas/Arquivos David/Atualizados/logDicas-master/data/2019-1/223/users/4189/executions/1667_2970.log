@@ -1,0 +1,416 @@
+== TEST (2019-04-16 16:35:12) 
+-- CODE:
+t = int(input("t:"))
+i = round(((qf/q0)**1/t)-1,5)
+if( i <= 0.01)
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+File "XXXX", line 3
+    if( i <= 0.01)
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:35:23) 
+-- CODE:
+t = int(input("t:"))
+i = round(((qf/q0)**1/t)-1,5)
+if( i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    i = round(((qf/q0)**1/t)-1,5)
+NameError: name 'qf' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:35:51) 
+-- CODE:
+t = int(input("t:"))
+i = ((qf/q0)**1/t)-1,5
+if( i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    i = ((qf/q0)**1/t)-1,5
+NameError: name 'qf' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:36:39) 
+-- CODE:
+t = int(input("t:"))
+qf=1.000.042
+q0=1.500
+i = ((qf/q0)**1/t)-1,5
+if( i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+File "XXXX", line 2
+    qf=1.000.042
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:37:05) 
+-- CODE:
+t = int(input("t:"))
+qf=1.000.042
+q0=1.500
+i = ((qf/q0)**1/t)-1,5
+if( i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+File "XXXX", line 2
+    qf=1.000.042
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:37:48) 
+-- CODE:
+t = int(input("t:"))
+qf= 1.000.042
+q0= 1.500,000
+i = ((qf/q0)**1/t)-1,5
+if( i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+File "XXXX", line 2
+    qf= 1.000.042
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:37:49) 
+-- CODE:
+t = int(input("t:"))
+qf= 1.000.042
+q0= 1.500,000
+i = ((qf/q0)**1/t)-1,5
+if( i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+File "XXXX", line 2
+    qf= 1.000.042
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:38:28) 
+-- CODE:
+t = int(input("t:"))
+qf= 1.42
+q0= 0.1,5
+i = ((qf/q0)**1/t)-1,5
+if( i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    i = ((qf/q0)**1/t)-1,5
+TypeError: unsupported operand type(s) for /: 'float' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:38:42) 
+-- CODE:
+t = int(input("t:"))
+qf= 1.42
+q0= 0.1,5
+i = ((qf/q0)**1/t)-1
+if( i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    i = ((qf/q0)**1/t)-1
+TypeError: unsupported operand type(s) for /: 'float' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:40:40) 
+-- CODE:
+t = int(input("t:"))
+qf= 1.42
+q0= 0.1,5
+i = (qf/q0)**1/t-1
+if( i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    i = (qf/q0)**1/t-1
+TypeError: unsupported operand type(s) for /: 'float' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:41:16) 
+-- CODE:
+t = int(input("t:"))
+qf= 1.42
+q0= 0.1,5
+i = (qf/q0)**(1/t)-1
+if( i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    i = (qf/q0)**(1/t)-1
+TypeError: unsupported operand type(s) for /: 'float' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:41:30) 
+-- CODE:
+t = int(input("t:"))
+qf= 1.42
+q0= 0.1,5
+i = ((qf/q0)**(1/t)-1)
+if( i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    i = ((qf/q0)**(1/t)-1)
+TypeError: unsupported operand type(s) for /: 'float' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:42:04) 
+-- CODE:
+t = int(input("t:"))
+qf= 1.42
+q0= 0.1,5
+i = (((qf/q0)**(1/t))-1)
+if( i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    i = (((qf/q0)**(1/t))-1)
+TypeError: unsupported operand type(s) for /: 'float' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:42:45) 
+-- CODE:
+t = int(input("t:"))
+qf= 1.42
+q0= 0.1,5
+i = (qf/q0**(1/t)-1
+if( i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+File "XXXX", line 5
+    if( i <= 0.01):
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:42:46) 
+-- CODE:
+t = int(input("t:"))
+qf= 1.42
+q0= 0.1,5
+i = (qf/q0**(1/t)-1
+if( i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+File "XXXX", line 5
+    if( i <= 0.01):
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:43:11) 
+-- CODE:
+t = int(input("t:"))
+qf= 1.42
+q0= 0.1,5
+i = (qf/q0**(1/t)-1
+if( i <= 0,01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+File "XXXX", line 5
+    if( i <= 0,01):
+                ^
+SyntaxError: invalid token
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:44:08) 
+-- CODE:
+t = int(input("t:"))
+qf= 1.42
+q0= 0.1,5
+i = (qf/q0**(1/t)-1
+if( i < 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+File "XXXX", line 5
+    if( i < 0.01):
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:45:01) 
+-- CODE:
+t = int(input("t:"))
+
+i = (100042/1500**(1/t)-1
+if( i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+File "XXXX", line 4
+    if( i <= 0.01):
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:46:20) 
+-- CODE:
+t = int(input("t:"))
+i = round((100042/1500**(1/t)-1,5)
+if(i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+File "XXXX", line 3
+    if(i <= 0.01):
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:46:39) 
+-- CODE:
+t = int(input("t:"))
+i = round((1000042/1500**(1/t)-1,5)
+if(i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+File "XXXX", line 3
+    if(i <= 0.01):
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:48:47) 
+-- CODE:
+t = int(input("t:"))
+i = round((1000042/1500**(1/t)-1,5)
+if(i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+File "XXXX", line 3
+    if(i <= 0.01):
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:51:54) 
+-- CODE:
+t = int(input("t:"))
+i = round((1000042/1500**(1/t)-1,5)
+if(i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+File "XXXX", line 3
+    if(i <= 0.01):
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:53:18) 
+-- CODE:
+t = int(input("t:"))
+i = round((1042000/1500**(1/t)-1,5)
+if(i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+File "XXXX", line 3
+    if(i <= 0.01):
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:53:33) 
+-- CODE:
+t = int(input("t:"))
+i = round((1042000/1500**(1/t)-1,5)
+if(i <= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+File "XXXX", line 3
+    if(i <= 0.01):
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:53:38) 
+-- CODE:
+t = int(input("t:"))
+i = round((1042000/1500**(1/t)-1,5)
+if(i = 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+File "XXXX", line 3
+    if(i = 0.01):
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:54:00) 
+-- CODE:
+t = int(input("t:"))
+i = round((1042000/1500**(1/t)-1,5)
+if(i >= 0.01):
+   print("Real")
+else:
+	print("Irreal")
+-- ERROR:
+File "XXXX", line 3
+    if(i >= 0.01):
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:54:37) 
+-- CODE:
+t = int(input("t:"))
+i = round((1042000/1500**(1/t)-1,5)
+print(i)
+
+-- ERROR:
+File "XXXX", line 3
+    print(i)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 16:54:56) 
+-- CODE:
+t = int(input("t:"))
+i = round((1042000/1500**(1/t)-1,5)
+print(i)
+-- ERROR:
+File "XXXX", line 3
+    print(i)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

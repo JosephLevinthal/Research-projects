@@ -1,0 +1,146 @@
+== TEST (2019-03-17 17:14:47) 
+-- CODE:
+
+print(.upper("Ada Lovelace foi a primeira programadora da historia.")
+-- ERROR:
+File "XXXX", line 2
+    print(.upper("Ada Lovelace foi a primeira programadora da historia.")
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-17 17:14:56) 
+-- CODE:
+
+print(.upper("Ada Lovelace foi a primeira programadora da historia."))
+-- ERROR:
+File "XXXX", line 2
+    print(.upper("Ada Lovelace foi a primeira programadora da historia."))
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-17 17:15:16) 
+-- CODE:
+print( .upper("Ada Lovelace foi a primeira programadora da historia."))
+-- ERROR:
+File "XXXX", line 1
+    print( .upper("Ada Lovelace foi a primeira programadora da historia."))
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-17 17:15:32) 
+-- CODE:
+print( .upper("ada lovelace foi a primeira programadora da historia."))
+-- ERROR:
+File "XXXX", line 1
+    print( .upper("ada lovelace foi a primeira programadora da historia."))
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-17 17:15:37) 
+-- CODE:
+print( .upper ("ada lovelace foi a primeira programadora da historia."))
+-- ERROR:
+File "XXXX", line 1
+    print( .upper ("ada lovelace foi a primeira programadora da historia."))
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-17 17:16:01) 
+-- CODE:
+print(("ada lovelace foi a primeira programadora da historia.") .upper)
+-- OUTPUT:
+<built-in method upper of str object at 0x7f1c41b5f9f0>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-17 17:16:22) 
+-- CODE:
+print(.upper(ada lovelace foi a primeira programadora da historia))
+-- ERROR:
+File "XXXX", line 1
+    print(.upper(ada lovelace foi a primeira programadora da historia))
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-17 17:16:41) 
+-- CODE:
+print(.upper("ada lovelace foi a primeira programadora da historia."))
+-- ERROR:
+File "XXXX", line 1
+    print(.upper("ada lovelace foi a primeira programadora da historia."))
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-17 17:16:58) 
+-- CODE:
+print(.upper( ada lovelace foi a primeira programadora da historia. ))
+-- ERROR:
+File "XXXX", line 1
+    print(.upper( ada lovelace foi a primeira programadora da historia. ))
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-17 17:17:08) 
+-- CODE:
+print(.upper()ada lovelace foi a primeira programadora da historia. )
+-- ERROR:
+File "XXXX", line 1
+    print(.upper()ada lovelace foi a primeira programadora da historia. )
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-17 17:17:17) 
+-- CODE:
+print(.upper(ada lovelace foi a primeira programadora da historia.))
+-- ERROR:
+File "XXXX", line 1
+    print(.upper(ada lovelace foi a primeira programadora da historia.))
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-17 17:17:48) 
+-- CODE:
+print(string.upper(ada lovelace foi a primeira programadora da historia.))
+-- ERROR:
+File "XXXX", line 1
+    print(string.upper(ada lovelace foi a primeira programadora da historia.))
+                                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-17 17:18:04) 
+-- CODE:
+print(str.upper(ada lovelace foi a primeira programadora da historia.))
+-- ERROR:
+File "XXXX", line 1
+    print(str.upper(ada lovelace foi a primeira programadora da historia.))
+                               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-17 17:19:50) 
+-- CODE:
+str = "Ada Lovelace foi a primeira programadora da historia."
+print(str.upper)
+-- OUTPUT:
+<built-in method upper of str object at 0x7efc27ec19f0>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-17 17:20:06) 
+-- CODE:
+str = "Ada Lovelace foi a primeira programadora da historia."
+print(str.upper())
+-- OUTPUT:
+ADA LOVELACE FOI A PRIMEIRA PROGRAMADORA DA HISTORIA.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-17 17:20:14) 
+-- CODE:
+str = "Ada Lovelace foi a primeira programadora da historia."
+print(str.upper())
+-- EXECUTION TIME:
+0.126444
+-- TEST CASE 1:
+---- input:
+nonono
+---- correct output:
+ADA LOVELACE FOI A PRIMEIRA PROGRAMADORA DA HISTORIA.
+---- user output:
+ADA LOVELACE FOI A PRIMEIRA PROGRAMADORA DA HISTORIA.
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,1062 @@
+== TEST (2019-05-15 14:26:12) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+i=0
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/i)
+	if(aux=1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- ERROR:
+File "XXXX", line 10
+    if(aux=1):
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:26:19) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+i=0
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/i)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    e=e+(aux*(x**c)/i)
+ZeroDivisionError: float division by zero
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:26:29) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+i=0
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    e=e+(aux*(x**c)/d)
+NameError: name 'd' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:26:52) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+i=0
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/i)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    e=e+(aux*(x**c)/i)
+ZeroDivisionError: float division by zero
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:27:35) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+i=0
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/aux)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 14, in <module>
+    d=d+2
+NameError: name 'd' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:28:04) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=0
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    e=e+(aux*(x**c)/d)
+ZeroDivisionError: float division by zero
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:28:16) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+0.7359667
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 14:28:26) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- EXECUTION TIME:
+0.18765
+-- TEST CASE 1:
+---- input:
+0.89
+3
+---- correct output:
+1.2366709
+---- user output:
+0.7359667
+-- TEST CASE 2:
+---- input:
+0.25
+6
+---- correct output:
+0.2554128
+---- user output:
+0.9799479
+-- TEST CASE 3:
+---- input:
+0.2635
+4
+---- correct output:
+0.2698651
+---- user output:
+0.9768559
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:30:06) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+0.7359667
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:30:11) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+0.7359667
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:30:12) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+0.7359667
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:30:39) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/c)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    e=e+(aux*(x**c)/c)
+ZeroDivisionError: float division by zero
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:30:49) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/e)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    e=e+(aux*(x**c)/e)
+ZeroDivisionError: float division by zero
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:31:03) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=d+1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    d=d+1
+NameError: name 'd' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:31:30) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=2
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+0.301975
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:31:45) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1.5
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+0.4403524
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:31:56) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1.6
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+0.4049722
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:32:03) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1.7
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+0.3741542
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:32:10) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1.9
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+0.3232132
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:32:17) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1.8
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+0.3471082
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:32:36) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+0.7359667
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:32:48) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=0.5
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+1.68316
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:32:51) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=0.50.
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- ERROR:
+File "XXXX", line 5
+    d=0.50.
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:32:53) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=0.50.
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- ERROR:
+File "XXXX", line 5
+    d=0.50.
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:32:54) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=0.50.
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- ERROR:
+File "XXXX", line 5
+    d=0.50.
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:32:57) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=0.50
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+1.68316
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:33:19) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+0.7359667
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:33:28) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/aux)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+1.7921
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:33:33) 
+-- CODE:
+from math import*
+x=eval(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=0
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/aux)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+1.7921
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:36:01) 
+-- CODE:
+from math import*
+x=float(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=0
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/aux)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+1.7921
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:36:17) 
+-- CODE:
+from math import*
+x=float(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=0
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    e=e+(aux*(x**c)/d)
+ZeroDivisionError: float division by zero
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 14:36:27) 
+-- CODE:
+from math import*
+x=float(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- EXECUTION TIME:
+0.229598
+-- TEST CASE 1:
+---- input:
+0.89
+3
+---- correct output:
+1.2366709
+---- user output:
+0.7359667
+-- TEST CASE 2:
+---- input:
+0.25
+6
+---- correct output:
+0.2554128
+---- user output:
+0.9799479
+-- TEST CASE 3:
+---- input:
+0.2635
+4
+---- correct output:
+0.2698651
+---- user output:
+0.9768559
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:36:31) 
+-- CODE:
+from math import*
+x=float(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+0.7359667
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:43:49) 
+-- CODE:
+from math import*
+x=float(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+0.7359667
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:43:49) 
+-- CODE:
+from math import*
+x=float(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*(x**c)/d)
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+0.7359667
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:45:34) 
+-- CODE:
+from math import*
+x=float(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*((x**c)/d))
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+0.7359667
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:59:03) 
+-- CODE:
+from math import*
+x=float(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=0
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*((x**c)/d))
+	if(aux==1):
+		aux=1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    e=e+(aux*((x**c)/d))
+ZeroDivisionError: float division by zero
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:59:17) 
+-- CODE:
+from math import*
+x=float(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*((x**c)/d))
+	if(aux==1):
+		aux=1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+1.2640333
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:59:23) 
+-- CODE:
+from math import*
+x=float(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+aux=1
+while(c<k):
+	e=e+(aux*((x**c)/d))
+	if(aux==1):
+		aux=1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+3.9823152
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:59:45) 
+-- CODE:
+from math import*
+x=float(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+aux=1
+while(c<k):
+	e=e+(aux*((x**c)/d))
+	if(aux==1):
+		aux=-11
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+0.8139152
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 14:59:51) 
+-- CODE:
+from math import*
+x=float(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+aux=1
+while(c<k):
+	e=e+(aux*((x**c)/d))
+	if(aux==1):
+		aux=-11
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+0.8139152
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 15:00:10) 
+-- CODE:
+from math import*
+x=float(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*((x**c)/d))
+	if(aux==1):
+		aux=-11
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+-1.9043667
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 15:00:10) 
+-- CODE:
+from math import*
+x=float(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*((x**c)/d))
+	if(aux==1):
+		aux=-11
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- EXECUTION TIME:
+0.147989
+-- TEST CASE 1:
+---- input:
+0.89
+3
+---- correct output:
+1.2366709
+---- user output:
+-1.9043667
+-- TEST CASE 2:
+---- input:
+0.25
+6
+---- correct output:
+0.2554128
+---- user output:
+0.7716146
+-- TEST CASE 3:
+---- input:
+0.2635
+4
+---- correct output:
+0.2698651
+---- user output:
+0.7454151
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 15:00:11) 
+-- CODE:
+from math import*
+x=float(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*((x**c)/d))
+	if(aux==1):
+		aux=-11
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+-1.9043667
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 15:00:31) 
+-- CODE:
+from math import*
+x=float(input("numero real:"))
+k=int(input("numero inteiro:"))
+c=0
+d=1
+e=0
+aux=1
+while(c<k):
+	e=e+(aux*((x**c)/d))
+	if(aux==1):
+		aux=-1
+	else:
+		aux=1
+	d=d+2
+	c=c+2
+print(round(e, 7))
+-- OUTPUT:
+0.7359667
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,397 @@
+== TEST (2019-04-01 15:10:03) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+lucro = 0.83
+venda = valor * lucro
+empregado = 100 + venda * 0.2 
+print(round(empregado, 2))
+-- OUTPUT:
+101.99
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:10:22) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+lucro = 0.83
+venda = valor * lucro
+empregado = 100 + (venda * 0.2) 
+print(round(empregado, 2))
+-- OUTPUT:
+101.99
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:11:07) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+
+empregado = 100 + (valor * 0.2) 
+print(round(empregado, 2))
+-- OUTPUT:
+102.4
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:12:09) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+lucro = 0.83
+venda = valor * lucro
+empregado = 100 - (valor * 0.2) 
+print(round(empregado, 2))
+-- OUTPUT:
+97.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:13:23) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+lucro = 0.83
+venda = valor * lucro
+empregado = 100 (valor * 0.2) 
+total = venda - empregado
+print(round(total, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    empregado = 100 (valor * 0.2) 
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:13:50) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+lucro = 0.83
+venda = valor * lucro
+empregado = 100 * 0.2 
+total = venda - empregado
+print(round(total, 2))
+-- OUTPUT:
+-10.04
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:13:58) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+lucro = 0.83
+venda = valor * lucro
+empregado = 100 * 0.2 
+total = venda + empregado
+print(round(total, 2))
+-- OUTPUT:
+29.96
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:21:45) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+venda = 12 * 0.83
+empregado = 100 - (venda * 0.2) 
+print(round(empregado, 2))
+-- OUTPUT:
+98.01
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:21:55) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+venda = 12 * 0.83
+empregado = 100 + (venda * 0.2) 
+print(round(empregado, 2))
+-- OUTPUT:
+101.99
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:22:27) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+venda = espetinhos * 0.83
+empregado = 100 + (venda * 0.2) 
+print(round(empregado, 2))
+-- OUTPUT:
+104.98
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:23:26) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+venda = espetinhos * valor * 0.83
+empregado = 100 + (venda * 0.2) 
+print(round(empregado, 2))
+-- OUTPUT:
+159.76
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:23:59) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+venda = (espetinhos * valor) * 0.83
+empregado = 100 + (venda * 0.2) 
+print(round(empregado, 2))
+-- OUTPUT:
+159.76
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:24:30) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+venda = (espetinhos * valor) * 0.83
+empregado = venda / (100* 0.2) 
+print(round(empregado, 2))
+-- OUTPUT:
+14.94
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:24:41) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+venda = (espetinhos * valor) * 0.83
+empregado = venda * (100* 0.2) 
+print(round(empregado, 2))
+-- OUTPUT:
+5976.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:25:35) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+venda = (espetinhos * valor) * 0.83
+empregado = venda * (100* 0.2) 
+total = venda - empregado
+print(round(total, 2))
+-- OUTPUT:
+-5677.2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:25:57) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+venda = (espetinhos * valor) * 0.83
+empregado = venda - (100* 0.2) 
+total = venda - empregado
+print(round(total, 2))
+-- OUTPUT:
+20.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:26:13) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+venda = (espetinhos * valor) * 0.83
+empregado = venda - (100* 0.2) 
+total = empregado - venda
+print(round(total, 2))
+-- OUTPUT:
+-20.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:26:55) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+venda = (espetinhos * valor) 
+empregado = venda * (100* 0.2) 
+total = venda - empregado
+print(round(total, 2))
+-- OUTPUT:
+-6840.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:27:08) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+venda = (espetinhos * valor) 
+empregado = venda - (100* 0.2) 
+total = venda - empregado
+print(round(total, 2))
+-- OUTPUT:
+20.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:28:09) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+venda = (espetinhos * valor) 
+empregado = venda - (100 n* 0.2) 
+print(round(total, 2))
+-- ERROR:
+File "XXXX", line 4
+    empregado = venda - (100 n* 0.2) 
+                             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:28:17) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+venda = (espetinhos * valor) 
+empregado = venda - (100 * 0.2) 
+print(round(total, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(total, 2))
+NameError: name 'total' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:28:32) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+venda = (espetinhos * valor) 
+empregado = venda - (100 * 0.2) 
+print(round(empregado, 2))
+-- OUTPUT:
+340.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:29:03) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+venda = (espetinhos * valor) 
+empregado = venda - (100 * 0.2) 
+total = venda - empregado
+print(round(total, 2))
+-- OUTPUT:
+20.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:29:14) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+venda = (espetinhos * valor) 
+empregado = venda - (100 * 0.2) 
+total = venda * empregado
+print(round(total, 2))
+-- OUTPUT:
+122400.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:29:27) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12
+venda = (espetinhos * valor) 
+empregado = venda - (100 * 0.2) 
+total = venda / empregado
+print(round(total, 2))
+-- OUTPUT:
+1.06
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:30:30) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12 * 0.83
+venda = (espetinhos * valor) 
+empregado = venda - (100 * 0.2) 
+
+print(round(empregado, 2))
+-- OUTPUT:
+278.8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:31:08) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12 * 0.83
+venda = (espetinhos * valor) 
+empregado = venda * (100 * 0.2) 
+
+print(round(empregado, 2))
+-- OUTPUT:
+5976.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:31:46) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12 * 0.83
+venda = (espetinhos * valor) 
+empregado = venda - (100 * 0.2) 
+total = venda - empregado
+print(round(total, 2))
+-- OUTPUT:
+20.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:31:57) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12 * 0.83
+venda = (espetinhos * valor) 
+empregado = venda - (100 * 0.2) 
+total = venda *
+empregado
+print(round(total, 2))
+-- ERROR:
+File "XXXX", line 5
+    total = venda *
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:32:05) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12 * 0.83
+venda = (espetinhos * valor) 
+empregado = venda - (100 * 0.2) 
+total = venda * empregado
+print(round(total, 2))
+-- OUTPUT:
+83305.44
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 15:32:48) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12 * 0.83
+venda = (espetinhos * valor) 
+empregado = 100 + (venda *0.2) 
+total = venda - empregado
+print(round(total, 2))
+-- OUTPUT:
+139.04
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 15:32:54) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12 * 0.83
+venda = (espetinhos * valor) 
+empregado = 100 + (venda *0.2) 
+total = venda - empregado
+print(round(total, 2))
+-- EXECUTION TIME:
+0.155662
+-- TEST CASE 1:
+---- input:
+30
+---- correct output:
+139.04
+---- user output:
+139.04
+-- TEST CASE 2:
+---- input:
+80
+---- correct output:
+537.44
+---- user output:
+537.44
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 15:33:24) 
+-- CODE:
+espetinhos = float(input("quantos espetinhos foram vendidos? "))
+valor = 12 * 0.83
+venda = (espetinhos * valor) 
+empregado = 100 + (venda *0.2) 
+total = venda - empregado
+print(round(total, 2))
+-- EXECUTION TIME:
+0.143387
+-- TEST CASE 1:
+---- input:
+30
+---- correct output:
+139.04
+---- user output:
+139.04
+-- TEST CASE 2:
+---- input:
+80
+---- correct output:
+537.44
+---- user output:
+537.44
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

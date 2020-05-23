@@ -1,0 +1,6 @@
+var1=float(input("tempo:"))
+var2=float(input("velocidade:"))
+D=(var1*var2)
+QL=(D/12)
+print(D)
+print(QL)

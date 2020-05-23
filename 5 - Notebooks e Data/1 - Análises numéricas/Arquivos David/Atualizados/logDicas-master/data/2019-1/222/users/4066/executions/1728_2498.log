@@ -1,0 +1,107 @@
+== TEST (2019-05-15 00:15:28) 
+-- CODE:
+a = int(input("Numero de habitantes cidade A: "))
+b = int(input("Numero de habitantes cidade B: "))
+pa = int(input("Percentual de crescimento populacional da cidade A: "))
+pb = int(input("Percentual de crescimento populacional da cidade B: "))
+anos = 0
+while (a < b):
+	cresa = a * (pa/100)
+	a = a + cresa
+	cresb = b * (pb/100)
+	b = b + cresb
+	anos = anos + 1
+	print (anos)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    pa = int(input())
+ValueError: invalid literal for int() with base 10: '35.5'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 00:16:09) 
+-- CODE:
+a = int(input("Numero de habitantes cidade A: "))
+b = int(input("Numero de habitantes cidade B: "))
+pa = float(input("Percentual de crescimento populacional da cidade A: "))
+pb = float(input("Percentual de crescimento populacional da cidade B: "))
+anos = 0
+while (a < b):
+	cresa = a * (pa/100)
+	a = a + cresa
+	cresb = b * (pb/100)
+	b = b + cresb
+	anos = anos + 1
+	print (anos)
+-- OUTPUT:
+1
+2
+3
+4
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 00:16:35) 
+-- CODE:
+a = int(input("Numero de habitantes cidade A: "))
+b = int(input("Numero de habitantes cidade B: "))
+pa = float(input("Percentual de crescimento populacional da cidade A: "))
+pb = float(input("Percentual de crescimento populacional da cidade B: "))
+anos = 0
+while (a < b):
+	cresa = a * (pa/100)
+	a = a + cresa
+	cresb = b * (pb/100)
+	b = b + cresb
+	anos = anos + 1
+print (anos)
+-- OUTPUT:
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 00:16:38) 
+-- CODE:
+a = int(input("Numero de habitantes cidade A: "))
+b = int(input("Numero de habitantes cidade B: "))
+pa = float(input("Percentual de crescimento populacional da cidade A: "))
+pb = float(input("Percentual de crescimento populacional da cidade B: "))
+anos = 0
+while (a < b):
+	cresa = a * (pa/100)
+	a = a + cresa
+	cresb = b * (pb/100)
+	b = b + cresb
+	anos = anos + 1
+print (anos)
+-- EXECUTION TIME:
+0.120817
+-- TEST CASE 1:
+---- input:
+250150
+580000
+35.5
+10.5
+---- correct output:
+5
+---- user output:
+5
+-- TEST CASE 2:
+---- input:
+180250
+1200000
+10.25
+5.7
+---- correct output:
+45
+---- user output:
+45
+-- TEST CASE 3:
+---- input:
+1000000
+1650000
+12.75
+3.2
+---- correct output:
+6
+---- user output:
+6
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

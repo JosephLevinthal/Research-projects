@@ -1,0 +1,292 @@
+== TEST (2019-05-15 15:49:32) 
+-- CODE:
+QIP = int(input("Quantidade inicial: "))
+PC = float(input("Insira o Perc: "))
+
+A = QIP
+cont = 1
+while (QIP > 0 and QIP < 8000):
+	RET = int(input("Quantos sao retirados: "))
+	A = A + ((A*PC)/100) - RET
+	cont = cont + 1
+if (A == 8000):
+	print("MAXIMO")
+	print(A)
+else:
+	print("ZERO")
+	print(A)
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    RET = int(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 15:50:41) 
+-- CODE:
+QIP = int(input("Quantidade inicial: "))
+PC = float(input("Insira o Perc: "))
+
+A = QIP
+cont = 1
+while (QIP > 0 and QIP < 8000):
+	RET = int(input("Quantos sao retirados: "))
+	A = A + ((A*PC)/100) - RET
+	cont = cont + 1
+if (A == 8000):
+	print("MAXIMO")
+	print(A)
+else:
+	print("ZERO")
+	print(A)
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    RET = int(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 15:50:57) 
+-- CODE:
+QIP = int(input("Quantidade inicial: "))
+PC = float(input("Insira o Perc: "))
+
+A = QIP
+cont = 1
+while (A > 0 and A < 8000):
+	RET = int(input("Quantos sao retirados: "))
+	A = A + ((A*PC)/100) - RET
+	cont = cont + 1
+if (A == 8000):
+	print("MAXIMO")
+	print(A)
+else:
+	print("ZERO")
+	print(A)
+	
+	
+-- OUTPUT:
+ZERO
+11280.543553638397
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 15:51:36) 
+-- CODE:
+QIP = int(input("Quantidade inicial: "))
+PC = float(input("Insira o Perc: "))
+
+A = QIP
+cont = 1
+while (A > 0 and A < 8000):
+	RET = int(input("Quantos sao retirados: "))
+	A = A + ((A*PC)/100) - RET
+	cont = cont + 1
+if (A == 8000):
+	print("MAXIMO")
+	print(cont)
+else:
+	print("ZERO")
+	print(cont)
+	
+	
+-- OUTPUT:
+ZERO
+6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 15:56:04) 
+-- CODE:
+QIP = int(input("Quantidade inicial: "))
+PC = float(input("Insira o Perc: "))
+
+A = QIP
+cont = 1
+
+
+while (A > 0 and A < 8000):
+	RET = int(input("Quantos sao retirados: "))
+	A = A + ((A*PC)/100)
+	A = A - RET
+	cont = cont + 1
+if (A <= 0):
+	print("ZERO")
+	print(cont)
+else:
+	print("ZERO")
+	print(cont)
+	
+	
+-- OUTPUT:
+ZERO
+6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 15:56:17) 
+-- CODE:
+QIP = int(input("Quantidade inicial: "))
+PC = float(input("Insira o Perc: "))
+
+A = QIP
+cont = 1
+
+
+while (A > 0 and A < 8000):
+	RET = int(input("Quantos sao retirados: "))
+	A = A + ((A*PC)/100)
+	A = A - RET
+	cont = cont + 1
+if (A <= 0):
+	print("ZERO")
+	print(cont)
+else:
+	print("MAXIMO")
+	print(cont)
+	
+	
+-- OUTPUT:
+MAXIMO
+6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 15:56:56) 
+-- CODE:
+QIP = int(input("Quantidade inicial: "))
+PC = float(input("Insira o Perc: "))
+
+A = QIP
+cont = 1
+
+
+while (A > 0 and A < 8000):
+	RET = int(input("Quantos sao retirados: "))
+	A = A + ((A*PC)/100)
+	A = A - RET
+	cont = cont + 1
+if (A <= 0):
+	print("ZERO")
+	print(cont)
+else:
+	print("MAXIMO")
+	print(cont)
+	
+	
+-- EXECUTION TIME:
+0.169301
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+MAXIMO
+6
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+ZERO
+4
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+MAXIMO
+8
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 15:57:04) 
+-- CODE:
+QIP = int(input("Quantidade inicial: "))
+PC = float(input("Insira o Perc: "))
+
+A = QIP
+cont = 0
+
+
+while (A > 0 and A < 8000):
+	RET = int(input("Quantos sao retirados: "))
+	A = A + ((A*PC)/100)
+	A = A - RET
+	cont = cont + 1
+if (A <= 0):
+	print("ZERO")
+	print(cont)
+else:
+	print("MAXIMO")
+	print(cont)
+	
+	
+-- EXECUTION TIME:
+0.188855
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+ZERO
+3
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+MAXIMO
+7
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

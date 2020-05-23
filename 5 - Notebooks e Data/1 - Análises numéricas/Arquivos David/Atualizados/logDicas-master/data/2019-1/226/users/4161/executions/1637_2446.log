@@ -1,0 +1,1091 @@
+== TEST (2019-04-04 18:48:48) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//1000
+b - senha//100 - senha%1000
+print(a,b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    b - senha//100 - senha%1000
+NameError: name 'b' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:49:04) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//1000
+b = senha//100 - senha%1000
+print(a,b)
+-- OUTPUT:
+87 264
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:49:34) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//100 - senha%1000
+print(a,b)
+-- OUTPUT:
+0 264
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:49:57) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - senha%100000
+print(a,b)
+-- OUTPUT:
+0 -87604
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:50:23) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha%10)*10
+print(a,b)
+-- OUTPUT:
+0 -12
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:50:58) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = (senha%10)*10
+print(a,b)
+-- OUTPUT:
+0 20
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:51:13) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = (senha%100000)*10
+print(a,b)
+-- OUTPUT:
+0 876120
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:51:25) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = (senha%100)*10
+print(a,b)
+-- OUTPUT:
+0 120
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:53:00) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = (senha%100)
+print(a,b)
+-- OUTPUT:
+0 12
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:53:33) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha - (senha%100000)
+print(a,b)
+-- OUTPUT:
+0 0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:53:46) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha - (senha%10000)
+print(a,b)
+-- OUTPUT:
+0 80000
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:55:41) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*!0
+print(a,b)
+-- ERROR:
+File "XXXX", line 3
+    b = senha//10000 - (senha//100000)*!0
+                                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-04 18:55:59) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//10000)*!0
+print(a,b)
+-- EXECUTION TIME:
+0.227296
+-- ERROR:
+  File "/home/codebench/codes/1637/2446/main.py", line 3
+    b = senha//10000 - (senha//10000)*!0
+                                      ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:56:02) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//10000)*!0
+print(a,b)
+-- ERROR:
+File "XXXX", line 3
+    b = senha//10000 - (senha//10000)*!0
+                                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:56:41) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//10000)*10
+print(a,b)
+-- OUTPUT:
+0 -72
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:56:46) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+print(a,b)
+-- OUTPUT:
+0 8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:58:07) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//1000000)*10
+print(a,b)
+-- OUTPUT:
+0 8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:58:43) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//1000000)*10
+print(a,b,c,d,e,f)
+-- OUTPUT:
+0 8 7 6 1 87612
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:59:04) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+print(a,b,c,d,e,f)
+-- OUTPUT:
+0 8 7 6 1 2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:04:29) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+if (c1/c2) .isint():
+	print("oi")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 10, in <module>
+    if (c1/c2) .isint():
+AttributeError: 'float' object has no attribute 'isint'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:04:44) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+if (c1/c2) == .isint():
+	print("oi")
+-- ERROR:
+File "XXXX", line 10
+    if (c1/c2) == .isint():
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:05:01) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+if ((c1/c2) == .isint()):
+	print("oi")
+-- ERROR:
+File "XXXX", line 10
+    if ((c1/c2) == .isint()):
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:08:37) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+print(isinstance(c1/c2, int))
+-- OUTPUT:
+False
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:08:46) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+print(isinstance(c1/c2, int))
+-- OUTPUT:
+False
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:09:11) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+print(isinstance(c2/c1, int))
+-- OUTPUT:
+False
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:12:24) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+if ((c1/c2)//1 == c1/c2):
+	print("acesso liberado")
+
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:14:38) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+if (((c1/c2)//10)*10 == c1/c2):
+	print("acesso liberado")
+else:
+	print("senha invalida")
+
+-- OUTPUT:
+senha invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:14:45) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+if (((c1/c2)//10)*10 == c1/c2):
+	print("acesso liberado")
+else:
+	print("senha invalida")
+
+-- OUTPUT:
+senha invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:16:13) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+if (isinstance(c1/c2, int)):
+	print("acesso liberado")
+else:
+	print("senha invalida")
+
+-- OUTPUT:
+senha invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:16:28) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+if (isinstance(c1/c2, int)):
+	print("acesso liberado")
+else:
+	print("senha invalida")
+
+-- OUTPUT:
+senha invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:18:42) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+if (c2/c1 == 1/(c1/c2)):
+	print("acesso liberado")
+else:
+	print("senha invalida")
+
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:21:12) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+if ((c1/c2)//1 == c1/c2):
+	print("acesso liberado")
+else:
+	print("senha invalida")
+
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:23:24) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+if (c1/c2 != 1/(c1/c2)):
+	print("acesso liberado")
+else:
+	print("senha invalida")
+
+-- OUTPUT:
+senha invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:23:33) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+if (c1/c2 != 1/(c1/c2)):
+	print("acesso liberado")
+else:
+	print("senha invalida")
+
+-- OUTPUT:
+senha invalida
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:24:52) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+if (c1/c2 == 1/(c1/c2)):
+	print("acesso liberado")
+else:
+	print("senha invalida")
+
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:25:03) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+if (c1/c2 == 1/(c1/c2)):
+	print("acesso liberado")
+else:
+	print("senha invalida")
+
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:27:59) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+print(isinstance(c1/c2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 12, in <module>
+    print(isinstance(c1/c2))
+TypeError: isinstance expected 2 arguments, got 1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:28:14) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+isinstance(c1/c2)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 12, in <module>
+    isinstance(c1/c2)
+TypeError: isinstance expected 2 arguments, got 1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:28:37) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+print(isinstance(c1/c2, int ))
+
+-- OUTPUT:
+False
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:28:42) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+print(isinstance(c1/c2, int ))
+
+-- OUTPUT:
+False
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:29:38) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+w = int(c1/c2)
+print(isinstance(w, int ))
+
+-- OUTPUT:
+True
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:30:17) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+w = int(c1/c2)
+print(w == c1/c2)
+
+-- OUTPUT:
+True
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:32:11) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+w = int(c1/c2)
+if (w != c1/c2):
+	print("senha invalida")
+else:
+	print("acesso liberado")
+
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:32:21) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+w = int(c1/c2)
+if (w != c1/c2):
+	print("senha invalida")
+else:
+	print("acesso liberado")
+
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:33:34) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+w = int(c1/c2)
+v = float(c1/c2)
+if (w != v):
+	print("senha invalida")
+else:
+	print("acesso liberado")
+
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:33:56) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+w = int(c1/c2)
+v = float(c1/c2)
+if (w != v):
+	print("senha invalida")
+else:
+	print("acesso liberado")
+
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:34:21) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+w = int(c1/c2)
+v = float(c1/c2)
+print(w, v)
+
+-- OUTPUT:
+1 1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:34:31) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = a + c + e
+c2 = b + d + f
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+w = int(c1/c2)
+v = float(c1/c2)
+print(w, v)
+
+-- OUTPUT:
+1 1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:35:36) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = b + d + f
+c2 = a + c + e
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+w = int(c1/c2)
+v = float(c1/c2)
+print(w, v)
+
+-- OUTPUT:
+2 2.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:35:40) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = b + d + f
+c2 = a + c + e
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+w = int(c1/c2)
+v = float(c1/c2)
+print(w, v)
+
+-- OUTPUT:
+2 2.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:36:02) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = b + d + f
+c2 = a + c + e
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+w = int(c1/c2)
+v = float(c1/c2)
+if (w != v):
+	print("senha invalida")
+else:
+	print("acesso liberado")
+
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:36:09) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = b + d + f
+c2 = a + c + e
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+w = int(c1/c2)
+v = float(c1/c2)
+if (w != v):
+	print("senha invalida")
+else:
+	print("acesso liberado")
+
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-04 19:36:25) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = b + d + f
+c2 = a + c + e
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+w = int(c1/c2)
+v = float(c1/c2)
+if (w != v):
+	print("senha invalida")
+else:
+	print("acesso liberado")
+
+-- EXECUTION TIME:
+0.183819
+-- TEST CASE 1:
+---- input:
+087612
+---- correct output:
+acesso liberado
+---- user output:
+acesso liberado
+-- TEST CASE 2:
+---- input:
+760834
+---- correct output:
+senha invalida
+---- user output:
+senha invalida
+-- TEST CASE 3:
+---- input:
+122967
+---- correct output:
+acesso liberado
+---- user output:
+acesso liberado
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:10:11) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = b + d + f
+c2 = a + c + e
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+w = int(c1/c2)
+v = float(c1/c2)
+if (w != v):
+	print("senha invalida")
+else:
+	print("acesso liberado")
+
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:10:20) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = b + d + f
+c2 = a + c + e
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+w = int(c1/c2)
+v = float(c1/c2)
+if (w != v):
+	print("senha invalida")
+else:
+	print("acesso liberado")
+
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:10:32) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = b + d + f
+c2 = a + c + e
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+w = int(c1/c2)
+v = float(c1/c2)
+if (w != v):
+	print("senha invalida")
+else:
+	print("acesso liberado")
+
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:10:40) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = b + d + f
+c2 = a + c + e
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+w = int(c1/c2)
+v = float(c1/c2)
+if (w != v):
+	print("senha invalida")
+else:
+	print("acesso liberado")
+
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:10:50) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = b + d + f
+c2 = a + c + e
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+w = int(c1/c2)
+v = float(c1/c2)
+if (w != v):
+	print("senha invalida")
+else:
+	print("acesso liberado")
+
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:11:02) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = b + d + f
+c2 = a + c + e
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+w = int(c1/c2)
+v = float(c1/c2)
+if (w != v):
+	print("senha invalida")
+else:
+	print("acesso liberado")
+
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 10:11:20) 
+-- CODE:
+senha = int(input("senha: "))
+a = senha//100000
+b = senha//10000 - (senha//100000)*10
+c = senha//1000 - (senha//10000)*10
+d = senha//100 - (senha//1000)*10
+e = senha//10 - (senha//100)*10
+f = senha - (senha//10)*10
+c1 = b + d + f
+c2 = a + c + e
+c1 = max(c1,c2)
+c2 = min(c1,c2)
+w = int(c1/c2)
+v = float(c1/c2)
+if (w != v):
+	print("senha invalida")
+else:
+	print("acesso liberado")
+
+-- EXECUTION TIME:
+0.218872
+-- TEST CASE 1:
+---- input:
+087612
+---- correct output:
+acesso liberado
+---- user output:
+acesso liberado
+-- TEST CASE 2:
+---- input:
+760834
+---- correct output:
+senha invalida
+---- user output:
+senha invalida
+-- TEST CASE 3:
+---- input:
+122967
+---- correct output:
+acesso liberado
+---- user output:
+acesso liberado
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

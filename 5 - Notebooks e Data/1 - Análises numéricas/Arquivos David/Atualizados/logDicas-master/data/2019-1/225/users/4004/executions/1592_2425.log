@@ -1,0 +1,160 @@
+== TEST (2019-03-31 16:40:29) 
+-- CODE:
+d = float(input("distancia: "))    #distancia percorrida
+f = float(input("combustivel: "))  #combustivel gasto
+
+med = d/f
+
+float(print(round(med, 3)"km/l"))
+-- ERROR:
+File "XXXX", line 6
+    float(print(round(med, 3)"km/l"))
+                                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 16:41:01) 
+-- CODE:
+d = float(input("distancia: "))    #distancia percorrida
+f = float(input("combustivel: "))  #combustivel gasto
+
+med = d/f
+
+float(print(round(med, 3))) "km/l"
+-- ERROR:
+File "XXXX", line 6
+    float(print(round(med, 3))) "km/l"
+                                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 16:41:20) 
+-- CODE:
+d = float(input("distancia: "))    #distancia percorrida
+f = float(input("combustivel: "))  #combustivel gasto
+
+med = d/f
+
+float(print(round(med, 3))) 
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    float(print(round(med, 3))) 
+TypeError: float() argument must be a string or a number, not 'NoneType'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 16:42:01) 
+-- CODE:
+d = float(input("distancia: "))    #distancia percorrida
+f = float(input("combustivel: "))  #combustivel gasto
+
+med = d/f
+
+print(round(med, 3)) "km/l"
+-- ERROR:
+File "XXXX", line 6
+    print(round(med, 3)) "km/l"
+                              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 16:42:18) 
+-- CODE:
+d = float(input("distancia: "))    #distancia percorrida
+f = float(input("combustivel: "))  #combustivel gasto
+
+med = d/f km/l
+
+print(round(med, 3)) 
+-- ERROR:
+File "XXXX", line 4
+    med = d/f km/l
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 16:44:02) 
+-- CODE:
+d = float(input("distancia: "))    #distancia percorrida
+f = float(input("combustivel: "))  #combustivel gasto
+
+med = d/f 
+
+print(round(med km/l, 3)) 
+-- ERROR:
+File "XXXX", line 6
+    print(round(med km/l, 3)) 
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 16:44:15) 
+-- CODE:
+d = float(input("distancia: "))    #distancia percorrida
+f = float(input("combustivel: "))  #combustivel gasto
+
+med = d/f 
+
+print(round(med "km/l", 3)) 
+-- ERROR:
+File "XXXX", line 6
+    print(round(med "km/l", 3)) 
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 16:46:37) 
+-- CODE:
+d = float(input("distancia: "))    #distancia percorrida
+f = float(input("combustivel: "))  #combustivel gasto
+
+med = d/f 
+
+print(round(med , 3)"km/l") 
+-- ERROR:
+File "XXXX", line 6
+    print(round(med , 3)"km/l") 
+                             ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-31 16:46:46) 
+-- CODE:
+d = float(input("distancia: "))    #distancia percorrida
+f = float(input("combustivel: "))  #combustivel gasto
+
+med = d/f 
+
+print(round(med , 3),"km/l") 
+-- OUTPUT:
+14.286 km/l
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-31 16:47:01) 
+-- CODE:
+d = float(input("distancia: "))    #distancia percorrida
+f = float(input("combustivel: "))  #combustivel gasto
+
+med = d/f 
+
+print(round(med , 3),"km/l") 
+-- EXECUTION TIME:
+0.179324
+-- TEST CASE 1:
+---- input:
+28.572
+2
+---- correct output:
+14.286 km/l
+---- user output:
+14.286 km/l
+-- TEST CASE 2:
+---- input:
+2254
+124.4
+---- correct output:
+18.119 km/l
+---- user output:
+18.119 km/l
+-- TEST CASE 3:
+---- input:
+4554
+464.6
+---- correct output:
+9.802 km/l
+---- user output:
+9.802 km/l
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

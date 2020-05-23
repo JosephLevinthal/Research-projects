@@ -1,0 +1,6 @@
+x=int(input("leia o primeiro numero:"))
+y=int(input("leia o segndo numero:"))
+z=int(input("leia o terceiro numero:"))
+print(min(x,y,z))
+print((x+y+z)-(y)-(x))
+print(max(x,y,z))

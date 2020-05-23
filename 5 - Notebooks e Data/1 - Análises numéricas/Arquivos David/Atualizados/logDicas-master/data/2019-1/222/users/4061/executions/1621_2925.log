@@ -1,0 +1,167 @@
+== TEST (2019-04-01 18:20:07) 
+-- CODE:
+import math
+valor = int(input("digite um numero"))
+print(valor**)
+-- ERROR:
+File "XXXX", line 3
+    print(valor**)
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:21:03) 
+-- CODE:
+import math
+valor = int(input("digite um numero"))
+print(valor**(y))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print(valor**(y))
+NameError: name 'y' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:21:23) 
+-- CODE:
+import math
+valor = int(input("digite um numero"))
+print("valor**(y)")
+-- OUTPUT:
+valor**(y)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:22:15) 
+-- CODE:
+import math
+valor = int(input("digite um numero"))
+print("valor**()")
+-- OUTPUT:
+valor**()
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:28:23) 
+-- CODE:
+import math
+n = int(input("digite um numero"))
+print(n.x**(y))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print(n.x**(y))
+AttributeError: 'int' object has no attribute 'x'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:28:59) 
+-- CODE:
+import math
+n = int(input("digite um numero"))
+print(n.x**())
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print(n.x**())
+AttributeError: 'int' object has no attribute 'x'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:29:12) 
+-- CODE:
+import math
+n = int(input("digite um numero"))
+print(n.x**)
+-- ERROR:
+File "XXXX", line 3
+    print(n.x**)
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:37:32) 
+-- CODE:
+import math
+valor = int(input("digite um numero"))
+n = ("x**(valor)")
+print(n)
+-- OUTPUT:
+x**(valor)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:37:49) 
+-- CODE:
+import math
+valor = int(input("digite um numero"))
+n = ("valor**(valor)")
+print(n)
+-- OUTPUT:
+valor**(valor)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:38:03) 
+-- CODE:
+import math
+valor = int(input("digite um numero"))
+n = ("valor**()")
+print(n)
+-- OUTPUT:
+valor**()
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:38:47) 
+-- CODE:
+import math
+valor = int(input("digite um numero"))
+n = (valor**())
+print(n)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    n = (valor**())
+TypeError: unsupported operand type(s) for ** or pow(): 'int' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:39:26) 
+-- CODE:
+import math
+valor = int(input("digite um numero"))
+n = (valor**(n))
+print(n)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    n = (valor**(n))
+NameError: name 'n' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:44:10) 
+-- CODE:
+import math
+valor = int(input("digite um numero"))
+n = int(input("x**(y)"))
+print(valor*n)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    n = int(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:44:41) 
+-- CODE:
+import math
+valor = int(input("digite um numero"))
+n = ("x**(y)")
+print(valor*n)
+-- OUTPUT:
+x**(y)x**(y)x**(y)x**(y)x**(y)x**(y)x**(y)x**(y)x**(y)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:44:59) 
+-- CODE:
+import math
+valor = int(input("digite um numero"))
+n = (x**(y))
+print(valor*n)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    n = (x**(y))
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 18:54:43) 
+-- CODE:
+import math
+valor = int(input("digite um numero"))
+quant = int(input("valor**()"))
+print(quant)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    quant = int(input())
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

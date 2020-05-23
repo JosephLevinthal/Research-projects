@@ -1,0 +1,106 @@
+== TEST (2019-05-15 02:01:13) 
+-- CODE:
+n = int(input("Numero de termos: "))
+
+t = 0
+soma = 0
+
+while (t < n):
+	tg = (4*(-1)**(t+1))/(2n+1)
+	soma = soma + tg
+	t = t + 1
+	
+print(round(soma, 8))
+-- ERROR:
+File "XXXX", line 7
+    tg = (4*(-1)**(t+1))/(2n+1)
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 02:01:21) 
+-- CODE:
+n = int(input("Numero de termos: "))
+
+t = 0
+soma = 0
+
+while (t < n):
+	tg = (4*(-1)**(t+1))/(2*t+1)
+	soma = soma + tg
+	t = t + 1
+	
+print(round(soma, 8))
+-- OUTPUT:
+-3.13423981
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 02:01:26) 
+-- CODE:
+n = int(input("Numero de termos: "))
+
+t = 0
+soma = 0
+
+while (t < n):
+	tg = (4*(-1)**(t+1))/(2*t+1)
+	soma = soma + tg
+	t = t + 1
+	
+print(round(soma, 8))
+-- OUTPUT:
+-3.13423981
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-15 02:01:39) 
+-- CODE:
+n = int(input("Numero de termos: "))
+
+t = 0
+soma = 0
+
+while (t < n):
+	tg = (4*(-1)**(t))/(2*t+1)
+	soma = soma + tg
+	t = t + 1
+	
+print(round(soma, 8))
+-- OUTPUT:
+3.13423981
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-15 02:01:42) 
+-- CODE:
+n = int(input("Numero de termos: "))
+
+t = 0
+soma = 0
+
+while (t < n):
+	tg = (4*(-1)**(t))/(2*t+1)
+	soma = soma + tg
+	t = t + 1
+	
+print(round(soma, 8))
+-- EXECUTION TIME:
+0.141362
+-- TEST CASE 1:
+---- input:
+136
+---- correct output:
+3.13423981
+---- user output:
+3.13423981
+-- TEST CASE 2:
+---- input:
+22
+---- correct output:
+3.09616153
+---- user output:
+3.09616153
+-- TEST CASE 3:
+---- input:
+15
+---- correct output:
+3.20818565
+---- user output:
+3.20818565
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

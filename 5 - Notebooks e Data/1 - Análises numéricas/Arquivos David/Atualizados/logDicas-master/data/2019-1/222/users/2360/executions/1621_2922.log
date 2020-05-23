@@ -1,0 +1,369 @@
+== TEST (2019-04-01 19:40:12) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i = (1420000**(1/t))-1
+
+print(i)
+-- OUTPUT:
+0.17046588320778144
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:40:51) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i = round(1420000**(1/t))-1, 5
+
+print(i)
+-- OUTPUT:
+(0, 5)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:41:24) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i = round()(1420000**(1/t))-1, 5
+
+print(i)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    i = round()(1420000**(1/t))-1, 5
+TypeError: Required argument 'number' (pos 1) not found
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:41:41) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i = (round(1420000**(1/t))-1, 5)
+
+print(i)
+-- OUTPUT:
+(0, 5)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:42:20) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i = (1420000//1500**(1/t))-1
+
+print(i)
+-- OUTPUT:
+1309176.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:42:50) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i = round(1420000//1500**(1/t))-1, 5
+
+print(i)
+-- OUTPUT:
+(1309176, 5)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:44:03) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1420000/1500**(1/t))-1
+
+print(i)
+-- OUTPUT:
+1309176.224919302
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:45:15) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =((1420000/1500**(1/t))-1)
+
+print(i)
+-- OUTPUT:
+1309176.224919302
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:45:30) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1420000/1500**(1/t))-1
+
+print(i)
+-- OUTPUT:
+1309176.224919302
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:47:08) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1500/1420000**(1/t))-1
+
+print(i)
+-- OUTPUT:
+1280.5409842524386
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:47:22) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1500*1420000**(1/t))-1
+
+print(i)
+-- OUTPUT:
+1754.6988248116722
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:47:39) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1500//1420000**(1//t))-1
+
+print(i)
+-- OUTPUT:
+1499.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:47:55) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1500/1420000**(1//t))-1
+
+print(i)
+-- OUTPUT:
+1499.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:48:37) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1420000/1500**(1//t)-1)
+
+print(i)
+-- OUTPUT:
+1419999.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:48:51) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1420000/1500**((1//t)-1)
+
+print(i)
+-- ERROR:
+File "XXXX", line 5
+    print(i)
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:48:56) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1420000/1500**((1//t)-1))
+
+print(i)
+-- OUTPUT:
+2130000000.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:49:12) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =((1420000/1500**(1//t)-1))
+
+print(i)
+-- OUTPUT:
+1419999.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:49:50) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1420000/1500**(1//t)-1)
+
+print(i)
+-- OUTPUT:
+1419999.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 19:49:56) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1420000/1500**(1//t)-1)
+
+print(i)
+-- EXECUTION TIME:
+0.159943
+-- TEST CASE 1:
+---- input:
+90
+---- correct output:
+0.07541
+---- user output:
+1419999.0
+-- TEST CASE 2:
+---- input:
+99
+---- correct output:
+0.06833
+---- user output:
+1419999.0
+-- TEST CASE 3:
+---- input:
+121
+---- correct output:
+0.05557
+---- user output:
+1419999.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:50:45) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =("1420000/1500**(1//t)-1")
+
+print(i)
+-- OUTPUT:
+1420000/1500**(1//t)-1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:50:56) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1420000/1500**(1//t)-1)
+
+print(i)
+-- OUTPUT:
+1419999.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:51:07) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1420000/1500**(1//t))-1
+
+print(i)
+-- OUTPUT:
+1419999.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:51:22) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1420000/1500**(1/t))-1
+
+print(i)
+-- OUTPUT:
+1309176.224919302
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:51:37) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1420000//1500**(1//t))-1
+
+print(i)
+-- OUTPUT:
+1419999.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:51:50) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1420000//1500**(1/t))-1
+
+print(i)
+-- OUTPUT:
+1309176.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:52:52) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1500//1420000**(1/t))-1
+
+print(i)
+-- OUTPUT:
+1280.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:53:01) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1500/1420000**(1/t))-1
+
+print(i)
+-- OUTPUT:
+1280.5409842524386
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:53:14) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1500/1420000**(1//t))-1
+
+print(i)
+-- OUTPUT:
+1499.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:53:21) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1500//1420000**(1//t))-1
+
+print(i)
+-- OUTPUT:
+1499.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:53:40) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(14200000/1500**(1//t))-1
+
+print(i)
+-- OUTPUT:
+14199999.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:53:49) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(142000000/1500**(1//t))-1
+
+print(i)
+-- OUTPUT:
+141999999.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:53:58) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1420000000/1500**(1//t))-1
+
+print(i)
+-- OUTPUT:
+1419999999.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:54:08) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1420000000/1500**(1/t))-1
+
+print(i)
+-- OUTPUT:
+1309177223.9193017
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:54:53) 
+-- CODE:
+t= float(input(" tempo de investimentos em meses: "))
+
+i =(1420000/1500**(1/t))-1
+
+print(i)
+-- OUTPUT:
+1309176.224919302
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

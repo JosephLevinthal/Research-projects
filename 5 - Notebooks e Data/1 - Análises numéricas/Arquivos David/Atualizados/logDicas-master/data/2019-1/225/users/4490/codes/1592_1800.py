@@ -1,0 +1,5 @@
+a = int(input())
+b = int(input())
+c = int(input())
+sum = (a**2 + b**2 + c**2)/(a+b+c)
+print(round(sum,7))

@@ -1,0 +1,282 @@
+== TEST (2019-06-30 19:43:24) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 0
+for x in mov:
+	if x == "A":
+		xtab = xtab - 1
+	elif x == "D":
+		xtab = xtab + 1
+	elif x == "W":
+		ytab = ytab - 1
+	elif x == "S":
+		ytab = ytab + 1
+	if tabuleiro[ytab,xtab] = 11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] = 22:
+		life = life - 5
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+File "XXXX", line 17
+    if tabuleiro[ytab,xtab] = 11:
+                            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 19:44:15) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 0
+for x in mov:
+	if x == "A":
+		xtab = xtab - 1
+	elif x == "D":
+		xtab = xtab + 1
+	elif x == "W":
+		ytab = ytab - 1
+	elif x == "S":
+		ytab = ytab + 1
+	elif tabuleiro[ytab,xtab] = 11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] = 22:
+		life = life - 5
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+File "XXXX", line 17
+    elif tabuleiro[ytab,xtab] = 11:
+                              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 19:44:56) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 0
+for x in mov:
+	if x == "A":
+		xtab = xtab - 1
+	elif x == "D":
+		xtab = xtab + 1
+	elif x == "W":
+		ytab = ytab - 1
+	elif x == "S":
+		ytab = ytab + 1
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] = 22:
+		life = life - 5
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+File "XXXX", line 20
+    elif tabuleiro[ytab,xtab] = 22:
+                              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 19:45:02) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 0
+for x in mov:
+	if x == "A":
+		xtab = xtab - 1
+	elif x == "D":
+		xtab = xtab + 1
+	elif x == "W":
+		ytab = ytab - 1
+	elif x == "S":
+		ytab = ytab + 1
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-30 19:46:40) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+for x in mov:
+	if x == "A":
+		xtab = xtab - 1
+	elif x == "D":
+		xtab = xtab + 1
+	elif x == "W":
+		ytab = ytab - 1
+	elif x == "S":
+		ytab = ytab + 1
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.05306
+-- TEST CASE 1:
+---- input:
+[[0,11,0,11,0,11,22,0,11,0,11,0,11],[11,0,22,11,0,11,11,0,11,0,0,0,22],[11,22,22,11,0,11,11,0,22,0,11,11,22],[22,11,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,11,0,0,11,0,22,0,0,22,11],[0,11,0,11,0,11,22,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,11,0,0,11,11],[11,11,22,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDSDSAAWW
+---- correct output:
+posicao x:  3
+posicao y:  0
+moedas:  6
+life:  100
+
+---- user output:
+posicao x:  3
+posicao y:  0
+moedas:  6
+life:  100
+-- TEST CASE 2:
+---- input:
+[[22,11,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,11,0,0,11,0,22,0,0,22,11],[0,11,0,11,0,11,22,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,11,0,0,11,11],[11,11,22,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DSSSDSAASD
+---- correct output:
+posicao x:  1
+posicao y:  5
+moedas:  7
+life:  95
+---- user output:
+posicao x:  1
+posicao y:  5
+moedas:  7
+life:  95
+-- TEST CASE 3:
+---- input:
+[[22,22,11,11,11,11,22,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,11,0,0,11,11],[11,11,22,11,0,0,11,0,22,0,22,0,11],[0,11,0,11,0,11,22,0,11,0,11,0,11],[11,0,22,11,0,11,11,0,11,0,0,0,22],[11,22,22,11,0,11,11,0,22,0,11,11,22],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDSSSAWDWAS
+---- correct output:
+posicao x:  2
+posicao y:  2
+moedas:  5
+life:  80
+---- user output:
+tabuleiro: movimentos: posicao x:  2
+posicao y:  2
+moedas:  5
+life:  80
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-30 19:46:53) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+for x in mov:
+	if x == "A":
+		xtab = xtab - 1
+	elif x == "D":
+		xtab = xtab + 1
+	elif x == "W":
+		ytab = ytab - 1
+	elif x == "S":
+		ytab = ytab + 1
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.17182
+-- TEST CASE 1:
+---- input:
+[[0,11,0,11,0,11,22,0,11,0,11,0,11],[11,0,22,11,0,11,11,0,11,0,0,0,22],[11,22,22,11,0,11,11,0,22,0,11,11,22],[22,11,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,11,0,0,11,0,22,0,0,22,11],[0,11,0,11,0,11,22,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,11,0,0,11,11],[11,11,22,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDSDSAAWW
+---- correct output:
+posicao x:  3
+posicao y:  0
+moedas:  6
+life:  100
+
+---- user output:
+posicao x:  3
+posicao y:  0
+moedas:  6
+life:  100
+-- TEST CASE 2:
+---- input:
+[[22,11,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,11,0,0,11,0,22,0,0,22,11],[0,11,0,11,0,11,22,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,11,0,0,11,11],[11,11,22,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DSSSDSAASD
+---- correct output:
+posicao x:  1
+posicao y:  5
+moedas:  7
+life:  95
+---- user output:
+posicao x:  1
+posicao y:  5
+moedas:  7
+life:  95
+-- TEST CASE 3:
+---- input:
+[[22,22,11,11,11,11,22,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,11,0,0,11,11],[11,11,22,11,0,0,11,0,22,0,22,0,11],[0,11,0,11,0,11,22,0,11,0,11,0,11],[11,0,22,11,0,11,11,0,11,0,0,0,22],[11,22,22,11,0,11,11,0,22,0,11,11,22],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDSSSAWDWAS
+---- correct output:
+posicao x:  2
+posicao y:  2
+moedas:  5
+life:  80
+---- user output:
+posicao x:  2
+posicao y:  2
+moedas:  5
+life:  80
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

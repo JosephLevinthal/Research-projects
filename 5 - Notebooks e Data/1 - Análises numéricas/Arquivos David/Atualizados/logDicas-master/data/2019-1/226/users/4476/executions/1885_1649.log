@@ -1,0 +1,141 @@
+== TEST (2019-07-09 10:20:15) 
+-- CODE:
+s = input("s: ")
+a = s.split(',')
+print(a)
+-- OUTPUT:
+['A', 'V', 'V', 'V', 'C', 'A', 'C', 'P', 'P', 'A']
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 10:27:14) 
+-- CODE:
+s = input("s: ")
+a = s.split(',')
+
+s2 = zeros(4, dtype=int)
+
+for i in range(size(a)):
+	if a[i] == "P":
+		s2[0] = s2[0] + 1
+	elif a[i] == "C":
+		s2[1] = s2[1] + 1
+	elif a[i] == "M":
+		s2[2] = s2[2] + 1
+	elif a[i] == "V":
+		s2[3] = s2[3] + 1
+	elif a[i] == "A":
+		s2[4] = s2[4] + 1
+print(max(s2))
+print(s2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    s2 = zeros(4, dtype=int)
+NameError: name 'zeros' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 10:28:06) 
+-- CODE:
+from numpy import *
+s = input("s: ")
+a = s.split(',')
+
+s2 = zeros(4, dtype=int)
+
+for i in range(size(a)):
+	if a[i] == "P":
+		s2[0] = s2[0] + 1
+	elif a[i] == "C":
+		s2[1] = s2[1] + 1
+	elif a[i] == "M":
+		s2[2] = s2[2] + 1
+	elif a[i] == "V":
+		s2[3] = s2[3] + 1
+	elif a[i] == "A":
+		s2[4] = s2[4] + 1
+print(max(s2))
+print(s2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-09 10:28:23) 
+-- CODE:
+from numpy import *
+s = input("s: ")
+a = s.split(',')
+
+s2 = zeros(5, dtype=int)
+
+for i in range(size(a)):
+	if a[i] == "P":
+		s2[0] = s2[0] + 1
+	elif a[i] == "C":
+		s2[1] = s2[1] + 1
+	elif a[i] == "M":
+		s2[2] = s2[2] + 1
+	elif a[i] == "V":
+		s2[3] = s2[3] + 1
+	elif a[i] == "A":
+		s2[4] = s2[4] + 1
+print(max(s2))
+print(s2)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 10:28:32) 
+-- CODE:
+from numpy import *
+s = input("s: ")
+a = s.split(',')
+
+s2 = zeros(5, dtype=int)
+
+for i in range(size(a)):
+	if a[i] == "P":
+		s2[0] = s2[0] + 1
+	elif a[i] == "C":
+		s2[1] = s2[1] + 1
+	elif a[i] == "M":
+		s2[2] = s2[2] + 1
+	elif a[i] == "V":
+		s2[3] = s2[3] + 1
+	elif a[i] == "A":
+		s2[4] = s2[4] + 1
+print(max(s2))
+print(s2)
+-- EXECUTION TIME:
+1.05484
+-- TEST CASE 1:
+---- input:
+A,V,V,V,C,A,C,P,P,A
+---- correct output:
+3
+[2 2 0 3 3]
+---- user output:
+3
+[2 2 0 3 3]
+-- TEST CASE 2:
+---- input:
+A,V,V,P,C,A,C,P,P,M
+---- correct output:
+3
+[3 2 1 2 2]
+---- user output:
+3
+[3 2 1 2 2]
+-- TEST CASE 3:
+---- input:
+M,M,M,M,C,C,C,A,A,A
+---- correct output:
+4
+[0 3 4 0 3]
+---- user output:
+4
+[0 3 4 0 3]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

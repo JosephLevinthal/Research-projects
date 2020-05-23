@@ -1,0 +1,5 @@
+dis= float(input("distancia (km): "))
+com= float(input("combustivel gasto (l): "))
+csm= (dis/com) 
+csm1=round(csm, 3)
+print(csm1, "km/l")

@@ -1,0 +1,292 @@
+== TEST (2019-04-11 19:05:57) 
+-- CODE:
+escala=input("escala em C ou F : ")
+valor=float(input("valor da temp: "))
+escala=escala.upper() 
+if(escala=="C"):
+	c=5/9(f-32)
+	print(c)
+else:
+	f=(c*(5/9)+32)
+	print(f)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    c=5/9(f-32)
+NameError: name 'f' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:06:29) 
+-- CODE:
+escala=input("escala em C ou F : ")
+valor=float(input("valor da temp: "))
+escala=escala.upper() 
+if(escala=="F"):
+	c=5/9(f-32)
+	print(c)
+else:
+	f=(c*(5/9)+32)
+	print(f)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    f=(c*(5/9)+32)
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:06:47) 
+-- CODE:
+escala=input("escala em C ou F : ")
+valor=float(input("valor da temp: "))
+escala=escala.upper() 
+if(escala=="F"):
+	c=5/9(f-32)
+	print(c)
+else:
+	f=(c*(5/9)+32)
+	print(f)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    f=(c*(5/9)+32)
+NameError: name 'c' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:08:40) 
+-- CODE:
+escala=input("escala em C ou F : ")
+valor=float(input("valor da temp: "))
+escala=escala.upper() 
+if(escala=="F"):
+	cel=5/9(valor-32)
+	print(cel)
+else:
+	farh=(valor*(5/9)+32)
+	print(farh)
+	
+-- OUTPUT:
+209.77777777777777
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:09:25) 
+-- CODE:
+escala=input("escala em C ou F : ")
+valor=float(input("valor da temp: "))
+escala=escala.upper() 
+if(escala=="F"):
+	cel=5/9(valor-32)
+	print(cel)
+else:
+	farh=(valor*(5/9)+32)
+	print(farh)
+	
+-- OUTPUT:
+209.77777777777777
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:09:56) 
+-- CODE:
+escala=input("escala em C ou F : ")
+valor=float(input("valor da temp: "))
+escala=escala.upper() 
+if(escala=="F"):
+	cel=(5/9)*(valor-32)
+	print(cel)
+else:
+	farh=(valor*(5/9)+32)
+	print(farh)
+	
+-- OUTPUT:
+209.77777777777777
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 19:10:13) 
+-- CODE:
+escala=input("escala em C ou F : ")
+valor=float(input("valor da temp: "))
+escala=escala.upper() 
+if(escala=="F"):
+	cel=(5/9)*(valor-32)
+	print(cel)
+else:
+	farh=(valor*(5/9)+32)
+	print(farh)
+	
+-- EXECUTION TIME:
+0.153888
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+209.77777777777777
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:10:28) 
+-- CODE:
+escala=input("escala em C ou F : ")
+valor=float(input("valor da temp: "))
+escala=escala.upper() 
+if(escala=="F"):
+	cel=(5/9)*(valor-32)
+	print(cel)
+else:
+	farh=(valor*(5/9)+32)
+	print(farh)
+	
+-- OUTPUT:
+209.77777777777777
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 19:15:48) 
+-- CODE:
+escala=input("escala em C ou F : ")
+valor=float(input("valor da temp: "))
+escala=escala.upper() 
+if(escala=="F"):
+	cel=(5/9)*(valor-32)
+	print(cel)
+else:
+	farh=(valor*(5/9)-32)
+	print(farh)
+	
+-- OUTPUT:
+145.77777777777777
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-13 22:24:20) 
+-- CODE:
+escala=input("escala em C ou F : ")
+valor=float(input("valor da temp: "))
+F = 5/9 * (vT - 32)
+C = (vT * (9/5) + 32)
+escala=escala.upper() 
+if(escala=="C"):
+	print(round(c,2))
+else:
+	print(round(f,2))
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    F = 5/9 * (vT - 32)
+NameError: name 'vT' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-13 22:25:41) 
+-- CODE:
+escala=input("escala em C ou F : ")
+valor=float(input("valor da temp: "))
+F=5/9 * (vT - 32)
+C=(vT * (9/5) + 32)
+escala=escala.upper() 
+if(escala=="C"):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+	
+-- EXECUTION TIME:
+0.218483
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1649/2445/main.py", line 3, in <module>
+    F=5/9 * (vT - 32)
+NameError: name 'vT' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-13 22:26:55) 
+-- CODE:
+escala=input("escala em C ou F : ")
+valor=float(input("valor da temp: "))
+escala=escala.upper() 
+F=5/9 * (vT - 32)
+C=(vT * (9/5) + 32)
+if(escala=="C"):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+	
+-- EXECUTION TIME:
+0.130148
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1649/2445/main.py", line 4, in <module>
+    F=5/9 * (vT - 32)
+NameError: name 'vT' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-13 22:27:38) 
+-- CODE:
+escala=input("escala em C ou F : ")
+valor=float(input("valor da temp: "))
+ F=5/9 * (valor - 32)
+C=(valor * (9/5) + 32)
+escala=escala.upper()
+if(escala=="C"):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+	
+-- EXECUTION TIME:
+0.127933
+-- ERROR:
+  File "/home/codebench/codes/1649/2445/main.py", line 3
+    F=5/9 * (valor - 32)
+    ^
+IndentationError: unexpected indent
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-13 22:27:45) 
+-- CODE:
+escala=input("escala em C ou F : ")
+valor=float(input("valor da temp: "))
+F=5/9 * (valor - 32)
+C=(valor * (9/5) + 32)
+escala=escala.upper()
+if(escala=="C"):
+	print(round(C, 2))
+else:
+	print(round(F, 2))
+	
+-- EXECUTION TIME:
+0.156054
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

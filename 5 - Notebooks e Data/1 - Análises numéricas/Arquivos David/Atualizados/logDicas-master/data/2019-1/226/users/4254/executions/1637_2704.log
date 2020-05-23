@@ -1,0 +1,87 @@
+== TEST (2019-04-09 19:02:20) 
+-- CODE:
+nota = float(input("Digite o valor da nota: "))
+bon = input("Digite s para bonificação e n caso não precise")
+
+if(bon.upper() == "S")
+	nota = nota + (10*nota/100)
+print(round(nota,1))
+-- ERROR:
+File "XXXX", line 4
+    if(bon.upper() == "S")
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 19:04:12) 
+-- CODE:
+nota = float(input("Digite o valor da nota: "))
+bon = input("Bonificao (S/N): ")
+
+if(bon.upper() == "S")
+	nota = nota + (10*nota/100)
+print(round(nota,1))
+-- ERROR:
+File "XXXX", line 4
+    if(bon.upper() == "S")
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 19:04:29) 
+-- CODE:
+nota = float(input("Digite o valor da nota: "))
+bon = input("Bonificao (S/N): ")
+
+if(bon.upper() == "S"):
+	nota = nota + (10*nota/100)
+print(round(nota,1))
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 19:04:46) 
+-- CODE:
+nota = float(input("Digite o valor da nota: "))
+bon = input("Bonificao (S/N): ")
+
+if(bon.upper() == "S"):
+	nota = nota + (10*nota/100)
+print(round(nota,1))
+-- EXECUTION TIME:
+0.134257
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 20:03:13) 
+-- CODE:
+nota = float(input("Digite o valor da nota: "))
+bon = input("Bonificao (S/N): ")
+
+if(bon.upper() == "S"):
+	nota = nota + (10*nota/100)
+print(round(nota,1))
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,5 @@
+a=float(input(" Digite um variavel A: "))
+b=float(input("Variavel B : "))
+c=float(input("Variavel C: "))
+t=((a**2)+(b**2)+(c**2))/(a+b+c)
+print(round(t,7))

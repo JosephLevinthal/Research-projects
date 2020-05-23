@@ -1,0 +1,1312 @@
+== TEST (2019-06-30 19:27:46) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+vetor = array(eval(input()))
+estafilococo = 0
+salmonela = 0
+coli = 0
+for i in range(vetor):
+	estafilococo = estafilococo + vetor[0, j]
+print ("estafilococo:", estafilococo)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 19:28:07) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+vetor = array(eval(input()))
+estafilococo = 0
+salmonela = 0
+coli = 0
+for i in range(vetor):
+	estafilococo = estafilococo + vetor[0, i]
+print ("estafilococo:", estafilococo)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-30 19:31:46) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+vetor = array(eval(input()))
+estafilococo = 0
+salmonela = 0
+coli = 0
+for i in range(vetor):
+	estafilococo = estafilococo + vetor[0, i]
+print ("estafilococo:", round(estafilococo,1))
+for j in range(vetor):
+	salmonela = salmonela + vetor[1, j]
+print("salmonela:", round(salmonela,1))
+for k in range(vetor):
+	coli = coli + vetor[2, k]
+print("coli:", round(coli,1))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:47:02) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2,  1, 4], [ 1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("caqui")
+-- EXECUTION TIME:
+0.91979
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli -439.0
+caqui
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli 12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli -6745.3
+salmonela
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 14:50:34) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2,  1, 4], [ 1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("caqui")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:51:03) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2,  1, 4], [ 1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("caqui")
+-- EXECUTION TIME:
+0.948381
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli -439.0
+caqui
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli 12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli -6745.3
+salmonela
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:56:30) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2,  1, 4], [ 1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("coli")
+-- EXECUTION TIME:
+1.08099
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli -439.0
+coli
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli 12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli -6745.3
+salmonela
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:57:34) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2,  1, 4], [ 1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("coli")
+-- EXECUTION TIME:
+1.26484
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli -439.0
+coli
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli 12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli -6745.3
+salmonela
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:57:36) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2,  1, 4], [ 1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("coli")
+-- EXECUTION TIME:
+4.57897
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli 12183.6
+estafilococo
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli 12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli -6745.3
+salmonela
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:57:37) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2,  1, 4], [ 1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("coli")
+-- EXECUTION TIME:
+2.29039
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli -439.0
+coli
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli 12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli -6745.3
+salmonela
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:57:38) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2,  1, 4], [ 1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("coli")
+-- EXECUTION TIME:
+7.80097
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli 12183.6
+estafilococo
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli 12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli -6745.3
+salmonela
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:57:39) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2,  1, 4], [ 1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("coli")
+-- EXECUTION TIME:
+10.1368
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli 12183.6
+estafilococo
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli 12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli -6745.3
+salmonela
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:57:41) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2,  1, 4], [ 1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("coli")
+-- EXECUTION TIME:
+10.2948
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli 12183.6
+estafilococo
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli -6745.3
+salmonela
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli -439.0
+coli
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:57:52) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2,  1, 4], [ 1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("coli")
+-- EXECUTION TIME:
+5.97949
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli -6745.3
+salmonela
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:57:54) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2,  1, 4], [ 1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("coli")
+-- EXECUTION TIME:
+5.63572
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/2602/main.py", line 14, in <module>
+    o
+NameError: name 'o' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:57:55) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2,  1, 4], [ 1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+o
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("coli")
+-- EXECUTION TIME:
+5.85755
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/2602/main.py", line 14, in <module>
+    o
+NameError: name 'o' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:57:56) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2,  1, 4], [ 1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+o
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("coli")
+-- EXECUTION TIME:
+6.39195
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/2602/main.py", line 14, in <module>
+    o
+NameError: name 'o' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:57:57) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2,  1, 4], [ 1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+o
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("coli")
+-- EXECUTION TIME:
+6.5199
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/2602/main.py", line 14, in <module>
+    o
+NameError: name 'o' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:57:57) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2,  1, 4], [ 1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+o
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("coli")
+-- EXECUTION TIME:
+5.97147
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/2602/main.py", line 14, in <module>
+    o
+NameError: name 'o' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:58:02) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2,  1, 4], [ 1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+o
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("coli")
+-- EXECUTION TIME:
+4.81047
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/2602/main.py", line 14, in <module>
+    o
+NameError: name 'o' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:58:03) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2,  1, 4], [ 1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+o
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("coli")
+-- EXECUTION TIME:
+2.75139
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1834/2602/main.py", line 14, in <module>
+    o
+NameError: name 'o' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 14:58:03) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2,  1, 4], [ 1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+o
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("coli")
+-- EXECUTION TIME:
+2.19737
+-- ERROR:
+sh: 1: cannot open /home/codebench/codes/1834/2602/cbtemp.txt: No such file
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 15:20:03) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2,  1, 4], [ 1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("coli")
+-- EXECUTION TIME:
+1.06756
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli -439.0
+coli
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli 12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli -6745.3
+salmonela
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 15:21:04) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2, 1, 4], [1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("coli")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 15:21:52) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mg = array(eval(input()))
+mg = mg.T
+# Matriz do sistema linear (informado no enunciado)
+al = array([[2, 1, 4], [1, 2, 0 ], [ 2, 3,2]])
+
+# Vetor de constantes (informado no enunciado)
+
+
+# Resolucao do sistema de equacoes lineares
+preco = dot(inv(al), mg)
+
+# Imprime o preco de cada fruta
+print("estafilococo: ", round(preco[0], 1))
+print("salmonela: ", round(preco[1], 1))
+print("coli:", round(preco[2], 1))
+
+# Imprime nome da fruta mais cara
+if preco[0] == min(preco):
+    print("estafilococo")
+elif preco[1] == min(preco):
+    print("salmonela")
+else:
+    print("coli")
+-- EXECUTION TIME:
+0.821829
+-- TEST CASE 1:
+---- input:
+[3955.25,5652.36,8562.22]
+---- correct output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli:  -439.0
+coli
+---- user output:
+estafilococo:  1923.4
+salmonela:  1864.5
+coli: -439.0
+coli
+-- TEST CASE 2:
+---- input:
+[2095.52,1855.75,11295.21]
+
+---- correct output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli:  12183.6
+estafilococo
+
+---- user output:
+estafilococo:  -31711.0
+salmonela:  16783.4
+coli: 12183.6
+estafilococo
+-- TEST CASE 3:
+---- input:
+[8596.14,3212.68,2652.11]
+---- correct output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli:  -6745.3
+salmonela
+
+---- user output:
+estafilococo:  22647.2
+salmonela:  -9717.3
+coli: -6745.3
+salmonela
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

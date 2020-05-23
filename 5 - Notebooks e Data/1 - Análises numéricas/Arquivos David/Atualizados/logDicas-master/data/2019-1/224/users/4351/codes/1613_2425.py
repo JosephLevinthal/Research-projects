@@ -1,0 +1,5 @@
+distancia=float(input("distancia percorrida"))
+combustivel=float(input("total de comb. gasto"))
+consumomedio=float(distancia/combustivel)
+cmarr=round(consumomedio, 3)
+print(cmarr,"km/l")

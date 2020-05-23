@@ -1,0 +1,130 @@
+== TEST (2019-07-01 17:19:13) 
+-- CODE:
+from numpy import *
+number=int(input("digite um numero: "))
+mat=zeros((N,N), dtype=int)
+ for i in range(N):
+		for j in range(N):
+			if(i>j):
+				mat[i,j]=1,2,3,4
+			elif(i<j):
+				mat[i,j]=1,2,3,4
+			else:
+				mat[i,j]=1,2,3,4
+
+-- ERROR:
+File "XXXX", line 4
+    for i in range(N):
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 17:21:39) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+number=int(input("digite um numero: "))
+matriz=zeros((N,N), dtype=int)
+ for i in range(N):
+		for j in range(i,N):
+			matriz[i,j]=i+1
+			matriz[j,i]=i+1
+print(matriz)
+
+-- ERROR:
+File "XXXX", line 5
+    for i in range(N):
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 17:22:00) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+number=int(input("digite um numero: "))
+matriz=zeros((N,N), dtype=int)
+for i in range(N):
+	for j in range(i,N):
+		matriz[i,j]=i+1
+		matriz[j,i]=i+1
+print(matriz)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 17:22:56) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+number=int(input("digite um numero: "))
+matriz=zeros((number,number),dtype=int)
+for i in range(number):
+	for j in range(i,number):
+		matriz[i,j]=i+1
+		matriz[j,i]=i+1
+print(matriz)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 17:23:40) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+number=int(input("digite um numero: "))
+matriz=zeros((number,number),dtype=int)
+for i in range(number):
+	for j in range(i,number):
+		matriz[i,j]=i+1
+		matriz[j,i]=i+1
+print(matriz)
+
+-- EXECUTION TIME:
+1.12291
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

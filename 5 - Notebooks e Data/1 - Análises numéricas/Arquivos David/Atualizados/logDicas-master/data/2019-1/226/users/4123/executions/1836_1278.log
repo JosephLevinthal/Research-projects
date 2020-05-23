@@ -1,0 +1,602 @@
+== TEST (2019-06-25 11:50:23) 
+-- CODE:
+from numpy import*
+c1 = c2 = input()
+
+tot = 0
+dist = array([
+	[0,2,11,6,15,11,1],
+	[2,0,7,12,4,2,15],
+	[11,7,0,11,8,3,13],
+	[6,12,11,0,10,2,1],
+	[15,4,8,10,0,5,13],
+	[11,2,3,2,5,0,14],
+	[1,15,13,1,13,14,0]])
+
+c2 = int(c2[0])-1
+while c1 != -1 :
+	c1 = int(c1[0])-1
+	tot += dist[c1,c2]
+	c2 = c1
+	c1 = input()
+print(dist[c1,c2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:50:44) 
+-- CODE:
+from numpy import*
+c1 = c2 = input()
+
+tot = 0
+dist = array([
+	[0,2,11,6,15,11,1],
+	[2,0,7,12,4,2,15],
+	[11,7,0,11,8,3,13],
+	[6,12,11,0,10,2,1],
+	[15,4,8,10,0,5,13],
+	[11,2,3,2,5,0,14],
+	[1,15,13,1,13,14,0]])
+
+c2 = int(c2[0])-1
+while c1 != "-1" :
+	c1 = int(c1[0])-1
+	tot += dist[c1,c2]
+	c2 = c1
+	c1 = input()
+print(dist[c1,c2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:51:40) 
+-- CODE:
+from numpy import*
+c1 = c2 = input()
+
+tot = 0
+dist = array([
+	[0,2,11,6,15,11,1],
+	[2,0,7,12,4,2,15],
+	[11,7,0,11,8,3,13],
+	[6,12,11,0,10,2,1],
+	[15,4,8,10,0,5,13],
+	[11,2,3,2,5,0,14],
+	[1,15,13,1,13,14,0]])
+c1 = int(c1[0])-1
+c2 = int(c2[0])-1
+while c1 != -2 :
+	tot += dist[c1,c2]
+	c2 = c1
+	c1 = input()
+	c1 = int(c1[0])-1
+print(dist[c1,c2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:55:01) 
+-- CODE:
+from numpy import*
+c1 = c2 = input()
+
+tot = 0
+dist = array([
+	[0,2,11,6,15,11,1],
+	[2,0,7,12,4,2,15],
+	[11,7,0,11,8,3,13],
+	[6,12,11,0,10,2,1],
+	[15,4,8,10,0,5,13],
+	[11,2,3,2,5,0,14],
+	[1,15,13,1,13,14,0]])
+c1 = int(c1[0])-1
+c2 = int(c2[0])-1
+while c1 != -1:
+	tot += dist[c1,c2]
+	c2 = c1
+	c1 = int(input())
+	c1 = c1%10
+print(dist[c1,c2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:56:25) 
+-- CODE:
+from numpy import*
+c1 = c2 = int(input())
+
+tot = 0
+dist = array([
+	[0,2,11,6,15,11,1],
+	[2,0,7,12,4,2,15],
+	[11,7,0,11,8,3,13],
+	[6,12,11,0,10,2,1],
+	[15,4,8,10,0,5,13],
+	[11,2,3,2,5,0,14],
+	[1,15,13,1,13,14,0]])
+c1 = c1%10
+c2 = c2%10
+while c1 != -1:
+	tot += dist[c1-1,c2-1]
+	c2 = c1
+	c1 = int(input())
+	c1 = c1%10
+print(dist[c1,c2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:57:33) 
+-- CODE:
+from numpy import*
+c1 = c2 = int(input())
+
+tot = 0
+dist = array([
+	[0,2,11,6,15,11,1],
+	[2,0,7,12,4,2,15],
+	[11,7,0,11,8,3,13],
+	[6,12,11,0,10,2,1],
+	[15,4,8,10,0,5,13],
+	[11,2,3,2,5,0,14],
+	[1,15,13,1,13,14,0]])
+c1 = c1%10
+c2 = c2%10
+while c1 != -1:
+	tot += dist[c1-1,c2-1]
+	c2 = c1
+	c1 = int(input())
+	c1 = c1%10
+print(dist[c1,c2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:58:07) 
+-- CODE:
+from numpy import*
+c1 = c2 = int(input())
+
+tot = 0
+dist = array([
+	[0,2,11,6,15,11,1],
+	[2,0,7,12,4,2,15],
+	[11,7,0,11,8,3,13],
+	[6,12,11,0,10,2,1],
+	[15,4,8,10,0,5,13],
+	[11,2,3,2,5,0,14],
+	[1,15,13,1,13,14,0]])
+c1 = c1%10
+c2 = c2%10
+while c1 != -1:
+	tot += dist[(c1-1),(c2-1)]
+	c2 = c1
+	c1 = int(input())
+	c1 = c1%10
+print(dist[c1,c2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:09:51) 
+-- CODE:
+from numpy import*
+c1 = c2 = int(input())
+
+tot = 0
+dist = array([
+	[0,2,11,6,15,11,1],
+	[2,0,7,12,4,2,15],
+	[11,7,0,11,8,3,13],
+	[6,12,11,0,10,2,1],
+	[15,4,8,10,0,5,13],
+	[11,2,3,2,5,0,14],
+	[1,15,13,1,13,14,0]])
+c1 = c1%10
+c2 = c2%10
+while c1 != -1:
+	tot += dist[(c1-1),(c2-1)]
+	c2 = c1
+	c1 = int(input())
+	c1 = c1%10
+print(dist[c1,c2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:10:43) 
+-- CODE:
+from numpy import*
+c1 = c2 = int(input())
+
+tot = 0
+dist = array([
+	[0,2,11,6,15,11,1],
+	[2,0,7,12,4,2,15],
+	[11,7,0,11,8,3,13],
+	[6,12,11,0,10,2,1],
+	[15,4,8,10,0,5,13],
+	[11,2,3,2,5,0,14],
+	[1,15,13,1,13,14,0]])
+c1 = c1%10-1
+c2 = c2%10-1
+while c1 != -1:
+	tot += dist[c1,c2]
+	c2 = c1
+	c1 = int(input())
+	c1 = c1%10-1
+print(dist[c1,c2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:11:27) 
+-- CODE:
+from numpy import*
+c1 = c2 = int(input())
+
+tot = 0
+dist = array([
+	[0,2,11,6,15,11,1],
+	[2,0,7,12,4,2,15],
+	[11,7,0,11,8,3,13],
+	[6,12,11,0,10,2,1],
+	[15,4,8,10,0,5,13],
+	[11,2,3,2,5,0,14],
+	[1,15,13,1,13,14,0]])
+c1 = c1%10-1
+c2 = c2%10-1
+while c1 != -1:
+	tot = tot + dist[c2,c1]
+	c2 = c1
+	c1 = int(input())
+	c1 = c1%10-1
+print(dist[c1,c2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:11:54) 
+-- CODE:
+from numpy import*
+c1 = c2 = int(input())
+
+tot = 0
+dist = array([
+	[0,2,11,6,15,11,1],
+	[2,0,7,12,4,2,15],
+	[11,7,0,11,8,3,13],
+	[6,12,11,0,10,2,1],
+	[15,4,8,10,0,5,13],
+	[11,2,3,2,5,0,14],
+	[1,15,13,1,13,14,0]])
+c1 = c1%10-1
+c2 = c2%10-1
+while c1 != -2:
+	tot = tot + dist[c2,c1]
+	c2 = c1
+	c1 = int(input())
+	c1 = c1%10-1
+print(dist[c1,c2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:12:49) 
+-- CODE:
+from numpy import*
+c1 = c2 = int(input())
+
+tot = 0
+dist = array([
+	[0,2,11,6,15,11,1],
+	[2,0,7,12,4,2,15],
+	[11,7,0,11,8,3,13],
+	[6,12,11,0,10,2,1],
+	[15,4,8,10,0,5,13],
+	[11,2,3,2,5,0,14],
+	[1,15,13,1,13,14,0]])
+c1 = c1%10-1
+c2 = c2%10-1
+while 1:
+	tot = tot + dist[c2,c1]
+	c2 = c1
+	c1 = int(input())
+	if c1 == -1:
+		break
+	else:
+		c1 = c1%10-1
+print(dist[c1,c2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:13:00) 
+-- CODE:
+from numpy import*
+c1 = c2 = int(input())
+
+tot = 0
+dist = array([
+	[0,2,11,6,15,11,1],
+	[2,0,7,12,4,2,15],
+	[11,7,0,11,8,3,13],
+	[6,12,11,0,10,2,1],
+	[15,4,8,10,0,5,13],
+	[11,2,3,2,5,0,14],
+	[1,15,13,1,13,14,0]])
+c1 = c1%10-1
+c2 = c2%10-1
+while 1:
+	tot = tot + dist[c2,c1]
+	c2 = c1
+	c1 = int(input())
+	if c1 == -1:
+		break
+	else:
+		c1 = c1%10-1
+print(dist[c1,c2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:13:34) 
+-- CODE:
+from numpy import*
+c1 = c2 = int(input())
+
+tot = 0
+dist = array([
+	[0,2,11,6,15,11,1],
+	[2,0,7,12,4,2,15],
+	[11,7,0,11,8,3,13],
+	[6,12,11,0,10,2,1],
+	[15,4,8,10,0,5,13],
+	[11,2,3,2,5,0,14],
+	[1,15,13,1,13,14,0]])
+c1 = c1%10-1
+c2 = c2%10-1
+while 1:
+	tot = tot + dist[c1,c2]
+	c2 = c1
+	c1 = int(input())
+	if c1 == -1:
+		break
+	else:
+		c1 = c1%10-1
+print(dist[c1,c2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:14:07) 
+-- CODE:
+from numpy import*
+c1 = c2 = int(input())
+
+tot = 0
+dist = array([
+	[0,2,11,6,15,11,1],
+	[2,0,7,12,4,2,15],
+	[11,7,0,11,8,3,13],
+	[6,12,11,0,10,2,1],
+	[15,4,8,10,0,5,13],
+	[11,2,3,2,5,0,14],
+	[1,15,13,1,13,14,0]])
+c1 = c1%10-1
+c2 = c2%10-1
+print(c1,c2)
+while 1:
+	tot = tot + dist[c1,c2]
+	c2 = c1
+	c1 = int(input())
+	if c1 == -1:
+		break
+	else:
+		c1 = c1%10-1
+print(dist[c1,c2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:14:20) 
+-- CODE:
+from numpy import*
+c1 = c2 = int(input())
+
+tot = 0
+dist = array([
+	[0,2,11,6,15,11,1],
+	[2,0,7,12,4,2,15],
+	[11,7,0,11,8,3,13],
+	[6,12,11,0,10,2,1],
+	[15,4,8,10,0,5,13],
+	[11,2,3,2,5,0,14],
+	[1,15,13,1,13,14,0]])
+c1 = c1%10-1
+c2 = c2%10-1
+print(c1,c2)
+while 1:
+	tot = tot + dist[c1,c2]
+	c2 = c1
+	c1 = int(input())
+	if c1 == -1:
+		break
+	else:
+		c1 = c1%10-1
+print(dist[c1,c2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:15:41) 
+-- CODE:
+from numpy import*
+c1 = c2 = int(input())
+
+tot = 0
+dist = array([
+	[0,2,11,6,15,11,1],
+	[2,0,7,12,4,2,15],
+	[11,7,0,11,8,3,13],
+	[6,12,11,0,10,2,1],
+	[15,4,8,10,0,5,13],
+	[11,2,3,2,5,0,14],
+	[1,15,13,1,13,14,0]])
+c1 = c1%10-1
+c2 = c2%10-1
+while 1:
+	tot = tot + dist[c1,c2]
+	print(dist[c1,c2])
+	c2 = c1
+	c1 = int(input())
+	if c1 == -1:
+		break
+	else:
+		c1 = c1%10-1
+print(dist[c1,c2])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-27 10:16:17) 
+-- CODE:
+from numpy import*
+c1 = c2 = int(input())
+
+tot = 0
+dist = array([
+	[0,2,11,6,15,11,1],
+	[2,0,7,12,4,2,15],
+	[11,7,0,11,8,3,13],
+	[6,12,11,0,10,2,1],
+	[15,4,8,10,0,5,13],
+	[11,2,3,2,5,0,14],
+	[1,15,13,1,13,14,0]])
+c1 = c1%10-1
+c2 = c2%10-1
+while 1:
+	tot = tot + dist[c1,c2]
+#	print(dist[c1,c2])
+	c2 = c1
+	c1 = int(input())
+	if c1 == -1:
+		break
+	else:
+		c1 = c1%10-1
+print(tot)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-27 10:16:31) 
+-- CODE:
+from numpy import*
+c1 = c2 = int(input())
+
+tot = 0
+dist = array([
+	[0,2,11,6,15,11,1],
+	[2,0,7,12,4,2,15],
+	[11,7,0,11,8,3,13],
+	[6,12,11,0,10,2,1],
+	[15,4,8,10,0,5,13],
+	[11,2,3,2,5,0,14],
+	[1,15,13,1,13,14,0]])
+c1 = c1%10-1
+c2 = c2%10-1
+while 1:
+	tot = tot + dist[c1,c2]
+#	print(dist[c1,c2])
+	c2 = c1
+	c1 = int(input())
+	if c1 == -1:
+		break
+	else:
+		c1 = c1%10-1
+print(tot)
+-- EXECUTION TIME:
+1.05855
+-- TEST CASE 1:
+---- input:
+333
+555
+666
+111
+-1
+
+---- correct output:
+24
+---- user output:
+24
+-- TEST CASE 2:
+---- input:
+222
+777
+555
+333
+666
+111
+-1
+
+---- correct output:
+50
+---- user output:
+50
+-- TEST CASE 3:
+---- input:
+111
+222
+111
+333
+111
+555
+111
+777
+-1
+
+---- correct output:
+57
+---- user output:
+57
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,108 @@
+== TEST (2019-04-16 11:10:20) 
+-- CODE:
+
+
+t = int(input("Digite o tempo em meses: "))
+
+i = ((1042000/1500)**t) - 1
+
+if( i < = 0.01 ):
+	mensagem = "Real"
+else:
+	mensagem = "Irreal"
+
+print(round(i,5))
+print(mensagem)
+-- ERROR:
+File "XXXX", line 7
+    if( i < = 0.01 ):
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:10:28) 
+-- CODE:
+
+
+t = int(input("Digite o tempo em meses: "))
+
+i = ((1042000/1500)**t) - 1
+
+if( i <= 0.01 ):
+	mensagem = "Real"
+else:
+	mensagem = "Irreal"
+
+print(round(i,5))
+print(mensagem)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    i = ((1042000/1500)**t) - 1
+OverflowError: (34, 'Numerical result out of range')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 11:11:00) 
+-- CODE:
+
+
+t = int(input("Digite o tempo em meses: "))
+
+i = ((1042000/1500)**(1/t)) - 1
+
+if( i <= 0.01 ):
+	mensagem = "Real"
+else:
+	mensagem = "Irreal"
+
+print(round(i,5))
+print(mensagem)
+-- OUTPUT:
+0.00999
+Real
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 11:11:11) 
+-- CODE:
+
+
+t = int(input("Digite o tempo em meses: "))
+
+i = ((1042000/1500)**(1/t)) - 1
+
+if( i <= 0.01 ):
+	mensagem = "Real"
+else:
+	mensagem = "Irreal"
+
+print(round(i,5))
+print(mensagem)
+-- EXECUTION TIME:
+0.128102
+-- TEST CASE 1:
+---- input:
+658
+---- correct output:
+0.00999
+Real
+---- user output:
+0.00999
+Real
+-- TEST CASE 2:
+---- input:
+565
+---- correct output:
+0.01165
+Irreal
+---- user output:
+0.01165
+Irreal
+-- TEST CASE 3:
+---- input:
+240
+---- correct output:
+0.02764
+Irreal
+---- user output:
+0.02764
+Irreal
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

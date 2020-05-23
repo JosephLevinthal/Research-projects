@@ -1,0 +1,1732 @@
+== TEST (2019-05-25 20:55:33) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+print(vec[0:3])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 20:55:54) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+print(x[0:3])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 20:57:22) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+print(x[0:3],".",x[4:7])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 20:57:47) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+print(x[0:3]"."x[37])
+-- ERROR:
+File "XXXX", line 5
+    print(x[0:3]"."x[37])
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 20:58:23) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+print(x[0:3]"."x[3:6])
+-- ERROR:
+File "XXXX", line 5
+    print(x[0:3]"."x[3:6])
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 20:58:40) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+print(x[0:3],".",x[3:6])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 20:58:57) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+print(x[0:3]".",x[3:6])
+-- ERROR:
+File "XXXX", line 5
+    print(x[0:3]".",x[3:6])
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 20:59:26) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+a=x[0:3]
+print(a,".",x[3:6])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 21:00:40) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+a=x[0:3]
+print(a,".",x[3:6],'.',x[5:8])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 21:00:56) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+a=x[0:3]
+print(a,".",x[3:6],'.',x[6:8])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 21:01:47) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+a=x[0:3]
+print(a,".",x[3:6],'.',x[6:9])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-25 21:01:58) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+a=x[0:3]
+print(a,".",x[3:6],'.',x[6:9])
+-- EXECUTION TIME:
+0.570995
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123 .  .
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123 . 456 . 789
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987 . 654 . 321
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 21:04:26) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+a=x[0:3]
+print(a,".",x[3:6],'.',x[6:9])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-25 21:06:24) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+a=x[i:j-1]
+print(a,".",x[3:6],'.',x[6:9])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-27 12:19:06) 
+-- CODE:
+from numpy import*
+
+x=array(eval(input("")))
+
+print(str(x[0:3],".",x[0:6]))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-27 12:19:24) 
+-- CODE:
+from numpy import*
+
+x=array(eval(input("")))
+
+print(x[0:3],".",x[0:6])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-27 12:20:10) 
+-- CODE:
+from numpy import*
+x=array(input(""))
+
+print(str(x[0:3],".",x[0:6]))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-27 12:20:43) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+a=x[i:j-1]
+print(a,".",x[3:6],'.',x[6:9])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-27 12:20:59) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+a=x[i:j-1]
+print(a+"."+x[3:6]+'.'+x[6:9])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-27 12:21:11) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+print(a+"."+x[3:6]+'.'+x[6:9])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-27 12:21:34) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+print(x[0:3]+"."+x[3:6]+'.'+x[6:9])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-27 12:21:41) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+print(x[0:3]+"."+x[3:6]+'.'+x[6:9])
+-- EXECUTION TIME:
+0.509004
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123..
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-27 12:22:05) 
+-- CODE:
+from numpy import*
+
+x=array(input("x= "))
+
+print(x[0:3]+"."+x[3:6]+'.'+x[6:9])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-27 12:22:18) 
+-- CODE:
+from numpy import*
+
+x=(input("x= "))
+
+print(x[0:3]+"."+x[3:6]+'.'+x[6:9])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-27 12:24:28) 
+-- CODE:
+from numpy import*
+
+x=(input("x= "))
+
+
+
+if(x>3)and(x)
+
+print(x[0:3]+"."+x[3:6]+'.'+x[6:9]+x[8:11])
+-- ERROR:
+File "XXXX", line 7
+    if(x>3)and(x)
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-27 12:24:42) 
+-- CODE:
+from numpy import*
+
+x=(input("x= "))
+
+
+
+if(x>3):
+	print(x[0:3]+"."+x[3:6]+'.'+x[6:9]+x[8:11])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-27 12:24:58) 
+-- CODE:
+from numpy import*
+
+x=(input("x= "))
+
+
+
+print(x[0:3]+"."+x[3:6]+'.'+x[6:9]+x[8:11])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-27 12:25:13) 
+-- CODE:
+from numpy import*
+
+x=(input("x= "))
+
+
+
+print(x[0:3]+"."+x[3:6]+'.'+x[6:9]+"."+x[8:11])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-27 12:25:36) 
+-- CODE:
+from numpy import*
+
+x=(input("x= "))
+
+
+
+print(x[0:3]+"."+x[3:6]+'.'+x[6:9]+"."+x[9:12])
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-27 12:25:46) 
+-- CODE:
+from numpy import*
+
+x=(input("x= "))
+
+
+
+print(x[0:3]+"."+x[3:6]+'.'+x[6:9]+"."+x[9:12])
+-- EXECUTION TIME:
+0.622155
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123...
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789.000
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321.
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:43:48) 
+-- CODE:
+from numpy import*
+
+x=(input("x= "))
+
+
+i=0
+while(i<size(x))and(x%3==0):
+	if(x>=3)and
+	
+-- ERROR:
+File "XXXX", line 8
+    if(x>=3)and
+              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:45:45) 
+-- CODE:
+from numpy import*
+
+x=(input("x= "))
+
+
+i=0
+while(i<size(x)):
+	if(x>=3)and(x%3==0)
+		a=x[0:3]+"."+x[3:6]+'.'x[6:9]
+		
+		
+-- ERROR:
+File "XXXX", line 8
+    if(x>=3)and(x%3==0)
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:45:57) 
+-- CODE:
+from numpy import*
+
+x=(input("x= "))
+
+
+i=0
+while(i<size(x)):
+	if(x>=3)and(x%3==0)
+		a=x[0:3]+"."+x[3:6]+'.'x[6:9]
+		i+=1
+
+		
+-- ERROR:
+File "XXXX", line 8
+    if(x>=3)and(x%3==0)
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:46:14) 
+-- CODE:
+from numpy import*
+
+x=(input("x= "))
+
+
+i=0
+while(i<size(x)):
+	if(x>=3)and(x%3==0)
+		a=x[0:3]+"."+x[3:6]+'.'x[6:9]
+		i+=1	
+
+
+print(a)
+-- ERROR:
+File "XXXX", line 8
+    if(x>=3)and(x%3==0)
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:46:24) 
+-- CODE:
+from numpy import*
+
+x=(input("x= "))
+
+
+i=0
+while(i<size(x)):
+	if(x>=3)and(x%3==0):
+		a=x[0:3]+"."+x[3:6]+'.'x[6:9]
+		i+=1	
+
+
+print(a)
+-- ERROR:
+File "XXXX", line 9
+    a=x[0:3]+"."+x[3:6]+'.'x[6:9]
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:46:40) 
+-- CODE:
+from numpy import*
+
+x=(input("x= "))
+
+
+i=0
+while(i<size(x)):
+	if(x>=3)and(x%3==0):
+		a=x[0:3]+"."+x[3:6]+'.'+x[6:9]
+		i+=1	
+
+
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:47:02) 
+-- CODE:
+from numpy import*
+
+x=(input("x= "))
+
+
+i=0
+while(i<size(x)):
+	if(str(x)>=3)and(x%3==0):
+		a=x[0:3]+"."+x[3:6]+'.'+x[6:9]
+		i+=1	
+
+
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:47:33) 
+-- CODE:
+from numpy import*
+
+x=(input("x= "))
+
+
+i=0
+while(i<size(x)):
+	if(str(x)>=int(3))and(x%3==0):
+		a=x[0:3]+"."+x[3:6]+'.'+x[6:9]
+		i+=1	
+
+
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:48:00) 
+-- CODE:
+from numpy import*
+
+x=(input("x= "))
+
+
+i=0
+while(i<size(x)):
+	if(str(x)>=int(3))and(str(x)%3==int(0)(:
+		a=x[0:3]+"."+x[3:6]+'.'+x[6:9]
+		i+=1	
+
+
+print(a)
+-- ERROR:
+File "XXXX", line 8
+    if(str(x)>=int(3))and(str(x)%3==int(0)(:
+                                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:48:02) 
+-- CODE:
+from numpy import*
+
+x=(input("x= "))
+
+
+i=0
+while(i<size(x)):
+	if(str(x)>=int(3))and(str(x)%3==int(0)):
+		a=x[0:3]+"."+x[3:6]+'.'+x[6:9]
+		i+=1	
+
+
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:48:24) 
+-- CODE:
+from numpy import*
+
+x=array(eval(input("x= "))
+
+
+i=0
+while(i<size(x)):
+	if(x>=3)and(x%3==0):
+		a=x[0:3]+"."+x[3:6]+'.'+x[6:9]
+		i+=1	
+
+
+print(a)
+-- ERROR:
+File "XXXX", line 6
+    i=0
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:48:29) 
+-- CODE:
+from numpy import*
+
+x=array(eval(input("x= ")))
+
+
+i=0
+while(i<size(x)):
+	if(x>=3)and(x%3==0):
+		a=x[0:3]+"."+x[3:6]+'.'+x[6:9]
+		i+=1	
+
+
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:48:49) 
+-- CODE:
+
+
+x=input("x= ")
+
+
+i=0
+while(i<size(x)):
+	if(x>=3)and(x%3==0):
+		a=x[0:3]+"."+x[3:6]+'.'+x[6:9]
+		i+=1	
+
+
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    while(i<size(x)):
+NameError: name 'size' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:50:11) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+
+i=0
+while(i<size(x)):
+	if(x>=3)and(x%3==0):
+		a=x[0:3]+"."+x[3:6]+'.'+x[6:9]
+		i+=1	
+
+
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:50:28) 
+-- CODE:
+from numpy import*
+
+x=int(input("x= "))
+
+
+i=0
+while(i<size(x)):
+	if(x>=3)and(x%3==0):
+		a=x[0:3]+"."+x[3:6]+'.'+x[6:9]
+		i+=1	
+
+
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:58:05) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+
+i=0
+while(i<len(x)):
+	if(x>=3)and(x%3==0):
+		a=x[0:3]+"."+x[3:6]+'.'+x[6:9]
+		i+=1	
+
+
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:58:16) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+
+i=0
+while(i<len(x)):
+		a=x[0:3]+"."+x[3:6]+'.'+x[6:9]
+		i+=1	
+
+
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:58:21) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+
+i=0
+while(i<len(x)):
+	a=x[0:3]+"."+x[3:6]+'.'+x[6:9]
+		i+=1	
+
+
+print(a)
+-- ERROR:
+File "XXXX", line 9
+    i+=1	
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:58:22) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+
+i=0
+while(i<len(x)):
+	a=x[0:3]+"."+x[3:6]+'.'+x[6:9]
+	i+=1	
+
+
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:58:33) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+
+i=0
+while(i<len(x)):
+	a=x[0:3]+"."+x[3:6]+'.'+x[6:9]
+	i+=1	
+
+
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:59:00) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+
+i=0
+while(i<len(x)):
+	a=x[0:3]+"."+x[3:6]+'.'+x[6:9]
+	a+=1
+	i+=1	
+
+
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:59:26) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+
+i=0
+while(i<len(x)):
+	a=x[0+1:3+1]+"."+x[3:6]+'.'+x[6:9]
+	
+	i+=1	
+
+
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 12:59:40) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+
+i=0
+while(i<len(x)):
+	a=x[0+1:3+1]+"."+x[3:6]+'.'+x[6:9]
+	
+	i+=1	
+
+
+print(a)
+-- EXECUTION TIME:
+0.370972
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+23..
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+234.456.789
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+876.654.321
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:59:45) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+
+i=0
+while(i<len(x)):
+	a=x[0:3]+"."+x[3:6]+'.'+x[6:9]
+	
+	i+=1	
+
+
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 12:59:48) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+
+i=0
+while(i<len(x)):
+	a=x[0:3]+"."+x[3:6]+'.'+x[6:9]
+	
+	i+=1	
+
+
+print(a)
+-- EXECUTION TIME:
+0.519189
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123..
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 15:03:17) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+
+i=0
+j=3
+a='.'
+b=""
+while(i<len(x)):
+	if(i<(len(x)-4)):
+		w=a+x[i:j]+b
+		i+=3
+		j+=1
+	i+=1	
+
+
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 15:03:28) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+
+i=0
+j=3
+a='.'
+b=""
+while(i<len(x)):
+	if(i<(len(x)-4)):
+		w=x[i:j]+b
+		i+=3
+		j+=1
+	i+=1	
+
+
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 15:03:36) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+
+i=0
+j=3
+a='.'
+b=""
+while(i<len(x)):
+	if(i<(len(x)-4)):
+		w=x[i:j]+b
+		i+=3
+		j+=1
+	i+=1	
+
+
+print(w)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 15:03:47) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+
+i=0
+j=3
+a='.'
+b=""
+while(i<len(x)):
+	if(i<(len(x)-4)):
+		w=a+x[i:j]+b
+		i+=3
+		j+=1
+	i+=1	
+
+
+print(w)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 16:45:54) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+
+i=0
+j=3
+a='.'
+b=""
+while(i<len(x)):
+	if(i<(len(x)-4)):
+		w=a+x[i:j]+b
+		i+=3
+		j+=1
+	i+=1	
+
+
+print(w)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 16:46:16) 
+-- CODE:
+from numpy import*
+
+x=input("x= ")
+
+
+i=0
+j=3
+a='.'
+b=""
+while(i<len(x)):
+	if(i<(len(x)-4)):
+		w=a+x[i:j]+b
+	i+=1	
+
+i+=3
+j+=1
+print(w)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:22:29) 
+-- CODE:
+
+x=input("x= ")
+
+i=0
+s=""
+
+while(len(x)>3)and(len(x)%3==0):
+	d=x[i:j+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	i+=3
+print(s)
+	
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:23:20) 
+-- CODE:
+
+x=input("x= ")
+
+i=0
+s=""
+j=0
+while(len(x)>3)and(len(x)%3==0):
+	d=x[i:j+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	j+=3
+	i+=3
+print(s)
+	
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:23:52) 
+-- CODE:
+
+x=input("x= ")
+
+i=0
+s=""
+j=0
+while(len(x)>3)and(len(x)%3==0):
+	d=x[i:i+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	i+=3
+print(s)
+	
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:24:51) 
+-- CODE:
+x=input("x= ")
+
+i=0
+s=""
+j=0
+while(i<size(x)):
+	if(len(x)>3)and(len(x)%3==0):
+	d=x[i:i+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	i+=3
+print(s)
+	
+
+
+-- ERROR:
+File "XXXX", line 8
+    d=x[i:i+3]
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:24:58) 
+-- CODE:
+x=input("x= ")
+
+i=0
+s=""
+j=0
+while(i<size(x)):
+	if(len(x)>3)and(len(x)%3==0):
+		d=x[i:i+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	i+=3
+print(s)
+	
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    while(i<size(x)):
+NameError: name 'size' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:25:26) 
+-- CODE:
+x=input("x= ")
+
+i=0
+s=""
+j=0
+while(i<len(x)):
+	if(len(x)>3)and(len(x)%3==0):
+		d=x[i:i+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	i+=3
+print(s)
+	
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 12, in <module>
+    s+=d
+NameError: name 'd' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:25:33) 
+-- CODE:
+x=input("x= ")
+
+i=0
+s=""
+j=0
+while(i<len(x)):
+	if(len(x)>3)and(len(x)%3==0):
+		d=x[i:i+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	i+=3
+print(s)
+	
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 12, in <module>
+    s+=d
+NameError: name 'd' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 23:25:40) 
+-- CODE:
+x=input("x= ")
+
+i=0
+s=""
+j=0
+while(i<len(x)):
+	if(len(x)>3)and(len(x)%3==0):
+		d=x[i:i+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	i+=3
+print(s)
+	
+
+
+-- EXECUTION TIME:
+0.220259
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1764/1583/main.py", line 12, in <module>
+    s+=d
+NameError: name 'd' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:25:47) 
+-- CODE:
+x=input("x= ")
+
+i=0
+s=""
+j=0
+while(i<len(x)):
+	if(len(x)>3)and(len(x)%3==0):
+		d=x[i:i+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	i+=3
+print(s)
+	
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 12, in <module>
+    s+=d
+NameError: name 'd' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:25:53) 
+-- CODE:
+x=input("x= ")
+
+i=0
+s=""
+j=0
+while(i<len(x)):
+	if(len(x)>3)and(len(x)%3==0):
+		d=x[i:i+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	i+=3
+print(s)
+	
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 12, in <module>
+    s+=d
+NameError: name 'd' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 23:26:20) 
+-- CODE:
+x=input("x= ")
+
+i=0
+s=""
+
+while(i<len(x)):
+	if(len(x)>3)and(len(x)%3==0):
+		d=x[i:i+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	i+=3
+print(s)
+
+
+-- EXECUTION TIME:
+0.208312
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1764/1583/main.py", line 12, in <module>
+    s+=d
+NameError: name 'd' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 23:26:22) 
+-- CODE:
+x=input("x= ")
+
+i=0
+s=""
+
+while(i<len(x)):
+	if(len(x)>3)and(len(x)%3==0):
+		d=x[i:i+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	i+=3
+print(s)
+
+
+-- EXECUTION TIME:
+0.151034
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1764/1583/main.py", line 12, in <module>
+    s+=d
+NameError: name 'd' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 23:26:22) 
+-- CODE:
+x=input("x= ")
+
+i=0
+s=""
+
+while(i<len(x)):
+	if(len(x)>3)and(len(x)%3==0):
+		d=x[i:i+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	i+=3
+print(s)
+
+
+-- EXECUTION TIME:
+0.159806
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1764/1583/main.py", line 12, in <module>
+    s+=d
+NameError: name 'd' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 23:26:22) 
+-- CODE:
+x=input("x= ")
+
+i=0
+s=""
+
+while(i<len(x)):
+	if(len(x)>3)and(len(x)%3==0):
+		d=x[i:i+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	i+=3
+print(s)
+
+
+-- EXECUTION TIME:
+0.202462
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1764/1583/main.py", line 12, in <module>
+    s+=d
+NameError: name 'd' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 23:26:23) 
+-- CODE:
+x=input("x= ")
+
+i=0
+s=""
+
+while(i<len(x)):
+	if(len(x)>3)and(len(x)%3==0):
+		d=x[i:i+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	i+=3
+print(s)
+
+
+-- EXECUTION TIME:
+0.238187
+-- ERROR:
+sh: 1: cannot open /home/codebench/codes/1764/1583/cbtemp.txt: No such file
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 23:26:23) 
+-- CODE:
+x=input("x= ")
+
+i=0
+s=""
+
+while(i<len(x)):
+	if(len(x)>3)and(len(x)%3==0):
+		d=x[i:i+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	i+=3
+print(s)
+
+
+-- EXECUTION TIME:
+0.215207
+-- ERROR:
+sh: 1: cannot open /home/codebench/codes/1764/1583/cbtemp.txt: No such file
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 23:26:24) 
+-- CODE:
+x=input("x= ")
+
+i=0
+s=""
+
+while(i<len(x)):
+	if(len(x)>3)and(len(x)%3==0):
+		d=x[i:i+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	i+=3
+print(s)
+
+
+-- EXECUTION TIME:
+0.145616
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1764/1583/main.py", line 12, in <module>
+    s+=d
+NameError: name 'd' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 23:26:25) 
+-- CODE:
+x=input("x= ")
+
+i=0
+s=""
+
+while(i<len(x)):
+	if(len(x)>3)and(len(x)%3==0):
+		d=x[i:i+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	i+=3
+print(s)
+
+
+-- EXECUTION TIME:
+0.143597
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1764/1583/main.py", line 12, in <module>
+    s+=d
+NameError: name 'd' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 23:26:26) 
+-- CODE:
+x=input("x= ")
+
+i=0
+s=""
+
+while(i<len(x)):
+	if(len(x)>3)and(len(x)%3==0):
+		d=x[i:i+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	i+=3
+print(s)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 12, in <module>
+    s+=d
+NameError: name 'd' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 23:26:28) 
+-- CODE:
+x=input("x= ")
+
+i=0
+s=""
+
+while(i<len(x)):
+	if(len(x)>3)and(len(x)%3==0):
+		d=x[i:i+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	i+=3
+print(s)
+
+
+-- EXECUTION TIME:
+0.156893
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1764/1583/main.py", line 12, in <module>
+    s+=d
+NameError: name 'd' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 23:27:01) 
+-- CODE:
+x=input("x= ")
+
+i=0
+s=""
+
+while(i<len(x)):
+	if(len(x)>=3)and(len(x)%3==0):
+		d=x[i:i+3]
+	if(len(x)-3>i):
+		s+=d+"."
+	else:
+		s+=d
+	i+=3
+print(s)
+
+
+-- EXECUTION TIME:
+0.214965
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789.000.987.654.321
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

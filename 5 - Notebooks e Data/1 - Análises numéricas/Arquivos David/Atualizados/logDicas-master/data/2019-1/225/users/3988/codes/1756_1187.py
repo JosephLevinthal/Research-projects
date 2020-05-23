@@ -1,0 +1,7 @@
+vet = input("Digite o texto; ")
+print(vet[0])
+print(vet[-1])
+print(len(vet))
+print((vet).lower())
+print((vet).upper())
+print((vet)*500)

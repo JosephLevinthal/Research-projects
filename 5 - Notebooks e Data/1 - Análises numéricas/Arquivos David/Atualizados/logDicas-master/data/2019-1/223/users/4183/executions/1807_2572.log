@@ -1,0 +1,114 @@
+== TEST (2019-06-12 20:00:40) 
+-- CODE:
+from math import *
+print(sqrt(10))
+print(10**(1/2))
+-- OUTPUT:
+3.1622776601683795
+3.1622776601683795
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 20:01:21) 
+-- CODE:
+from math import *
+print(sqrt(3,10))
+print(10**(1/3))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print(sqrt(3,10))
+TypeError: sqrt() takes exactly one argument (2 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 20:18:29) 
+-- CODE:
+from math import *
+print(sqrt(3,10))
+print(10**(1/3))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print(sqrt(3,10))
+TypeError: sqrt() takes exactly one argument (2 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 20:32:20) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Digite: ")))
+impar = 0
+for i in range(size(v)):
+	if (v[i] % 2 > 0):
+		impar = impar + 1
+vf = zeros(impar,dtype=int)
+impar = 0
+for i in range(size(v)):
+	if (v[i] % 2 > 0):
+		impar = impar + 1
+		vf[impar] = v[i]
+print(vf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 20:33:20) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Digite: ")))
+impar = 0
+for i in range(size(v)):
+	if (v[i] % 2 > 0):
+		impar = impar + 1
+vf = zeros(impar,dtype=int)
+impar = 0
+for i in range(size(v)):
+	if (v[i] % 2 > 0):
+		vf[impar] = v[i]
+		impar = impar + 1
+print(vf)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 20:33:51) 
+-- CODE:
+from numpy import *
+v = array(eval(input("Digite: ")))
+impar = 0
+for i in range(size(v)):
+	if (v[i] % 2 > 0):
+		impar = impar + 1
+vf = zeros(impar,dtype=int)
+impar = 0
+for i in range(size(v)):
+	if (v[i] % 2 > 0):
+		vf[impar] = v[i]
+		impar = impar + 1
+print(vf)
+-- EXECUTION TIME:
+1.04199
+-- TEST CASE 1:
+---- input:
+[75247561,76546316,75713658,97135671,70356874]
+---- correct output:
+[75247561 97135671]
+---- user output:
+[75247561 97135671]
+-- TEST CASE 2:
+---- input:
+[13017594,57417542,85024758,12475981,75942785,91875987,29584192,85794217]
+---- correct output:
+[12475981 75942785 91875987 85794217]
+---- user output:
+[12475981 75942785 91875987 85794217]
+-- TEST CASE 3:
+---- input:
+[31874903,74902746,23742046]
+---- correct output:
+[31874903]
+---- user output:
+[31874903]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

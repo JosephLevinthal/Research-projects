@@ -1,0 +1,7 @@
+input=rep*(1,2,3)
+rep1=float(input("valor 1:"))
+rep2=float(input("valor 2:"))
+rep3=float(input("valor 3:"))
+input= int("rep1*rep2*rep3:")
+input= int//(rep1*rep2+rep2*rep3+rep1*rep3)
+input=(total)

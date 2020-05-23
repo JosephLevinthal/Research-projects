@@ -1,0 +1,84 @@
+== TEST (2019-04-29 15:36:42) 
+-- CODE:
+x= float(input("VALOR:"))
+
+fx1= (-1/(x+2))
+fx2= (1/(x-2))
+
+if (x=>(-1000)) or (x<-2):
+	g= fx1
+	p= round(g,4)
+	print(p)
+elif (x>2) or (x<=1000):
+	g= fx2
+	p= round(g,4)
+	print(p)
+-- ERROR:
+File "XXXX", line 6
+    if (x=>(-1000)) or (x<-2):
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 15:37:12) 
+-- CODE:
+x= float(input("VALOR:"))
+
+fx1= (-1/(x+2))
+fx2= (1/(x-2))
+
+if (x=>(-1000)) or (x<(-2)):
+	g= fx1
+	p= round(g,4)
+	print(p)
+elif (x>2) or (x<=1000):
+	g= fx2
+	p= round(g,4)
+	print(p)
+-- ERROR:
+File "XXXX", line 6
+    if (x=>(-1000)) or (x<(-2)):
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 15:44:16) 
+-- CODE:
+x= float(input("VALOR:"))
+
+fx1= (-1/(x+2))
+fx2= (1/(x-2))
+
+if (x=>-1000) or (x<-2):
+	g= fx1
+	p= round(g,4)
+	print(p)
+elif (x>2) or (x<=1000):
+	g= fx2
+	p= round(g,4)
+	print(p)
+-- ERROR:
+File "XXXX", line 6
+    if (x=>-1000) or (x<-2):
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 15:50:26) 
+-- CODE:
+x= float(input("VALOR:"))
+
+fx1= (-1/(x+2))
+fx2= (1/(x-2))
+
+if (x=>-1000) and (x<-2):
+	g= fx1
+	p= round(g,4)
+	print(p)
+elif (x>2) and (x<=1000):
+	g= fx2
+	p= round(g,4)
+	print(p)
+-- ERROR:
+File "XXXX", line 6
+    if (x=>-1000) and (x<-2):
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

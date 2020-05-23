@@ -1,0 +1,10 @@
+var1 = int(input("numeros: "))
+var2 = int(input("numeros: "))
+var3 = int(input("numeros: "))
+x = min(var1,var2,var3)
+y=max(var1,var2,var3)
+z=(x+y)
+print(x)
+print(var1+var2+var3-z)
+print(y)
+				 

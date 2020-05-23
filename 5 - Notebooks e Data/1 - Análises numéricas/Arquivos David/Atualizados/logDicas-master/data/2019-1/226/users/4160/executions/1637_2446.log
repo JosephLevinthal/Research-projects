@@ -1,0 +1,222 @@
+== TEST (2019-04-11 11:29:31) 
+-- CODE:
+s = int(input("Digite a senha: "))
+a = s / 100000
+b = (s / 10000) - (a * 10) 
+c = s / 100
+d = s / 10
+print(a)
+-- OUTPUT:
+0.87612
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:30:06) 
+-- CODE:
+s = int(input("Digite a senha: "))
+a = s // 100000
+b = (s / 10000) - (a * 10) 
+c = s / 100
+d = s / 10
+print(a)
+-- OUTPUT:
+0.87612
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:30:34) 
+-- CODE:
+s = int(input("Digite a senha: "))
+a = s // 100000
+b = (s // 10000) - (a * 10) 
+c = s / 100
+d = s / 10
+print(b)
+-- OUTPUT:
+8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:31:19) 
+-- CODE:
+s = int(input("Digite a senha: "))
+a = s // 100000
+b = (s // 10000) - (a * 10) 
+c = (s // 1000) - (b * 100)
+d = s / 10
+print(c)
+-- OUTPUT:
+-713
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:34:13) 
+-- CODE:
+s = int(input("Digite a senha: "))
+a = s // 100000
+b = (s // 10000) %10
+c = (s // 1000) - ( )
+d = s / 10
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    c = (s // 1000) - ( )
+TypeError: unsupported operand type(s) for -: 'int' and 'tuple'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:34:24) 
+-- CODE:
+s = int(input("Digite a senha: "))
+a = s // 100000
+b = (s // 10000) %10
+c = (s // 1000)
+d = s / 10
+print(b)
+-- OUTPUT:
+8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:34:55) 
+-- CODE:
+s = int(input("Digite a senha: "))
+a = s // 100000
+b = (s // 10000) %10
+c = (s // 1000)%100
+d = s / 10
+print(c)
+-- OUTPUT:
+87
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:37:22) 
+-- CODE:
+s = int(input("Digite a senha: "))
+a = s // 100000
+b = (s // 10000) %10
+c = (s // 1000)%10
+d = s / 10
+print(c)
+-- OUTPUT:
+7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:37:28) 
+-- CODE:
+s = int(input("Digite a senha: "))
+a = s // 100000
+b = (s // 10000) %10
+c = (s // 1000)%10
+d = s / 10
+print(c)
+-- OUTPUT:
+7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:38:05) 
+-- CODE:
+s = int(input("Digite a senha: "))
+a = s // 100000
+b = (s // 10000) %10
+c = (s // 1000)%10
+d = (s // 100)%10
+
+print(d)
+-- OUTPUT:
+6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:38:58) 
+-- CODE:
+s = int(input("Digite a senha: "))
+a = s // 100000
+b = (s // 10000) %10
+c = (s // 1000)%10
+d = (s // 100)%10
+e = (s //10)%10
+print(e)
+-- OUTPUT:
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:40:10) 
+-- CODE:
+s = int(input("Digite a senha: "))
+a = s // 100000
+b = (s // 10000) %10
+c = (s // 1000)%10
+d = (s // 100)%10
+e = (s //10)%10
+f = s % 10
+print(f)
+-- OUTPUT:
+2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:48:57) 
+-- CODE:
+s = int(input("Digite a senha: "))
+a = s // 100000
+b = (s // 10000) %10
+c = (s // 1000)%10
+d = (s // 100)%10
+e = (s //10)%10
+f = s % 10
+x = b + d + f
+y = a + c + e
+h = x%y
+if (h == 0):
+	print("acesso liberado")
+else:
+	print("senha invalida")
+	
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-11 11:49:06) 
+-- CODE:
+s = int(input("Digite a senha: "))
+a = s // 100000
+b = (s // 10000) %10
+c = (s // 1000)%10
+d = (s // 100)%10
+e = (s //10)%10
+f = s % 10
+x = b + d + f
+y = a + c + e
+h = x%y
+if (h == 0):
+	print("acesso liberado")
+else:
+	print("senha invalida")
+	
+-- OUTPUT:
+acesso liberado
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-11 11:49:12) 
+-- CODE:
+s = int(input("Digite a senha: "))
+a = s // 100000
+b = (s // 10000) %10
+c = (s // 1000)%10
+d = (s // 100)%10
+e = (s //10)%10
+f = s % 10
+x = b + d + f
+y = a + c + e
+h = x%y
+if (h == 0):
+	print("acesso liberado")
+else:
+	print("senha invalida")
+	
+-- EXECUTION TIME:
+0.147455
+-- TEST CASE 1:
+---- input:
+087612
+---- correct output:
+acesso liberado
+---- user output:
+acesso liberado
+-- TEST CASE 2:
+---- input:
+760834
+---- correct output:
+senha invalida
+---- user output:
+senha invalida
+-- TEST CASE 3:
+---- input:
+122967
+---- correct output:
+acesso liberado
+---- user output:
+acesso liberado
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

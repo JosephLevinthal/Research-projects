@@ -1,0 +1,71 @@
+== TEST (2019-06-06 10:42:37) 
+-- CODE:
+print("barça")
+-- OUTPUT:
+barça
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 10:51:09) 
+-- CODE:
+from numpy import *
+v1 = array(eval(input("Total de gols: "))) 
+v2 = array(eval(input("Gols sofridos: ")))
+vn = zeros(3, dtype = int)
+
+for i in range(size(v1)):
+	if(v1[i] > v2[i]):
+		vn[0] = vn[0] + 1
+	elif(v1[i] == v2[i]):
+		vn[1] = vn[1] + 1
+	elif(v1[i] < v2[i]):
+		vn[2] = vn[2] + 1
+print(vn)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 10:51:31) 
+-- CODE:
+from numpy import *
+v1 = array(eval(input("Total de gols: "))) 
+v2 = array(eval(input("Gols sofridos: ")))
+vn = zeros(3, dtype = int)
+
+for i in range(size(v1)):
+	if(v1[i] > v2[i]):
+		vn[0] = vn[0] + 1
+	elif(v1[i] == v2[i]):
+		vn[1] = vn[1] + 1
+	elif(v1[i] < v2[i]):
+		vn[2] = vn[2] + 1
+print(vn)
+-- EXECUTION TIME:
+0.877594
+-- TEST CASE 1:
+---- input:
+[2,3,2,4,3,5,3,4,2,3,1,0]
+[3,3,1,0,2,3,3,0,1,2,1,1]
+---- correct output:
+[7 3 2]
+---- user output:
+[7 3 2]
+-- TEST CASE 2:
+---- input:
+[1,2,1,2,1,2,1,2,0]
+[3,5,3,3,3,3,3,3,3]
+---- correct output:
+[0 0 9]
+---- user output:
+[0 0 9]
+-- TEST CASE 3:
+---- input:
+[1,2,2,2,2,1,1,2,2,1,1,2,2]
+[0,1,1,1,0,0,0,0,0,0,1,1,1]
+---- correct output:
+[12 1 0]
+---- user output:
+[12  1  0]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

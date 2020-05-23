@@ -1,0 +1,156 @@
+== TEST (2019-05-09 11:34:30) 
+-- CODE:
+from math import* 
+k = int(input("Numero K:"))
+
+f = k+1
+
+while(f<=k):
+	h = k/factorial(f)
+	
+print(round(h, 8))	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    print(round(h, 8))	
+NameError: name 'h' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:36:01) 
+-- CODE:
+from math import* 
+k = int(input("Numero K:"))
+
+f = k+1
+
+while(f<=k):
+	f = k/factorial(f)
+	
+print(round(h, 8))	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    print(round(h, 8))	
+NameError: name 'h' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:36:11) 
+-- CODE:
+from math import* 
+k = int(input("Numero K:"))
+
+f = k+1
+
+while(f<=k):
+	f = k/factorial(f)
+	
+print(round(f, 8))	
+-- OUTPUT:
+8
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:36:37) 
+-- CODE:
+from math import* 
+k = int(input("Numero K:"))
+
+f = k/factorial(f)
+
+while(f<=k):
+	f = k/factorial(f)
+	
+print(round(f, 8))	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    f = k/factorial(f)
+NameError: name 'f' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:36:57) 
+-- CODE:
+from math import* 
+k = int(input("Numero K:"))
+
+f = k/factorial(k+1)
+
+while(f<=k):
+	f = k/factorial(f)
+	
+print(round(f, 8))	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    f = k/factorial(f)
+ValueError: factorial() only accepts integral values
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:37:11) 
+-- CODE:
+from math import* 
+k = int(input("Numero K:"))
+
+f = k/factorial(k+1)
+
+while(f<=k):
+	f = k/factorial(f)
+	
+print(round(f, 8))	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    f = k/factorial(f)
+ValueError: factorial() only accepts integral values
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-09 11:37:52) 
+-- CODE:
+from math import* 
+k = int(input("Numero K:"))
+
+f = k/k+1
+
+while(f<=k):
+	f = k/factorial(f)
+	
+print(round(f, 8))	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    f = k/factorial(f)
+ValueError: factorial() only accepts integral values
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-09 11:47:10) 
+-- CODE:
+from math import* 
+k = int(input("Numero K:"))
+
+soma = 0
+i = 0
+fim = k - 1
+
+while(i<=fim):
+	soma = soma + 1 / factorial(i)
+	i = i + 1
+	
+print(round(soma, 8))	
+-- EXECUTION TIME:
+0.145697
+-- TEST CASE 1:
+---- input:
+7
+---- correct output:
+2.71805556
+---- user output:
+2.71805556
+-- TEST CASE 2:
+---- input:
+15
+---- correct output:
+2.71828183
+---- user output:
+2.71828183
+-- TEST CASE 3:
+---- input:
+6
+---- correct output:
+2.71666667
+---- user output:
+2.71666667
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

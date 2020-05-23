@@ -1,0 +1,83 @@
+== SUBMITION (2019-04-09 21:51:12) 
+-- CODE:
+import math
+
+v0 = float(input("Velocidade inicial: "))
+a = math.radians(float(input("Angulo do vetor de lancamento com o solo: ")))
+D = float(input("Distancia horizontal entre o passaro e o porco: "))
+
+R = ((v0 ** 2) * math.sin(2 * a)) / 9.8
+
+if((math.abs(D - R) >= 0.0) and (math.abs(D - R) <= 0.1)):
+	print("sim")
+else:
+	print("nao")
+-- EXECUTION TIME:
+0.151193
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1635/1055/main.py", line 9, in <module>
+    if((math.abs(D - R) >= 0.0) and (math.abs(D - R) <= 0.1)):
+AttributeError: 'module' object has no attribute 'abs'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 21:51:23) 
+-- CODE:
+import math
+
+v0 = float(input("Velocidade inicial: "))
+a = math.radians(float(input("Angulo do vetor de lancamento com o solo: ")))
+D = float(input("Distancia horizontal entre o passaro e o porco: "))
+
+R = ((v0 ** 2) * math.sin(2 * a)) / 9.8
+
+if((math.abs(D - R) >= 0.0) and (math.abs(D - R) <= 0.1)):
+	print("sim")
+else:
+	print("nao")
+-- EXECUTION TIME:
+0.138656
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1635/1055/main.py", line 9, in <module>
+    if((math.abs(D - R) >= 0.0) and (math.abs(D - R) <= 0.1)):
+AttributeError: 'module' object has no attribute 'abs'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 21:52:53) 
+-- CODE:
+import math
+
+v0 = float(input("Velocidade inicial: "))
+a = math.radians(float(input("Angulo do vetor de lancamento com o solo: ")))
+D = float(input("Distancia horizontal entre o passaro e o porco: "))
+
+R = ((v0 ** 2) * math.sin(2 * a)) / 9.8
+
+if((abs(D - R) >= 0.0) and (abs(D - R) <= 0.1)):
+	print("sim")
+else:
+	print("nao")
+-- EXECUTION TIME:
+0.150761
+-- TEST CASE 1:
+---- input:
+10.5
+45.5
+11.3
+---- correct output:
+sim
+---- user output:
+sim
+-- TEST CASE 2:
+---- input:
+29.5
+17.1
+51.0
+---- correct output:
+nao
+---- user output:
+nao
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

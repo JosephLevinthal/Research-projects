@@ -1,0 +1,110 @@
+== SUBMITION (2019-06-13 08:55:58) 
+-- CODE:
+from numpy import*
+peso = array(eval(input("Pesos: "))
+altura = array(eval(input("Altura: "))
+imc_dos_alunos = zeros(size(peso), dtype=float)
+
+for i in range(size(peso)):
+	imc_dos_alunos[i] = peso[i]/(altura[i]**2)
+	imc_dos_alunos[i] = round(imc_dos_alunos[i],2)
+	
+print(imc_dos_alunos)
+maior = max(imc_dos_alunos)
+print("O MAIOR IMC DA TURMA EH:",maior)
+
+if maior < 17:
+	mensagem = "muito abaixo do peso"
+elif maior >17 and maior < 18.49 :
+	mensagem = "abaixo do peso"
+elif maior >= 18.5 and maior < 24.99:
+	mensagem = "peso normal"
+elif maior > 25 and maior < 29.99:
+	mensagem = "acima do peso"
+elif maior > 30 and maior < 34.99:
+	mensagem = "obesidade"
+elif maior >= 35 and maior < 39.99:
+	mensagem = "obesidade severa"
+elif maior > 40:
+	mensagem = "obesidade morbida"
+print(mensagem.upper())
+-- EXECUTION TIME:
+0.667454
+-- ERROR:
+  File "/home/codebench/codes/1807/2573/main.py", line 3
+    altura = array(eval(input())
+         ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-13 08:56:10) 
+-- CODE:
+from numpy import*
+peso = array(eval(input("Pesos: ")))
+altura = array(eval(input("Altura: ")))
+imc_dos_alunos = zeros(size(peso), dtype=float)
+
+for i in range(size(peso)):
+	imc_dos_alunos[i] = peso[i]/(altura[i]**2)
+	imc_dos_alunos[i] = round(imc_dos_alunos[i],2)
+	
+print(imc_dos_alunos)
+maior = max(imc_dos_alunos)
+print("O MAIOR IMC DA TURMA EH:",maior)
+
+if maior < 17:
+	mensagem = "muito abaixo do peso"
+elif maior >17 and maior < 18.49 :
+	mensagem = "abaixo do peso"
+elif maior >= 18.5 and maior < 24.99:
+	mensagem = "peso normal"
+elif maior > 25 and maior < 29.99:
+	mensagem = "acima do peso"
+elif maior > 30 and maior < 34.99:
+	mensagem = "obesidade"
+elif maior >= 35 and maior < 39.99:
+	mensagem = "obesidade severa"
+elif maior > 40:
+	mensagem = "obesidade morbida"
+print(mensagem.upper())
+-- EXECUTION TIME:
+1.08664
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[37.79 31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

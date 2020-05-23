@@ -1,0 +1,732 @@
+== TEST (2019-06-26 10:14:12) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+vet = array(eval(input(" ")))
+
+
+a = zeros((3,3), dtype=int)
+
+
+for i in shape(a)[0]:
+	for j in shape(a)[1]:
+		if i == 0:
+			if j == 0:
+				vet[0]= vet[0] - 2
+				a[0,0] = a[0,0] + 2
+			elif j== 1: 
+				vet[1] = vet[1] - 1
+				a[0,1] = a[0,1] + 1
+			elif j == 2:
+				vet[2] = vet[2] - 4
+				a[0,2] = a[0,2] + 4
+		elif i == 1:
+			if j == 0:
+				vet[0]= vet[0] - 1
+				a[1,0] = a[1,0] + 1
+			elif j== 1: 
+				vet[1] = vet[1] - 2
+				a[1,1] = a[1,1] + 2
+		elif i == 2 :
+			if j == 0:
+				vet[0]= vet[0] - 2
+				a[2,0] = a[2,0] + 2
+			elif j== 1: 
+				vet[1] = vet[1] - 3
+				a[2,1] = a[2,1] + 3
+			elif j == 2:
+				vet[2] = vet[2] - 2
+				a[2,2] = a[2,2] + 2
+
+c = sum((a[0,:])
+c1 = round(c, 1)
+d = sum((a[1,:]))
+d1 = round(d, 1)
+e = sum((a[2, :]))
+e1 = round(e, 1)
+print("estafilococo: ", c1)
+print("salmonela: ", d1)
+print("coli: ", e1)
+if (c < d) and (c < e):
+	print("estafilococo")
+elif (d<c)and(d < e):
+	print("salmonela")
+elif (e < c) and (e < d):
+	print("coli")
+
+print(c)
+-- ERROR:
+File "XXXX", line 41
+    c1 = round(c, 1)
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 10:15:25) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+vet = array(eval(input(" ")))
+
+
+a = zeros((3,3), dtype=int)
+
+
+for i in shape(a)[0]:
+	for j in shape(a)[1]:
+		if i == 0:
+			if j == 0:
+				vet[0]= vet[0] - 2
+				a[0,0] = a[0,0] + 2
+			elif j== 1: 
+				vet[1] = vet[1] - 1
+				a[0,1] = a[0,1] + 1
+			elif j == 2:
+				vet[2] = vet[2] - 4
+				a[0,2] = a[0,2] + 4
+		elif i == 1:
+			if j == 0:
+				vet[0]= vet[0] - 1
+				a[1,0] = a[1,0] + 1
+			elif j== 1: 
+				vet[1] = vet[1] - 2
+				a[1,1] = a[1,1] + 2
+		elif i == 2 :
+			if j == 0:
+				vet[0]= vet[0] - 2
+				a[2,0] = a[2,0] + 2
+			elif j== 1: 
+				vet[1] = vet[1] - 3
+				a[2,1] = a[2,1] + 3
+			elif j == 2:
+				vet[2] = vet[2] - 2
+				a[2,2] = a[2,2] + 2
+
+c = sum((a[0,:])
+
+d = sum((a[1,:]))
+
+e = sum((a[2, :]))
+
+print("estafilococo: ", c)
+print("salmonela: ", d)
+print("coli: ", e)
+if (c < d) and (c < e):
+	print("estafilococo")
+elif (d<c)and(d < e):
+	print("salmonela")
+elif (e < c) and (e < d):
+	print("coli")
+
+print(c)
+-- ERROR:
+File "XXXX", line 42
+    d = sum((a[1,:]))
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 10:19:38) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+vet = array(eval(input(" ")))
+
+
+a = zeros((3,3), dtype=int)
+b = zeros((1,3), dtype=int)
+
+
+for i in shape(a)[0]:
+	for j in shape(a)[1]:
+		if i == 0:
+			if j == 0:
+				vet[0]= vet[0] - 2
+				a[0,0] = a[0,0] + 2
+			elif j== 1: 
+				vet[1] = vet[1] - 1
+				a[0,1] = a[0,1] + 1
+			elif j == 2:
+				vet[2] = vet[2] - 4
+				a[0,2] = a[0,2] + 4
+		elif i == 1:
+			if j == 0:
+				vet[0]= vet[0] - 1
+				a[1,0] = a[1,0] + 1
+			elif j== 1: 
+				vet[1] = vet[1] - 2
+				a[1,1] = a[1,1] + 2
+		elif i == 2 :
+			if j == 0:
+				vet[0]= vet[0] - 2
+				a[2,0] = a[2,0] + 2
+			elif j== 1: 
+				vet[1] = vet[1] - 3
+				a[2,1] = a[2,1] + 3
+			elif j == 2:
+				vet[2] = vet[2] - 2
+				a[2,2] = a[2,2] + 2
+b[0] = sum((a[0,:])
+b[1]= sum((a[1,:]))
+b[2]= sum((a[2, :]))
+
+print("estafilococo: ", b[0])
+print("salmonela: ", b[1])
+print("coli: ", b[2])
+if (b[0] < b[1]) and (b[0] < b[1]):
+	print("estafilococo")
+elif (b[1] < b[0])and(b[1] < b[2]):
+	print("salmonela")
+elif (b[2] < b[0]) and (b[2] < b[1]):
+	print("coli")
+
+-- ERROR:
+File "XXXX", line 41
+    b[1]= sum((a[1,:]))
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 10:20:12) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+vet = array(eval(input(" ")))
+
+
+a = zeros((3,3), dtype=int)
+b = zeros((1,3), dtype=int)
+
+
+for i in shape(a)[0]:
+	for j in shape(a)[1]:
+		if i == 0:
+			if j == 0:
+				vet[0]= vet[0] - 2
+				a[0,0] = a[0,0] + 2
+			elif j== 1: 
+				vet[1] = vet[1] - 1
+				a[0,1] = a[0,1] + 1
+			elif j == 2:
+				vet[2] = vet[2] - 4
+				a[0,2] = a[0,2] + 4
+		elif i == 1:
+			if j == 0:
+				vet[0]= vet[0] - 1
+				a[1,0] = a[1,0] + 1
+			elif j== 1: 
+				vet[1] = vet[1] - 2
+				a[1,1] = a[1,1] + 2
+		elif i == 2 :
+			if j == 0:
+				vet[0]= vet[0] - 2
+				a[2,0] = a[2,0] + 2
+			elif j== 1: 
+				vet[1] = vet[1] - 3
+				a[2,1] = a[2,1] + 3
+			elif j == 2:
+				vet[2] = vet[2] - 2
+				a[2,2] = a[2,2] + 2
+	b[0] = sum((a[0,:])
+	b[1]= sum((a[1,:]))
+	b[2]= sum((a[2, :]))
+print("estafilococo: ", b[0])
+print("salmonela: ", b[1])
+print("coli: ", b[2])
+if (b[0] < b[1]) and (b[0] < b[1]):
+	print("estafilococo")
+elif (b[1] < b[0])and(b[1] < b[2]):
+	print("salmonela")
+elif (b[2] < b[0]) and (b[2] < b[1]):
+	print("coli")
+
+-- ERROR:
+File "XXXX", line 41
+    b[1]= sum((a[1,:]))
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 10:20:39) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+vet = array(eval(input(" ")))
+
+
+a = zeros((3,3), dtype=int)
+b = zeros((1,3), dtype=int)
+
+
+for i in shape(a)[0]:
+	for j in shape(a)[1]:
+		if i == 0:
+			if j == 0:
+				vet[0]= vet[0] - 2
+				a[0,0] = a[0,0] + 2
+			elif j== 1: 
+				vet[1] = vet[1] - 1
+				a[0,1] = a[0,1] + 1
+			elif j == 2:
+				vet[2] = vet[2] - 4
+				a[0,2] = a[0,2] + 4
+		elif i == 1:
+			if j == 0:
+				vet[0]= vet[0] - 1
+				a[1,0] = a[1,0] + 1
+			elif j== 1: 
+				vet[1] = vet[1] - 2
+				a[1,1] = a[1,1] + 2
+		elif i == 2 :
+			if j == 0:
+				vet[0]= vet[0] - 2
+				a[2,0] = a[2,0] + 2
+			elif j== 1: 
+				vet[1] = vet[1] - 3
+				a[2,1] = a[2,1] + 3
+			elif j == 2:
+				vet[2] = vet[2] - 2
+				a[2,2] = a[2,2] + 2
+b[0] = sum((a[0,:]))
+b[1]= sum((a[1,:]))
+b[2]= sum((a[2, :]))
+print("estafilococo: ", b[0])
+print("salmonela: ", b[1])
+print("coli: ", b[2])
+if (b[0] < b[1]) and (b[0] < b[1]):
+	print("estafilococo")
+elif (b[1] < b[0])and(b[1] < b[2]):
+	print("salmonela")
+elif (b[2] < b[0]) and (b[2] < b[1]):
+	print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 10:22:37) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+vet = array(eval(input(" ")))
+
+
+a = zeros((3,3), dtype=int)
+b = zeros((1,3), dtype=int)
+
+
+for i in range(a):
+	for j in range(a):
+		if i == 0:
+			if j == 0:
+				vet[0]= vet[0] - 2
+				a[0,0] = a[0,0] + 2
+			elif j== 1: 
+				vet[1] = vet[1] - 1
+				a[0,1] = a[0,1] + 1
+			elif j == 2:
+				vet[2] = vet[2] - 4
+				a[0,2] = a[0,2] + 4
+		elif i == 1:
+			if j == 0:
+				vet[0]= vet[0] - 1
+				a[1,0] = a[1,0] + 1
+			elif j== 1: 
+				vet[1] = vet[1] - 2
+				a[1,1] = a[1,1] + 2
+		elif i == 2 :
+			if j == 0:
+				vet[0]= vet[0] - 2
+				a[2,0] = a[2,0] + 2
+			elif j== 1: 
+				vet[1] = vet[1] - 3
+				a[2,1] = a[2,1] + 3
+			elif j == 2:
+				vet[2] = vet[2] - 2
+				a[2,2] = a[2,2] + 2
+b[0] = sum((a[0,:]))
+b[1]= sum((a[1,:]))
+b[2]= sum((a[2, :]))
+print("estafilococo: ", b[0])
+print("salmonela: ", b[1])
+print("coli: ", b[2])
+if (b[0] < b[1]) and (b[0] < b[1]):
+	print("estafilococo")
+elif (b[1] < b[0])and(b[1] < b[2]):
+	print("salmonela")
+elif (b[2] < b[0]) and (b[2] < b[1]):
+	print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 10:25:07) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+vet = array(eval(input(" ")))
+
+
+a = zeros((3,3), dtype=int)
+b = zeros((1,3), dtype=int)
+
+
+for i in size(a):
+	for j in size(a):
+		if i == 0:
+			if j == 0:
+				vet[0]= vet[0] - 2
+				a[0,0] = a[0,0] + 2
+			elif j== 1: 
+				vet[1] = vet[1] - 1
+				a[0,1] = a[0,1] + 1
+			elif j == 2:
+				vet[2] = vet[2] - 4
+				a[0,2] = a[0,2] + 4
+		elif i == 1:
+			if j == 0:
+				vet[0]= vet[0] - 1
+				a[1,0] = a[1,0] + 1
+			elif j== 1: 
+				vet[1] = vet[1] - 2
+				a[1,1] = a[1,1] + 2
+		elif i == 2 :
+			if j == 0:
+				vet[0]= vet[0] - 2
+				a[2,0] = a[2,0] + 2
+			elif j== 1: 
+				vet[1] = vet[1] - 3
+				a[2,1] = a[2,1] + 3
+			elif j == 2:
+				vet[2] = vet[2] - 2
+				a[2,2] = a[2,2] + 2
+b[0] = sum((a[0,:]))
+b[1]= sum((a[1,:]))
+b[2]= sum((a[2, :]))
+print("estafilococo: ", b[0])
+print("salmonela: ", b[1])
+print("coli: ", b[2])
+if (b[0] < b[1]) and (b[0] < b[1]):
+	print("estafilococo")
+elif (b[1] < b[0])and(b[1] < b[2]):
+	print("salmonela")
+elif (b[2] < b[0]) and (b[2] < b[1]):
+	print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 10:27:03) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+vet = array(eval(input(" ")))
+
+
+a = zeros((3,3), dtype=int)
+b = zeros((1,3), dtype=int)
+
+
+for i in shape(a)[0]:
+	for j in shape(a)[1]:
+		if i == 0:
+			if j == 0:
+				vet[0]= vet[0] - 2
+				a[0,0] = a[0,0] + 2
+			elif j== 1: 
+				vet[1] = vet[1] - 1
+				a[0,1] = a[0,1] + 1
+			elif j == 2:
+				vet[2] = vet[2] - 4
+				a[0,2] = a[0,2] + 4
+		elif i == 1:
+			if j == 0:
+				vet[0]= vet[0] - 1
+				a[1,0] = a[1,0] + 1
+			elif j== 1: 
+				vet[1] = vet[1] - 2
+				a[1,1] = a[1,1] + 2
+		elif i == 2 :
+			if j == 0:
+				vet[0]= vet[0] - 2
+				a[2,0] = a[2,0] + 2
+			elif j== 1: 
+				vet[1] = vet[1] - 3
+				a[2,1] = a[2,1] + 3
+			elif j == 2:
+				vet[2] = vet[2] - 2
+				a[2,2] = a[2,2] + 2
+b[0] = sum((a[0,:]))
+b[1]= sum((a[1,:]))
+b[2]= sum((a[2, :]))
+print("estafilococo: ", b[0])
+print("salmonela: ", b[1])
+print("coli: ", b[2])
+if (b[0] < b[1]) and (b[0] < b[1]):
+	print("estafilococo")
+elif (b[1] < b[0])and(b[1] < b[2]):
+	print("salmonela")
+elif (b[2] < b[0]) and (b[2] < b[1]):
+	print("coli")
+
+-- EXECUTION TIME:
+1.10396
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1846/2602/main.py", line 11, in <module>
+    for i in shape(a)[0]:
+TypeError: 'int' object is not iterable
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 10:27:07) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+vet = array(eval(input(" ")))
+
+
+a = zeros((3,3), dtype=int)
+b = zeros((1,3), dtype=int)
+
+
+for i in shape(a)[0]:
+	for j in shape(a)[1]:
+		if i == 0:
+			if j == 0:
+				vet[0]= vet[0] - 2
+				a[0,0] = a[0,0] + 2
+			elif j== 1: 
+				vet[1] = vet[1] - 1
+				a[0,1] = a[0,1] + 1
+			elif j == 2:
+				vet[2] = vet[2] - 4
+				a[0,2] = a[0,2] + 4
+		elif i == 1:
+			if j == 0:
+				vet[0]= vet[0] - 1
+				a[1,0] = a[1,0] + 1
+			elif j== 1: 
+				vet[1] = vet[1] - 2
+				a[1,1] = a[1,1] + 2
+		elif i == 2 :
+			if j == 0:
+				vet[0]= vet[0] - 2
+				a[2,0] = a[2,0] + 2
+			elif j== 1: 
+				vet[1] = vet[1] - 3
+				a[2,1] = a[2,1] + 3
+			elif j == 2:
+				vet[2] = vet[2] - 2
+				a[2,2] = a[2,2] + 2
+b[0] = sum((a[0,:]))
+b[1]= sum((a[1,:]))
+b[2]= sum((a[2, :]))
+print("estafilococo: ", b[0])
+print("salmonela: ", b[1])
+print("coli: ", b[2])
+if (b[0] < b[1]) and (b[0] < b[1]):
+	print("estafilococo")
+elif (b[1] < b[0])and(b[1] < b[2]):
+	print("salmonela")
+elif (b[2] < b[0]) and (b[2] < b[1]):
+	print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 10:30:48) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+vet = array(eval(input(" ")))
+
+
+a = zeros((3,3), dtype=int)
+b = zeros((1,3), dtype=int)
+
+
+for i in shape(a)[0]:
+	for j in shape(a)[1]:
+		if a[i] == 0:
+			if a[j] == 0:
+				vet[0]= vet[0] - 2
+				a[0,0] = a[0,0] + 2
+			elif a[j] == 1: 
+				vet[1] = vet[1] - 1
+				a[0,1] = a[0,1] + 1
+			elif a[j] == 2:
+				vet[2] = vet[2] - 4
+				a[0,2] = a[0,2] + 4
+		elif a[i] == 1:
+			if a[j] == 0:
+				vet[0]= vet[0] - 1
+				a[1,0] = a[1,0] + 1
+			elif a[j] == 1: 
+				vet[1] = vet[1] - 2
+				a[1,1] = a[1,1] + 2
+		elif a[i] == 2 :
+			if a[j] == 0:
+				vet[0]= vet[0] - 2
+				a[2,0] = a[2,0] + 2
+			elif a[j] == 1: 
+				vet[1] = vet[1] - 3
+				a[2,1] = a[2,1] + 3
+			elif a[j] == 2:
+				vet[2] = vet[2] - 2
+				a[2,2] = a[2,2] + 2
+b[0] = sum((a[0,:]))
+b[1]= sum((a[1,:]))
+b[2]= sum((a[2, :]))
+print("estafilococo: ", b[0])
+print("salmonela: ", b[1])
+print("coli: ", b[2])
+if (b[0] < b[1]) and (b[0] < b[1]):
+	print("estafilococo")
+elif (b[1] < b[0])and(b[1] < b[2]):
+	print("salmonela")
+elif (b[2] < b[0]) and (b[2] < b[1]):
+	print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 10:31:05) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+vet = array(eval(input("a: ")))
+
+
+a = zeros((3,3), dtype=int)
+b = zeros((1,3), dtype=int)
+
+
+for i in shape(a)[0]:
+	for j in shape(a)[1]:
+		if a[i] == 0:
+			if a[j] == 0:
+				vet[0]= vet[0] - 2
+				a[0,0] = a[0,0] + 2
+			elif a[j] == 1: 
+				vet[1] = vet[1] - 1
+				a[0,1] = a[0,1] + 1
+			elif a[j] == 2:
+				vet[2] = vet[2] - 4
+				a[0,2] = a[0,2] + 4
+		elif a[i] == 1:
+			if a[j] == 0:
+				vet[0]= vet[0] - 1
+				a[1,0] = a[1,0] + 1
+			elif a[j] == 1: 
+				vet[1] = vet[1] - 2
+				a[1,1] = a[1,1] + 2
+		elif a[i] == 2 :
+			if a[j] == 0:
+				vet[0]= vet[0] - 2
+				a[2,0] = a[2,0] + 2
+			elif a[j] == 1: 
+				vet[1] = vet[1] - 3
+				a[2,1] = a[2,1] + 3
+			elif a[j] == 2:
+				vet[2] = vet[2] - 2
+				a[2,2] = a[2,2] + 2
+b[0] = sum((a[0,:]))
+b[1]= sum((a[1,:]))
+b[2]= sum((a[2, :]))
+print("estafilococo: ", b[0])
+print("salmonela: ", b[1])
+print("coli: ", b[2])
+if (b[0] < b[1]) and (b[0] < b[1]):
+	print("estafilococo")
+elif (b[1] < b[0])and(b[1] < b[2]):
+	print("salmonela")
+elif (b[2] < b[0]) and (b[2] < b[1]):
+	print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 10:35:23) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+vet = array(eval(input("a: ")))
+
+
+a = zeros((3,3), dtype=int)
+b = zeros((1,3), dtype=int)
+
+
+for i in range(a):
+	for j in range(a):
+		if a[i] == 0:
+			if a[j] == 0:
+				vet[0]= vet[0] - 2
+				a[0,0] = a[0,0] + 2
+			elif a[j] == 1: 
+				vet[1] = vet[1] - 1
+				a[0,1] = a[0,1] + 1
+			elif a[j] == 2:
+				vet[2] = vet[2] - 4
+				a[0,2] = a[0,2] + 4
+		elif a[i] == 1:
+			if a[j] == 0:
+				vet[0]= vet[0] - 1
+				a[1,0] = a[1,0] + 1
+			elif a[j] == 1: 
+				vet[1] = vet[1] - 2
+				a[1,1] = a[1,1] + 2
+		elif a[i] == 2 :
+			if a[j] == 0:
+				vet[0]= vet[0] - 2
+				a[2,0] = a[2,0] + 2
+			elif a[j] == 1: 
+				vet[1] = vet[1] - 3
+				a[2,1] = a[2,1] + 3
+			elif a[j] == 2:
+				vet[2] = vet[2] - 2
+				a[2,2] = a[2,2] + 2
+b[0] = sum((a[0,:]))
+b[1]= sum((a[1,:]))
+b[2]= sum((a[2, :]))
+print("estafilococo: ", b[0])
+print("salmonela: ", b[1])
+print("coli: ", b[2])
+if (b[0] < b[1]) and (b[0] < b[1]):
+	print("estafilococo")
+elif (b[1] < b[0])and(b[1] < b[2]):
+	print("salmonela")
+elif (b[2] < b[0]) and (b[2] < b[1]):
+	print("coli")
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

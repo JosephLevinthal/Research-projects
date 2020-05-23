@@ -1,0 +1,1172 @@
+== TEST (2019-07-02 16:49:34) 
+-- CODE:
+from numpy import *
+# Leitura do tabuleiro
+tabuleiro = array(eval(input("Tabuleiro: ")))
+# Sequencia de movimentos do personagem
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+# Analise da jogada
+for x in mov:
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	# Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab +1 
+		# Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda +1 
+        # Apaga moeda do tabuleiro
+		tabuleiro[ytab,xtab] = 0
+    # Zumbi
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life -5 
+	elif (ytab>=0 and xtab>=0):
+		if(tabuleiro[ytab,xtab]==33):
+			ytab=ytab-1
+			xtab=xtab-1
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 16:58:55) 
+-- CODE:
+from numpy import *
+tabuleiro = array(eval(input("Tabuleiro: ")))
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+linhas= shape(tabuleiro)[0]
+colunas= shape(tabuleiro)[1]
+for x in mov:
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	# Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab +1 
+		# Trata evento
+    # Moeda
+	if(ytab>=0 and xtab>=0 or ytab<linhas and ytab<colunas and xtab<linhas and xtab<colunas):
+		if (tabuleiro[ytab,xtab] == 11):
+			moeda = moeda +1 
+        # Apaga moeda do tabuleiro
+			tabuleiro[ytab,xtab] = 0
+    # Zumbi
+		elif tabuleiro[ytab,xtab] == 22:
+			life = life -5 
+		if(tabuleiro[ytab,xtab]==33):
+			ytab=ytab-1
+			xtab=xtab-1
+	else:
+		xtab=xtab
+		ytab=ytab
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 17:00:22) 
+-- CODE:
+from numpy import *
+tabuleiro = array(eval(input("Tabuleiro: ")))
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+linhas= shape(tabuleiro)[0]
+colunas= shape(tabuleiro)[1]
+for x in mov:
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	# Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab +1 
+		# Trata evento
+    # Moeda
+	if(ytab>=0 and xtab>=0 or ytab<linhas and ytab<colunas and xtab<linhas and xtab<colunas):
+		if (tabuleiro[ytab,xtab] == 11):
+			print(tabuleiro[ytab,xtab])
+			moeda = moeda +1 
+        # Apaga moeda do tabuleiro
+			tabuleiro[ytab,xtab] = 0
+    # Zumbi
+		elif tabuleiro[ytab,xtab] == 22:
+			life = life -5 
+		if(tabuleiro[ytab,xtab]==33):
+			ytab=ytab-1
+			xtab=xtab-1
+	else:
+		xtab=xtab
+		ytab=ytab
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 17:01:12) 
+-- CODE:
+from numpy import *
+tabuleiro = array(eval(input("Tabuleiro: ")))
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+linhas= shape(tabuleiro)[0]
+colunas= shape(tabuleiro)[1]
+for x in mov:
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	# Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab +1 
+		# Trata evento
+    # Moeda
+	if(ytab>=0 and xtab>=0 or ytab<linhas and ytab<colunas and xtab<linhas and xtab<colunas):
+		print(tabuleiro[ytab,xtab])
+		if (tabuleiro[ytab,xtab] == 11):
+			moeda = moeda +1 
+        # Apaga moeda do tabuleiro
+			tabuleiro[ytab,xtab] = 0
+    # Zumbi
+		elif tabuleiro[ytab,xtab] == 22:
+			life = life -5 
+		if(tabuleiro[ytab,xtab]==33):
+			ytab=ytab-1
+			xtab=xtab-1
+	else:
+		xtab=xtab
+		ytab=ytab
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 17:02:38) 
+-- CODE:
+from numpy import *
+tabuleiro = array(eval(input("Tabuleiro: ")))
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+linhas= shape(tabuleiro)[0]
+colunas= shape(tabuleiro)[1]
+for x in mov:
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	# Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab +1 
+		# Trata evento
+    # Moeda
+	if(ytab>=0 and xtab>=0 or ytab<linhas and ytab<colunas and xtab<linhas and xtab<colunas):
+		print(tabuleiro[ytab,xtab])
+		print(ytab, xtab)
+		if (tabuleiro[ytab,xtab] == 11):
+			moeda = moeda +1 
+        # Apaga moeda do tabuleiro
+			tabuleiro[ytab,xtab] = 0
+    # Zumbi
+		elif tabuleiro[ytab,xtab] == 22:
+			life = life -5 
+		if(tabuleiro[ytab,xtab]==33):
+			ytab=ytab-1
+			xtab=xtab-1
+	else:
+		xtab=xtab
+		ytab=ytab
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 17:02:48) 
+-- CODE:
+from numpy import *
+tabuleiro = array(eval(input("Tabuleiro: ")))
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+linhas= shape(tabuleiro)[0]
+colunas= shape(tabuleiro)[1]
+for x in mov:
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	# Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab +1 
+		# Trata evento
+    # Moeda
+	if(ytab>=0 and xtab>=0 or ytab<linhas and ytab<colunas and xtab<linhas and xtab<colunas):
+		print(tabuleiro[ytab,xtab])
+		print(ytab, xtab)
+		if (tabuleiro[ytab,xtab] == 11):
+			moeda = moeda +1 
+        # Apaga moeda do tabuleiro
+			tabuleiro[ytab,xtab] = 0
+    # Zumbi
+		elif tabuleiro[ytab,xtab] == 22:
+			life = life -5 
+		if(tabuleiro[ytab,xtab]==33):
+			ytab=ytab-1
+			xtab=xtab-1
+	else:
+		xtab=xtab
+		ytab=ytab
+# Imprime saidas
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 17:07:37) 
+-- CODE:
+from numpy import *
+tabuleiro = array(eval(input("Tabuleiro: ")))
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+linhas= shape(tabuleiro)[0]
+colunas= shape(tabuleiro)[1]
+for x in mov:
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	# Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab +1 
+		# Trata evento
+    # Moeda
+	if(ytab>=0 and xtab>=0 or ytab<linhas and ytab<colunas and xtab<linhas and xtab<colunas):
+		if (tabuleiro[ytab,xtab] == 11):
+			moeda = moeda +1 
+			tabuleiro[ytab,xtab] = 0# Apaga moeda do tabuleiro
+		elif tabuleiro[ytab,xtab] == 22:# Zumbi
+			life = life -5 
+		if(tabuleiro[ytab,xtab]==33):
+			ytab=ytab-1
+			xtab=xtab-1
+	else:
+		xtab=xtab
+		ytab=ytab
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 17:19:01) 
+-- CODE:
+from numpy import *
+tabuleiro = array(eval(input("Tabuleiro: ")))
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+linhas= shape(tabuleiro)[0]
+colunas= shape(tabuleiro)[1]
+for x in mov:
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	# Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab +1
+	elif xtab< colunas-1:
+		xtab=xatb-1
+	elif ytab< linhas-1:
+		ytab=ytab-1
+	elif xtab> colunas-1:
+		xtab=xtab-1
+	elif ytab> linhas-1:
+		ytab=ytab-1
+		# Trata evento
+    # Moeda
+	if (tabuleiro[ytab,xtab] == 11):
+		moeda = moeda +1 
+		tabuleiro[ytab,xtab] = 0# Apaga moeda do tabuleiro
+	elif tabuleiro[ytab,xtab] == 22:# Zumbi
+		life = life -5 
+	if(tabuleiro[ytab,xtab]==33):
+		ytab=ytab
+		xtab=xtab
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 17:20:44) 
+-- CODE:
+from numpy import *
+tabuleiro = array(eval(input("Tabuleiro: ")))
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+linhas= shape(tabuleiro)[0]
+colunas= shape(tabuleiro)[1]
+for x in mov:
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	# Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab +1
+	elif xtab< colunas-1:
+		xtab=xatb-1
+	elif ytab< linhas-1:
+		ytab=ytab-1
+	elif xtab> colunas-1:
+		xtab=xtab-1
+	elif ytab> linhas-1:
+		ytab=ytab-1
+		# Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1 
+		tabuleiro[ytab,xtab] = 0# Apaga moeda do tabuleiro
+	elif tabuleiro[ytab,xtab] == 22:# Zumbi
+		life = life -5 
+	if(tabuleiro[ytab,xtab]==33):
+		ytab=ytab
+		xtab=xtab
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 17:41:06) 
+-- CODE:
+from numpy import *
+tabuleiro = array(eval(input("Tabuleiro: ")))
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+linhas= shape(tabuleiro)[0]
+colunas= shape(tabuleiro)[1]
+for x in mov:
+	tx=xtab
+	ty=ytab
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	# Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab +1
+	if xtab>colunas-1:
+		xtab=xatb-1
+	if ytab>linhas-1:
+		ytab=ytab-1
+	if xtab<0:
+		xtab=xtab+1
+	if ytab<0:
+		ytab=ytab+1
+		# Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1 
+		tabuleiro[ytab,xtab] = 0# Apaga moeda do tabuleiro
+	elif tabuleiro[ytab,xtab] == 22:# Zumbi
+		life = life -5 
+	if(tabuleiro[ytab,xtab]==33):
+		ytab=ytab
+		xtab=xtab
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 17:41:38) 
+-- CODE:
+from numpy import *
+tabuleiro = array(eval(input("Tabuleiro: ")))
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+linhas= shape(tabuleiro)[0]
+colunas= shape(tabuleiro)[1]
+for x in mov:
+	tx=xtab
+	ty=ytab
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	# Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab +1
+	if xtab>colunas-1:
+		xtab=xatb-1
+	if ytab>linhas-1:
+		ytab=ytab-1
+	if xtab<0:
+		xtab=xtab+1
+	if ytab<0:
+		ytab=ytab+1
+		# Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1 
+		tabuleiro[ytab,xtab] = 0# Apaga moeda do tabuleiro
+	elif tabuleiro[ytab,xtab] == 22:# Zumbi
+		life = life -5 
+	if(tabuleiro[ytab,xtab]==33):
+		ytab=ytab
+		xtab=xtab
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.09874
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1850/1280/main.py", line 28, in <module>
+    xtab=xatb-1
+NameError: name 'xatb' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 17:42:59) 
+-- CODE:
+from numpy import *
+tabuleiro = array(eval(input("Tabuleiro: ")))
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+linhas= shape(tabuleiro)[0]
+colunas= shape(tabuleiro)[1]
+for x in mov:
+	tx=xtab
+	ty=ytab
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	# Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab +1
+	if xtab>colunas-1:
+		xtab=xatb-1
+	if ytab>linhas-1:
+		ytab=ytab-1
+	if xtab<0:
+		xtab=xtab+1
+	if ytab<0:
+		ytab=ytab+1
+		# Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1 
+		tabuleiro[ytab,xtab] = 0# Apaga moeda do tabuleiro
+	elif tabuleiro[ytab,xtab] == 22:# Zumbi
+		life = life -5 
+	if(tabuleiro[ytab,xtab]==33):
+		ytab=ty
+		xtab=tx
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 17:43:04) 
+-- CODE:
+from numpy import *
+tabuleiro = array(eval(input("Tabuleiro: ")))
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+linhas= shape(tabuleiro)[0]
+colunas= shape(tabuleiro)[1]
+for x in mov:
+	tx=xtab
+	ty=ytab
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	# Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab +1
+	if xtab>colunas-1:
+		xtab=xatb-1
+	if ytab>linhas-1:
+		ytab=ytab-1
+	if xtab<0:
+		xtab=xtab+1
+	if ytab<0:
+		ytab=ytab+1
+		# Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1 
+		tabuleiro[ytab,xtab] = 0# Apaga moeda do tabuleiro
+	elif tabuleiro[ytab,xtab] == 22:# Zumbi
+		life = life -5 
+	if(tabuleiro[ytab,xtab]==33):
+		ytab=ty
+		xtab=tx
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+0.846838
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1850/1280/main.py", line 28, in <module>
+    xtab=xatb-1
+NameError: name 'xatb' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 17:47:15) 
+-- CODE:
+from numpy import *
+tabuleiro = array(eval(input("Tabuleiro: ")))
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+linhas= shape(tabuleiro)[0]
+colunas= shape(tabuleiro)[1]
+for x in mov:
+	tx=xtab
+	ty=ytab
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	# Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab +1
+	if (xtab>colunas-1):
+		xtab=xatb-1
+	if (ytab>linhas-1):
+		ytab=ytab-1
+	if (xtab<0):
+		xtab=xtab+1
+	if (ytab<0):
+		ytab=ytab+1
+		# Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1 
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life -5 
+	if tabuleiro[ytab,xtab] == 33:
+		xtab=tx
+		ytab=ty
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.04508
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1850/1280/main.py", line 28, in <module>
+    xtab=xatb-1
+NameError: name 'xatb' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 17:47:21) 
+-- CODE:
+from numpy import *
+tabuleiro = array(eval(input("Tabuleiro: ")))
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+linhas= shape(tabuleiro)[0]
+colunas= shape(tabuleiro)[1]
+for x in mov:
+	tx=xtab
+	ty=ytab
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	# Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab +1
+	if (xtab>colunas-1):
+		xtab=xatb-1
+	if (ytab>linhas-1):
+		ytab=ytab-1
+	if (xtab<0):
+		xtab=xtab+1
+	if (ytab<0):
+		ytab=ytab+1
+		# Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1 
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life -5 
+	if tabuleiro[ytab,xtab] == 33:
+		xtab=tx
+		ytab=ty
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 17:48:14) 
+-- CODE:
+from numpy import *
+tabuleiro = array(eval(input("Tabuleiro: ")))
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+linhas= shape(tabuleiro)[0]
+colunas= shape(tabuleiro)[1]
+for x in mov:
+	tx=xtab
+	ty=ytab
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	# Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab +1
+	if (xtab>colunas-1):
+		xtab=xatb-1
+	if (ytab>linhas-1):
+		ytab=ytab-1
+	if (xtab<0):
+		xtab=xtab+1
+	if (ytab<0):
+		ytab=ytab+1
+		# Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1 
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life -5 
+	if tabuleiro[ytab,xtab] == 33:
+		xtab=tx
+		ytab=ty
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life+5)
+-- EXECUTION TIME:
+1.20718
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1850/1280/main.py", line 28, in <module>
+    xtab=xatb-1
+NameError: name 'xatb' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 17:50:00) 
+-- CODE:
+from numpy import *
+tabuleiro = array(eval(input("Tabuleiro: ")))
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+linhas= shape(tabuleiro)[0]
+colunas= shape(tabuleiro)[1]
+for x in mov:
+	tx=xtab
+	ty=ytab
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	# Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab +1
+	if (xtab>colunas-1):
+		xtab=xatb-1
+	if (ytab>linhas-1):
+		ytab=ytab-1
+	if (xtab<0):
+		xtab=xtab+1
+	if (ytab<0):
+		ytab=ytab+1
+		# Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1 
+		tabuleiro[ytab,xtab] = 0
+	if tabuleiro[ytab,xtab] == 22:
+		life = life -5 
+	if tabuleiro[ytab,xtab] == 33:
+		xtab=tx
+		ytab=ty
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 17:50:06) 
+-- CODE:
+from numpy import *
+tabuleiro = array(eval(input("Tabuleiro: ")))
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+linhas= shape(tabuleiro)[0]
+colunas= shape(tabuleiro)[1]
+for x in mov:
+	tx=xtab
+	ty=ytab
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	# Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab +1
+	if (xtab>colunas-1):
+		xtab=xatb-1
+	if (ytab>linhas-1):
+		ytab=ytab-1
+	if (xtab<0):
+		xtab=xtab+1
+	if (ytab<0):
+		ytab=ytab+1
+		# Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1 
+		tabuleiro[ytab,xtab] = 0
+	if tabuleiro[ytab,xtab] == 22:
+		life = life -5 
+	if tabuleiro[ytab,xtab] == 33:
+		xtab=tx
+		ytab=ty
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.3022
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1850/1280/main.py", line 28, in <module>
+    xtab=xatb-1
+NameError: name 'xatb' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 17:54:36) 
+-- CODE:
+from numpy import *
+tabuleiro = array(eval(input("Tabuleiro: ")))
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+linhas= shape(tabuleiro)[0]
+colunas= shape(tabuleiro)[1]
+for x in mov:
+	tx=xtab
+	ty=ytab
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	# Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab +1
+	if (xtab>colunas-1):
+		xtab=xatb-1
+	if (ytab>linhas-1):
+		ytab=ytab-1
+	if (xtab<0):
+		xtab=xtab+1
+	if (ytab<0):
+		ytab=ytab+1
+		# Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1 
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5 
+	elif tabuleiro[ytab,xtab] == 33:
+		xtab=tx
+		ytab=ty
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 17:54:41) 
+-- CODE:
+from numpy import *
+tabuleiro = array(eval(input("Tabuleiro: ")))
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+linhas= shape(tabuleiro)[0]
+colunas= shape(tabuleiro)[1]
+for x in mov:
+	tx=xtab
+	ty=ytab
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	# Move personagem para BAIXO
+	elif x == 'S':
+		ytab = ytab +1
+	if (xtab>colunas-1):
+		xtab=xatb-1
+	if (ytab>linhas-1):
+		ytab=ytab-1
+	if (xtab<0):
+		xtab=xtab+1
+	if (ytab<0):
+		ytab=ytab+1
+		# Trata evento
+    # Moeda
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1 
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5 
+	elif tabuleiro[ytab,xtab] == 33:
+		xtab=tx
+		ytab=ty
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+0.904082
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1850/1280/main.py", line 28, in <module>
+    xtab=xatb-1
+NameError: name 'xatb' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 17:57:45) 
+-- CODE:
+from numpy import *
+tabuleiro = array(eval(input("Tabuleiro: ")))
+mov = input("Movimentos: ")
+# Posicao inicial do personagem
+xtab = 0
+ytab = 0
+# Contadores de atributos do personagem
+moeda = 0
+life = 100
+linhas= shape(tabuleiro)[0]
+colunas= shape(tabuleiro)[1]
+for x in mov:
+	tx=xtab
+	ty=ytab
+   #Move personagem para ESQUERDA
+	if x == 'A':
+		xtab = xtab - 1
+    # Move personagem para DIREITA
+	elif x == 'D':
+		xtab = xtab + 1 
+    # Move personagem para CIMA
+	elif x == 'W':
+		ytab= ytab -1   
+	elif x == 'S':
+		ytab = ytab +1
+	if (xtab>colunas-1):
+		xtab=xatb-1
+	if (ytab>linhas-1):
+		ytab=ytab-1
+	if (xtab<0):
+		xtab=xtab+1
+	if (ytab<0):
+		ytab=ytab+1
+		
+		
+	if tabuleiro[ytab,xtab] == 11:
+		moeda = moeda + 1 
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5 
+	elif tabuleiro[ytab,xtab] == 33:
+		xtab=tx
+		ytab=ty
+print("posicao x: ", xtab)
+print("posicao y: ", ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.31692
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1850/1280/main.py", line 27, in <module>
+    xtab=xatb-1
+NameError: name 'xatb' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

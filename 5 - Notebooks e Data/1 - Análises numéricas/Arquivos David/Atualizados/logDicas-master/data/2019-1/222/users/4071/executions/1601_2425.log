@@ -1,0 +1,204 @@
+== TEST (2019-04-01 16:49:58) 
+-- CODE:
+media=int(input("media em k/h:"))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    media=int(input())
+ValueError: invalid literal for int() with base 10: '28.572'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:50:34) 
+-- CODE:
+media=int(input("media em k/h:"))
+print(round(media, 3))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    media=int(input())
+ValueError: invalid literal for int() with base 10: '28.572'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:52:25) 
+-- CODE:
+a=int(input("media em k/h:"))
+b=int(input("media em k?h:"))
+media= a/b
+print(round(media, 3))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a=int(input())
+ValueError: invalid literal for int() with base 10: '28.572'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 16:52:45) 
+-- CODE:
+a=int(input("media em k/h:"))
+b=int(input("media em k?h:"))
+media= a/b
+print(round(media, 3))
+-- EXECUTION TIME:
+0.239301
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1601/2425/main.py", line 1, in <module>
+    a=int(input())
+ValueError: invalid literal for int() with base 10: '28.572'
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:53:22) 
+-- CODE:
+a=float(input("media em k/h:"))
+b=float(input("media em k?h:"))
+media= a/b
+print(round(media, 3))
+-- OUTPUT:
+14.286
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 16:53:25) 
+-- CODE:
+a=float(input("media em k/h:"))
+b=float(input("media em k?h:"))
+media= a/b
+print(round(media, 3))
+-- EXECUTION TIME:
+0.10462
+-- TEST CASE 1:
+---- input:
+28.572
+2
+---- correct output:
+14.286 km/l
+---- user output:
+14.286
+-- TEST CASE 2:
+---- input:
+2254
+124.4
+---- correct output:
+18.119 km/l
+---- user output:
+18.119
+-- TEST CASE 3:
+---- input:
+4554
+464.6
+---- correct output:
+9.802 km/l
+---- user output:
+9.802
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 16:54:30) 
+-- CODE:
+a=float(input("media em k/h:"))
+b=float(input("media em k?h:"))
+media= round(a/b, 3)
+print(media, a/b)
+-- OUTPUT:
+14.286 14.286
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 16:54:39) 
+-- CODE:
+a=float(input("media em k/h:"))
+b=float(input("media em k?h:"))
+media= round(a/b, 3)
+print(media, a/b)
+-- EXECUTION TIME:
+0.140501
+-- TEST CASE 1:
+---- input:
+28.572
+2
+---- correct output:
+14.286 km/l
+---- user output:
+14.286 14.286
+-- TEST CASE 2:
+---- input:
+2254
+124.4
+---- correct output:
+18.119 km/l
+---- user output:
+18.119 18.118971061093248
+-- TEST CASE 3:
+---- input:
+4554
+464.6
+---- correct output:
+9.802 km/l
+---- user output:
+9.802 9.801980198019802
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 16:55:04) 
+-- CODE:
+a=float(input("media em k/h:"))
+b=float(input("media em k?h:"))
+media= round(a/b, 3)
+print(media, "a/b")
+-- EXECUTION TIME:
+0.133992
+-- TEST CASE 1:
+---- input:
+28.572
+2
+---- correct output:
+14.286 km/l
+---- user output:
+14.286 a/b
+-- TEST CASE 2:
+---- input:
+2254
+124.4
+---- correct output:
+18.119 km/l
+---- user output:
+18.119 a/b
+-- TEST CASE 3:
+---- input:
+4554
+464.6
+---- correct output:
+9.802 km/l
+---- user output:
+9.802 a/b
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 16:55:48) 
+-- CODE:
+km=float(input("media em k/h:"))
+l=float(input("media em k?h:"))
+media= round(km/l, 3)
+print(media, "km/l")
+-- EXECUTION TIME:
+0.189465
+-- TEST CASE 1:
+---- input:
+28.572
+2
+---- correct output:
+14.286 km/l
+---- user output:
+14.286 km/l
+-- TEST CASE 2:
+---- input:
+2254
+124.4
+---- correct output:
+18.119 km/l
+---- user output:
+18.119 km/l
+-- TEST CASE 3:
+---- input:
+4554
+464.6
+---- correct output:
+9.802 km/l
+---- user output:
+9.802 km/l
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

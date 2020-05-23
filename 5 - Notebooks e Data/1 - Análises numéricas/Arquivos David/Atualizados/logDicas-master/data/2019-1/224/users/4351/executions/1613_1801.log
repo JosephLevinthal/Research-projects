@@ -1,0 +1,293 @@
+== TEST (2019-04-04 18:50:14) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("numero de repetiçoes"))
+feitiço="abra", objeto*rep
+print(feitiço)
+-- OUTPUT:
+('abra', 'livrolivrolivrolivrolivrolivrolivrolivro')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:50:55) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=input("numero de repetiçoes")
+feitiço="abra", objeto*rep
+print(feitiço)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    feitiço="abra", objeto*rep
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:52:33) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=input("numero de repetiçoes")
+feitiço="Abra"+(objeto*rep)
+print(feitiço)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    feitiço="Abra"+(objeto*rep)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:53:08) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=input("repetir")
+feitiço="Abra"+(objeto*rep)
+print(feitiço)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    feitiço="Abra"+(objeto*rep)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:53:27) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço="Abra"+(objeto*rep)
+print(feitiço)
+-- OUTPUT:
+Abralivrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:53:57) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço=("Abra"+objeto)*rep
+print(feitiço)
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:54:14) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço=("Abra" + objeto)*rep
+print(feitiço)
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:54:27) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço=("Abra", + ,objeto)*rep
+print(feitiço)
+-- ERROR:
+File "XXXX", line 3
+    feitiço=("Abra", + ,objeto)*rep
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:54:35) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço=("Abra", + objeto)*rep
+print(feitiço)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    feitiço=("Abra", + objeto)*rep
+TypeError: bad operand type for unary +: 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:54:58) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço=("Abra"/+objeto)*rep
+print(feitiço)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    feitiço=("Abra"/+objeto)*rep
+TypeError: bad operand type for unary +: 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:55:51) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço="("Abra"+objeto)"*rep
+print(feitiço)
+-- ERROR:
+File "XXXX", line 3
+    feitiço="("Abra"+objeto)"*rep
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:56:05) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço=("Abra"+objeto)*rep""
+print(feitiço)
+-- ERROR:
+File "XXXX", line 3
+    feitiço=("Abra"+objeto)*rep""
+                                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:56:15) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço=("Abra"+objeto)*rep
+print(feitiço)
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:56:37) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço=("Abra",+objeto)*rep,
+print(feitiço)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    feitiço=("Abra",+objeto)*rep,
+TypeError: bad operand type for unary +: 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:58:01) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço=(objeto*rep)
+print("abra",feitiço)
+-- OUTPUT:
+abra livrolivrolivrolivrolivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:59:08) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço=("Abra",+porta)*rep
+print(feitiço)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    feitiço=("Abra",+porta)*rep
+NameError: name 'porta' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 18:59:31) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço=("Abra",+objeto)*rep
+print(feitiço)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    feitiço=("Abra",+objeto)*rep
+TypeError: bad operand type for unary +: 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:00:07) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço=("Abra",+:objeto)*rep
+print(feitiço)
+-- ERROR:
+File "XXXX", line 3
+    feitiço=("Abra",+:objeto)*rep
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:00:17) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço=("Abra"+:objeto)*rep
+print(feitiço)
+-- ERROR:
+File "XXXX", line 3
+    feitiço=("Abra"+:objeto)*rep
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:01:25) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço=(Abra + objeto)*rep
+print(feitiço)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    feitiço=(Abra + objeto)*rep
+NameError: name 'Abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-04 19:01:51) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço=("Abra" + objeto)*rep
+print(feitiço)
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:32:26) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço=("Abra" + objeto)*rep
+print(feitiço)
+-- OUTPUT:
+AbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivroAbralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:34:25) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço=("Abra " + objeto)*rep
+print(feitiço)
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 18:34:37) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço=(" Abra " + objeto)*rep
+print(feitiço)
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 18:34:44) 
+-- CODE:
+objeto=input("nome do objeto")
+rep=int(input("repetir"))
+feitiço=(" Abra " + objeto)*rep
+print(feitiço)
+-- EXECUTION TIME:
+0.203175
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

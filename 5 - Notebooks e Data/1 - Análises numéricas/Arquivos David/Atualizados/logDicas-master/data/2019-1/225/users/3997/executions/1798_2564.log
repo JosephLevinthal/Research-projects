@@ -1,0 +1,46 @@
+== SUBMITION (2019-06-12 09:18:15) 
+-- CODE:
+from numpy import*
+
+Time1 = array(eval(input()))
+Time2 = array(eval(input()))
+i = 0
+placar = zeros((3,), dtype=int)
+
+while(i < size(Time1)):
+	if(Time1[i] > Time2[i] ): placar[0]+=1
+	elif(Time1[i] == Time2[i]): placar[1]+=1
+	else: placar[2]+=1
+	i+=1
+	
+print(placar)
+
+-- EXECUTION TIME:
+1.15021
+-- TEST CASE 1:
+---- input:
+[2,3,2,4,3,5,3,4,2,3,1,0]
+[3,3,1,0,2,3,3,0,1,2,1,1]
+---- correct output:
+[7 3 2]
+---- user output:
+[7 3 2]
+-- TEST CASE 2:
+---- input:
+[1,2,1,2,1,2,1,2,0]
+[3,5,3,3,3,3,3,3,3]
+---- correct output:
+[0 0 9]
+---- user output:
+[0 0 9]
+-- TEST CASE 3:
+---- input:
+[1,2,2,2,2,1,1,2,2,1,1,2,2]
+[0,1,1,1,0,0,0,0,0,0,1,1,1]
+---- correct output:
+[12 1 0]
+---- user output:
+[12  1  0]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

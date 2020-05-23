@@ -1,0 +1,789 @@
+== TEST (2019-06-14 13:15:27) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+h=0
+while(x>h):
+	k=input("Digite a string: ").upper()
+	for i in k:
+		t=k.count("A")
+		print(t,i)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    k=input().upper()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:16:04) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+h=0
+while(x>h):
+	k=input("Digite a string: ").upper()
+	for i in k:
+		t=k.count("A")
+		t=t+i
+	print(i)
+	h=h+1
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    t=t+i
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:16:19) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+h=0
+while(x>h):
+	k=input("Digite a string: ").upper()
+	for i in k:
+		t=k.count("A")
+		m=t+i
+	print(m)
+	h=h+1
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    m=t+i
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:16:31) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+h=0
+m=""
+while(x>h):
+	k=input("Digite a string: ").upper()
+	for i in k:
+		t=k.count("A")
+		m=t+i
+	print(m)
+	h=h+1
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    m=t+i
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:17:18) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+h=0
+m=""
+while(x>h):
+	k=input("Digite a string: ").upper()
+	for i in k:
+		t=k.count("A")
+		t=str(t)
+		m=t+i
+	print(m)
+	h=h+1
+		
+-- OUTPUT:
+1D
+2B
+1A
+3E
+01
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:21:02) 
+-- CODE:
+def encode(input_string):
+    count = 1
+    prev = ''
+    lst = []
+    for character in input_string:
+        if character != prev:
+            if prev:
+                entry = (prev,count)
+                lst.append(entry)
+                #print lst
+            count = 1
+            prev = character
+        else:
+            count += 1
+    else:
+        try:
+            entry = (character,count)
+            lst.append(entry)
+            return (lst, 0)
+        except Exception as e:
+            print("Exception encountered {e}".format(e=e)) 
+            return (e, 1)
+ 
+def decode(lst):
+    q = ""
+    for character, count in lst:
+        q += character * count
+    return q
+ 
+#Method call
+value = encode("aaaaahhhhhhmmmmmmmuiiiiiiiaaaaaa")
+if value[1] == 0:
+    print("Encoded value is {}".format(value[0]))
+    decode(value[0])
+		
+-- OUTPUT:
+Encoded value is [('a', 5), ('h', 6), ('m', 7), ('u', 1), ('i', 7), ('a', 6)]
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:26:14) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+y=input("Digite a string: ")
+for i in y:
+	print(i)
+-- OUTPUT:
+A
+B
+1
+C
+D
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:26:23) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+y=input("Digite a string: ")
+for i in y:
+	print(i)
+-- OUTPUT:
+A
+B
+1
+C
+D
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:32:52) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+y=input("Digite a string: ").upper()
+h=0
+o=1
+while(len(y)>h):
+	if(x[h]==x[h+1]):
+		o=o+1
+		h=h+1
+		
+print(o)	
+a=y.count("A")
+b=y.count("B")
+c=y.count("C")
+d=y.count("D")
+e=y.count("E")
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    if(x[h]==x[h+1]):
+TypeError: 'int' object is not subscriptable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:33:12) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+y=input("Digite a string: ").upper()
+h=0
+o=1
+while(len(y)>h):
+	if(y[h]==y[h+1]):
+		o=o+1
+		h=h+1
+		
+print(o)	
+a=y.count("A")
+b=y.count("B")
+c=y.count("C")
+d=y.count("D")
+e=y.count("E")
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    if(x[h]==x[h+1]):
+TypeError: 'int' object is not subscriptable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:33:35) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+y=input("Digite a string: ").upper()
+h=0
+o=1
+while(len(y)>h):
+	if(y[h]==y[h+1]):
+		o=o+1
+		h=h+1
+		
+print(o)	
+a=y.count("A")
+b=y.count("B")
+c=y.count("C")
+d=y.count("D")
+e=y.count("E")
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    if(x[h]==x[h+1]):
+TypeError: 'int' object is not subscriptable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:33:59) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+y=input("Digite a string: ").upper()
+h=0
+o=1
+while(len(y)>h):
+	if(y[h]==(y[h+1])):
+		o=o+1
+		h=h+1
+		
+print(o)	
+a=y.count("A")
+b=y.count("B")
+c=y.count("C")
+d=y.count("D")
+e=y.count("E")
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    if(x[h]==x[h+1]):
+TypeError: 'int' object is not subscriptable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:34:21) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+y=input("Digite a string: ").upper()
+h=0
+print(y[1])
+o=1
+while(len(y)>h):
+	if(y[h]==(y[h+1])):
+		o=o+1
+		h=h+1
+		
+print(o)	
+a=y.count("A")
+b=y.count("B")
+c=y.count("C")
+d=y.count("D")
+e=y.count("E")
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    if(x[h]==x[h+1]):
+TypeError: 'int' object is not subscriptable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:34:38) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+y=input("Digite a string: ").upper()
+h=0
+o=1
+while(len(y)>h):
+	if(y[h]==(y[h+1])):
+		o=o+1
+		h=h+1
+	else:
+		h=h+1
+		
+print(o)	
+a=y.count("A")
+b=y.count("B")
+c=y.count("C")
+d=y.count("D")
+e=y.count("E")
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    if(y[h]==(y[h+1])):
+IndexError: string index out of range
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:35:26) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+y=input("Digite a string: ").upper()
+h=0
+o=1
+while(len(y)>h):
+	if(y[h]==y[h+1]):
+		print("yws")
+	else:
+		print("asmadsa")
+
+		
+print(o)	
+
+
+
+
+-- OUTPUT:
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:37:41) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+y=input("Digite a string: ").upper()
+h=0
+o=1
+while(len(y)>h):
+	if(y[h]==y[h+1]):
+		o=o+1
+		h=h+1
+	else:
+		h=h+1
+
+		
+print(o)	
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    if(y[h]==y[h+1]):
+IndexError: string index out of range
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:38:15) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+y=input("Digite a string: ").upper()
+h=0
+o=1
+while(len(y)>h):
+	if(y[h]==y[h+1]):
+		print("yws")
+		h=h+1
+	else:
+		print("asmadsa")
+		h=h+1
+
+		
+print(o)	
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    if(y[h]==y[h+1]):
+IndexError: string index out of range
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:38:28) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+y=input("Digite a string: ").upper()
+h=0
+o=1
+while(len(y)>h):
+	if(y[h]==y[h+1]):
+		print("yws")
+	else:
+		print("asmadsa")
+
+		
+print(o)	
+
+
+
+
+-- OUTPUT:
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+asmadsa
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:42:46) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+y=input("Digite a string: ").upper()
+h=0
+o=1
+for i in y:
+	if(y[h]==y[h+1]):
+		o=o+1
+
+		
+print(o)	
+
+
+
+
+-- OUTPUT:
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:43:13) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+y=input("Digite a string: ").upper()
+h=0
+o=1
+for i in y:
+	if(y[h]==y[h+1]):
+		o=o+1
+		h=h+1
+
+		
+print(o)	
+
+
+
+
+-- OUTPUT:
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:47:56) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+y=input("Digite a string: ").upper()
+h=0
+o=1
+for i in y:
+	if(y[h]==y[h+1]):
+		o=o+1
+	
+
+		
+print(o)	
+
+
+
+
+-- OUTPUT:
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:48:14) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+y=input("Digite a string: ").upper()
+h=0
+o=1
+for i in y:
+	if(y[i]==y[h+1]):
+		o=o+1
+		h=h=
+	
+
+		
+print(o)	
+
+
+
+
+-- ERROR:
+File "XXXX", line 8
+    h=h=
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:48:20) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+y=input("Digite a string: ").upper()
+h=0
+o=1
+for i in y:
+	if(y[i]==y[h+1]):
+		o=o+1
+		h=h+1
+	
+
+		
+print(o)	
+
+
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    if(y[i]==y[h+1]):
+TypeError: string indices must be integers
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-14 13:50:42) 
+-- CODE:
+x=int(input("Digite o tamanho da sequencia: "))
+y=input("Digite a string: ").upper()
+h=0
+o=1
+for i in y:
+	k=y[h]
+	l=y[h+1]
+	if(k==l):
+		o=o+1
+		h=h+1
+	
+	
+
+		
+print(o)	
+
+
+
+
+-- OUTPUT:
+1
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

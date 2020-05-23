@@ -1,0 +1,472 @@
+== TEST (2019-05-27 13:58:13) 
+-- CODE:
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+while(i < len(v)):
+	i = i + 3
+	msg = msg + v[i],"."
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    msg = msg + v[i],"."
+NameError: name 'msg' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-27 13:58:37) 
+-- CODE:
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+msg = 0
+while(i < len(v)):
+	i = i + 3
+	msg = msg + v[i],"."
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    msg = msg + v[i],"."
+IndexError: string index out of range
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-27 14:00:03) 
+-- CODE:
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+n = 3
+msg = v[:]
+while(i < len(v)):
+	i = i + 3
+	n = n + 3
+	msg = msg + v[i:n],"."
+print(msg)
+-- OUTPUT:
+('123', '.')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:47:03) 
+-- CODE:
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 2
+msg = ""
+while(i < size(v)):
+	msg = msg , v[i:k],"."
+	i = i + 3
+	k = k + 3
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    while(i < size(v)):
+NameError: name 'size' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:47:23) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 2
+msg = ""
+while(i < len(v)):
+	msg = msg , v[i:k],"."
+	i = i + 3
+	k = k + 3
+print(msg)
+-- OUTPUT:
+('', '12', '.')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:47:58) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 3
+msg = ""
+while(i < len(v)):
+	msg = msg , v[i:k],"."
+	i = i + 3
+	k = k + 3
+print(msg)
+-- OUTPUT:
+('', '123', '.')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:48:54) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 3
+msg = ""
+while(i < len(v)):
+	msg = v[i:k],"." + msg
+	i = i + 3
+	k = k + 3
+print(msg)
+-- OUTPUT:
+('123', '.')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:49:05) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 3
+msg = ""
+while(i < len(v)):
+	msg = v[i:k],"." , msg
+	i = i + 3
+	k = k + 3
+print(msg)
+-- OUTPUT:
+('123', '.', '')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:50:29) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 3
+msg = ""
+while(i < len(v)):
+	msg = msg,v[i:k]+"."
+	i = i + 3
+	k = k + 3
+print(msg)
+-- OUTPUT:
+('', '123.')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:51:07) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 3
+msg = ""
+while(i < len(v)):
+	msg = msg+v[i:k]+"."
+	i = i + 3
+	k = k + 3
+print(msg)
+-- OUTPUT:
+123.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:52:16) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 3
+msg = ""
+while(i < len(v)):
+	if(i = len(v)):
+		msg = msg + v[i:k]
+	msg = msg+v[i:k]+"."
+	i = i + 3
+	k = k + 3
+print(msg)
+-- ERROR:
+File "XXXX", line 7
+    if(i = len(v)):
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:52:22) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 3
+msg = ""
+while(i < len(v)):
+	if(i == len(v)):
+		msg = msg + v[i:k]
+	msg = msg+v[i:k]+"."
+	i = i + 3
+	k = k + 3
+print(msg)
+-- OUTPUT:
+123.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:52:55) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 3
+msg = ""
+while(i < len(v)):
+	if(i == len(v)):
+		msg = msg + v[i:k]
+	else:
+		msg = msg+v[i:k]+"."
+		i = i + 3
+		k = k + 3
+print(msg)
+-- OUTPUT:
+123.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:53:47) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 3
+msg = ""
+while(i < len(v)):
+	if(i == len(v)):
+		msg = msg + v[i:k]
+		i = i + 3
+		k = k + 3
+	else:
+		msg = msg+v[i:k]+"."
+		i = i + 3
+		k = k + 3
+print(msg)
+-- OUTPUT:
+123.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:56:30) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 3
+msg = ""
+while(i < len(v)):
+	if(i == len(v)):
+		msg = msg + v[i:k]
+		i = i + 3
+		k = k + 3
+	else:
+		msg = msg+v[i:k]+"."
+		i = i + 3
+		k = k + 3
+print(msg)
+-- OUTPUT:
+123.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:57:26) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 3
+msg = ""
+while(i < len(v)):
+	if(i == len(v)):
+		msg = msg + v[i:k]
+	else:
+		msg = msg+v[i:k]+"."
+		i = i + 3
+		k = k + 3
+print(msg)
+-- OUTPUT:
+123.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:58:01) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 3
+msg = ""
+while(i <= len(v)):
+	if(i == len(v)):
+		msg = msg + v[i:k]
+	else:
+		msg = msg+v[i:k]+"."
+		i = i + 3
+		k = k + 3
+print(msg)
+-- OUTPUT:
+123.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 11:58:39) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 3
+msg = ""
+while(i <= len(v)):
+	if(i == len(v)):
+		msg = msg + v[i:k]
+		i = i + 3
+		k = k + 3
+	else:
+		msg = msg+v[i:k]+"."
+		i = i + 3
+		k = k + 3
+print(msg)
+-- EXECUTION TIME:
+0.232411
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123.
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789.000.987.654.321.
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321.
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:58:40) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 3
+msg = ""
+while(i <= len(v)):
+	if(i == len(v)):
+		msg = msg + v[i:k]
+		i = i + 3
+		k = k + 3
+	else:
+		msg = msg+v[i:k]+"."
+		i = i + 3
+		k = k + 3
+print(msg)
+-- OUTPUT:
+123.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 11:59:24) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 3
+msg = ""
+while(i <= len(v)):
+	if(i == (len(v)-3)):
+		msg = msg+v[i:k]+"."
+		i = i + 3
+		k = k + 3
+print(msg)
+-- OUTPUT:
+123.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:00:34) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 3
+msg = ""
+while(i <= len(v)):
+	if(i < len(v)-3):
+		msg = msg+v[i:k]+"."
+		i = i + 3
+		k = k + 3
+print(msg)
+-- OUTPUT:
+123.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:01:05) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 3
+msg = ""
+while(i < len(v)):
+	if(i < len(v)-3):
+		msg = msg+v[i:k]
+	else:
+		msg = msg+v[i:k]+"."
+		i = i + 3
+		k = k + 3
+print(msg)
+-- OUTPUT:
+123.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:01:12) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 3
+msg = ""
+while(i < len(v)):
+		msg = msg+v[i:k]+"."
+		i = i + 3
+		k = k + 3
+print(msg)
+-- OUTPUT:
+123.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 12:02:09) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 3
+msg = ""
+while(i < len(v)):
+	if(i == (len(v)-3)):
+		msg = msg+v[i:k]
+		i = i + 3
+		k = k + 3
+	else:
+		msg = msg+v[i:k]+"."
+		i = i + 3
+		k = k + 3
+print(msg)
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-28 12:02:14) 
+-- CODE:
+
+v = input("Insira uma sequencia de numeros: ")
+i = 0
+k = 3
+msg = ""
+while(i < len(v)):
+	if(i == (len(v)-3)):
+		msg = msg+v[i:k]
+		i = i + 3
+		k = k + 3
+	else:
+		msg = msg+v[i:k]+"."
+		i = i + 3
+		k = k + 3
+print(msg)
+-- EXECUTION TIME:
+0.163302
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789.000.987.654.321
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

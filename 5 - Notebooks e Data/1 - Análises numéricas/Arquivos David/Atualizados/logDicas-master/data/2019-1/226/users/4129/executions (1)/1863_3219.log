@@ -1,0 +1,1233 @@
+== TEST (2019-07-02 11:15:22) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+for i in range(x):
+	
+-- ERROR:
+File "XXXX", line 8
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:15:32) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+for i in range(x):
+	print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:16:06) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+for i in range(shape(x)[0]):
+	print(x)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:26:43) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+
+
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i = j :
+			print ("a")
+	
+	
+-- ERROR:
+File "XXXX", line 10
+    if i = j :
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:26:46) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+
+
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			print ("a")
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:28:42) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = 0
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma = soma + x[i,j]
+			acumula = acumula + 1
+print (soma)
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:28:56) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = 0
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma = soma + x[i,j]
+			acumula = acumula + 1
+print (soma/acumula)
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:29:12) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = 0
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma = soma + x[i,j]
+			acumula = acumula + 1
+print (round(soma/acumula, 2))
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 11:29:19) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = 0
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma = soma + x[i,j]
+			acumula = acumula + 1
+print (round(soma/acumula, 2))
+			
+	
+	
+-- EXECUTION TIME:
+1.12586
+-- TEST CASE 1:
+---- input:
+[[10,8,2],[20,16,4],[40,32,8]]
+---- correct output:
+17.67
+---- user output:
+17.67
+-- TEST CASE 2:
+---- input:
+[[0.32,0.48,0.56],[0.12,0.54,0.34],[0.67,0.89,0.76]]
+---- correct output:
+0.51
+---- user output:
+0.51
+-- TEST CASE 3:
+---- input:
+[[34.5,66.7,89.7,65.8,34.6],[77.8,65.7,89.7,23.4,45.9],[12.3,98.9,23.4,67.7,55.5],[33.3,44.4,56.8,91.3,51.9],[11.1,22.2,34.5,66.5,15.9]]
+---- correct output:
+52.44
+---- user output:
+52.43
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:29:29) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = 0
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma = soma + x[i,j]
+			acumula = acumula + 1
+print (round(soma/acumula, 2))
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:30:42) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = 0
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma = soma + x[i,j]
+			acumula = acumula + 1
+print (round(soma/acumula, 2))
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:31:01) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = 0
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma = soma + x[i,j]
+			acumula = acumula + 1
+print (round(soma/acumula, 2))
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 11:31:12) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = 0
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma = soma + x[i,j]
+			acumula = acumula + 1
+print (round(soma/acumula, 2))
+			
+	
+	
+-- EXECUTION TIME:
+1.30865
+-- TEST CASE 1:
+---- input:
+[[10,8,2],[20,16,4],[40,32,8]]
+---- correct output:
+17.67
+---- user output:
+17.67
+-- TEST CASE 2:
+---- input:
+[[0.32,0.48,0.56],[0.12,0.54,0.34],[0.67,0.89,0.76]]
+---- correct output:
+0.51
+---- user output:
+0.51
+-- TEST CASE 3:
+---- input:
+[[34.5,66.7,89.7,65.8,34.6],[77.8,65.7,89.7,23.4,45.9],[12.3,98.9,23.4,67.7,55.5],[33.3,44.4,56.8,91.3,51.9],[11.1,22.2,34.5,66.5,15.9]]
+---- correct output:
+52.44
+---- user output:
+52.43
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:33:01) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+p = 0
+n = shape(x)
+soma = zeros(n**2 - n,)
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma[i] = x[i,j]
+print (soma)
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:33:22) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+p = 0
+n = shape(x)
+soma = zeros(n**2 - n,)
+print(soma)
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma[i] = x[i,j]
+print (soma)
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:33:35) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+p = 0
+n = shape(x)
+soma = zeros(n**2 - n,)
+print(soma)
+
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:33:50) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+p = 0
+n = shape(x)
+soma = zeros(n**2 - n,)
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma[i] = x[i,j]
+print (soma)
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:34:18) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+p = 0
+n = shape(x)
+z = n**2
+soma = zeros(z - n, dtype=float)
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma[i] = x[i,j]
+print (soma)
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:34:41) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+p = 0
+n = shape(x)
+z = n**2
+soma = zeros(z - n, dtype=int)
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma[i] = x[i,j]
+print (soma)
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:34:55) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+p = 0
+n = shape(x)
+print(n)
+soma = zeros(z - n, dtype=int)
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma[i] = x[i,j]
+print (soma)
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:35:08) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+p = 0
+n = shape(x)
+print(n)
+
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:35:15) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+p = 0
+n = shape(x)
+print(n)
+
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:35:50) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+p = 0
+n = shape(x)[0]
+z = n**2
+soma = zeros(z - n)
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma[i] = x[i,j]
+print (soma)
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:36:10) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+p = 0
+n = shape(x)[0]
+z = n**2
+soma = zeros(z - n)
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma[i] = x[i,j]
+print (mean(soma))
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:36:32) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+p = 0
+n = shape(x)[0]
+z = n**2
+soma = zeros(z - n)
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma[i] = x[i,j]
+print ((soma))
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:37:47) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+p = 0
+n = shape(x)[0]
+z = n**2
+soma = zeros(z - n)
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma[i] = x[i]
+print ((soma))
+
+
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:37:59) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+p = 0
+n = shape(x)[0]
+z = n**2
+soma = zeros(z - n)
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma[i] = x[i,j]
+print ((soma))
+
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:38:57) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+p = 0
+n = shape(x)[0]
+z = n**2
+soma = zeros(z - n)
+for i in range(shape(x)[0]):
+		if i == j :
+			p = p + 1
+		else:
+			soma[i] = x[i,j]
+print ((soma))
+
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:39:09) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+p = 0
+n = shape(x)[0]
+z = n**2
+soma = zeros(z - n)
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma[i] = x[i,j]
+print ((soma))
+
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:39:36) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = 0
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma = soma + x[i,j]
+			acumula = acumula + 1
+print (round(soma/acumula)
+			
+	
+	
+-- ERROR:
+File "XXXX", line 20
+    
+     ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:39:43) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = 0
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma = soma + x[i,j]
+			acumula = acumula + 1
+print (round(soma/acumula))
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 11:39:58) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = 0
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma = soma + x[i,j]
+			acumula = acumula + 1
+print (round(soma/acumula))
+			
+	
+	
+-- EXECUTION TIME:
+1.01813
+-- TEST CASE 1:
+---- input:
+[[10,8,2],[20,16,4],[40,32,8]]
+---- correct output:
+17.67
+---- user output:
+18.0
+-- TEST CASE 2:
+---- input:
+[[0.32,0.48,0.56],[0.12,0.54,0.34],[0.67,0.89,0.76]]
+---- correct output:
+0.51
+---- user output:
+1.0
+-- TEST CASE 3:
+---- input:
+[[34.5,66.7,89.7,65.8,34.6],[77.8,65.7,89.7,23.4,45.9],[12.3,98.9,23.4,67.7,55.5],[33.3,44.4,56.8,91.3,51.9],[11.1,22.2,34.5,66.5,15.9]]
+---- correct output:
+52.44
+---- user output:
+52.0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:40:13) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = 0
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma = soma + x[i,j]
+			acumula = acumula + 1
+print (round(soma/acumula))
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:41:29) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = zeros(shape(x)[0]**2 - shape(x)[0])
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma[i] = x[i,j]
+			acumula = acumula + 1
+
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:41:37) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = zeros(shape(x)[0]**2 - shape(x)[0])
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma[i] = x[i,j]
+			acumula = acumula + 1
+print(soma)
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:43:17) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = zeros(shape(x)[0]**2 - shape(x)[0])
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i  > j :
+			soma[i] = x[i,j]
+			acumula = acumula + 1
+		elif i < j :
+			soma[i] = x[i,j]
+		else:
+			
+print(soma)
+			
+	
+	
+-- ERROR:
+File "XXXX", line 18
+    print(soma)
+    ^
+IndentationError: expected an indented block
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:43:23) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = zeros(shape(x)[0]**2 - shape(x)[0])
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i  > j :
+			soma[i] = x[i,j]
+			acumula = acumula + 1
+		elif i < j :
+			soma[i] = x[i,j]
+		else:
+			p = p + 1
+print(soma)
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:44:02) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = 0
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma = soma + x[i,j]
+			acumula = acumula + 1
+print (soma)
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:44:32) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = 0
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma = soma + x[i,j]
+			acumula = acumula + 1
+print (soma/acumula)
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:44:46) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = 0
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma = soma + x[i,j]
+			acumula = acumula + 1
+print (round(soma/acumula, 2))
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 11:44:54) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = 0
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma = soma + x[i,j]
+			acumula = acumula + 1
+print (round(soma/acumula, 2))
+			
+	
+	
+-- EXECUTION TIME:
+0.939803
+-- TEST CASE 1:
+---- input:
+[[10,8,2],[20,16,4],[40,32,8]]
+---- correct output:
+17.67
+---- user output:
+17.67
+-- TEST CASE 2:
+---- input:
+[[0.32,0.48,0.56],[0.12,0.54,0.34],[0.67,0.89,0.76]]
+---- correct output:
+0.51
+---- user output:
+0.51
+-- TEST CASE 3:
+---- input:
+[[34.5,66.7,89.7,65.8,34.6],[77.8,65.7,89.7,23.4,45.9],[12.3,98.9,23.4,67.7,55.5],[33.3,44.4,56.8,91.3,51.9],[11.1,22.2,34.5,66.5,15.9]]
+---- correct output:
+52.44
+---- user output:
+52.43
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:45:36) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = 0
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma = soma + x[i,j]
+			acumula = acumula + 1
+print (round(soma/acumula, 2))
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:45:57) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = 0
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma = soma + x[i,j]
+			acumula = acumula + 1
+print (round(soma/acumula, 2))
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:46:09) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = 0
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma = soma + x[i,j]
+			acumula = acumula + 1
+print (round(soma/acumula, 2))
+			
+	
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 11:46:18) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x = array(eval(input("Matriz:")))
+
+soma = 0
+acumula = 0
+p = 0
+for i in range(shape(x)[0]):
+	for j in range(shape(x)[1]):
+		if i == j :
+			p = p + 1
+		else:
+			soma = soma + x[i,j]
+			acumula = acumula + 1
+print (round(soma/acumula, 2))
+			
+	
+	
+-- EXECUTION TIME:
+1.05577
+-- TEST CASE 1:
+---- input:
+[[10,8,2],[20,16,4],[40,32,8]]
+---- correct output:
+17.67
+---- user output:
+17.67
+-- TEST CASE 2:
+---- input:
+[[0.32,0.48,0.56],[0.12,0.54,0.34],[0.67,0.89,0.76]]
+---- correct output:
+0.51
+---- user output:
+0.51
+-- TEST CASE 3:
+---- input:
+[[34.5,66.7,89.7,65.8,34.6],[77.8,65.7,89.7,23.4,45.9],[12.3,98.9,23.4,67.7,55.5],[33.3,44.4,56.8,91.3,51.9],[11.1,22.2,34.5,66.5,15.9]]
+---- correct output:
+52.44
+---- user output:
+52.43
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

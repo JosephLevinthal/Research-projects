@@ -1,0 +1,306 @@
+== TEST (2019-04-29 20:51:56) 
+-- CODE:
+sb= float(input("insira o salario bruto: "))
+if (sb<=1659.38):
+	slp= sb-(sb*0.08)
+elif (sb>=1659.39)and(sb<=2765.66):
+	slp= sb-(sb*0.09)
+elif (sb>=2765.67)and(sb<=5531.31):
+	slp= sb-(sb*0.11)
+elif (sb>5531.31):
+	slp= sb-608.44
+
+-- OUTPUT:
+A esquerda da reta
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 20:51:57) 
+-- CODE:
+sb= float(input("insira o salario bruto: "))
+if (sb<=1659.38):
+	slp= sb-(sb*0.08)
+elif (sb>=1659.39)and(sb<=2765.66):
+	slp= sb-(sb*0.09)
+elif (sb>=2765.67)and(sb<=5531.31):
+	slp= sb-(sb*0.11)
+elif (sb>5531.31):
+	slp= sb-608.44
+
+-- OUTPUT:
+A esquerda da reta
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 20:52:14) 
+-- CODE:
+sb= float(input("insira o salario bruto: "))
+if (sb<=1659.38):
+	slp= sb-(sb*0.08)
+elif (sb>=1659.39)and(sb<=2765.66):
+	slp= sb-(sb*0.09)
+elif (sb>=2765.67)and(sb<=5531.31):
+	slp= sb-(sb*0.11)
+elif (sb>5531.31):
+	slp= sb-608.44
+print(slp)
+-- OUTPUT:
+1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 20:58:56) 
+-- CODE:
+sb= float(input("insira o salario bruto: "))
+# desconto da contribuiçã previdenciaria
+if (sb<=1659.38):
+	slp= sb-(sb*0.08)
+elif (sb>=1659.39)and(sb<=2765.66):
+	slp= sb-(sb*0.09)
+elif (sb>=2765.67)and(sb<=5531.31):
+	slp= sb-(sb*0.11)
+elif (sb>5531.31):
+	slp= sb-608.44
+# desconto do imposto de renda
+if (slp<=1903.98):
+	sl=slp
+elif (slp>=1903.99)and(slp<=2826.65):
+	sl=slp-(slp*0.075)
+elif (slp>=2826.66)and(slp<=3751.05):
+	sl=slp-(slp*0.15)
+elif (slp>=3751.06)and(slp<=4664.68):
+	sl=slp-(slp*0.225)
+elif (slp>4664.68):
+	sl=slp-(slp*0.275)
+print("Salario liquido = R$",X)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 22, in <module>
+    print("Salario liquido = R$",X)
+NameError: name 'X' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 20:59:07) 
+-- CODE:
+sb= float(input("insira o salario bruto: "))
+# desconto da contribuiçã previdenciaria
+if (sb<=1659.38):
+	slp= sb-(sb*0.08)
+elif (sb>=1659.39)and(sb<=2765.66):
+	slp= sb-(sb*0.09)
+elif (sb>=2765.67)and(sb<=5531.31):
+	slp= sb-(sb*0.11)
+elif (sb>5531.31):
+	slp= sb-608.44
+# desconto do imposto de renda
+if (slp<=1903.98):
+	sl=slp
+elif (slp>=1903.99)and(slp<=2826.65):
+	sl=slp-(slp*0.075)
+elif (slp>=2826.66)and(slp<=3751.05):
+	sl=slp-(slp*0.15)
+elif (slp>=3751.06)and(slp<=4664.68):
+	sl=slp-(slp*0.225)
+elif (slp>4664.68):
+	sl=slp-(slp*0.275)
+print("Salario liquido = R$",sl)
+-- OUTPUT:
+Salario liquido = R$ 1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 20:59:16) 
+-- CODE:
+sb= float(input("insira o salario bruto: "))
+# desconto da contribuiçã previdenciaria
+if (sb<=1659.38):
+	slp= sb-(sb*0.08)
+elif (sb>=1659.39)and(sb<=2765.66):
+	slp= sb-(sb*0.09)
+elif (sb>=2765.67)and(sb<=5531.31):
+	slp= sb-(sb*0.11)
+elif (sb>5531.31):
+	slp= sb-608.44
+# desconto do imposto de renda
+if (slp<=1903.98):
+	sl=slp
+elif (slp>=1903.99)and(slp<=2826.65):
+	sl=slp-(slp*0.075)
+elif (slp>=2826.66)and(slp<=3751.05):
+	sl=slp-(slp*0.15)
+elif (slp>=3751.06)and(slp<=4664.68):
+	sl=slp-(slp*0.225)
+elif (slp>4664.68):
+	sl=slp-(slp*0.275)
+print("Salario liquido = R$",sl)
+-- EXECUTION TIME:
+0.147713
+-- TEST CASE 1:
+---- input:
+1234.56
+---- correct output:
+Salario liquido = R$  1135.8
+---- user output:
+Salario liquido = R$ 1135.7952
+-- TEST CASE 2:
+---- input:
+2000
+---- correct output:
+Salario liquido = R$  1820.0
+---- user output:
+Salario liquido = R$ 1820.0
+-- TEST CASE 3:
+---- input:
+5535
+---- correct output:
+Salario liquido = R$  3571.76
+---- user output:
+Salario liquido = R$ 3571.7559999999994
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 20:59:21) 
+-- CODE:
+sb= float(input("insira o salario bruto: "))
+# desconto da contribuiçã previdenciaria
+if (sb<=1659.38):
+	slp= sb-(sb*0.08)
+elif (sb>=1659.39)and(sb<=2765.66):
+	slp= sb-(sb*0.09)
+elif (sb>=2765.67)and(sb<=5531.31):
+	slp= sb-(sb*0.11)
+elif (sb>5531.31):
+	slp= sb-608.44
+# desconto do imposto de renda
+if (slp<=1903.98):
+	sl=slp
+elif (slp>=1903.99)and(slp<=2826.65):
+	sl=slp-(slp*0.075)
+elif (slp>=2826.66)and(slp<=3751.05):
+	sl=slp-(slp*0.15)
+elif (slp>=3751.06)and(slp<=4664.68):
+	sl=slp-(slp*0.225)
+elif (slp>4664.68):
+	sl=slp-(slp*0.275)
+print("Salario liquido = R$",sl)
+-- EXECUTION TIME:
+0.144776
+-- TEST CASE 1:
+---- input:
+1234.56
+---- correct output:
+Salario liquido = R$  1135.8
+---- user output:
+Salario liquido = R$ 1135.7952
+-- TEST CASE 2:
+---- input:
+2000
+---- correct output:
+Salario liquido = R$  1820.0
+---- user output:
+Salario liquido = R$ 1820.0
+-- TEST CASE 3:
+---- input:
+5535
+---- correct output:
+Salario liquido = R$  3571.76
+---- user output:
+Salario liquido = R$ 3571.7559999999994
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 20:59:22) 
+-- CODE:
+sb= float(input("insira o salario bruto: "))
+# desconto da contribuiçã previdenciaria
+if (sb<=1659.38):
+	slp= sb-(sb*0.08)
+elif (sb>=1659.39)and(sb<=2765.66):
+	slp= sb-(sb*0.09)
+elif (sb>=2765.67)and(sb<=5531.31):
+	slp= sb-(sb*0.11)
+elif (sb>5531.31):
+	slp= sb-608.44
+# desconto do imposto de renda
+if (slp<=1903.98):
+	sl=slp
+elif (slp>=1903.99)and(slp<=2826.65):
+	sl=slp-(slp*0.075)
+elif (slp>=2826.66)and(slp<=3751.05):
+	sl=slp-(slp*0.15)
+elif (slp>=3751.06)and(slp<=4664.68):
+	sl=slp-(slp*0.225)
+elif (slp>4664.68):
+	sl=slp-(slp*0.275)
+print("Salario liquido = R$",sl)
+-- OUTPUT:
+Salario liquido = R$ 1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 20:59:36) 
+-- CODE:
+sb= float(input("insira o salario bruto: "))
+# desconto da contribuiçã previdenciaria
+if (sb<=1659.38):
+	slp= sb-(sb*0.08)
+elif (sb>=1659.39)and(sb<=2765.66):
+	slp= sb-(sb*0.09)
+elif (sb>=2765.67)and(sb<=5531.31):
+	slp= sb-(sb*0.11)
+elif (sb>5531.31):
+	slp= sb-608.44
+# desconto do imposto de renda
+if (slp<=1903.98):
+	sl=slp
+elif (slp>=1903.99)and(slp<=2826.65):
+	sl=slp-(slp*0.075)
+elif (slp>=2826.66)and(slp<=3751.05):
+	sl=slp-(slp*0.15)
+elif (slp>=3751.06)and(slp<=4664.68):
+	sl=slp-(slp*0.225)
+elif (slp>4664.68):
+	sl=slp-(slp*0.275)
+print("Salario liquido = R$",sl)
+-- OUTPUT:
+Salario liquido = R$ 1135.7952
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 21:00:13) 
+-- CODE:
+sb= float(input("insira o salario bruto: "))
+# desconto da contribuiçã previdenciaria
+if (sb<=1659.38):
+	slp= sb-(sb*0.08)
+elif (sb>=1659.39)and(sb<=2765.66):
+	slp= sb-(sb*0.09)
+elif (sb>=2765.67)and(sb<=5531.31):
+	slp= sb-(sb*0.11)
+elif (sb>5531.31):
+	slp= sb-608.44
+# desconto do imposto de renda
+if (slp<=1903.98):
+	sl=slp
+elif (slp>=1903.99)and(slp<=2826.65):
+	sl=slp-(slp*0.075)
+elif (slp>=2826.66)and(slp<=3751.05):
+	sl=slp-(slp*0.15)
+elif (slp>=3751.06)and(slp<=4664.68):
+	sl=slp-(slp*0.225)
+elif (slp>4664.68):
+	sl=slp-(slp*0.275)
+print("Salario liquido = R$",round(sl,2))
+-- EXECUTION TIME:
+0.168243
+-- TEST CASE 1:
+---- input:
+1234.56
+---- correct output:
+Salario liquido = R$  1135.8
+---- user output:
+Salario liquido = R$ 1135.8
+-- TEST CASE 2:
+---- input:
+2000
+---- correct output:
+Salario liquido = R$  1820.0
+---- user output:
+Salario liquido = R$ 1820.0
+-- TEST CASE 3:
+---- input:
+5535
+---- correct output:
+Salario liquido = R$  3571.76
+---- user output:
+Salario liquido = R$ 3571.76
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

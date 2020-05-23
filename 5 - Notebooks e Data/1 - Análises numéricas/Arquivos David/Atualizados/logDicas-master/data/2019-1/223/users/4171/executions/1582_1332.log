@@ -1,0 +1,277 @@
+== TEST (2019-03-12 23:48:36) 
+-- CODE:
+aresta = 5
+area = 64,9519052838
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(area, 4))
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 23:48:51) 
+-- CODE:
+aresta = 5
+area = 64,9519052838
+ 
+print(round(64,9519052838, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(64,9519052838, 4))
+TypeError: round() takes at most 2 arguments (3 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 23:48:57) 
+-- CODE:
+aresta = 5
+area = 64,9519052838
+ 
+print(round(64.9519052838, 4))
+-- OUTPUT:
+64.9519
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 23:50:28) 
+-- CODE:
+aresta = 5
+area = (3/2)((3**0.5)5**2)
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 2
+    area = (3/2)((3**0.5)5**2)
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 23:51:01) 
+-- CODE:
+aresta = 5
+area = (3//2)((3**0.5)5**2)
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 2
+    area = (3//2)((3**0.5)5**2)
+                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-12 23:51:17) 
+-- CODE:
+aresta = 5
+area = (3/2)((3**0.5)aresta**2)
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 2
+    area = (3/2)((3**0.5)aresta**2)
+                              ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 00:27:36) 
+-- CODE:
+aresta = 5
+area = 
+(3/2) * [(3 ** (0.5) )* 25]
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 2
+    area = 
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 00:27:42) 
+-- CODE:
+aresta = 5
+area = (3/2) * [(3 ** (0.5) )* 25]
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2) * [(3 ** (0.5) )* 25]
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 00:27:55) 
+-- CODE:
+aresta = 5
+area = (3/2) * [(3 ** (1/2) )* 25]
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2) * [(3 ** (1/2) )* 25]
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 00:28:07) 
+-- CODE:
+aresta = 5
+area = int'float'(3/2) * [(3 ** (1/2) )* 25]
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 2
+    area = int'float'(3/2) * [(3 ** (1/2) )* 25]
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 00:28:12) 
+-- CODE:
+aresta = 5
+area = int'float'=(3/2) * [(3 ** (1/2) )* 25]
+ 
+print(round(area, 4))
+-- ERROR:
+File "XXXX", line 2
+    area = int'float'=(3/2) * [(3 ** (1/2) )* 25]
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 00:29:05) 
+-- CODE:
+aresta = 5
+area = (3/2) * [(3 ** (1/2) )* aresta**0.5]
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2) * [(3 ** (1/2) )* aresta**0.5]
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 00:30:21) 
+-- CODE:
+aresta = 5
+area = (3/2) * ((3 ** (1/2) )* aresta**0.5)
+ 
+print(round(area, 4))
+-- OUTPUT:
+5.8095
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 00:30:31) 
+-- CODE:
+aresta = 5
+area = (3/2) * ((3 ** (1/2) )* aresta**0.5)
+ 
+print(round(5.8095, 4))
+-- OUTPUT:
+5.8095
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 00:30:34) 
+-- CODE:
+aresta = 5
+area = (3/2) * ((3 ** (1/2) )* aresta**0.5)
+ 
+print(round(5.8095, 4))
+-- EXECUTION TIME:
+0.287449
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+5.8095
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 00:30:42) 
+-- CODE:
+aresta = 5
+area = (3/2) * ((3 ** (1/2) )* aresta**0.5)
+ 
+print(round(5.8095, 4))
+-- OUTPUT:
+5.8095
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 00:30:50) 
+-- CODE:
+aresta = 5
+area = (3/2) * ((3 ** (1/2) )* aresta**0.5)
+ 
+print(round(area, 4))
+-- OUTPUT:
+5.8095
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 00:30:51) 
+-- CODE:
+aresta = 5
+area = (3/2) * ((3 ** (1/2) )* aresta**0.5)
+ 
+print(round(area, 4))
+-- EXECUTION TIME:
+0.225466
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+5.8095
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 00:31:13) 
+-- CODE:
+aresta = 5
+area = (3/2) * ((3 ** (1/2) )* aresta**2)
+ 
+print(round(area, 4))
+-- OUTPUT:
+64.9519
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 00:31:16) 
+-- CODE:
+aresta = 5
+area = (3/2) * ((3 ** (1/2) )* aresta**2)
+ 
+print(round(area, 4))
+-- EXECUTION TIME:
+0.209625
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+64.9519
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 00:53:13) 
+-- CODE:
+aresta = 5
+area = (3/2) * ((3 ** (1/2) )* aresta**2)
+ 
+print(round(area, 4))
+-- EXECUTION TIME:
+0.18508
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+64.9519
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 00:56:06) 
+-- CODE:
+aresta = 5
+area = (3/2) * ((3 ** (1/2) )* aresta**2)
+ 
+print(round(area, 4))
+-- EXECUTION TIME:
+0.150122
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+64.9519
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

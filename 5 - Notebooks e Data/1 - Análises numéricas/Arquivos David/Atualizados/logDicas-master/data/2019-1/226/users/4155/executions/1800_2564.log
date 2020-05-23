@@ -1,0 +1,133 @@
+== TEST (2019-06-06 11:16:18) 
+-- CODE:
+from numpy import*
+v1 = array(eval(input("v1: ")))
+v2 = array(eval(input("v2: ")))
+
+vet = zeros(3<dtype=int)
+
+for i in range(size(v1)):
+	if v1[i]>v2[i]:
+		vet[0] = vet[0] + 1
+	elif v1[i] == v2[i]:
+		vet[1] = vet[1] + 1
+	elif v1[i] < v2[i]:
+		vet[2] = vet[2] + 1
+print(vet)
+-- ERROR:
+File "XXXX", line 5
+    vet = zeros(3<dtype=int)
+               ^
+SyntaxError: keyword can't be an expression
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 11:16:24) 
+-- CODE:
+from numpy import*
+v1 = array(eval(input("v1: ")))
+v2 = array(eval(input("v2: ")))
+
+vet = zeros(3<dtype=int)
+
+for i in range(size(v1)):
+	if v1[i]>v2[i]:
+		vet[0] = vet[0] + 1
+	elif v1[i] == v2[i]:
+		vet[1] = vet[1] + 1
+	elif v1[i] < v2[i]:
+		vet[2] = vet[2] + 1
+print(vet)
+-- ERROR:
+File "XXXX", line 5
+    vet = zeros(3<dtype=int)
+               ^
+SyntaxError: keyword can't be an expression
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 11:16:40) 
+-- CODE:
+from numpy import*
+v1 = array(eval(input("v1: ")))
+v2 = array(eval(input("v2: ")))
+
+vet = zeros(3, dtype=int)
+
+for i in range(size(v1)):
+	if v1[i]>v2[i]:
+		vet[0] = vet[0] + 1
+	elif v1[i] == v2[i]:
+		vet[1] = vet[1] + 1
+	elif v1[i] < v2[i]:
+		vet[2] = vet[2] + 1
+print(vet)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 11:16:53) 
+-- CODE:
+from numpy import*
+v1 = array(eval(input("v1: ")))
+v2 = array(eval(input("v2: ")))
+
+vet = zeros(3, dtype=int)
+
+for i in range(size(v1)):
+	if v1[i]>v2[i]:
+		vet[0] = vet[0] + 1
+	elif v1[i] == v2[i]:
+		vet[1] = vet[1] + 1
+	elif v1[i] < v2[i]:
+		vet[2] = vet[2] + 1
+print(vet)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 11:17:20) 
+-- CODE:
+from numpy import*
+v1 = array(eval(input("v1: ")))
+v2 = array(eval(input("v2: ")))
+
+vet = zeros(3, dtype=int)
+
+for i in range(size(v1)):
+	if v1[i]>v2[i]:
+		vet[0] = vet[0] + 1
+	elif v1[i] == v2[i]:
+		vet[1] = vet[1] + 1
+	elif v1[i] < v2[i]:
+		vet[2] = vet[2] + 1
+print(vet)
+-- EXECUTION TIME:
+1.02307
+-- TEST CASE 1:
+---- input:
+[2,3,2,4,3,5,3,4,2,3,1,0]
+[3,3,1,0,2,3,3,0,1,2,1,1]
+---- correct output:
+[7 3 2]
+---- user output:
+[7 3 2]
+-- TEST CASE 2:
+---- input:
+[1,2,1,2,1,2,1,2,0]
+[3,5,3,3,3,3,3,3,3]
+---- correct output:
+[0 0 9]
+---- user output:
+[0 0 9]
+-- TEST CASE 3:
+---- input:
+[1,2,2,2,2,1,1,2,2,1,1,2,2]
+[0,1,1,1,0,0,0,0,0,0,1,1,1]
+---- correct output:
+[12 1 0]
+---- user output:
+[12  1  0]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

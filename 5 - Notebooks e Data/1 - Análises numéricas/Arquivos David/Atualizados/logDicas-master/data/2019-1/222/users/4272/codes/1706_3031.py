@@ -1,0 +1,1 @@
+var1 = float(input("valor de x:"))

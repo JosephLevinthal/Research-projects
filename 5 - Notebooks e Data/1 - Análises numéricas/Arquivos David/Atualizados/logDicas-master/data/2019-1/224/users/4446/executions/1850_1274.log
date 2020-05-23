@@ -1,0 +1,341 @@
+== TEST (2019-07-01 17:28:43) 
+-- CODE:
+from numpy import *
+from numpy.linalg import 
+
+mat=int(input("digite a ordem da matriz quadrada:"))
+
+mz=ones(mat,dtype=int)
+print(mz)
+-- ERROR:
+File "XXXX", line 2
+    from numpy.linalg import 
+                            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 17:28:59) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat=int(input("digite a ordem da matriz quadrada:"))
+
+mz=ones(mat,dtype=int)
+print(mz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 17:30:05) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat=int(input("digite a ordem da matriz quadrada:"))
+
+mz=ones((mat,mat),dtype=int)
+print(mz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 17:30:39) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat=int(input("digite a ordem da matriz quadrada:"))
+
+mz=ones((mat,mat),dtype=int)
+print(mz*5)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 17:31:10) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+
+mat=int(input("digite a ordem da matriz quadrada:"))
+
+mz=ones((mat,mat),dtype=int)*mat
+print(mz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 17:55:07) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat=int(input("digite a ordem da matriz quadrada:"))
+mz=ones((mat,mat),dtype=int)
+for i in range(mat):
+	for j in range(i,mat):
+		mz[i,j]= i +1
+print(mz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 17:56:07) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat=int(input("digite a ordem da matriz quadrada:"))
+mz=ones((mat,mat),dtype=int)
+for i in range(mat):
+	for j in range(i,mat):
+		mz[i,j]= i +1
+		mz[j,i]= i+1
+print(mz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 17:56:07) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat=int(input("digite a ordem da matriz quadrada:"))
+mz=ones((mat,mat),dtype=int)
+for i in range(mat):
+	for j in range(i,mat):
+		mz[i,j]= i +1
+		mz[j,i]= i+1
+print(mz)
+-- EXECUTION TIME:
+0.950245
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+digite a ordem da matriz quadrada:[[1]]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 17:56:21) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat=int(input("digite a ordem da matriz quadrada:"))
+mz=ones((mat,mat),dtype=int)
+for i in range(mat):
+	for j in range(i,mat):
+		mz[i,j]= i +1
+		mz[j,i]= j+1
+print(mz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 17:57:31) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat=int(input("digite a ordem da matriz quadrada:"))
+mz=ones((mat,mat),dtype=int)
+for i in range(mat):
+	for j in range(i,mat):
+		mz[i,j]= j +1
+		mz[j,i]= j+1
+print(mz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 17:59:12) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat=int(input("digite a ordem da matriz quadrada:"))
+mz=ones((mat,mat),dtype=int)
+for i in range(mat):
+	for j in range(i,mat):
+		mz[i,j]= j +1
+		mz[j,i]= j+1
+print(mz)
+-- EXECUTION TIME:
+1.15887
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 2 3]
+ [2 2 3]
+ [3 3 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 2 3 4 5 6 7 8]
+ [2 2 3 4 5 6 7 8]
+ [3 3 3 4 5 6 7 8]
+ [4 4 4 4 5 6 7 8]
+ [5 5 5 5 5 6 7 8]
+ [6 6 6 6 6 6 7 8]
+ [7 7 7 7 7 7 7 8]
+ [8 8 8 8 8 8 8 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 17:59:20) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat=int(input("digite a ordem da matriz quadrada:"))
+mz=ones((mat,mat),dtype=int)
+for i in range(mat):
+	for j in range(i,mat):
+		mz[i,j]= i +1
+		mz[j,i]= i+1
+print(mz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 17:59:24) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat=int(input("digite a ordem da matriz quadrada:"))
+mz=ones((mat,mat),dtype=int)
+for i in range(mat):
+	for j in range(i,mat):
+		mz[i,j]= i +1
+		mz[j,i]= i+1
+print(mz)
+-- EXECUTION TIME:
+1.29599
+-- TEST CASE 1:
+---- input:
+3
+---- correct output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+---- user output:
+[[1 1 1]
+ [1 2 2]
+ [1 2 3]]
+-- TEST CASE 2:
+---- input:
+8
+---- correct output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+---- user output:
+[[1 1 1 1 1 1 1 1]
+ [1 2 2 2 2 2 2 2]
+ [1 2 3 3 3 3 3 3]
+ [1 2 3 4 4 4 4 4]
+ [1 2 3 4 5 5 5 5]
+ [1 2 3 4 5 6 6 6]
+ [1 2 3 4 5 6 7 7]
+ [1 2 3 4 5 6 7 8]]
+-- TEST CASE 3:
+---- input:
+1
+---- correct output:
+[[1]]
+---- user output:
+[[1]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 18:14:29) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+mat=int(input("digite a ordem da matriz quadrada:"))
+mz=ones((mat,mat),dtype=int)
+for i in range(mat):
+	for j in range(i,mat):
+		mz[i,j]= i +1
+		mz[i,j]= j+1
+print(mz)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

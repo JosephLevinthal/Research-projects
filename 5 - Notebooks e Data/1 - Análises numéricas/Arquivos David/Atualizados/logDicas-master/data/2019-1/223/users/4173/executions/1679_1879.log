@@ -1,0 +1,101 @@
+== SUBMITION (2019-06-04 17:04:27) 
+-- CODE:
+ext = float(input("Horas extras: "))
+fal = float(input("Horas que faltou: "))
+
+H = ext - (1/4)*fal
+
+if(H > 400):
+	print(ext,"extras e",fal,"de falta")
+	print("R$",round(500.00, 2))
+elif(H <=400):
+	print(ext,"extras e",fal,"de falta")
+	print("R$",round(100.00, 2))
+	
+
+12
+H=float(input("altura do tanque: "))
+c=float(input("nivel do combustivel: "))
+r=float(input("raio semiesferico: "))
+print("Entradas:",H,",",c,",",r)
+from math import *
+if(H>0 and c>0 and r>0)and(H>c and H>(2*r)):
+	V=(4/3)*pi*(r**3)
+	if(c<=r):
+		if(c==r):
+			v=(V/2)*1000
+			print("Volume:",round(v,3),"litros")
+		elif(c<r):
+			v=((pi/3)*(c**2)*(3*r-c))*1000
+			print("Volume:",round(v,3),"litros")
+	elif(c>r and c<=H-r):
+		v=V/2
+		C=pi*(r**2)*(c-r)
+		V1=(v+C)*1000
+		print("Volume:",round(V1,3),"litros")
+	elif(c>H-r):
+		C=pi*(r**2)*(c-r)
+		vc=(pi/3)*((H-c)**2)*(3*r-(H-c))
+		V1=((V/2)+C-vc)*1000
+		print("Volume:",round(V1,3),"litros")
+elif(H<0 or c<0 or r<0) or (H<c or c<2*r):
+	print("Entradas invalidas")
+			
+-- EXECUTION TIME:
+0.793019
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1679/1879/main.py", line 15, in <module>
+    H=float(input())
+EOFError: EOF when reading a line
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-04 17:04:52) 
+-- CODE:
+ext = float(input("Horas extras: "))
+fal = float(input("Horas que faltou: "))
+
+H = ext - (1/4)*fal
+
+if(H > 400):
+	print(ext,"extras e",fal,"de falta")
+	print("R$",round(500.00, 2))
+elif(H <=400):
+	print(ext,"extras e",fal,"de falta")
+	print("R$",round(100.00, 2))
+	
+-- EXECUTION TIME:
+0.775413
+-- TEST CASE 1:
+---- input:
+420
+20
+---- correct output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+---- user output:
+420.0 extras e 20.0 de falta
+R$ 500.0
+-- TEST CASE 2:
+---- input:
+400.5
+100
+---- correct output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+---- user output:
+400.5 extras e 100.0 de falta
+R$ 100.0
+-- TEST CASE 3:
+---- input:
+300
+44
+---- correct output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+---- user output:
+300.0 extras e 44.0 de falta
+R$ 100.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,74 @@
+== SUBMITION (2019-06-30 23:47:39) 
+-- CODE:
+from numpy import *
+from numpy.linalg import *
+dc1 = input("digite a cidade 1: ")
+
+matriz = array([[0,2,11,6,15,11,1],
+				  [2,0,7,12,4,2,15],
+				  [11,7,0,11,8,3,13],
+				  [6,12,11,0,10,2,1],
+				  [15,4,8,10,0,5,13],
+				  [11,2,3,2,5,0,14],
+				  [1,15,13,1,13,14,0]])
+t=0
+i=0
+j=1
+while(dc1!="-1"):
+	if(i!=j):
+		i=int(dc1[0])-1
+		dc1=input("digite novamente: ")
+	if(dc1!="-1"):
+		j=int(dc1[0])-1
+		t=t+matriz[i,j]
+		dc1=input("digite novamente: ")
+		i=j
+print(t)
+		
+-- EXECUTION TIME:
+1.20031
+-- TEST CASE 1:
+---- input:
+333
+555
+666
+111
+-1
+
+---- correct output:
+24
+---- user output:
+24
+-- TEST CASE 2:
+---- input:
+222
+777
+555
+333
+666
+111
+-1
+
+---- correct output:
+50
+---- user output:
+50
+-- TEST CASE 3:
+---- input:
+111
+222
+111
+333
+111
+555
+111
+777
+-1
+
+---- correct output:
+57
+---- user output:
+57
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

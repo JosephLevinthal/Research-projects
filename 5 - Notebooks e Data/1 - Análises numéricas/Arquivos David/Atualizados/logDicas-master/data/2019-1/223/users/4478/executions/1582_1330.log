@@ -1,0 +1,142 @@
+== TEST (2019-03-30 22:31:19) 
+-- CODE:
+print(250/6 round(250, 2))
+-- ERROR:
+File "XXXX", line 1
+    print(250/6 round(250, 2))
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 22:32:20) 
+-- CODE:
+print(250/4)
+-- OUTPUT:
+62.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 22:33:26) 
+-- CODE:
+print(250/4'(round 250/4, 2)')
+
+-- ERROR:
+File "XXXX", line 1
+    print(250/4'(round 250/4, 2)')
+                                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 22:33:59) 
+-- CODE:
+print(250/4("round 250/4, 2"))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    print(250/4("round 250/4, 2"))
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 22:35:55) 
+-- CODE:
+val =250/4
+print(val round(val, 2))
+-- ERROR:
+File "XXXX", line 2
+    print(val round(val, 2))
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 22:36:55) 
+-- CODE:
+val =250/4
+print(val)
+round(val, 2)
+-- OUTPUT:
+62.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 22:39:19) 
+-- CODE:
+val =250/4
+print(val(round(val, 2)))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print(val(round(val, 2)))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 22:46:17) 
+-- CODE:
+val =250/6
+print(val(round(val, 2)))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print(val(round(val, 2)))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 22:46:52) 
+-- CODE:
+val =250/6
+print(round(val, 2))
+-- OUTPUT:
+41.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 22:48:15) 
+-- CODE:
+val =41,6666666
+print(round(val, 2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    print(round(val, 2))
+TypeError: type tuple doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 22:48:40) 
+-- CODE:
+val =41.6666666
+print(round(val, 2))
+-- OUTPUT:
+41.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 22:49:04) 
+-- CODE:
+val =41.66666
+-- OUTPUT:
+41.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 22:49:54) 
+-- CODE:
+print(250/6)
+-- OUTPUT:
+41.666666666666664
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 22:50:54) 
+-- CODE:
+print(round (250/6, 2))
+-- OUTPUT:
+41.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 23:07:21) 
+-- CODE:
+print(round (250/6, 2))
+-- OUTPUT:
+41.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 23:35:05) 
+-- CODE:
+print(round (250/6, 2))
+-- OUTPUT:
+41.67
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-30 23:35:10) 
+-- CODE:
+print(round (250/6, 2))
+-- EXECUTION TIME:
+0.146679
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+41.67
+---- user output:
+41.67
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

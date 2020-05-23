@@ -1,0 +1,854 @@
+== TEST (2019-04-16 10:21:11) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500
+qf = q0*(1 + j)**t
+vt = vp - qf
+if(vt >= qf):
+	print(round(vt, 2))
+	print("sim")
+else:
+	print(round(vt, 2))
+	print("nao")
+	
+-- OUTPUT:
+-14240252.76
+nao
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:21:47) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500
+qf = q0*(1 + j)**t
+vt = vp + qf
+if(vt >= qf):
+	print(round(vt, 2))
+	print("sim")
+else:
+	print(round(vt, 2))
+	print("nao")
+	
+-- OUTPUT:
+14490752.76
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:23:16) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500
+qf = q0*(1 + j)**t
+vl = vp - qf
+vt = vl + vp 
+if(vt >= qf):
+	print(round(vt, 2))
+	print("sim")
+else:
+	print(round(vt, 2))
+	print("nao")
+	
+-- OUTPUT:
+-14115002.76
+nao
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:24:05) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500
+qf = q0*(1 + j)**t
+vl = vp - qf
+vt = vl + vp 
+if(vt >= qf):
+	print(round(vt, 2))
+	print("sim")
+else:
+	print(round(vt, 2))
+	print("nao")
+	
+-- EXECUTION TIME:
+0.207365
+-- TEST CASE 1:
+---- input:
+0.29
+125250
+---- correct output:
+14365502.76
+Sim
+---- user output:
+-14115002.76
+nao
+-- TEST CASE 2:
+---- input:
+0.15
+300000
+---- correct output:
+229727.78
+Nao
+---- user output:
+370272.22
+sim
+-- TEST CASE 3:
+---- input:
+0.2
+150000
+---- correct output:
+1063202.81
+Sim
+---- user output:
+-763202.81
+nao
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:26:14) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500
+qf = q0*(1 + j)**t
+v = vp - qf
+vt = vp + v
+if(vt >= qf):
+	print(round(vt, 2))
+	print("sim")
+else:
+	print(round(vt, 2))
+	print("nao")
+	
+-- OUTPUT:
+-14115002.76
+nao
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:26:57) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500
+qf = q0*(1 + j)**t
+vt = vp - qf
+
+if(vt >= qf):
+	print(round(vt, 2))
+	print("sim")
+else:
+	print(round(vt, 2))
+	print("nao")
+	
+-- OUTPUT:
+-14240252.76
+nao
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:29:38) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500
+qf = q0*(1 + j)**t
+
+if(vp >= qf):
+	print(round(vp, 2))
+	print("sim")
+else:
+	print(round(vp, 2))
+	print("nao")
+	
+-- OUTPUT:
+125250.0
+nao
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:29:57) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500
+qf = q0*(1 + j)**t
+
+if(vp >= qf):
+	print(round(vp, 2))
+	print("sim")
+else:
+	print(round(vp, 2))
+	print("nao")
+	
+-- EXECUTION TIME:
+0.204317
+-- TEST CASE 1:
+---- input:
+0.29
+125250
+---- correct output:
+14365502.76
+Sim
+---- user output:
+125250.0
+nao
+-- TEST CASE 2:
+---- input:
+0.15
+300000
+---- correct output:
+229727.78
+Nao
+---- user output:
+300000.0
+sim
+-- TEST CASE 3:
+---- input:
+0.2
+150000
+---- correct output:
+1063202.81
+Sim
+---- user output:
+150000.0
+nao
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:30:29) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500
+qf = q0*(1 + j)**t
+
+if(qf >= vp):
+	print(round(qf, 2))
+	print("sim")
+else:
+	print(round(qf, 2))
+	print("nao")
+	
+-- OUTPUT:
+14365502.76
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:30:41) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500
+qf = q0*(1 + j)**t
+
+if(qf >= vp):
+	print(round(qf, 2))
+	print("sim")
+else:
+	print(round(qf, 2))
+	print("nao")
+	
+-- EXECUTION TIME:
+0.168502
+-- TEST CASE 1:
+---- input:
+0.29
+125250
+---- correct output:
+14365502.76
+Sim
+---- user output:
+14365502.76
+sim
+-- TEST CASE 2:
+---- input:
+0.15
+300000
+---- correct output:
+229727.78
+Nao
+---- user output:
+229727.78
+nao
+-- TEST CASE 3:
+---- input:
+0.2
+150000
+---- correct output:
+1063202.81
+Sim
+---- user output:
+1063202.81
+sim
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:31:07) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500
+qf = q0*(1 + j)**t
+
+if(qf >= vp):
+	print(round(qf, 2))
+	print("sim")
+else:
+	print(round(qf, 2))
+	print("nao")
+	
+-- OUTPUT:
+14365502.76
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:31:23) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500
+qf = q0*(1 + j)**t
+
+if(qf >= vp):
+	print(round(qf, 2))
+	print("sim")
+else:
+	print(round(qf, 2))
+	print("nao")
+	
+-- EXECUTION TIME:
+0.192579
+-- TEST CASE 1:
+---- input:
+0.29
+125250
+---- correct output:
+14365502.76
+Sim
+---- user output:
+14365502.76
+sim
+-- TEST CASE 2:
+---- input:
+0.15
+300000
+---- correct output:
+229727.78
+Nao
+---- user output:
+229727.78
+nao
+-- TEST CASE 3:
+---- input:
+0.2
+150000
+---- correct output:
+1063202.81
+Sim
+---- user output:
+1063202.81
+sim
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:32:25) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500.0
+qf = q0*(1 + j)**t
+
+if(qf >= vp):
+	print(round(qf, 2))
+	print("sim")
+else:
+	print(round(qf, 2))
+	print("nao")
+	
+-- EXECUTION TIME:
+0.130783
+-- TEST CASE 1:
+---- input:
+0.29
+125250
+---- correct output:
+14365502.76
+Sim
+---- user output:
+14365502.76
+sim
+-- TEST CASE 2:
+---- input:
+0.15
+300000
+---- correct output:
+229727.78
+Nao
+---- user output:
+229727.78
+nao
+-- TEST CASE 3:
+---- input:
+0.2
+150000
+---- correct output:
+1063202.81
+Sim
+---- user output:
+1063202.81
+sim
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:33:08) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500.0
+qf = q0*(1 + j)**t
+
+if(qf > vp):
+	print(round(qf, 2))
+	print("sim")
+else:
+	print(round(qf, 2))
+	print("nao")
+	
+-- EXECUTION TIME:
+0.162033
+-- TEST CASE 1:
+---- input:
+0.29
+125250
+---- correct output:
+14365502.76
+Sim
+---- user output:
+14365502.76
+sim
+-- TEST CASE 2:
+---- input:
+0.15
+300000
+---- correct output:
+229727.78
+Nao
+---- user output:
+229727.78
+nao
+-- TEST CASE 3:
+---- input:
+0.2
+150000
+---- correct output:
+1063202.81
+Sim
+---- user output:
+1063202.81
+sim
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:33:10) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500.0
+qf = q0*(1 + j)**t
+
+if(qf > vp):
+	print(round(qf, 2))
+	print("sim")
+else:
+	print(round(qf, 2))
+	print("nao")
+	
+-- EXECUTION TIME:
+0.158473
+-- TEST CASE 1:
+---- input:
+0.29
+125250
+---- correct output:
+14365502.76
+Sim
+---- user output:
+14365502.76
+sim
+-- TEST CASE 2:
+---- input:
+0.15
+300000
+---- correct output:
+229727.78
+Nao
+---- user output:
+14365502.76
+sim
+-- TEST CASE 3:
+---- input:
+0.2
+150000
+---- correct output:
+1063202.81
+Sim
+---- user output:
+14365502.76
+sim
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:33:11) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500.0
+qf = q0*(1 + j)**t
+
+if(qf > vp):
+	print(round(qf, 2))
+	print("sim")
+else:
+	print(round(qf, 2))
+	print("nao")
+	
+-- EXECUTION TIME:
+0.160848
+-- TEST CASE 1:
+---- input:
+0.29
+125250
+---- correct output:
+14365502.76
+Sim
+---- user output:
+14365502.76
+sim
+-- TEST CASE 2:
+---- input:
+0.15
+300000
+---- correct output:
+229727.78
+Nao
+---- user output:
+14365502.76
+sim
+-- TEST CASE 3:
+---- input:
+0.2
+150000
+---- correct output:
+1063202.81
+Sim
+---- user output:
+229727.78
+nao
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:33:11) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500.0
+qf = q0*(1 + j)**t
+
+if(qf > vp):
+	print(round(qf, 2))
+	print("sim")
+else:
+	print(round(qf, 2))
+	print("nao")
+	
+-- EXECUTION TIME:
+0.205802
+-- ERROR:
+sh: 1: cannot open /home/codebench/codes/1664/2971/cbtemp.txt: No such file
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:33:11) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500.0
+qf = q0*(1 + j)**t
+
+if(qf > vp):
+	print(round(qf, 2))
+	print("sim")
+else:
+	print(round(qf, 2))
+	print("nao")
+	
+-- EXECUTION TIME:
+0.160519
+-- ERROR:
+sh: 1: cannot open /home/codebench/codes/1664/2971/cbtemp.txt: No such file
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:33:12) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500.0
+qf = q0*(1 + j)**t
+
+if(qf > vp):
+	print(round(qf, 2))
+	print("sim")
+else:
+	print(round(qf, 2))
+	print("nao")
+	
+-- EXECUTION TIME:
+0.165371
+-- TEST CASE 1:
+---- input:
+0.29
+125250
+---- correct output:
+14365502.76
+Sim
+---- user output:
+14365502.76
+sim
+-- TEST CASE 2:
+---- input:
+0.15
+300000
+---- correct output:
+229727.78
+Nao
+---- user output:
+229727.78
+nao
+-- TEST CASE 3:
+---- input:
+0.2
+150000
+---- correct output:
+1063202.81
+Sim
+---- user output:
+1063202.81
+sim
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:33:12) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500.0
+qf = q0*(1 + j)**t
+
+if(qf > vp):
+	print(round(qf, 2))
+	print("sim")
+else:
+	print(round(qf, 2))
+	print("nao")
+	
+-- EXECUTION TIME:
+0.198478
+-- TEST CASE 1:
+---- input:
+0.29
+125250
+---- correct output:
+14365502.76
+Sim
+---- user output:
+1063202.81
+sim
+-- TEST CASE 2:
+---- input:
+0.15
+300000
+---- correct output:
+229727.78
+Nao
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+0.2
+150000
+---- correct output:
+1063202.81
+Sim
+---- user output:
+1063202.81
+sim
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:33:37) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500.0
+qf = q0*(1 + j)**t
+
+if(qf > vp):
+	print(round(qf, 2))
+	print("sim")
+else:
+	print(round(qf, 2))
+	print("nao")
+	
+-- OUTPUT:
+14365502.76
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:33:50) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+q0 = 1500.0
+qf = q0*(1 + j)**t
+
+if(qf > vp):
+	print(round(qf, 2))
+	print("sim")
+else:
+	print(round(qf, 2))
+	print("nao")
+	
+-- OUTPUT:
+14365502.76
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:35:46) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+qi = 1500.0
+qf = qi*(1 + j)**t
+
+if(qf >= vp):
+	print(round(qf, 2))
+	print("sim")
+else:
+	print(round(qf, 2))
+	print("nao")
+	
+-- EXECUTION TIME:
+0.195784
+-- TEST CASE 1:
+---- input:
+0.29
+125250
+---- correct output:
+14365502.76
+Sim
+---- user output:
+14365502.76
+sim
+-- TEST CASE 2:
+---- input:
+0.15
+300000
+---- correct output:
+229727.78
+Nao
+---- user output:
+229727.78
+nao
+-- TEST CASE 3:
+---- input:
+0.2
+150000
+---- correct output:
+1063202.81
+Sim
+---- user output:
+1063202.81
+sim
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:36:05) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+qi = 1500.0
+qf = qi*(1 + j)**t
+
+if(qf >= vp):
+	print(round(qf, 2))
+	print("sim")
+else:
+	print(round(qf, 2))
+	print("nao")
+	
+-- OUTPUT:
+14365502.76
+sim
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:37:19) 
+-- CODE:
+j = float(input("taxa de juros:"))
+vp = float(input("valor do apartamento:"))
+t = 36
+qi = 1500.0
+qf = qi*(1 + j)**t
+
+if(qf >= vp):
+	print(round(qf, 2))
+	print("Sim")
+else:
+	print(round(qf, 2))
+	print("Nao")
+	
+-- EXECUTION TIME:
+0.197962
+-- TEST CASE 1:
+---- input:
+0.29
+125250
+---- correct output:
+14365502.76
+Sim
+---- user output:
+14365502.76
+Sim
+-- TEST CASE 2:
+---- input:
+0.15
+300000
+---- correct output:
+229727.78
+Nao
+---- user output:
+229727.78
+Nao
+-- TEST CASE 3:
+---- input:
+0.2
+150000
+---- correct output:
+1063202.81
+Sim
+---- user output:
+1063202.81
+Sim
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

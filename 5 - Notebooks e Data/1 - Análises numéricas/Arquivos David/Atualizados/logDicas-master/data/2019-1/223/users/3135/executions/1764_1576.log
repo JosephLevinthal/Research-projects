@@ -1,0 +1,281 @@
+== TEST (2019-05-23 15:57:33) 
+-- CODE:
+from numpy import*
+
+e= array(eval(input("Insira a sequencia de jogadas de Eusapia: ")))
+b= array(eval(input("Insira a sequencia de jogadas de Barsanulfo: ")))
+
+print(e)
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 16:42:50) 
+-- CODE:
+from numpy import*
+
+e= array(eval(input("Insira a sequencia de jogadas de Eusapia: ")))
+b= array(eval(input("Insira a sequencia de jogadas de Barsanulfo: ")))
+
+i=0
+ev= 0
+bv= 0 
+
+while (i>size(e) and i>size(b)):
+	if (e[i]==11 and b[i]==11): #EMPATE/PEDRAS
+		ev= ev + 1 
+		bv= bv + 1
+	elif (e[i]==11 and b[i]==22): #PEDRA X PAPEL
+		bv= bv + 1
+	elif (e[i]==11 and b[i]==33): #PEDRA X TESOURA
+		ev= ev + 1
+	
+	elif (e[i]==22 and b[i]==22): #EMPATE/PAPEIS
+		ev= ev + 1 
+		bv= bv + 1
+	elif (e[i]==22 and b[i]==33): #PAPEL X TESOURA
+		bv= bv + 1
+	elif (e[i]==22 and b[i]==11): #PEDRA X PAPEL
+		ev= ev + 1
+	
+	elif(e[i]==33 and b[i]==33): #EMPATE/TESOURAS
+		ev= ev + 1 
+		bv= bv + 1
+	elif(e[i]==33 and b[i]==11): #TESOURA X PEDRA
+		bv= bv+1
+	elif(e[i]==33 and b[i]==22): #TESOURA X PAPEL
+		ev= ev + 1
+	i+=1
+print(i)
+print(bv)
+print(ev)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 16:45:18) 
+-- CODE:
+from numpy import*
+
+e= array(eval(input("Insira a sequencia de jogadas de Eusapia: ")))
+b= array(eval(input("Insira a sequencia de jogadas de Barsanulfo: ")))
+
+i=0
+ev= 0
+bv= 0 
+
+while (i<size(e) and i<size(b)):
+	if (e[i]==11 and b[i]==11): #EMPATE/PEDRAS
+		ev= ev + 1 
+		bv= bv + 1
+	elif (e[i]==11 and b[i]==22): #PEDRA X PAPEL
+		bv= bv + 1
+	elif (e[i]==11 and b[i]==33): #PEDRA X TESOURA
+		ev= ev + 1
+	
+	elif (e[i]==22 and b[i]==22): #EMPATE/PAPEIS
+		ev= ev + 1 
+		bv= bv + 1
+	elif (e[i]==22 and b[i]==33): #PAPEL X TESOURA
+		bv= bv + 1
+	elif (e[i]==22 and b[i]==11): #PEDRA X PAPEL
+		ev= ev + 1
+	
+	elif(e[i]==33 and b[i]==33): #EMPATE/TESOURAS
+		ev= ev + 1 
+		bv= bv + 1
+	elif(e[i]==33 and b[i]==11): #TESOURA X PEDRA
+		bv= bv+1
+	elif(e[i]==33 and b[i]==22): #TESOURA X PAPEL
+		ev= ev + 1
+	i+=1
+print(i)
+print(bv)
+print(ev)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 16:47:50) 
+-- CODE:
+from numpy import*
+
+e= array(eval(input("Insira a sequencia de jogadas de Eusapia: ")))
+b= array(eval(input("Insira a sequencia de jogadas de Barsanulfo: ")))
+
+i=0
+ev= 0
+bv= 0 
+
+while (i<size(e) and i<size(b)):
+	if (e[i]==11 and b[i]==11): #EMPATE/PEDRAS
+		ev= ev + 1 
+		bv= bv + 1
+	elif (e[i]==11 and b[i]==22): #PEDRA X PAPEL
+		bv= bv + 1
+	elif (e[i]==11 and b[i]==33): #PEDRA X TESOURA
+		ev= ev + 1
+	
+	elif (e[i]==22 and b[i]==22): #EMPATE/PAPEIS
+		ev= ev + 1 
+		bv= bv + 1
+	elif (e[i]==22 and b[i]==33): #PAPEL X TESOURA
+		bv= bv + 1
+	elif (e[i]==22 and b[i]==11): #PEDRA X PAPEL
+		ev= ev + 1
+	
+	elif(e[i]==33 and b[i]==33): #EMPATE/TESOURAS
+		ev= ev + 1 
+		bv= bv + 1
+	elif(e[i]==33 and b[i]==11): #TESOURA X PEDRA
+		bv= bv+1
+	elif(e[i]==33 and b[i]==22): #TESOURA X PAPEL
+		ev= ev + 1
+	i+=1
+print(i)
+if (bv > ev):
+	print("BARSANULFO"):
+elif (ev > bv):
+	print("EUSAPIA")
+else:
+	print("EMPATE")
+-- ERROR:
+File "XXXX", line 37
+    print("BARSANULFO"):
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-23 16:48:00) 
+-- CODE:
+from numpy import*
+
+e= array(eval(input("Insira a sequencia de jogadas de Eusapia: ")))
+b= array(eval(input("Insira a sequencia de jogadas de Barsanulfo: ")))
+
+i=0
+ev= 0
+bv= 0 
+
+while (i<size(e) and i<size(b)):
+	if (e[i]==11 and b[i]==11): #EMPATE/PEDRAS
+		ev= ev + 1 
+		bv= bv + 1
+	elif (e[i]==11 and b[i]==22): #PEDRA X PAPEL
+		bv= bv + 1
+	elif (e[i]==11 and b[i]==33): #PEDRA X TESOURA
+		ev= ev + 1
+	
+	elif (e[i]==22 and b[i]==22): #EMPATE/PAPEIS
+		ev= ev + 1 
+		bv= bv + 1
+	elif (e[i]==22 and b[i]==33): #PAPEL X TESOURA
+		bv= bv + 1
+	elif (e[i]==22 and b[i]==11): #PEDRA X PAPEL
+		ev= ev + 1
+	
+	elif(e[i]==33 and b[i]==33): #EMPATE/TESOURAS
+		ev= ev + 1 
+		bv= bv + 1
+	elif(e[i]==33 and b[i]==11): #TESOURA X PEDRA
+		bv= bv+1
+	elif(e[i]==33 and b[i]==22): #TESOURA X PAPEL
+		ev= ev + 1
+	i+=1
+print(i)
+if (bv > ev):
+	print("BARSANULFO")
+elif (ev > bv):
+	print("EUSAPIA")
+else:
+	print("EMPATE")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-23 16:48:14) 
+-- CODE:
+from numpy import*
+
+e= array(eval(input("Insira a sequencia de jogadas de Eusapia: ")))
+b= array(eval(input("Insira a sequencia de jogadas de Barsanulfo: ")))
+
+i=0
+ev= 0
+bv= 0 
+
+while (i<size(e) and i<size(b)):
+	if (e[i]==11 and b[i]==11): #EMPATE/PEDRAS
+		ev= ev + 1 
+		bv= bv + 1
+	elif (e[i]==11 and b[i]==22): #PEDRA X PAPEL
+		bv= bv + 1
+	elif (e[i]==11 and b[i]==33): #PEDRA X TESOURA
+		ev= ev + 1
+	
+	elif (e[i]==22 and b[i]==22): #EMPATE/PAPEIS
+		ev= ev + 1 
+		bv= bv + 1
+	elif (e[i]==22 and b[i]==33): #PAPEL X TESOURA
+		bv= bv + 1
+	elif (e[i]==22 and b[i]==11): #PEDRA X PAPEL
+		ev= ev + 1
+	
+	elif(e[i]==33 and b[i]==33): #EMPATE/TESOURAS
+		ev= ev + 1 
+		bv= bv + 1
+	elif(e[i]==33 and b[i]==11): #TESOURA X PEDRA
+		bv= bv+1
+	elif(e[i]==33 and b[i]==22): #TESOURA X PAPEL
+		ev= ev + 1
+	i+=1
+print(i)
+if (bv > ev):
+	print("BARSANULFO")
+elif (ev > bv):
+	print("EUSAPIA")
+else:
+	print("EMPATE")
+-- EXECUTION TIME:
+0.559701
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+EUSAPIA
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+EMPATE
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+BARSANULFO
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

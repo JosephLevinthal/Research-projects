@@ -1,0 +1,1 @@
+consumo_de_agua= int(input(m**3))

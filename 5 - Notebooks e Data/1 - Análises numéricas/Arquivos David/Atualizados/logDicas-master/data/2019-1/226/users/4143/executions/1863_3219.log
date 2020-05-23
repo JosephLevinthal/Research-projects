@@ -1,0 +1,86 @@
+== TEST (2019-07-02 11:25:11) 
+-- CODE:
+from numpy.linalg import*
+from numpy import*
+a = array(eval(input("Vetor: ")))
+tot = 0 
+for i in range(n):
+	for j in range(n):
+		if (i<j):
+			tot = tot + a[i,j]
+		elif (j<i):
+			tot = tot + a[i,j]
+print(mean(round(tot,2))
+-- ERROR:
+File "XXXX", line 12
+    
+                            ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:26:07) 
+-- CODE:
+from numpy.linalg import*
+from numpy import*
+a = array(eval(input("Vetor: ")))
+tot = 0 
+for i in range(n):
+	for j in range(n):
+		if (i<j):
+			tot = tot + a[i,j]
+		elif (j<i):
+			tot = tot + a[i,j]
+b = mean(tot)
+print(round(b,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy.linalg import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 11:26:32) 
+-- CODE:
+from numpy.linalg import*
+from numpy import*
+a = array(eval(input("Vetor: ")))
+tot = 0 
+for i in range(a):
+	for j in range(a):
+		if (i<j):
+			tot = tot + a[i,j]
+		elif (j<i):
+			tot = tot + a[i,j]
+b = mean(tot)
+print(round(b,2))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy.linalg import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 11:49:36) 
+-- CODE:
+from numpy.linalg import*
+from numpy import*
+a = array(eval(input("Vetor: ")))
+
+tot = 0 
+for i in range(a):
+	for j in range(a):
+		if (i<j):
+			tot = tot + a[i,j]
+		elif (j<i):
+			tot = tot + a[i,j]
+b = mean(tot)
+print(round(b,2))
+
+-- EXECUTION TIME:
+1.15382
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1863/3219/main.py", line 6, in <module>
+    for i in range(a):
+TypeError: only integer scalar arrays can be converted to a scalar index
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

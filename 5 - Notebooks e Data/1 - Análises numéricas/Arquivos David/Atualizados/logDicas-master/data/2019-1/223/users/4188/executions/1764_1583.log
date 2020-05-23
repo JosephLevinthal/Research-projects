@@ -1,0 +1,397 @@
+== TEST (2019-05-28 22:50:41) 
+-- CODE:
+a=str(input("digite: "))
+if(len(a)>=3 and len(a)%3==0):
+	b=len(a)/3
+	print(b)
+-- OUTPUT:
+1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 22:51:37) 
+-- CODE:
+a=str(input("digite: "))
+if(len(a)>=3 and len(a)%3==0):
+	b=len(a)/3
+	print(b(dtype=int))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(b(dtype=int))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 23:09:51) 
+-- CODE:
+a=str(input("digite: "))
+if(len(a)>=3 and len(a)%3==0):
+	b=len(a)/3
+	print(b,dtype=int)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(b,dtype=int)
+TypeError: 'dtype' is an invalid keyword argument for this function
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 23:11:20) 
+-- CODE:
+a=str(input("digite: "))
+if(len(a)>=3 and len(a)%3==0):
+	b=len(a)/3
+	print(b(b,dtype=int))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(b(b,dtype=int))
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 23:12:41) 
+-- CODE:
+a=str(input("digite: "))
+if(len(a)>=3 and len(a)%3==0):
+	b=len(a)/3
+print(b)
+-- OUTPUT:
+1.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 23:13:18) 
+-- CODE:
+a=str(input("digite: "))
+if(len(a)>=3 and len(a)%3==0):
+	b=len(a)/3
+print(b -1)
+-- OUTPUT:
+0.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 23:15:07) 
+-- CODE:
+a=str(input("digite: "))
+if(len(a)>=3 and len(a)%3==0):
+	b=len(a)/3
+	c=b(1,dytpe=int)
+print(b -1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    c=b(1,dytpe=int)
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 21:31:50) 
+-- CODE:
+a=str(input("digite: "))
+p = 0
+b = 3
+c=0
+copia = ""
+while(p < len(a)):
+	if(len(a)>=2 and len(a)%3==0):
+		copia = copia + a[c:b] + "."
+	if(len(a)==2):
+		print(a)
+print(copia)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    c=b(1,dytpe=int)
+TypeError: 'float' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 21:34:49) 
+-- CODE:
+a=str(input("digite: "))
+p = 0
+b = 3
+c=0
+copia = ""
+while(p < len(a)):
+	if(len(a)>=2 and len(a)%3==0):
+		copia = copia + a[c:b] + "."
+	if(len(a)==2):
+		print(a)
+	b = b +3
+	p = p + 3
+	c = c + 3
+print(copia)
+-- OUTPUT:
+123.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 21:36:53) 
+-- CODE:
+a=str(input("digite: "))
+p = 0
+b = 3
+c=0
+copia = ""
+while(p < len(a)):
+	if(len(a)>=2 and len(a)%3==0):
+		copia = copia + a[c:b] + "."
+	if(len(a)==2):
+		print(a)
+	b = b +3
+	p = p + 3
+	c = c + 3
+print(copia)
+-- OUTPUT:
+123.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 21:38:16) 
+-- CODE:
+a=str(input("digite: "))
+p = 0
+b = 3
+c=0
+copia = ""
+while(p < len(a)):
+	if(len(a)>=2 and len(a)%3==0):
+		copia = copia + a[c:b] + t
+	if(len(a)==2):
+		print(a)
+	b = b +3
+	p = p + 3
+	c = c + 3
+	t = "."
+print(copia)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 8, in <module>
+    copia = copia + a[c:b] + t
+NameError: name 't' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 21:38:45) 
+-- CODE:
+a=str(input("digite: "))
+p = 0
+b = 3
+c=0
+t=0
+copia = ""
+while(p < len(a)):
+	if(len(a)>=2 and len(a)%3==0):
+		copia = copia + a[c:b] + t
+	if(len(a)==2):
+		print(a)
+	b = b +3
+	p = p + 3
+	c = c + 3
+	t = "."
+print(copia)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    copia = copia + a[c:b] + t
+TypeError: must be str, not int
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 21:39:25) 
+-- CODE:
+a=str(input("digite: "))
+p = 0
+b = 3
+c=0
+copia = ""
+while(p < len(a)):
+	t = "."
+	if(len(a)>=2 and len(a)%3==0):
+		copia = copia + a[c:b] + t
+	if(len(a)==2):
+		print(a)
+	b = b +3
+	p = p + 3
+	c = c + 3
+print(copia)
+-- OUTPUT:
+123.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 21:39:46) 
+-- CODE:
+a=str(input("digite: "))
+p = 0
+b = 3
+c=0
+copia = ""
+while(p < len(a)):
+	t = "."
+	if(len(a)>=2 and len(a)%3==0):
+		copia = copia + a[c:b] + t
+	if(len(a)==2):
+		print(a)
+	b = b +3
+	p = p + 3
+	c = c + 3
+print(copia)
+-- OUTPUT:
+123.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 21:50:25) 
+-- CODE:
+a=str(input("digite: "))
+p = 0
+b = 3
+c=0
+copia = ""
+while(p < len(a)):
+	t = a[p:b]
+	if (len(a)==2):
+		copia = copia + t
+		print(copia)
+	else (len(a) - 3>=2 and len(a)%3==0):
+		copia = copia + t + "."
+	b = b +3
+	p = p + 3
+	c = c + 3
+print(copia)
+-- ERROR:
+File "XXXX", line 11
+    else (len(a) - 3>=2 and len(a)%3==0):
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 21:50:42) 
+-- CODE:
+a=str(input("digite: "))
+p = 0
+b = 3
+c=0
+copia = ""
+while(p < len(a)):
+	t = a[p:b]
+	if (len(a)==2):
+		copia = copia + t
+		print(copia)
+	else ((len(a) - 3)>=2 and len(a)%3==0):
+		copia = copia + t + "."
+	b = b +3
+	p = p + 3
+	c = c + 3
+print(copia)
+-- ERROR:
+File "XXXX", line 11
+    else ((len(a) - 3)>=2 and len(a)%3==0):
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 21:58:04) 
+-- CODE:
+a=str(input("digite: "))
+p = 0
+copia = ""
+while(p < len(a)):
+	if (len(a)>=2 and len(a)%3==0):
+		x = a[p:p+3]
+		if i < len(a)-3 :
+			copia = copia + x + "."
+		else:
+			copia = copia + x
+print(copia)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    if i < len(a)-3 :
+NameError: name 'i' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 21:58:50) 
+-- CODE:
+a=str(input("digite: "))
+p = 0
+copia = ""
+while(p < len(a)):
+	if (len(a)>=2 and len(a)%3==0):
+		x = a[p:p+3]
+		if p < len(a)-3:
+			copia = copia + x + "."
+		else:
+			copia = copia + x
+		p = p + 3
+print(copia)
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 21:58:56) 
+-- CODE:
+a=str(input("digite: "))
+p = 0
+copia = ""
+while(p < len(a)):
+	if (len(a)>=2 and len(a)%3==0):
+		x = a[p:p+3]
+		if p < len(a)-3:
+			copia = copia + x + "."
+		else:
+			copia = copia + x
+		p = p + 3
+print(copia)
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:06:37) 
+-- CODE:
+a=str(input("digite: "))
+p = 0
+copia = ""
+while(p < len(a)):
+	if (len(a)>=2 and len(a)%3==0):
+		x = a[p:p+3]
+		if p < len(a)-3:
+			copia = copia + x + "."
+		else:
+			copia = copia + x
+		p = p + 3
+print(copia)
+-- OUTPUT:
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-29 22:07:34) 
+-- CODE:
+a=str(input("digite: "))
+p = 0
+copia = ""
+while(p < len(a)):
+	if (len(a)>=2 and len(a)%3==0):
+		x = a[p:p+3]
+		if p < len(a)-3:
+			copia = copia + x + "."
+		else:
+			copia = copia + x
+			print(copia)
+		p = p + 3
+print(copia)
+-- OUTPUT:
+123
+123
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 22:08:17) 
+-- CODE:
+a=str(input("digite: "))
+p = 0
+copia = ""
+while(p < len(a)):
+	if (len(a)>=2 and len(a)%3==0):
+		x = a[p:p+3]
+		if p < len(a)-3:
+			copia = copia + x + "."
+		else:
+			copia = copia + x
+		p = p + 3
+print(copia)
+-- EXECUTION TIME:
+0.227633
+-- TEST CASE 1:
+---- input:
+123
+---- correct output:
+123
+---- user output:
+123
+-- TEST CASE 2:
+---- input:
+123456789000987654321
+---- correct output:
+123.456.789.000.987.654.321
+---- user output:
+123.456.789.000.987.654.321
+-- TEST CASE 3:
+---- input:
+987654321
+---- correct output:
+987.654.321
+---- user output:
+987.654.321
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,115 @@
+== TEST (2019-03-21 19:42:14) 
+-- CODE:
+n = input("objeto")
+
+print("abra" + 4*n)
+-- OUTPUT:
+abralivrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 19:42:29) 
+-- CODE:
+n = input("objeto: ")
+
+print("abra " + 4*n)
+-- OUTPUT:
+abra livrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 19:43:00) 
+-- CODE:
+n = input("objeto: ")
+
+print("abra " + 4*(n ))
+-- OUTPUT:
+abra livrolivrolivrolivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 19:43:27) 
+-- CODE:
+n = input("objeto: ")
+
+print("abra " + 4*(n + ))
+-- ERROR:
+File "XXXX", line 3
+    print("abra " + 4*(n + ))
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 19:44:29) 
+-- CODE:
+o = input("objeto: ")
+n = int(input("quantas vezes: "))
+print("abra " + n*(o + ))
+-- ERROR:
+File "XXXX", line 3
+    print("abra " + n*(o + ))
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 19:44:44) 
+-- CODE:
+o = input("objeto: ")
+n = int(input("quantas vezes: "))
+print("abra " + n*(o + " " ))
+-- OUTPUT:
+abra livro livro livro livro livro livro livro livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 19:45:46) 
+-- CODE:
+o = input("objeto: ")
+n = int(input("quantas vezes: "))
+print(n*("abra " o + " " ))
+-- ERROR:
+File "XXXX", line 3
+    print(n*("abra " o + " " ))
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 19:46:10) 
+-- CODE:
+o = input("objeto: ")
+n = int(input("quantas vezes: "))
+print(n*("Abra ", o + " " ))
+-- OUTPUT:
+('Abra ', 'livro ', 'Abra ', 'livro ', 'Abra ', 'livro ', 'Abra ', 'livro ', 'Abra ', 'livro ', 'Abra ', 'livro ', 'Abra ', 'livro ', 'Abra ', 'livro ')
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-21 19:46:40) 
+-- CODE:
+o = input("objeto: ")
+n = int(input("quantas vezes: "))
+print(n*("Abra " + o + " " ))
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-21 19:46:59) 
+-- CODE:
+o = input("objeto: ")
+n = int(input("quantas vezes: "))
+print(n*("Abra " + o + " " ))
+-- EXECUTION TIME:
+0.231129
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

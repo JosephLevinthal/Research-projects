@@ -1,0 +1,838 @@
+== TEST (2019-03-20 20:19:53) 
+-- CODE:
+x = abra
+y = porta
+
+print(x+y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    x = abra
+NameError: name 'abra' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:20:04) 
+-- CODE:
+x = "abra"
+y = 'porta'
+
+print(x+y)
+-- OUTPUT:
+abraporta
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:20:10) 
+-- CODE:
+x = "abra"
+y = 'porta'
+
+print(x+""+y)
+-- OUTPUT:
+abraporta
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:20:14) 
+-- CODE:
+x = "abra"
+y = 'porta'
+
+print(x+" "+y)
+-- OUTPUT:
+abra porta
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:20:38) 
+-- CODE:
+x = "abra"
+y = 'porta'
+
+print(x+" "+y*4+".")
+-- OUTPUT:
+abra portaportaportaporta.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:20:49) 
+-- CODE:
+x = "abra"
+y = 'porta'
+
+print((x+" "+y)*4+".")
+-- OUTPUT:
+abra portaabra portaabra portaabra porta.
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-20 20:20:58) 
+-- CODE:
+x = "abra"
+y = 'porta'
+
+print((x+" "+y+" ")*4+".")
+-- EXECUTION TIME:
+0.128612
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+abra porta abra porta abra porta abra porta .
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+abra porta abra porta abra porta abra porta .
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+abra porta abra porta abra porta abra porta .
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:20:59) 
+-- CODE:
+x = "abra"
+y = 'porta'
+
+print((x+" "+y+" ")*4+".")
+-- OUTPUT:
+abra porta abra porta abra porta abra porta .
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:21:20) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+
+print((x+" "+y+" ")*4".")
+-- ERROR:
+File "XXXX", line 4
+    print((x+" "+y+" ")*4".")
+                           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:21:44) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+
+print((x+" "+y+)*3+x+" "+y+".")
+-- ERROR:
+File "XXXX", line 4
+    print((x+" "+y+)*3+x+" "+y+".")
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:21:52) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+
+print((x+" "+y+)*3+x+" "+y+)".")
+-- ERROR:
+File "XXXX", line 4
+    print((x+" "+y+)*3+x+" "+y+)".")
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:22:02) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+
+print((x+" "+y+).")
+-- ERROR:
+File "XXXX", line 4
+    print((x+" "+y+).")
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:22:07) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+
+print((x+" "+y+.")
+-- ERROR:
+File "XXXX", line 4
+    print((x+" "+y+.")
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:22:10) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+
+print(x+" "+y+.")
+-- ERROR:
+File "XXXX", line 4
+    print(x+" "+y+.")
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:22:13) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+
+print(x+" "+y+.)
+-- ERROR:
+File "XXXX", line 4
+    print(x+" "+y+.)
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:22:19) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+
+print(x+" "+y*4.)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(x+" "+y*4.)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:22:25) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+
+print(x+" "+y*4)
+-- OUTPUT:
+Abra portaportaportaporta
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:22:34) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+
+print(x*4+" "+y*4)
+-- OUTPUT:
+AbraAbraAbraAbra portaportaportaporta
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:22:42) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+
+print(x4+" "+y*)
+-- ERROR:
+File "XXXX", line 4
+    print(x4+" "+y*)
+                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:22:44) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+
+print(x4+" "+y)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(x4+" "+y)
+NameError: name 'x4' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:22:48) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+
+print(x+" "+y)
+-- OUTPUT:
+Abra porta
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:22:52) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+
+print(x+" "+y)*4
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(x+" "+y)*4
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:23:16) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+z = x + " " + y
+
+print(z*4)
+-- OUTPUT:
+Abra portaAbra portaAbra portaAbra porta
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:23:25) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+z = x + " " + y + " "
+
+print(z*4)
+-- OUTPUT:
+Abra porta Abra porta Abra porta Abra porta
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:23:33) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+z = x + " " + y + " "
+
+print(z*4 + ".")
+-- OUTPUT:
+Abra porta Abra porta Abra porta Abra porta .
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-20 20:23:35) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+z = x + " " + y + " "
+
+print(z*4 + ".")
+-- EXECUTION TIME:
+0.18454
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra porta Abra porta Abra porta Abra porta .
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra porta Abra porta Abra porta Abra porta .
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra porta Abra porta Abra porta Abra porta .
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:23:43) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+z = x + " " + y + " "
+
+print(z*4)
+-- OUTPUT:
+Abra porta Abra porta Abra porta Abra porta
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-20 20:23:45) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+z = x + " " + y + " "
+
+print(z*4)
+-- EXECUTION TIME:
+0.125485
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra porta Abra porta Abra porta Abra porta
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra porta Abra porta Abra porta Abra porta
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra porta Abra porta Abra porta Abra porta
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:24:02) 
+-- CODE:
+x = "Abra"
+y = 'porta'
+z = x + " " + y + " "
+
+print(z*4)
+-- OUTPUT:
+Abra porta Abra porta Abra porta Abra porta
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:26:04) 
+-- CODE:
+x = "Abra"
+y = input("nome do objeto:")
+w = input("numero de repetiçoes:")
+z = x + " " + y
+
+print(z*w)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print(z*w)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:26:12) 
+-- CODE:
+x = "Abra"
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = x + " " + y
+
+print(z*w)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 6, in <module>
+    print(z*w)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:26:59) 
+-- CODE:
+x = "Abra"
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = x + " " + y
+
+print(z)
+-- OUTPUT:
+Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:27:17) 
+-- CODE:
+x = "Abra"
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = x + " " + y
+
+g = print(z)
+-- OUTPUT:
+Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:27:38) 
+-- CODE:
+x = "Abra"
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = x + " " + y
+
+print(z)
+
+-- OUTPUT:
+Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:28:05) 
+-- CODE:
+x = "Abra"
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = (x + " " + y)*w
+
+print(z)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    z = (x + " " + y)*w
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:28:18) 
+-- CODE:
+x = "Abra"
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = (x + " " + y * w)
+
+print(z)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    z = (x + " " + y * w)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:28:34) 
+-- CODE:
+x = "Abra"
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = str(x + " " + y * w)
+
+print(z)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    z = str(x + " " + y * w)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:29:21) 
+-- CODE:
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = ("Abra" + " " + y)
+z*4
+
+print(z)
+
+-- OUTPUT:
+Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:29:40) 
+-- CODE:
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = ("Abra" + " " + y)
+x = str(z*4)
+
+print(z)
+
+-- OUTPUT:
+Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:29:46) 
+-- CODE:
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = ("Abra" + " " + y)
+x = str(z*4)
+
+print(x)
+
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-20 20:29:54) 
+-- CODE:
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = ("Abra" + " " + y)
+x = str(z*4)
+
+print(x)
+
+-- EXECUTION TIME:
+0.185142
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livroAbra livroAbra livroAbra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carroAbra carroAbra carroAbra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixaAbra caixaAbra caixaAbra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:29:58) 
+-- CODE:
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = ("Abra" + " " + y)
+x = str(z*4)
+
+print(x)
+
+-- OUTPUT:
+Abra livroAbra livroAbra livroAbra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:30:08) 
+-- CODE:
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = ("Abra" + " " + y + " ")
+x = str(z*4)
+
+print(x)
+
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-20 20:30:12) 
+-- CODE:
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = ("Abra" + " " + y + " ")
+x = str(z*4)
+
+print(x)
+
+-- EXECUTION TIME:
+0.1229
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa Abra caixa Abra caixa Abra caixa
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:30:22) 
+-- CODE:
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = ("Abra" + " " + y + " ")
+x = str(z*4)
+
+print(x)
+
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:31:12) 
+-- CODE:
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = ("Abra" + " " + y + " ")
+x = str(z*3)
+g = str(x+"Abra porta")
+
+print(x)
+-- OUTPUT:
+Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:31:21) 
+-- CODE:
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = ("Abra" + " " + y + " ")
+x = str(z*3)
+g = str(x+"Abra porta")
+
+print(g)
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra porta
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-20 20:31:26) 
+-- CODE:
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = ("Abra" + " " + y + " ")
+x = str(z*3)
+g = str(x+"Abra porta")
+
+print(g)
+-- EXECUTION TIME:
+0.281164
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra porta
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro Abra carro Abra porta
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa Abra caixa Abra caixa Abra porta
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:31:45) 
+-- CODE:
+y = input("nome do objeto:")
+w = int(input("numero de repeticoes:")
+z = ("Abra" + " " + y + " ")
+x = str(z*3)
+g = str(x+"Abra porta")
+
+print(g)
+-- ERROR:
+File "XXXX", line 3
+    z = ("Abra" + " " + y + " ")
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:31:54) 
+-- CODE:
+y = input("nome do objeto:")
+w = int(input("numero de repeticoes:")
+z = ("Abra" + " " + y + " ")
+x = str(z*3)
+g = str(x+"Abra porta")
+
+print(g)
+-- ERROR:
+File "XXXX", line 3
+    z = ("Abra" + " " + y + " ")
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:31:59) 
+-- CODE:
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = ("Abra" + " " + y + " ")
+x = str(z*3)
+g = str(x+"Abra porta")
+
+print(g)
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra porta
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:32:25) 
+-- CODE:
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = ("Abra" + " " + y + " ")
+x = str(z*w)
+g = str(x+"Abra porta")
+
+print(g)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    x = str(z*w)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:32:36) 
+-- CODE:
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = ("Abra" + " " + y + " ")
+x = str(z*int(w))
+g = str(x+"Abra porta")
+
+print(g)
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra porta
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-20 20:32:49) 
+-- CODE:
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = ("Abra" + " " + y + " ")
+x = str(z*int(w))
+
+print(x)
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-20 20:32:52) 
+-- CODE:
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = ("Abra" + " " + y + " ")
+x = str(z*int(w))
+
+print(x)
+-- EXECUTION TIME:
+0.183689
+-- TEST CASE 1:
+---- input:
+livro
+8
+---- correct output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+---- user output:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+-- TEST CASE 2:
+---- input:
+carro
+2
+---- correct output:
+Abra carro Abra carro
+---- user output:
+Abra carro Abra carro
+-- TEST CASE 3:
+---- input:
+caixa
+1
+---- correct output:
+Abra caixa
+---- user output:
+Abra caixa
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 17:19:41) 
+-- CODE:
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = ("Abra" + " " + y + " ")
+x = str(z*int(w))
+
+print(x)
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-26 17:20:37) 
+-- CODE:
+y = input("nome do objeto:")
+w = input("numero de repeticoes:")
+z = ("Abra" + " " + y + " ")
+x = (z*int(w))
+
+print(x)
+-- OUTPUT:
+Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

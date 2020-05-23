@@ -1,0 +1,6 @@
+x=int(input("digite o dividendo"))
+y=int(input("digite o divisor"))
+print(x)
+print(y)
+print(x//y)
+print(x%y)

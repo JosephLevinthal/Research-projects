@@ -1,0 +1,238 @@
+== TEST (2019-04-08 10:29:54) 
+-- CODE:
+obj = float(input("Nome do objeto: "))
+rep = float(input("Repeticoes: "))
+print("Abra" + obj)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    obj = float(input())
+ValueError: could not convert string to float: 'livro'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 10:30:14) 
+-- CODE:
+obj = input("Nome do objeto: "))
+rep = float(input("Repeticoes: "))
+print("Abra" + obj)
+
+-- ERROR:
+File "XXXX", line 1
+    obj = input())
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 10:30:21) 
+-- CODE:
+obj = input("Nome do objeto: ")
+rep = float(input("Repeticoes: "))
+print("Abra" + obj)
+
+-- OUTPUT:
+Abralivro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 10:30:39) 
+-- CODE:
+obj = input("Nome do objeto: ")
+rep = float(input("Repeticoes: "))
+print("Abra " + obj)
+
+-- OUTPUT:
+Abra livro
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 10:31:13) 
+-- CODE:
+obj = input("Nome do objeto: ")
+rep = float(input("Repeticoes: "))
+print("Abra " + rep*obj)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print("Abra " + rep*obj)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 10:31:46) 
+-- CODE:
+obj = input("Nome do objeto: ")
+rep = float(input("Repeticoes: "))
+print("Abra " + (rep*obj))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    print("Abra " + (rep*obj))
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 10:33:21) 
+-- CODE:
+obj = input("Nome do objeto: ")
+rep = float(input("Repeticoes: "))
+var = "Abra"
+print( var + rep*obj)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print( var + rep*obj)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 10:33:54) 
+-- CODE:
+obj = input("Nome do objeto: ")
+rep = input("Repeticoes: "))
+var = "Abra"
+print( var + rep*obj)
+
+-- ERROR:
+File "XXXX", line 2
+    rep = input())
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 10:34:05) 
+-- CODE:
+obj = input("Nome do objeto: ")
+rep = input("Repeticoes: ")
+var = "Abra"
+print( var + rep*obj)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print( var + rep*obj)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 10:35:55) 
+-- CODE:
+obj = float(input("Nome do objeto: "))
+rep = float(input("Repeticoes: "))
+var = "Abra"
+varr = (var + obj)*rep
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    obj = float(input())
+ValueError: could not convert string to float: 'livro'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 10:36:13) 
+-- CODE:
+obj = input("Nome do objeto: "))
+rep = float(input("Repeticoes: "))
+var = "Abra"
+varr = (var + obj)*rep
+
+-- ERROR:
+File "XXXX", line 1
+    obj = input())
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 10:36:23) 
+-- CODE:
+obj = input("Nome do objeto: ")
+rep = float(input("Repeticoes: "))
+var = "Abra"
+varr = (var + obj)*rep
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    varr = (var + obj)*rep
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 10:38:51) 
+-- CODE:
+obj = input("Nome do objeto: ")
+rep = input("Repeticoes: ")
+var = "Abra"
+varr = var + obj
+varrr = varr*rep
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    varrr = varr*rep
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 21:21:03) 
+-- CODE:
+obj = input("Nome do objeto: ")
+rep = input("Repeticoes: ")
+result = ("Abra" , obj) * rep
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    result = ("Abra" , obj) * rep
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 21:21:57) 
+-- CODE:
+obj = input("Nome do objeto: ")
+rep = float(input("Repeticoes: "))
+result = ("Abra" , obj) * rep
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    result = ("Abra" , obj) * rep
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 21:22:07) 
+-- CODE:
+obj = input("Nome do objeto: ")
+rep = float(input("Repeticoes: "))
+result = ("Abra" , obj) * rep
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    result = ("Abra" , obj) * rep
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 22:29:39) 
+-- CODE:
+obj = input("Nome do objeto: ")
+N = float(input("Repeticoes: "))
+frase = "Abra" + obj
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    result = ("Abra" , obj) * rep
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 22:30:35) 
+-- CODE:
+obj = input("Nome do objeto: ")
+N = float(input("Repeticoes: "))
+frase = "Abra" + obj
+print(frase*N)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(frase*N)
+TypeError: can't multiply sequence by non-int of type 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 22:31:12) 
+-- CODE:
+obj = input("Nome do objeto: ")
+N = input("Repeticoes: "))
+frase = "Abra" + obj
+print(frase*N)
+-- ERROR:
+File "XXXX", line 2
+    N = input())
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-10 22:31:27) 
+-- CODE:
+obj = input("Nome do objeto: ")
+N = input("Repeticoes: ")
+frase = "Abra" + obj
+print(frase*N)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(frase*N)
+TypeError: can't multiply sequence by non-int of type 'str'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

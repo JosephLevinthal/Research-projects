@@ -1,0 +1,2270 @@
+== TEST (2019-04-28 11:29:10) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+   elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))),3)
+		print("Volume:",(round((vol*1000),3)), "litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 22
+    elif(h==H-r):
+                ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 11:29:55) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+   elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+   elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))),3)
+		print("Volume:",(round((vol*1000),3)), "litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 18
+    elif(h<r):
+             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 11:31:29) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+   elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+   elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))),3)
+		print("Volume:",(round((vol*1000),3)), "litros")
+		
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+		
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+		
+else:
+	print("Entradas invalidas")
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 18
+    elif(h<r):
+             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 11:33:37) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+   elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+    elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))),3)
+		print("Volume:",(round((vol*1000),3)), "litros")
+		
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+		
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+		
+else:
+	print("Entradas invalidas")
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 18
+    elif(h<r):
+             ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 11:34:25) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+      vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+   elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))),3)
+		print("Volume:",(round((vol*1000),3)), "litros")
+		
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+		
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+		
+else:
+	print("Entradas invalidas")
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 19
+    vol = (pi/3)*(h**2)*(3*r-h)
+                              ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 11:34:27) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+      vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+   elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))),3)
+		print("Volume:",(round((vol*1000),3)), "litros")
+		
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+		
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+		
+else:
+	print("Entradas invalidas")
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 19
+    vol = (pi/3)*(h**2)*(3*r-h)
+                              ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 11:34:51) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+      
+#volume da esfera e o volume do cilindro
+   elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))),3)
+		print("Volume:",(round((vol*1000),3)), "litros")
+		
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+		
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+		
+else:
+	print("Entradas invalidas")
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 23
+    elif(h==H-r):
+                ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 11:38:03) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))),3)
+		print("Volume:",(round((vol*1000),3)), "litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- OUTPUT:
+Entradas 11.3 , 5.7 , 2.3
+Volume: 81987.191 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 11:38:22) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))),3)
+		print("Volume:",(round((vol*1000),3)), "litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- EXECUTION TIME:
+0.142257
+-- TEST CASE 1:
+---- input:
+11.3
+5.7
+2.3
+---- correct output:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 81987.191 litros
+---- user output:
+Entradas 11.3 , 5.7 , 2.3
+Volume: 81987.191 litros
+-- TEST CASE 2:
+---- input:
+8.5
+9.5
+2.2
+---- correct output:
+Entradas: 8.5 , 9.5 , 2.2
+Entradas invalidas
+---- user output:
+Entradas 8.5 , 9.5 , 2.2
+Entradas invalidas
+-- TEST CASE 3:
+---- input:
+8
+4
+6
+---- correct output:
+Entradas: 8.0 , 4.0 , 6.0
+Entradas invalidas
+---- user output:
+Entradas 8.0 , 4.0 , 6.0
+Entradas invalidas
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 11:39:19) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))),3)
+		print("Volume:",(round((vol*1000),3)), "litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- OUTPUT:
+Entradas 11.3 , 5.7 , 2.3
+Volume: 81987.191 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 11:42:12) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))),3)
+		print("Volume:",(round((vol*1000),3)), "litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- OUTPUT:
+Entradas 11.3 , 5.7 , 2.3
+Volume: 81987.191 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 11:45:48) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))),3)
+		print("Volume:",(round((vol*1000),3)), "litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- OUTPUT:
+Entradas 11.3 , 5.7 , 2.3
+Volume: 81987.191 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 12:10:20) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3)),3)
+		print("Volume:",(vol*1000),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 24
+    print("Volume:",(vol*1000),"litros")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 12:11:39) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3)),3)
+		print("Volume:",(round((vol*1000),3)),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 24
+    print("Volume:",(round((vol*1000),3)),"litros")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 12:12:53) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3)),3)
+		print("Volume:",(vol*1000),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 24
+    print("Volume:",(vol*1000),"litros")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 12:16:03) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3)),3)
+		print("Volume:",(vol*1000),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 24
+    print("Volume:",(vol*1000),"litros")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-28 12:16:06) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3)),3)
+		print("Volume:",(vol*1000),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- EXECUTION TIME:
+0.139839
+-- ERROR:
+  File "/home/codebench/codes/1671/1102/main.py", line 24
+    print("Volume:",(vol*1000),"litros")
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 16:37:40) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3)),3)
+		print("Volume:",(vol*1000),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 24
+    print("Volume:",(vol*1000),"litros")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 16:37:53) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3)),3)
+		print("Volume:",(vol*1000),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 24
+    print("Volume:",(vol*1000),"litros")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-28 16:38:28) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3)),3)
+		print("Volume:",(vol*1000),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 24
+    print("Volume:",(vol*1000),"litros")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 12:29:19) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = round(((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3)),3)
+		print("Volume:",(vol*1000),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 24
+    print("Volume:",(vol*1000),"litros")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 12:30:18) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = ((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))
+		print("Volume:",round((vol*1000),3),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 24
+    print("Volume:",round((vol*1000),3),"litros")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 12:30:28) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = ((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))
+		print("Volume:",round((vol*1000),3),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 24
+    print("Volume:",round((vol*1000),3),"litros")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 12:31:40) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = ((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))
+		print("Volume:",(round(vol*1000),3),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 24
+    print("Volume:",(round(vol*1000),3),"litros")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 12:31:42) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = ((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))
+		print("Volume:",(round(vol*1000),3),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 24
+    print("Volume:",(round(vol*1000),3),"litros")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 12:31:43) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = ((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))
+		print("Volume:",(round(vol*1000),3),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 24
+    print("Volume:",(round(vol*1000),3),"litros")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 12:31:44) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = ((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))
+		print("Volume:",(round(vol*1000),3),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 24
+    print("Volume:",(round(vol*1000),3),"litros")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 12:31:46) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = ((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))
+		print("Volume:",(round(vol*1000),3),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 24
+    print("Volume:",(round(vol*1000),3),"litros")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 12:31:47) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = ((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))
+		print("Volume:",(round(vol*1000),3),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 24
+    print("Volume:",(round(vol*1000),3),"litros")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 12:31:48) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = ((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))
+		print("Volume:",(round(vol*1000),3),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 24
+    print("Volume:",(round(vol*1000),3),"litros")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 12:32:51) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas:",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = ((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))
+		print("Volume:",(round(vol*1000),3),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- EXECUTION TIME:
+0.225911
+-- ERROR:
+  File "/home/codebench/codes/1671/1102/main.py", line 24
+    print("Volume:",(round(vol*1000),3),"litros")
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 12:33:00) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas:",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000),3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = ((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))
+		print("Volume:",(round(vol*1000),3),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000),3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000),3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- EXECUTION TIME:
+0.169891
+-- ERROR:
+  File "/home/codebench/codes/1671/1102/main.py", line 24
+    print("Volume:",(round(vol*1000),3),"litros")
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 12:36:12) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas:",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000), 3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = ((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))
+		print("Volume:",(round(vol*1000), 3),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000), )), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- EXECUTION TIME:
+0.165987
+-- ERROR:
+  File "/home/codebench/codes/1671/1102/main.py", line 24
+    print("Volume:",(round(vol*1000), 3),"litros")
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 12:36:18) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas:",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000), 3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = ((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))
+		print("Volume:",(round(vol*1000), 3),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000), 3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- EXECUTION TIME:
+0.131199
+-- ERROR:
+  File "/home/codebench/codes/1671/1102/main.py", line 24
+    print("Volume:",(round(vol*1000), 3),"litros")
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 12:36:19) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas:",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000), 3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = ((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))
+		print("Volume:",(round(vol*1000), 3),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000), 3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 24
+    print("Volume:",(round(vol*1000), 3),"litros")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 12:36:57) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas:",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000), 3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = ((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))
+		print("Volume:",(round((vol*1000)), 3),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000), 3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 24
+    print("Volume:",(round((vol*1000)), 3),"litros")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 12:37:08) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas:",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000), 3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = ((pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000), 3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- ERROR:
+File "XXXX", line 24
+    print("Volume:",(round((vol*1000), 3)),"litros")
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-29 12:38:53) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas:",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000), 3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = (pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000), 3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- OUTPUT:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 81987.191 litros
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-29 12:38:55) 
+-- CODE:
+# Teste todas as possibilidades de entradas 'H', 'h' e 'x'
+# Se seu programa funciona para apenas um caso de tese, isso não quer dizer que ele vai funcionar para todos os outros
+# Teste seu código aos poucos.
+# Não teste tudo no final, pois fica mais difícil de identificar erros.
+# Use as mensagens de erro para corrigir seu código.
+H = float(input("Altura total do tanque: "))
+h = float(input("nivel de combustivel do tanque: "))
+r = float(input("raio dos bojos semiesfericos e superior: "))
+print("Entradas:",H,",",h,",",r)
+
+
+from math import*
+#volume da calota
+if((H>0)and(h>0)and(r>0)and(H>h)and(H>2*r)):
+	if(h==r):
+		vol = ((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<r):
+		vol = (pi/3)*(h**2)*(3*r-h)
+		print("Volume:",(round((vol*1000), 3)), "litros")
+#volume da esfera e o volume do cilindro
+	elif(h==H-r):
+		vol = (pi*(r**2)*(H-2*r)+(2/3)*pi*(r**3))
+		print("Volume:",(round((vol*1000), 3)),"litros")
+	elif(h<H-r and h>r):
+		vol = pi*(r**2)*(h-r)+((4/3)*pi*(r**3))/2
+		print("Volume:",(round((vol*1000), 3)), "litros")
+	else:
+		vol = pi*(r**2)*(H-2*r)+ 4/3*pi*(r**3)-(pi/3)*((H-h)**2)*(3*r-(H-h))
+		print("Volume:",(round((vol*1000), 3)), "litros")
+else:
+	print("Entradas invalidas")
+	
+		
+
+
+  
+		
+		
+	
+	
+		
+
+		
+
+		
+		
+		
+		
+   
+-- EXECUTION TIME:
+0.136427
+-- TEST CASE 1:
+---- input:
+11.3
+5.7
+2.3
+---- correct output:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 81987.191 litros
+---- user output:
+Entradas: 11.3 , 5.7 , 2.3
+Volume: 81987.191 litros
+-- TEST CASE 2:
+---- input:
+8.5
+9.5
+2.2
+---- correct output:
+Entradas: 8.5 , 9.5 , 2.2
+Entradas invalidas
+---- user output:
+Entradas: 8.5 , 9.5 , 2.2
+Entradas invalidas
+-- TEST CASE 3:
+---- input:
+8
+4
+6
+---- correct output:
+Entradas: 8.0 , 4.0 , 6.0
+Entradas invalidas
+---- user output:
+Entradas: 8.0 , 4.0 , 6.0
+Entradas invalidas
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

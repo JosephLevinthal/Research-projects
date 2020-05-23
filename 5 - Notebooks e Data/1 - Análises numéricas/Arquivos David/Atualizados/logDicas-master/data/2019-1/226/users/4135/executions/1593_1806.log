@@ -1,0 +1,105 @@
+== TEST (2019-03-30 01:16:43) 
+-- CODE:
+n = float(input("Digite o numero de pessoas:"))
+from math import *
+p_n= 1-(factorial(365)/(365-n)*(1/(365**n)))
+print (round(p_n/100))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    p_n= 1-(factorial(365)/(365-n)*(1/(365**n)))
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:16:59) 
+-- CODE:
+n = int(input("Digite o numero de pessoas:"))
+from math import *
+p_n= 1-(factorial(365)/(365-n)*(1/(365**n)))
+print (round(p_n/100))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    p_n= 1-(factorial(365)/(365-n)*(1/(365**n)))
+OverflowError: integer division result too large for a float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:17:24) 
+-- CODE:
+n = int(input("Digite o numero de pessoas:"))
+from math import *
+p_n= 1-(factorial(365)/(365-n)*(1/(365**n)))
+print (round(p_n*100))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    p_n= 1-(factorial(365)/(365-n)*(1/(365**n)))
+OverflowError: integer division result too large for a float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:18:41) 
+-- CODE:
+n = float(input("Digite o numero de pessoas:"))
+from math import *
+p_n= 1-(factorial(365)/(365-n))*(1/(365**n))
+print (round(p_n*100))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    p_n= 1-(factorial(365)/(365-n))*(1/(365**n))
+OverflowError: int too large to convert to float
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:20:38) 
+-- CODE:
+n = float(input("Digite o numero de pessoas:"))
+from math import *
+p_n= (1 - (factorial(365)/factorial(365-n))*(1/(365**n)))
+print (round(p_n*100))
+
+-- OUTPUT:
+17
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 01:21:23) 
+-- CODE:
+n = float(input("Digite o numero de pessoas:"))
+from math import *
+p_n= (1 - (factorial(365)/factorial(365-n))*(1/(365**n)))
+print (round(p_n*100,2))
+
+-- OUTPUT:
+16.7
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-30 01:21:31) 
+-- CODE:
+n = float(input("Digite o numero de pessoas:"))
+from math import *
+p_n= (1 - (factorial(365)/factorial(365-n))*(1/(365**n)))
+print (round(p_n*100,2))
+
+-- EXECUTION TIME:
+0.171142
+-- TEST CASE 1:
+---- input:
+12
+---- correct output:
+16.7
+---- user output:
+16.7
+-- TEST CASE 2:
+---- input:
+24
+---- correct output:
+53.83
+---- user output:
+53.83
+-- TEST CASE 3:
+---- input:
+99
+---- correct output:
+100.0
+---- user output:
+100.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

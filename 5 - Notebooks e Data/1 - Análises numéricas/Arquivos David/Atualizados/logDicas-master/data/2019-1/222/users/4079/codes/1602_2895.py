@@ -1,0 +1,5 @@
+A= int(input("quantidade de jogos: "))
+B= float(input("o valor unitario: "))
+C= float(input("o valor do frete: "))
+total=float(B*A+C)
+print(total)

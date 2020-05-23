@@ -1,0 +1,291 @@
+== SUBMITION (2019-07-01 22:49:46) 
+-- CODE:
+from numpy import*
+
+mat = array(eval(input("Alguma coisa")))
+
+dias = zeros(shape(mat)[1], dtype = int)
+
+for i in range(shape(mat)[1]):
+	dias[i] = sum(mat[:,i])
+
+for i in range(size(dias)):
+	if dias[i] == max(dias):
+		print(i+1)
+-- EXECUTION TIME:
+1.17784
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+7
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+Alguma coisa3
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 22:50:30) 
+-- CODE:
+from numpy import*
+
+mat = array(eval(input("Alguma coisa")))
+
+dias = zeros(shape(mat)[1], dtype = int)
+
+for i in range(shape(mat)[1]):
+	dias[i] = sum(mat[:,i])
+
+for i in range(size(dias)):
+	if dias[i] == max(dias):
+		print(i+1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 23:00:46) 
+-- CODE:
+from numpy import*
+mat = array(eval(input("Entrada:")))
+a = shape(mat)[0]
+dias = zeros(a, dtype = int)
+for i in range(shape(mat)[1]):
+	dias[i] = sum(mat[:,i])
+for i in range(a):
+	dias[i] = sum(mat[i,:])
+		print(i+1)
+-- ERROR:
+File "XXXX", line 9
+    print(i+1)
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 23:00:53) 
+-- CODE:
+from numpy import*
+mat = array(eval(input("Entrada:")))
+a = shape(mat)[0]
+dias = zeros(a, dtype = int)
+for i in range(shape(mat)[1]):
+	dias[i] = sum(mat[:,i])
+for i in range(a):
+	dias[i] = sum(mat[i,:])
+	print(i+1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-01 23:01:24) 
+-- CODE:
+from numpy import*
+mat = array(eval(input("Entrada:")))
+a = shape(mat)[0]
+dias = zeros(a, dtype = int)
+
+for i in range(a):
+	dias[i] = sum(mat[i,:])
+	print(i+1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 23:01:30) 
+-- CODE:
+from numpy import*
+mat = array(eval(input("Entrada:")))
+a = shape(mat)[0]
+dias = zeros(a, dtype = int)
+
+for i in range(a):
+	dias[i] = sum(mat[i,:])
+	print(i+1)
+-- EXECUTION TIME:
+0.871387
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+1
+2
+3
+4
+5
+6
+7
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+1
+2
+3
+4
+5
+6
+7
+8
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:06:07) 
+-- CODE:
+from numpy import*
+mat = array(eval(input("Entrada:")))
+a = shape(mat)[0]
+dias = zeros(a, dtype = int)
+for i in range(shape(mat)[1]):
+	dias[i] = sum(mat[:,i])
+for i in range(a):
+	dias[i] = (dias):
+		print(i+1)
+-- ERROR:
+File "XXXX", line 8
+    dias[i] = (dias):
+                    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:06:46) 
+-- CODE:
+from numpy import*
+mat = array(eval(input("Entrada:")))
+a = shape(mat)[0]
+dias = zeros(a, dtype = int)
+for i in range(shape(mat)[1]):
+	dias[i] = sum(mat[:,i])
+for i in range(a):
+	if(dias[i] = (dias)):
+		print(i+1)
+-- ERROR:
+File "XXXX", line 8
+    if(dias[i] = (dias)):
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:07:05) 
+-- CODE:
+from numpy import*
+mat = array(eval(input("Entrada:")))
+a = shape(mat)[0]
+dias = zeros(a, dtype = int)
+for i in range(shape(mat)[1]):
+	dias[i] = sum(mat[:,i])
+for i in range(a):
+	if(dias[i] == (dias)):
+		print(i+1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:07:30) 
+-- CODE:
+from numpy import*
+mat = array(eval(input("Entrada:")))
+a = shape(mat)[0]
+dias = zeros(a, dtype = int)
+for i in range(shape(mat)[1]):
+	dias[i] = sum(mat[:,j])
+for i in range(a):
+	if(dias[i] == (dias)):
+		print(i+1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 08:08:06) 
+-- CODE:
+from numpy import*
+mat = array(eval(input("Entrada:")))
+dias = zeros(shape(mat)[1], dtype = int)
+
+for i in range(shape(mat)[1]):
+	dias[i] = sum(mat[:,i])
+
+for i in range(size(dias)):
+	if dias[i] == max(dias):
+		print(i+1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 08:08:25) 
+-- CODE:
+from numpy import*
+mat = array(eval(input("Entrada:")))
+dias = zeros(shape(mat)[1], dtype = int)
+
+for i in range(shape(mat)[1]):
+	dias[i] = sum(mat[:,i])
+
+for i in range(size(dias)):
+	if dias[i] == max(dias):
+		print(i+1)
+-- EXECUTION TIME:
+0.970682
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+7
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

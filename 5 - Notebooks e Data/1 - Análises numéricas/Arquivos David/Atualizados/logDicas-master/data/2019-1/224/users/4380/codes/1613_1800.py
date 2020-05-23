@@ -1,0 +1,5 @@
+a=float(input("a= "))
+b=float(input("b= "))
+c=float(input("c= "))
+Formula=(a**2+b**2+c**2)/(a+b+c)
+print(round(Formula,7))

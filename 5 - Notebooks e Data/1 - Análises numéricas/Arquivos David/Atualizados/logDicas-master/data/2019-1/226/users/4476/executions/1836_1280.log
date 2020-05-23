@@ -1,0 +1,167 @@
+== TEST (2019-07-01 15:52:44) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab - 1
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-01 15:54:05) 
+-- CODE:
+from numpy import*
+tabuleiro = array(eval(input("tabuleiro: ")))
+mov = input("movimentos: ")
+xtab = int(0)
+ytab = int(0)
+moeda = 0
+life = 100
+a = shape(tabuleiro)[1] - 1
+b = shape(tabuleiro)[0] - 1
+for x in mov:
+	
+	if x == "A":
+		xtab = xtab - 1
+		if xtab<0:
+			xtab = xtab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab = xtab + 1
+			
+			
+	elif x == "D":
+		xtab = xtab + 1
+		if xtab>a:
+			xtab = xtab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			xtab= xtab - 1
+			
+			
+	elif x == "W":
+		ytab =ytab - 1
+		if ytab<0:
+			ytab = ytab + 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab + 1
+			
+			
+	elif x == "S":
+		ytab= ytab + 1
+		if ytab>b:
+			ytab=ytab - 1
+		if tabuleiro[ytab,xtab] ==33:
+			ytab = ytab - 1
+			
+			
+	if tabuleiro[ytab,xtab] ==11:
+		moeda = moeda + 1
+		tabuleiro[ytab,xtab] = 0
+	elif tabuleiro[ytab,xtab] == 22:
+		life = life - 5
+	
+	
+		
+print("posicao x: ",xtab)
+print("posicao y: ",ytab)
+print("moedas: ", moeda)
+print("life: ", life)
+-- EXECUTION TIME:
+1.02841
+-- TEST CASE 1:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+DDDDDWWWWSSSSDDDWSWDSDWDDDDDDDDDSSSSSSSSSSSDDDDWSADSWASADSWASD
+---- correct output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+---- user output:
+posicao x:  11
+posicao y:  10
+moedas:  13
+life:  75
+-- TEST CASE 2:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+SAWSDADDDDDDDDDDSSSSSSSSSSSDDDDDDDWWWWWWWWAAAAAAAAAAWSDAASDSWADSAWSWD
+---- correct output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+---- user output:
+posicao x:  5
+posicao y:  3
+moedas:  20
+life:  75
+-- TEST CASE 3:
+---- input:
+[[0,11,0,33,0,33,22,0,11,0,11,0,11],[11,0,22,11,0,11,33,0,11,0,0,0,22],[11,22,22,33,0,11,11,0,22,0,11,11,22],[22,33,0,11,0,11,11,0,22,0,0,0,0],[22,11,11,11,0,11,22,0,11,0,22,0,22],[11,11,22,33,0,0,11,0,22,0,0,22,11],[0,11,0,33,0,11,22,0,22,0,22,0,11],[0,11,33,11,0,11,22,0,11,0,0,11,11],[11,11,33,11,0,0,11,0,22,0,22,0,11],[0,11,22,11,0,11,22,0,22,0,0,0,11],[0,11,22,11,0,0,11,0,22,0,11,0,11]]
+AWSWDSSDSDSDSDSAWAWAWASDSDSSASASASWDWDWDWDWASWDAWSWDAWSDWSADSWASDWSAWWDSADWSAWSWDSAWSW
+---- correct output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+---- user output:
+posicao x:  6
+posicao y:  2
+moedas:  13
+life:  55
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

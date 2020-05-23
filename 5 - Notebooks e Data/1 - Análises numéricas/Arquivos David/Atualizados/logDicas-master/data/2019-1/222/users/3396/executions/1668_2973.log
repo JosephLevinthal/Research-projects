@@ -1,0 +1,238 @@
+== TEST (2019-04-15 18:31:58) 
+-- CODE:
+poi=float(input("poi:"))
+vob=float(input("vob:"))
+ted=float(input("ted:"))
+limv=100
+s=(poi+(vob*ted))
+if(s>limv):
+-- ERROR:
+File "XXXX", line 7
+    
+               ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:34:39) 
+-- CODE:
+poi=float(input("poi:"))
+vob=float(input("vob:"))
+ted=float(input("ted:"))
+limv=100
+s=(poi+(vob*ted))
+if(s>limv):
+	msg=("acima")
+else:
+	msg=("ok")
+	
+-- ERROR:
+File "XXXX", line 7
+    
+               ^
+SyntaxError: unexpected EOF while parsing
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:35:07) 
+-- CODE:
+poi=float(input("poi:"))
+vob=float(input("vob:"))
+ted=float(input("ted:"))
+limv=100
+s=(poi+(vob*ted))
+if(s>limv):
+	msg=("acima")
+else:
+	msg=("ok")
+print(s)
+print(msg.upper)
+-- OUTPUT:
+7202.0
+<built-in method upper of str object at 0x7f2efe4b7650>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:35:59) 
+-- CODE:
+poi=int(input("poi:"))
+vob=int(input("vob:"))
+ted=int(input("ted:"))
+limv=100
+s=(poi+(vob*ted))
+if(s>limv):
+	msg=("acima")
+else:
+	msg=("ok")
+print(s)
+print(msg.upper)
+-- OUTPUT:
+7202
+<built-in method upper of str object at 0x7f8c90553650>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:36:54) 
+-- CODE:
+poi=int(input("poi:"))
+vob=int(input("vob:"))
+ted=int(input("ted:"))
+limv=100
+s=(poi+(vob*ted))
+if(s>limv):
+	msg=("ACIMA")
+else:
+	msg=("OK")
+print(s)
+print(msg.upper)
+-- OUTPUT:
+7202
+<built-in method upper of str object at 0x7f4c2e243650>
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:37:14) 
+-- CODE:
+poi=int(input("poi:"))
+vob=int(input("vob:"))
+ted=int(input("ted:"))
+limv=100
+s=(poi+(vob*ted))
+if(s>limv):
+	msg=("ACIMA")
+else:
+	msg=("OK")
+print(s)
+print(msg)
+-- OUTPUT:
+7202
+ACIMA
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 18:37:27) 
+-- CODE:
+poi=int(input("poi:"))
+vob=int(input("vob:"))
+ted=int(input("ted:"))
+limv=100
+s=(poi+(vob*ted))
+if(s>limv):
+	msg=("ACIMA")
+else:
+	msg=("OK")
+print(s)
+print(msg)
+-- EXECUTION TIME:
+0.130113
+-- TEST CASE 1:
+---- input:
+2
+60
+120
+---- correct output:
+7202
+OK
+---- user output:
+7202
+ACIMA
+-- TEST CASE 2:
+---- input:
+1
+41
+109
+---- correct output:
+4470
+OK
+---- user output:
+4470
+ACIMA
+-- TEST CASE 3:
+---- input:
+3
+120
+60
+---- correct output:
+7203
+ACIMA
+---- user output:
+7203
+ACIMA
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:52:14) 
+-- CODE:
+poi=int(input("poi:"))
+vob=int(input("vob:"))
+ted=int(input("ted:"))
+limv=100
+s=(poi+(vob*ted))
+if(s>limv):
+	msg=("ACIMA")
+else:
+	msg=("OK")
+print(s)
+print(msg)
+-- OUTPUT:
+7202
+ACIMA
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-15 18:54:27) 
+-- CODE:
+poi=int(input("poi:"))
+vob=int(input("vob:"))
+ted=int(input("ted:"))
+limv=100
+s=(poi+(vob*ted))
+if(s>limv):
+	print(s)
+	print("ACIMA")
+else:
+	print(s)
+	print("OK")
+
+-- OUTPUT:
+7202
+ACIMA
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-15 18:54:36) 
+-- CODE:
+poi=int(input("poi:"))
+vob=int(input("vob:"))
+ted=int(input("ted:"))
+limv=100
+s=(poi+(vob*ted))
+if(s>limv):
+	print(s)
+	print("ACIMA")
+else:
+	print(s)
+	print("OK")
+
+-- EXECUTION TIME:
+0.146748
+-- TEST CASE 1:
+---- input:
+2
+60
+120
+---- correct output:
+7202
+OK
+---- user output:
+7202
+ACIMA
+-- TEST CASE 2:
+---- input:
+1
+41
+109
+---- correct output:
+4470
+OK
+---- user output:
+4470
+ACIMA
+-- TEST CASE 3:
+---- input:
+3
+120
+60
+---- correct output:
+7203
+ACIMA
+---- user output:
+7203
+ACIMA
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

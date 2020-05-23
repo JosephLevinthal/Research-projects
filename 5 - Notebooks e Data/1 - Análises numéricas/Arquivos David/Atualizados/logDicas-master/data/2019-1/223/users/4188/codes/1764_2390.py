@@ -1,0 +1,13 @@
+from numpy import*
+
+f = array(eval(input("frequencia:")))
+x = array(eval(input("faltantes:")))
+mf = max(f)
+
+i = 0
+mes = 0
+while(i < size(f)):
+	if(f[i] == mf):
+		mes = i + 1
+	i = i + 1
+print(mes)

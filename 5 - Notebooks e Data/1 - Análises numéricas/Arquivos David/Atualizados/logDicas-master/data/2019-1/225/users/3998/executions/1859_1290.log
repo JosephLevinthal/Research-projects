@@ -1,0 +1,628 @@
+== TEST (2019-06-26 14:15:05) 
+-- CODE:
+from numpy import*
+
+k = array (eval(input()))
+g = array([10,12,15],[6,5,12],[12,12,18])
+g = g.T
+
+s = dot(inv(k),g)
+print("cadeira: "round(s[0],1))
+print("bau: "round(s[1],1))
+print("mesa: "round(s[2],1))
+
+if(s[0]== max(s)):
+	print("cadeira")
+elif(s[1]== max(s)):
+	print("bau")
+else:
+	print("mesa")
+-- ERROR:
+File "XXXX", line 8
+    print("cadeira: "round(s[0],1))
+                         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:15:19) 
+-- CODE:
+from numpy import*
+
+k = array (eval(input()))
+g = array([10,12,15],[6,5,12],[12,12,18])
+g = g.T
+
+s = dot(inv(k),g)
+print("cadeira: " round(s[0],1))
+print("bau: " round(s[1],1))
+print("mesa: " round(s[2],1))
+
+if(s[0]== max(s)):
+	print("cadeira")
+elif(s[1]== max(s)):
+	print("bau")
+else:
+	print("mesa")
+-- ERROR:
+File "XXXX", line 8
+    print("cadeira: " round(s[0],1))
+                          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:16:16) 
+-- CODE:
+from numpy import*
+
+k = array (eval(input()))
+g = array([10,12,15],[6,5,12],[12,12,18])
+g = g.T
+
+s = dot(inv(k),g)
+print("cadeira: " ,round(s[0],1))
+print("bau: " ,round(s[1],1))
+print("mesa: ",round(s[2],1))
+
+if(s[0]== max(s)):
+	print("cadeira")
+elif(s[1]== max(s)):
+	print("bau")
+else:
+	print("mesa")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:17:23) 
+-- CODE:
+from numpy import*
+
+k = array (eval(input()))
+g = array([10,6,12],[12,8,12],[15,12,18])
+g = g.T
+
+s = dot(inv(k),g)
+print("cadeira: " ,round(s[0],1))
+print("bau: " ,round(s[1],1))
+print("mesa: ",round(s[2],1))
+
+if(s[0]== max(s)):
+	print("cadeira")
+elif(s[1]== max(s)):
+	print("bau")
+else:
+	print("mesa")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:17:54) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+k = array (eval(input()))
+g = array([10,6,12],[12,8,12],[15,12,18])
+g = g.T
+
+s = dot(inv(k),g)
+print("cadeira: " ,round(s[0],1))
+print("bau: " ,round(s[1],1))
+print("mesa: ",round(s[2],1))
+
+if(s[0]== max(s)):
+	print("cadeira")
+elif(s[1]== max(s)):
+	print("bau")
+else:
+	print("mesa")
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:20:52) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+k = array (eval(input()))
+g = array([[10,6,12],[12,8,12],[15,12,18]])
+g = g.T
+
+s = dot(inv(k),g)
+print("cadeira: " ,round(s[0],1))
+print("bau: " ,round(s[1],1))
+print("mesa: ",round(s[2],1))
+
+if(s[0]== max(s)):
+	print("cadeira")
+elif(s[1]== max(s)):
+	print("bau")
+else:
+	print("mesa")
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 14:21:43) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+k = array (eval(input()))
+g = array([[10,6,12],[12,8,12],[15,12,18]])
+g = g.T
+
+s = dot(inv(g),k)
+print("cadeira: " ,round(s[0],1))
+print("bau: " ,round(s[1],1))
+print("mesa: ",round(s[2],1))
+
+if(s[0]== max(s)):
+	print("cadeira")
+elif(s[1]== max(s)):
+	print("bau")
+else:
+	print("mesa")
+	
+-- EXECUTION TIME:
+1.23346
+-- TEST CASE 1:
+---- input:
+[337.95,255.26666667,392.5]
+---- correct output:
+cadeira: 192.0
+bau: 326.0
+mesa: 963.0
+mesa
+---- user output:
+cadeira:  3.2
+bau:  5.4
+mesa:  16.1
+mesa
+-- TEST CASE 2:
+---- input:
+[697.25,467.33333333,706.1]
+---- correct output:
+cadeira: 102.0
+bau: 3265.0
+mesa: 109.0
+bau
+---- user output:
+cadeira:  1.7
+bau:  54.4
+mesa:  1.8
+bau
+-- TEST CASE 3:
+---- input:
+[3179.23333333,2196.4,3770.2]
+---- correct output:
+cadeira: 9512.0
+bau: 1122.0
+mesa: 5478.0
+cadeira
+---- user output:
+cadeira:  158.5
+bau:  18.7
+mesa:  91.3
+cadeira
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:21:44) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+k = array (eval(input()))
+g = array([[10,6,12],[12,8,12],[15,12,18]])
+g = g.T
+
+s = dot(inv(g),k)
+print("cadeira: " ,round(s[0],1))
+print("bau: " ,round(s[1],1))
+print("mesa: ",round(s[2],1))
+
+if(s[0]== max(s)):
+	print("cadeira")
+elif(s[1]== max(s)):
+	print("bau")
+else:
+	print("mesa")
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 14:22:32) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+k = array (eval(input()))
+g = array([[10,6,12],[12,8,12],[15,12,18]])
+g = g.T
+
+s = dot(inv(g),k)
+print("cadeira: " ,round(s[0],1))
+print("bau: " ,round(s[1],1))
+print("mesa: ",round(s[2],1))
+
+if(s[0]== max(s)):
+	print("cadeira")
+elif(s[1]== max(s)):
+	print("bau")
+else:
+	print("mesa")
+	
+-- EXECUTION TIME:
+1.08428
+-- TEST CASE 1:
+---- input:
+[337.95,255.26666667,392.5]
+---- correct output:
+cadeira: 192.0
+bau: 326.0
+mesa: 963.0
+mesa
+---- user output:
+cadeira:  3.2
+bau:  5.4
+mesa:  16.1
+mesa
+-- TEST CASE 2:
+---- input:
+[697.25,467.33333333,706.1]
+---- correct output:
+cadeira: 102.0
+bau: 3265.0
+mesa: 109.0
+bau
+---- user output:
+cadeira:  1.7
+bau:  54.4
+mesa:  1.8
+bau
+-- TEST CASE 3:
+---- input:
+[3179.23333333,2196.4,3770.2]
+---- correct output:
+cadeira: 9512.0
+bau: 1122.0
+mesa: 5478.0
+cadeira
+---- user output:
+cadeira:  158.5
+bau:  18.7
+mesa:  91.3
+cadeira
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:23:30) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+k = array (eval(input()))
+g = array([[10,6,12],[12,8,12],[15,12,18]])
+g = g.T
+
+s = dot(inv(g),k)
+print("cadeira: " ,round(s[0],1))
+print("bau: " ,round(s[1],1))
+print("mesa: ",round(s[2],1))
+
+if s[0]== max(s):
+	print("cadeira")
+elif s[1]== max(s):
+	print("bau")
+else:
+	print("mesa")
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:26:23) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+k = array (eval(input()))
+g = array([[10,6,12],[12,8,12],[15,12,18]])
+g = g.T
+
+s = dot(inv(k),g)
+print("cadeira: " ,round(s[0],1))
+print("bau: " ,round(s[1],1))
+print("mesa: ",round(s[2],1))
+
+if s[0]== max(s):
+	print("cadeira")
+elif s[1]== max(s):
+	print("bau")
+else:
+	print("mesa")
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:27:13) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+k = array (eval(input()))
+g = array([[10,12,15],[6,8,12],[12,12,18]])
+g = g.T
+
+s = dot(inv(g),k)
+print("cadeira: " ,round(s[0],1))
+print("bau: " ,round(s[1],1))
+print("mesa: ",round(s[2],1))
+
+if s[0]== max(s):
+	print("cadeira")
+elif s[1]== max(s):
+	print("bau")
+else:
+	print("mesa")
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:29:23) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+k = array (eval(input()))
+g = array([[10,12,15],[6,8,12],[12,12,18]])
+g = g.T
+
+s = dot(inv(k),g)
+print("cadeira: " ,round(s[0],1))
+print("bau: " ,round(s[1],1))
+print("mesa: ",round(s[2],1))
+
+if s[0]== max(s):
+	print("cadeira")
+elif s[1]== max(s):
+	print("bau")
+else:
+	print("mesa")
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:30:37) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+k = array (eval(input()))
+g = array([[10,12,15],[6,8,12],[12,12,18]])
+g = g.T
+
+s = dot(inv(g),k)
+print("cadeira: " ,round(s[0],0))
+print("bau: " ,round(s[1],0))
+print("mesa: ",round(s[2],0))
+
+if s[0]== max(s):
+	print("cadeira")
+elif s[1]== max(s):
+	print("bau")
+else:
+	print("mesa")
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:31:27) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+k = array (eval(input()))
+g = array([[10,12,15],[6,8,12],[12,12,18]])
+g = g.T
+
+s = dot(inv(k),g)
+print("cadeira: " ,round(s[0],0))
+print("bau: " ,round(s[1],0))
+print("mesa: ",round(s[2],0))
+
+if s[0]== max(s):
+	print("cadeira")
+elif s[1]== max(s):
+	print("bau")
+else:
+	print("mesa")
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-26 14:32:38) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+k = array (eval(input()))
+g = array([[10,12,15],[6,8,12],[12,12,18]])
+g = g.T
+
+s = dot(inv(g),k)
+print("cadeira: " ,round(s[0],0))
+print("bau: " ,round(s[1],0))
+print("mesa: ",round(s[2],0))
+
+if s[0]== max(s):
+	print("cadeira")
+elif s[1]== max(s):
+	print("bau")
+else:
+	print("mesa")
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 14:44:20) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+k = array (eval(input()))
+g = array([[10,12,15],[6,8,12],[12,12,18]])
+
+s = dot(inv(g),k.T)
+print("cadeira:" ,round(s[0],0))
+print("bau:" ,round(s[1],0))
+print("mesa:",round(s[2],0))
+
+if s[0]== max(s):
+	print("cadeira")
+elif s[1]== max(s):
+	print("bau")
+else:
+	print("mesa")
+	
+-- EXECUTION TIME:
+0.844905
+-- TEST CASE 1:
+---- input:
+[337.95,255.26666667,392.5]
+---- correct output:
+cadeira: 192.0
+bau: 326.0
+mesa: 963.0
+mesa
+---- user output:
+cadeira: 3.0
+bau: 5.0
+mesa: 16.0
+mesa
+-- TEST CASE 2:
+---- input:
+[697.25,467.33333333,706.1]
+---- correct output:
+cadeira: 102.0
+bau: 3265.0
+mesa: 109.0
+bau
+---- user output:
+cadeira: 2.0
+bau: 54.0
+mesa: 2.0
+bau
+-- TEST CASE 3:
+---- input:
+[3179.23333333,2196.4,3770.2]
+---- correct output:
+cadeira: 9512.0
+bau: 1122.0
+mesa: 5478.0
+cadeira
+---- user output:
+cadeira: 159.0
+bau: 19.0
+mesa: 91.0
+cadeira
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-26 14:46:02) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+k = array(eval(input()))
+k = k * 60
+g = array([[10,12,15],[6,8,12],[12,12,18]])
+
+s = dot(inv(g),k.T)
+print("cadeira:" ,round(s[0],0))
+print("bau:" ,round(s[1],0))
+print("mesa:",round(s[2],0))
+
+if s[0]== max(s):
+	print("cadeira")
+elif s[1]== max(s):
+	print("bau")
+else:
+	print("mesa")
+	
+-- EXECUTION TIME:
+1.28247
+-- TEST CASE 1:
+---- input:
+[337.95,255.26666667,392.5]
+---- correct output:
+cadeira: 192.0
+bau: 326.0
+mesa: 963.0
+mesa
+---- user output:
+cadeira: 192.0
+bau: 326.0
+mesa: 963.0
+mesa
+-- TEST CASE 2:
+---- input:
+[697.25,467.33333333,706.1]
+---- correct output:
+cadeira: 102.0
+bau: 3265.0
+mesa: 109.0
+bau
+---- user output:
+cadeira: 102.0
+bau: 3265.0
+mesa: 109.0
+bau
+-- TEST CASE 3:
+---- input:
+[3179.23333333,2196.4,3770.2]
+---- correct output:
+cadeira: 9512.0
+bau: 1122.0
+mesa: 5478.0
+cadeira
+---- user output:
+cadeira: 9512.0
+bau: 1122.0
+mesa: 5478.0
+cadeira
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

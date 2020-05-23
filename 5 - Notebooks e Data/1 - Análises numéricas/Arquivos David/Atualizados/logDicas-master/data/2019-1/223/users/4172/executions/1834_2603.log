@@ -1,0 +1,299 @@
+== TEST (2019-07-02 10:18:50) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x=array(eval(input(" ")))
+
+print(inv(x))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:06:20) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x=array(eval(input(" ")))
+
+
+
+for i in range(x.shape[0]):
+	[i,:]=sorted(x,reverse=True)
+print(x)
+	
+
+
+-- ERROR:
+File "XXXX", line 9
+    [i,:]=sorted(x,reverse=True)
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:06:28) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x=array(eval(input(" ")))
+
+
+
+for i in range(x.shape[0]):
+	[i,;]=sorted(x,reverse=True)
+print(x)
+	
+
+
+-- ERROR:
+File "XXXX", line 9
+    [i,;]=sorted(x,reverse=True)
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:06:46) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x=array(eval(input(" ")))
+
+
+
+for i in range(x.shape[0]):
+	[:,i]=sorted(x,reverse=True)
+print(x)
+	
+
+
+-- ERROR:
+File "XXXX", line 9
+    [:,i]=sorted(x,reverse=True)
+     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:06:55) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x=array(eval(input(" ")))
+
+
+
+for i in range(x.shape[0]):
+	x[:,i]=sorted(x,reverse=True)
+print(x)
+	
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:07:33) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x=array(eval(input(" ")))
+
+
+
+for i in range(x.shape[0]):
+	x[:,i]=sorted(x[i,:],reverse=True)
+print(x)
+	
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:07:52) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x=array(eval(input(" ")))
+
+
+
+for i in range(x.shape[0]):
+	x[:,i]=sorted(x[:,i],reverse=True)
+print(x)
+	
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-02 12:08:16) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x=array(eval(input(" ")))
+
+
+
+for i in range(x.shape[0]):
+	x[:,i]=sorted(x[:,i],reverse=True)
+print(x)
+	
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 12:08:18) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x=array(eval(input(" ")))
+
+
+
+for i in range(x.shape[0]):
+	x[:,i]=sorted(x[:,i],reverse=True)
+print(x)
+	
+
+
+-- EXECUTION TIME:
+1.17957
+-- TEST CASE 1:
+---- input:
+[[1,1,1,1],[2,2,2,2],[3,3,3,3],[4,4,4,4]]
+---- correct output:
+[[4 4 4 4]
+[3 3 3 3]
+[2 2 2 2]
+[1 1 1 1]]
+---- user output:
+[[4 4 4 4]
+ [3 3 3 3]
+ [2 2 2 2]
+ [1 1 1 1]]
+-- TEST CASE 2:
+---- input:
+[[4,1,1,3],[3,2,2,3],[2,3,3,3],[1,4,4,3]]
+---- correct output:
+[[4 4 4 3]
+[3 3 3 3]
+[2 2 2 3]
+[1 1 1 3]]
+---- user output:
+[[4 4 4 3]
+ [3 3 3 3]
+ [2 2 2 3]
+ [1 1 1 3]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-02 12:09:19) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x=array(eval(input(" ")))
+
+
+
+for i in range(x.shape[0]):
+	x[:,i]=sorted(x[:,i],reverse=True)
+print(x)
+	
+
+
+-- EXECUTION TIME:
+1.02558
+-- TEST CASE 1:
+---- input:
+[[1,1,1,1],[2,2,2,2],[3,3,3,3],[4,4,4,4]]
+---- correct output:
+[[4 4 4 4]
+[3 3 3 3]
+[2 2 2 2]
+[1 1 1 1]]
+---- user output:
+[[4 4 4 4]
+ [3 3 3 3]
+ [2 2 2 2]
+ [1 1 1 1]]
+-- TEST CASE 2:
+---- input:
+[[4,1,1,3],[3,2,2,3],[2,3,3,3],[1,4,4,3]]
+---- correct output:
+[[4 4 4 3]
+[3 3 3 3]
+[2 2 2 3]
+[1 1 1 3]]
+---- user output:
+[[4 4 4 3]
+ [3 3 3 3]
+ [2 2 2 3]
+ [1 1 1 3]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-09 15:04:28) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+x=array(eval(input(" ")))
+
+
+
+for i in range(x.shape[0]):
+	x[:,i]=sorted(x[:,i],reverse=True)
+print(x)
+	
+
+
+-- EXECUTION TIME:
+1.11788
+-- TEST CASE 1:
+---- input:
+[[1,1,1,1],[2,2,2,2],[3,3,3,3],[4,4,4,4]]
+---- correct output:
+[[4 4 4 4]
+[3 3 3 3]
+[2 2 2 2]
+[1 1 1 1]]
+---- user output:
+[[4 4 4 4]
+ [3 3 3 3]
+ [2 2 2 2]
+ [1 1 1 1]]
+-- TEST CASE 2:
+---- input:
+[[4,1,1,3],[3,2,2,3],[2,3,3,3],[1,4,4,3]]
+---- correct output:
+[[4 4 4 3]
+[3 3 3 3]
+[2 2 2 3]
+[1 1 1 3]]
+---- user output:
+[[4 4 4 3]
+ [3 3 3 3]
+ [2 2 2 3]
+ [1 1 1 3]]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

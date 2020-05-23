@@ -1,0 +1,615 @@
+== SUBMITION (2019-06-12 13:26:20) 
+-- CODE:
+from numpy import*
+peso = array(eval(input("pesos:")))
+altura = array(eval(input("altura:")))
+
+imc = zeros(size(peso), dtype = float)
+i = 0
+while( i < size(peso)):
+    imc[i] = round((peso[i])/(altura[i] * altura[i]),2)
+    i = i + 1
+print(imc)
+
+sit = " "
+i = max(imc)
+
+if(i<17):
+    sit = "muito abaixo do pesoa"
+elif(17<=i<=18.49):
+    sit = "abaixo do peso"
+elif(18.5<=i<=24.99):
+    sit = "peso normal"
+elif(25<=i<=29.99):
+    sit = "acima do peso"
+elif(30<=i<=34.99):
+    sit = "obesidade"
+elif(35<=i<=39.99):
+    sit = "obesidade severa"
+elif(i>40):
+    sit = "obesidade morbida"
+else:
+    sit = "dados invalidos"
+print("O MAIOR IMC DA TURMA EH:", max(imc))
+print(sit.upper())
+i = max(imc)
+
+if(i<17):
+-- EXECUTION TIME:
+0.629423
+-- ERROR:
+  File "/home/codebench/codes/1798/2573/main.py", line 36
+    
+             ^
+SyntaxError: unexpected EOF while parsing
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 13:26:30) 
+-- CODE:
+from numpy import*
+peso = array(eval(input("pesos:")))
+altura = array(eval(input("altura:")))
+
+imc = zeros(size(peso), dtype = float)
+i = 0
+while( i < size(peso)):
+    imc[i] = round((peso[i])/(altura[i] * altura[i]),2)
+    i = i + 1
+print(imc)
+
+sit = " "
+i = max(imc)
+
+if(i<17):
+    sit = "muito abaixo do pesoa"
+elif(17<=i<=18.49):
+    sit = "abaixo do peso"
+elif(18.5<=i<=24.99):
+    sit = "peso normal"
+elif(25<=i<=29.99):
+    sit = "acima do peso"
+elif(30<=i<=34.99):
+    sit = "obesidade"
+elif(35<=i<=39.99):
+    sit = "obesidade severa"
+elif(i>40):
+    sit = "obesidade morbida"
+else:
+    sit = "dados invalidos"
+print("O MAIOR IMC DA TURMA EH:", max(imc))
+print(sit.upper())
+
+-- EXECUTION TIME:
+1.14264
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+pesos:altura:[37.79 31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 13:26:57) 
+-- CODE:
+from numpy import*
+peso = array(eval(input("pesos:")))
+altura = array(eval(input("altura:")))
+
+imc = zeros(size(peso), dtype = float)
+i = 0
+while( i < size(peso)):
+    imc[i] = round((peso[i])/(altura[i] * altura[i]),2)
+    i = i + 1
+print(imc)
+
+sit = " "
+i = max(imc)
+
+if(i<17):
+    sit = "muito abaixo do pesoa"
+elif(17<=i<=18.49):
+    sit = "abaixo do peso"
+elif(18.5<=i<=24.99):
+    sit = "peso normal"
+elif(25<=i<=29.99):
+    sit = "acima do peso"
+elif(30<=i<=34.99):
+    sit = "obesidade"
+elif(35<=i<=39.99):
+    sit = "obesidade severa"
+elif(i>40):
+    sit = "obesidade morbida"
+else:
+    sit = "dados invalidos"
+print("O MAIOR IMC DA TURMA EH:", max(imc))
+print(sit.upper())
+
+-- EXECUTION TIME:
+0.979075
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 13:26:58) 
+-- CODE:
+from numpy import*
+peso = array(eval(input("pesos:")))
+altura = array(eval(input("altura:")))
+
+imc = zeros(size(peso), dtype = float)
+i = 0
+while( i < size(peso)):
+    imc[i] = round((peso[i])/(altura[i] * altura[i]),2)
+    i = i + 1
+print(imc)
+
+sit = " "
+i = max(imc)
+
+if(i<17):
+    sit = "muito abaixo do pesoa"
+elif(17<=i<=18.49):
+    sit = "abaixo do peso"
+elif(18.5<=i<=24.99):
+    sit = "peso normal"
+elif(25<=i<=29.99):
+    sit = "acima do peso"
+elif(30<=i<=34.99):
+    sit = "obesidade"
+elif(35<=i<=39.99):
+    sit = "obesidade severa"
+elif(i>40):
+    sit = "obesidade morbida"
+else:
+    sit = "dados invalidos"
+print("O MAIOR IMC DA TURMA EH:", max(imc))
+print(sit.upper())
+
+-- EXECUTION TIME:
+1.33188
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+OCI runtime exec failed: exec failed: cannot exec a container that has stopped: unknown
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 13:26:58) 
+-- CODE:
+from numpy import*
+peso = array(eval(input("pesos:")))
+altura = array(eval(input("altura:")))
+
+imc = zeros(size(peso), dtype = float)
+i = 0
+while( i < size(peso)):
+    imc[i] = round((peso[i])/(altura[i] * altura[i]),2)
+    i = i + 1
+print(imc)
+
+sit = " "
+i = max(imc)
+
+if(i<17):
+    sit = "muito abaixo do pesoa"
+elif(17<=i<=18.49):
+    sit = "abaixo do peso"
+elif(18.5<=i<=24.99):
+    sit = "peso normal"
+elif(25<=i<=29.99):
+    sit = "acima do peso"
+elif(30<=i<=34.99):
+    sit = "obesidade"
+elif(35<=i<=39.99):
+    sit = "obesidade severa"
+elif(i>40):
+    sit = "obesidade morbida"
+else:
+    sit = "dados invalidos"
+print("O MAIOR IMC DA TURMA EH:", max(imc))
+print(sit.upper())
+
+-- EXECUTION TIME:
+8.77674
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+OCI runtime exec failed: exec failed: container_linux.go:296: starting container process caused "process_linux.go:86: executing setns process caused \"exit status 21\"": unknown
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+OCI runtime exec failed: exec failed: cannot exec a container that has stopped: unknown
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 13:26:58) 
+-- CODE:
+from numpy import*
+peso = array(eval(input("pesos:")))
+altura = array(eval(input("altura:")))
+
+imc = zeros(size(peso), dtype = float)
+i = 0
+while( i < size(peso)):
+    imc[i] = round((peso[i])/(altura[i] * altura[i]),2)
+    i = i + 1
+print(imc)
+
+sit = " "
+i = max(imc)
+
+if(i<17):
+    sit = "muito abaixo do pesoa"
+elif(17<=i<=18.49):
+    sit = "abaixo do peso"
+elif(18.5<=i<=24.99):
+    sit = "peso normal"
+elif(25<=i<=29.99):
+    sit = "acima do peso"
+elif(30<=i<=34.99):
+    sit = "obesidade"
+elif(35<=i<=39.99):
+    sit = "obesidade severa"
+elif(i>40):
+    sit = "obesidade morbida"
+else:
+    sit = "dados invalidos"
+print("O MAIOR IMC DA TURMA EH:", max(imc))
+print(sit.upper())
+
+-- EXECUTION TIME:
+7.10211
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 13:26:58) 
+-- CODE:
+from numpy import*
+peso = array(eval(input("pesos:")))
+altura = array(eval(input("altura:")))
+
+imc = zeros(size(peso), dtype = float)
+i = 0
+while( i < size(peso)):
+    imc[i] = round((peso[i])/(altura[i] * altura[i]),2)
+    i = i + 1
+print(imc)
+
+sit = " "
+i = max(imc)
+
+if(i<17):
+    sit = "muito abaixo do pesoa"
+elif(17<=i<=18.49):
+    sit = "abaixo do peso"
+elif(18.5<=i<=24.99):
+    sit = "peso normal"
+elif(25<=i<=29.99):
+    sit = "acima do peso"
+elif(30<=i<=34.99):
+    sit = "obesidade"
+elif(35<=i<=39.99):
+    sit = "obesidade severa"
+elif(i>40):
+    sit = "obesidade morbida"
+else:
+    sit = "dados invalidos"
+print("O MAIOR IMC DA TURMA EH:", max(imc))
+print(sit.upper())
+
+-- EXECUTION TIME:
+0.088141
+-- ERROR:
+Error response from daemon: Container 3c0b40ec9d00106d3e54965b9543a24efc8a557f76e6fcdf1d3bfabfac32eef8 is not running
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 13:26:58) 
+-- CODE:
+from numpy import*
+peso = array(eval(input("pesos:")))
+altura = array(eval(input("altura:")))
+
+imc = zeros(size(peso), dtype = float)
+i = 0
+while( i < size(peso)):
+    imc[i] = round((peso[i])/(altura[i] * altura[i]),2)
+    i = i + 1
+print(imc)
+
+sit = " "
+i = max(imc)
+
+if(i<17):
+    sit = "muito abaixo do pesoa"
+elif(17<=i<=18.49):
+    sit = "abaixo do peso"
+elif(18.5<=i<=24.99):
+    sit = "peso normal"
+elif(25<=i<=29.99):
+    sit = "acima do peso"
+elif(30<=i<=34.99):
+    sit = "obesidade"
+elif(35<=i<=39.99):
+    sit = "obesidade severa"
+elif(i>40):
+    sit = "obesidade morbida"
+else:
+    sit = "dados invalidos"
+print("O MAIOR IMC DA TURMA EH:", max(imc))
+print(sit.upper())
+
+-- EXECUTION TIME:
+0.086133
+-- ERROR:
+Error response from daemon: Container 3c0b40ec9d00106d3e54965b9543a24efc8a557f76e6fcdf1d3bfabfac32eef8 is not running
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 13:26:58) 
+-- CODE:
+from numpy import*
+peso = array(eval(input("pesos:")))
+altura = array(eval(input("altura:")))
+
+imc = zeros(size(peso), dtype = float)
+i = 0
+while( i < size(peso)):
+    imc[i] = round((peso[i])/(altura[i] * altura[i]),2)
+    i = i + 1
+print(imc)
+
+sit = " "
+i = max(imc)
+
+if(i<17):
+    sit = "muito abaixo do pesoa"
+elif(17<=i<=18.49):
+    sit = "abaixo do peso"
+elif(18.5<=i<=24.99):
+    sit = "peso normal"
+elif(25<=i<=29.99):
+    sit = "acima do peso"
+elif(30<=i<=34.99):
+    sit = "obesidade"
+elif(35<=i<=39.99):
+    sit = "obesidade severa"
+elif(i>40):
+    sit = "obesidade morbida"
+else:
+    sit = "dados invalidos"
+print("O MAIOR IMC DA TURMA EH:", max(imc))
+print(sit.upper())
+
+-- EXECUTION TIME:
+0.02579
+-- ERROR:
+Error: No such container: 3c0b40ec9d00
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 13:27:14) 
+-- CODE:
+from numpy import*
+peso = array(eval(input("pesos:")))
+altura = array(eval(input("altura:")))
+
+imc = zeros(size(peso), dtype = float)
+i = 0
+while( i < size(peso)):
+    imc[i] = round((peso[i])/(altura[i] * altura[i]),2)
+    i = i + 1
+print(imc)
+
+sit = " "
+i = max(imc)
+
+if(i<17):
+    sit = "muito abaixo do pesoa"
+elif(17<=i<=18.49):
+    sit = "abaixo do peso"
+elif(18.5<=i<=24.99):
+    sit = "peso normal"
+elif(25<=i<=29.99):
+    sit = "acima do peso"
+elif(30<=i<=34.99):
+    sit = "obesidade"
+elif(35<=i<=39.99):
+    sit = "obesidade severa"
+elif(i>40):
+    sit = "obesidade morbida"
+else:
+    sit = "dados invalidos"
+print("O MAIOR IMC DA TURMA EH:", max(imc))
+print(sit.upper())
+
+-- EXECUTION TIME:
+0.941217
+-- TEST CASE 1:
+---- input:
+[64.58,77.85,45.96,55.55]
+[1.62,1.84,1.55,1.66]
+---- correct output:
+[24.61  22.99  19.13  20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+---- user output:
+[24.61 22.99 19.13 20.16]
+O MAIOR IMC DA TURMA EH: 24.61
+PESO NORMAL
+-- TEST CASE 2:
+---- input:
+[34.67,45.78,55.89]
+[1.98,1.88,1.79]
+---- correct output:
+[  8.84  12.95  17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+---- user output:
+[ 8.84 12.95 17.44]
+O MAIOR IMC DA TURMA EH: 17.44
+ABAIXO DO PESO
+-- TEST CASE 3:
+---- input:
+[102.89,99.87]
+[1.65,1.77]
+---- correct output:
+[37.79  31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+---- user output:
+[37.79 31.88]
+O MAIOR IMC DA TURMA EH: 37.79
+OBESIDADE SEVERA
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

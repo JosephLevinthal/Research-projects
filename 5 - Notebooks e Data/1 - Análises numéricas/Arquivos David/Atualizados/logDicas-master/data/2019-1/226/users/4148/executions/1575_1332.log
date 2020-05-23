@@ -1,0 +1,75 @@
+== TEST (2019-03-30 12:10:47) 
+-- CODE:
+a = 5
+A = 3/2(3)**2.a**2
+print(round(A, 2))
+
+-- ERROR:
+File "XXXX", line 2
+    A = 3/2(3)**2.a**2
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 12:11:07) 
+-- CODE:
+a = 5
+x = 3/2(3)**2.a**2
+print(round(x, 2))
+
+-- ERROR:
+File "XXXX", line 2
+    x = 3/2(3)**2.a**2
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 12:12:15) 
+-- CODE:
+a = 5
+x = 3/2(3)**0.5.a**2
+print(round(x, 4))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    x = 3/2(3)**0.5.a**2
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 12:12:29) 
+-- CODE:
+a = 5
+x = 3/2(3)**0.5*a**2
+print(round(x, 4))
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    x = 3/2(3)**0.5*a**2
+TypeError: 'int' object is not callable
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-30 12:12:50) 
+-- CODE:
+a = 5
+x = 3/2*(3)**0.5*a**2
+print(round(x, 4))
+
+-- OUTPUT:
+64.9519
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-30 12:12:58) 
+-- CODE:
+a = 5
+x = 3/2*(3)**0.5*a**2
+print(round(x, 4))
+
+-- EXECUTION TIME:
+0.13673
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+64.9519
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

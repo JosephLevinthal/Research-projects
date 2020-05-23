@@ -1,0 +1,259 @@
+== TEST (2019-06-06 11:13:19) 
+-- CODE:
+from numpy import * 
+
+vg1 = array(eval(input("Gols do time 1: ")))
+vg2 = array(eval(input("Gols do time 2: ")))
+
+vet = zeros(3, dtype=int) #e posicoes pois é pra vitoria, derrota e empate
+
+for i in range(size[vg1]):
+	if vg1[i] > vg2[i]:    #vitoria
+		vet[0] = vet[0] + 1
+	elif vg1[i]== vg2[i]:  #empate
+		vet[1] = vet[1] + 1
+	elif vg1[i]< vg2[i]:   #derrota
+		vet[2]= vet[2] + 1
+	print(vet)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 11:14:32) 
+-- CODE:
+from numpy import * 
+
+vg1 = array(eval(input("Gols do time 1: ")))
+vg2 = array(eval(input("Gols do time 2: ")))
+
+vet = zeros(3, dtype=int) #e posicoes pois é pra vitoria, derrota e empate
+
+for i in range(size(vg1)):
+	if vg1[i] > vg2[i]:    #vitoria
+		vet[0] = vet[0] + 1
+	elif vg1[i]== vg2[i]:  #empate
+		vet[1] = vet[1] + 1
+	elif vg1[i]< vg2[i]:   #derrota
+		vet[2]= vet[2] + 1
+print(vet)
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import * 
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 11:14:49) 
+-- CODE:
+from numpy import * 
+
+vg1 = array(eval(input("Gols do time 1: ")))
+vg2 = array(eval(input("Gols do time 2: ")))
+
+vet = zeros(3, dtype=int) #e posicoes pois é pra vitoria, derrota e empate
+
+for i in range(size(vg1)):
+	if vg1[i] > vg2[i]:    #vitoria
+		vet[0] = vet[0] + 1
+	elif vg1[i]== vg2[i]:  #empate
+		vet[1] = vet[1] + 1
+	elif vg1[i]< vg2[i]:   #derrota
+		vet[2]= vet[2] + 1
+print(vet)
+
+
+-- EXECUTION TIME:
+1.21247
+-- TEST CASE 1:
+---- input:
+[2,3,2,4,3,5,3,4,2,3,1,0]
+[3,3,1,0,2,3,3,0,1,2,1,1]
+---- correct output:
+[7 3 2]
+---- user output:
+[7 3 2]
+-- TEST CASE 2:
+---- input:
+[1,2,1,2,1,2,1,2,0]
+[3,5,3,3,3,3,3,3,3]
+---- correct output:
+[0 0 9]
+---- user output:
+[0 0 9]
+-- TEST CASE 3:
+---- input:
+[1,2,2,2,2,1,1,2,2,1,1,2,2]
+[0,1,1,1,0,0,0,0,0,0,1,1,1]
+---- correct output:
+[12 1 0]
+---- user output:
+[12  1  0]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 22:29:15) 
+-- CODE:
+from numpy import*
+v1 = array(eval(input("O numero de gols: ")))
+v2 = array(eval(input("O numero de gols do time adversario: ")))
+
+v3 = zeros(3,dtype=int)
+# v[0] = vitorias
+# v[1] = empates
+# v[2] = derrotas
+while(size(v1)==size(v2)):
+	for i in v1:
+		if v1[i] > v2[i]:
+			v3[0]= v3[0] + 1
+		elif v1[i]==v2[i] :
+			v3[1] = v3[1] + 1
+		elif v1[i] < v2[i]:
+			v3[2] = v3[2] + 1
+		print(v3)
+		
+		
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 22:30:23) 
+-- CODE:
+from numpy import*
+v1 = array(eval(input("O numero de gols: ")))
+v2 = array(eval(input("O numero de gols do time adversario: ")))
+
+v3 = zeros(3,dtype=int)
+# v[0] = vitorias
+# v[1] = empates
+# v[2] = derrotas
+while(size(v1)==size(v2)):
+	for i in v1:
+		if v1[i] > v2[i]:
+			v3[0]= v3[0] + 1
+		elif v1[i]==v2[i] :
+			v3[1] = v3[1] + 1
+		elif v1[i] < v2[i]:
+			v3[2] = v3[2] + 1
+	print(v3)
+		
+		
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 22:31:58) 
+-- CODE:
+from numpy import*
+v1 = array(eval(input("O numero de gols: ")))
+v2 = array(eval(input("O numero de gols do time adversario: ")))
+
+v3 = zeros(3,dtype=int)
+# v[0] = vitorias
+# v[1] = empates
+# v[2] = derrotas
+while(size(v1)==size(v2)):
+	for i in range(size(v1)):
+		if v1[i] > v2[i]:
+			v3[0]= v3[0] + 1
+		elif v1[i]==v2[i] :
+			v3[1] = v3[1] + 1
+		elif v1[i] < v2[i]:
+			v3[2] = v3[2] + 1
+	print(v3)
+		
+		
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 22:33:12) 
+-- CODE:
+from numpy import*
+v1 = array(eval(input("O numero de gols: ")))
+v2 = array(eval(input("O numero de gols do time adversario: ")))
+
+v3 = zeros(3,dtype=int)
+# v[0] = vitorias
+# v[1] = empates
+# v[2] = derrotas
+for i in range(size(v1)):
+	if v1[i] > v2[i]:
+		v3[0]= v3[0] + 1
+	elif v1[i]==v2[i] :
+		v3[1] = v3[1] + 1
+	elif v1[i] < v2[i]:
+		v3[2] = v3[2] + 1
+print(v3)
+		
+		
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 22:33:56) 
+-- CODE:
+from numpy import*
+v1 = array(eval(input("O numero de gols: ")))
+v2 = array(eval(input("O numero de gols do time adversario: ")))
+
+v3 = zeros(3,dtype=int)
+# v[0] = vitorias
+# v[1] = empates
+# v[2] = derrotas
+for i in range(size(v1)):
+	if v1[i] > v2[i]:
+		v3[0]= v3[0] + 1
+	elif v1[i]==v2[i] :
+		v3[1] = v3[1] + 1
+	elif v1[i] < v2[i]:
+		v3[2] = v3[2] + 1
+print(v3)
+		
+		
+		
+-- EXECUTION TIME:
+8.81056
+-- TEST CASE 1:
+---- input:
+[2,3,2,4,3,5,3,4,2,3,1,0]
+[3,3,1,0,2,3,3,0,1,2,1,1]
+---- correct output:
+[7 3 2]
+---- user output:
+[7 3 2]
+-- TEST CASE 2:
+---- input:
+[1,2,1,2,1,2,1,2,0]
+[3,5,3,3,3,3,3,3,3]
+---- correct output:
+[0 0 9]
+---- user output:
+[0 0 9]
+-- TEST CASE 3:
+---- input:
+[1,2,2,2,2,1,1,2,2,1,1,2,2]
+[0,1,1,1,0,0,0,0,0,0,1,1,1]
+---- correct output:
+[12 1 0]
+---- user output:
+[12  1  0]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

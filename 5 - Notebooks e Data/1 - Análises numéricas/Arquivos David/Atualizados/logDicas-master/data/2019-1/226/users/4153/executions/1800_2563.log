@@ -1,0 +1,174 @@
+== TEST (2019-06-06 10:27:35) 
+-- CODE:
+from numpy import *
+
+medias = array(eval(input("Insira as medias: ")))
+
+i = 0
+while(i < size(medias)):
+	for ap in medias:
+		if(medias[i] >= 5 and medias[i] < 7):
+			ap = ap + 1
+	i = i + 1
+	print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 10:28:40) 
+-- CODE:
+from numpy import *
+
+medias = array(eval(input("Insira as medias: ")))
+
+i = 0
+while(size(medias) > 1):
+	for i in medias:
+		if(medias[i] >= 5 and medias[i] < 7):
+			ap = ap + 1
+	i = i + 1
+	print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 10:28:57) 
+-- CODE:
+from numpy import *
+
+medias = array(eval(input("Insira as medias: ")))
+
+i = 0
+ap = 0
+while(size(medias) > 1):
+	for i in medias:
+		if(medias[i] >= 5 and medias[i] < 7):
+			ap = ap + 1
+	i = i + 1
+	print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 10:32:09) 
+-- CODE:
+from numpy import *
+
+medias = array(eval(input("Insira as medias: ")))
+
+while(size(medias) > 1):
+	ap = 0
+	for i in medias:
+		if((medias[i] >= 5) and (medias[i] < 7)):
+			ap = ap + 1
+	print(ap)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 10:33:12) 
+-- CODE:
+from numpy import *
+
+medias = array(eval(input("Insira as medias: ")))
+
+while(size(medias) > 1):
+	ap = 0
+	for i in medias:
+		if((medias[i] >= 5) and (medias[i] < 7)):
+			ap = ap + 1
+	print(ap)
+	medias = array(eval(input("Insira as medias: ")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-06 10:35:27) 
+-- CODE:
+from numpy import *
+
+medias = array(eval(input("Insira as medias: ")))
+
+while(size(medias) > 1):
+	ap = 0
+	for i in medias:
+		if((i >= 5) and (i < 7)):
+			ap = ap + 1
+	print(ap)
+	medias = array(eval(input("Insira as medias: ")))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-06 10:36:02) 
+-- CODE:
+from numpy import *
+
+medias = array(eval(input("Insira as medias: ")))
+
+while(size(medias) > 1):
+	ap = 0
+	for i in medias:
+		if((i >= 5) and (i < 7)):
+			ap = ap + 1
+	print(ap)
+	medias = array(eval(input("Insira as medias: ")))
+-- EXECUTION TIME:
+1.09579
+-- TEST CASE 1:
+---- input:
+[6.3,6.4,6.0,6.9,5.5,5.2]
+[4.5,3.8,7.8,4.8,9.6,9.2,8.7,2.3,2.9]
+[5.6,4.7,3.8,7.5,8.2,8.4,7.1,6.9,6.7]
+[1.1,3.1,2.7,7.8,6.7,4.6,4.9,7.0]
+[1]
+---- correct output:
+6
+0
+3
+1
+---- user output:
+6
+0
+3
+1
+-- TEST CASE 2:
+---- input:
+[5.1,5.2,5.4,5.3,5.7,5.8,6.1,5.6,5.5,5.9,6.2]
+[2.7,6.8,4.7,5.7,3.5,6.6,7.0,5.4]
+[8.7,8.6,8.9,8.6,7.5,7.2,6.9,7.4,7.2]
+[1]
+---- correct output:
+11
+4
+1
+---- user output:
+11
+4
+1
+-- TEST CASE 3:
+---- input:
+[8.5,7.5,6.8,6.9,7.0,5.6,5.8,6.3]
+[7.3,7.1,7.0,6.8,6.0,5.0]
+[1]
+---- correct output:
+5
+3
+---- user output:
+5
+3
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

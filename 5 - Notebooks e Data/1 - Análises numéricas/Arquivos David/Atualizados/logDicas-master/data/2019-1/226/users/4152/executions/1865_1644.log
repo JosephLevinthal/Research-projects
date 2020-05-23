@@ -1,0 +1,537 @@
+== TEST (2019-07-04 10:04:41) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+for i in range(size(vet)):
+	if (i >= 5):
+		soma = soma + 1
+print(soma)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:05:00) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+for i in range(size(vet)):
+	if (i >= 5.0):
+		soma = soma + 1
+print(soma)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:07:31) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (i >= 5.0):
+		soma = soma + 1
+print(soma)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:08:08) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] >= 5.0):
+		soma = soma + 1
+print(soma)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:08:42) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+print(soma)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:12:26) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+vet1 = zeros(soma, dtype=int)
+for j in range(size(vet)):
+	if (vet[j] < 5.0):
+		vet1[j] = vet[j]
+print(soma)
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:14:38) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+vet1 = zeros(soma, dtype=int)
+a = 0
+for j in range(size(vet)):
+	if (vet[j] < 5.0):
+		a = a + 1
+print(soma)
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:15:27) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+vet1 = zeros(soma, dtype=int)
+a = 0
+for j in range(size(vet)):
+	if (vet[j] < 5.0):
+		a = a + 1
+		print(a)
+print(soma)
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:16:19) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+vet1 = zeros(soma, dtype=int)
+a = 0
+for j in range(size(vet)):
+	if (vet[j] < 5.0):
+		a = a + 1
+		print(a)
+		vet1[j] = vet1[a]
+print(soma)
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:20:20) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+vet1 = zeros(soma, dtype=int)
+a = 0
+for j in range(size(vet)):
+	if (vet[j] < 5.0):
+		a = a + 1
+		print(a)
+		vet1[j] = a
+print(soma)
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:39:20) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+vet1 = zeros(soma, dtype=int)
+a = 0
+for j in range(size(vet)):
+	if (vet[j] < 5.0):
+		vet1[j] = a
+		a = a + 1
+print(soma)
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:40:16) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+vet1 = zeros(soma, dtype=int)
+a = 0
+for j in range(size(vet)):
+	if (vet[j] < 5.0):
+		vet1[0] = a
+		a = a + 1
+print(soma)
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:40:44) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+vet1 = zeros(soma, dtype=int)
+a = 0
+for j in range(size(vet)):
+	if (vet[j] < 5.0):
+		vet1[j - 1] = a
+		a = a + 1
+print(soma)
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:41:07) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+vet1 = zeros(soma, dtype=int)
+a = 0
+for j in range(size(vet)):
+	if (vet[j] < 5.0):
+		vet1[j] = a
+		a = a + 1
+print(soma)
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:41:42) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+vet1 = zeros(soma, dtype=int)
+a = 0
+for j in range(size(vet)):
+	if (vet[j] < 5.0):
+		vet1[j + 1] = a
+		a = a + 1
+print(soma)
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-04 10:42:03) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+vet1 = zeros(soma, dtype=int)
+a = 0
+for j in range(size(vet)):
+	if (vet[j] < 5.0):
+		vet1[j] = a
+		a = a + 1
+print(soma)
+print(vet1)
+-- EXECUTION TIME:
+1.01346
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1865/1644/main.py", line 12, in <module>
+    vet1[j] = a
+IndexError: index 8 is out of bounds for axis 0 with size 4
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:43:48) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+vet1 = zeros(soma, dtype=int)
+a = 0
+for j in range(size(vet)):
+	if (vet[j] < 5.0):
+		vet1[j] = a - 1
+		a = a + 1
+print(soma)
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:44:27) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+vet1 = zeros(soma, dtype=int)
+a = 0
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		vet1[i] = a
+		a = a + 1
+print(soma)
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:44:45) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+vet1 = zeros(soma, dtype=int)
+a = 0
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		vet1[i - 1] = a
+		a = a + 1
+print(soma)
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:45:04) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+vet1 = zeros(soma, dtype=int)
+a = 0
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		vet1[i - 1] = a + 1
+		a = a + 1
+print(soma)
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-04 10:45:12) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+vet1 = zeros(soma, dtype=int)
+a = 0
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		vet1[i - 1] = a + 1
+		a = a + 1
+print(soma)
+print(vet1)
+-- EXECUTION TIME:
+1.23117
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1865/1644/main.py", line 12, in <module>
+    vet1[i - 1] = a + 1
+IndexError: index 7 is out of bounds for axis 0 with size 4
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:45:19) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+vet1 = zeros(soma, dtype=int)
+a = 0
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		vet1[i - 1] = a + 1
+		a = a + 1
+print(soma)
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:46:04) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		vet1[i] = i
+print(soma)
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:47:20) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+vet1 = zeros(soma, dtype=int)
+for j in range(size(vet)):
+	if (vet[j] < 5.0):
+		vet1[j] = j
+print(soma)
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 10:47:46) 
+-- CODE:
+from numpy import *
+vet = array(eval(input("Vet: ")))
+soma = 0
+vet1 = zeros(soma, dtype=int)
+for i in range(size(vet)):
+	if (vet[i] < 5.0):
+		soma = soma + 1
+vet1 = zeros(soma, dtype=int)
+for j in range(size(vet)):
+	if (vet[j] < 5.0):
+		vet1[j] = j
+print(soma)
+print(vet1)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

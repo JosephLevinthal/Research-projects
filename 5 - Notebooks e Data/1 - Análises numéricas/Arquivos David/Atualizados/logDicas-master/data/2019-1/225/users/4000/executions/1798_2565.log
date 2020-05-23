@@ -1,0 +1,1232 @@
+== TEST (2019-06-05 15:18:03) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presença: ")))
+ch = int(input("carga horaia: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and m[i]>=0.75*ch):
+		ap = ap +1
+	print(ap)
+	elif(m[i]<0.75*ch):
+		rpf = rpf +1
+	print(rpf)
+	else:
+		print(rpn)
+	
+	
+	
+
+
+-- ERROR:
+File "XXXX", line 12
+    elif(m[i]<0.75*ch):
+       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 15:18:43) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presença: ")))
+ch = int(input("carga horaia: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and m[i]>=0.75*ch):
+		ap = ap +1
+	print(ap)
+		elif(m[i]<0.75*ch):
+			rpf = rpf +1
+		print(rpf)
+		else:
+		print(rpn)
+	
+	
+	
+
+
+-- ERROR:
+File "XXXX", line 12
+    elif(m[i]<0.75*ch):
+    ^
+IndentationError: unexpected indent
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 15:21:44) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presença: ")))
+ch = int(input("carga horaia: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and m[i]>=0.75*ch):
+		ap = ap +1
+	elif(m[i]<0.75*ch):
+		rpf = rpf + 1
+	else:
+		rpn = rpn + 1
+print(ap)
+print(rpf)
+print(rpn)
+	
+			
+		
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-05 15:21:52) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presença: ")))
+ch = int(input("carga horaia: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and m[i]>=0.75*ch):
+		ap = ap +1
+	elif(m[i]<0.75*ch):
+		rpf = rpf + 1
+	else:
+		rpn = rpn + 1
+print(ap)
+print(rpf)
+print(rpn)
+	
+			
+		
+
+
+-- EXECUTION TIME:
+1.0929
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+0
+5
+0
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+0
+7
+0
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+0
+10
+0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 15:22:02) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presença: ")))
+ch = int(input("carga horaia: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and m[i]>=0.75*ch):
+		ap = ap +1
+	elif(m[i]<0.75*ch):
+		rpf = rpf + 1
+	else:
+		rpn = rpn + 1
+print(ap)
+print(rpf)
+print(rpn)
+	
+			
+		
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 15:23:13) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presença: ")))
+ch = int(input("carga horaia: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and m[i]>=0.75*ch):
+		ap = ap +1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+	else:
+		rpn = rpn + 1
+print(ap)
+print(rpf)
+print(rpn)
+	
+			
+		
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-05 15:23:17) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presença: ")))
+ch = int(input("carga horaia: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and m[i]>=0.75*ch):
+		ap = ap +1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+	else:
+		rpn = rpn + 1
+print(ap)
+print(rpf)
+print(rpn)
+	
+			
+		
+
+
+-- EXECUTION TIME:
+1.22604
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+0
+3
+2
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+0
+2
+5
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+0
+4
+6
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 15:23:18) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presença: ")))
+ch = int(input("carga horaia: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and m[i]>=0.75*ch):
+		ap = ap +1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+	else:
+		rpn = rpn + 1
+print(ap)
+print(rpf)
+print(rpn)
+	
+			
+		
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 15:25:59) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and m[i]>=0.75*ch):
+		ap = ap +1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+	else:
+		rpn = rpn + 1
+print(ap)
+print(rpf)
+print(rpn)
+	
+			
+		
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-05 15:26:04) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and m[i]>=0.75*ch):
+		ap = ap +1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+	else:
+		rpn = rpn + 1
+print(ap)
+print(rpf)
+print(rpn)
+	
+			
+		
+
+
+-- EXECUTION TIME:
+1.03609
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+0
+3
+2
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+0
+2
+5
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+0
+4
+6
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 15:26:10) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and m[i]>=0.75*ch):
+		ap = ap +1
+	elif(m[i]<0.75*ch):
+		rpf = rpf + 1
+	else:
+		rpn = rpn + 1
+print(ap)
+print(rpf)
+print(rpn)
+	
+			
+		
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-05 15:26:14) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and m[i]>=0.75*ch):
+		ap = ap +1
+	elif(m[i]<0.75*ch):
+		rpf = rpf + 1
+	else:
+		rpn = rpn + 1
+print(ap)
+print(rpf)
+print(rpn)
+	
+			
+		
+
+
+-- EXECUTION TIME:
+1.05148
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+0
+5
+0
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+0
+7
+0
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+0
+10
+0
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 15:26:15) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and m[i]>=0.75*ch):
+		ap = ap +1
+	elif(m[i]<0.75*ch):
+		rpf = rpf + 1
+	else:
+		rpn = rpn + 1
+print(ap)
+print(rpf)
+print(rpn)
+	
+			
+		
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 15:26:43) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and m[i]>=0.75*ch):
+		ap = ap +1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+	else:
+		rpn = rpn + 1
+print(ap)
+print(rpf)
+print(rpn)
+	
+			
+		
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-05 15:27:05) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and m[i]>=0.75*ch):
+		ap = ap +1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+	else:
+		rpn = rpn + 1
+print(ap)
+print(rpf)
+print(rpn)
+	
+			
+		
+
+
+-- EXECUTION TIME:
+0.967336
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+0
+3
+2
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+0
+2
+5
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+0
+4
+6
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-05 15:31:17) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and m[i]>=0.75*ch):
+		ap = ap +1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+	elif(m[i]<5)
+		rpn = rpn + 1
+v = zeros(3)
+v[0]=ap
+v[1] = rpn
+v[2]=rpf
+print(v)
+	
+			
+		
+
+
+-- EXECUTION TIME:
+0.888812
+-- ERROR:
+  File "/home/codebench/codes/1798/2565/main.py", line 13
+    elif(m[i]<5)
+               ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 15:31:23) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and m[i]>=0.75*ch):
+		ap = ap +1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+	elif(m[i]<5)
+		rpn = rpn + 1
+v = zeros(3)
+v[0]=ap
+v[1] = rpn
+v[2]=rpf
+print(v)
+	
+			
+		
+
+
+-- ERROR:
+File "XXXX", line 13
+    elif(m[i]<5)
+               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-05 15:31:34) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and m[i]>=0.75*ch):
+		ap = ap +1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+	elif(m[i]<5):
+		rpn = rpn + 1
+v = zeros(3)
+v[0]=ap
+v[1] = rpn
+v[2]=rpf
+print(v)
+	
+			
+		
+
+
+-- EXECUTION TIME:
+1.10074
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+[0. 0. 3.]
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+[0. 0. 2.]
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+[0. 1. 4.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 15:31:39) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and m[i]>=0.75*ch):
+		ap = ap +1
+	elif(m[i]<5):
+		rpn = rpn + 1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+v = zeros(3)
+v[0]=ap
+v[1] = rpn
+v[2]=rpf
+print(v)
+	
+			
+		
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-05 15:31:45) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and m[i]>=0.75*ch):
+		ap = ap +1
+	elif(m[i]<5):
+		rpn = rpn + 1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+v = zeros(3)
+v[0]=ap
+v[1] = rpn
+v[2]=rpf
+print(v)
+	
+			
+		
+
+
+-- EXECUTION TIME:
+1.36178
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+[0. 0. 3.]
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+[0. 0. 2.]
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+[0. 1. 4.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 15:32:40) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and pres[i]>=0.75*ch):
+		ap = ap +1
+	elif(m[i]<5):
+		rpn = rpn + 1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+v = zeros(3)
+v[0]=ap
+v[1] = rpn
+v[2]=rpf
+print(v)
+	
+			
+		
+
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-05 15:32:44) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and pres[i]>=0.75*ch):
+		ap = ap +1
+	elif(m[i]<5):
+		rpn = rpn + 1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+v = zeros(3)
+v[0]=ap
+v[1] = rpn
+v[2]=rpf
+print(v)
+	
+			
+		
+
+
+-- EXECUTION TIME:
+0.884095
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+[2. 0. 3.]
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+[5. 0. 2.]
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+[5. 1. 4.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 15:33:29) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and pres[i]>=0.75*ch):
+		ap = ap +1
+	elif(m[i]<5):
+		rpn = rpn + 1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+v = zeros(3)
+v[0]=ap
+v[1] = rpn
+v[2]=rpf
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-05 15:33:36) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and pres[i]>=0.75*ch):
+		ap = ap +1
+	elif(m[i]<5):
+		rpn = rpn + 1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+v = zeros(3)
+v[0]=ap
+v[1] = rpn
+v[2]=rpf
+print(v)
+-- EXECUTION TIME:
+1.36643
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+[2. 0. 3.]
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+media final: presenca: carga horaria: [5. 0. 2.]
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+media final: presenca: carga horaria: [5. 1. 4.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-05 15:33:37) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and pres[i]>=0.75*ch):
+		ap = ap +1
+	elif(m[i]<5):
+		rpn = rpn + 1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+v = zeros(3)
+v[0]=ap
+v[1] = rpn
+v[2]=rpf
+print(v)
+-- EXECUTION TIME:
+2.05838
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+[2. 0. 3.]
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+media final: presenca: carga horaria: [5. 0. 2.]
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+media final: presenca: carga horaria: [5. 1. 4.]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-05 15:33:37) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and pres[i]>=0.75*ch):
+		ap = ap +1
+	elif(m[i]<5):
+		rpn = rpn + 1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+v = zeros(3)
+v[0]=ap
+v[1] = rpn
+v[2]=rpf
+print(v)
+-- EXECUTION TIME:
+3.61644
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+media final: presenca: carga horaria: [5. 0. 2.]
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+media final: presenca: carga horaria: [5. 1. 4.]
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-05 15:35:07) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and pres[i]>=0.75*ch):
+		ap = ap +1
+	elif(m[i]<5):
+		rpn = rpn + 1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+v = zeros(3, dtype=int)
+v[0]=ap
+v[1]=rpn
+v[2]=rpf
+print(v)
+-- EXECUTION TIME:
+0.859045
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+media final: presenca: carga horaria: [2 0 3]
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+media final: presenca: carga horaria: [5 0 2]
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+media final: presenca: carga horaria: [5 1 4]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-05 15:35:09) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and pres[i]>=0.75*ch):
+		ap = ap +1
+	elif(m[i]<5):
+		rpn = rpn + 1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+v = zeros(3, dtype=int)
+v[0]=ap
+v[1]=rpn
+v[2]=rpf
+print(v)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-05 15:35:40) 
+-- CODE:
+from numpy import*
+m = array(eval(input("media final: ")))
+pres = array(eval(input("presenca: ")))
+ch = int(input("carga horaria: "))
+ap = 0
+rpn = 0
+rpf = 0
+for i in range(size(m)):
+	if(m[i]>= 5 and pres[i]>=0.75*ch):
+		ap = ap +1
+	elif(m[i]<5):
+		rpn = rpn + 1
+	elif(pres[i]<0.75*ch):
+		rpf = rpf + 1
+v = zeros(3, dtype=int)
+v[0]=ap
+v[1]=rpn
+v[2]=rpf
+print(v)
+-- EXECUTION TIME:
+0.995218
+-- TEST CASE 1:
+---- input:
+[6.2,7.3,7.0,7.5,8.9]
+[75,76,74,73,72]
+100
+---- correct output:
+[2 0 3]
+---- user output:
+[2 0 3]
+-- TEST CASE 2:
+---- input:
+[7.4,7.6,7.5,7.2,7.2,7.3,7.8]
+[60,80,55,58,61,70,79]
+80
+---- correct output:
+[5 0 2]
+---- user output:
+[5 0 2]
+-- TEST CASE 3:
+---- input:
+[8.2,6.9,7.0,6.5,7.4,8.5,7.6,6.9,4.5,5.5]
+[90,40,70,35,100,110,85,99,100,110]
+120
+---- correct output:
+[5 1 4]
+---- user output:
+[5 1 4]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

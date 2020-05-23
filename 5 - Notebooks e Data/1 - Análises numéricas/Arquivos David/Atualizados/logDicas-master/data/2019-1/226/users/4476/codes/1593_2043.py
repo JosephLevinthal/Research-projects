@@ -1,0 +1,5 @@
+a = float(input("digite a primeira variavel: "))
+b = float(input("digite a segunda variavel: "))
+c = float(input("digite a terceira variavel: "))
+d = float(input("digite a quarta variavel: "))
+print(round((1*a + 2*b + 3*c + 4*d) / (1 + 2 + 3 + 4), 2))

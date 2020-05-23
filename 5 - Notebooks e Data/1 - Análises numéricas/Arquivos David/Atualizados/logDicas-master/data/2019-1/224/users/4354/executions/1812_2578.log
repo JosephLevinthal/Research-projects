@@ -1,0 +1,66 @@
+== TEST (2019-06-08 22:31:50) 
+-- CODE:
+from numpy import *
+v = array(eval(input("digite o vetor forcas: ")))
+p = 0
+for i in v:
+	if(i % 2 == 0):
+		p = p + 1
+z = zeros(p,dtype = int)
+zpos = 0
+for i2 in v:
+	if(i2 % 2 == 0):
+		z[zpos] = i2
+		zpos = zpos + 1
+print(z)
+	
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-08 22:32:08) 
+-- CODE:
+from numpy import *
+v = array(eval(input("digite o vetor forcas: ")))
+p = 0
+for i in v:
+	if(i % 2 == 0):
+		p = p + 1
+z = zeros(p,dtype = int)
+zpos = 0
+for i2 in v:
+	if(i2 % 2 == 0):
+		z[zpos] = i2
+		zpos = zpos + 1
+print(z)
+	
+
+-- EXECUTION TIME:
+1.09494
+-- TEST CASE 1:
+---- input:
+[120,130,140,150,160,170,180,190,201]
+---- correct output:
+[120 130 140 150 160 170 180 190]
+---- user output:
+[120 130 140 150 160 170 180 190]
+-- TEST CASE 2:
+---- input:
+[131,180]
+---- correct output:
+[180]
+---- user output:
+[180]
+-- TEST CASE 3:
+---- input:
+[333,567,899,214]
+---- correct output:
+[214]
+---- user output:
+[214]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

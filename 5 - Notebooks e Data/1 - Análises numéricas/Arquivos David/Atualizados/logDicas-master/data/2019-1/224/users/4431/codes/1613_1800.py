@@ -1,0 +1,5 @@
+a=float(input("Digite um numero A :"))
+b=float(input("Digite um numero B :"))
+c=float(input("Digite um numero C:"))
+d=(a**2+b**2+c**2)/(a+b+c)
+print(round(d,7))

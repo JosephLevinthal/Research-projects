@@ -1,0 +1,319 @@
+== TEST (2019-07-03 18:06:08) 
+-- CODE:
+from numpy import*
+v = array(eval(input("digite as notas: ")))
+a = sezi(v)
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-03 18:06:33) 
+-- CODE:
+from numpy import*
+v = array(eval(input("digite as notas: ")))
+a = size(v)
+print(a)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-03 18:08:04) 
+-- CODE:
+from numpy import*
+v = array(eval(input("digite as notas: ")))
+a = size(v)
+b = 0
+for i in range(a):
+	if(v[i] >= 5 ):
+		b = b + 1
+		
+print(b)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-03 18:10:37) 
+-- CODE:
+from numpy import*
+v = array(eval(input("digite as notas: ")))
+a = size(v)
+b = 0
+for i in range(a):
+	if(v[i] >= 5 ):
+		b = b + 1
+		
+print(b)
+k = zeros(b, dtype=int)
+h = 0
+for j in k:
+	print(j)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-03 18:14:03) 
+-- CODE:
+from numpy import*
+v = array(eval(input("digite as notas: ")))
+a = size(v)
+b = 0
+for i in range(a):
+	if(v[i] >= 5 ):
+		b = b + 1
+		
+print(b)
+k = zeros(b, dtype=int)
+h = 0
+for j in range(a):
+	if(v[j] >= 5):
+		k[h] = h
+		h = h + 1
+print(k)
+	
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-03 18:15:06) 
+-- CODE:
+from numpy import*
+v = array(eval(input("digite as notas: ")))
+a = size(v)
+b = 0
+for i in range(a):
+	if(v[i] >= 5 ):
+		b = b + 1
+		
+print(b)
+k = zeros(b, dtype=int)
+h = 1
+for j in range(a):
+	if(v[j] >= 5):
+		k[h] = h
+		h = h + 1
+print(k)
+	
+-- EXECUTION TIME:
+1.07825
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1876/1643/main.py", line 14, in <module>
+    k[h] = h
+IndexError: index 6 is out of bounds for axis 0 with size 6
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-03 18:15:16) 
+-- CODE:
+from numpy import*
+v = array(eval(input("digite as notas: ")))
+a = size(v)
+b = 0
+for i in range(a):
+	if(v[i] >= 5 ):
+		b = b + 1
+		
+print(b)
+k = zeros(b, dtype=int)
+h = 0
+for j in range(a):
+	if(v[j] >= 5):
+		k[h] = h
+		h = h + 1
+print(k)
+	
+-- EXECUTION TIME:
+1.07222
+-- TEST CASE 1:
+---- input:
+[9.0,1.5,4.2,7.0,5.5,7.8,9.1,8,2.1,2.3,4.99]
+---- correct output:
+6
+[0 3 4 5 6 7]
+---- user output:
+6
+[0 1 2 3 4 5]
+-- TEST CASE 2:
+---- input:
+[9.0,1.5,4.2,7.0,5.5,7.8,9.1,8,5,2.3,6]
+---- correct output:
+8
+[ 0  3  4  5  6  7  8 10]
+---- user output:
+8
+[0 1 2 3 4 5 6 7]
+-- TEST CASE 3:
+---- input:
+[9.0,1.5,4.2,7.0,5.5,7.8,9.1,8,2.1,2.3,4.99,6.1,3.6,2.9,10,8]
+---- correct output:
+9
+[ 0  3  4  5  6  7 11 14 15]
+---- user output:
+digite as notas: 9
+[0 1 2 3 4 5 6 7 8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-03 18:15:23) 
+-- CODE:
+from numpy import*
+v = array(eval(input("digite as notas: ")))
+a = size(v)
+b = 0
+for i in range(a):
+	if(v[i] >= 5 ):
+		b = b + 1
+		
+print(b)
+k = zeros(b, dtype=int)
+h = 0
+for j in range(a):
+	if(v[j] >= 5):
+		k[h] = h
+		h = h + 1
+print(k)
+	
+-- EXECUTION TIME:
+1.05294
+-- TEST CASE 1:
+---- input:
+[9.0,1.5,4.2,7.0,5.5,7.8,9.1,8,2.1,2.3,4.99]
+---- correct output:
+6
+[0 3 4 5 6 7]
+---- user output:
+6
+[0 1 2 3 4 5]
+-- TEST CASE 2:
+---- input:
+[9.0,1.5,4.2,7.0,5.5,7.8,9.1,8,5,2.3,6]
+---- correct output:
+8
+[ 0  3  4  5  6  7  8 10]
+---- user output:
+8
+[0 1 2 3 4 5 6 7]
+-- TEST CASE 3:
+---- input:
+[9.0,1.5,4.2,7.0,5.5,7.8,9.1,8,2.1,2.3,4.99,6.1,3.6,2.9,10,8]
+---- correct output:
+9
+[ 0  3  4  5  6  7 11 14 15]
+---- user output:
+9
+[0 1 2 3 4 5 6 7 8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-03 18:15:30) 
+-- CODE:
+from numpy import*
+v = array(eval(input("digite as notas: ")))
+a = size(v)
+b = 0
+for i in range(a):
+	if(v[i] >= 5 ):
+		b = b + 1
+		
+print(b)
+k = zeros(b, dtype=int)
+h = 0
+for j in range(a):
+	if(v[j] >= 5):
+		k[h] = h
+		h = h + 1
+print(k)
+	
+-- EXECUTION TIME:
+1.23281
+-- TEST CASE 1:
+---- input:
+[9.0,1.5,4.2,7.0,5.5,7.8,9.1,8,2.1,2.3,4.99]
+---- correct output:
+6
+[0 3 4 5 6 7]
+---- user output:
+6
+[0 1 2 3 4 5]
+-- TEST CASE 2:
+---- input:
+[9.0,1.5,4.2,7.0,5.5,7.8,9.1,8,5,2.3,6]
+---- correct output:
+8
+[ 0  3  4  5  6  7  8 10]
+---- user output:
+8
+[0 1 2 3 4 5 6 7]
+-- TEST CASE 3:
+---- input:
+[9.0,1.5,4.2,7.0,5.5,7.8,9.1,8,2.1,2.3,4.99,6.1,3.6,2.9,10,8]
+---- correct output:
+9
+[ 0  3  4  5  6  7 11 14 15]
+---- user output:
+9
+[0 1 2 3 4 5 6 7 8]
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-03 18:15:51) 
+-- CODE:
+from numpy import*
+v = array(eval(input("digite as notas: ")))
+a = size(v)
+b = 0
+for i in range(a):
+	if(v[i] >= 5 ):
+		b = b + 1
+		
+print(b)
+k = zeros(b, dtype=int)
+h = 0
+for j in range(a):
+	if(v[j] >= 5):
+		k[h] = j
+		h = h + 1
+print(k)
+	
+-- EXECUTION TIME:
+0.941257
+-- TEST CASE 1:
+---- input:
+[9.0,1.5,4.2,7.0,5.5,7.8,9.1,8,2.1,2.3,4.99]
+---- correct output:
+6
+[0 3 4 5 6 7]
+---- user output:
+6
+[0 3 4 5 6 7]
+-- TEST CASE 2:
+---- input:
+[9.0,1.5,4.2,7.0,5.5,7.8,9.1,8,5,2.3,6]
+---- correct output:
+8
+[ 0  3  4  5  6  7  8 10]
+---- user output:
+8
+[ 0  3  4  5  6  7  8 10]
+-- TEST CASE 3:
+---- input:
+[9.0,1.5,4.2,7.0,5.5,7.8,9.1,8,2.1,2.3,4.99,6.1,3.6,2.9,10,8]
+---- correct output:
+9
+[ 0  3  4  5  6  7 11 14 15]
+---- user output:
+9
+[ 0  3  4  5  6  7 11 14 15]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

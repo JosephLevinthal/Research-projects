@@ -1,0 +1,7 @@
+valor=float(input())
+quantidadedetickets=int(input())
+valordotickets=float(input())
+quantidadedepasses=float(input())
+quantidadedepassesdeonibus=float(input())
+valordospasses=float(input())
+if valor <(quantidadedetick)

@@ -1,0 +1,1233 @@
+== TEST (2019-04-07 23:47:30) 
+-- CODE:
+S = bonificacao
+N = nao bonificacao
+x = float(input("valor da nota: "))
+b = float(input("bonificacao: "))
+
+if ("S"):
+	msg = (x * 10) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+File "XXXX", line 2
+    N = nao bonificacao
+                      ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-07 23:47:36) 
+-- CODE:
+S = bonificacao
+N = naobonificacao
+x = float(input("valor da nota: "))
+b = float(input("bonificacao: "))
+
+if ("S"):
+	msg = (x * 10) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    S = bonificacao
+NameError: name 'bonificacao' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-07 23:47:54) 
+-- CODE:
+S = "bonificacao"
+N = "naobonificacao"
+x = float(input("valor da nota: "))
+b = float(input("bonificacao: "))
+
+if ("S"):
+	msg = (x * 10) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    b = float(input())
+ValueError: could not convert string to float: 'S'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-07 23:49:07) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = float(input("bonificacao: "))
+
+if (S):
+	msg = (x * 10) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    b = float(input())
+ValueError: could not convert string to float: 'S'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-07 23:49:37) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = "bonificacao: "
+
+if (S):
+	msg = (x * 10) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (S):
+NameError: name 'S' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 20:59:18) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+
+if (S):
+	msg = (x * 10) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (S):
+NameError: name 'S' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 20:59:29) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+
+if (S):
+	msg = (x * 10) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (S):
+NameError: name 'S' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 21:00:00) 
+-- CODE:
+x = int(input("valor da nota: "))
+b = input("bonificacao: ")
+
+if (S):
+	msg = (x * 10) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    x = int(input())
+ValueError: invalid literal for int() with base 10: '5.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 21:01:29) 
+-- CODE:
+x = int(input("valor da nota: "))
+b = input("bonificacao: ")
+
+if (b.upper()):
+	msg = (x * 10) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    x = int(input())
+ValueError: invalid literal for int() with base 10: '5.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 21:01:55) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+
+if (b.upper()):
+	msg = (x * 10) / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+0.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 21:02:24) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+
+if (b.upper()):
+	msg = (x * 90) / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+4.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 21:02:44) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+
+if (b.upper()):
+	msg = (x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-08 21:02:56) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+
+if (b.upper()):
+	msg = (x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- EXECUTION TIME:
+0.171108
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.840000000000001
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 21:03:24) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+
+if (b.upper() == S):
+	msg = (x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (b.upper() == S):
+NameError: name 'S' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-08 21:04:46) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+S = input("S")
+
+if (b.upper() == S):
+	msg = (x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- EXECUTION TIME:
+0.190868
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1637/2704/main.py", line 3, in <module>
+    S = input()
+EOFError: EOF when reading a line
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 21:04:48) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+S = input("S")
+
+if (b.upper() == S):
+	msg = (x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    S = input()
+EOFError: EOF when reading a line
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 21:05:07) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+
+if (b.upper() == S):
+	msg = (x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (b.upper() == S):
+NameError: name 'S' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 21:08:24) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+
+
+if (b.upper() == S):
+	msg = (x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    if (b.upper() == S):
+NameError: name 'S' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 21:09:50) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+
+
+if (b.lower() == s):
+	msg = (x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    if (b.lower() == s):
+NameError: name 's' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 21:10:18) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+
+
+if (b.lower() == s):
+	msg = (x * 110) / 100
+else:
+	msg = x
+s = s
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    if (b.lower() == s):
+NameError: name 's' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 21:12:05) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+
+if (b.lower() == ):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+File "XXXX", line 4
+    if (b.lower() == ):
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 21:12:13) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+
+if (b.lower()):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-08 21:12:24) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+
+if (b.lower()):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- EXECUTION TIME:
+0.126522
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.840000000000001
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 21:13:09) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+bonoficacao = "s" ou "n"
+
+if (b.lower() == s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+File "XXXX", line 3
+    bonoficacao = "s" ou "n"
+                       ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 21:14:37) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+bonoficacao = (""s" ou "n"")
+
+if (b.lower() == s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+File "XXXX", line 3
+    bonoficacao = (""s" ou "n"")
+                     ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-08 21:14:58) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+bonoficacao = s
+
+if (b.lower() == s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonoficacao = s
+NameError: name 's' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:05:39) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+bonoficacao = "s"
+
+if (b.lower() == s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    if (b.lower() == s):
+NameError: name 's' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 10:06:07) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+bonoficacao = s
+
+if (b.lower() == s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- EXECUTION TIME:
+0.132314
+-- ERROR:
+Traceback (most recent call last):
+  File "/home/codebench/codes/1637/2704/main.py", line 3, in <module>
+    bonoficacao = s
+NameError: name 's' is not defined
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:06:08) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+bonoficacao = s
+
+if (b.lower() == s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    bonoficacao = s
+NameError: name 's' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:06:40) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = if
+
+if (b.lower() == s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+File "XXXX", line 3
+    s = if
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:06:50) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = bonificacao
+
+if (b.lower() == s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    s = bonificacao
+NameError: name 'bonificacao' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:07:50) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = "bonificacao"
+
+if (b.lower() == s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:08:51) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = float(x * 110) / 100
+
+if (b.lower() == s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:09:15) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = float(x * 110) / 100
+
+if (b.lower() == s):
+	msg = float(x * 90) / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:09:49) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = (x * 110) / 100
+
+if (b.lower() == s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 10:11:07) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = (x * 110) / 100
+
+if (b.lower() == s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- EXECUTION TIME:
+0.137438
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.0
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.0
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.4
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:11:09) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = (x * 110) / 100
+
+if (b.lower() == s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:12:00) 
+-- CODE:
+x = int(input("valor da nota: "))
+b = input("bonificacao: ")
+s = (x * 110) / 100
+
+if (b.lower() == s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    x = int(input())
+ValueError: invalid literal for int() with base 10: '5.0'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:12:15) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = (x * 110) / 100
+
+if (b.lower() == s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:12:31) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = (x * 110) / 100
+
+if (b.lower() = s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+File "XXXX", line 5
+    if (b.lower() = s):
+                  ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:12:47) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = (x * 110) / 100
+
+if (b.lower() == s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:13:11) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = (x * 10) / 100
+
+if (b.lower() == s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:13:34) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = x * 10 / 100
+
+if (b.lower() == s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:13:53) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = x * 110 / 100
+
+if (b.lower() == s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:15:20) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = x * 110 / 100
+
+if (x * 110 / 110 == s):
+	msg = float(x * 110) / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:17:04) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = x * 110 / 100
+n = x
+
+if (s == s):
+	msg = x
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:17:52) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = x * 110 / 100
+n = x
+
+if (b.lower() == s):
+	msg = x
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:18:21) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = x * 110 / 100
+n = x
+
+if (b.lower() == s):
+	msg = x * 110 / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:18:39) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = x * 110 / 100
+n = x
+
+if (b.lower() == s):
+	msg = x * 110 / 100
+else:
+	msg = 2x
+
+print(msg)
+-- ERROR:
+File "XXXX", line 9
+    msg = 2x
+           ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:18:51) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = x * 110 / 100
+n = x
+
+if (b.lower() == s):
+	msg = x * 110 / 100
+else:
+	msg = 2 * x
+
+print(msg)
+-- OUTPUT:
+10.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:19:30) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = x * 110 / 100
+n = x
+
+if (b.lower() == s):
+	msg = x * 110 / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:19:45) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = x * 110 / 100
+n = x
+
+if (b.upper() == s):
+	msg = x * 110 / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:20:30) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+s = x * 110 / 100
+n = x
+
+if (b.lower == s):
+	msg = x * 110 / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:20:58) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+n = x
+
+if (b.lower == s):
+	msg = x * 110 / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    if (b.lower == s):
+NameError: name 's' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:21:29) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+n = x
+s = "s"
+
+if (b.lower == s):
+	msg = x * 110 / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:22:00) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+n = x
+s = "s.lower()"
+
+if (b.lower == s):
+	msg = x * 110 / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:22:59) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+n = x
+s = S
+
+if (b.lower == S):
+	msg = x * 110 / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    s = S
+NameError: name 'S' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:23:37) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+n = x
+s = S
+
+if (b.upper() == S):
+	msg = x * 110 / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    s = S
+NameError: name 'S' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:23:54) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+n = x
+S = S
+
+if (b.upper() == S):
+	msg = x * 110 / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    S = S
+NameError: name 'S' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:25:54) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+S = x
+
+if (b.upper() == S):
+	msg = x * 110 / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:26:24) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+S = x
+b = x
+if (b.upper() == S):
+	msg = x * 110 / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    if (b.upper() == S):
+AttributeError: 'float' object has no attribute 'upper'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:26:55) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+S = x
+b = x
+if (float(b.upper() == S)):
+	msg = x * 110 / 100
+else:
+	msg = x
+
+print(msg)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    if (float(b.upper() == S)):
+AttributeError: 'float' object has no attribute 'upper'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:27:23) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+S = x
+b = x
+if ("b".upper() == S):
+	msg = x * 110 / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:28:34) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+S = x
+b = x
+if ("b".upper() == S):
+	msg = S * 110 / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:28:49) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+S = x
+
+if ("b".upper() == S):
+	msg = S * 110 / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:28:56) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+S = x
+
+if (b.upper() == S):
+	msg = S * 110 / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:29:44) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+S = x
+
+if (b.upper() == "S"):
+	msg = S * 110 / 100
+else:
+	msg = x
+
+print(msg)
+-- OUTPUT:
+5.5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 10:29:53) 
+-- CODE:
+x = float(input("valor da nota: "))
+b = input("bonificacao: ")
+S = x
+
+if (b.upper() == "S"):
+	msg = S * 110 / 100
+else:
+	msg = x
+
+print(msg)
+-- EXECUTION TIME:
+0.186781
+-- TEST CASE 1:
+---- input:
+5.0
+S
+---- correct output:
+5.5
+---- user output:
+5.5
+-- TEST CASE 2:
+---- input:
+9.0
+S
+---- correct output:
+9.9
+---- user output:
+9.9
+-- TEST CASE 3:
+---- input:
+4.4
+N
+---- correct output:
+4.4
+---- user output:
+4.4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

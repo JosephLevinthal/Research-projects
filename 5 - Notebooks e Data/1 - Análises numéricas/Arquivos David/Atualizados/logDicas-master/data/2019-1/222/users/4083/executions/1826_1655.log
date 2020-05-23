@@ -1,0 +1,550 @@
+== TEST (2019-06-12 18:34:12) 
+-- CODE:
+from numpy import*
+
+es = input("digite o estado: ").split(',')
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:34:47) 
+-- CODE:
+from numpy import*
+
+es = input("digite o estado: ").split(',').uper
+print(size(es))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:35:23) 
+-- CODE:
+from numpy import*
+
+es = input("digite o estado: ").split(',').uper()
+print(size(es))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:39:14) 
+-- CODE:
+from numpy import*
+
+es = input("digite o estado: ").split(',')
+print(size(es))
+a = zeros(5, dtype=int)
+print(es)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:39:37) 
+-- CODE:
+from numpy import*
+
+es = input("digite o estado: ").upper().split(',')
+print(size(es))
+a = zeros(5, dtype=int)
+print(es)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:40:45) 
+-- CODE:
+from numpy import*
+
+es = input("digite o estado: ").upper().split(,)
+print(size(es))
+a = zeros(5, dtype=int)
+print(es)
+-- ERROR:
+File "XXXX", line 3
+    es = input().upper().split(,)
+                               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:47:49) 
+-- CODE:
+from numpy import*
+
+es = input("digite o estado: ").upper().split(',')
+print(size(es))
+a = zeros(5, dtype=int)
+a1 = 0
+a2 = 0
+a3 = 0
+a4 = 0
+a5 = 0
+for i in range(size(es)):
+	 if	(es[i] == "Ac"):
+			a1 = a1 + 1
+	elif	(es[i] == "AM"):
+			a2 = a2 + 1
+	elif	(es[i]  == "PA"):
+			a3 = a3 + 1
+	elif	(es[i] == "RO"):
+			a4 = a4 + 1
+	elif	(es[i] == "RR"):
+			a5 = a5 + 1
+	a[0] = a1
+	a[1] = a2
+	a[2] = a3
+	a[3] = a4
+	a[4] = a5
+print(max(a))
+print(a)
+			
+-- ERROR:
+File "XXXX", line 14
+    elif	(es[i] == "AM"):
+                        ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:48:30) 
+-- CODE:
+from numpy import*
+
+es = input("digite o estado: ").upper().split(',')
+print(size(es))
+a = zeros(5, dtype=int)
+a1 = 0
+a2 = 0
+a3 = 0
+a4 = 0
+a5 = 0
+for i in range(size(es)):
+	 if	(es[i] == 'Ac'):
+			a1 = a1 + 1
+	elif	(es[i] == 'AM'):
+			a2 = a2 + 1
+	elif	(es[i]  == 'PA'):
+			a3 = a3 + 1
+	elif	(es[i] == 'RO'):
+			a4 = a4 + 1
+	elif	(es[i] == 'RR'):
+			a5 = a5 + 1
+	a[0] = a1
+	a[1] = a2
+	a[2] = a3
+	a[3] = a4
+	a[4] = a5
+print(max(a))
+print(a)
+			
+-- ERROR:
+File "XXXX", line 14
+    elif	(es[i] == 'AM'):
+                        ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:49:16) 
+-- CODE:
+from numpy import*
+
+es = input("digite o estado: ").upper().split(',')
+print(size(es))
+a = zeros(5, dtype=int)
+a1 = 0
+a2 = 0
+a3 = 0
+a4 = 0
+a5 = 0
+for i in range(size(es)):
+	 if(es[i] == 'AC'):
+		a1 = a1 + 1
+	elif(es[i] == 'AM'):
+		a2 = a2 + 1
+	elif(es[i]  == 'PA'):
+		a3 = a3 + 1
+	elif(es[i] == 'RO'):
+		a4 = a4 + 1
+	elif(es[i] == 'RR'):
+		a5 = a5 + 1
+	a[0] = a1
+	a[1] = a2
+	a[2] = a3
+	a[3] = a4
+	a[4] = a5
+print(max(a))
+print(a)
+			
+-- ERROR:
+File "XXXX", line 13
+    a1 = a1 + 1
+              ^
+TabError: inconsistent use of tabs and spaces in indentation
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:50:06) 
+-- CODE:
+from numpy import*
+
+es = input("digite o estado: ").upper().split(',')
+print(size(es))
+a = zeros(5, dtype=int)
+a1 = 0
+a2 = 0
+a3 = 0
+a4 = 0
+a5 = 0
+for i in range(size(es)):
+	 if	(es[i] == 'AC'):
+			a1 = a1 + 1
+	elif	(es[i] == 'AM'):
+			a2 = a2 + 1
+	elif	(es[i]  == 'PA'):
+			a3 = a3 + 1
+	elif	(es[i] == 'RO'):
+			a4 = a4 + 1
+	elif(	es[i] == 'RR'):
+			a5 = a5 + 1
+	a[0] = a1
+	a[1] = a2
+	a[2] = a3
+	a[3] = a4
+	a[4] = a5
+print(max(a))
+print(a)
+			
+-- ERROR:
+File "XXXX", line 14
+    elif	(es[i] == 'AM'):
+                        ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:51:02) 
+-- CODE:
+from numpy import*
+
+es = input("digite o estado: ").upper().split(',')
+print(size(es))
+a = zeros(5, dtype=int)
+a1 = 0
+a2 = 0
+a3 = 0
+a4 = 0
+a5 = 0
+for i in range(size(es)):
+	 if	(es[i] == 'AC'):
+			a1 = a1 + 1
+	elif	(es[i] == 'AM'):
+			a2 = a2 + 1
+	elif	(es[i]  == 'PA'):
+			a3 = a3 + 1
+	elif	(es[i] == 'RO'):
+			a4 = a4 + 1
+	elif(	es[i] == 'RR'):
+			a5 = a5 + 1
+	a[0] = a1
+	a[1] = a2
+	a[2] = a3
+	a[3] = a4
+	a[4] = a5
+print(max(a))
+print(a)
+			
+-- ERROR:
+File "XXXX", line 14
+    elif	(es[i] == 'AM'):
+                        ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:52:09) 
+-- CODE:
+from numpy import*
+
+es = input("digite o estado: ").upper().split(',')
+
+a = zeros(5, dtype=int)
+a1 = 0
+a2 = 0
+a3 = 0
+a4 = 0
+a5 = 0
+for i in range(size(es)):
+	 if	(es[i] == 'AC'):
+			a1 = a1 + 1
+	elif	(es[i] == 'AM'):
+			a2 = a2 + 1
+	elif	(es[i]  == 'PA'):
+			a3 = a3 + 1
+	elif	(es[i] == 'RO'):
+			a4 = a4 + 1
+	elif(	es[i] == 'RR'):
+			a5 = a5 + 1
+	a[0] = a1
+	a[1] = a2
+	a[2] = a3
+	a[3] = a4
+	a[4] = a5
+print(max(a))
+print(a)
+			
+-- ERROR:
+File "XXXX", line 14
+    elif	(es[i] == 'AM'):
+                        ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:52:30) 
+-- CODE:
+from numpy import*
+
+es = input("digite o estado: ").upper().split(',')
+
+a = zeros(5, dtype=int)
+a1 = 0
+a2 = 0
+a3 = 0
+a4 = 0
+a5 = 0
+for i in range(size(es)):
+	 if(es[i] == 'AC'):
+			a1 = a1 + 1
+	elif(es[i] == 'AM'):
+			a2 = a2 + 1
+	elif(es[i]  == 'PA'):
+			a3 = a3 + 1
+	elif(es[i] == 'RO'):
+			a4 = a4 + 1
+	elif(es[i] == 'RR'):
+			a5 = a5 + 1
+	a[0] = a1
+	a[1] = a2
+	a[2] = a3
+	a[3] = a4
+	a[4] = a5
+print(max(a))
+print(a)
+			
+-- ERROR:
+File "XXXX", line 14
+    elif(es[i] == 'AM'):
+                       ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:53:17) 
+-- CODE:
+from numpy import*
+
+es = input("digite o estado: ").upper().split(',')
+
+a = zeros(5, dtype=int)
+a1 = 0
+a2 = 0
+a3 = 0
+a4 = 0
+a5 = 0
+for i in range(size(es)):
+		if(es[i] == 'AC'):
+			a1 = a1 + 1
+		elif(es[i] == 'AM'):
+			a2 = a2 + 1
+		elif(es[i]  == 'PA'):
+			a3 = a3 + 1
+		elif(es[i] == 'RO'):
+			a4 = a4 + 1
+		elif(es[i] == 'RR'):
+			a5 = a5 + 1
+	a[0] = a1
+	a[1] = a2
+	a[2] = a3
+	a[3] = a4
+	a[4] = a5
+print(max(a))
+print(a)
+			
+-- ERROR:
+File "XXXX", line 22
+    a[0] = a1
+            ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:54:08) 
+-- CODE:
+from numpy import*
+
+es = input("digite o estado: ").upper().split(',')
+
+a = zeros(5, dtype=int)
+a1 = 0
+a2 = 0
+a3 = 0
+a4 = 0
+a5 = 0
+for i in range(size(es)):
+		if	(es[i] == 'AC'):
+			a1 = a1 + 1
+		elif	(es[i] == 'AM'):
+				a2 = a2 + 1
+		elif	(es[i] == 'PA'):
+				a3 = a3 + 1
+		elif	(es[i] == 'RO'):
+				a4 = a4 + 1
+		elif	(es[i] == 'RR'):
+				a5 = a5 + 1
+	a[0] = a1
+	a[1] = a2
+	a[2] = a3
+	a[3] = a4
+	a[4] = a5
+print(max(a))
+print(a)
+			
+-- ERROR:
+File "XXXX", line 22
+    a[0] = a1
+            ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:54:38) 
+-- CODE:
+from numpy import*
+
+es = input("digite o estado: ").upper().split(',')
+
+a = zeros(5, dtype=int)
+a1 = 0
+a2 = 0
+a3 = 0
+a4 = 0
+a5 = 0
+for i in range(size(es)):
+		if	(es[i] == 'AC'):
+			a1 = a1 + 1
+		elif	(es[i] == 'AM'):
+				a2 = a2 + 1
+		elif	(es[i] == 'PA'):
+				a3 = a3 + 1
+		elif	(es[i] == 'RO'):
+				a4 = a4 + 1
+		elif	(es[i] == 'RR'):
+				a5 = a5 + 1
+				
+	a[0] = a1
+	a[1] = a2
+	a[2] = a3
+	a[3] = a4
+	a[4] = a5
+print(max(a))
+print(a)
+			
+-- ERROR:
+File "XXXX", line 23
+    a[0] = a1
+            ^
+IndentationError: unindent does not match any outer indentation level
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-12 18:54:53) 
+-- CODE:
+from numpy import*
+
+es = input("digite o estado: ").upper().split(',')
+
+a = zeros(5, dtype=int)
+a1 = 0
+a2 = 0
+a3 = 0
+a4 = 0
+a5 = 0
+for i in range(size(es)):
+		if	(es[i] == 'AC'):
+			a1 = a1 + 1
+		elif	(es[i] == 'AM'):
+				a2 = a2 + 1
+		elif	(es[i] == 'PA'):
+				a3 = a3 + 1
+		elif	(es[i] == 'RO'):
+				a4 = a4 + 1
+		elif	(es[i] == 'RR'):
+				a5 = a5 + 1
+				
+		a[0] = a1
+		a[1] = a2
+		a[2] = a3
+		a[3] = a4
+		a[4] = a5
+print(max(a))
+print(a)
+			
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-12 18:55:25) 
+-- CODE:
+from numpy import*
+
+es = input("digite o estado: ").upper().split(',')
+
+a = zeros(5, dtype=int)
+a1 = 0
+a2 = 0
+a3 = 0
+a4 = 0
+a5 = 0
+for i in range(size(es)):
+		if	(es[i] == 'AC'):
+			a1 = a1 + 1
+		elif	(es[i] == 'AM'):
+				a2 = a2 + 1
+		elif	(es[i] == 'PA'):
+				a3 = a3 + 1
+		elif	(es[i] == 'RO'):
+				a4 = a4 + 1
+		elif	(es[i] == 'RR'):
+				a5 = a5 + 1
+				
+		a[0] = a1
+		a[1] = a2
+		a[2] = a3
+		a[3] = a4
+		a[4] = a5
+print(max(a))
+print(a)
+			
+-- EXECUTION TIME:
+1.01608
+-- TEST CASE 1:
+---- input:
+PA,AM,AM,AC,AM,AC,RR,AM,AC,AM,AM,RO,AM,RR,PA
+---- correct output:
+7
+[3 7 2 1 2]
+---- user output:
+7
+[3 7 2 1 2]
+-- TEST CASE 2:
+---- input:
+AM,AC,PA,PA,AM,RO,RO
+---- correct output:
+2
+[1 2 2 2 0]
+---- user output:
+2
+[1 2 2 2 0]
+-- TEST CASE 3:
+---- input:
+AC,RO,RO,RR,AC,AC,PA,AM,AC,RR,RR,RR,RO,AM
+---- correct output:
+4
+[4 2 1 3 4]
+---- user output:
+4
+[4 2 1 3 4]
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,364 @@
+== TEST (2019-04-09 10:58:19) 
+-- CODE:
+t = input("medida de temperatura C ou F:")
+a = input(float("escala da temperatura:"))
+
+if (t == C): 
+	r= t + 32*9/5
+	
+else:(t == f):
+	r = t - 32*5/9
+	
+print(round(t,2))
+-- ERROR:
+File "XXXX", line 7
+    else:(t == f):
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:59:40) 
+-- CODE:
+t = input("medida de temperatura C ou F:")
+a = input(float("escala da temperatura:"))
+
+if (t == C): 
+	r= (t + 32)*9/5
+	
+else:(t == F):
+	r = (t - 32)*5/9
+	
+print(round(t,2))
+-- ERROR:
+File "XXXX", line 7
+    else:(t == F):
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 10:59:48) 
+-- CODE:
+t = input("medida de temperatura C ou F:")
+a = input(float("escala da temperatura:"))
+
+if (t == C): 
+	r= (t + 32)*9/5
+	
+else(t == F):
+	r = (t - 32)*5/9
+	
+print(round(t,2))
+-- ERROR:
+File "XXXX", line 7
+    else(t == F):
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:00:29) 
+-- CODE:
+t = input("medida de temperatura C ou F:")
+a = input(float("escala da temperatura:"))
+
+if (t == C): 
+	r = (a + 32)*9/5
+	
+else (t == F):
+	r = (a - 32)*5/9
+	
+print(round(r,2))
+-- ERROR:
+File "XXXX", line 7
+    else (t == F):
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:00:56) 
+-- CODE:
+t = input("medida de temperatura C ou F:")
+a = input(float("escala da temperatura:"))
+
+if (t == C): 
+	r = (a + 32)*9/5
+	
+if (t == F):
+	r = (a - 32)*5/9
+	
+print(round(r,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    a = input(float("escala da temperatura:"))
+ValueError: could not convert string to float: 'escala da temperatura:'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:01:51) 
+-- CODE:
+t = input("medida de temperatura C ou F:")
+a = float(input("escala da temperatura:"))
+
+if (t == C): 
+	r = (a + 32)*9/5
+	
+if (t == F):
+	r = (a - 32)*5/9
+	
+print(round(r,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (t == C): 
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:03:23) 
+-- CODE:
+t = input("medida de temperatura C ou F:")
+a = float(input("escala da temperatura:"))
+
+if (C == t): 
+	r = (a + 32)*9/5
+	
+if (C == t):
+	r = (a - 32)*5/9
+	
+print(round(r,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (C == t): 
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:03:36) 
+-- CODE:
+t = input("medida de temperatura C ou F:")
+a = float(input("escala da temperatura:"))
+
+if (C == t): 
+	r = (a + 32)*9/5
+	
+if (F == t):
+	r = (a - 32)*5/9
+	
+print(round(r,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    if (C == t): 
+NameError: name 'C' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:07:05) 
+-- CODE:
+t = input("medida de temperatura C ou F:")
+a = float(input("escala da temperatura:"))
+
+if ("C" == t): 
+	r = (a + 32)*9/5
+	
+else ("F" == t):
+	r = (a - 32)*5/9
+	
+print(round(r,2))
+-- ERROR:
+File "XXXX", line 7
+    else ("F" == t):
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:09:24) 
+-- CODE:
+t = input("medida de temperatura C ou F:")
+a = float(input("escala da temperatura:"))
+
+if ("C" == t): 
+	r = (a + 32)*9/5
+	
+else:
+	r = (a - 32)*5/9
+	
+print(round(r,2))
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:09:53) 
+-- CODE:
+t = input("medida de temperatura C ou F:")
+a = float(input("escala da temperatura:"))
+
+if ("C" == t): 
+	r = (a + 32)*9/5
+	
+else:
+	r = (a - 32)*5/9
+	
+print(round(r,2))
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:10:14) 
+-- CODE:
+t = input("medida de temperatura C ou F:")
+a = float(input("escala da temperatura:"))
+
+if ("C" == t): 
+	r = (a + 32)*9/5
+	
+else:
+	r = (a - 32)*5/9
+	
+print(round(r,2))
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:11:23) 
+-- CODE:
+t = input("medida de temperatura C ou F:")
+a = float(input("escala da temperatura:"))
+
+if ("C" == t): 
+	r = (a + 32)*5/9
+	
+else:
+	r = (a - 32)*5/9
+	
+print(round(r,2))
+-- OUTPUT:
+195.56
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:11:56) 
+-- CODE:
+t = input("medida de temperatura C ou F:")
+a = float(input("escala da temperatura:"))
+
+if ("C" == t): 
+	r = (a + 32)*9/5
+	
+else:
+	r = (a - 32)*5/9
+	
+print(round(r,2))
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:12:27) 
+-- CODE:
+t = input("medida de temperatura C ou F:")
+a = float(input("escala da temperatura:"))
+
+if ("C" == t): 
+	r = (a + 32)*9/5
+	
+else:
+	r = (a - 32)*5/9
+	
+print(round(r,2))
+-- OUTPUT:
+633.6
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:14:22) 
+-- CODE:
+t = input("medida de temperatura C ou F:")
+a = float(input("escala da temperatura:"))
+
+if ("C" == t): 
+	r = (a*9/5)+32
+	
+else:
+	r = (a - 32)*5/9
+	
+print(round(r,2))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-09 11:14:39) 
+-- CODE:
+t = input("medida de temperatura C ou F:")
+a = float(input("escala da temperatura:"))
+
+if ("C" == t): 
+	r = (a*9/5)+32
+	
+else:
+	r = (a - 32)*5/9
+	
+print(round(r,2))
+-- OUTPUT:
+608.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-09 11:15:20) 
+-- CODE:
+t = input("medida de temperatura C ou F:")
+a = float(input("escala da temperatura:"))
+
+if ("C" == t): 
+	r = (a*9/5)+32
+	
+else:
+	r = (a - 32)*5/9
+	
+print(round(r,2))
+-- EXECUTION TIME:
+0.186277
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-10 22:40:22) 
+-- CODE:
+t = input("medida de temperatura C ou F:")
+a = float(input("escala da temperatura:"))
+
+if ("C" == t): 
+	r = (a*9/5)+32
+	
+else:
+	r = (a - 32)*5/9
+	
+print(round(r,2))
+-- EXECUTION TIME:
+0.241247
+-- TEST CASE 1:
+---- input:
+C
+320
+---- correct output:
+608.0
+---- user output:
+608.0
+-- TEST CASE 2:
+---- input:
+F
+320
+---- correct output:
+160.0
+---- user output:
+160.0
+-- TEST CASE 3:
+---- input:
+C
+0
+---- correct output:
+32.0
+---- user output:
+32.0
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

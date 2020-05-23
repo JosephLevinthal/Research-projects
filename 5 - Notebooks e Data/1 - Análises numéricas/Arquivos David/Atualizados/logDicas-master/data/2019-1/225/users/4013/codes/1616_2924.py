@@ -1,0 +1,5 @@
+s1 = int(input("posicao inicial:"))
+v = int(input("velocidade:"))
+t = int(input("tempo:"))
+s2 = s1 + (v * t)
+print( s2 )

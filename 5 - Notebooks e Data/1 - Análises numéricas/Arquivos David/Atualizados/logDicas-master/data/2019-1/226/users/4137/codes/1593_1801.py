@@ -1,0 +1,5 @@
+n1 = input("Nome do objeto:")
+n2 = int(input("Numero de repeticoes:"))
+n3 = ("Abra" + " " + n1 + " ")
+n4 = (n3*n2)
+print(n4)

@@ -1,0 +1,395 @@
+== TEST (2019-03-14 16:14:32) 
+-- CODE:
+aresta =print(3*5**2)
+area = print(3*aresta/2)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = print(3*aresta/2)
+TypeError: unsupported operand type(s) for *: 'int' and 'NoneType'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:17:54) 
+-- CODE:
+aresta =print((3*5)**2)**0.5
+area = (3/2)*print((3*5)**2)**0.5
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    aresta =print((3*5)**2)**0.5
+TypeError: unsupported operand type(s) for ** or pow(): 'NoneType' and 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:18:16) 
+-- CODE:
+aresta =print(((3*5)**2)**0.5)
+area = (3/2)*print((3*5)**2)**0.5
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*print((3*5)**2)**0.5
+TypeError: unsupported operand type(s) for ** or pow(): 'NoneType' and 'float'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:18:33) 
+-- CODE:
+aresta =print(((3*5)**2)**0.5)
+area = (3/2)*print(((3*5)**2)**0.5)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)*print(((3*5)**2)**0.5)
+TypeError: unsupported operand type(s) for *: 'float' and 'NoneType'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:18:44) 
+-- CODE:
+aresta =print(((3*5)**2)**0.5)
+area = (3/2)* print(((3*5)**2)**0.5)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2)* print(((3*5)**2)**0.5)
+TypeError: unsupported operand type(s) for *: 'float' and 'NoneType'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:18:50) 
+-- CODE:
+aresta =print(((3*5)**2)**0.5)
+area = (3/2) * print(((3*5)**2)**0.5)
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 2, in <module>
+    area = (3/2) * print(((3*5)**2)**0.5)
+TypeError: unsupported operand type(s) for *: 'float' and 'NoneType'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:43:19) 
+-- CODE:
+aresta = 5
+area = print(3/2*((3*5**2)**0.5))
+ 
+print(round(area, 4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(area, 4))
+TypeError: type NoneType doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:44:13) 
+-- CODE:
+aresta = 5
+area = print(3/2*((3*5**2)**0.5))
+ 
+print(round(area,4))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 4, in <module>
+    print(round(area,4))
+TypeError: type NoneType doesn't define __round__ method
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:44:42) 
+-- CODE:
+aresta = 5
+area = print(3/2*((3*5**2)**0.5))
+ 
+print(round((3/2*((3*5**2)**0.5)),4))
+-- OUTPUT:
+12.99038105676658
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 17:44:45) 
+-- CODE:
+aresta = 5
+area = print(3/2*((3*5**2)**0.5))
+ 
+print(round((3/2*((3*5**2)**0.5)),4))
+-- EXECUTION TIME:
+0.164099
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.99038105676658
+12.9904
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:44:50) 
+-- CODE:
+aresta = 5
+area = print(3/2*((3*5**2)**0.5))
+ 
+print(round((3/2*((3*5**2)**0.5)),4))
+-- OUTPUT:
+12.99038105676658
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:45:30) 
+-- CODE:
+aresta = 5
+area = print(3/2*((3*5**2)**0.5)) 
+print(round((3/2*((3*5**2)**0.5)),4))
+-- OUTPUT:
+12.99038105676658
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 17:45:36) 
+-- CODE:
+aresta = 5
+area = print(3/2*((3*5**2)**0.5)) 
+print(round((3/2*((3*5**2)**0.5)),4))
+-- EXECUTION TIME:
+0.19446
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.99038105676658
+12.9904
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:45:38) 
+-- CODE:
+aresta = 5
+area = print(3/2*((3*5**2)**0.5)) 
+print(round((3/2*((3*5**2)**0.5)),4))
+-- OUTPUT:
+12.99038105676658
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:46:17) 
+-- CODE:
+aresta = 5
+area = print(3/2*((3*5**2)**0.5)) 
+
+print((round((3/2*((3*5**2)**0.5)),4)))
+-- OUTPUT:
+12.99038105676658
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 17:46:21) 
+-- CODE:
+aresta = 5
+area = print(3/2*((3*5**2)**0.5)) 
+
+print((round((3/2*((3*5**2)**0.5)),4)))
+-- EXECUTION TIME:
+0.138302
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.99038105676658
+12.9904
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:46:24) 
+-- CODE:
+aresta = 5
+area = print(3/2*((3*5**2)**0.5)) 
+
+print((round((3/2*((3*5**2)**0.5)),4)))
+-- OUTPUT:
+12.99038105676658
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 17:47:23) 
+-- CODE:
+aresta = 5
+area = 
+
+print(round((3/2*((3*5**2)**0.5)),4))
+-- EXECUTION TIME:
+0.154962
+-- ERROR:
+  File "/home/codebench/codes/1582/1332/main.py", line 2
+    area = 
+          ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 17:47:32) 
+-- CODE:
+aresta = 5
+
+print(round((3/2*((3*5**2)**0.5)),4))
+-- EXECUTION TIME:
+0.190278
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.9904
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:50:12) 
+-- CODE:
+aresta = 5
+area= print(round (3/2*((3*5**2)**0.5),4))
+
+print(round((3/2*((3*5**2)**0.5)),4))
+-- OUTPUT:
+12.9904
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 17:50:15) 
+-- CODE:
+aresta = 5
+area= print(round (3/2*((3*5**2)**0.5),4))
+
+print(round((3/2*((3*5**2)**0.5)),4))
+-- EXECUTION TIME:
+0.145391
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.9904
+12.9904
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:50:17) 
+-- CODE:
+aresta = 5
+area= print(round (3/2*((3*5**2)**0.5),4))
+
+print(round((3/2*((3*5**2)**0.5)),4))
+-- OUTPUT:
+12.9904
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-14 17:50:35) 
+-- CODE:
+aresta = 5
+area= print(round (3/2*((3*5**2)**0.5),4))
+
+print(round((3/2*((3*5**2)**0.5)),4))
+-- EXECUTION TIME:
+0.186746
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+12.9904
+12.9904
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:50:40) 
+-- CODE:
+aresta = 5
+area= print(round (3/2*((3*5**2)**0.5),4))
+
+print(round((3/2*((3*5**2)**0.5)),4))
+-- OUTPUT:
+12.9904
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:51:27) 
+-- CODE:
+aresta = 5
+area= print(round (3/2*((3*5**2))
+
+print(round((3/2*((3*5**2)**0.5)),4))
+-- ERROR:
+File "XXXX", line 4
+    print(round((3/2*((3*5**2)**0.5)),4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:51:31) 
+-- CODE:
+aresta = 5
+area= print(round (3/2*((3*5**2))
+
+print(round((3/2*((3*5**2)**0.5)),4))
+-- ERROR:
+File "XXXX", line 4
+    print(round((3/2*((3*5**2)**0.5)),4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:51:36) 
+-- CODE:
+aresta = 5
+area= print(round (3/2*((3*5**2)**0.5),4))
+
+print(round((3/2*((3*5**2)**0.5)),4))
+-- OUTPUT:
+12.9904
+12.9904
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:52:57) 
+-- CODE:
+aresta = 5
+area= print(3/2*((3*5**2)**0.5)
+
+print(round((3/2*((3*5**2)**0.5)),4))
+-- ERROR:
+File "XXXX", line 4
+    print(round((3/2*((3*5**2)**0.5)),4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-14 17:54:08) 
+-- CODE:
+aresta = 5
+area= print(3/2*((3*5**2)**0.5)
+
+print(round((3/2*((3*5**2)**0.5),4))
+-- ERROR:
+File "XXXX", line 4
+    print(round((3/2*((3*5**2)**0.5),4))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-03-19 16:06:04) 
+-- CODE:
+aresta = 5
+area= (3/2)*(3**0.5)*(aresta**2)
+
+print(round(area,4))
+-- OUTPUT:
+64.9519
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-03-19 16:06:07) 
+-- CODE:
+aresta = 5
+area= (3/2)*(3**0.5)*(aresta**2)
+
+print(round(area,4))
+-- EXECUTION TIME:
+0.197076
+-- TEST CASE 1:
+---- input:
+xxx
+---- correct output:
+64.9519
+---- user output:
+64.9519
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

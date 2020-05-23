@@ -1,0 +1,170 @@
+== TEST (2019-05-13 14:45:10) 
+-- CODE:
+q1 = int(input("quantidade inicial de pirarucus:"))
+pc = int(input("percentual de crescimento: "))
+
+
+p = pc /100
+
+mes = 0
+
+while(qi > 0 and qi < 8000):
+	qi += (qi*p)-qv
+	mes = mes + 1
+	qv = int(input("quantidade de peixes vendidos: "))
+
+if(qi >= 12000):
+	print("ZERO")
+else:
+	print("MAXIMO")
+print(mes)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 9, in <module>
+    while(qi > 0 and qi < 8000):
+NameError: name 'qi' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 14:45:33) 
+-- CODE:
+qi = int(input("quantidade inicial de pirarucus:"))
+pc = int(input("percentual de crescimento: "))
+
+
+p = pc /100
+
+mes = 0
+
+while(qi > 0 and qi < 8000):
+	qi += (qi*p)-qv
+	mes = mes + 1
+	qv = int(input("quantidade de peixes vendidos: "))
+
+if(qi >= 12000):
+	print("ZERO")
+else:
+	print("MAXIMO")
+print(mes)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 10, in <module>
+    qi += (qi*p)-qv
+NameError: name 'qv' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 14:46:56) 
+-- CODE:
+qi = int(input("quantidade inicial de pirarucus:"))
+pc = int(input("percentual de crescimento: "))
+
+
+p = pc /100
+
+mes = 0
+
+while(qi > 0 and qi < 8000):
+	qv = int(input("quantidade de peixes vendidos: "))
+	qi += (qi*p)-qv
+	mes = mes + 1
+
+if(qi >= 12000):
+	print("ZERO")
+else:
+	print("MAXIMO")
+print(mes)
+-- OUTPUT:
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-13 14:48:21) 
+-- CODE:
+qi = int(input("quantidade inicial de pirarucus:"))
+pc = int(input("percentual de crescimento: "))
+
+
+p = pc /100
+
+mes = 0
+
+while(qi > 0 and qi < 8000):
+	qv = int(input("quantidade de peixes vendidos: "))
+	qi += (qi*p)-qv
+	mes = mes + 1
+
+if(qi<= 0):
+	print("ZERO")
+else:
+	print("MAXIMO")
+print(mes)
+-- OUTPUT:
+MAXIMO
+5
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-13 14:48:40) 
+-- CODE:
+qi = int(input("quantidade inicial de pirarucus:"))
+pc = int(input("percentual de crescimento: "))
+
+
+p = pc /100
+
+mes = 0
+
+while(qi > 0 and qi < 8000):
+	qv = int(input("quantidade de peixes vendidos: "))
+	qi += (qi*p)-qv
+	mes = mes + 1
+
+if(qi<= 0):
+	print("ZERO")
+else:
+	print("MAXIMO")
+print(mes)
+-- EXECUTION TIME:
+0.166181
+-- TEST CASE 1:
+---- input:
+1234
+56
+7
+8
+9
+10
+11
+---- correct output:
+MAXIMO
+5
+---- user output:
+MAXIMO
+5
+-- TEST CASE 2:
+---- input:
+5432
+1
+987
+654
+4321
+---- correct output:
+ZERO
+3
+---- user output:
+ZERO
+3
+-- TEST CASE 3:
+---- input:
+2468
+35
+1234
+900
+1
+2
+3
+4
+5
+---- correct output:
+MAXIMO
+7
+---- user output:
+MAXIMO
+7
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

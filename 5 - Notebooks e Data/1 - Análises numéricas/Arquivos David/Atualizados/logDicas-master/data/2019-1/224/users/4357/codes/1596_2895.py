@@ -1,0 +1,5 @@
+quantidade=int(input("digite um numero"))
+valorunitario=float(input("digite um numero"))
+frete=float(input("digite um numero"))
+total=(quantidade*valorunitario+frete)
+print(total)

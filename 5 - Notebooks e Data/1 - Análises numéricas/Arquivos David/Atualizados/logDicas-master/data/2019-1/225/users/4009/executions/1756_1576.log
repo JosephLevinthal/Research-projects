@@ -1,0 +1,276 @@
+== SUBMITION (2019-05-28 22:59:48) 
+-- CODE:
+from numpy import*
+
+vetor1= array(eval(input("elemetary eusapia: "))) #iram ser corrspodntes das cont 1 e 2 
+vetor2= array(eval(input("elemetary barsa: ")))
+
+cont=0
+cont1=0
+cont2= 0
+
+pedra= 11
+papel=22
+tesoura=33
+
+
+while(cont < size(vetor1)):
+	if (vetor1[cont] == papel and vetor2[cont] == pedra):
+		cont1 = cont1 + 1
+	elif(vetor1[cont] == pedra and vetor2[cont]== tesoura):
+		cont1= cont1 + 1
+	elif (vetor1[cont] == tesoura and vetor2[cont] == papel):
+		cont1= cont1 + 1
+	elif(vetor1[cont] != vetor2[cont]):
+		cont2= cont2 + 1
+	cont = cont + 1
+
+print(size(vetor1))
+-- EXECUTION TIME:
+0.618789
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-05-28 23:00:23) 
+-- CODE:
+from numpy import*
+
+vetor1= array(eval(input("elemetary eusapia: "))) #iram ser corrspodntes das cont 1 e 2 
+vetor2= array(eval(input("elemetary barsa: ")))
+
+cont=0
+cont1=0
+cont2= 0
+
+pedra= 11
+papel=22
+tesoura=33
+
+
+while(cont < size(vetor1)):
+	if (vetor1[cont] == papel and vetor2[cont] == pedra):
+		cont1 = cont1 + 1
+	elif(vetor1[cont] == pedra and vetor2[cont]== tesoura):
+		cont1= cont1 + 1
+	elif (vetor1[cont] == tesoura and vetor2[cont] == papel):
+		cont1= cont1 + 1
+	elif(vetor1[cont] != vetor2[cont]):
+		cont2= cont2 + 1
+	cont = cont + 1
+
+print(size(vetor1))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 13:05:21) 
+-- CODE:
+from numpy import*
+
+vetor1= array(eval(input("elemetary eusapia: "))) #iram ser corrspodntes das cont 1 e 2 
+vetor2= array(eval(input("elemetary barsa: ")))
+
+cont=0
+cont1=0
+cont2= 0
+
+pedra= 11
+papel=22
+tesoura=33
+
+
+while(cont < size(vetor1)):
+	if (vetor1[cont] == papel and vetor2[cont] == pedra):
+		cont1 = cont1 + 1
+	elif(vetor1[cont] == pedra and vetor2[cont]== tesoura):
+		cont1= cont1 + 1
+	elif (vetor1[cont] == tesoura and vetor2[cont] == papel):
+		cont1= cont1 + 1
+	elif(vetor1[cont] != vetor2[cont]):
+		cont2= cont2 + 1
+	cont = cont + 1
+
+print(size(vetor1))
+-- EXECUTION TIME:
+0.459931
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 13:05:39) 
+-- CODE:
+from numpy import*
+
+c=0 #posicaodosvetores
+r=0 #vitoriadaeusapia
+w=0 #vitoriasdebarsanulfo
+e= array(eval(input()))
+b= array(eval(input()))
+
+while (c< size(e)):
+	if (e[c]!=b[c]):
+		if (e[c]==11) and (b[c]==33) or (e[c]==22) and (b[c]==11) or (e[c]==33) and (b[c]==22):
+			r=r+1
+		elif (b[c]==11) and (e[c]==33) or (b[c]==22) and (e[c]==11) or (b[c]==33) and (e[c]==22):
+			w=w+1
+	c=c+1
+if (r>w):
+	print(c)
+	print("EUSAPIA")
+elif (r==w):
+	print(c)
+	print("EMPATE")
+else:
+	print (c)
+	print ("BARSANULFO")
+-- EXECUTION TIME:
+0.713262
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+EUSAPIA
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+EMPATE
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+BARSANULFO
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-05-29 13:05:39) 
+-- CODE:
+from numpy import*
+
+c=0 #posicaodosvetores
+r=0 #vitoriadaeusapia
+w=0 #vitoriasdebarsanulfo
+e= array(eval(input()))
+b= array(eval(input()))
+
+while (c< size(e)):
+	if (e[c]!=b[c]):
+		if (e[c]==11) and (b[c]==33) or (e[c]==22) and (b[c]==11) or (e[c]==33) and (b[c]==22):
+			r=r+1
+		elif (b[c]==11) and (e[c]==33) or (b[c]==22) and (e[c]==11) or (b[c]==33) and (e[c]==22):
+			w=w+1
+	c=c+1
+if (r>w):
+	print(c)
+	print("EUSAPIA")
+elif (r==w):
+	print(c)
+	print("EMPATE")
+else:
+	print (c)
+	print ("BARSANULFO")
+-- EXECUTION TIME:
+0.783099
+-- TEST CASE 1:
+---- input:
+[33,22,33,22,11,11,33,22,11,11,22,33]
+[22,33,22,11,11,33,22,11,11,22,33,33]
+---- correct output:
+12
+EUSAPIA
+---- user output:
+12
+EUSAPIA
+-- TEST CASE 2:
+---- input:
+[33,22,33,11,33,22,11,22,33,11]
+[11,33,22,33,11,33,22,11,22,33]
+---- correct output:
+10
+EMPATE
+---- user output:
+10
+EMPATE
+-- TEST CASE 3:
+---- input:
+[33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11,22]
+[11,33,33,22,11,11,22,33,33,22,11,11,22,33,33,22,11,11]
+---- correct output:
+18
+BARSANULFO
+---- user output:
+18
+BARSANULFO
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

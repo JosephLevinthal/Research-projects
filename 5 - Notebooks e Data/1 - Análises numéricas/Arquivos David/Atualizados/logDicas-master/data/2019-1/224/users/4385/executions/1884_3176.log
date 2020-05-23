@@ -1,0 +1,73 @@
+== TEST (2019-07-04 18:42:12) 
+-- CODE:
+from 
+-- ERROR:
+File "XXXX", line 1
+    from 
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-07-04 18:45:43) 
+-- CODE:
+from numpy import*
+string=input("digite: ").upper()
+v=0
+c=0
+for ch in string:
+	if (ch=="A" or ch=="E" or ch=="I" or ch=="O" or ch=="U"):
+		v=v+1
+	else:
+		c=c+1
+print(v)
+print(c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-07-04 18:46:09) 
+-- CODE:
+from numpy import*
+string=input("digite: ").upper()
+v=0
+c=0
+for ch in string:
+	if (ch=="A" or ch=="E" or ch=="I" or ch=="O" or ch=="U"):
+		v=v+1
+	else:
+		c=c+1
+print(v)
+print(c)
+-- EXECUTION TIME:
+0.761976
+-- TEST CASE 1:
+---- input:
+cachorro
+---- correct output:
+3
+5
+---- user output:
+3
+5
+-- TEST CASE 2:
+---- input:
+amazonia
+---- correct output:
+5
+3
+---- user output:
+5
+3
+-- TEST CASE 3:
+---- input:
+qwrt
+---- correct output:
+0
+4
+---- user output:
+0
+4
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

@@ -1,0 +1,60 @@
+== TEST (2019-04-16 10:08:26) 
+-- CODE:
+c = float(input('consumo: '))
+
+if c =< 100:
+	print(round(c*1.2,2))
+else:
+	print(round(c*1.4+25,2))
+-- ERROR:
+File "XXXX", line 3
+    if c =< 100:
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-16 10:08:42) 
+-- CODE:
+c = float(input('consumo: '))
+
+if c <= 100:
+	print(round(c*1.2,2))
+else:
+	print(round(c*1.4+25,2))
+-- OUTPUT:
+60.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-16 10:08:51) 
+-- CODE:
+c = float(input('consumo: '))
+
+if c <= 100:
+	print(round(c*1.2,2))
+else:
+	print(round(c*1.4+25,2))
+-- EXECUTION TIME:
+0.294781
+-- TEST CASE 1:
+---- input:
+50
+---- correct output:
+60.0
+---- user output:
+60.0
+-- TEST CASE 2:
+---- input:
+120
+---- correct output:
+193.0
+---- user output:
+193.0
+-- TEST CASE 3:
+---- input:
+199
+
+---- correct output:
+303.6
+---- user output:
+303.6
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

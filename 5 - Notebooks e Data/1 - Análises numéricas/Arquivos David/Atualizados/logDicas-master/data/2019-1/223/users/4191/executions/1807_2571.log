@@ -1,0 +1,267 @@
+== TEST (2019-06-11 16:18:27) 
+-- CODE:
+
+
+vet=(eval(input("string: ")))
+
+
+for i in range(len(vet)):
+	if(i=='A')or(i=='a'):
+		replace(i, '')
+
+print(vet)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 3, in <module>
+    vet=(eval(input()))
+  File "<string>", line 1, in <module>
+NameError: name 'Instituto_de_Computacao' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:18:49) 
+-- CODE:
+
+
+vet=(input("string: ")))
+
+
+for i in range(len(vet)):
+	if(i=='A')or(i=='a'):
+		replace(i, '')
+
+print(vet)		
+
+-- ERROR:
+File "XXXX", line 3
+    vet=(input()))
+                 ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 16:18:52) 
+-- CODE:
+
+
+vet=(input("string: "))
+
+
+for i in range(len(vet)):
+	if(i=='A')or(i=='a'):
+		replace(i, '')
+
+print(vet)		
+
+-- OUTPUT:
+Instituto_de_Computacao-ICOMP-UFAM
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 17:21:50) 
+-- CODE:
+from numpy import *
+vet=(input("string: "))
+b= ""
+
+for i in range(len(vet)):
+	if(i=='A')or(i=='a'):
+		replace(i, "")
+
+print(vet)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 17:23:36) 
+-- CODE:
+
+vet=(input("string: "))
+b= ""
+
+for i in range(len(vet)):
+	if(i!='A')or(i!='a'):
+		b=b+i
+
+print(vet)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    b=b+i
+TypeError: must be str, not int
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 17:24:21) 
+-- CODE:
+
+vet=(input("string: "))
+b= ""
+
+for i in range(len(vet)):
+	if(vet[i]!='A')or(vet[i]!='a'):
+		b=b+vet[i]
+
+print(vet)		
+
+-- OUTPUT:
+Instituto_de_Computacao-ICOMP-UFAM
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 17:24:32) 
+-- CODE:
+
+vet=(input("string: "))
+b= ""
+
+for i in range(len(vet)):
+	if(vet[i]!='A')or(vet[i]!='a'):
+		b=b+vet[i]
+
+print(b)		
+
+-- OUTPUT:
+Instituto_de_Computacao-ICOMP-UFAM
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 17:25:15) 
+-- CODE:
+from numpy import *
+vet=(input("string: "))
+b= ""
+
+for i in range(len(vet)):
+	if(vet[i]!='A')or(vet[i]!='a'):
+		b=b+vet[i]
+
+print(b)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 17:25:37) 
+-- CODE:
+from numpy import *
+vet=(input("string: "))
+b= ""
+
+for i in range(len(vet)):
+	if(vet[i]!='A')or(vet[i]!='a'):
+		b=b+vet[i]
+
+print(b)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 17:26:22) 
+-- CODE:
+from numpy import *
+vet=(input("string: "))
+b= ""
+
+for i in range(len(vet)):
+	if(vet[i] != 'A' or vet[i] != 'a'):
+		b=b+vet[i]
+
+print(b)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 17:27:14) 
+-- CODE:
+from numpy import *
+vet=(input("string: "))
+b= ""
+
+for i in range(len(vet)):
+	if(vet[i].upper() != "A"):
+		b=b+vet[i]
+
+print(b)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 17:27:57) 
+-- CODE:
+from numpy import *
+vet=(input("string: "))
+b= ""
+
+for i in range(len(vet)):
+	if(vet[i]!="a" or vet[i]!="A"):
+		b=b+vet[i]
+
+print(b)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-11 17:28:21) 
+-- CODE:
+from numpy import *
+vet=(input("string: "))
+b= ""
+
+for i in range(len(vet)):
+	if(vet[i]!="a" and vet[i]!="A"):
+		b=b+vet[i]
+
+print(b)		
+
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import *
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-11 17:28:46) 
+-- CODE:
+from numpy import *
+vet=(input("string: "))
+b= ""
+
+for i in range(len(vet)):
+	if(vet[i]!="a" and vet[i]!="A"):
+		b=b+vet[i]
+
+print(b)		
+
+-- EXECUTION TIME:
+1.12097
+-- TEST CASE 1:
+---- input:
+Instituto_de_Computacao-ICOMP-UFAM
+---- correct output:
+Instituto_de_Computco-ICOMP-UFM
+---- user output:
+Instituto_de_Computco-ICOMP-UFM
+-- TEST CASE 2:
+---- input:
+a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-a-aa-a-a-a-a-a-a-a-a-a-a
+---- correct output:
+-----------------------------
+---- user output:
+-----------------------------
+-- TEST CASE 3:
+---- input:
+.aaaaaaaaaaaaaaaaaaaaa.bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb.aaaaaaaaaaaaaaaaa.
+---- correct output:
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb..
+---- user output:
+..bbbbbbbbbbbbbbbbbbb.ccccccccccccccccccccccc.bbbbbbbbbbbbbbbbbb..
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

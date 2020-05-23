@@ -1,0 +1,6 @@
+n1 = float(input("Digite n1: "))
+n2 = float(input("Digite n2: "))
+n3 = float(input("Digite n3: "))
+n4 = float(input("Digite n4: "))
+mp = (n1 + n2*2 + n3*3 + n4*4) / (1 + 2 + 3 + 4)
+print(round(mp, 2))

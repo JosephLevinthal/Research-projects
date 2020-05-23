@@ -1,0 +1,539 @@
+== TEST (2019-04-01 19:10:06) 
+-- CODE:
+a = float(int("quantas gramas possui seu prato"))
+b = float(int("quantidade de bebida"))
+c = float(int("quantidade de sobremesas"))
+print(round(,2))
+-- ERROR:
+File "XXXX", line 4
+    print(round(,2))
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:11:00) 
+-- CODE:
+a = float("quantas gramas possui seu prato")
+b = float("quantidade de bebida")
+c = float("quantidade de sobremesas")
+print(round(a,b,c,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a = float("quantas gramas possui seu prato")
+ValueError: could not convert string to float: 'quantas gramas possui seu prato'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:11:48) 
+-- CODE:
+a = float(int("quantas gramas possui seu prato"))
+b = float(int("quantidade de bebida"))
+c = float(int("quantidade de sobremesas"))
+print(round(a,b,c,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a = float(int("quantas gramas possui seu prato"))
+ValueError: invalid literal for int() with base 10: 'quantas gramas possui seu prato'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:12:33) 
+-- CODE:
+a = print(int("quantas gramas possui seu prato"))
+b = print(int("quantidade de bebida"))
+c = print(int("quantidade de sobremesas"))
+print(round(a,b,c,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a = print(int("quantas gramas possui seu prato"))
+ValueError: invalid literal for int() with base 10: 'quantas gramas possui seu prato'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:13:15) 
+-- CODE:
+print(int("quantas gramas possui seu prato"))
+print(int("quantidade de bebida"))
+print(int("quantidade de sobremesas"))
+print(round(,2))
+-- ERROR:
+File "XXXX", line 4
+    print(round(,2))
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:35:03) 
+-- CODE:
+x = print"quantas gramas possui seu prato :"
+y = print"quantidade de bebida :"
+z = print"quantidade de sobremesa :"
+
+print(round(x,y,z,2))
+-- ERROR:
+File "XXXX", line 1
+    x = print"quantas gramas possui seu prato :"
+                                               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:36:33) 
+-- CODE:
+x = float(int"quantas gramas possui seu prato :")
+y = float(int"quantidade de bebida :")
+z = float(int"quantidade de sobremesa :")
+
+print(round(x,y,z,2))
+-- ERROR:
+File "XXXX", line 1
+    x = float(int"quantas gramas possui seu prato :")
+                                                   ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:37:12) 
+-- CODE:
+float(int"quantas gramas possui seu prato :")
+float(int"quantidade de bebida 
+float(int"quantidade de sobremesa :")
+
+print(round(,2))
+-- ERROR:
+File "XXXX", line 1
+    float(int"quantas gramas possui seu prato :")
+                                               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:37:22) 
+-- CODE:
+float(int"quantas gramas possui seu prato :")
+float(int"quantidade de bebida 
+float(int"quantidade de sobremesa :")
+
+print(round(x,2))
+-- ERROR:
+File "XXXX", line 1
+    float(int"quantas gramas possui seu prato :")
+                                               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:37:47) 
+-- CODE:
+float(int"quantas gramas possui seu prato :")
+float(int"quantidade de bebida :")
+float(int"quantidade de sobremesa :")
+
+print(round(x,2))
+-- ERROR:
+File "XXXX", line 1
+    float(int"quantas gramas possui seu prato :")
+                                               ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:42:04) 
+-- CODE:
+float(int("quantas gramas de possui seu prato :"))
+float(int("quantidade de bebida :"))
+float(int("quantidade de sobremesa :")
+preços = 26.90
+print(round(,2))
+-- ERROR:
+File "XXXX", line 4
+    preços = 26.90
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:42:12) 
+-- CODE:
+float(int("quantas gramas de possui seu prato :"))
+float(int("quantidade de bebida :"))
+float(int("quantidade de sobremesa :")
+preços = 26.90
+print(round(preço,2))
+-- ERROR:
+File "XXXX", line 4
+    preços = 26.90
+         ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:42:51) 
+-- CODE:
+float(int("quantas gramas de possui seu prato :"))
+float(int("quantidade de bebida :"))
+float(int("quantidade de sobremesa :")
+x = preços
+print(round(x,2))
+-- ERROR:
+File "XXXX", line 4
+    x = preços
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:43:38) 
+-- CODE:
+1 = float(int("quantas gramas de possui seu prato :"))
+2 = float(int("quantidade de bebida :"))
+3 = float(int("quantidade de sobremesa :")
+x = preços
+print(round(1,2,3,x,2))
+-- ERROR:
+File "XXXX", line 4
+    x = preços
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:44:25) 
+-- CODE:
+1 = float(input("quantas gramas de possui seu prato :"))
+2 = float(input("quantidade de bebida :"))
+3 = float(input("quantidade de sobremesa :")
+x = preços
+print(round(1,2,3,x,2))
+-- ERROR:
+File "XXXX", line 4
+    x = preços
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:45:55) 
+-- CODE:
+1 = float(int("quantas gramas de possui seu prato :"))
+2 = float(int("quantidade de bebida :"))
+3 = float(int("quantidade de sobremesa :")
+x = preços
+print(round(1,2,3,x,2))
+-- ERROR:
+File "XXXX", line 4
+    x = preços
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:46:11) 
+-- CODE:
+1 = float(int("quantas gramas de possui seu prato :"))
+2 = float(int("quantidade de bebida :"))
+3 = float(int("quantidade de sobremesa :")
+x = preços
+print(round(x,2))
+-- ERROR:
+File "XXXX", line 4
+    x = preços
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:46:32) 
+-- CODE:
+float(int("quantas gramas de possui seu prato :"))
+float(int("quantidade de bebida :"))
+float(int("quantidade de sobremesa :")
+x = preços
+print(round(x,2))
+-- ERROR:
+File "XXXX", line 4
+    x = preços
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:47:30) 
+-- CODE:
+print(int("quantas gramas de possui seu prato :"))
+print(int("quantidade de bebida :"))
+print(int("quantidade de sobremesa :")
+x = preços
+print(round(x,2))
+-- ERROR:
+File "XXXX", line 4
+    x = preços
+    ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:47:36) 
+-- CODE:
+print(int("quantas gramas de possui seu prato :"))
+print(int("quantidade de bebida :"))
+print(int("quantidade de sobremesa :")
+
+print(round(x,2))
+-- ERROR:
+File "XXXX", line 5
+    print(round(x,2))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:47:37) 
+-- CODE:
+print(int("quantas gramas de possui seu prato :"))
+print(int("quantidade de bebida :"))
+print(int("quantidade de sobremesa :")
+
+print(round(x,2))
+-- ERROR:
+File "XXXX", line 5
+    print(round(x,2))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 19:47:38) 
+-- CODE:
+print(int("quantas gramas de possui seu prato :"))
+print(int("quantidade de bebida :"))
+print(int("quantidade de sobremesa :")
+
+print(round(x,2))
+-- EXECUTION TIME:
+0.173453
+-- ERROR:
+  File "/home/codebench/codes/1621/2920/main.py", line 5
+    print(round(x,2))
+        ^
+SyntaxError: invalid syntax
+
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:47:39) 
+-- CODE:
+print(int("quantas gramas de possui seu prato :"))
+print(int("quantidade de bebida :"))
+print(int("quantidade de sobremesa :")
+
+print(round(x,2))
+-- ERROR:
+File "XXXX", line 5
+    print(round(x,2))
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:48:41) 
+-- CODE:
+a = ("quantas gramas de possui seu prato :")
+b = ("quantidade de bebida :")
+c = ("quantidade de sobremesa :")
+
+print(round(x,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(x,2))
+NameError: name 'x' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:48:56) 
+-- CODE:
+a = ("quantas gramas de possui seu prato :")
+b = ("quantidade de bebida :")
+c = ("quantidade de sobremesa :")
+
+print(round(preço,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(preço,2))
+NameError: name 'preço' is not defined
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:49:06) 
+-- CODE:
+a = ("quantas gramas de possui seu prato :")
+b = ("quantidade de bebida :")
+c = ("quantidade de sobremesa :")
+
+print(round(,2))
+-- ERROR:
+File "XXXX", line 5
+    print(round(,2))
+                ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:49:10) 
+-- CODE:
+a = ("quantas gramas de possui seu prato :")
+b = ("quantidade de bebida :")
+c = ("quantidade de sobremesa :")
+
+print(round(2))
+-- OUTPUT:
+2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:49:57) 
+-- CODE:
+a = ("quantas gramas de possui seu prato :")
+b = ("quantidade de bebida :")
+c = ("quantidade de sobremesa :")
+
+print(round(a,b,c,2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(a,b,c,2))
+TypeError: round() takes at most 2 arguments (4 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:50:23) 
+-- CODE:
+a = ("quantas gramas de possui seu prato :")
+b = ("quantidade de bebida :")
+c = ("quantidade de sobremesa :")
+
+print(round(2))
+-- OUTPUT:
+2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-04-01 19:50:27) 
+-- CODE:
+a = ("quantas gramas de possui seu prato :")
+b = ("quantidade de bebida :")
+c = ("quantidade de sobremesa :")
+
+print(round(2))
+-- EXECUTION TIME:
+0.150476
+-- TEST CASE 1:
+---- input:
+896.12
+0
+0
+---- correct output:
+24.11
+---- user output:
+2
+-- TEST CASE 2:
+---- input:
+389.03
+1
+0
+---- correct output:
+13.96
+---- user output:
+2
+-- TEST CASE 3:
+---- input:
+225.89
+0
+1
+---- correct output:
+9.08
+---- user output:
+2
+-- GRADE:
+0%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:50:34) 
+-- CODE:
+a = ("quantas gramas de possui seu prato :")
+b = ("quantidade de bebida :")
+c = ("quantidade de sobremesa :")
+
+print(round(2))
+-- OUTPUT:
+2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:51:07) 
+-- CODE:
+a = float("quantas gramas de possui seu prato :")
+b = float("quantidade de bebida :")
+c = float("quantidade de sobremesa :")
+
+print(round(2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a = float("quantas gramas de possui seu prato :")
+ValueError: could not convert string to float: 'quantas gramas de possui seu prato :'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:51:33) 
+-- CODE:
+a = int("quantas gramas de possui seu prato :")
+b = int("quantidade de bebida :")
+c = int("quantidade de sobremesa :")
+
+print(round(2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a = int("quantas gramas de possui seu prato :")
+ValueError: invalid literal for int() with base 10: 'quantas gramas de possui seu prato :'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:51:55) 
+-- CODE:
+a = int("quantas gramas de possui seu prato ")
+b = int("quantidade de bebida ")
+c = int("quantidade de sobremesa ")
+
+print(round(2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a = int("quantas gramas de possui seu prato ")
+ValueError: invalid literal for int() with base 10: 'quantas gramas de possui seu prato '
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:51:58) 
+-- CODE:
+a = int("quantas gramas de possui seu prato ")
+b = int("quantidade de bebida ")
+c = int("quantidade de sobremesa ")
+
+print(round(2))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a = int("quantas gramas de possui seu prato ")
+ValueError: invalid literal for int() with base 10: 'quantas gramas de possui seu prato '
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:52:13) 
+-- CODE:
+a = ("quantas gramas de possui seu prato ")
+b = ("quantidade de bebida ")
+c = ("quantidade de sobremesa ")
+
+print(round(2))
+-- OUTPUT:
+2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:52:46) 
+-- CODE:
+a = ("quantas gramas de possui seu prato ")
+b = ("quantidade de bebida ")
+c = ("quantidade de sobremesa ")
+
+print(round(2,a,b,c))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 5, in <module>
+    print(round(2,a,b,c))
+TypeError: round() takes at most 2 arguments (4 given)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:53:01) 
+-- CODE:
+a = ("quantas gramas de possui seu prato ")
+b = ("quantidade de bebida ")
+c = ("quantidade de sobremesa ")
+
+print(round(2))
+-- OUTPUT:
+2
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:54:01) 
+-- CODE:
+a = ("quantas gramas de possui seu prato ")
+b = ("quantidade de bebida ")
+c = ("quantidade de sobremesa ")
+
+print(a,b,c)
+-- OUTPUT:
+quantas gramas de possui seu prato  quantidade de bebida  quantidade de sobremesa
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:54:24) 
+-- CODE:
+a = float("quantas gramas de possui seu prato ")
+b = float("quantidade de bebida ")
+c = float("quantidade de sobremesa ")
+
+print(a,b,c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a = float("quantas gramas de possui seu prato ")
+ValueError: could not convert string to float: 'quantas gramas de possui seu prato '
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-01 19:54:53) 
+-- CODE:
+a = int("quantas gramas de possui seu prato ")
+b = int("quantidade de bebida ")
+c = int("quantidade de sobremesa ")
+
+print(a,b,c)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    a = int("quantas gramas de possui seu prato ")
+ValueError: invalid literal for int() with base 10: 'quantas gramas de possui seu prato '
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

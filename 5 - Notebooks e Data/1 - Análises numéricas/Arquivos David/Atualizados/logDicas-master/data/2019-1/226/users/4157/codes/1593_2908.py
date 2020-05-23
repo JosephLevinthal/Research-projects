@@ -1,0 +1,5 @@
+a = int(input("var a:"))
+b = int(input("var b:"))
+c = int(input("var c:"))
+form = float(a**2 + b**2 + c**2)/(a + b + c )
+print(round(form, 7))

@@ -1,0 +1,10 @@
+muier=input("muier")
+preco=float(input("preco"))
+quant=int(input("quant"))
+w=preco*20/100
+desconto=(preco-w)*quant
+precot=preco*quant
+if(muier.upper()=="S"):
+	print(round(desconto,2))
+else:
+	print(round(precot,2))

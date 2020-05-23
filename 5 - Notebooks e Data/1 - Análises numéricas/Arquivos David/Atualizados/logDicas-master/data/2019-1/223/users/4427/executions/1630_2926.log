@@ -1,0 +1,182 @@
+== TEST (2019-04-02 17:22:31) 
+-- CODE:
+a = 24,00 #valor do selfservice do acai
+e = 3,00  #valor da esfirra
+
+kg = 1
+g = 600
+
+peso = ((kg * a)/ g)
+
+print (peso)
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 7, in <module>
+    peso = ((kg * a)/ g)
+TypeError: unsupported operand type(s) for /: 'tuple' and 'int'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:22:57) 
+-- CODE:
+a = 24,00 #valor do selfservice do acai
+e = 3,00  #valor da esfirra
+
+kg = 1
+g = 600
+
+peso = (kg * a)
+
+print (peso)
+-- OUTPUT:
+(24, 0)
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:23:26) 
+-- CODE:
+a = 24.00 #valor do selfservice do acai
+e = 3.00  #valor da esfirra
+
+kg = 1
+g = 600
+
+peso = (kg * a)
+
+print (peso)
+-- OUTPUT:
+24.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:24:14) 
+-- CODE:
+a = 24.00 #valor do selfservice do acai
+e = 3.00  #valor da esfirra
+
+kg = 1
+g = 600 g
+
+peso = (kg * a)
+consumo = peso/g
+
+print (peso)
+-- ERROR:
+File "XXXX", line 5
+    g = 600 g
+            ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:24:31) 
+-- CODE:
+a = 24.00 #valor do selfservice do acai
+e = 3.00  #valor da esfirra
+
+kg = 1
+g = 600 
+
+peso = (kg * a)
+consumo = peso/g
+
+print (peso)
+-- OUTPUT:
+24.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:24:41) 
+-- CODE:
+a = 24.00 #valor do selfservice do acai
+e = 3.00  #valor da esfirra
+
+kg = 1
+g = 600 
+
+peso = (kg * a)
+consumo = peso/g
+
+print (consumo)
+-- OUTPUT:
+0.04
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:25:02) 
+-- CODE:
+a = 24.00 #valor do selfservice do acai
+e = 3.00  #valor da esfirra
+
+kg = 1
+g = 500 
+
+peso = (kg * a)
+consumo = peso/g
+
+print (consumo)
+-- OUTPUT:
+0.048
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:26:06) 
+-- CODE:
+a = 24.00 #valor do selfservice do acai
+e = 3.00  #valor da esfirra
+
+kg = 1
+g = 0.500 
+
+peso = (kg * a)
+consumo = peso * g
+
+print (consumo)
+-- OUTPUT:
+12.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:29:25) 
+-- CODE:
+a = 24.00 #valor do selfservice do acai
+e = 3.00  #valor da esfirra
+
+kg = 1
+g = 1000 
+
+converte = kg / g
+print (converte)
+
+peso = (kg * a)
+consumo = peso * g
+
+print (consumo)
+-- OUTPUT:
+0.001
+24000.0
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:31:15) 
+-- CODE:
+a = 24.00 #valor do selfservice do acai
+e = 3.00  #valor da esfirra
+
+kg = 1
+g = 1000 
+
+converte = kg / g
+print (converte)
+
+int g
+
+print g
+-- ERROR:
+File "XXXX", line 10
+    int g
+        ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-04-02 17:31:40) 
+-- CODE:
+a = 24.00 #valor do selfservice do acai
+e = 3.00  #valor da esfirra
+
+kg = 1
+g = 1000 
+
+converte = kg / g
+print (converte)
+
+int 600
+
+
+-- ERROR:
+File "XXXX", line 10
+    int 600
+          ^
+SyntaxError: invalid syntax
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*

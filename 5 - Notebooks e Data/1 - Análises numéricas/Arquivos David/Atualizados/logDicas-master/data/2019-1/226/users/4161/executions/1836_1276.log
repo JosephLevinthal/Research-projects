@@ -1,0 +1,668 @@
+== TEST (2019-06-25 11:08:26) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+n = array(eval(input("horario de funcionarios: ")))
+
+print(max(n))
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:14:28) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+m = array(eval(input("horario de funcionarios: ")))
+v = zeros(7, dtype=int)
+for i in range(7):
+	for j in range(4):
+		v[i] = m[i,j] + v[i]
+print(v)
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:18:18) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+m = array(eval(input("horario de funcionarios: ")))
+v = zeros(7, dtype=int)
+for i in range(4):
+	v[i] = sum(m[:,i])
+for x in v:
+	if x == max(v):
+		print(x)
+
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:19:14) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+m = array(eval(input("horario de funcionarios: ")))
+v = zeros(7, dtype=int)
+for i in range(4):
+	v[i] = sum(m[:,i])
+i = 0
+for x in v:
+	if x == max(v):
+		print(i)
+		i = i + 1
+	i = i + 1
+
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:19:58) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+m = array(eval(input("horario de funcionarios: ")))
+v = zeros(7, dtype=int)
+for i in range(4):
+	v[i] = sum(m[:,i])
+i = 1
+for x in v:
+	if x == max(v):
+		print(i)
+		i = i + 1
+	i = i + 1
+
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:20:33) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+m = array(eval(input("horario de funcionarios: ")))
+v = zeros(7, dtype=int)
+for i in range(4):
+	v[i] = sum(m[:,i])
+i = 1
+for x in v:
+	if x == max(v):
+		print(i)
+		i = i + 1
+	else:
+		i = i + 1
+
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:20:42) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+m = array(eval(input("horario de funcionarios: ")))
+v = zeros(7, dtype=int)
+for i in range(4):
+	v[i] = sum(m[:,i])
+i = 1
+for x in v:
+	if x == max(v):
+		print(i)
+		i = i + 1
+	else:
+		i = i + 1
+
+		
+-- EXECUTION TIME:
+1.06323
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+1
+2
+3
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:21:19) 
+-- CODE:
+from numpy import*
+from numpy.linalg import*
+
+m = array(eval(input("horario de funcionarios: ")))
+v = zeros(7, dtype=int)
+for i in range(4):
+	v[i] = sum(m[:,i])
+i = 1
+for x in v:
+	if x == max(v):
+		print(i)
+		i = i + 1
+	else:
+		i = i + 1
+
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:21:58) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("horario de funcionarios: ")))
+v = zeros(7, dtype=int)
+for i in range(4):
+	v[i] = sum(m[:,i])
+i = 1
+for x in v:
+	if x == max(v):
+		print(i)
+		i = i + 1
+	else:
+		i = i + 1
+
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:22:08) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("horario de funcionarios: ")))
+v = zeros(7, dtype=int)
+for i in range(4):
+	v[i] = sum(m[:,i])
+i = 1
+for x in v:
+	if x == max(v):
+		print(i)
+		i = i + 1
+	else:
+		i = i + 1
+
+		
+-- EXECUTION TIME:
+0.887355
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+1
+2
+3
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:22:19) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("horario de funcionarios: ")))
+v = zeros(7, dtype=int)
+for i in range(4):
+	v[i] = sum(m[:,i])
+i = 1
+for x in v:
+	if x == max(v):
+		print(i)
+		i = i + 1
+	else:
+		i = i + 1
+
+		
+-- EXECUTION TIME:
+1.81667
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+1
+2
+3
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:22:19) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("horario de funcionarios: ")))
+v = zeros(7, dtype=int)
+for i in range(4):
+	v[i] = sum(m[:,i])
+i = 1
+for x in v:
+	if x == max(v):
+		print(i)
+		i = i + 1
+	else:
+		i = i + 1
+
+		
+-- EXECUTION TIME:
+2.76349
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+1
+2
+3
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:27:53) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("horario de funcionarios: ")))
+v = zeros(7, dtype=int)
+for i in range(4):
+	v[i] = sum(m[:,i])
+i = 1
+for x in v:
+	if x == max(v):
+		print(i)
+		i = i + 1
+	else:
+		i = i + 1
+
+		
+-- EXECUTION TIME:
+0.899196
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+1
+2
+3
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:28:26) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("horario de funcionarios: ")))
+v = zeros(7, dtype=int)
+for i in range(4):
+	v[i] = sum(m[:,i])
+i = 1
+for x in v:
+	if x == max(v):
+		print(i)
+		i = i + 1
+	else:
+		i = i + 1
+
+		
+-- EXECUTION TIME:
+1.06721
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+1
+2
+3
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:28:40) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("horario de funcionarios: ")))
+v = zeros(7, dtype=int)
+for i in range(4):
+	v[i] = sum(m[:,i])
+i = 1
+for x in v:
+	if x == max(v):
+		print(i)
+		i = i + 1
+	else:
+		i = i + 1
+
+		
+-- EXECUTION TIME:
+1.03729
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+1
+2
+3
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:29:27) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("horario de funcionarios: ")))
+o = shape(m)[1]
+v = zeros(o, dtype=int)
+for i in range(4):
+	v[i] = sum(m[:,i])
+i = 1
+for x in v:
+	if x == max(v):
+		print(i)
+		i = i + 1
+	else:
+		i = i + 1
+
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:29:53) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("horario de funcionarios: ")))
+o = shape(m)[1]
+v = zeros(o, dtype=int)
+for i in range(4):
+	v[i] = sum(m[:,i])
+i = 1
+for x in v:
+	if x == max(v):
+		print(i)
+		i = i + 1
+	else:
+		i = i + 1
+
+		
+-- EXECUTION TIME:
+1.10516
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+1
+2
+3
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+67%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:30:05) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("horario de funcionarios: ")))
+o = shape(m)[1]
+v = zeros(o, dtype=int)
+for i in range(o):
+	v[i] = sum(m[:,i])
+i = 1
+for x in v:
+	if x == max(v):
+		print(i)
+		i = i + 1
+	else:
+		i = i + 1
+
+		
+-- EXECUTION TIME:
+0.9466
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+7
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+horario de funcionarios: 2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+horario de funcionarios: 3
+-- GRADE:
+33%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== TEST (2019-06-25 11:30:06) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("horario de funcionarios: ")))
+o = shape(m)[1]
+v = zeros(o, dtype=int)
+for i in range(o):
+	v[i] = sum(m[:,i])
+i = 1
+for x in v:
+	if x == max(v):
+		print(i)
+		i = i + 1
+	else:
+		i = i + 1
+
+		
+-- ERROR:
+Traceback (most recent call last):
+  File "XXXX", line 1, in <module>
+    from numpy import*
+ModuleNotFoundError: No module named 'numpy'
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+== SUBMITION (2019-06-25 11:30:55) 
+-- CODE:
+from numpy import*
+
+m = array(eval(input("horario de funcionarios: ")))
+
+o = shape(m)[1]
+v = zeros((o), dtype=int)
+for i in range(o):
+	v[i] = sum(m[:,i])
+i = 1
+for x in v:
+	if x == max(v):
+		print(i)
+		i = i + 1
+	else:
+		i = i + 1
+
+		
+-- EXECUTION TIME:
+0.968487
+-- TEST CASE 1:
+---- input:
+[[4,4,4,4,4,4,4],[3,3,3,3,3,3,3],[6,6,6,6,6,6,6],[1,2,1,2,1,2,7],[9,8,9,3,4,6,8],[5,6,5,6,5,6,8],[2,1,2,3,6,5,2]]
+---- correct output:
+7
+---- user output:
+7
+-- TEST CASE 2:
+---- input:
+[[9,8,8,5,3,2,4],[9,9,2,4,5,6,7],[7,8,6,4,3,5,6],[9,9,8,8,8,8,8],[6,6,1,2,1,2,1],[5,6,4,3,4,3,2],[5,9,3,4,5,6,8],[8,7,8,5,6,5,2],[4,9,5,6,8,7,2]]
+---- correct output:
+2
+---- user output:
+2
+-- TEST CASE 3:
+---- input:
+[[1,1,7,9,9,9,9],[1,2,7,5,5,5,5],[2,3,7,4,4,4,4],[2,4,7,6,6,6,6],[2,6,6,3,4,3,2],[6,5,6,4,5,6,8],[8,7,7,5,6,5,2],[7,8,9,6,8,7,2]]
+---- correct output:
+3
+---- user output:
+3
+-- GRADE:
+100%
+*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
